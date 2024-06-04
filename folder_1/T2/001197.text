@@ -1,0 +1,77 @@
+<DOC> 
+<DOCNO> CRANV1P1 </DOCNO>         
+<TITLE> ASLIB Cranfield Research Project: Factors Determining the Performance of Indexing Systems: VOLUME 1. Design, Part 1. Text </TITLE>         
+<SUBTITLE> Indexing Procedures </SUBTITLE>         
+<TYPE> chapter </TYPE>         
+<PAGE CHAPTER="4" NUMBER="46">                   
+<AUTHOR1> Cyril Cleverdon </AUTHOR1>  
+<AUTHOR2> Jack Mills </AUTHOR2>  
+<AUTHOR3> Michael Keen </AUTHOR3>  
+<PUBLISHER> Cranfield </PUBLISHER> 
+<EDITOR1>   </EDITOR1> 
+<COPYRIGHT MTH="December" DAY="" YEAR="1966" BY="National Science Foundation">   
+An investigation supported by a grant to Aslib by the National Science Foundation.
+Use, reproduction, or publication, in whole or in part, is permitted for any purpose of the United States Government. 
+</COPYRIGHT> 
+<BODY> 
+- 46 -
+
+is the fact that they are rarely, if ever, used alone; whilst all the devices given
+earlier may be thus used (at least in a postcoordinate system), the non-generic
+relations are invariably associated with hierarchical linkage, whether this is via
+a classified index or a syndetic network of connective references. In a thesaurus,
+for example, generic hierarchical relations and synonym relations are often indi-
+cated separately, but individual non-generic relations are never recognized separ-
+ately.
+
+      We conclude that there is nothing in the practice of indexing to suggest that a
+separate evaluation of each non-generic relation is necessary, but the collective
+contribution to index performance of these relations compared with the contribution
+of generic hierarchical linkage is a matter of some interest, and it seems reasonable
+to group them together as a comparable device. It may be noted that generic hier-
+archical linkage is itself an aggregate of several particular relations, just as this
+group is. The problem is discussed further in the section on Concept hierarchies
+in Chapter 5.
+
+(ix) Bibliographic coupling is a device for extending a class x (representing the
+subject of a particular document q_) by accepting all, or some of the documents which
+have cited q: or, by accepting all documents in a particular universe which have a
+certain number of citations (6 or 7, say) in common with q.
+
+(x) Associative indexing by machine [OCRerr]clumps', etc. ) The possibilities of automatic
+indexing now being explored by a number of investigators rest mainly on the assump-
+tion that classes useful for retrieval purposes can be established on the basis of the
+statistical characteristics of the index vocabulary (which may in fact approximate to
+the complete texts of the documents concerned). By using such features as the fre-
+quency of occurrence and co-occurrence of individual words and of particular word-
+clusters, their position in the text, their relative frequency compared with a stan-
+dard word-frequency list in the subject area concerned, and so on, associations
+between terms are established which then form the basis of search programmes.
+The criteria defining the classes to be examined are thus quite different from any
+of those listed above and therefore the procedure constitutes an indexing device in
+its own right.
+
+      How far it might be feasible to distinguish particular procedures (e. g., the use
+of one statistical technique rather than another) is as yet uncertain. In particular,
+the purely statistical methods are in some cases replaced by methods using linguis-
+tic analysis, and insofar as these must overlap the 'semantic[OCRerr] devices already des-
+cribed (confounding of word forms, hierarchical linkage of various kinds) they may
+not merit the status of a discrete and unique index device.
+
+(xi) "L'Unit[OCRerr]" system described by te Nuyl (Ref. 22) is a somewhat exotic device
+whereby a reduced vocabulary is established in a quite mechanical way by lumping
+together all the terms in a given sequence of pages in the Concise Oxford Dictionary
+and treating their aggregate as a single class. As is the case with all drastically
+reduced vocabularies, it is argued that the theoretical absurdities which might arise
+(e. g., the appearance of documents on Acne in a search for Aconite, or on Conduc-
+tivity in a search for Cones) do not arise in fact, since subsequent coordination
+eliminates them.
+
+      Any reduced vocabulary may be regarded as a recall device, in that it implies
+enlargement (by coalescence) of the classes which are formed initially by the indiv-
+idual index terms assigned to a document. Usually, reduced vocabularies are formed
+
+
+</BODY>                  
+</PAGE>                  
+</DOC> 

@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/ResearchDevelopmentContent.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OCS.title" content="The Office of Coast Survey (OCS) Home Page" />
+<meta name="OCS.description" content="Support the Nation’s Commerce with Information for Safe, Efficient, and Environmentally Sound Transportation." />
+<meta name="OCS.creator" content="US Department of Commerce, NOAA, National Oceanic and Atmospheric Administration, National Ocean Service, Office of Coast Survey" />
+<meta name="OCS.date.created" scheme="ISO8601" content="1995-12-06" />
+<meta name="OCS.date.reviewed" scheme="ISO8601" content="2008-09-30" />
+<meta name="OCS.language" content="EN-US" />
+<meta name="keywords" content="charts, nautical, nautical charts, hydrography, hydro survey, modeling, shoreline, navigation, ENC, RNC, maps, map, navigation services, NSD, MCD, CSDL, HSD, boat show" />
+<meta name="author" content="United States Office of Coast Survey" />
+<meta name="description" content="Support the Nation’s Commerce with Information for Safe, Efficient, and Environmentally Sound Transportation." />
+<meta name="language" content="EN-US" />
+
+<script type="text/javascript" src="/script/js/prototype.js"></script>
+<script type="text/javascript" src="/script/js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="/script/js/lightbox.js"></script>
+
+
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Tidal Corrector Application (TCARI)</title>
+<!-- InstanceEndEditable -->
+<link href="../ocs.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/script/css/lightbox.css" type="text/css" media="screen" />
+
+<style type="text/css">
+.style5 {color: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 9pt;}
+.style5 a {text-decoration: none; color: #FFFFFF;}
+.style5 a:hover{color:#CCCCCC}
+
+
+.style7 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 10px;
+}
+.style7 a{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 10px;
+	text-decoration:none;
+}
+.style7 a:hover{color:#CCCCCC }
+
+
+.style8 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 11px;
+}
+.style8 a{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 11px;
+	text-decoration:none;
+}
+.style8 a:hover{color:#CCCCCC; }
+
+body {
+	background-color: #EEEEEE;
+}
+
+.CtrlPage1_lblContentBody{font-size: 10pt;
+                          text-align:left;}
+
+#transparent {	position:relative;	top: 6px; left:15px;	z-index:1;}
+
+						  
+</style>
+
+<script language="JavaScript">
+<!--
+function confirm_entry(linkStr)
+{
+input_box=confirm("This link will take you away from a U.S. Federal Government website.\n\nDo you want to proceed?");
+if (input_box==true)
+
+{ 
+// Output when OK is clicked
+window.open(linkStr);
+}
+
+else
+{
+// Output when Cancel is clicked
+//alert ("You clicked cancel");
+}
+
+}
+-->
+</script>
+
+     
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body>
+<!-- google analytics !-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6531028-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<center>
+
+<table width="1008" border="0" cellpadding ="0" cellspacing="0">
+  <tr>
+    <td colspan="3" background="../images/OCS-subpage-art.gif" height="116">
+      <table border = "0" width = "100%" height = "100%">
+      <tr>
+      <td width="72%" align="left"><a href="/index.html"><img src="../images/transparency.gif" width="398" height="90" border = "0"  /></a>&nbsp;</td>
+      <td width="28%" valign="bottom" align="right"><span class="style7">
+      <form method="get" action="http://usasearch.gov/search" style="margin-bottom:0;">
+      <a href="/index.html">HOME</a> | <a href="/staff/aboutus.htm">ABOUT US</a> | <a href="/staff/contact.htm">CONTACT</a> | <a href="/nsd/reps.htm">REGIONAL MANAGERS</a>
+      
+      
+    <input type="hidden" name="affiliate" value="nauticalcharts.noaa.gov" />
+    <input type="hidden" name="v:project" value="firstgov" />
+    <label for="query-field"></label>
+    <input name="query" type="text" id="query-field" size="29"/>
+    <input type="submit" value="Search" /> 
+   
+  </form>
+  </span>
+      </td>
+      </tr>
+      <tr>
+      <td colspan="3"></td>
+      </tr>
+      </table>    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><table width="100%" border="0" cellpadding = "5" cellspacing="0">
+      <tr>
+        <td bgcolor = "#22428C" ><div align="center" class="style5"><a href="/staff/chartspubs.html"><strong>Nautical Charts &amp; Pubs</strong> </a></div></td>
+        <td bgcolor = "#22428C"><div align="center" class="style5"><a href="/hsd/hydrog.htm"><strong>Surveys &amp; Wrecks</strong></a></div></td>
+        <td bgcolor = "#22428C"> <div align="center" class="style5"><a href="/staff/gisintro.htm"><strong>GIS &amp; Other Products</strong></a></div></td>
+        <td bgcolor = "#22428C"><div align="center" class="style5"><a href="/csdl/RD.html"><strong>Research &amp; Development</strong></a></div></td>
+        <td bgcolor = "#22428C"><div align="center" class="style5"><a href="/nsd/services.htm"><strong>Customer Service</strong></a></div></td>
+        <td bgcolor = "#22428C"><div align="center" class="style5"><a href="/staff/business_oppor.html"><strong>Business Opportunities</strong></a></div></td>
+        <td bgcolor = "#22428C"><div align="center" class="style5"><a href="/staff/education.htm"><strong>Education</strong></a></div></td>
+      </tr>
+    </table></td>
+  </tr>
+	  
+	 
+<tr>
+	<td id="LeftSide3" width="215" bgcolor="#dbefff">  
+      <table cellspacing="0" border="0"  style="height:80px;width:210px;border-collapse:collapse;" align="center">
+	   <tr style="color:#FFFF99;font-family:Bodoni;font-size:8pt;">
+	     <td colspan="5" style="font-size:Small;">&nbsp;</td>
+	   </tr>
+	   <tr style="color:#FFFF99;font-family:Bodoni;font-size:8pt;">
+    	 <td>&nbsp;</td>
+	     <td align="left" colspan="2" style="font-size:Small;"><a class="title" title="" href="RD.html"><strong>Research &amp; Development</strong></a></td>
+        <td width="5">&nbsp;</td>
+	  </tr>
+    
+    
+      <tr style="color:#FFFF99;font-family:Bodoni;font-size:3pt;">
+        <td colspan="4" height="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:10pt;">
+        <td>&nbsp;</td>
+        <td align="left" colspan="2"><a title="" style="color:Black;"><strong>Experimental Products / Prototypes</strong></a></td>
+        <td width="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/staff/BookletChart.html" style="color:#0D1D4D;">BookletChart™ (Experimental)</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/op/welcome.html" style="color:#0D1D4D;">Water Level and Current Forecast Guidance</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#FFFF99;font-family:Bodoni;font-size:3pt;">
+        <td colspan="4" height="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:10pt;">
+        <td>&nbsp;</td>
+        <td align="left" colspan="2"><a title="" style="color:Black;"><strong>Hydrographic Support</strong></a></td>
+        <td width="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/AUV.html" style="color:#0D1D4D;">Autonomous Underwater Vehicles (AUV)</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>   
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/ROV.html" style="color:#0D1D4D;">Remotely Operated Vehicles (ROV)</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>   
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/PDBS.html" style="color:#0D1D4D;">Phase Differencing Bathymetric Sonar</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>   
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/svp.html" style="color:#0D1D4D;">Sound Velocity Profiler</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>   
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/tcari.html" style="color:#0D1D4D;">Tidal Corrector Application (TCARI)</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>   
+      <tr style="color:#FFFF99;font-family:Bodoni;font-size:3pt;">
+        <td colspan="4" height="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:10pt;">
+        <td>&nbsp;</td>
+        <td align="left" colspan="2"><a title="" style="color:Black;"><strong>Products and Database Development</strong></a></td>
+        <td width="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/bathywarehouse.html" style="color:#0D1D4D;">Bathymetric Warehouse</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/nsd/RD-cpdb.html" style="color:#0D1D4D;">Coast Pilot Relational Database</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/vdatum_enhancements.html" style="color:#0D1D4D;">VDatum Enhancements</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/DEM.html" style="color:#0D1D4D;">Coastal Digital Elevation Models</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/op/odaas.html" style="color:#0D1D4D;">Operational Data Acquisition &amp; Archiving System</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/LAS.html" style="color:#0D1D4D;">Live Access Server for Hydrodynamic Model Output</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/op/nowcoast.htm" style="color:#0D1D4D;">nowCOAST</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#FFFF99;font-family:Bodoni;font-size:3pt;">
+        <td colspan="4" height="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:10pt;">
+        <td>&nbsp;</td>
+        <td align="left" colspan="2"><a title="" style="color:Black;"><strong>Coastal &amp; Estuarine Ocean Modeling</strong></a></td>
+        <td width="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/forecast_model.html" style="color:#0D1D4D;">Forecast System Modeling</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/inundation.html" style="color:#0D1D4D;">Inundation Modeling</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/eco-modeling.html" style="color:#0D1D4D;">Ecological Modeling Applications</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/community_model.html" style="color:#0D1D4D;">Community Modeling &amp; Standards</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/mee.html" style="color:#0D1D4D;">Model Evaluation Environment</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#FFFF99;font-family:Bodoni;font-size:3pt;">
+        <td colspan="4" height="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:10pt;">
+        <td>&nbsp;</td>
+        <td align="left" colspan="2"><a title="" style="color:Black;"><strong>Learn About</strong></a></td>
+        <td width="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/welcome.htm" style="color:#0D1D4D;">Coast Survey Development Laboratory</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/learn_hydroequip.html" style="color:#0D1D4D;">Hydrographic Survey Equipment</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/learn_datum.html" style="color:#0D1D4D;">Datums and Transformations</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/learn_models.html" style="color:#0D1D4D;">How Hydrodynamic Models Are Used</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#FFFF99;font-family:Bodoni;font-size:3pt;">
+        <td colspan="4" height="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:10pt;">
+        <td>&nbsp;</td>
+        <td align="left" colspan="2"><a title="" style="color:Black;"><strong>Resources</strong></a></td>
+        <td width="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/PUB.html" style="color:#0D1D4D;">Technical Reports &amp; Publications</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr> 
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/staff/ocspartners.html" style="color:#0D1D4D;">Coast Survey Partners</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>         
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="/csdl/standards.html" style="color:#0D1D4D;">Standards and Requirements</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>         
+      <tr style="color:#FFFF99;font-family:Bodoni;font-size:3pt;">
+        <td colspan="4" height="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:10pt;">
+        <td>&nbsp;</td>
+        <td align="left" colspan="2"><a title="" style="color:Black;"><strong>Data Portals</strong></a></td>
+        <td width="5">&nbsp;</td>
+	  </tr>
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="http://nowcoast.noaa.gov/" style="color:#0D1D4D;">nowCOAST: Real-Time Coastal Data Map Portal</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>         
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="Tides and Currents" href="http://tidesandcurrents.noaa.gov/" style="color:#0D1D4D;">Tides and Currents (General)</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>         
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="Physical Oceanographic Real-Time System" href="http://tidesandcurrents.noaa.gov/ports.html" style="color:#0D1D4D;">Physical Oceanographic Real-Time System (PORTS)</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>         
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="http://tidesandcurrents.noaa.gov/models.html" style="color:#0D1D4D;">Operational Forecast Systems</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>         
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="http://coastwatch.noaa.gov/seanettles/" style="color:#0D1D4D;">Sea Nettle Forecast Guidance</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>         
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="http://www.ngs.noaa.gov/TOOLS/Nadcon/Nadcon.html" style="color:#0D1D4D;">North American Horizontal Datum Conversion Utility</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>         
+      <tr style="color:#22428C;font-family:Arial, Helvetica, sans-serif;font-size:8pt;">
+		<td width="10">&nbsp;</td>
+		<td style="color:#22428C;" valign="middle">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;</td>
+		<td align="left"><a title="" href="http://www.ccom.unh.edu/" style="color:#0D1D4D;">University of New Hampshire, Joint Hydrographic Center</a></td>
+	    <td width="5">&nbsp;</td>
+	  </tr>        
+	<tr style="color:#FFFF99;font-family:Bodoni;font-size:8pt;">
+	  <td>&nbsp;</td>
+	  </tr>
+</table>
+
+<!-- End LeftSide --></td>	<td width="2" style="background:#22428C"></td>			  
+<td style="WIDTH: 703px; POSITION: relative; HEIGHT: 400px" valign="top" bgcolor="white" ><!-- InstanceBeginEditable name="RightContent" --> <br />  
+  
+    <div id="centertextPage" align="center"><span class="CtrlPage1_lblTitle">Tidal Corrector   Application (TCARI)</span> </div>
+    <div class="CtrlPage1_pnlContentBody">
+      <table class="Table4" cellpadding="9" border="0">
+        <tbody>
+          <tr>
+            <td valign="top" class="CtrlPage1_lblContentBody"><p><span class="CtrlPage1_lblContentBody"><em><br />
+              What is TCARI?</em></span></p>
+                <p><span class="CtrlPage1_lblContentBody">Tidal Constituent And Residual   Interpolation (TCARI) is a quick, accurate method of providing tidal corrections   to hydrographic data. </span></p>
+              <p><span class="CtrlPage1_lblContentBody"><em>What are tidal corrections and   why are they necessary?</em></span></p>
+              <p><span class="CtrlPage1_lblContentBody">Tidal corrections are the measure of   the differences in the instantaneous water level from mean lower low water   (MLLW), the datum* that is used for National Ocean Service (NOS) charts. The   difference of the instantaneous water level from MLLW is due to variations in   the phase of the astronomic tide, residual (or non-tidal) effects caused   primarily by winds and river flows, and to the datum difference between the   long-term Mean Sea Level (MSL) and MLLW. Tidal corrections are essential to the   hydrographic survey process so that water depths presented on the chart are   referenced to the same point. </span></p>
+              <p><span class="CtrlPage1_lblContentBody"><em>What is the Coast Survey   Development Laboratory (CSDL) doing with TCARI?</em></span></p>
+              <p><span class="CtrlPage1_lblContentBody">The Coast Survey Development   Laboratory (CSDL) has created a GUI-driven, user-friendly version of TCARI which   went operational in 2008.</span></p>
+              <p><span class="CtrlPage1_lblContentBody"><em>How will this GUI-driven,   user-friendly version of TCARI work?</em></span></p>
+              <p><span class="CtrlPage1_lblContentBody">TCARI works by separating the   astronomic tide, residual, and datum difference components and treating them   differently. First, the method spatially interpolates each tidal constituent's   amplitude and phase throughout the region, based on data at the water level   stations and makes a tidal prediction. The amplitude and phase of constituents   at water level stations must have been previously determined by analysis of   historical records. This predicted tide is then added to the residual component,   which is computed by spatially interpolating the non-tidal values observed at   the water level stations at the time of the survey. Finally, the datum offset,   or difference between MSL and MLLW based on historical data, is interpolated   throughout the region and added to the prediction. </span></p>
+              <p><span class="CtrlPage1_lblContentBody">All spatial interpolation is   performed by a set of weighting functions. The weighting functions are computed   before the survey by creating a grid mesh for the coastal region of interest and   acquiring the historical data. As an example, the coastline and tidal station   data for mid-Chesapeake Bay has been selected (see Figures 1 and 2), and a grid   mesh of triangular elements is generated.<br />
+              </span></p>
+              <p>&nbsp; </p>
+              <table cellspacing="0" cellpadding="0" align="center">
+                  <tbody>
+                    <tr>
+                      <td valign="top" align="left"><span class="CtrlPage1_lblContentBody"> <img alt="Figure 1: Water level stations and coastline for central Chesapeake Bay." src="/csdl/images/RD_tcari1.jpg" longdesc="Figure 1: Water level stations and coastline for central Chesapeake Bay." /></span></td>
+                      <td></td>
+                      <td><span class="CtrlPage1_lblContentBody"> <img alt="Figure 2: Grid mesh for central Chesapeake Bay." src="/csdl/images/RD_tcari2.jpg" /></span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="CtrlPage1_lblContentBody"><em>Figure 1: Water level stations and   coastline for central Chesapeake Bay.</em></span></td>
+                      <td></td>
+                      <td valign="top" align="left"><span class="CtrlPage1_lblContentBody"><em>Figure 2: Grid   mesh for central Chesapeake Bay.</em></span></td>
+                    </tr>
+                  </tbody>
+              </table>
+              <span class="CtrlPage1_lblContentBody"><br />
+                Next, the   weighting functions for the harmonic constants, tidal datums, and the residual   are computed. In the field, a prediction of the instantaneous tide, relative to   MLLW, is made using the stored weighting function, datum fields, and harmonic   constants as well as observed water levels at the tide stations. The predicted   value is subtracted from the sounding to give the water depth relative to chart   datum of MLLW.<br />
+                <br />
+                </span>
+              <table cellspacing="0" cellpadding="0" align="center">
+                  <tbody>
+                    <tr>
+                      <td><span class="CtrlPage1_lblContentBody"><img alt="This figure is a color coded picture of upper Upper Chesapeake Bay showing a sample weighting function for harmonic contants." src="/csdl/images/RD_tcar3.jpg" /> </span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top" align="center"><span class="CtrlPage1_lblContentBody"> <em>A sample weighting function for   harmonic constants.</em></span></td>
+                    </tr>
+                  </tbody>
+              </table>
+              <span class="CtrlPage1_lblContentBody"><br />
+                <br />
+                </span>
+              <table cellspacing="0" cellpadding="0" align="center">
+                  <tbody>
+                    <tr>
+                      <td><span class="CtrlPage1_lblContentBody"><img alt="This is a color coded picture of Chesapeake Bay showing predicted instantaneous water leveling central Chesapeake Bay relative to MLLW." src="/csdl/images/RD_tcari4.jpg" /> </span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="CtrlPage1_lblContentBody"><em>Predicted instantaneous water leveling central Chesapeake <br />
+                        Bay relative to MLLW.</em></span></td>
+                    </tr>
+                  </tbody>
+              </table>
+              <span class="CtrlPage1_lblContentBody"><br />
+                <em><strong>*What is a datum?</strong> A datum is a reference point on   the earth’s surface against which position measurements are made. MLLW and MSL   are both examples of vertical datums that reference a point some height above   sea level.<br />
+                  </em><br />
+                <strong>REFERENCE</strong><br />
+                Hess, K., R.   Schmalz, C. Zervas, and W. Collier, 2004. <a href="/staff/docs/TCARI_CS4.pdf" target="_blank">'Tidal Constituent and Residual Interpolation (TCARI): A New   Method for the Tidal Correction of Bathymetric Data'</a>. NOAA Technical Report   NOS CS 4, Silver Spring, MD, 112 pp.
+               
+              </span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- End Content -->
+<!-- InstanceEndEditable --></td></tr>
+	  
+	 <tr>
+    <td width = "1008" height="45" colspan="3" background="../images/bottom-wave-bar.gif" align = "right" valign="bottom"><span class="style8"><a href="http://www.noaa.gov/privacy.html">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.noaa.gov/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://oceanservice.noaa.gov/">NOAA's National Ocean Service</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.noaa.gov/">NOAA</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.doc.gov">U.S. Department of Commerce</a>&nbsp;</span></td>
+  </tr>
+   
+</table>
+</center>
+
+
+
+
+
+</body>
+<!-- InstanceEnd --></html>

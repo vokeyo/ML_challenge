@@ -1,0 +1,173 @@
+<HTML>
+<head>
+	<link rel="schema.sandia"
+	href="http://www.sandia.gov/html_schema.htm">
+	<meta name="sandia.approval_type" content="formal">
+	<meta name="sandia.approved" content="1997-2387"> 
+	<meta name="sandia.create_date" content="09/27/1997">
+	<link rev="owns" title="Patrick Fay"
+	href="mailto:pfay@lanl.gov">
+</head>
+<BODY>
+<PRE>
+     <STRONG>NAME</STRONG>
+	  <STRONG>recvfrom</STRONG> - Receives messages from sockets
+
+     <STRONG>SYNOPSIS</STRONG>
+	  <STRONG>#include</STRONG> &lt;<STRONG>sys/types.h</STRONG>&gt;
+
+	  <STRONG>#include</STRONG> &lt;<STRONG>sys/socket.h</STRONG>&gt;
+
+	  <STRONG>int</STRONG> <STRONG>recvfrom</STRONG>(
+	       <STRONG>int</STRONG> <EM>socket</EM>,
+	       <STRONG>char</STRONG> *<EM>buffer</EM><STRONG>,</STRONG>
+	       <STRONG>int</STRONG> <EM>length</EM>,
+	       <STRONG>int</STRONG> <EM>flags</EM>,
+	       <STRONG>struct</STRONG> <STRONG>sockaddr</STRONG> *<EM>address</EM><STRONG>,</STRONG>
+	       <STRONG>int</STRONG> <STRONG>*</STRONG><EM>address</EM>_<EM>len</EM><STRONG>)</STRONG> <STRONG>;</STRONG>
+
+     <STRONG>PARAMETERS</STRONG>
+	  <EM>socket</EM>
+	       Specifies the socket file descriptor.
+
+	  <EM>buffer</EM>
+	       Specifies a pointer to the buffer to which the message
+	       should be written.
+
+	  <EM>length</EM>
+	       Specifies the length in bytes of	the buffer pointed to
+	       by the <EM>buffer</EM> parameter.
+
+	  <EM>flags</EM>
+	       Points to a value that controls message reception. The
+	       parameter to control message reception is formed	by the
+	       logical OR of one or more of the	following values:
+
+	       MSG_PEEK	 Peeks at the incoming message.
+
+	       MSG_OOB	 Processes out-of-band data.
+
+	  <EM>address</EM>
+	       Points to a <STRONG>sockaddr</STRONG> structure, the format of which is
+	       determined by the domain	and by the behavior requested
+	       for the socket.	The <STRONG>sockaddr</STRONG> structure is an overlay
+	       for a <STRONG>sockaddr_in</STRONG>, <STRONG>sockaddr_un</STRONG>, or <STRONG>sockaddr_ns</STRONG> struc-
+	       ture, depending on which	of the supported address fami-
+	       lies is active.	If the compile-time option
+	       _SOCKADDR_LEN is	defined	before the <STRONG>sys/socket.h</STRONG>	header
+	       file is included, the <STRONG>sockaddr</STRONG> structure	takes 4.4BSD
+	       behavior, with a	field for specifying the length	of the
+	       socket address.	Otherwise, the default 4.3BSD <STRONG>sockaddr</STRONG>
+	       structure is used, with the length of the socket
+	       address assumed to be 14	bytes or less.
+
+	       If _SOCKADDR_LEN	is defined, the	4.3BSD <STRONG>sockaddr</STRONG>
+	       structure is defined with the name <STRONG>osockaddr</STRONG>.
+
+	  <EM>address</EM>_<EM>len</EM>
+	       Specifies the length of the <STRONG>sockaddr</STRONG> structure pointed
+	       to by the <EM>address</EM> parameter.
+
+     <STRONG>DESCRIPTION</STRONG>
+	  The <STRONG>recvfrom()</STRONG> function permits an application program to
+	  receive messages from	unconnected sockets.  It is normally
+	  applied to unconnected sockets because it includes parame-
+	  ters that permit a calling program to	retrieve the source
+	  endpoint of received data.
+
+	  To obtain the	source address of the message, specify a
+	  nonzero value	for the	<EM>address</EM>	parameter.  The	<STRONG>recvfrom()</STRONG>
+	  function is called with the <EM>address</EM>_<EM>len</EM> parameter set	to the
+	  size of the buffer specified by the <EM>address</EM> parameter. On
+	  return, this function	modifies the <EM>address</EM>_<EM>len</EM> parameter to
+	  the actual size in bytes of the address specified by the
+	  <EM>address</EM> parameter. The <STRONG>recvfrom()</STRONG> function returns the
+	  length of the	message	written	to the buffer pointed to by
+	  the <EM>buffer</EM> parameter.	When a message is too long for the
+	  specified buffer, excess bytes may be	truncated depending on
+	  the type of socket that issued the message, and depending on
+	  which	flags are set with the <EM>flags</EM> parameter.
+
+	  When no message is available at the socket specified by the
+	  <EM>socket</EM> parameter, the	<STRONG>recvfrom()</STRONG> function waits for a	mes-
+	  sage to arrive, unless the socket is nonblocking. When the
+	  socket is nonblocking, <STRONG>errno</STRONG> is set to [EWOULDBLOCK].
+
+     <STRONG>RETURN</STRONG> <STRONG>VALUES</STRONG>
+	  Upon successful completion, the byte length of the written
+	  message is returned.	Otherwise, a value of -1 is returned
+	  and <STRONG>errno</STRONG> is set to indicate the error.
+
+     <STRONG>ERRORS</STRONG>
+	  If the <STRONG>recvfrom()</STRONG> function fails, <STRONG>errno</STRONG> may be set to	one of
+	  the following	values:
+
+	  [EBADF]   The	<EM>socket</EM> parameter is not	a valid	file descrip-
+		    tor.
+
+	  [ENOTSOCK]
+		    The	<EM>socket</EM> parameter refers	to a file, not a
+		    socket.
+
+	  [EWOULDBLOCK]
+		    The	socket is nonblocking; no data is ready	to be
+		    received.
+
+	  [EFAULT]  A valid message buffer was not specified.
+		    Nonexistent	or protected address space is speci-
+		    fied for the message buffer.
+
+     <STRONG>RELATED</STRONG> <STRONG>INFORMATION</STRONG>
+	  Functions: <STRONG><A HREF="../man2/recv.2.html">recv(2)</A></STRONG>, <STRONG><A HREF="../man2/recvmsg.2.html">recvmsg(2)</A></STRONG>, <STRONG><A HREF="../man2/send.2.html">send(2)</A></STRONG>, <STRONG><A HREF="../man2/sendmsg.2.html">sendmsg(2)</A></STRONG>,
+	  <STRONG><A HREF="../man2/sendto.2.html">sendto(2)</A></STRONG>, <STRONG><A HREF="../man2/select.2.html">select(2)</A></STRONG>,	<STRONG><A HREF="../man2/shutdown.2.html">shutdown(2)</A></STRONG>, <STRONG><A HREF="../man2/socket.2.html">socket(2)</A></STRONG>,	<STRONG><A HREF="../man2/read.2.html">read(2)</A></STRONG>,
+	  <STRONG><A HREF="../man2/write.2.html">write(2)</A></STRONG>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+
+<A HREF="http://www.sandia.gov/dis.htm">Acknowledgement and Disclaimer</A>
+</BODY>
+</HTML>

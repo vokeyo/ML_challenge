@@ -1,0 +1,352 @@
+From syphers@fnal.gov Fri Mar 23 18:10:55 2001
+Date: Thu, 17 Feb 2000 16:05:13 -0600
+From: Mike Syphers <syphers@fnal.gov>
+To: Jim Hylen <hylen@fnal.gov>, Greg Bock <bock@fnal.gov>,
+     Sam Childress <childress@fnal.gov>, Dixon Bogert <bogert@fnal.gov>
+Cc: Steve Holmes <holmes@fnal.gov>, John Marriner <marriner@fnal.gov>,
+     Phil Martin <pmartin@fnal.gov>, augustine@fnal.gov, cossairt@fnal.gov,
+     Paul Czarapata <pcceed@fnal.gov>, rod@aps.anl.gov,
+     Alan Hahn <ahahn@fnal.gov>, Dave Johnson <dej@fnal.gov>,
+     Walley Kissel <kissel@fnal.gov>, hamburg@fnal.gov,
+     Jim Morgan <jpmorgan@fnal.gov>, Howie Pfeffer <pfeffer@fnal.gov>,
+     Al Russel <russell@fnal.gov>, tartaglia@fnal.gov, vaziri@fnal.gov,
+     Mike Syphers <syphers@fnal.gov>
+Subject: NuMI Review Final Report
+
+
+Fermilab Review of NuMI Beam Extraction and Beam Transport Systems
+Final Report
+February 17, 2000
+
+
+      The Fermilab Beams Division held an internal review of the NuMI 
+Beam Extraction and Beam Transport systems at Fermilab on January 
+25-26, 2000.  A list of the committee members can be found in 
+Appendix I, and the schedule of presentations in Appendix II.  What 
+follows is a report from the Committee on this meeting.
+
+     First of all, the Committee would like to commend the members of 
+the NuMI Project for their efforts to present the design and relevant 
+project issues.  The presentations were well organized and thorough 
+given the one-day format of the review.  NuMI constitutes a major 
+physics and construction program at Fermilab, and a large amount of 
+effort was evident.
+
+      NuMI is expected to deliver in one year an equivalent number of 
+protons on target as has been delivered by the entire Fermilab Fixed 
+Target Program to date.  The need to accomplish this with a loss rate 
+of about 0.01% shows that a high-level of support is required by the 
+Beams Division and Laboratory management.  The level of rigor 
+required to maintain NuMI in its operational state is very high.  The 
+Committee cannot emphasize enough the need to provide NuMI with 
+enough support from the Beams Division to realize its very stringent 
+goals.  This would imply not just more people on the job, but the 
+"right" people to ensure success.
+
+      The findings of the Committee will be discussed now in 
+approximately the order of presentation.
+
+
+BEAM EXTRACTION MODE
+
+      The Committee concurs with the choice of single-turn extraction 
+over resonant extraction.  The latter would introduce losses on the 
+electrostatic septa which are inherently a few percent and would be 
+unacceptably high.
+
+      It was noted that Lambertson magnets are often loss points in 
+accelerators, but that much of the time this is at injection when the 
+beam size is larger.  The aperture at the Q608 quadrupole magnet is 
+tight.  However, the extraction system to be used for NuMI is similar 
+to the systems used at other Main Injector locations for extraction 
+(Tevatron transfers and abort system).  The Committee recommends that 
+beam loss at Tevatron beam transfers and/or during antiproton 
+production be examined in detail.  The latter should be indicative of 
+the NuMI extraction process.
+
+
+BEAM EXTRACTION KICKER
+
+      The beam extraction process to NuMI is operationally tied to 
+beam extraction for antiproton production. The operating scenario 
+proposed is to have 6 batches of beam from the Booster injected and 
+accelerated to 120 GeV in the Main Injector. The bunches are then put 
+through a process in the Main Injector known as bunch rotation, in 
+which the bunch length is minimized and momentum spread increased. 
+One of the six batches is extracted to the Pbar Source.  The NuMI 
+beam is saved for last so that the NuMI kicker fall time can be 
+relaxed.  A system to bring the kicker magnet's field down in the 
+short gap between batches would be much more expensive than that 
+designed.  However bunch rotation maximizes the momentum spread of 
+the entire beam and thus could lead to losses in the NUMI transfer 
+line unless precautions are taken to either extract the NUMI beam 
+after another 90 degrees rotation (or odd multiple thereof), or to 
+recapture the beam in a low voltage bucket.  Either method would 
+minimize the momentum spread.
+
+      Members of the Committee noted that the bunch rotation process 
+can generate small longitudinal emittance growth which can be 
+non-reproducible from cycle to cycle.  With an eye to controlling 
+losses at the 0.01% level, it may be better for the NuMI beam to be 
+extracted prior to doing bunch rotation.  This would require kicker 
+system improvements.  Again, beam studies are recommended to study 
+the beam loss expected during bunch rotation at very high intensities.
+
+      The extraction process introduces a large horizontal orbit 
+excursion in the extraction region.  This practice is used in the 
+other extraction regions, and the orbit excursion is generated by 
+moving MI quadrupole magnets.  For NuMI, MI corrector magnets are to 
+be used, the required strength of which is roughly 50% of the maximum 
+strength available.  The Committee recommends looking at moving 
+quadrupole magnets to achieve the required extraction trajectory of 
+the circulating beam at flattop, reserving the corrector magnets for 
+their intended use.
+
+
+PRIMARY BEAM TRANSPORT
+
+      The primary beam transport system is made up of two major 
+vertical bends near the beginning and end of the line and a major 
+horizontal bend at the beginning of the line.   The horizontal bend 
+establishes the horizontal direction toward Sudan, MN.  The first 
+vertical bend gets the Target Hall into the bedrock.  The second 
+vertical bend sets the final grade toward the Sudan detector.
+
+      One aspect of the design that may need more attention is the 
+momentum dispersion generated by the vertical bends.  The vertical 
+drop of approximately 60 feet (20 m) generates approximately 20 m of 
+vertical dispersion.  Thus, a particle whose momentum is off by 0.1% 
+will arrive at the Target Hall with a trajectory displaced from the 
+ideal trajectory by 20 mm.  The momentum spread of the beam coming 
+from the MI was projected to be on the order of 0.02%.  Using this 
+number, the spot size due to momentum spread is comparable to the 
+spot size due to betatron emittance, making the spot size 40% larger. 
+Recent measurements of the momentum spread in the MI appear to be 2-5 
+times larger than this number during antiproton stacking studies. 
+Additionally, variations of the average extracted momentum from the 
+MI have been recorded recently as +/- 0.1%.
+
+      Efforts have begun to redesign the optics to reduce the momentum 
+dispersion, though its slope is still quite large at the target 
+making it sensitive to quadrupole mistuning.  Further tweaking of the 
+optical design to reduce its sensitivity to momentum spread and 
+tuning errors is strongly encouraged.  The range of momentum spread 
+expected to be extracted from the Main Injector should also be 
+verified.  Additionally, the initial conditions for the optical 
+design have been the design lattice function values of the Main 
+Injector; these assumptions should also be verified now that the Main 
+Injector is operational.
+
+      A sensitivity analysis of the beam transport system design was 
+not presented.  Studies were not presented of the effects of magnet 
+mispowering (of both bending and focusing magnets) and misalignments 
+to see if the correction systems and power supply arrangements can 
+correct errors to the required tolerances.  Specifications and 
+tolerances on power supplies -- regulation, granularity of control, 
+etc. -- need to be developed and checked against foreseen beam based 
+correction algorithms.
+
+      While beam instrumentation is included in the design, it was not 
+clear that instruments -- loss monitors, beam position monitors and, 
+in particular, profile monitors -- had been placed in optimal 
+locations for useful and meaningful measurements during operation. 
+An additional beam toroid in the middle of the beamline may also 
+prove useful.  It will become important to make measurements such as
+   *  correlation of beam loss to energy spread
+   *  beam emittance arriving from the Main Injector
+   *  amplitude function measurements and beam matching
+   *  targeting angle and positions with desired accuracy
+during routine operation and the number and layout of devices should 
+be determined in conjunction with the optical design of the line.
+
+
+RADIATION SAFETY
+
+      One of the most challenging -- if not the most challenging -- 
+issues for the NuMI project is the monitoring of beam loss. 
+Groundwater protection is one of the primary drivers of the beam 
+transport design.  Many calculations have been carried out to study 
+the effects of beam loss in the various geological regions of the 
+project.  The following issues were brought up by the Committee:
+
+    *  Mitigation of Carrier Pipe Loss Control
+
+      The Carrier Pipe region of the beamline passes through the 
+glacial till/bedrock interface.  It was pointed out that the loss of 
+only a few beam pulses per year (at full intensity) can be tolerated 
+in this region.  It is difficult to see how to tune up and maintain 
+an operational system with this restriction.  If 10 seconds elapse 
+before full intensity beam losses are detected to be in this region, 
+then the experiment is shut off for a year.  While beam intensities 
+will be computer monitored very closely, it is still an uncomfortable 
+margin for the Committee.  If a method for increasing the tolerated 
+losses by, say, a factor of at least 10 in this region could be 
+developed, the Committee believes it would be well worth the money 
+and effort.  Examples would be extra shielding in this region, or a 
+better drainage system for moving activated water to the bedrock 
+region.
+
+      The loss tolerance in this area could cause significant 
+operational problems.  A passive method, such as shielding or better 
+drainage, for increasing the tolerated losses by a factor of at least 
+10 (preferably 100) should be investigated and implemented.  The 
+time, effort, and expenditures up front to eliminate this tight 
+tolerance on losses will prove worthwhile in the long run.  Accidents 
+and potential ground water contamination in this area could prove to 
+be a major problem for not only the experiment but for the lab as 
+well.
+
+    *  Loss Monitor Calibration
+
+      Calibration of loss monitors was seen to be an issue, in 
+particular the use of heliax monitors which require periodic 
+maintenance (changing of gas bottles, for instance).  There are only 
+three such monitors -- is this enough spatial resolution?  While much 
+of the beam loss monitoring will depend upon the use of sealed units 
+(BLM's), their calibration needs to be addressed for use in 
+monitoring total beam losses at the 0.01% level.
+
+    *  Fault Analysis
+
+      A detailed Fault Analysis and Radiation Source Analysis should 
+be conducted.  These analyses should investigate the various failure 
+modes which could be hypothesized during operation of the beamline, 
+including power supply failures, magnet failures, kicker magnet 
+misfires, orbit motion in the Main Injector, energy errors from the 
+Main Injector, and so forth.  This could influence the optical design 
+and/or placement of instrumentation, correction magnets, shielding, 
+etc.
+
+    *  Testing of Measurement Procedures
+
+      The Committee recommends that NuMI beam loss instrumentation and 
+procedures (such as AutoTune, loss monitoring and integration, etc.) 
+be testing using existing accelerator beamlines.  For example, NuMI 
+style beam loss monitors could be placed in the Main Injector at the 
+Tevatron/Pbar extraction point and carefully monitored and studied 
+during antiproton stacking cycles.  A measurement of the performance 
+criteria needs to be made.  (Can 0.01% beam loss be detected and 
+measured accurately?)
+
+
+POWER SUPPLIES AND CONTROLS
+
+      The Power Supply system and the Controls system both appear to 
+be in good shape.  The power supply requirements have been defined 
+and many supplies from earlier Fermilab operations are being reused 
+for this project.  A thorough spreadsheet of has been compiled which 
+contains magnet requirements and corresponding power supplies which 
+have been identified.  In several cases, Transrex power supplies are 
+being reused for this project -- a Committee member noted that the 
+internal insulation of these supplies is a problem when they are used 
+in modes other than 100 V operation.  This should be reviewed.
+
+      The power supply interface to operations is straightforward and 
+should be easy to use.  This is strongly endorsed by the Committee. 
+It was questioned whether operating NuMI simultaneously with 
+mini-BooNE will be an issue for power and cooling considerations. 
+This needs to be looked at closely over the upcoming months.
+
+      It was felt that the Controls System is using well understood, 
+standard Fermilab equipment and procedures and is not seen to have 
+any outstanding issues.
+
+
+INSTRUMENTATION, ALIGNMENT, WATER, ETC.
+
+      The following list of issues for instrumentation, alignment, and 
+water systems was generated as a result of the Review:
+
+    *  Temperature and humidity control in the tunnel, especially in 
+the pre-target area, is seen to be a difficult problem and needs 
+careful consideration.
+
+    * The plan to put small orifice devices in the LCW system to 
+regulate flow could eventually lead to problems with plugging from 
+copper oxide.  Similar problems have occurred in the Antiproton 
+Source and elsewhere, and people familiar with these problems should 
+be consulted.
+
+    *  Long-term maintenance and redundancy of components needs more 
+attention.  For instance, access to water pumps located in the 
+tunnel-level enclosure, which could require heavy radiation 
+shielding, needs to be carefully planned.
+
+    *  More details (cranes, etc.) concerning the installation of the 
+B2 magnets are required.
+
+    *  As mentioned earlier in the report, the beam instrumentation 
+requirements need to be consistent with the optical properties of the 
+beam line.  Are 1 mm and 0.5 mm wire spacing enough for the multiwire 
+profile monitors?  Are there enough Beam Position Monitors in the 
+line?
+
+
+      As is common in a review of this nature, it is easy to point out 
+deficiencies and forget to comment on the work that was well done. 
+The above comments are to be regarded as constructive criticism.  The 
+amount of hard work and dedicated time put into the NuMI Project thus 
+far is very evident.  The NuMI Project is seeking to deliver beam at 
+an unprecedented rate and with extremely high efficiency.
+As stated earlier, the Beams Division and Laboratory management must 
+provide the necessary resources and motivational backing to continue 
+the project along its path to success.
+
+
+
+
+Appendix I -- Review Committee Members
+
+Mike Syphers, Chair             syphers@fnal.gov
+Dave Augustine                  augustine@fnal.gov
+Don Cossairt                    cossairt@fnal.gov
+Paul Czarapata                  pcceed@fnal.gov
+Rod Gerig                       rod@aps.anl.gov
+Alan Hahn                       ahahn@fnal.gov
+Dave Johnson                    dej@fnal.gov
+Wally Kissel                    kissel@fnal.gov
+Tony Leveling                   hamburg@fnal.gov
+Jim Morgan                      jpmorgan@fnal.gov
+Howie Pfeffer                   pfeffer@fnal.gov
+Al Russell                      russell@fnal.gov
+Mike Tartaglia                  tartaglia@fnal.gov
+Kamran Vaziri                   vaziri@fnal.gov
+
+
+
+Appendix II -- Presentation Agenda
+
+NuMI Extraction / Primary Beam Review 01/25/00
+
+i) Overview                 S. Childress  15 min. 09:15-09:30
+ii) Beam Extraction Mode    P. Lucas      20 min. 09:30-09:50
+iii) Extraction Kicker      C. Jensen     15 min. 09:50-10:05
+iv) Extraction / MI Beam    A. Drozhdin   20 min. 10:05-10:25
+
+Break           15  min.        10:30-10:45
+
+v) Primary Transport        P. Lucas      30 min. 10:45-11:15
+vi) Radiation Safety        N. Grossman   30 min. 11:15-11:45
+vii) Power Supplies  S. Hays/N. Grossman  20 min. 11:45-12:05
+
+
+Lunch           60 min. 12:10-1:10
+
+viii) Instrumentation       G. Tassotto   20 min. 1:10-1:30
+ix) Alignment               W. Smart      15 min. 1:30-1:45
+x) Water, Vacuum, Gas       D. Pushka     15 min. 1:45-2:00
+xi) Installation            T. Anderson   20 min. 2:00-2:20
+xii) Inst. Schedule Constraints S. Childress  10 min. 2:20-2:30
+xiii) Controls              R. Ducar      25 min. 2:30-2:55
+
+Break           15 min. 3:00-3:15
+
+xiv) Commissioning          S. Childress  20 min. 3:15-3:35
+xv) Beam Operation          S. Childress  20 min. 3:35-3:55
+xvi) Plans / Goals          P. Lucas      20 min. 3:55-4:15
+xvii) Summary               S. Childress  15 min. 4:15-4:30
+\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+Mike Syphers         Fermilab
+M.S. 220,   P.O. Box 500,   Batavia, IL   60510
+(630) 840-8863       fax:  -6039       email:  syphers@fnal.gov
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\

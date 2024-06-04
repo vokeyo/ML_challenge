@@ -1,0 +1,147 @@
+General Comment about definition of generic.
+
+In addition to viewing generics as types and attributes, we will now
+add the concept of hypothetical entities. If an entity is potentially
+hypothetical, it is generic. This is a common theme in many of
+the tests listed below.
+
+1. Common nouns with "no" as a determiner and negated pronouns are always generic. 
+
+   I saw no one/nobody.
+
+   I saw no people in the room.
+
+However, negated full NPs can be specific.
+
+	 Who would do that? Not [John Smith].
+	 Neither [John Smith], nor [Mary Smith] said anything.
+
+Furthermore, common nouns modified by "neither" and partitives with
+"neither" can be specific (depending on coreference) because the 
+negative properties of "neither" has scope over more than just the NP.
+
+	 [Neither person] left the room.
+	 [Neither of [them]] like to talk much.
+
+2. Similarly, "anyone" "most Xs" and "more Xs" tend to be generic, even
+if the author has someone in mind.
+
+3. Naming predicates. We will divide naming predicates into 3 categories:
+
+   A. Negated identity:  John was never called [a liar]
+   B. Alleged identity:  She called John [a liar]
+   C. Verified as true identity: She correctly referred to John as [a musician].
+
+These typically are expressed using "NP1 as NP2" constructions and NP1
+NP2 constructions where NP1 is the subject and NP2 is the
+predicate. What is at issue is the degree of certainty as to whether
+the predication is accurate.  Following, guidelines on predication,
+the annotator will make a judgement as to whether or not the naming
+predicate falls into classes A, B or C. A and B will assumed to be
+generic and C will be assumed specific. Inferences as to whether the
+source is reliable will be taken into account.
+
+4. Boiler plate cases:
+
+   "For each event, there is [one sponsor] and [two teams]."
+   "[Each team] has a mascot."
+
+   These noun phrases are in a legal-like hypothetical setting.
+Given an actual instance of the hypothetical setting, these
+NPs would be "filled in" by actual entities. In all such
+situations, all these to-be-instantiated NPs should be marked
+GENERIC.
+
+5. For underspecified NPs, they are only specific if they are
+definitively not hypothetical.
+
+"[Whoever] has the body should tell the police where it is." 
+
+Here there is an underspecified NP which can be filled in by a singular
+or plural human entity, a singular or plural organizational entity.
+It is even possible that "whoever" is unbound, i.e., that nobody
+has the body. This should be marked GENERIC. Just like the boiler plate
+cases, "whoever" is a hypothetical entity. 
+
+In contrast, the following NP "someone", which is also underspecified, is
+specific. It is assumed that there is an actual specific entity, but
+the author either doesn't know who that is or is not telling the audience.
+This would be marked specific.
+
+"[Someone] has the body. I hope they give it to the police."
+
+6. Ask the question is the statement true even if the referents of the
+entity change? For example, in
+
+"Washington and London are demanding unimpeded access by [U.N. arms
+inspectors] to [suspected storage and production sites]."
+
+This is a statement of law, like the boiler plate cases above. Even
+if particular sites and arms inspectors are in place at the time of
+the statement, this statement is intended to extend throughout time.
+It should apply to newly appointed inspectors and newly suspected
+sites. Therefore the entities are in some sense hypothetical and
+therefore GENERIC.
+
+7. Certain contexts tend to favor hypothetical NPs, in particular
+subjunctive, future, most infinitives and belief contexts -- we will
+call these +irrealis contexts. Thus in the following example, a future
+event is discussed. The weapons inspectors are hypothetical, i.e., for
+some hypothetical weapons inspector X at some future time, the
+U.S. does not want X's authority compromised.
+
+"The United States wants to make sure that the agreement won't
+compromise the authority of [weapons inspectors]"
+
+8. If referents of an entity can be enumerated and the membership of
+the entire set is known, that entity is probably SPECIFIC.
+
+"Iraq also offers Jordan more favorable prices than [Persian Gulf
+states] that might also be willing to fill its fuel needs."
+
+The entire set of Persian Gulf states is known and potentially, a
+smaller number might be willing to give Jordan fuel. This
+suggests a underspecified entity, not a generic (the author may even
+know the complete list).
+
+9. Special Rules for first person plural and second person pronouns:
+
+   A. First person plural (we, us, our, ours, ourselves)
+
+      i. We = Author or Parent company of author 
+
+	 "Yesterday, [we] reported that X, Y and Z happened".
+
+	 Specific - ORG, as per Metonymy guidelines
+
+     ii. We = Public at large
+
+	 "Destiny always finds [us] doing things [our] parents did."
+
+	 GENERIC
+
+     iii. Obvious specific cases
+
+         "John said, `[We] go on vacation to the same place every year'."
+
+    B. Second person (you, your, yours, yourself)
+
+      i. The general audience (GENERIC)
+
+         "Last week, we took [you] on a tour of the Amazon, and
+	  on this program, we will take [you] up Mount Everest."
+
+     ii. You = one (GENERIC)
+
+	 "[You] know, [you] can never trust anyone wearing ski goggles."
+
+     iii. Obviously specific cases
+
+         "Mary said to John, `[You] have a charming family'".
+
+10. Solving conflicts between criteria. In practice conflicts are
+actually quite rare. As a practical matter, a conflict in criteria
+or other difficult decisions spur a HARD case. If a case is genuinely
+HARD, it probably unspecified between an underspecified (vague) entity
+and a generic entity. In the really hard cases (usually not more
+than one per article), we will mark these GENERIC.

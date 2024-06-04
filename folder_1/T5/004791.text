@@ -1,0 +1,181 @@
+=============================================================================
+
+
+                  INTERNATIONAL LASER RANGING SERVICE
+
+                YOUR ORGANIZATION NAME AND ACRONYM HERE
+
+                      Analysis Strategy Summary
+
+
+=============================================================================
+ANALYSIS CENTRE   | Hitotsubashi University
+                  | 2-1 Naka,
+                  | Kunitachi, Tokyo 186-8601 Japan
+-----------------------------------------------------------------------------
+CONTACT PERSONS   | Toshimichi Otsubo, otsubo@srv.cc.hit-u.ac.jp
+-----------------------------------------------------------------------------
+SOFTWARE USED     | concerto ver 4.10
+-----------------------------------------------------------------------------
+ILRS PRODUCTS     | Daily QC report for a number of satellites
+                  | 
+-----------------------------------------------------------------------------
+PREPARATION DATE  | 30 Nov 2007
+=============================================================================
+
+
+
+
+-----------------------------------------------------------------------------
+|                     MEASUREMENT MODELS                                    |
+|---------------------------------------------------------------------------|
+| Satellites used  | AJISAI, STARLETTE, STELLA, JASON-1, ERS-2, ENVISAT,    |
+|                  | LAGEOS-1, LAGEOS-2, ETALON-1, ETALON-2, GPS-35, GPS-36,|
+|                  | GLONASS-95, GLONASS-99, GLONASS-102                    |
+|---------------------------------------------------------------------------|
+| Basic measurement| Satellite Laser Ranging (SLR): round-trip travel time  |
+|                  |--------------------------------------------------------|
+|                  | speed of light         : 299792458 m/s                 |
+|                  | wavelength             : 532.0, 423.0, 847.0 & 694.3 nm|
+|                  | elevation angle cutoff : not applied                   |
+|                  | weighting              : 5 cm to 2 m (4 levels)        |
+|                  | range biases & time biases :                           |
+|                  |   not modeled/estimated in orbit determination,        |
+|                  |   pass-by-pass estimation in residual analysis         |
+|                  | tropospheric biases    : not modeled/estimated         |
+|---------------------------------------------------------------------------|
+| Data editing     | 3.0 sigma editing                                      |
+|---------------------------------------------------------------------------|
+| Troposphere      | Marini & Murray model                                  |
+|---------------------------------------------------------------------------|
+| Ionosphere       | not modeled/estimated                                  |
+|---------------------------------------------------------------------------|
+| Relativity       | scale: LET  (TT time scale)                            |
+|                  | effects: light time corrections                        |
+|---------------------------------------------------------------------------|
+| Satellite center | AJISAI: 1010 mm,                                       |
+| of mass          | STARLETTE and STELLA: 75 mm,                           |
+|                  | LAGEOS: 251 mm, ETALON: 558 mm,                        |
+|                  | other LEOs and GNSSes: ILRS Website                    |
+|---------------------------------------------------------------------------|
+| Other            |                                                        |
+|---------------------------------------------------------------------------|
+
+
+
+-----------------------------------------------------------------------------
+|                           ORBIT MODELS                                    |
+|---------------------------------------------------------------------------|
+| Geopotential     | GGM02C(static terms through degree and order 10 to 80) |
+|                  |       (C(2,0), C(2,1) and S(2,1) time dependent)       |
+|                  |--------------------------------------------------------|
+|                  | Constants                                              |
+|                  | AE    =  6378136.6 m                                   |
+|                  | 1/F   =  298.25642                                     |
+|                  | GM    =  3.986004415 x 10^14 m3/s2                     |
+|---------------------------------------------------------------------------|
+| Third-body       | planets:                                               |
+|                  | Mercury, Venus, Earth Moon, Mars, Jupiter, Saturn,     |
+|                  | Uranus, Neptune                                        |
+|                  |--------------------------------------------------------|
+|                  | ephemeris: JPL DE405                                   |
+|---------------------------------------------------------------------------|
+| Solar radiation  | IERS Conventions 2003                                  |
+| pressure         |                                                        |
+|                  | direct radiation        : applied                      |
+|                  | albedo radiation        : not applied                  |
+|                  | earth thermal radiation : not applied                  |
+|                  |--------------------------------------------------------|
+|                  | Earth shadow model includes: penumbra                  |
+|                  |--------------------------------------------------------|
+|                  | reemitted radiation: not applied                       |
+|---------------------------------------------------------------------------|
+| satellite        | modeled                                                |
+| thermal thrust   | estimation of empirical (constant and once-per-rev)    |
+|                  | along-track and (once-per-rev) cross-track             |
+|                  | accelerations                                          |
+|---------------------------------------------------------------------------|
+| Tidal forces     | solid earth tides: IERS 2003 Conventions model         |
+|                  |--------------------------------------------------------|
+|                  | Ocean tides: CSR 1996                                  |
+|---------------------------------------------------------------------------|
+| Atmospheric      | not modeled/estimated                                  |
+| gravitational    |                                                        |
+| attraction       |                                                        |
+|---------------------------------------------------------------------------|
+| Dynamic          | applied, IERS Conventions 2003                         |
+| polar motion     |                                                        |
+|---------------------------------------------------------------------------|
+| Relativity       | point-mass accelerations, Lense-Thirring effect,       |
+|                  | coriolis force                                         |
+|---------------------------------------------------------------------------|
+| Numerical        | Cowell 12th order predictor-corrector                  |
+| integration      |--------------------------------------------------------|
+|                  | integration step:                                      |
+|                  |   LEO: 15 to 20 s                                      |
+|                  |   LAGEOS: 60 s                                         |
+|                  |   ETALON and GNSSes: 120 s                             |
+|                  |--------------------------------------------------------|
+|                  | arc length (orbits):                                   |
+|                  |   LEO: 2 d                                             |
+|                  |   LAGEOS: 7 d                                          |
+|                  |   ETALON and GNSSes: 14 d                              |
+-----------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+|                    ESTIMATED PARAMETERS (APRIORI VALUES & SIGMAS)         |
+|---------------------------------------------------------------------------|
+| Adjustment       | weighted least-squares adjustment                      |
+|---------------------------------------------------------------------------|
+| Orbital          | Initial position and velocity:                         |
+| parameters       |   estimated for each satellite (unconstrained)         |
+|                  | Solar radiaton pressure: CR (fixed at 1.13 for LAGEOS) |
+|                  | Empirical accelerations (unconstrained)                |
+|---------------------------------------------------------------------------|
+| Stations         | definition: SLR monument (eccentricities subtracted),  |
+|                  |             at mean epoch of each arc                  |
+|                  | fixed to ITRF2000 + some our own updates               |
+|---------------------------------------------------------------------------|
+| Troposphere      | not estimated                                          |
+|---------------------------------------------------------------------------|
+| EOP              | fixed to finals2000A.all at USNO (IERS Rapid Service   |
+|                  | Prediction Center)                                     |
+|---------------------------------------------------------------------------|
+| Range biases     | fixed to zero                                          |
+|---------------------------------------------------------------------------|
+| Constraints      | not applied                                            |
+|---------------------------------------------------------------------------|
+
+
+-----------------------------------------------------------------------------
+|                       REFERENCE FRAMES                                    |
+|---------------------------------------------------------------------------|
+| Inertial         | J2000.0                                                |
+|---------------------------------------------------------------------------|
+| Terrestrial      | ITRF2000 (a priori station coordinates)                |
+|                  | ITRF2000 (station velocities)                          |
+|                  | solid earth tide: IERS 2003 Conventions                |
+|                  | ocean loading: NAO99.b                                 |
+|                  | atmospheric pressure loading: not modeled/estimated    |
+|                  | geocenter motion: not modeled                          |
+|                  | geocenter tidal frequencies: not applied               |
+|                  | pole tide: IERS 2003 Conventions                       |
+|                  | origin: C(1,0) = C(1,1) = S(1,1) = 0                   |
+|---------------------------------------------------------------------------|
+| Interconnection  | Precession: IERS Conventions 2003                      |
+|                  |--------------------------------------------------------|
+|                  | Nutation: IAU 2000A                                    |
+|                  |--------------------------------------------------------|
+|                  | Celestial pole: IERS 2003 Conventions                  |
+|                  |--------------------------------------------------------|
+|                  | Earth Orientation Parameters: fixed to finals2000A.all |
+|                  |--------------------------------------------------------|
+|                  | Tidal variations in UT1 and PM:  IERS 2003 Conventions |
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+|                       OTHER INFORMATION                                   |
+|---------------------------------------------------------------------------|
+|                  |                                                        |
+|---------------------------------------------------------------------------|

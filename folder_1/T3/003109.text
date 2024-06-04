@@ -1,0 +1,118 @@
+     1      ABHE, ETHIOPIA-DJIBOUTI               11.25      42.00      1       
+     2      ABU BALLAS, EGYPT                     24.23      27.42      2       
+     4      AFRERA, ETHIOPIA                      13.42      40.83      1       
+     5      AGADEM, NIGER                         16.83      13.33      2       
+     8      ASAL,DJIBOUTI                         11.60      42.50      1       
+    14      BILMA, NIGER                          18.75      13.00      1       
+    16      BOGORIA, KENYA                         0.30      36.10      1       
+    17      BOSUMTWI, GHANA                        6.50      -1.42      1       
+    18      BOU ALI, ALGERIA                      27.17      -0.25      1       
+    19      BOU BERNOUS, ALGERIA                  27.33      -3.07      1       
+    22      CHAD-MEGACHAD,NIGERIA/NIGER           13.00      14.00      1       
+    23      CHEMCHANE-ADERG,MAURITANIA            21.00     -12.12      1       
+    24      CHEW BAHIR,ETHIOPIA-KENYA              4.75      37.00      1       
+    25      CHILWA, MALAWI                       -15.50      35.50      2       
+    27      DOBI-HANLE,ETHIOPIA                   11.50      42.00      1       
+    28      ENNERI BARDAGUE, CHAD                 21.50      17.00      3       
+    30      ERG INE SAKANE, MALI                  20.80      -0.70      1       
+    31      ERG INE SAKANE EAST, MALI             20.83      -0.63      1       
+    33      ERG INE SAKANE NORTH-EAST, MALI       20.95      -0.53      1       
+    36      FACHI, NIGER                          18.12      11.67      1       
+    42      GREAT NORTH LAKE, MALI                21.03      -0.75      2       
+    44      HASSEI GABOUN, MAURITANIA             18.30     -15.82      1       
+    45      HASSI MESSOUAD, ALGERIA               32.00       5.85      1       
+    47      ICHOURAD WELL, MALI                   20.50      -1.13      2       
+    50      KADDA, ALGERIA                        26.20      -0.88      1       
+    54      KHAT DEPRESSION, MAURITANIA           19.17     -12.50      3       
+    55      KIVU, RWANDA-BURUNDI-ZAIRE            -2.00      29.00      1       
+    60      MAGADI, KENYA                         -1.88      36.30      3       
+    61      MAKGADIKGADI,BOTSWANA                -20.40      24.42      3       
+    62      MANYARA,TANZANIA                      -3.62      35.82      2       
+    65      MOBUTU SESE SEKO, UGANDA-ZAIRE         1.50      31.00      1       
+    70      NABTA PLAYA, EGYPT                    23.00      31.00      1       
+    72      NAIVASHA, KENYA                       -1.25      36.33      1       
+    73      NAKURU-ELMENTEITA, KENYA              -0.42      36.17      1       
+    74      OUM AROUABA,MAURITANIA                20.87     -12.87      1       
+    75      OUNIANGA KEBIR, CHAD                  19.05      20.50      1       
+    78      RUKWA, TANZANIA                       -8.00      32.50      2       
+    80      SELIMA, SUDAN                         21.32      29.34      1       
+    84      SIWA, EGYPT                           29.22      25.35      3       
+    86      TAOUDENNI SABKHA, MALI                22.50      -4.00      1       
+    88      TERMIT OUEST/KANDEL BOUZOU, NIGER     16.08      11.25      1       
+    90      TIRERSIOUM, MAURITANIA                21.37     -16.68      1       
+    93      TURKANA, KENYA                         5.00      36.00      1       
+    95      VICTORIA,UGANDA-TANZANIA-KENYA        -1.00      33.00      1       
+    99      WADI OUKECHERT, MALI                  20.67      -0.75      2       
+   100      WADI SAOURA, ALGERIA                  30.00      -2.00      1       
+   103      ZIWAY-SHALA,ETHIOPIA                   7.75      38.67      1       
+   104      BEYSEHIR, TURKEY                      37.75      31.50      2       
+   107      DIDWANA, INDIA                        27.33      74.58      1       
+   108      GEBEL MAGHARA, SINAI                  30.75      33.40      3       
+   113      KONYA, TURKEY                         37.50      33.00      3       
+   114      LISAN-DEAD SEA, JORDAN-ISRAEL         31.50      35.50      3       
+   115      LUNKARANSAR, INDIA                    28.50      73.75      1       
+   116      MUNDAFAN,RUB'AL KHALI, S.ARABIA       18.55      45.30      1       
+   123      SAMBHAR, INDIA                        27.00      75.00      1       
+   129      ZERIBAR, IRAN                         35.53      46.12      2       
+   130      CAHABA POND, ALABAMA, U.S.A.          33.50     -86.53      2       
+   131      GOSHEN SPRINGS, ALABAMA, U.S.A.       31.72     -86.13      1       
+   132      COCHISE, ARIZONA,U.S.A.               32.13    -109.85      3       
+   134      ADOBE,CALIFORNIA, U.S.A.              37.91    -118.60      3       
+   136      DEEP SPRING,CALIFORNIA, U.S.A.        37.28    -118.03      3       
+   137      LECONTE,CALIFORNIA,U.S.A.             33.33    -116.00      3       
+   143      SEARLES, CALIFORNIA, U.S.A.           35.60    -117.70      2       
+   145      WHITE POND, CAROLINA, U.S.A.          34.16     -80.76      3       
+   146      ANNIE, FLORIDA, U.S.A.                27.30     -81.40      2       
+   147      LITTLE SALT SPRING, FLORIDA, U.S.A.   27.00     -82.17      2       
+   148      KETTLE HOLE LAKE, IOWA, U.S.A.        43.00     -93.10      2       
+   150      WEST LAKE OKOBOJI, IOWA, U.S.A.       46.33     -95.20      3       
+   151      DUCK POND, MASSACHUSETTS, U.S.A.      41.93     -70.00      3       
+   152      KIRCHNER MARSH, MINNESOTA, U.S.A.     44.83     -92.77      3       
+   153      WEBER LAKE, MINNESOTA, U.S.A.         47.47     -91.65      1       
+   154      OLD FIELD SWAMP,MISSOURI, U.S.A.      37.12     -89.83      3       
+   156      LAHONTAN,U.S.A.                       40.00    -119.50      3       
+   161      BLACKWATER DRAW,NEW MEXICO,USA        34.25    -103.33      2       
+   162      ESTANCIA,NEW MEXICO, U.S.A.           34.60    -105.60      2       
+   165      SAN AGUSTIN, NEW MEXICO,U.S.A.        33.83    -108.17      2       
+   167      LAKE GEORGE, NEW YORK, U.S.A.         43.52     -73.65      2       
+   168      CHEWAUCAN, OREGON, U.S.A.             42.67    -120.50      3       
+   169      FORT ROCK, OREGON, U.S.A.             43.17    -120.75      3       
+   178      BONNEVILLE,UTAH,U.S.A.                40.50    -113.00      3       
+   179      MENDOTA, WISCONSIN, U.S.A.            43.10     -89.42      3       
+   181      LAKE ISLE, ALBERTA, CANADA            52.62    -114.43      3       
+   182      MOORE LAKE, ALBERTA, CANADA           53.00    -110.50      3       
+   183      SMALLBOY LAKE, ALBERTA, CANADA        53.58    -114.13      3       
+   184      WABAMUN LAKE, ALBERTA, CANADA         53.50    -114.25      3       
+   185      WEDGE LAKE, ALBERTA, CANADA           50.87    -115.17      1       
+   186      FIDDLER'S POND, B.C., CANADA          56.25    -120.75      3       
+   187      MANITOBA, CANADA                      51.00     -98.00      3       
+   189      LAGUNA CHICHANCANAB, MEXICO           19.50     -88.75      3       
+   190      MEXICO, MEXICO                        19.50     -99.00      2       
+   191      PATZCUARO, MEXICO                     19.58    -101.58      2       
+   193      UPPER LERMA, MEXICO                   19.13     -99.67      3       
+   195      EL JUNCO,GALAPAGOS,ECUADOR            -0.87     -89.45      2       
+   196      FUQUENE, COLOMBIA                      5.50     -73.75      1       
+   198      LAGUNA DE TAGUA TAGUA, CHILE         -34.50     -71.17      3       
+   199      TAUCA, BOLIVIA                       -19.50     -68.00      3       
+   200      VALENCIA, VENEZUELA                   10.10     -67.75      2       
+   202      EL ABRA, COLOMBIA                      5.00     -74.00      3       
+   206      BULLENMERRI, VICTORIA, AUSTRALIA     -38.25     143.05      1       
+   211      EURAMOO, QUEENSLAND, AUSTRALIA       -17.17     145.63      2       
+   213      GEORGE, NSW, AUSTRALIA               -37.43     140.00      3       
+   214      GNOTUK, VICTORIA, AUSTRALIA          -38.22     143.13      1       
+   215      KEILAMBETE, VICTORIA, AUSTRALIA      -38.04     148.88      1       
+   217      KOW SWAMP, VICTORIA, AUSTRALIA       -36.20     144.30      2       
+   218      LEAKE, SOUTH AUSTRALIA               -37.58     140.60      1       
+   219      LYNCHS CRATER, QUEENSLAND, AUST.     -17.37     145.70      1       
+   220      MARSHES SWAMP, SOUTH AUSTRALIA       -37.61     140.53      2       
+   221      MYALUP SWAMP, WESTERN AUSTRALIA      -33.12     115.70      1       
+   222      PULBEENA SWAMP, TASMANIA, AUST.      -40.95     144.72      2       
+   223      QUINCAN CRATER, QUEENSLAND           -17.30     145.58      3       
+   226      VICTORIA, N.S.W., AUSTRALIA          -34.00     141.28      2       
+   228      WILLANDRA LAKES, NSW, AUSTRALIA      -33.50     143.08      3       
+   229      ROTORUA, NORTH ISLAND, N.Z.          -38.10     176.30      2       
+   231      COMARUM SO, GREENLAND                 61.13     -45.53      1       
+   234      PITYOULISH, SCOTLAND                  57.20      -3.78      1       
+   235      TYOTJARVI, FINLAND                    60.98      25.47      1       
+   236      WIELKE GACNO, POLAND                  53.73      17.20      2       
+   237      CHATYRKEL, U.S.S.R.                   40.60      75.30      2       

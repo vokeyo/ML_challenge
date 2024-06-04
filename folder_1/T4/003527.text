@@ -1,0 +1,148 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: Bhowmik, Nani G., Author;
+      Originator: Adams, J. Rodger, Author;
+      Originator: Sparks, Richard E., Author;
+      Originator: Illinois State Water Survey, Author;
+      Publication_Date: 1993
+      Title: Fate of Navigation Pool on Mississippi River
+      Geospatial_Data_Presentation_Form: Journal article
+      Series_Information:
+        Series_Name: Journal of Hydraulic Engineering
+        Issue_Identification: 112 10
+      Publication_Information:
+        Publication_Place: Onalaska, Wisc.
+        Publisher: U.S. Fish and Wildlife Service, Environmental Management Technical Center
+      Other_Citation_Details:
+        Extent of Item: 4 p.
+        Date as Writen: March 1994
+        Illustrative Matter: Diagrams
+        Series Title, Subtitle and Numbering as it appears on item: Long Term Resource Monitoring Program Reprint 93-R001
+        Notes: (Data entered via BMDB Web Input Form, #B680)
+
+  Description:
+    Abstract:
+      An analysis of the morphological changes of Pool 19 on the
+      Mississippi River has been made. The pool lost about 550f its
+      original capacity by 1980, and it is estimated that by the 2050s it
+      will have lost about 800f its capacity, when it may attain a
+      dynamic volumetric equilibrium. At that time, the pool will behave
+      more like a deeply incised river than like a lake. The pooling
+      action of the river has also accelerated the formation of islands
+      and deltas, especially at the mouths of tributaries. These tributary
+      mouths are now behaving similarly to tributaries in a coastal
+      environment. The morphological change on this pool is progressing
+      through a predictable pattern, and it is believed that similar pools
+      on other navigable waterways may follow a similar pattern.
+    Purpose: Reporting results of research.
+    Supplemental_Information:
+      This metadata file can be found at:
+      <URL: http://pubsmeta.er.usgs.gov/metadata/m002001014b_171.txt>; (text format)
+      <URL: http://pubsmeta.er.usgs.gov/metadata/m002001014b_171.html>; (HTML format)
+      <URL: http://pubsmeta.er.usgs.gov/metadata//m002001014b_171.sgml>; (SGML format)
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Single_Date/Time:
+        Calendar_Date: 1993
+    Currentness_Reference: No information provided
+  Status:
+    Progress: Complete
+    Maintenance_and_Update_Frequency: None planned
+  Spatial_Domain:
+    Description_of_Geographic_Extent:
+    Unknown.  This information is not normally part of a publication bibliographic record. The coordinates provided below are default coordinates which cover the United States including Alaska and Hawaii.
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -140.0
+      East_Bounding_Coordinate: -60.0
+      North_Bounding_Coordinate: 75.0
+      South_Bounding_Coordinate: -15.0
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus: Subject Category from NBII Bibliographic Metadata Input Page
+      Theme_Keyword: Habitat Alterations
+      Theme_Keyword: Techniques/Technology
+    Theme:
+      Theme_Keyword_Thesaurus:
+        Testbed Controlled Vocabulary from NBII Bibliographic Metadata
+        Input Page
+      Theme_Keyword: mississippi river
+      Theme_Keyword: navigation
+      Theme_Keyword: pool 19
+      Theme_Keyword: stream monitoring
+    Theme:
+      Theme_Keyword_Thesaurus: None
+      Theme_Keyword: navigation
+    Place:
+      Place_Keyword_Thesaurus: None
+      Place_Keyword: mississippi river
+  Access_Constraints: None
+  Use_Constraints: None
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Bhowmik, Nani G.
+      Contact_Position: Author
+      Contact_Address:
+        Address_Type: physical and mailing
+        Address: 2204 Griffith Drive
+        City: Champaign
+        State_or_Province: IL
+        Postal_Code: 61820
+        Country: USA
+      Contact_Voice_Telephone: No information provided
+
+Distribution_Information:
+  Distributor:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Georginia R. Ardinger
+        Contact_Organization: U.S. Fish and Wildlife Service, Environmental Management Technical Center
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: 575 Lester Avenue
+        City: Onalaska
+        State_or_Province: WI
+        Postal_Code: 54650
+        Country: USA
+      Contact_Voice_Telephone: 608-783-7550
+      Contact_Facsimile_Telephone: 608-783-8058
+  Resource_Description: R00171
+  Distribution_Liability:
+    Although this data and information has been processed
+    successfully on a computer system at the USGS Biological
+    Resources Division, no warranty expressed or implied is made
+    regarding the accuracy or utility of the data and information
+    on any other system or for general or scientific purposes,
+    nor shall the act of distribution constitute any such warranty.
+    This disclaimer applies both to individual use of the data and
+    information, and aggregate use with other data and information.
+    It is also strongly recommended that careful attention be paid
+    to the contents of the metadata file associated with these data
+    and information.  The USGS shall not be held liable for improper
+    or incorrect use of the data and information described and/or
+    contained herein.
+  Standard_Order_Process:
+    Fees: $17.50.
+    Ordering_Instructions:
+      Release unlimited. Available from National Technical Information Service,
+      5285 Port Royal Road, Springfield, VA 22161
+      (1-800-553-6847 or 703-487-4650). NTIS Accession
+      No. PB 94-111960.
+
+Metadata_Reference_Information:
+  Metadata_Date: 19990624
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: Illinois State Water Survey
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: 2204 Griffith Drive
+        City: Champaign
+        State_or_Province: IL
+        Postal_Code: 61820
+        Country: USA
+      Contact_Voice_Telephone: No information provided
+  Metadata_Standard_Name: NBII
+  Metadata_Standard_Version: FGDC-STD-001-1998

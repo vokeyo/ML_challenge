@@ -1,0 +1,179 @@
+
+          The Calorimeter Stable Parameters Database
+
+ cal3_20020210.tar (~2.8Mb) - ROOT-database and macros for simulation:
+
+  cal3_20020122.root
+  CaloSig.C
+  Ecalsim.cpp
+  Ecalsim.hxx 
+  simInit.C   
+  Totecal3.C  
+  Totecal3.h 
+  datshap_new2.dat
+  RefSig.cpp          
+
+  One can use the file cal3_20020122.root in standalone mode. There is 
+only ROOT-Tree "Calres" with the extracted parameters inside this file. 
+The file was obtained using data collected in October, 2001
+(http://d0-france.in2p3.fr/WORKING_GROUPS/CALORIMETRY/CALO_CAL/oct01.html 
+and the additional measurements of the boards listed in the file 
+newmes.txt).
+
+  ROOT-Tree "Calres":
+******************************************************************************
+*Tree    :Calres    : Stable parameters                                      *
+*Entries :    55296 : Total =         4142112 bytes  File  Size =    2158317 *
+*        :          : Tree compression factor =   2.07                       *
+******************************************************************************
+*Br    0 :box       : box/I                                                  *
+*Entries :    55296 : Total  Size=     191976 bytes  File Size  =        773 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression= 248.35     *
+*............................................................................*
+*Br    1 :board     : board/I                                                *
+*Entries :    55296 : Total  Size=     191988 bytes  File Size  =       2511 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=  76.46     *
+*............................................................................*
+*Br    2 :ch        : ch/I                                                   *
+*Entries :    55296 : Total  Size=     191994 bytes  File Size  =       1816 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression= 105.72     *
+*............................................................................*
+*Br    3 :chType    : chType/I                                               *
+*Entries :    55296 : Total  Size=     191994 bytes  File Size  =      11761 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=  16.32     *
+*............................................................................*
+*Br    4 :chStatus  : chStatus/I                                             *
+*Entries :    55296 : Total  Size=     191982 bytes  File Size  =       5508 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=  34.86     *
+*............................................................................*
+*Br    5 :eta       : eta/F                                                  *
+*Entries :    55296 : Total  Size=     191976 bytes  File Size  =      16334 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=  11.75     *
+*............................................................................*
+*Br    6 :phi       : phi/F                                                  *
+*Entries :    55296 : Total  Size=     191976 bytes  File Size  =      12655 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=  15.17     *
+*............................................................................*
+*Br    7 :dt1       : dt1/F                                                  *
+*Entries :    55296 : Total  Size=     191976 bytes  File Size  =      76154 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   2.52     *
+*............................................................................*
+*Br    8 :dt2       : dt2/F                                                  *
+*Entries :    55296 : Total  Size=     191976 bytes  File Size  =      88526 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   2.17     *
+*............................................................................*
+*Br    9 :imp1      : imp1/F                                                 *
+*Entries :    55296 : Total  Size=     191982 bytes  File Size  =     144274 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.33     *
+*............................................................................*
+*Br   10 :erImp1    : erImp1/F                                               *
+*Entries :    55296 : Total  Size=     191994 bytes  File Size  =     151581 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.27     *
+*............................................................................*
+*Br   11 :chi2i1    : chi2i1/F                                               *
+*Entries :    55296 : Total  Size=     191994 bytes  File Size  =     153392 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.25     *
+*............................................................................*
+*Br   12 :imp2      : imp2/F                                                 *
+*Entries :    55296 : Total  Size=     191982 bytes  File Size  =     143001 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.34     *
+*............................................................................*
+*Br   13 :erImp2    : erImp2/F                                               *
+*Entries :    55296 : Total  Size=     191994 bytes  File Size  =     149340 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.29     *
+*............................................................................*
+*Br   14 :cap       : cap/F                                                  *
+*Entries :    55296 : Total  Size=     191976 bytes  File Size  =     153493 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.25     *
+*............................................................................*
+*Br   15 :ecap      : ecap/F                                                 *
+*Entries :    55296 : Total  Size=     191982 bytes  File Size  =     148195 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.30     *
+*............................................................................*
+*Br   16 :chi2cap   : chi2cap/F                                              *
+*Entries :    55296 : Total  Size=     191976 bytes  File Size  =     152340 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.26     *
+*............................................................................*
+*Br   17 :ls        : ls/F                                                   *
+*Entries :    55296 : Total  Size=     191994 bytes  File Size  =     144928 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.32     *
+*............................................................................*
+*Br   18 :els       : els/F                                                  *
+*Entries :    55296 : Total  Size=     191976 bytes  File Size  =     146957 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.31     *
+*............................................................................*
+*Br   19 :chi2ls    : chi2ls/F                                               *
+*Entries :    55296 : Total  Size=     191994 bytes  File Size  =     152348 *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.26     *
+*............................................................................*
+
+  Values of "chType", "eta" and "phi" were taken from "all_quads.root". 
+If the channel is absent in DB "all_quads.root" the value of "chType" is 
+negative. The value of "chStatus" is "0" for successfully processed channels.
+So one can use the channels which pass the cut "chStatus==0 && chType>0". Of 
+course, not all of these channels have the correct values of the extracted
+parameters. The channels with non-zero "chStatus" are listed in file 
+cal3_20020122non0ch.txt with the possible problem (chStatus==4 means 
+unconnected channels, which are not included into this list). In present 
+version of extraction programm "ls" and "cap" are determined
+simultaneously and chi2cap=chi2ls.
+
+  The ROOT command ".x simInit.C" loads Ecalsim.cpp, Totecal3.C and CaloSig.C. 
+These macros allow to simulate the signal for each calorimeter channel. 
+The macro Ecalsim.cpp should be compiled, that takes some time. 
+One can take the compiled file Ecalsim_cpp.so from the directory
+"~burdin/packages/" on d0mino, clued0, ccali.in2p3.fr. 
+The simulation can be made simply typing 
+root [] CaloSig cs(0,   0,     0)
+                   ^    ^      ^
+                  box board  channel
+After one can use method Draw to draw the result. Command cs.Draw() draws 
+the calibration signal after shaper, cs.Draw(0.,0.,"pa") - physical signal
+after shaper, cs.Draw(0.,0.,"cb"), cs.Draw(0.,0.,"pb") - the signals before 
+shaper. Method getDim gives the dimension of arrays. Methods 
+getTime, getCaliAv, getCaliAf, getPhysAv, getPhysAf give the pointers to 
+the arrays with the time and the simulated signals. Method 
+Write("fileName") writes all these arrays into the file "fileName".
+
+  The macro RefSig.cpp plots the measured reflection signals. 
+To use it one needs to take *.zip files from 
+http://d0-france.in2p3.fr/WORKING_GROUPS/CALORIMETRY/CALO_CAL/data/oct01/reflecto/pc_ursula/
+and
+http://d0-france.in2p3.fr/WORKING_GROUPS/CALORIMETRY/CALO_CAL/data/oct01/reflecto/pc_gisele/
+
+and rename some of them to the form
+
+  30000.zip    
+  30100.zip
+  30200.zip
+  30300.zip
+  30400.zip
+  30500.zip
+  30600.zip
+  30700.zip
+  30800.zip
+  30900.zip
+  31000.zip
+  31100.zip
+
+  To plot the signal for the channel "box=1, board=2, channel=3" one can type
+the following commands:
+
+root [] .L RefSig.cpp+
+root [] RefSig rf("30102.KUM")  // extract and load file 30102.KUM
+                                                          ^  ^
+                                                        box board
+root [] rf.Draw(3)  // Draw the signal for channel 3
+               
+  The total format of the method Draw is:
+
+void Draw(int iChan = 0, Float_t xMin = 0., Float_t xMax = 0., 
+Option_t* option, Int_t lineColor = 1, TString frameName = myChanelFrame)
+
+ To draw channel 5 on the same plot one can use
+
+root [] rf.Draw(5,0.,0.,"s",2)
+
+----------------------------------------------------------------------------
+     Any questions and suggestions -> burdin@lal.in2p3.fr
+

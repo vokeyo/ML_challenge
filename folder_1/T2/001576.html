@@ -1,0 +1,243 @@
+<html><head>
+<title>Tiger Map Server Browser</title>
+<link rev=made href="mailto:tms@census.gov">
+
+<!-----------------JavaScript---------------->
+
+<script language="JavaScript">
+
+function handleCheckClick(checkObj) {
+
+         for (var i=0; i<44; i++) {
+             if ((document.main.elements[i].value==checkObj.value) &&
+                 (document.main.elements[i].name==checkObj.name) &&
+                 (document.main.elements[i].name=="off")) {
+                document.main.elements[i+1].checked=false; break;    
+             }
+             if ((document.main.elements[i].value==checkObj.value) &&
+                 (document.main.elements[i].name==checkObj.name) &&
+                 (document.main.elements[i].name=="on")) {
+                document.main.elements[i-1].checked=false; break;
+             }
+         }
+}                      
+</script>
+
+
+</head>
+<body bgcolor="ffffff">
+
+<h3 align=center><img src=/smalltiger.gif height=70 width=61 align=center alt=Grrrr!> <font size=+2>TIGER M</font>ap <font size=+2>S</font>ervice</h3>
+The following map is produced on-the-fly from a special
+binary version of TIGER data.  Use at your own risk. <a href=/credits.html>Technical details</a>
+are available, as well as instructions on <a href=/instruct.html>how to 
+include TMS maps</a> in your HTML web pages and CGI programs.  The system is load balanced to find the least busy processor (using machine tiger.census.gov which has a run queue length of ) ,maps may take a while to be created. If you have questions, please check out the service <a href=/faq.html>FAQ</a> page.  <p>
+
+<form name="main" action="/cgi-bin/mapbrowse" method=GET>
+<table units=relative width=100%>
+<tr rowspan=2 valign=middle><td align=center>
+<A HREF="/cgi-bin/mapbrowse?lat=34.07124&lon=-81.90447&wid=0.300&ht=0.300&iht=359&iwd=422&mlat=33.771236&mlon=-81.904465&msym=redpin&mlabel=Edgefield+County,+South+Carolina">
+  <img src="/icons/up.gif" border=0></a><br>
+<a href="/cgi-bin/mapbrowse?lat=33.77124&lon=-82.20447&wid=0.300&ht=0.300&iht=359&iwd=422&mlat=33.771236&mlon=-81.904465&msym=redpin&mlabel=Edgefield+County,+South+Carolina">
+  <img src="/icons/left.gif" align=middle border=0></a>
+<Input type="image" name=map
+SRC="http://tiger.census.gov/cgi-bin/mapper/map.gif?lat=33.77124&lon=-81.90447&wid=0.300&ht=0.300&iht=359&iwd=422&mlat=33.771236&mlon=-81.904465&msym=redpin&mlabel=Edgefield+County,+South+Carolina"
+ ALIGN=middle border=0>
+<a href="/cgi-bin/mapbrowse?lat=33.77124&lon=-81.60447&wid=0.300&ht=0.300&iht=359&iwd=422&mlat=33.771236&mlon=-81.904465&msym=redpin&mlabel=Edgefield+County,+South+Carolina">
+  <img src="/icons/right.gif" align=middle border=0></a><br>
+<A HREF="/cgi-bin/mapbrowse?lat=33.47124&lon=-81.90447&wid=0.300&ht=0.300&iht=359&iwd=422&mlat=33.771236&mlon=-81.904465&msym=redpin&mlabel=Edgefield+County,+South+Carolina">
+  <img src="/icons/down.gif" border=0></a><p>
+<center>
+<INPUT align=right TYPE="submit" VALUE="REDRAW MAP"><br>
+</center> 
+</td>
+
+<td align=left valign=top>
+<dl>
+<dt><strong>Click on the image to:</strong>
+<dt><input type="radio" name="act" value="in">Zoom in, factor: 
+<input name="infact" value="2" size=3>
+<dt><input type="radio" name="act" value="out">Zoom out, factor:
+<input name="outfact" value="2" size=3> 
+<dt><input type="radio" name="act" value="move" checked>Move to new center
+<dt><input type="radio" name="act" value="place">Place Marker 
+<dd>(Select symbol below)
+<dt><input type="radio" name="act" value="load">Download GIF image
+</dl>
+<strong>
+<font size=2>
+OFF/ON   Layers<br>
+</font>
+</strong>
+<font size=-1>
+<input type="checkbox" value=BACK onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=BACK onClick="handleCheckClick(this)" name="on">
+ background<br>
+<input type="checkbox" value=CITIES onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=CITIES onClick="handleCheckClick(this)" name="on">
+ city labelling<br>
+<input type="checkbox" value=GRID onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=GRID onClick="handleCheckClick(this)" name="on">
+ lat/lon graticule<br>
+<input type="checkbox" value=cen_blkg onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=cen_blkg onClick="handleCheckClick(this)" name="on">
+ cens bg points<br>
+<input type="checkbox" value=censusb onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=censusb onClick="handleCheckClick(this)" name="on">
+ cens bg bounds<br>
+<input type="checkbox" value=con_dist onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=con_dist onClick="handleCheckClick(this)" name="on">
+ congress dist<br>
+<input type="checkbox" value=counties onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=counties onClick="handleCheckClick(this)" name="on">
+ counties<br>
+<input type="checkbox" value=indian onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=indian onClick="handleCheckClick(this)" name="on">
+ indian resv<br>
+<input type="checkbox" value=majroads onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=majroads onClick="handleCheckClick(this)" name="on">
+ highways<br>
+<input type="checkbox" value=miscell onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=miscell onClick="handleCheckClick(this)" name="on">
+ parks and other<br>
+<input type="checkbox" value=msa onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=msa onClick="handleCheckClick(this)" name="on">
+ MSA/CMSA<br>
+<input type="checkbox" value=places onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=places onClick="handleCheckClick(this)" name="on">
+ cities/towns<br>
+<input type="checkbox" value=railroad onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=railroad onClick="handleCheckClick(this)" name="on">
+ railroad<br>
+<input type="checkbox" value=shorelin onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=shorelin onClick="handleCheckClick(this)" name="on">
+ shoreline<br>
+<input type="checkbox" value=states onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=states onClick="handleCheckClick(this)" name="on">
+ state bounds<br>
+<input type="checkbox" value=streets onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=streets onClick="handleCheckClick(this)" name="on">
+ Streets<br>
+<input type="checkbox" value=tracts onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=tracts onClick="handleCheckClick(this)" name="on">
+ census tracts<br>
+<input type="checkbox" value=water onClick="handleCheckClick(this)" name="off">
+<input type="checkbox" value=water onClick="handleCheckClick(this)" name="on">
+ water bodies<br>
+
+</font>
+</td>
+</tr>    
+<tr>
+<td align=left><a href="http://tiger.census.gov/cgi-bin/mapper/map.gif?legend=on&lat=33.77124&lon=-81.90447&wid=0.300&ht=0.300&iht=300&iwd=400&mlat=33.771236&mlon=-81.904465&msym=redpin&mlabel=Edgefield+County,+South+Carolina">
+<IMG 
+SRC="http://tiger.census.gov/cgi-bin/mapper/map.gif?legend=on&lat=33.77124&lon=-81.90447&wid=0.300&ht=0.300&iht=300&iwd=400&mlat=33.771236&mlon=-81.904465&msym=redpin&mlabel=Edgefield+County,+South+Carolina"
+ ALIGN=middle></a> <br>
+Click on the legend to download it as a GIF file.
+
+<td align=left>
+<strong>Map Census Statistics:</strong><br>
+Level: 
+<select name="tlevel">
+<option value='-' selected>(none)
+<option value=states>States
+<option value=msa>Metro Areas
+<option value=counties>Counties
+<option value=con_dist>Congress Dist.
+<option value=places>Places
+<option value=mcd>NE Townships
+<option value=tracts>Census Tracts
+<option value=censusb>Block Groups
+</select><br>
+Theme:
+<select name="tvar">
+<option value='-' selected>(none)
+<option value='famsize'>Family Size
+<option value='hhsize'>Household Size
+<option value='density'>Pop Density
+<option value='income'>Family Income
+<option value='p0-4'>% Age 0-4
+<option value='p5-9'>% Age 5-9
+<option value='p10-19'>% Age 10-19
+<option value='p20-49'>% Age 20-49
+<option value='p50-64'>% Age 50-64
+<option value='p65-'>% Age 65+
+<option value='white'>% White
+<option value='black'>% Black
+<option value='indian'>% Indian
+<option value='asian'>% Asian
+<option value='hispanic'>% Hispanic
+<option value='other'>% Other Ethnic
+<option value='owners'>% Owner-Occ.
+<option value='renters'>% Renter-Occ.
+</select><br>
+Classify Method:<br>
+<input name=tmeth value=q type=radio> Quintiles or <input name=tmeth value=i type=radio> Eq Interval
+
+<tr><td align=left>
+<strong>Place a marker on this map:</strong><br>
+Latitude(deg): <INPUT NAME="mlat" SIZE=9 value="33.771236"><br>
+Longitude(deg): <INPUT NAME="mlon" SIZE=9 value="-81.904465"><br>
+Symbol:
+<select name=msym>
+<option value=bigdot>Large Red Dot
+<option value=blueball>Blue Ball
+<option value=blupin>Blue Stickpin
+<option value=brnpin>Brown Stickpin
+<option value=cross>Crosshairs
+<option value=cynpin>Cyan Stickpin
+<option value=grnball>Green Ball
+<option value=grnpin>Green Stickpin
+<option value=grypin>Grey Stickpin
+<option value=lgrpin>Lt Green Stickpin
+<option value=magpin>Magenta Stickpin
+<option value=purpin>Purple Stickpin
+<option value=redball>Red Ball
+<option value=redpin selected>Red Stickpin
+<option value=smalldot>Small Red Dot
+<option value=whtpin>White Stickpin
+</select><br>
+
+Label: <input name="mlabel" SIZE=15 value="Edgefield County, South Carolina"><br>
+Marker URL:<br>
+<input name="murl" SIZE=25 value=""><br>
+<i>sorry, but no font control yet</i>
+
+<td align=left>
+<strong>Enter precise coordinates:</strong><br>
+Latitude(deg): <INPUT NAME="lat" SIZE=8 value="33.77124"><br>
+Longitude(deg): <INPUT NAME="lon" SIZE=8 value="-81.90447"><br>
+Map Width(deg): <INPUT NAME="wid" SIZE=6 value="0.300"><br>
+Map Height(deg): <INPUT NAME="ht" SIZE=6 value="0.300"><br>
+Image Width(pix): <INPUT NAME=iwd Size=5 value="422"><br>
+Image Height(pix): <INPUT NAME=iht Size=5 value="359"><br>
+
+</table>
+<center>
+<INPUT align=right TYPE="submit" VALUE="REDRAW MAP"><br>
+</center>
+</form>
+<hr noshade>
+
+
+<li><form method=get action="http://www.census.gov/cgi-bin/gazetteer">
+<strong>You can also search for a U.S. city or town:</strong><br>
+Name: <input name="city" size=15>
+State(optional): <input name="state" size=3><br> 
+or for a Zip Code: <input name="zip" size=8>
+<input type="submit" value="Search"></form>
+
+<li>Or choose from the following preset values:<br>
+<a href="/cgi-bin/mapbrowse">Washington, D.C.</a> (default),
+<a href="/cgi-bin/mapbrowse?lon=-77.028&lat=38.89&wid=.06&ht=.01&mark=-77.0364,38.8973,redpin,White+House;-77.01,38.8895,blueball,Capitol">The Mall</a>,
+<a href="/cgi-bin/mapbrowse?lon=-96&lat=37&wid=50&ht=24.1">United States</a>,
+<a href="/cgi-bin/mapbrowse?lon=-76&lat=41.65&wid=16&ht=11">Northeast U.S.</a>,
+<a href="/cgi-bin/mapbrowse?lon=-74&lat=40.75&wid=.2&ht=.2">New York City</a>.
+</ul>
+Please email comments and suggestions to: <a href=mailto:tms@census.gov>TMS@Census.GOV</a>.
+<hr noshade>
+<a href="/"><img src="/tms.gif" ALT="[TMS]"></a>
+Return to home page</a>
+</BODY></HTML>
+
+

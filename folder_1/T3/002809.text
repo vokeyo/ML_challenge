@@ -1,0 +1,4651 @@
+Seepage Calibration Model and Seepage Testing Data Rev 00, ICN 00
+
+MDL-NBS-HS-000004
+
+January 2000
+
+1. PURPOSE 
+The purpose of this Analysis/Model Report (AMR) is to document the development of the 
+Seepage Calibration Model (SCM) based on available seepage testing data. The SCM is a 
+template fracture continuum model that is developed based on air-permeability and liquid-release 
+test data from the experiments performed in Niche 3650 of the Exploratory Studies Facility (ESF) 
+at Yucca Mountain, Nevada. The SCM provides a methodological and conceptual basis for the 
+subsequent development of drift-scale seepage models. 
+Specific objectives of this work activity are to evaluate inflow rates into drifts and seepage 
+thresholds based on seepage testing data from the niche studies. The potential of an underground 
+opening to act as a capillary barrier, which limits or precludes seepage of water into drifts, is also 
+evaluated. Inverse modeling is used to calibrate the SCM and to estimate seepage-relevant, 
+model-related parameters. The accuracy of the derived parameters is estimated based on the 
+goodness-of-fit to the observed data and the sensitivity of calculated seepage with respect to the 
+parameters of interest. The SCM is validated against liquid-release test data that were not used for 
+the calibration of the model. Linear uncertainty propagation analyses and Monte Carlo 
+simulations are performed to evaluate prediction uncertainty. 
+The scope of this AMR is limited to an analysis of liquid-release test data from Niche 3650. The 
+parameters estimated and seepage percentages predicted by the SCM are therefore only 
+applicable to an uncollapsed excavation with the geometry of Niche 3650 under ambient 
+temperature conditions. Moreover, these parameters are restricted to the middle nonlithophysal 
+zone of the Topopah Spring Tuff at Yucca Mountain. 
+This AMR is written in accordance with the Development Plan (CRWMS M&O 1999c) in 
+support of the following project activities: 
+• Performance Assessment (PA) 
+• Seepage Model for PA 
+• Drift-Scale Coupled Processes Models 
+• Abstraction of Drift Seepage and Drift-Scale Coupled Processes 
+• Process Model Report (PMR) for the 3D site-scale unsaturated zone flow and transport 
+model of Yucca Mountain, Nevada (UZ Model)
+
+
+
+2. QUALITY ASSURANCE 
+This AMR was developed in accordance with AP-3.10Q, Analyses and Models. Other applicable 
+Department of Energy (DOE) Office of Civilian Radioactive Waste Management (OCRWM) 
+Administrative Procedures (APs) and YMP-LBNL Quality Implementing Procedures (QIPs) are 
+identified in the AMR Development Plan (CRWMS M&O 1999c). 
+The activities documented in this AMR were evaluated with other related activities in accordance 
+with QAP-2-0, Conduct of Activities, and were determined to be subject to the requirements of the 
+U.S. DOE Office of Civilian Radioactive Waste Management (OCRWM) Quality Assurance 
+Requirements and Description (QARD) (DOE 1998). This evaluation is documented in CRWMS 
+1999a, b; and Wemheuer 1999 (Activity Evaluation for Work Package WP 1401213UM1). 
+Scientific Notebooks (SN) used for the modeling activities described in this AMR are listed in 
+Table 1. 
+Table 1. Scientific Notebooks 
+Scientific Notebook Page numbers Owner YMP M&O SNR Accession number 
+YMP-LBNL-SAF-1 1–150 S. Finsterle SN-LBNL-SCI-087-V1 MOL.19990723.0301 
+YMP-LBNL-SAF-2 1–27 S. Finsterle SN-LBNL-SCI-171-V1 MOL.19990812.0357 
+YMP-LBNL-RCT-DSM-1 1–37 R.C. Trautz SN-LBNL-SCI-157-V1 MOL.19990923.0302
+
+ 
+ 14 
+
+
+ 
+ 15 
+3. COMPUTER SOFTWARE AND MODEL USAGE 
+The software codes and routines listed in Table 2 were used in support of this AMR. The software 
+codes iTOUGH2, SISIM, GAMV2, and EXT are obtained from software configuration 
+management in accordance with AP-SI.1Q, Software Management. The software is appropriate 
+for the intended application, and was used only within the range of validation in accordance with 
+applicable software procedures. The software routines are documented in the records listed by 
+accession number in Table 2. 
+All computer codes listed in Table 2 were installed on hydra, a Sun SPARC multiprocessor 
+workstation running under Unix operating system Solaris. Installation is documented in 
+YMP-LBNL-SAF-1, p. 5. The QA status of the software codes and software routines listed in 
+Table 2 is indicated on the Document Input Reference Sheet (DIRS), Attachment I. 
+The software iTOUGH2 (iTOUGH2, V4.0, 10003-4.0-00) provides forward and inverse 
+modeling capabilities for unsaturated and multiphase flow in fractured-porous media, and is used 
+in this AMR for calibration, validation, and prediction runs (Sections 5.3, 6.3–6.6). The GSLIB 
+module SISIM (SISIM, V1.203, 10001-1.0MSISIMV1.203-00) generates three-dimensional, 
+spatially correlated random fields based on sequential indicator simulations, and is used in this 
+AMR to generate permeability fields (Sections 5.3.2, 6.3.2). The GSLIB module GAMV2 
+(GAMV2, V1.201, 10087-1.0MGAMV2V1.201-00) analyzes spatial correlation of twodimensional, 
+irregularly spaced datasets, and is used in this AMR for the analysis of postexcavation 
+air-permeability data (Section 6.2.3). The software EXT (EXT, V1.0, 10047-1.0-00) 
+is used to extract data from iTOUGH2 output files for visualization with Tecplot V7.0-8-0; 
+Tecplot visualizations are shown in Sections 5.3 and 6. The routine MoveMesh (MoveMesh, 
+V1.0, ACC: MOL.19990721.0552) moves coordinates of a mesh file (Section 5.3, 6.3). The 
+routine AddBound (AddBound, V1.0, ACC: MOL.19990721.0553) adds boundary elements to a 
+mesh file (Sections 5.3, 6.3). The routine Perm2Mesh (Perm2Mesh, V1.0, ACC: 
+Table 2. Code Names, Versions, Traceability 
+Software Name Version 
+Software Tracking Number or 
+Accession Number 
+iTOUGH2 4.0 10003-4.0-00 
+GSLIB Module SISIM 1.203 10001-1.0MSISIMV1.203-00 
+GSLIB Module 
+GAMV2 
+1.201 10087-1.0MGAMV2V1.201-00 
+EXT 1.0 10047-1.0-00 
+Routines: 
+MoveMesh 1.0 ACC: MOL.19990721.0552 
+AddBound 1.0 ACC: MOL.19990721.0553 
+Perm2Mesh 1.0 ACC: MOL.19990721.0554 
+DelMatrix 1.0 ACC: MOL.19990721.0555 
+Eos9Eos3 1.0 ACC: MOL.19990721.0556 
+CutNiche 1.1 ACC: MOL.19990721.0557 
+userobs 1.01 ACC: MOL.19990721.0558
+
+ 
+ 16 
+MOL.19990721.0554) maps the permeability field generated using SISIM onto a mesh file 
+(Sections 5.3, 6.3). The routine DelMatrix (DelMatrix, V1.0, ACC: MOL.19990721.0555) 
+reassigns permeabilities to low-permeability matrix elements (Section 5.3). The routine Eos9Eos3 
+(Eos9Eos3, V1.0, ACC: MOL.19990721.0556) reformats an unsaturated flow output file SAVE 
+to a two-phase flow initial condition file INCON (Section 5.3). The routine CutNiche (CutNiche, 
+V1.1, ACC: MOL.19990721.0557) cuts a niche from the mesh file (Sections 5.3, 6.3). The 
+routine userobs (userobs, V1.01, ACC: MOL.19990721.0558) provides a user-specified 
+observation type needed to estimate semivariogram parameters (Section 6.3.2). 
+In addition to the above, commercially available standard spreadsheet and visual display graphics 
+programs that are exempt from software quality assurance requirements were used. EXCEL 97- 
+SR-1 was used for spreadsheet calculations and calculations of basic statistics. Tecplot V7.0-8-0 
+was used for plotting and visualization of analysis results in figures shown in this report. 
+
+ 
+ 17 
+4. INPUTS 
+4.1 DATA AND PARAMETERS 
+The input parameters and data needed for the development of the Seepage Calibration Model are 
+obtained from the TDMS. Specific input data sets and associated Data Tracking Numbers (DTNs) 
+are summarized in Table 3. The QA status of the inputs listed in Table 3 is indicated on the DIRS, 
+Attachment I. 
+Reports documenting past experimental and numerical work related to drift seepage at Yucca 
+Mountain as well as other pertinent documents are listed in Section 8.5, Supporting Bibliography. 
+This bibliography is for information only, and this AMR does not directly rely on any of the listed 
+documents 
+4.2 CRITERIA 
+At this time, no specific criteria (e.g., System Description Documents) have been identified as 
+applying to this analysis and modeling activity in project requirements documents. However, this 
+AMR provides information required in specific subparts of the proposed U.S. Nuclear Regulatory 
+Commission rule 10 CFR 63 (see Federal Register for February 22, 1999, 64 FR 8640). It 
+supports the site characterization of Yucca Mountain (Subpart B, Section 15), the compilation of 
+information regarding the hydrology of the site in support of the License Application (Subpart B, 
+Section 21(c)(1) (ii)), and the definition of hydrologic parameters used in performance assessment 
+(Subpart E, Section 114(1)). 
+The DOE interim guidance (Dyer 1999), requiring the use of specified subparts of the proposed 
+NRC high-level waste rule, 10 CFR Part 63 (64 FR 8640), was released after completion of the 
+work documented in this AMR; it has no impact on this work activity. 
+4.3 CODES AND STANDARDS 
+No specific, formally established standards have been identified as applying to this analysis and 
+modeling activity. 
+Table 3. DTNs of Inputs Used for the Development of the Seepage Calibration Model 
+Data Description DTN 
+Air-permeability data from air-injection testing in Niche 3650 LB980001233124.002 
+Liquid-release test data from Niche 3650 LB980001233124.003 
+Base-case hydrologic parameter set LB997141233129.001
+
+ 
+ 18 
+
+
+ 
+ 19 
+5. ASSUMPTIONS 
+5.1 INTRODUCTION 
+In this section, we discuss the basic assumptions of the Seepage Calibration Model (SCM). The 
+section is structured as follows: 
+Section 5.2 contains a list of assumptions. Each statement of an assumption is immediately 
+followed by the rationale as to why the assumption is considered valid or reasonable. The 
+justification for making the continuum assumption (Assumption No. 1) required a more extensive 
+study, which is presented in Section 5.3. This synthetic modeling study confirms that the 
+continuum assumption is valid. At the same time, it outlines the approach and provides 
+guidelines for deriving values of key parameters affecting seepage. This approach is followed in 
+Section 6 where the SCM is developed and actual liquid-release test data are analyzed. 
+5.2 GENERAL MODELING ASSUMPTIONS 
+The basic assumptions of the SCM must be consistent with those of the “UZ Flow and Transport 
+Model” and the “Seepage Model for PA,” because the concepts and parameters derived with the 
+SCM are only valid and useful for subsequent seepage calculations if they refer to similar 
+conceptual models. 
+The assumptions for the SCM are stated below, followed by the basis or rationale for using them. 
+1. Assumption: It is assumed that the continuum approach is a valid concept to calculate 
+percolation flux and drift seepage at Yucca Mountain. Rationale: The rationale for this 
+assumption is presented in Section 5.3. 
+2. Assumption: Adopting the continuum approach, water flow under unsaturated conditions 
+is assumed to be governed by Richards’ equation (Richards 1931, pp. 218–233). 
+Rationale: This general concept is believed reasonable for unsaturated water flow 
+through both porous matrix and fractures. Richards’ equation simply states that water 
+flows under the combined effect of gravitational and capillary forces, and that flow 
+resistance is a function of saturation. 
+3. Assumption: Permeabilities determined from air-injection tests are assumed to be 
+representative of the hydraulic conductivity of the formation. Rationale: The assumption 
+is believed to hold for the purposes of the current application, where air-permeability 
+estimates are only used to condition the generation of a spatially correlated, random 
+permeability field. Potential inaccuracies in this assumption are compensated for through 
+the estimation of the van Genuchten 1/ a parameter (Luckner et al. 1989, pp. 2191–2192), 
+which is correlated to permeability. 
+4. Assumption: Relative permeability and capillary pressure are assumed to be described as 
+continuous functions of effective liquid saturation, following the expressions given by the 
+van Genuchten-Mualem model (Luckner et al. 1989, pp. 2191–2192) as implemented in 
+the iTOUGH2 code (Finsterle 1997, p. 224). Rationale: The van Genuchten-Mualem
+
+ 
+ 20 
+model is the standard model used in the suite of UZ flow and transport models; it was 
+chosen here for consistency. Furthermore, the applicability of relative permeability and 
+capillary pressure functions is consistent with the continuum assumption and seems 
+appropriate also for fractures, which are likely to be rough and/or partially filled with 
+porous material. 
+5. Assumption: For heterogeneous models, the van Genuchten parameter 1/ a is assumed to 
+be correlated to absolute permeability according to the Leverett scaling rule (Leverett 
+1941, p. 159; Finsterle 1997, p. 224). Rationale: Continuum permeability is partly 
+related to fracture aperture. An increase in permeability is therefore associated with a 
+decrease in capillary strength. 
+6. Assumption: Water removal from the formation and the capture system by vapor 
+diffusion and evaporation is assumed to be small. Rationale and discussion: Under 
+isothermal conditions, potential evaporation is small compared to the amount of water 
+being released and given the relatively short time period of the experiments. This 
+assumption may not be valid for injection tests performed at lower rates. In these cases, 
+the amount of water collected in the capture system does not accurately reflect the 
+seepage percentage as a result of evaporation. No relative humidity or evaporation-rate 
+measurements are available from Niche 3650, and thus no correction has been made to 
+the seepage-percentage data. (“Seepage percentage” is defined as the mass of water that 
+dripped into the capture system divided by the mass of water released into the borehole 
+interval during a liquid-release test event.) It is important to realize that prescribing a 
+100% relative humidity boundary condition in a seepage prediction model is a 
+conservative assumption. While such a model underestimates vapor flow, it yields the 
+maximum liquid-phase influx, which is defined here as drift seepage. The 
+underestimation of vapor flow is irrelevant, since the assumption of 100% relative 
+humidity already implies that the moisture content in the drift environment is at its 
+maximum. However, the assumption is not conservative if used in an inverse model 
+because parameters are adjusted such that the model reproduces the observed seepage 
+percentage, which is likely to be too small. We suggest to address this issue in future 
+experiments by monitoring relative humidity in the niche and directly measuring 
+evaporation rates. 
+7. Assumption: Background percolation flux is assumed to be constant at 3 mm/year during 
+the course of the experiment. Rationale: The background percolation flux is appropriate 
+and of little impact on the simulation of liquid-release tests, which involve much higher 
+rates. 
+8. Assumption: Matrix imbibition is assumed to be small and is thus not explicitly modeled 
+in the SCM. Rationale: Matrix permeability is low, and matrix imbibition is reflected in 
+the effective porosity estimated by inverse modeling. Porosity estimates are irrelevant in 
+the subsequent simulations of seepage under natural flow conditions, which are near 
+steady state. 
+All these assumptions are used throughout this report. They do not require further confirmation.
+
+ 
+ 21 
+5.3 FRACTURE-CONTINUUM ASSUMPTION 
+5.3.1 Objective 
+We performed a synthetic modeling study to examine the appropriateness of using a Fracture 
+Continuum Model (FCM), i.e., a model that is based on the continuum assumption, for predictive 
+seepage calculations. Seepage into underground openings is dominated by water accumulation in 
+a boundary layer at the apex of the opening and subsequent dripping from discrete fractures. 
+Seepage threshold is determined by the capability of individual fractures to hold water by 
+capillary forces and by the permeability and connectivity of the fracture network, which allows 
+water to be diverted around the drift. 
+Simulation studies of unsaturated flow and transport at Yucca Mountain are usually based on the 
+continuum approach, in which fractures and matrix are modeled as continua for which averaged 
+properties are provided. The continuum approach has been questioned to be suitable for 
+describing certain flow phenomena at Yucca Mountain (see, for example, Pruess (1999)), and 
+specifically for predicting drift seepage, which apparently exhibits strong discrete effects. 
+In this section, we examine the appropriateness of using a heterogeneous fracture-continuum 
+model as the basis for drift-scale seepage calculations. We consider the continuum approach 
+appropriate for seepage studies if it is capable of predicting seepage threshold and seepage 
+percentages for a drift in a fractured formation. On account of the simplifying assumptions and 
+the limited amount of characterization data typically available, there will be differences between 
+the seepage rates predicted by the FCM and the actual seepage rates. Therefore, the uncertainty of 
+the model prediction will be considered. The seepage rates under natural flow conditions are 
+unknown and can currently not be observed in the field. They are thus replaced in this study with 
+synthetically generated seepage rates calculated using a model that exhibits discrete flow and 
+seepage effects. This model is referred to as the Discrete Feature Model (DFM). 
+We do not attempt to compare the performance of an FCM with that of a discrete fracture network 
+model, which is often cited as a valid alternative to the continuum model. Such a comparison 
+would have to include a detailed discussion of data needs for each of the models, the respective 
+uncertainties in these characterization data, and conceptual uncertainties and their impact on 
+model predictions. Moreover, a computer code capable of accurately simulating unsaturated flow 
+and seepage based on a discrete fracture formulation is currently not available. 
+The approach used in this synthetic study involves the following steps: 
+1. A model with a complex network of high-permeability features embedded in a lowpermeability 
+matrix is developed. The only purpose of this model is to produce discrete 
+flow behavior and localized seepage events. Unsaturated-flow simulations performed 
+with this discrete-feature model provide synthetic data against which the simplified 
+Fracture Continuum Model (FCM) will be tested. 
+2. Air-injection tests, liquid-release experiments, and seepage under natural flow conditions 
+are simulated using the DFM to generate synthetic characterization, calibration, and 
+validation data, respectively.
+
+ 
+ 22 
+3. A simplified heterogeneous FCM is developed based on the available synthetic 
+characterization data. 
+4. Effective parameters are determined by calibrating the FCM against the synthetic liquidrelease 
+test data. 
+5. Predictions of seepage threshold and additional liquid-release tests are made with the 
+FCM and compared to results obtained with the DFM for model validation. 
+It is important to notice that this is a synthetic modeling study designed for the specific purpose 
+outlined above. While loosely based on expected conditions encountered during the liquid-release 
+tests performed in the ESF at Yucca Mountain, the parameters used to develop the DFM should 
+not be interpreted as describing actual formation characteristics at Yucca Mountain. 
+The study described here is documented in detail in Scientific Notebook YMP-LBNL-SAF-1, 
+pp. 30–86, 120–139. 
+5.3.2 Development of Discrete Feature Model (DFM) 
+A high-resolution, two-dimensional (2D), vertical model was developed, representing an 
+excavated niche in a fractured-porous formation. The model domain of dimensions 6 × 7 m in 
+horizontal and vertical direction, respectively, was discretized into regular, square gridblocks with 
+a side length of 0.05 m (SN YMP-LBNL-SAF-1, p. 36); the depth of the model is 1 m. The model 
+was selected to be 2D instead of three-dimensional (3D) because effects of discrete fractures 
+intersecting the drift are expected to be stronger in 2D than in 3D, where more opportunities for 
+flow diversion around the opening exist. This was confirmed by 3D fracture-network simulations, 
+which yielded lower seepage rates and a more porous-medium-type flow field 
+(SN YMP-LBNL-SAF-2, p. 9). It is important to recall that the purpose of this study is to create a 
+system behavior that is strongly affected by the discreteness of the fracture network. 
+In order to generate a complex network of discrete, heterogeneous fractures, a series of four 
+permeability fields generated using sequential indicator simulation (Deutsch and Journel 1992, 
+p. 151) were overlapped. The individual fracture sets of orientation 0, 45, 90, and 135° were 
+created by drawing log-permeability values from discretized bi- and multi-modal cumulative 
+distribution functions (cdf) that yield a high probability for very low values (10-17 m2 or smaller, 
+representing the matrix), a very low probability for intermediate values, and a relatively high 
+probability for very high values (representing the fractures). Each indicator cutoff representing a 
+point of the cdf was assigned its own semivariogram with a very high anisotropy ratio to generate 
+elongated high-permeable features, which were cross-cut with occasional low-permeability 
+obstacles. The resulting permeability field, shown in Figure 1a, is very complex with 
+heterogeneous fractures of variable angle, length, and permeability. The permeability field shown 
+in Figure 1a cannot be described using simple geostatistical parameters. The complexity and 
+relative inaccessibility of the fracture-network characteristics are intentional to mimic a realistic 
+situation where complete information about the geometry and hydrologic properties of a fracture 
+network is not available. The process of fracture-network generation is described in detail in SN 
+YMP-LBNL-SAF-1, pp. 31–35. 
+
+ 
+ 23 
+The effective vertical permeability of the fracture network was determined by applying constantpressure 
+conditions at the top and bottom boundaries of the model, running a transient flow 
+simulation to steady state, and using Darcy's law to back out an effective permeability from the 
+simulated steady-state flow rate (SN YMP-LBNL-SAF-1, p. 47). The effective permeability of 
+approximately 4·10-12 m2 is consistent with fracture permeabilities observed at Yucca Mountain; 
+note, however, that this information is considered unknown and will not be used in the subsequent 
+analysis. 
+The permeability field was mapped onto the computational grid, and an opening (niche) was cut 
+out from the mesh (SN YMP-LBNL-SAF-1, pp. 37–39). During this process, the fracture 
+permeabilities in the vicinity of the niche were linearly increased within a 1-m-thick skin zone as 
+a function of distance from the niche wall, reaching a factor of 100 at the niche wall. This 
+permeability increase was introduced to mimic the presence of an excavation-disturbed zone, 
+which is believed to exist around the niches in the ESF (Wang and Elsworth 1999, pp. 751–757). 
+It was assumed that the mechanical disturbance mainly affects fractures, i.e., matrix permeability 
+was left unchanged at its original low value. After attaching boundary elements, the final mesh, 
+shown in Figure 1b, consisted of 11,984 elements and 24,005 connections between them. 
+NOTE: The model is used to generate synthetic seepage data. 
+Figure 1. Permeability Field of the Discrete Feature Model (a) Before and (b) After Niche 
+Insertion 
+Capillary pressure and relative liquid permeability are described by van Genuchten’s function 
+(Luckner et al. 1989, pp. 2191–2192), with the capillary strength parameter 1/ a correlated to the 
+heterogeneous permeability field shown in Figure 1 according to Leverett’s scaling rule (Leverett 
+1941, p.159; Finsterle 1997, p. 224). The niche is modeled as a domain of zero capillarity, 
+-3 -2 -1 0 1 2 3 
+X 
+0
+1
+2
+3
+4
+5
+6 
+Z 
+-9.50 
+-9.75 
+-10.00 
+-10.25 
+-10.50 
+-10.75 
+-11.00 
+-11.25 
+-11.50 
+-11.75 
+-12.00 
+-18.00 
+log(k [m2]) 
+-3 -2 -1 0 1 2 3 
+X 
+0
+1
+2
+3
+4
+5
+6 
+Z 
+-9.50 
+-9.75 
+-10.00 
+-10.25 
+-10.50 
+-10.75 
+-11.00 
+-11.25 
+-11.50 
+-11.75 
+-12.00 
+-18.00 
+log(k [m2]) 
+(a) (b) 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 24 
+representing 100% relative humidity. A free-drainage boundary condition (Finsterle 1998, 
+pp. 14-15) is applied at the bottom of the model at Z=0.0 m to avoid an unphysical capillary 
+pressure end effect. A constant percolation flux of 3 mm/year is applied at the top of the model. 
+The reference value of 1/a (sometimes referred to as air-entry pressure, AEP) for the reference 
+permeability of 10-12 m2 was varied, until no seepage occurred under natural, steady-state flow 
+conditions for a percolation flux of 3 mm/year (SN YMP-LBNL-SAF-1, p. 73). The percolation 
+flux was then increased to 300 mm/year, yielding a seepage percentage of 80% 
+(SN YMP-LBNL-SAF-1, p. 74). From that, it can be concluded that with a reference 1/ a value of 
+5,000 Pa and a reference permeability of 10-12 m2, a seepage threshold exists somewhere between 
+3 and 300 mm/year. The actual seepage threshold was determined to be 15 mm/year (see Section 
+5.3.7). 
+Figure 2 shows the simulated steady-state flow field and saturation distribution for a percolation 
+flux of 3 mm/year. A moderate saturation build-up in the skin zone is sufficient to divert all the 
+water around the niche; this constitutes the so-called capillary barrier effect. Figure 3 shows the 
+flux distribution across the top and bottom of the model. The constant flux, which is applied 
+uniformly at the top of the model, is immediately redistributed into high-conductivity fractures. 
+Flow diversion around the niche leads to a percolation shadow as well as locally increased fluxes 
+below the niche. 
+Figure 2. Simulated Steady-State Flow Field (a) and Saturation Distribution (b) 
+(a) (b) 
+-3 -2 -1 0 1 2 3 
+X 
+0
+1
+2
+3
+4
+5
+6 
+Z 
+1.00 
+0.95 
+0.90 
+0.85 
+0.80 
+0.75 
+0.70 
+0.65 
+0.60 
+0.55 
+0.50 
+0.45 
+0.40 
+0.35 
+0.30 
+0.25 
+0.20 
+0.15 
+0.10 
+0.05 
+0.00 
+Saturation Percolation Flux: 3 mm/year 
+-3 -2 -1 0 1 2 3 
+X 
+0
+1
+2
+3
+4
+5
+6 
+Z 
+60 
+57 
+54 
+51 
+48 
+45 
+42 
+39 
+36 
+33 
+30 
+27 
+24 
+21 
+18 
+15 
+12 
+9
+6
+3 
+Flux [mm/year] 
+Percolation Flux: 3 mm/year 
+Total Seepage: 0.0 mm/year 
+AEPref = 5,000 Pa 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 25 
+Figure 3. Simulated Steady-State Fluxes Across Top and Bottom of Model Domain, 
+Showing Flow Redistribution as a Result of the Capillary Barrier Effect 
+5.3.3 Simulation of Air-Injection Tests Using the DFM 
+Air-injection tests are part of a standard characterization study performed at Yucca Mountain. We 
+therefore simulated air-injection tests in three boreholes and analyzed the steady-state pressure 
+data based on a commonly used analytical solution (LeCain 1995, p. 10). The derived air 
+permeabilities are assumed to be the only data available for the development of a drift-scale 
+seepage model, which will then be calibrated against liquid-release test data. 
+Air-injection tests were simulated in three boreholes above the niche (shown, for example, in 
+Figure 1b); they are designated L, M, and R, according to their location to the left, middle, and 
+right of the niche crown, respectively. Air is injected at a constant rate of 0.001 kg/s for 120 
+seconds, followed by a 120-s recovery period. Gas pressure in the niche as well as the top and 
+bottom boundary were kept constant at 1 bar. Figure 4 shows the almost instantaneous pressure 
+build-up in the injection holes as well as the response in the respective observation holes. The 
+pressure at the end of each injection period is taken as the steady-state pressure for the 
+determination of air permeability. A steady-state overpressure of 1430, 1350, and 1890 Pa was 
+obtained for the three boreholes, leading to permeability estimates of 6.9·10-12, 7.4·10-12, and 
+5.2·10-12 m2, respectively. No high accuracy is required for these estimates; they will only be used 
+to condition the heterogeneous permeability field of the FCM. Details about the simulation of 
+air-injection tests using the DFM can be found in SN YMP-LBNL-SAF-1, pp. 51–54, 75, 83. 
+-3 -2 -1 0 1 2 3 
+X [m] 
+-30 
+-20 
+-10
+0 
+10 
+20 
+30 
+Flux [mm/year] 
+Flux leaving bottom of model 
+Niche 
+Flux entering top of model 
+Average Flux: 3 mm/year 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 26 
+Figure 4. Pressure Response from Simulated Air-Injection Tests Performed in Three 
+Boreholes (Borehole L: Solid Line; Borehole M: Dashed Line; Borehole R: Dash-Dotted 
+Line) Above the Niche 
+5.3.4 Simulation of Liquid-Release Tests Using the DFM 
+Three liquid-release tests were simulated from Borehole M. In each event, 3 kg of water were 
+injected at a specified rate. Sufficient time was allowed between individual test events to make 
+sure that seepage into the drift ceases. Nevertheless, subsequent events are likely to exhibit a 
+memory effect, i.e., seepage percentage is expected to increase due to a higher initial saturation in 
+the system as a result of water storage from the previous test. The third event is performed at a 
+lower rate to investigate the dependence of seepage on flux. Table 4 summarizes information 
+about the simulated liquid-release tests. The simulations are described in detail in 
+SN YMP-LBNL-SAF-1, pp. 55–58, 76–79, 84–86. 
+Table 4. Simulated Liquid-Release Tests 
+Event 
+Begin Injection 
+(s) 
+End Injection 
+(s) 
+Injection Rate 
+(kg/s) 
+Water Released 
+(kg) 
+1 0.0 600.0 0.005 3.0 
+2 172800.0 173400.0 0.005 3.0 
+3 345600.0 351600.0 0.0005 3.0 
+(based on data submitted with this AMR under DTN: LB990831012027.001) 
+100 200 300 400 500 600 
+Time [sec] 
+100000 
+100250 
+100500 
+100750 
+101000 
+101250 
+101500 
+101750 
+102000 
+Pressure [Pa] 
+Borehole L Borehole M 
+Borehole R 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 27 
+The flow field and saturation distribution after the first test event are visualized in Figure 5, 
+revealing both partial flow diversion around the niche and the saturation build-up at the crown, 
+which eventually breaks the capillary barrier, leading to seepage. 
+Figure 5. Flow Field (a) and Saturation Distribution (b) After First Liquid-Release Test 
+Event Simulated with DFM 
+The cumulative amount of water seeping into the niche is recorded as a function of time, 
+separately for each event. The resulting curve of cumulative seepage is shown in Figure 6, which 
+will be the synthetic data used for subsequent calibration of the FCM. Seepage generally stops 
+within a few hours after injection begins. A relatively strong memory effect can be observed for 
+Events 2 and 3, leading to increased seepage (Event 2) despite a reduced injection rate (Event 3). 
+The ratio of the total amount seeped into the niche divided by the amount of water released 
+(3.0 kg) is termed “seepage percentage.” The seepage percentages of the three simulated 
+liquid-release tests are 58, 89, and 89%, respectively. 
+-3 -2 -1 0 1 2 3 
+X 
+0
+1
+2
+3
+4
+5
+6 
+Z 
+60 
+57 
+54 
+51 
+48 
+45 
+42 
+39 
+36 
+33 
+30 
+27 
+24 
+21 
+18 
+15 
+12 
+9
+6
+3 
+Flux [mm/year] 
+Liquid Release Test, Event 1 
+Seepage Percentage: 58% 
+AEPref = 5,000 Pa 
+-3 -2 -1 0 1 2 3 
+X 
+0
+1
+2
+3
+4
+5
+6 
+Z 
+0.50 
+0.45 
+0.40 
+0.35 
+0.30 
+0.25 
+0.20 
+0.15 
+0.10 
+0.05 
+0.00 
+Saturation 
+Liquid Release Test, Event 1 
+Seepage Percentage: 58% 
+AEPref = 5,000 Pa 
+(a) (b) 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 28 
+Figure 6. Cumulative Seepage as a Function of Time During Three Simulated Liquid- 
+Release Tests Using the Discrete Feature Model 
+5.3.5 Development of Fracture Continuum Model (FCM) 
+The model described in Sections 5.3.2–5.3.4 serves as a hypothetical natural system, in which 
+air-injection and liquid-release tests were performed. It will also be used later to provide synthetic 
+validation data. 
+In this section, we describe the development of a simplified seepage model that is based on the 
+fracture-continuum approach. The model will be calibrated against synthetic data from 
+liquid-release tests, and predictive simulations of additional liquid-release tests will be performed 
+for validation. Moreover, it will be used to determine the seepage threshold under “natural” flow 
+conditions. 
+While the characteristics of the fractured system as represented by the DFM are exactly known, 
+only a limited amount of information is assumed to be available for the development of the FCM. 
+The available data include: 
+• Air-permeability values at the three boreholes L, M, and R (see Section 5.3.3). 
+• An assumed variance and isotropic correlation structure of the permeability field. 
+• Cumulative-seepage data from three sequential liquid-release tests (see Figure 6). 
+0 24 48 72 96 120 144 
+Time [h] 
+0 
+0.5
+1 
+1.5
+2 
+2.5
+3 
+Cumulative Seepage [kg] 
+1 
+0.005 
+2 
+0.005 
+3 
+0.0005 
+Event 
+Rate [kg/s] 
+Mass injected: 
+3 kg/Event 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 29 
+Furthermore, the two-dimensionality of the flow field is assumed to be recognized. Finally, the 
+FCM developed here shares some of the simplifying assumptions that apply to the DFM, such as 
+the absence of evaporation effects. 
+It is important to realize that essentially no information about the fracture network (i.e., fracture 
+density, orientation, aperture distribution, and hydrologic properties) are assumed to be known, 
+and that the purpose of the model is simply to predict seepage percentage and seepage threshold 
+under natural flow conditions. 
+The development of the FCM can be described as follows: 
+The FCM is a 2D vertical model, discretized into gridblocks of size 0.1 × 0.1 m; a niche is cut out 
+from the model. The mesh consists of 3,002 elements and 6,020 connections between them. A 
+heterogeneous permeability field was created using sequential indicator simulation (Deutsch and 
+Journel 1992, p. 151). An arbitrary, uni-modal cumulative distribution function was defined by 
+specifying three discrete cutoff values of 30, 50, and 70% at log-permeability values of -13.0, 
+-12.0, and -11.0, respectively. A spherical semivariogram with a correlation length of 1.0 m, a 
+nugget effect of 0.1, and a sill value of 1.0 was used to generate values ranging over 4 orders of 
+magnitude. While a correlation length of 1.0 m can be considered reasonable—it is of the same 
+order as a potential average fracture length—the choice of the semivariogram function and its 
+parameters was arbitrary, i.e., it was purposely not based on a geostatistical analysis of the 
+permeability field shown in Figure 1b. Similarly, the chosen variance of 1.0 is arbitrary but can be 
+considered reasonable. This approach reflects the assumption that no hard data about the fracture 
+network or its hydraulic properties are available. The only information considered available are 
+the three air-permeability values in boreholes L, M, and R (see Section 5.3.3); the permeability 
+field was conditioned on these three values. The log-permeability field of the FCM is shown in 
+Figure 7. Mesh generation and mapping of the spatially correlated permeability field are 
+described in SN YMP-LBNL-SAF-1, pp. 61–67, 75. 
+Figure 7. Log-Permeability Field of Fracture Continuum Model 
+(based on data submitted with this AMR under DTN: LB990831012027.001) 
+-3 -2 -1 0 1 2 3 
+X 
+0
+1
+2
+3
+4
+5
+6 
+Z 
+-9.50 
+-9.75 
+-10.00 
+-10.25 
+-10.50 
+-10.75 
+-11.00 
+-11.25 
+-11.50 
+-11.75 
+-12.00 
+-12.25 
+-12.50 
+-12.75 
+-13.00 
+-13.25 
+-13.50 
+log(k [m2])
+
+ 
+ 30 
+It should be noted that the structure of the FCM described here is by design significantly different 
+from that of the DFM presented in Section 5.3.2. While heterogeneous in nature, the FCM lacks 
+the discrete features, the high resolution, and the low-permeability matrix. Moreover, no 
+excavation-disturbed zone with increased permeability was introduced in the FCM. Since the 
+liquid-release tests were performed within this zone, the estimated parameters will reflect skinzone 
+properties rather than undisturbed formation characteristics. Using skin-zone parameters for 
+seepage calculations is appropriate because seepage is determined by the properties in the 
+immediate vicinity of the drift wall. Provided that skin-zone properties are used and that the 
+transition between the undisturbed and the excavation-disturbed zone is gradual, no strong impact 
+of the skin zone on seepage is expected. The smooth transition zone implemented in the DFM 
+does not have an visible effect on the flow pattern (see Figure 2a). If properties change abruptly at 
+the skin-zone boundary, however, a partial capillary barrier is formed within the formation. The 
+presence of such a second capillary barrier is likely to further reduce seepage. 
+In summary, the FCM is an abstracted, highly simplified representation of the fractured-porous 
+system to be studied. It is obvious that such a simplified model cannot accurately reproduce the 
+detailed behavior of the discrete fracture network. It remains to be examined, however, whether 
+the FCM is capable of predicting seepage rates over a large range of percolation fluxes. If so, it 
+fulfills its declared purpose and can be considered acceptable for seepage studies. If not, an 
+alternative conceptual model must be developed, and its appropriateness must be demonstrated in 
+a study similar to that described here. Note that such an alternative model may require different or 
+additional characterization data. 
+5.3.6 Calibration of FCM Against Synthetic Seepage Data 
+The FCM can only be successful in predicting seepage if effective parameters can be estimated 
+based on data that reveal seepage-relevant processes. Liquid-release tests are expected to provide 
+this information. The FCM is calibrated against the cumulative-seepage data that were generated 
+with the DFM. Only late-time data are used for calibration, since the early-time transient behavior 
+exhibits distinct effects from the detailed characteristics of the discrete-fracture network. Because 
+the FCM is not expected to be able to match these early-time data, they were excluded from the 
+inversion to reduce the potential bias in the estimates. 
+In order to avoid overparameterization of the inverse problem, only two parameters were 
+estimated, namely (1) the logarithm of the reference air-entry pressure 1/ a, and (2) the logarithm 
+of porosity f. The van Genuchten parameter 1/ a is included because seepage is expected to 
+depend on the capillary strength, i.e., the effectiveness of the capillary barrier. Porosity is included 
+as a parameter to be estimated because only a finite, relatively small amount of water is released. 
+Porosity is here an effective parameter that accounts for water storage in the fracture system, 
+potential matrix imbibition, and other transient effects. 
+The calibration was performed using iTOUGH2. Since changes in the 1/ a values during the 
+course of the inversion affect the initial saturation distribution, a steady-state run with percolation 
+of 3 mm/year precedes each transient liquid-release test simulation. The misfit between the 
+cumulative seepage calculated by the FCM and the data provided by the DFM is evaluated using 
+the least-squares objective function (Finsterle 1999, p. 33). The objective function is minimized 
+using the Levenberg-Marquardt algorithm (Finsterle 1999, pp. 44–45).
+
+ 
+ 31 
+Figure 8 shows the match. The synthetic data are represented by symbols; calibration occurs only 
+against the late-time data, shown as squares. The cumulative seepage predicted with the FCM and 
+an initial parameter guess of log(1/ a) = 3.0 and log( f) = -2.0 is shown as a dashed line. The 
+best-fit parameter set (1.60/-2.24) is determined after nine Levenberg-Marquardt iterations. The 
+corresponding prediction, which matches the data reasonably well, is shown as a solid line. The 
+flow field and saturation distribution after the first liquid-release event, calculated with the FCM 
+and the best-estimate parameter set, are shown in Figure 9, which can be compared to Figure 5. 
+While the details of the flow pattern are different from that of the DFM, the FCM clearly shows a 
+saturation build-up above the crown, leading to a qualitatively similar capillary barrier effect. 
+Details about the inversion can be found in SN YMP-LBNL-SAF-1, pp. 120–124. 
+Figure 8. Calibration of FCM Against Late-Time Cumulative-Seepage Data From Three 
+Simulated Liquid-Release Events 
+0 24 48 72 96 120 144 
+Time [h] 
+0 
+0.5
+1 
+1.5
+2 
+2.5
+3 
+Cumulative Seepage [kg] 
+Symbols: Synthetic data from DFM 
+Squares: Calibration points 
+Dashed: FCM, initial guess 
+Solid: FCM, best fit 
+Calibration of FCM 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 32 
+Figure 9. Flow Field (a) and Saturation Distribution (b) After First Liquid-Release Event 
+Simulated with Calibrated FCM 
+Next, we discuss the estimated parameters. Since the matrix is not explicitly represented in the 
+FCM, porosity is considered an effective parameter that accounts for water storage in the fracture 
+system as well as matrix imbibition. The total porosity of the excavation-disturbed zone as 
+specified in the DFM is 0.02; about 64% of the pore space is assigned to matrix gridblocks, 
+resulting in a fracture porosity of approximately 0.02 × (1 - 0.64) = 0.007. The porosity estimated 
+by calibrating the FCM is 0.006, a value very close to the geometric fracture porosity specified in 
+the DFM. A value larger than the fracture porosity would only be expected if matrix imbibition 
+were a significant process and if all the fractures were available for storage. Apparently, matrix 
+permeability is too small to allow substantial water imbibition during the relatively short testing 
+period. As a result, the porosity estimate reflects the fracture pore space encountered by the 
+injected water from the release point to the drift ceiling. While the porosity estimate is of no 
+importance for steady-state seepage-threshold predictions, the transient nature of the liquidrelease 
+tests forced us to estimate porosity concurrently with the van Genuchten parameter 1/ a, to 
+which it is (negatively) correlated. Had it been fixed at a value that is too high (too low), the van 
+Genuchten parameter would have been underestimated (overestimated). 
+An important result of this study is the finding that a relatively small value 1/ a is required to 
+match the seepage data. While the reference value used in the DFM is 5,000 Pa, the estimate for 
+the FCM is approximately two orders of magnitude smaller. This discrepancy clearly indicates 
+that the value and interpretation of 1/ a is strongly related to the conceptual model and its 
+implementation. Two potential reasons explaining the apparent discrepancy can be identified. 
+First, in the DFM, water flows predominantly through high-permeability channels (see Figures 1 
+-3 -2 -1 0 1 2 3 
+X 
+0
+1
+2
+3
+4
+5
+6 
+Z 
+60 
+57 
+54 
+51 
+48 
+45 
+42 
+39 
+36 
+33 
+30 
+27 
+24 
+21 
+18 
+15 
+12 
+9
+6
+3 
+Flux [mm/year] 
+Liquid-Release Test Event 1 
+Seepage percentage: 61% 
+AEPref = 40 Pa 
+-3 -2 -1 0 1 2 3 
+X 
+0
+1
+2
+3
+4
+5
+6 
+Z 
+0.50 
+0.45 
+0.40 
+0.35 
+0.30 
+0.25 
+0.20 
+0.15 
+0.10 
+0.05 
+0.00 
+Saturation 
+Liquid-Release Test Event 1 
+Seepage percentage: 61% 
+AEPref = 40 Pa 
+(a) (b) 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 33 
+and 5), indicating that the observed seepage mass is in fact governed by features that exhibit low 
+capillary suction. The absence of discrete features in the FCM, on the other hand, leads to a more 
+diffusive flow pattern, and the zone encountered by water exhibits more averaged properties (see 
+Figures 7 and 9). To match the data, which are controlled by flow through regions of low capillary 
+suction, the reference capillary strength parameter for the FCM must be lowered accordingly. 
+The second explanation for the discrepancy focuses on the different degree of connectivity 
+implemented in the two models. Since the FCM provides connections in all directions (allowing 
+water to be easily diverted around the cavity), the capillary-barrier effect is increased and the 
+calculated seepage tends to be small. Consequently, the capillary suction must be reduced to 
+match the data from a discrete system. The van Genuchten parameter is adjusted to compensate 
+for a deficiency in the model structure (here, the lack of discrete features in the FCM). Note that 
+such a compromise is made and considered acceptable whenever a model is built in which certain 
+aspects are simplified and represented by lumped parameters. In our case, the length, connectivity, 
+and hydrologic properties of the fractures intersecting the drift are difficult if not impossible to 
+characterize. A few parameters are chosen to represent the effects of these fractures on seepage, 
+and they are determined by inverse modeling based on seepage-relevant data. 
+It has been stated that the FCM is devoid of discrete features. A notable exception are the 
+gridblocks adjacent to the drift. Their connections to the element representing the opening have 
+length .z/2 = 0.05 m. Since water is diverted horizontally only if capillary suction exceeds 
+0.05 m, the discretization has an effect similar to that of the discrete fractures that cut into the 
+opening, with an (average) distance to the next fracture intersection of 0.05 m. It should therefore 
+be clear that the estimated 1/ a value not only depends on the conceptual model, but also on the 
+discretization used in the numerical model. 
+Such a discretization-dependence of model parameters is well known. For example, since the 
+simulation of contaminant plume spreading is affected by numerical-dispersion effects, the 
+dispersion length that best matches an observed contaminant plume depends on the chosen grid 
+resolution. Similarly, a direct correlation exists between capillarity and gridblock size in 
+unsaturated flow problems involving phase dispersion (Pruess 1991, pp. 272–274). Stronger 
+capillarity leads to increased phase dispersion, as does coarser grid discretization. Consequently, 
+model predictions and thus capillary strength parameters estimated by inverse modeling depend 
+on grid resolution. 
+Note that the mesh-dependent effects described above counteract each other in seepage 
+calculations. The coarser the grid, the more seepage is induced on account of an increased 
+connection length to the niche element; at the same time, increased phase dispersion leads to a 
+reduction in seepage. It is difficult to assess which of the two effects dominates. However, the 
+effects cancel one another to a certain degree, reducing the overall dependence of seepage 
+calculations on grid resolution.
+
+ 
+ 34 
+5.3.7 Synthetic Validation of FCM and Prediction of Seepage Threshold 
+In order to test the predictability of the FCM, we perform a synthetic validation exercise, in which 
+seepage rates for a new liquid-release experiment are predicted with the calibrated fracturecontinuum 
+model. The new injection rate used for the validation run is five times smaller than that 
+used for calibration, and the natural percolation flux is increased to 100 mm/year. The prediction 
+uncertainty is determined by means of Monte Carlo simulations, in which the two estimated 
+parameters log(1/ a) and log( f) are considered uncorrelated and uncertain by a factor of about 
+two, i.e., slog(1/ a)= 0.3 and slog( f)= 0.3. These standard deviations reflect expected parameter 
+uncertainties, which are based on the estimation uncertainties from the calibration, appropriately 
+increased to account for additional errors and the fact that predictions are made under changed 
+conditions. 
+Figure 10 shows the model prediction with the best-estimate parameter set (solid line) along with 
+the results from 100 Monte Carlo simulations. The system behavior as calculated by the DFM is 
+shown as a dashed line. The calibrated FCM slightly underpredicts cumulative seepage, mainly 
+because of an error in the early-time behavior. Nevertheless, taking into account the uncertainty of 
+the model prediction as expressed by the Monte Carlo simulations, the model is considered partly 
+validated, i.e., the seepage rate calculated with the DFM lies within the error band predicted by 
+the calibrated FCM. The validation study is described in SN YMP-LBNL-SAF-1, pp. 131–134. 
+The approach outlined here is also used for the actual validation of the SCM (see Section 6.5). 
+(based on data submitted with this AMR under DTN: LB990831012027.001) 
+NOTE: Monte Carlo simulations show uncertainty of model predictions. 
+Figure 10. Validation of Calibrated FCM Against Cumulative Seepage Data 
+0 12 24 36 48 60 72 84 96 
+Time [h] 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9 
+10 
+Cumulative Seepage [kg] -
+-
+- - - - - - - - - - - ----
+-
+-
+- - - - 
+- 
+- 
+- - - - - - - 
+- - - - 
+- - - - -
+- - - -
+- - - - - 
+-
+- - - - - - - - - --
+-
+--
+- - - - - 
+- 
+- - 
+-
+- - - - - -
+- - - - - - - 
+- 
+- 
+- 
+- 
+-----
+-
+-
+- - 
+----
+- - - - - - - - - - - -
+- -
+-
+- - -
+-------------- - - - - - - - 
+--------------- ---
+-
+-
+- - - -
+- - - - - - - - - - 
+- 
+- - - - -
+- - - - 
+-
+- - 
+-
+- - -
+- - - 
+-
+- - 
+- - - - - - - - - - - -
+- - - - 
+---
+-
+-
+- 
+-
+-------------- - - - 
+- - - - - -
+- - - - - - - - - ----
+- - 
+-
+-
+-
+-
+- - - - - - - - - - - - - - - - 
+- 
+- 
+- - - - - - - - - - - 
+-
+-
+- - - - 
+-
+- - - - - - ----------
+----- -
+-
+- 
+- - - - - -
+-
+- - - - - - - - - 
+-
+- - 
+--------------- - 
+- -
+-
+- - - - - - - -
+-
+- - - - - - - 
+-
+- ---------
+-
+------------- - - - - - - - - - - - - - - - - - - 
+- - - - - - 
+---
+- - -
+-
+- - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - -
+-
+-------------- - - - - - - - - -
+-------------- - - - - - - - 
+-----
+-
+-
+-
+- - - 
+- - - - - - - - --------
+-
+-
+------------- - - - - - - - - - - - - - --------------- - - - - - - - - - - - - - - - - - - - - -
+- - - -
+- - - - - - - 
+- -
+-
+-
+- - 
+- - - 
+-
+-
+- 
+-
+-
+-
+-
+------------- - - - - - - 
+-
+- - - - - - - - - - - 
+-
+-
+-
+-----------
+----------
+-
+---- -
+--
+-
+-
+- - - Predicted seepage from FCM 
+True seepage from DFM 
+Monte Carlo 
+Realizations
+
+ 
+ 35 
+The successful prediction of a transient liquid-release test does not necessarily imply that seepage 
+is accurately predicted for low percolation fluxes under natural steady-state flow conditions. We 
+therefore calculated the seepage percentage using the DFM in the range of percolation fluxes 
+from 3 to 300 mm/year and compared it with FCM predictions. 
+In Figure 11, the seepage percentage as calculated with the DFM is shown as a dashed line. A 
+seepage threshold of approximately 15 mm/year is obtained. As a result of the discreteness of the 
+fracture network, the flow paths diverting water around the niche change as percolation rate 
+increases, leading to an erratic, but generally increasing seepage-percentage curve. The FCM 
+predicts a seepage threshold of 34 mm/year. Seepage percentage increases monotonically with 
+increasing percolation flux, reaching a maximum value of about 60% for a flux of 300 mm/year 
+(see Figure 11, solid line). 
+To obtain a measure of uncertainty in the FCM seepage prediction, we performed 500 Monte 
+Carlo simulations with the two estimated parameters assumed to be uncorrelated and uncertain 
+with a standard deviation of 0.3, as above. The percolation flux is sampled uniformly in the 
+interval from 3 to 300 mm/year. The resulting seepage percentages are plotted as short dashes in 
+Figure 11. From the scattering of the Monte Carlo simulations it can be seen that seepage 
+percentage predictions are highly uncertain. The width of the error band is approximately 20% on 
+either side of the result obtained with the calibrated parameter set. The distribution is skewed for 
+low percolation fluxes on account of the physical lower bound of zero seepage. The Monte Carlo 
+simulations for natural percolation fluxes are documented in SN YMP-LBNL-SAF-1, 
+pp. 126-130, 135.
+
+ 
+ 36 
+(based on data submitted with this AMR under DTN: LB990831012027.001) 
+Figure 11. Prediction of Seepage Percentage With Calibrated FCM Including Results 
+From Monte Carlo Simulations and Comparison to Seepage Threshold Provided by the 
+DFM 
+5.3.8 Summary and Conclusions 
+In this study, we have demonstrated that simulating seepage into underground openings excavated 
+from a highly fractured formation can be performed using a model that is based on the continuum 
+assumption, provided that the model is calibrated against seepage-relevant data such as data from 
+a liquid-release test. 
+Synthetically generated data from the DFM, a model that exhibits discrete flow and seepage 
+behavior, were used to calibrate a simplified FCM. The FCM was developed assuming that only 
+minimal information is available. From this study, we conclude that: 
+1. A calibrated FCM is capable of predicting seepage into an underground opening 
+excavated from a fractured formation. 
+2. Calibration of the FCM must be performed using data collected from a seepage 
+experiment (e.g., a long-term liquid-release test). 
+3. The calibration of the FCM yields effective parameters that partially account for the 
+discreteness of the fracture network. 
+101 102 
+Percolation Flux [mm/year] 
+-10
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+90 
+100 
+Seepage Percentage 
+- - 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- - 
+- 
+- - 
+-- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+-- - 
+- - 
+- 
+-
+- 
+- 
+-- - 
+- 
+- 
+- 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+-- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-- - 
+- 
+- 
+- - 
+- 
+- 
+- 
+- - 
+- - 
+- - 
+- 
+- 
+- 
+-- - 
+- - 
+- 
+- 
+- 
+- 
+- - - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- -- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - - 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- - 
+- 
+- -- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- -- - 
+- 
+- 
+- 
+- 
+- True seepage from DFM 
+Seepage Threshold 
+Seepage 
+predicted 
+with FCM 
+Approximate 
+95%-confidence interval
+
+ 
+ 37 
+4. For seepage calculations, the calibrated capillary strength parameter (e.g., air-entry 
+pressure or 1/ a) is likely to be small compared to the values obtained for single fractures. 
+5. Because only limited information is available for model calibration, the estimated 
+parameters and thus the model predictions remain highly uncertain. 
+6. The interpretation and numerical value of the calibrated parameters are related to the 
+conceptual model used; this is true for any parameter used in any analytical or numerical 
+model. 
+7. The synthetic exercise presented here should be repeated for alternative conceptual 
+models, e.g., using a discrete fracture network model (DFNM) that is developed based on 
+fracture mapping information. These competing alternatives should be ranked according 
+to their data needs, their ability to pass validation tests, the respective prediction 
+uncertainties, the robustness and stability of the model results, and their computational 
+efficiency. 
+The study was performed in 2D because effects of discrete fractures on flow and seepage behavior 
+are stronger in two than in three dimensions. A similar study using 3D models is thus expected to 
+yield the same conclusions as those outlined above. 
+Further investigations of numerical seepage modeling may include the development of a discrete 
+fracture network model or other alternative conceptual models. The prediction uncertainty of 
+these alternative models should be compared to that obtained with the fracture continuum model 
+discussed here. The different data requirements should also be critically evaluated when 
+comparing the performance of alternative modeling approaches.
+
+ 
+ 38 
+
+
+ 
+ 39 
+6. MODEL ANALYSIS 
+6.1 OBJECTIVES AND OUTLINE 
+In this section we describe the development, calibration, and validation of the Seepage 
+Calibration Model (SCM). The purpose of the SCM is to present a methodology for the 
+subsequent development of process models that calculate drift seepage for a variety of geologic 
+units, hydrologic property sets, and waste emplacement configurations. The SCM is a template 
+fracture-continuum model that is developed based on air-permeability and liquid-release test data 
+from the experiments performed in Niche 3650 of the ESF at Yucca Mountain, Nevada. It is 
+suggested to use a similar approach when developing seepage models for other units and drift 
+geometries; these models necessarily differ to some extent from the SCM to accommodate 
+particular conditions. 
+In Section 6.2, we review the data basis—air permeabilities and seepage data from liquid-release 
+tests—used for the development, calibration, and validation of the SCM. The conceptual model as 
+well as details of the SCM are described in Section 6.3, followed by a discussion of its calibration 
+by inverse modeling (Section 6.4). Validation of the SCM is described in Section 6.5. 
+Seepage-threshold predictions with the calibrated SCM are presented in Section 6.6. Alternative 
+conceptual models and sensitivity analyses are briefly discussed in Sections 6.7.1 and 6.7.2, 
+respectively. Conclusions from the analyses presented in this section are summarized in Section 7. 
+6.2 REVIEW OF DATA USED FOR CALIBRATION AND MODEL VALIDATION 
+6.2.1 Introduction 
+The data used for model calibration/validation were collected during the ESF Drift Seepage Test 
+and Niche Moisture Study, an ongoing field-testing program initiated by Lawrence Berkeley 
+National Laboratory (Berkeley Lab) in 1997. The two primary objectives of the field-testing 
+program are: 
+• Measure in situ permeability for use in the Seepage Calibration Model (this AMR) and 
+the Seepage Model for PA. 
+• Provide a database containing liquid-release and seepage data that can be used to 
+calibrate the drift-scale seepage models. 
+The objectives of the study described above are realized through field experiments consisting of 
+air-injection and seepage tests. Sections 6.2.2 through 6.2.4 describe the air-injection and liquidrelease 
+test data used as input to the SCM described in Sections 6.3 through 6.5 of this AMR.
+
+ 
+ 40 
+6.2.2 Site Location and Borehole Configuration at Niche 3650 
+6.2.2.1 Site Location 
+Niche 3650 consists of a short drift constructed along the west side of the ESF at the location 
+shown on Figure 12. The niche is located within the middle nonlithophysal zone of the Topopah 
+Spring Tuff in an area of relatively competent rock mass with low fracture density. 
+Figure 12. Schematic Showing Approximate Location of Niche 3650 
+6.2.2.2 Borehole Configuration 
+Seven short boreholes were drilled at Niche 3650 prior to excavation to gain access to the rock for 
+testing and monitoring purposes. Figures 13 and 14 show the approximate location of the seven 
+borings installed prior to construction of Niche 3650 as well as the idealized shape of the final 
+excavation. Three of the borings, designated UL, UM, and UR (upper left, upper middle, and 
+upper right), were installed above the crown of the niche in a horizontal plane. The remaining 
+boreholes (ML, MR, BL, and BR) were drilled within the limits of the proposed niche and were 
+subsequently mined out during niche construction. 
+ESF 
+27 
+28 
+Niche 3650 
+36 + 50 
+Alcove No.6 
+(North Ghost Dance 
+Fault Alcove) 
+35 + 00 
+37 + 50 
+E-W Drift 
+Bedrock 
+Exposed
+
+ 
+ 41 
+Figure 13. Schematic of Niche 3650, End View 
+Figure 14. Schematic of Niche 3650, Plan View 
+3.25 m 
+CL 
+1.0 m 1.0 m 
+0.5 m 0.5 m 
+0.5 m 0.5 m 
+MR ML 
+BR BL 
+UL UM UR 
+1.0 m 1.15 m 
+Niche 3650 
+Legend 
+ML Borehole designation 
+B = Bottom, M = Middle, U=Uppe r 
+L = Left, R = Right 
+*** All measurements are approximate 
+and do not represent as-built conditions 
+0.65 m 
+2.0 m 2.0 m 
+Legend 
+Upper Borehole Axis 
+Bottom & Middle Borehole Axis 
+UL = Upper Left 
+UM = Upper Middle 
+UR = Upper Right 
+ML = Middle Left 
+MR = Middle Right 
+BL = Bottom Left 
+BR = Bottom Right 
+CL 
+N 
+UM 
+UR 
+UL 
+ESF Main Drift 
+2 Meters 0 1 
+Approximate Scale: 1 inch = 2 Meters 
+*** All measurements are approximate and 
+do not represent as- built conditions. 
+ML, BL MR, BR
+
+ 
+ 42 
+6.2.3 Air-Injection Tests 
+Numerous air-injection tests were performed at Niche 3650 to determine the air-permeability 
+distribution of the rock after niche construction. Air-injection tests were conducted on short test 
+intervals in boreholes UL, UM, and UR. The tests were performed by isolating a short section of 
+borehole using an inflatable packer system and then injecting compressed air at a constant rate 
+into the isolated injection interval. The pressure buildup in the injection interval, as well as in 
+nearby observation intervals, was monitored with time until steady-state conditions were reached, 
+typically occurring within a few minutes of the start of the test. Air injection was terminated after 
+reaching steady-state pressures, and the decline in air pressure was then monitored as it recovered 
+to its initial pre-test condition. 
+The Niche 3650 air-permeability values were entered into the Technical Database Management 
+System (DTN: LB980001233124.002). The post-excavation air-permeability data for Niche 3650 
+were extracted from DTN: LB980001233124.002 and the log-transform (logarithm base 10) of 
+these data were calculated and used in this AMR (for details, see SN YMP-LBNL-RCT-DSM-1, 
+p. 11). 
+The log-transformed values of the post-excavation air-permeability data obtained from boreholes 
+UL, UM, and UR were used as input to GAMV2 (GAMV2, V1.201, 
+10087-1.0MGAMV2V1.201-00), a software module that is part of the Geostatistical Software 
+Library (GSLIB). GAMV2 is described in detail by Deutsch and Journel (1992, pp. 53–55). 
+GAMV2 calculates the semivariogram of irregularly spaced data in two dimensions. Figure 15 
+shows the semivariograms calculated for two test cases using a lag distance of 0.3 m. Case 1 
+includes all the air-permeability data from the post-excavation air-injection tests. The 
+semivariogram shown on Figure 15 for Case 1 (diamonds) is nearly linear with a positive slope, 
+implying unlimited variance and a possible systematic bias in the data set. The semivariogram for 
+Case 2 (triangles) was created by excluding nine data points collected from test intervals located 
+beyond the limits of the excavation (borehole UM, zones 29 through 31 and borehole UR, zones 
+26 through 31). Removal of these data, which typically have lower air permeabilities than those 
+intervals located immediately above the opening, results in a semivariogram with a finite sill 
+variance. Analyzing only those air-injection tests that were performed on test intervals located 
+immediately above the opening and whose resulting air-permeability values were thus more or 
+less uniformly influenced by the excavation resulted in a reasonable semivariogram devoid of a 
+systematic trend. Data that are located beyond the limits of the excavation and were removed 
+from Case 2 may represent a separate population of air permeabilities performed in an area of 
+relatively undisturbed, lower-permeability rock. More details can be found in 
+SN YMP-LBNL-RCT-DSM-1, pp. 19–25. 
+The histogram and cumulative distribution function shown in Figure 16 and the descriptive 
+statistics shown in Table 5 were generated using the Case 2 data set described above (for details, 
+see SN YMP-LBNL-RCT-DSM-1, pp. 25–26). The cumulative distribution function, sample 
+statistics, and the semivariogram for the post-excavation air-permeability values will be used in 
+Section 6.3.2 to generate a conditioned heterogeneous permeability field for the SCM.
+
+ 
+ 43 
+Figure 15. Semivariogram for Post-Excavation Niche 3650 Log-Air-Permeability Values 
+Table 5. Statistical Summary of Air-Permeability Data 
+Case 2, Post-Excavation log10(k [m2]) 
+Mean -11.66 
+Standard deviation 0.72 
+Standard error 0.08 
+Median -11.71 
+Minimum -13.84 
+Maximum -9.15 
+Range 4.69 
+Number of data points 84 
+(based on data submitted with this AMR under 
+DTN: LB990831012027.001) 
+(nlag=20, xlag=0.3 m, xltol=0.15 m) 
+0 
+0.1 
+0.2 
+0.3 
+0.4 
+0.5 
+0.6 
+0.7 
+0.8 
+0.9 
+1
+0 1 2 3 4 5 6 7 
+Lag Distance (m) 
+Semivariogram Value 
+Case 1 - all data 
+Case 2 - end data removed 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 44 
+Figure 16. Histogram and Cumulative Distribution Function for Post-Excavation Niche 
+3650 Log-Air-Permeability Values 
+6.2.4 Liquid-Release Tests 
+A series of short-duration liquid-release tests was performed at Niche 3650 to characterize 
+seepage into an underground opening. The seepage tests were conducted after niche excavation 
+by pumping water into select test intervals in boreholes UL, UM, and UR located above the niche. 
+The tests were performed by sealing a short section of borehole using an inflatable packer system 
+and then releasing water at a constant rate into the isolated test interval. Any water that migrated 
+from the borehole to the niche ceiling and dripped into the opening was captured and weighed. 
+The seepage percentage, defined as the mass of water that dripped into the capture system divided 
+by the mass of water released into the borehole interval, was used to quantify seepage into the 
+drift from a localized source of water of known duration and flow rate. 
+Forty liquid-release tests were performed on 16 test intervals positioned above Niche 3650. Water 
+migrated through the rock and seeped into the niche for 10 out of the 16 zones tested. The seepage 
+and liquid-release data were entered into the Technical Database Management System under 
+DTN: LB980001233124.003. 
+Seepage-test data collected from two of the 10 intervals (UM 4.27–4.57 m and UM 5.49–5.79 m) 
+were retrieved from DTN: LB980001233124.003 and are used in this AMR to calibrate and test 
+0
+2
+4
+6
+8 
+10 
+12 
+14 
+16 
+18 
+20 
+-14.00-13.75-13.50-13.25-13.00-12.75-12.50-12.25-12.00-11.75-11.50-11.25-11.00-10.75-10.50-10.25-10.00-9.75-9.50-9.25-9.00-8.75More 
+Log10(k(m^2)) 
+Frequency 
+.00% 
+20.00% 
+40.00% 
+60.00% 
+80.00% 
+100.00% 
+120.00% 
+Frequency 
+Cumulative % 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 45 
+(“validate”) the SCM. Table 6 summarizes five separate liquid-release tests conducted at different 
+liquid-release rates in borehole UM at a depth of 4.27 to 4.57 m from the borehole collar. These 
+data are used to calibrate the SCM as described in Section 6.4. Likewise, Table 7 summarizes data 
+from four seepage tests conducted at different liquid-release rates in borehole UM at a depth of 
+5.49 to 5.79 m from the borehole collar. These data are used to validate the SCM as described in 
+Section 6.5. 
+Interval UM 4.27–4.57 m was selected because as many as five individual seepage tests were 
+performed at this location (typically, only three or fewer individual tests were conducted per test 
+interval). The liquid-release rate was lowered step-wise to identify a potential seepage threshold. 
+In addition, the seepage percentage for two of the tests (Test #1 12-3-97 and Test #2 12-3-97) 
+were significantly different even though the tests were conducted at nearly the same liquid-release 
+rate. The large difference in seepage percentage was attributed to the effect of wetting history, i.e., 
+the seepage data are believed to exhibit a strong memory effect because the tests were performed 
+only two hours apart. Consequently, residual water remaining in the fractures from the first test 
+(Test #1 12-3-97) influenced the amount of seepage that occurred during the second test (Test #2 
+12-3-97). 
+Interval UM 5.49–5.79 m was selected for validation of the SCM because as many as four 
+seepage tests were conducted at different rates, i.e., the calibrated SCM is validated against data 
+from a different location and under variable flow conditions.
+
+ 
+ 46 
+Table 6. Summary of Liquid-Release Test Results for Interval UM 4.27–4.57 
+Event/ Event/ When Wetting When Dripping When Liquid- Mass Seepage Seepage 
+Event/ Release Start Release End Front Arrives Begins Dripping Ends Release Released Mass Percentage 
+Test Name (sec) (sec) (sec) (sec) (sec) Rate (kg/s) (kg) (kg) % 
+Test 5 Niche 3650 0 500 409 423 2453 2.019E-03 1.0087 0.2280 22.60 
+Inactive - no release 500 1720511 0.000E+00 
+Test #1 12-3-97 1720511 1722529 1721505 1721804 1724389 5.034E-04 1.0157 0.2354 23.18 
+Inactive - no release 1722529 1729525 0.000E+00 
+Test #2 12-3-97 - start 1729525 1731528 1730015 1730083 1732793 5.057E-04 1.0125 0.5686 56.16 
+Inactive - no release 1731528 4747330 0.000E+00 
+Test #1 1-7-98 - end 4747330 4768628 4755893 4763621 4770213 4.715E-05 1.0042 0.0460 4.58 
+Inactive - no release 4768628 7690199 0.000E+00 
+Test #2 2-10-98 - start 7690199 7760753 7703568 -- -- 1.649E-05 1.1633 0 0 
+Inactive - no release 7760753 
+-- Event did not occur 
+Data Sources: 
+1. Elapsed times calculated in Excel ’97 workbook "Niche 3650 Liq-rel UM4.27-4.57 m-2.xls" in worksheet "Elapsed times" at pp. 32-35 in SN YMP-LBNL-RCT-DSM-1. 
+2. Liquid-release rate, mass released, seepage mass, seepage percentage, and absolute time of event from DTN: LB980001233124.003. 
+Elapsed Time
+
+ 
+ 47 
+Event/ When Event/ When Event/ When Wetting When Dripping When Liquid- Mass Seepage Seepage 
+Test Name Release Begins Release Ends Front Arrives Begins Dripping Ends Release Released Mass Percentage 
+(sec) (sec) (sec) (sec) (sec) Rate (kg/s) (kg) (kg) % 
+Test 4 Niche 3650 0 490 205 327 1385 2.069E-03 1.0134 0.2757 27.21 
+Inactive - no release 490 1811503 0.000E+00 
+Test #2 12-4-97 1811503 1813554 1811905 1812151 1814143 5.040E-04 1.0337 0.2221 21.49 
+Inactive - no release 1813554 4913288 0.000E+00 
+Test #1 1-9-98 4913288 4931265 4916035 4924171 4931765 5.778E-05 1.0387 0.0333 3.21 
+Inactive - no release 4931265 7773087 0.000E+00 
+Test #1 2-11-98 7773087 7849643 7783195 -- -- 1.361E-05 1.0417 0.0000 0.00 
+Inactive - no release 7849643 0.000E+00 
+-- Event did not occur 
+Data Sources: 
+1. Elapsed times calculated in Excel ’97 workbook "Niche 3650 liq-rel UM5.49-5.79 m.xls" in worksheet "Elapsed times" at pp. 35-37 in SN YMP-LBNL-RCT-DSM-1. 
+2. Liquid-release rate, mass released, seepage mass, seepage percentage and absolute time of event from DTN: LB980001233124.003. 
+Elapsed Time 
+Table 7. Summary of Liquid-Release Test Results for Interval UM 5.49–5.79
+
+ 
+ 48 
+6.3 DEVELOPMENT OF SEEPAGE CALIBRATION MODEL (SCM) 
+6.3.1 Conceptual Model 
+The SCM is intended to be a 3D, heterogeneous drift-scale fracture continuum model. The 
+modeling assumptions are described in Section 5.2. The appropriateness of using a 
+fracture-continuum approach for seepage calculations has been demonstrated in Section 5.3. 
+Furthermore, choosing the continuum approach is conceptually consistent with the unsaturated 
+zone site-scale model and submodels thereof, such as the various drift-scale models. This makes it 
+straightforward to embed the SCM into the current modeling framework. 
+During the step-wise development of the SCM, a number of more simplified models have been 
+tested, including 2D homogeneous, 2D heterogeneous, and 3D homogeneous representations of 
+the SCM. 
+6.3.2 Generation of Heterogeneous Permeability Field 
+The geostatistical analysis described in Section 6.2.2 provides an empirical semivariogram of 
+post-excavation air permeabilities at Niche 3650. Different theoretical models are fitted to the 
+empirical semivariogram (SN YMP-LBNL-SAF-1, pp. 89–92, 98). A spherical semivariogram 
+model with a nugget effect of 0.40, a correlation length of 3.87 m, and a sill value of 0.53 best 
+matches the empirical log-permeability semivariogram, as shown in Figure 17. Note that the 
+correlation length is simply a fitting parameter. Its relatively large value should not be 
+misinterpreted as suggesting that the permeability field is strongly correlated. In fact (as clearly 
+shown in Figure 17), the permeability is essentially random without a noticeable spatial 
+correlation. Random, uncorrelated permeability fields are expected to yield similar results as the 
+weakly correlated field used in this study. 
+The spherical semivariogram of Figure 17 along with the cumulative distribution function shown 
+in Figure 16 is used as input to program SISIM (SISIM, V1.203, 10001-1.0MSISIMV1.203-00). 
+SISIM generates a three-dimensional, spatially correlated permeability field using sequential 
+indicator simulation (Deutsch and Journel 1992, p. 151). The random permeability field is 
+conditioned on the post-excavation air-permeability data measured in various intervals of 
+boreholes UL, UM, and UR. More details about the generation of a heterogeneous permeability 
+field can be found in SN YMP-LBNL-SAF-1, pp. 93–99. The resulting permeability field is 
+mapped onto the numerical grid of the SCM, as described in Section 6.3.3. Van Genuchten’s 
+capillary pressure and relative permeability functions (Luckner et al. 1989, pp. 2191–2192) are 
+used in the SCM, where the capillary strength parameter 1/ a is correlated to the permeability in 
+each grid block according to Leverett’s scaling rule (Leverett 1941, p. 159; Finsterle 1997, 
+p. 224).
+
+ 
+ 49 
+Figure 17. Empirical and Fitted Spherical Semivariogram of Post-Excavation 
+Air-Permeabilities Used to Generate Permeability Field of Seepage Calibration Model 
+6.3.3 Mesh Generation 
+Since the SCM will be calibrated against liquid-release test data, it is discretized to include the 
+approximate geometry of Niche 3650 and its boreholes. The mesh is created in several steps as 
+follows (SN YMP-LBNL-SAF-1, pp. 100–102): 
+1. A basic mesh is generated with X-Y-Z dimensions of 6 × 1.5 × 5 m, respectively, 
+discretized into regular, square gridblocks with a side length of 0.1 m. Given the small 
+amount of water being injected, a model thickness of 1.5 m is sufficient to avoid 
+unwanted boundary effects. This was confirmed by the simulations, in which the 
+saturation plumes did not reach the model boundaries at Y=0.0 m and Y=1.5 m. As 
+discussed in Section 5.3.6, the estimated parameters are affected by grid resolution, i.e., 
+the values given in Table 10 below strictly refer to the discretization chosen here. 
+2. The heterogeneous permeability field (see Section 6.3.2) is mapped onto the mesh using 
+program Perm2Mesh (Perm2Mesh, V1.0, ACC: MOL.19990721.0554). 
+3. A niche is cut from the mesh using program CutNiche (CutNiche, V1.1, 
+ACC: MOL.19990721.0557). The niche is rectangular (4 m wide and 2.5 m high) with a 
+circular ceiling (radius 3 m, crown at Z = 3.25 m, axis parallel to the Y direction). A very 
+Data from Post-Excavation 
+Air-k Test Interpretations 
+Spherical Semi-Variogram 
+Nugget: 0.40 
+Correlation length: 3.87 
+Sill: 0.53 
+0 1 2 3 4 5 6 
+Lag-Distance [m] 
+0 
+0.1 
+0.2 
+0.3 
+0.4 
+0.5 
+0.6 
+0.7 
+0.8 
+Semi-Variogram 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 50 
+small nodal distance is defined from the element representing the niche to the first layer 
+of formation elements, allowing us to set boundary conditions right at the niche wall. The 
+length of the last vertical connection is thus 0.05 m, i.e., no horizontal flow diversion can 
+occur closer than 0.05 m from the niche wall. (For more details, see 
+SN YMP-LBNL-SAF-1, p. 39, 101.) 
+4. Boundary elements are added to the top and bottom of the model domain using program 
+AddBound (AddBound, V1.0, ACC: MOL.19990721.0553). The bottom boundary 
+element is assigned to rock type DRAIN to allow specifying a free-drainage boundary 
+condition (Section 6.3.4). 
+5. Boreholes, injection intervals, and packers are included by modifying the material name 
+of the corresponding elements (for details, see SN YMP-LBNL-SAF-1, pp. 100–101). 
+The final grid and log-permeability field of the 3D heterogeneous SCM is shown in Figure 18. 
+Submodels of the SCM include a 2D X-Z cross section at Y = 0.75 and homogeneous versions of 
+the model in two and three dimensions. 
+Figure 18. 3D Seepage Calibration Model with Log-Permeability Field 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 51 
+6.3.4 Initial and Boundary Conditions 
+The present-day percolation flux at Niche 3650 is unknown or highly uncertain. The uncertainty 
+is a result of uncertainties in the infiltration rates, and the channeling effects on account of larger 
+scale flow diversions and local heterogeneities. Nevertheless, percolation flux on the scale of the 
+niche is expected to be on the order of a few millimeters per year (see also Section 5.2, 
+Assumption No. 7). It is considered reasonable to apply a constant rate of 3 mm/year at the top of 
+the model domain. Since this flux is significantly lower than the fluxes induced by the 
+liquid-release tests to be modeled with the SCM, it is not expected that the simulation results are 
+strongly affected by the uncertainty in the assumed percolation flux. Moreover, this flux is 
+believed to be below the seepage threshold, an assumption that is tested and confirmed after 
+calibration of the SCM (see Section 6.6). A free-drainage boundary condition (Finsterle 1998, 
+pp. 14–15) is applied at the bottom of the model. The niche itself is at a reference pressure of 1 
+bar. No capillary suction is applied in the niche, i.e., it is assumed that the air directly at the niche 
+wall is of 100% relative humidity (see discussion of Assumption No. 6 in Section 5.2). Water is 
+allowed to enter, but is prevented from exiting the niche. Thus, the temporal change of water in 
+the niche element represents the cumulative seepage collected in the capture system installed 
+during the liquid-release tests in Niche 3650. No-flow boundary conditions are specified at the 
+left, right, back, and front sides of the model. 
+The initial saturation distribution is given by the steady-state flow field under natural percolation. 
+Since the steady-state flow field changes if some of the input parameters are updated during the 
+inversion, a steady-state simulation should precede each transient simulation of the liquid-release 
+test. This approach is implemented for the homogeneous cases. For the heterogeneous cases, 
+however, reaching steady state is computationally very time consuming. The initial saturation in 
+the fracture continuum is generally low and is likely to have only a small impact on the simulation 
+results. Moreover, the need for an accurate reproduction of a steady-state saturation distribution 
+cannot be justified given the fact that initial conditions are under a transient regime as a result of 
+ESF and niche excavation as well as dry-out from ventilation. Consequently, steady-state 
+calculations are performed only once for the heterogeneous cases, assuming initial parameter 
+values (see Section 6.3.5), and each transient run is preceded by a 2-year natural-state simulation 
+to allow some redistribution of water as parameters are updated. 
+6.3.5 Initial Parameter Set 
+Table 8 summarizes the initial parameter set for the SCM. Reference permeability is taken from 
+the post-excavation air-injection tests (see Section 6.2.3). The permeability used in the UZ Flow 
+and Transport Model is given for comparison and is used to test the predictability of an 
+uncalibrated, unconditioned SCM (see discussion in Section 6.4). Porosity and the reference van 
+Genuchten parameter 1/ a will be varied during the inversion. All the other parameters are taken 
+from the calibrated property set (DTN: LB997141233129.001) for the middle nonlithophysal unit 
+of the Topopah Spring Tuff (hydrogeologic model layer TSw34), under base-case infiltration 
+conditions. Since the SCM is a fracture-continuum model, no matrix properties are needed. Recall 
+that the heterogeneous models include a spatially correlated permeability field, i.e., each 
+gridblock has its own permeability value; the capillary strength parameter 1/ a is also considered 
+heterogeneous, correlated to the permeabilities according to the Leverett scaling rule (see 
+Section 6.3.2).
+
+ 
+ 52 
+6.4 MODEL CALIBRATION 
+Calibrating the SCM against seepage data from liquid-release tests provides model-related, 
+effective parameters relevant to the processes involved in drift seepage. The fact that 
+seepage-relevant parameters are determined using flow data from a seepage experiment is a key 
+aspect of our modeling approach. Determining parameters from flow experiments rather than 
+from geometric information such as fracture density and aperture has significant advantages. 
+Fracture mappings are strongly biased because of the selection of an arbitrary cut-off length, 
+which filters out the smaller fractures and microfractures. The latter are believed to be of great 
+importance for seepage. Small fractures and microfractures, if interconnected, are critical for 
+seepage because they have sufficient capillary strength to hold the water, preventing it from 
+seeping into the opening. At the same time they have—unlike the matrix—sufficient permeability 
+to facilitate flow diversion around the drift. Furthermore, deriving flow properties from geometric 
+fracture information must rely on simplified models, such as the parallel plate assumption, 
+leading to highly uncertain and systematically biased estimates. In general, we believe that there 
+is only a weak correlation between fracture mapping information and seepage-relevant 
+hydrogeologic parameters, i.e., flow and seepage behavior cannot be reliably predicted from 
+geometric fracture information alone. 
+If parameters are estimated by inverse modeling using flow data from seepage experiments, 
+seepage-relevant processes are automatically reflected in the estimated parameters. Moreover, the 
+estimates are able to partly compensate for processes and features not explicitly accounted for in 
+the model. For example, an estimate of matrix permeability determined by inverse modeling is 
+automatically increased if microfractures are present. Or—more relevant for the current study— 
+the tendency for increased seepage from poorly connected, discrete fractures intersecting the drift 
+can be accounted for by an appropriately reduced van Genuchten 1/ a value (see discussion in 
+Section 5.3). The simplification made by the model (discrete fractures are not explicitly included) 
+can be partly compensated by estimating effective parameters. It should be acknowledged that the 
+estimated parameters are not hydrologic properties per se, but are related to the conceptual model. 
+Determining model-related parameters from data that reveal seepage-relevant processes results in 
+a model suitable for seepage predictions. 
+Table 8. Initial Parameter Set 
+Parameter Value Units Reference 
+fracture permeability, kf 2.18E-12 m2 from post-excavation air-injection tests, see Section 
+6.2.3, Table 5. 
+fracture permeability, kf 1.70E-11 m2 DTN: LB997141233129.001 
+porosity, f 0.01 - DTN: LB997141233129.001; will be estimated. 
+van Genuchten a 5.16E-4 Pa-1 DTN: LB997141233129.001; will estimate 1/ a. 
+van Genuchten m 0.608 - DTN: LB997141233129.001 
+van Genuchten n 2.551 - n=1/(1-m) 
+residual saturation, Slrf 0.01 - DTN: LB997141233129.001 
+satiated saturation, Slsf 1.0 - DTN: LB997141233129.001
+
+ 
+ 53 
+We employed inverse modeling techniques implemented into the code iTOUGH2 for automatic 
+calibration of the SCM. As described in Section 6.2.4, a sequence of five liquid-release tests was 
+selected for calibration. The five tests from interval UM 4.27–4.57 m were conducted at various 
+injection rates with different lengths of inactivity between individual test events. The seepage data 
+are thus expected to reveal a number of seepage-relevant processes, including storage, memory 
+effects and the approach of a seepage threshold. 
+In a transient seepage experiment with only a small volume released, the amount of water seeping 
+into the niche mainly depends on three factors: 
+1. The potential of the formation to hold the water by capillary forces, here expressed 
+through an effective van Genuchten parameter 1/ a. 
+2. The potential of the formation to store the finite amount of water released, here expressed 
+through an effective porosity f, which may include effects of matrix imbibition. 
+3. The potential of the formation to divert water around the opening, here expressed through 
+an effective permeability k, which may include contributions from microfractures and the 
+matrix. 
+The simulated seepage percentage can be increased by decreasing either capillary strength 1/ a, 
+porosity f, or permeability k. Consequently, all parameter pairs are negatively correlated when 
+inversely determined from seepage data. If only seepage-percentage data are available for 
+calibration, the parameter correlations are expected to be strong, i.e., it is unlikely that they can be 
+determined independently from one another and with a reasonably low estimation uncertainty. 
+Unfortunately, each liquid-release test provides only one data point for calibration, which is the 
+total amount of water collected in the capture system at the end of each test event. No timedependent 
+seepage rates are available from Niche 3650. As a result of this limited data basis and 
+the expected strong correlations, the number of parameters to be estimated must be kept as small 
+as possible. 
+We choose to determine the porosity f and the van Genuchten parameter 1/ a while fixing 
+permeability k at the value estimated from the post-excavation air-injection tests (see 
+Section 6.2.3). The rationale for this selection is as follows: 
+1. The capillary strength 1/ a is both sensitive and uncertain, i.e., the reliability of 
+subsequent seepage predictions depends to a large extent on the value of 1/ a, which 
+cannot be deduced from independent information (such as fracture mapping). The 
+estimated value will be an effective parameter describing the capillary barrier in a 
+drift-scale fracture continuum model. 
+2. Since only a relatively small amount of water (approximately 1 kg, see Table 6) is 
+released in each test event, fracture and matrix storage effects are expected to be 
+significant. It should be noted that porosity is not important for seepage predictions under 
+near-steady-state conditions. The fact that porosity must be estimated here is a result of 
+the particular liquid-release test design. Liquid-release test were restricted to the use of a
+
+ 
+ 54 
+small amount of water, which made the tests highly transient and increased the 
+importance of storage effects. 
+3. Permeability is excluded from the estimation process because there is independent 
+information available from the air-injection tests (for further discussion, see Section 5.2, 
+Assumption No. 3). Furthermore, flow diversion is expected to play a minor role during 
+these tests as a result of the small amount of water released. Nevertheless, permeability 
+should be included and considered uncertain in any steady-state seepage prediction 
+exercise. 
+The need to estimate porosity is unfortunate because porosity will not affect steady-state seepage 
+predictions. Moreover, estimating porosity increases the uncertainty in the estimate of 1/ a to 
+which it is strongly correlated. Future liquid-release tests should be designed as long-term 
+experiments, with a sufficient amount of water being released so that porosity becomes 
+insensitive, and conversely flow diversion around the niche becomes important, enabling the 
+estimation of seepage-relevant permeability values on the drift scale. 
+Transient information is needed to better determine porosity. The obvious memory effect seen 
+between Test #1 12-3-97 and Test #2 12-3-97 helps identify the storage capacity in a joint 
+inversion of data from both tests. Moreover, the time when seepage starts and ends has been 
+recorded (see Table 6). This information—even though highly dependent on the specific features 
+of the fractures encountered by the water on its path from the injection point to the niche ceiling— 
+is included in the inversion in an approximate way. Two dummy data points are added to each test 
+event. The first dummy data point of zero seepage is specified at the time when seepage starts, 
+and the total seepage amount is given as a second dummy data point at the time when seepage 
+stopped, along with the actual point which is assigned at the end of the test event. For example, 
+for Test #1 12-3-97 (see Table 6), a calibration point with a seepage mass of zero is specified at 
+time 1,721,804 s and assigned a standard deviation of 0.03 kg; the second dummy calibration 
+point has a value of 0.2354 kg at time 1,724,389 s, also with a standard deviation of 0.03 kg; 
+finally, the third calibration point with the measured seepage mass of 0.2354 kg is set at time 
+1,729,520 s (i.e., shortly before the next test event) and is more strongly weighted by assigning a 
+lower standard deviation of 0.01 kg. The first two calibration points penalize both early water 
+breakthrough and long seepage tails, thus introducing some transient information for a better 
+constraint of porosity. More details can be found in YMP-LBNL-SAF-1, pp. 103–109, 146. 
+Using the initial parameter set of Table 8 would lead to zero seepage in all simulated 
+liquid-release tests as a result of the relatively low a value. Recall that initial a was determined 
+based on air-permeability data, fracture density information, and a parallel-plate assumption, and 
+by calibration against matrix saturation and water-potential measurements, i.e., they are not 
+expected to be representative of seepage-related processes. 
+A joint inversion of all five test events was performed using homogeneous and heterogeneous, 2D 
+and 3D representations of the SCM. The resulting matches are summarized in Table 9 and 
+visualized in Figure 19. 
+
+ 
+ 55 
+NOTE: 95%-error bands indicate prediction uncertainty of calibrated SCM. 
+Figure 19. Comparison Between Measured (Circles) and Calculated (Squares) Seepage 
+Mass 
+All models show the following general behavior: 
+1. Even though the total amount of water released during each test event is approximately 
+the same, less seepage is observed if the water is released at a lower rate, suggesting the 
+existence of a seepage threshold, which is defined as a rate below which no seepage 
+occurs. This fundamental behavior is seen in both the data and the corresponding 
+simulation results. 
+2. If a liquid-release test is followed by another test at a similar rate but with little inactive 
+time between them (e.g., Tests #1 and #2 conducted on 12-3-97) the second test leads to 
+significantly more seepage. This is a result of the fact that a certain amount of water is 
+stored in the formation before seepage is initiated; this storage volume is reduced or not 
+available for the second test event. The resulting memory effect can be seen in both the 
+data and the simulation. 
+3. The two effects described above overlap, making it sometimes difficult to clearly 
+separate and identify them. For example, Test #1 12-3-97 yielded a seepage mass 
+comparable to that measured in Test 5 Niche 3650 despite its lower rate and despite a 
+long inactive time between them. A potential explanation for this behavior is that storage 
+1 2 3 4 5 
+Test 
+0 
+0.1 
+0.2 
+0.3 
+0.4 
+0.5 
+0.6 
+0.7 
+0.8 
+0.9
+1 
+Seepage Mass [kg] 
+-
+- 
+-
+- 
+-
+- 
+- - 
+-
+- 
+-
+- 
+-
+- 
+-
+- - 
+-
+- 
+-
+- 
+-
+- 
+--
+- 
+-- 
+-- 
+-- 
+--
+-- 
+Test 5 Niche 3650 
+Test #1 12-3-97 
+Test #2 12-3-97 
+Test #1 1-7-98 
+Test #2 2-10-98 
+2D hom 
+2D het 
+3D hom 
+3D het 
+Data Point 
+(based on DTN: LB980001233124.003 and on data submitted with this AMR 
+under DTN: LB990831012027.001)
+
+ 
+ 56 
+effects are much stronger and last longer for the first in a sequence of liquid-release tests. 
+Water from the first test is used mainly to fill up dead-end fractures and to saturate the 
+matrix; the seepage rate is correspondingly low. For all subsequent tests, storage is 
+restricted to saturation increases in the flowing fractures, i.e., the memory effect is 
+expected to be much weaker. A second explanation could be that—considering the rate 
+and measured air permeability—the test is performed at a rate close to or exceeding the 
+saturated hydraulic conductivity in the vicinity of the tested interval, conditions for which 
+seepage is almost constant regardless of injection rate. 
+The matches obtained with the SCM can be considered acceptable given the uncertainty in the 
+data and the parsimony of the models. The 3D models perform slightly better than the 2D 
+alternatives; the differences in the matches obtained with homogeneous and heterogeneous 
+models are insignificant. A notable exception is Test #1 1-7-98, in which a higher seepage mass 
+is predicted with the heterogeneous models compared to the homogeneous models. The 
+heterogeneous models are in better agreement with the measured data point. 
+The 2D models fail to reproduce the relatively high seepage mass in Test #1 12-3-97, which 
+indicates that the strong memory effect from the initial injection (Test 5 Niche 3650) is not 
+appropriately represented in the model because features such as dead-end fractures and processes 
+such as matrix imbibition are not explicitly represented. As a result, seepage from the first test is 
+overpredicted, whereas the calculated seepage mass for the second test—performed at a lower 
+rate—is underpredicted. This inability of the 2D model to reproduce the initial memory effect 
+may slightly bias the estimates. Since initial memory effects are insignificant if the flow field is 
+near steady state, they are of little importance for seepage predictions under natural percolation 
+conditions and should be eliminated by matching data of long-term liquid-release tests. 
+The 3D models simulate the temporal and spatial spreading of the liquid plume more accurately 
+than the 2D models. The initial storage of water and its distribution is better represented, and as a 
+result, the 3D models are capable of matching all test events very accurately. Note that the 3D 
+heterogeneous model is the only one that leads to seepage for the last test, which was conducted at 
+a very low rate. It is therefore expected that the 3D heterogeneous model will predict a lower 
+seepage threshold than the other models. 
+Table 9. Comparison Between Measured and Calculated Seepage Mass in kg 
+Model 
+Test 5 Niche 
+3650 
+Test #1 
+12-3-97 
+Test #2 
+12-3-97 
+Test #1 
+1-7-98 
+Test #2 
+2-10-98 
+Meas. Calc. Meas. Calc. Meas. Calc. Meas. Calc. Meas. Calc. 
+2D-homogeneous 0.228 0.290 0.235 0.155 0.569 0.577 0.046 0.000 0.000 0.000 
+2D-heterogeneous 0.228 0.289 0.235 0.153 0.569 0.571 0.046 0.055 0.000 0.000 
+3D-homogeneous 0.228 0.228 0.235 0.238 0.569 0.574 0.046 0.004 0.000 0.000 
+3D-heterogeneous 0.228 0.229 0.235 0.239 0.569 0.564 0.046 0.046 0.000 0.001 
+(based on DTN: LB980001233124.003 and on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 57 
+The parameter estimates and their uncertainties are summarized in Table 10. The standard 
+deviation is the square root of the diagonal element of the estimation covariance matrix (Carrera 
+and Neuman 1986, p. 205); the correlation coefficient is calculated from the variances and the 
+covariance between the two estimated parameters (Finsterle 1999, p. 63). 
+The following comments can be made: 
+1. The estimated seepage-related capillary strength parameter log(1/ a) is much lower than 
+the initial value of 3.29 (see Table 8). The difference can be explained as a result of the 
+fact that the initial guess refers to the large-scale behavior of intact rock, whereas the 
+estimate from the liquid-release tests characterizes the excavation-distrurbed zone and 
+includes the seepage-specific effects from discrete fractures near the niche wall. 
+2. The capillary strength parameter 1/ a is lower for the homogenous than for the 
+heterogeneous model. This is expected because the explicitly modeled heterogeneity 
+leads to some flow channeling, resulting in higher seepage. The absence of flow 
+channeling in the homogeneous model is compensated for by reducing the capillary 
+barrier effect, i.e., by making 1/ a smaller. 
+3. The capillary-strength parameter 1/ a is lower for the 3D than for the 2D models. The 3D 
+models provide additional possibilities for flow diversion, reducing seepage. 
+Consequently, the capillary strength must be reduced to induce seepage comparable to 
+that obtained with the 2D models and the observed data, leading to relatively low 1/ a 
+estimates. 
+4. The porosity estimates for the 2D homogeneous and heterogeneous models are consistent 
+with one another. They are higher than the estimates from the 3D models, indicating that 
+the liquid plume was somewhat confined by the two-dimensionality of the model. 
+5. The correlation coefficient between capillary strength and porosity is negative because 
+reducing 1/ a leads to an increase in seepage, which can be partly compensated by an 
+increase in the pore volume available for storage. The correlation coefficient is 
+consistently estimated for all four models considered. 
+Table 10. Parameter Estimates, Estimation Uncertainty, and Correlation Coefficient 
+Model log(1/ a [Pa] )* log( f) Corr. Coeff. 
+Estimate Std. Dev. Estimate Std. Dev. 
+2d-homogeneous 2.25 0.09 -2.46 0.06 -0.75 
+2d-heterogeneous 2.95 0.06 -2.49 0.05 -0.63 
+3d-homogeneous 1.50 0.03 -2.87 0.02 -0.74 
+3d-heterogeneous 1.82 0.01 -2.89 0.01 -0.77 
+(based on data submitted with this AMR under DTN: LB990831012027.001) 
+* In the heterogeneous models, 1/ a is the reference capillary strength, which is related to the 
+reference permeability k = 10-12 m2 through Leverett’s scaling rule (Leverett 1941, p. 159).
+
+ 
+ 58 
+As demonstrated here, the differences and similarities in the estimated parameter sets can be 
+explained and related to the structure of the respective conceptual models, illustrating the need to 
+determine and to use process-specific and model-related parameters. As a result of effective 
+parameter estimation, all models are able to reproduce the same effective behavior. 
+6.5 MODEL VALIDATION 
+According to AP-3.10Q/Rev. 1/ICN 0, p. 5, model validation is the “process that demonstrates 
+that a model is an acceptable representation of the process or system for which it is intended.” 
+This usually involves blind predictions of the calibrated model and comparison with independent 
+data. The ultimate purpose of drift-scale seepage models is to predict seepage under natural flow 
+conditions, which involve generally lower percolation fluxes over longer time periods than those 
+encountered during a liquid-release test. Since no seepage data under natural percolation are 
+currently available, the SCM cannot be validated. However, the SCM can be partly validated 
+using seepage data from liquid-release tests different from those used in the calibration of the 
+model. The prediction of transient seepage data from a local liquid-release test may be considered 
+more difficult than predictions of average seepage under steady-state conditions because it 
+includes additional uncertainty from the highly sensitive porosity estimate. On the other hand, 
+predictions of natural seepage must be based on an extrapolation to significantly lower 
+percolation rates. 
+In this section, we predict seepage from four liquid-release tests and compare the results to the 
+corresponding data, taking into account the prediction uncertainty. The four tests selected for 
+validation are believed to be the most difficult ones to be simultaneously reproduced by the 
+calibrated SCM. They were performed using a wide range of injection rates, and they show a 
+seepage threshold and potentially storage effects. The majority of liquid-release tests performed 
+showed zero seepage, a result that is believed to be reproducible with the calibrated SCM. 
+The four tests were conducted in Interval UM 5.49–5.79 m as described in Section 6.2.4; the data 
+are summarized in Table 7. We consider the validation successful if the data lie within the 95% 
+error band calculated by the calibrated SCM. This means that the seepage calculated with the 
+best-estimate parameter set is not required to match the data precisely, but with reasonable 
+accuracy, where “reasonable” is defined by the prediction uncertainty. The question whether this 
+prediction uncertainty is acceptable for future model applications does not need to be answered to 
+validate the SCM. The uncertainty will simply be taken as input to the Seepage Models for PA 
+and propagated through applicable PA models. A probabilistic acceptance criterion is adopted to 
+ensure that prediction uncertainty is included in the validation process as well as in future model 
+predictions. This should reduce misinterpretations and the misuse of the SCM. 
+Several methods can be employed to assess the uncertainty of model predictions as a result of 
+parameter uncertainty. When computationally feasible, Monte Carlo simulations (Finsterle 1999, 
+pp. 76–78) are the method of choice because they automatically account for nonlinearities in the 
+model. A simplified linear uncertainty-propagation analysis (Finsterle 1999, pp. 74–76) can be 
+chosen in cases where running many simulations is prohibitive. Monte Carlo simulations are 
+performed for the 2D models, whereas linear uncertainty-propagation analysis is applied for the 
+3D models.
+
+ 
+ 59 
+For the Monte Carlo simulations using the 2D models, a standard deviation of 0.1 is assigned to 
+log(1/ a), log( f), and log(k). This value represents a 25% uncertainty in each of the parameters, 
+which are assumed to be uncorrelated. The parameter uncertainty is slightly increased over the 
+standard deviation given in Table 10 to account for the fact that the prediction is performed at a 
+different location. Moreover, permeability is included as an additional uncertain parameter. 
+Note that these small standard deviations lead to relatively small prediction uncertainties, making 
+it difficult to meet the validation acceptance criteria. The standard deviations should be 
+appropriately increased for probabilistic seepage predictions that involve a change in conditions 
+such as a different location or unit with potentially changed formation characteristics, changes in 
+spatial or temporal scale, or changes in governing processes (e.g., unmodeled thermal or 
+geochemical effects). Heterogeneities that are not explicitly represented in the model or other 
+conceptual uncertainties should also be accounted for by increasing parameter standard deviations 
+in probabilistic seepage predictions. 
+The histogram of the seepage predictions from four liquid-release tests for the 2D homogeneous 
+and heterogeneous models are shown in Figures 20 and 21, respectively. The prediction with the 
+best-estimate parameter set (see Table 10) is shown as a thin red line, whereas the long shaded bar 
+indicates the measured value (see Table 7). For the 2D homogeneous model, the measured value 
+is always within the range predicted by the Monte Carlo simulations, i.e., a correct statement 
+regarding seepage was made with the calibrated SCM. 
+The 2D heterogeneous model overpredicts seepage for the first two tests of the series. Predictions 
+made with a heterogeneous model should include multiple realizations of the heterogeneous 
+permeability field. Probabilistic simulations with multiple stochastic realizations are beyond the 
+scope of this study.
+
+ 
+ 60 
+NOTE: The seepage mass predicted with the best-estimate parameter set is shown as a thin red line; the 
+measured value is represented by the long shaded bar. 
+Figure 20. Histograms of Model Predictions with 2D Homogeneous Seepage Calibration 
+Model 
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 
+Seepage Mass 
+0 
+10 
+20 
+30 
+40 
+50 
+Frequency 
+Test 4 Niche 3650 
+two-dimensional 
+homogeneous 
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 
+Seepage Mass 
+0 
+10 
+20 
+30 
+40 
+50 
+Frequency 
+Test #2 12-4-97 
+two-dimensional 
+homogeneous 
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 
+Seepage Mass 
+0 
+10 
+20 
+30 
+40 
+50 
+Frequency 
+Test #1 1-9-98 
+two-dimensional 
+homogeneous 
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 
+Seepage Mass 
+0 
+10 
+20 
+30 
+40 
+50 
+Frequency 
+Test #1 2-11-98 
+two-dimensional 
+homogeneous 
+(based on DTN: LB980001233124.003 and on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 61 
+NOTE: The seepage mass predicted with the best-estimate parameter set is shown as a thin red line; the 
+measured value is represented by the long shaded bar. 
+Figure 21. Histograms of Model Predictions with 2D Heterogeneous Seepage Calibration 
+Model 
+The seepage predictions with the 3D homogeneous model are very accurate, i.e., the measured 
+value is very close to the simulation result and always within the error band (see Figure 22). The 
+uncertainties of the model predictions were calculated on the basis of a linearity and normality 
+assumption with a very small parameter standard deviation of 0.05 for log(1/ a) and log( f), which 
+corresponds to as little as 12% variation in these estimates. The standard deviations are chosen 
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 
+Seepage Mass 
+0 
+10 
+20 
+30 
+40 
+50 
+Frequency 
+Test 4 Niche 3650 
+two-dimensional 
+heterogeneous 
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 
+Seepage Mass 
+0 
+10 
+20 
+30 
+40 
+50 
+Frequency 
+Test #2 12-4-97 
+two-dimensional 
+heterogeneous 
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 
+Seepage Mass 
+0 
+10 
+20 
+30 
+40 
+50 
+Frequency 
+Test #1 1-9-98 
+two-dimensional 
+heterogeneous 
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 
+Seepage Mass 
+0 
+10 
+20 
+30 
+40 
+50 
+Frequency 
+Test #1 2-11-98 
+two-dimensional 
+heterogeneous 
+(based on DTN: LB980001233124.003 and on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 62 
+smaller than those used for the 2D models because the estimation uncertainties were also smaller 
+(see Table 10). 
+The 3D heterogeneous model also meets the validation criteria with the exception of the first 
+event, Test 4 Niche 3650, where seepage was underpredicted (see Figure 23). As in the 2D 
+heterogeneous case, the additional uncertainty resulting from multiple realizations of random 
+permeability fields is not included here. 
+NOTE: The seepage mass predicted with the best-estimate parameter set is shown as a cross; the 
+measured value is represented by a square; 95% error bars are determined by linear 
+uncertainty-propagation analysis. 
+Figure 22. Validation of 3D Homogeneous Seepage Calibration Model 
+0 1 2 3 4 
+Test 
+0 
+0.1 
+0.2 
+0.3 
+0.4 
+0.5 
+0.6 
+0.7 
+0.8 
+0.9
+1 
+Seepage Mass [kg] 
+-
+- 
+-
+- 
+- 
+- 
+X X 
+X 
+X 
+Test 4 Niche 3650 
+Test #2 12-4-97 
+Test #1 1-9-98 
+Test #1 2-11-98 
+Validation Tests Interval UM 5.49-5.79 m 
+three-dimensional 
+homogeneous 
+(based on DTN: LB980001233124.003 and on data submitted with this AMR 
+under DTN: LB990831012027.001)
+
+ 
+ 63 
+NOTE: The seepage mass predicted with the best-estimate parameter set is shown as a cross; the 
+measured value is represented by a square; 95% error bars are determined by linear uncertainty 
+propagation analysis 
+Figure 23. Validation of 3D Heterogeneous Seepage Calibration Model 
+In summary, the model predictions are consistent with the measured seepage mass in most cases, 
+despite rigorous assumptions regarding the uncertainty of the input parameters. The 
+homogeneous models unconditionally meet the stringent validation criteria. Since only a single 
+realization of the random permeability field was used to test the heterogeneous models, the 
+predictions are outside the 95% error band in certain test events. Multiple realizations should be 
+generated, which will provide a larger, more realistic spread of seepage predictions. Furthermore, 
+blind predictions of future long-term seepage tests should be made and compared to the data to 
+gain additional confidence into the SCM prediction capability. Instructions for reproducing the 
+simulations discussed in this section can be found in SN YMP-LBNL-SAF-2, pp. 2–7. 
+6.6 SEEPAGE THRESHOLD PREDICTIONS 
+Steady-state simulations are performed to calculate seepage for a large range of percolation 
+fluxes. The percolation flux below which no seepage occurs is termed “seepage threshold.” Note 
+that the percolation fluxes examined here are significantly higher than the average infiltration rate 
+considered reasonable at Yucca Mountain. These fluxes can be interpreted as being local and 
+relevant to drift-scale studies. They are assumed to be significantly larger than average infiltration 
+or percolation fluxes as a result of flow channeling effects (Birkholzer and Tsang 1997). The 
+0 1 2 3 4 
+Test 
+0 
+0.1 
+0.2 
+0.3 
+0.4 
+0.5 
+0.6 
+0.7 
+0.8 
+0.9
+1 
+Seepage Mass [kg] 
+-
+- 
+-
+- -
+- - 
+X X 
+X 
+X 
+Test 4 Niche 3650 
+Test #2 12-4-97 
+Test #1 1-9-98 
+Test #1 2-11-98 
+Validation Tests Interval UM 5.49-5.79 m 
+three-dimensional 
+heterogeneous 
+(based on DTN: LB980001233124.003 and on data submitted with this AMR 
+under DTN: LB990831012027.001)
+
+ 
+ 64 
+development and characteristics of such weeps are not investigated here; we simply extend our 
+seepage predictions to very high percolation fluxes to cover potential channeling effects. Also 
+note that the seepage threshold and seepage percentages determined here are for a niche with a 
+circular, smooth ceiling (see Figure 18), located in the middle nonlithophysal zone of the Topopah 
+Spring welded tuffs, in an area of relatively competent rock mass and low fracture density. 
+Extrapolations to other drift geometries and hydrogeologic units are not valid. 
+Figures 24 and 25 show the seepage percentages as a function of percolation flux as predicted by 
+the 2D homogeneous and heterogeneous models, respectively. The results with the best-estimate 
+parameter set (see Table 10) are shown as a solid line, revealing a seepage threshold of 3,150 and 
+1,000 mm/year, respectively. It is interesting to note that a new seepage location becomes 
+available for percolation fluxes higher than 5,000 mm/year, leading to a kink in the predicted 
+seepage percentage for the heterogeneous model (Figure 25). 
+For the 2D models, Monte Carlo simulations were performed; the results are depicted as short 
+dashes. The capillary strength parameter 1/ a and absolute permeability k are assumed 
+uncorrelated and log-normally distributed with a standard deviation of 0.1. Percolation flux is 
+sampled uniformly between 1 and 10,000 mm/year. The uniform distribution is not supposed to 
+reflect the assumption about percolation uncertainty, but is chosen to cover a wide range of fluxes 
+as part of a sensitivity analysis. The results would have to be weighted with the assumed 
+percolation probability before making any probabilistic statements about drift seepage. 
+The 3D homogeneous and heterogeneous model results (see Figures 26 and 27) yield a seepage 
+threshold of approximately 700 and 250 mm/year, respectively. No Monte Carlo simulations 
+could be performed to assess prediction uncertainty. Future seepage studies should include Monte 
+Carlo simulations in which not only parameters are sampled from a distribution, but also a large 
+number of random permeability fields are generated. 
+The Monte Carlo simulations performed with the 2D models and the implied variability and 
+uncertainty in the 3D models indicate significant uncertainty in seepage percentage predictions. 
+Nevertheless, there seems to be a low seepage probability for percolation fluxes below 100 mm/ 
+year. The calculation of this probability is beyond the scope of this AMR. 
+Instructions for reproducing the simulations discussed in this section can be found in 
+SN YMP-LBNL-SAF-2, pp. 10–15.
+
+ 
+ 65 
+NOTE: Solid line shows result obtained with best-estimate parameter set; short dashes depict Monte 
+Carlo simulation results. 
+Figure 24. Seepage Percentage as a Function of Percolation Flux for 2D Homogeneous 
+Model 
+102 103 104 
+Percolation Flux [mm/year] 
+-10
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+90 
+100 
+Seepage Percentage 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- - 
+- 
+-- 
+- 
+- 
+- - 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- - 
+- 
+- 
+-- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+-- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+-
+-
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-- - 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- - - 
+- 
+-
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- -
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+Two-Dimensional 
+Homogeneous 
+Seepage Threshold 
+Monte Carlo Simulations 
+Best-Estimate 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 66 
+NOTE: Solid line shows result obtained with best-estimate parameter set; short dashes depict Monte 
+Carlo simulation results. 
+Figure 25. Seepage Percentage as a Function of Percolation Flux for 2D Heterogeneous 
+Model 
+102 103 104 
+Percolation Flux [mm/year] 
+-10
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+90 
+100 
+Seepage Percentage 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- -- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+-- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+-
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- - 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- - 
+-
+- - 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-
+- 
+- 
+- 
+- 
+- 
+-- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- 
+-- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- - 
+- 
+- 
+- - 
+- 
+- 
+- 
+- 
+- 
+- 
+Two-Dimensional 
+Heterogeneous 
+Seepage Threshold 
+Monte Carlo Simulations 
+Best-Estimate 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 67 
+Figure 26. Seepage Percentage as a Function of Percolation Flux for 3D Homogeneous 
+Model 
+Figure 27. Seepage Percentage as a Function of Percolation Flux for 3D Heterogeneous 
+Model 
+102 103 104 
+Percolation Flux [mm/year] 
+-10
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+90 
+100 
+Seepage Percentage 
+Three-Dimensional 
+Homogeneous 
+(based on data submitted with this AMR under DTN: LB990831012027.001) 
+102 103 104 
+Percolation Flux [mm/year] 
+-10
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+90 
+100 
+Seepage Percentage 
+Three-Dimensional 
+Heterogeneous 
+(based on data submitted with this AMR under DTN: LB990831012027.001)
+
+ 
+ 68 
+6.7 ALTERNATIVE CONCEPTUAL MODELS AND SENSITIVITY ANALYSES 
+6.7.1 Alternative Conceptual Models 
+Using a discrete fracture network model (DFNM) as an alternative to the fracture continuum 
+model presented here is a valid option that should be studied in detail. The DFNM has the 
+advantage of being intuitively more appropriate for seepage predictions. The reasons for not using 
+a DFNM can be summarized as follows: 
+1. A very large amount of geometric and unsaturated hydrologic property data would be 
+required for the development of a defensible DFNM. While part of the geometric 
+information can be obtained from fracture mappings, the description of the network 
+remains incomplete and potentially biased. Moreover, unsaturated hydrologic parameters 
+on the scale of individual fractures would be required, along with conceptual models and 
+simplifying assumptions regarding unsaturated flow within fractures and across fracture 
+intersections. The required data basis is not available. As a result, the cumulative effect of 
+all the input uncertainties is likely to outweigh the apparent advantage of a detailed 
+representation of the fracture network. 
+2. Considering a DFNM more appropriate for seepage predictions is based on the premise 
+that all physical processes relevant for seepage are well understood, well characterized, 
+and appropriately described in the model, and that the accurate geometric representation 
+of the fracture network is the only aspect that needs refinement. We believe that the 
+complexity of seepage cannot be described, characterized, and simulated on the scale of 
+individual water droplets. However, we maintain that the effects can be reasonably well 
+accounted for in a model that acknowledges its limitations, and for which effective 
+parameters are determined based on seepage-relevant data. 
+3. The incorporation of a DFNM into the current framework of nested continuum models 
+would be problematic. 
+4. The appropriateness of using a fracture continuum model for the prediction of effective 
+seepage quantities such as seepage percentage was demonstrated in Section 5.3 of this 
+AMR. 
+5. To our knowledge, no sophisticated fracture network code is currently available that 
+would be capable of simulating unsaturated flow through complex, heterogeneous, threedimensional 
+fracture networks and seepage into underground openings. 
+6. The FCM can be developed based on less information than would be required for the 
+development of a DFNM. 
+In general, the choice of a conceptual model for seepage predictions should be based on a careful 
+consideration of the study objectives, the available data basis in comparison with the data needs, 
+the uncertainties in the input parameters and the corresponding prediction uncertainties, as well as 
+computational aspects.
+
+ 
+ 69 
+6.7.2 Sensitivity Analysis 
+This AMR is concerned with the development and calibration of the Seepage Calibration Model 
+(SCM). Extensive sensitivity analyses for seepage into drifts of varying geometry and flow 
+conditions will be performed with the Seepage Model for PA. Nevertheless, many simulations 
+were performed during the calibration process and to generate distributions of model output 
+during validation and seepage threshold predictions. These simulations provided insight into the 
+variability of the model result as parameters are changed within the range of their expected 
+uncertainty. The results of these extensive sensitivity analyses were visualized and discussed in 
+Sections 6.5 and 6.6.
+
+ 
+ 70 
+
+
+ 
+ 71 
+7. CONCLUSIONS 
+2D and 3D homogeneous and heterogeneous versions of the Seepage Calibration Model (SCM) 
+were developed based on post-excavation air-permeability data, which showed little spatial 
+correlation (see Sections 6.2 and 6.3). The SCM models were calibrated against seepage data 
+from liquid-release tests performed at various injection rates and with different inactive periods 
+between individual test events. Effective values for the capillary strength parameter 1/ a and 
+porosity f were determined (Section 6.4). Permeability was fixed at the values estimated from the 
+air-injection tests. The inverse modeling results can be summarized as follows: 
+1. While zero seepage would be predicted with an uncalibrated model using initial 
+parameter values (see Table 8), the seepage data were reasonably well matched by the 
+calibrated models considered in this study (see Table 9). 
+2. The capillary strength parameter 1/ a is reduced relative to the initial value. The smallest 
+value was obtained with the 3D homogeneous model, and the highest value was 
+estimated for the 2D heterogeneous model (see discussion of Table 10). 
+3. It was necessary to estimate porosity as a parameter representing the storage capacity of 
+the formation despite storage effects being of little concern for seepage predictions under 
+natural, near-steady-state conditions. Liquid-release tests should be designed as longterm 
+experiments with a sufficient amount of water being released. The transient and 
+steady-state seepage rate should be measured. In such an experiment, porosity, which 
+does not affect steady-state seepage predictions, becomes insensitive, i.e., it does not 
+need to be determined from the liquid-release test data. This greatly reduces the 
+uncertainty of the concurrently estimated parameters. On the other hand, flow diversion 
+around the niche becomes important, potentially enabling the estimation of seepagerelevant 
+permeability values on the scale of a drift. If possible, one should try to capture 
+water near the spring line of the drift as independent evidence of flow diversion. 
+4. The differences and similarities in the estimated parameter sets can be explained and 
+related to the structure of the respective conceptual models, illustrating the need to 
+determine and use model-related parameters. As a result of effective parameter 
+estimation, all models are able to reproduce the same effective behavior. 
+The SCM was tested in a validation exercise against liquid-release test data that were not used for 
+the calibration of the model (Section 6.5). A probabilistic acceptance criterion was adopted to 
+ensure that prediction uncertainty is included in the validation process as well as in future model 
+predictions. Simulations of four liquid-release tests were performed, and the uncertainties of the 
+predicted seepage values were determined. The model predictions were consistent with the 
+measured seepage mass in most cases. Blind predictions of future long-term seepage tests should 
+be made and compared to the data to gain additional confidence into the SCM prediction 
+capability. 
+Seepage threshold was determined and sensitivity studies were performed (Section 6.6). The 
+calibrated SCM predicts a low seepage probability for a wide range of percolation fluxes. 
+Detailed seepage predictions will be performed with the Seepage Model for PA.
+
+ 
+ 72 
+The calibration, validation, and prediction studies reported in this AMR demonstrate that: 
+1. The methodology outlined in this AMR yields drift-scale seepage models that are capable 
+of reproducing and predicting seepage data from liquid-release tests (Sections 6.4 and 
+6.5). 
+2. The parameters estimated by calibrating the SCM against liquid-release test data are (a) 
+seepage related and (b) model dependent (Sections 5.3 and 6.4). 
+3. Seepage predictions performed with a homogeneous SCM are consistent with those of a 
+heterogeneous fracture continuum model (Section 6.6). Predictions with a fracture 
+continuum model are consistent with simulated data from a model that displays discrete 
+flow and seepage behavior (Section 5.3). 
+A homogeneous model is capable of determining integral measures such as seepage percentage. If 
+the distribution of dripping locations is requested in addition to average seepage rates, a 
+heterogeneous or discrete fracture network model must be developed. Higher model 
+sophistication comes at the expense of increased data needs and often leads to the need to estimate 
+a large number of strongly correlated parameters (i.e., overparameterization), which results in 
+reduced prediction reliability. Extrapolations and applications of the calibrated model to different 
+locations, units, time scales, and processes must be performed with great care and may require the 
+development of more sophisticated models, including an extended characterization effort to 
+satisfy additional or changed data needs. 
+A consistently high seepage threshold on the order of 200 mm/year or more was predicted. These 
+estimates remain uncertain and are only valid for seepage under ambient temperature conditions 
+into an uncollapsed opening with a circular, smooth ceiling, located in the middle nonlithophysal 
+zone of the Topopah Spring welded tuffs, in an area of relatively competent rock mass and low 
+fracture density. Extrapolations to other drift geometries and hydrogeologic units are not valid. 
+All software routines as well as input and output files pertinent to this AMR (see Attachment II) 
+were submitted to the TDMS under DTN: LB990831012027.001. All input data residing in the 
+TDMS were designated “To Be Verified (TBV)” until further verification. It is anticipated that 
+the data, which were previously considered Q, will remain Q after the re-verification process is 
+complete. The status of all the inputs for this AMR is available by referring to the DIRS database; 
+the most recent version of the DIRS is included in Attachment I.
+
+ 
+ 73 
+8. REFERENCES 
+8.1 DOCUMENTS CITED 
+Birkholzer, J. and Tsang, C.F. 1997. “Solute Channeling in Unsaturated Heterogeneous Porous 
+Media.” Water Resources Research, 33 (10), 2221–2238. Washington, D.C.: American 
+Geophysical Union. TIC: 235675. 
+Carrera, J. and Neuman, S.P. 1986. “Estimation of Aquifer Parameters Under Transient and 
+Steady State Conditions: 1. Maximum Likelihood Method Incorporating Prior Information.” 
+Water Resources Research, 22 (2), 199–210. Washington, D.C.: American Geophysical Union. 
+TIC: 245915. 
+CRWMS M&O (Civilian Radioactive Waste Management System Management & Operating 
+Contractor) 1999a. M&O Site Investigations. Activity Evaluation. Las Vegas, Nevada: 
+CRWMS M&O. ACC: MOL.19990317.0330. 
+CRWMS M&O 1999b. M&O Site Investigations. Activity Evaluation. Las Vegas, Nevada: 
+CRWMS M&O. ACC: MOL. 19990928.0224. 
+CRWMS M&O 1999c. Analysis & Modeling Development Plan (DP) for U0080 Seepage 
+Calibration Model and Seepage Testing Data, Rev 00. TDP-NBS-HS-000005. Las Vegas, 
+Nevada: CRWMS M&O. ACC: MOL.19990826.0109. 
+Deutsch, C.V. and Journel, A.G. 1992. GSLIB–Geostatistical Software Library and User’s Guide. 
+New York, New York: Oxford University Press. TIC: 224174. 
+Dyer, J.R. 1999. “Revised Interim Guidance Pending Issuance of New U.S. Nuclear Regulatory 
+Commission (NRC) Regulations (Revision 01, July 22, 1999), for Yucca Mountain, Nevada.” 
+Letter from J.R. Dyer (DOE) to D.R. Wilkins (CRWMS M&O), September 9, 1999, OL&RC:SB- 
+1714, with enclosure, “Interim Guidance Pending Issuance of New U.S. Nuclear Regulatory 
+Commission (NRC) Regulations (Revision 01).” ACC: MOL.19990910.0079. 
+Finsterle, S. 1997. ITOUGH2 Command Reference, Version 3.1. LBNL-40041. Berkeley, 
+California: Lawrence Berkeley National Laboratory. ACC: MOL.19981008.0015. 
+Finsterle, S. 1998. ITOUGH2 V3.2 Verification and Validation Report. LBNL-42002. Berkeley, 
+California: Lawrence Berkeley National Laboratory. ACC: MOL.19981008.0014. 
+Finsterle, S. 1999. ITOUGH2 User’s Guide. LBNL-40040. Berkeley, California: Lawrence 
+Berkeley National Laboratory. TIC: 243018. 
+LeCain, G.D. 1995. Pneumatic Testing in 45-Degree-Inclined Boreholes in Ash-Flow Tuff Near 
+Superior, Arizona. Water-Resources Investigations Report 95-4073. Denver, Colorado: U.S. 
+Geological Survey. TIC: 221220.
+
+ 
+ 74 
+Leverett, M.C. 1941. “Capillary Behavior in Porous Solids.” AIME Transactions, Tulsa 
+Meeting, October 1940, 142, 152–169. New York, New York: American Institute of Mining, 
+Metallurgical, and Petroleum Engineers. TIC: 240680. 
+Luckner, L.; van Genuchten, M.T.; and Nielsen, D.R. 1989. “A Consistent Set of Parametric 
+Models for the Two-Phase Flow of Immiscible Fluids in the Subsurface.” Water Resources 
+Research, 25 (10), 2187–2193. Washington, D.C.: American Geophysical Union. TIC: 224845. 
+Pruess, K. 1991. “Grid Orientation and Capillary Pressure Effects in the Simulation of Water 
+Injection into Depleted Vapor Zones.” Geothermics, 20 (5-6), 257–277. Elmsford, New York: 
+Pergamon Press. TIC: 245139. 
+Pruess, K. 1999. “A Mechanistic Model for Water Seepage through Thick Unsaturated Zones in 
+Fractured Rocks of Low Matrix.” Water Resources Research, 35 (4), 1039–1051. Washington, 
+D.C.: American Geophysical Union. TIC: 244913. 
+Richards, L.H. 1931. “Capillary Conduction of Liquids through Porous Media.” Physics, 1, 218– 
+233. Washington, D.C.: American Physical Society. TIC: 225383. 
+Wang, J.S.Y. and Elsworth, D. 1999. “Permeability Changes Induced by Excavation in Fractured 
+Tuff.” Rock Mechanics for Industry, Proceedings of the 37th U.S. Rock Mechanics Symposium, 
+Vail, Colorado, June 6-9, 1999, 2, 751–757. Alexandria, Virginia: The American Rock 
+Mechanics Association. TIC: 245246. 
+Wemheuer, R.F. 1999. “First Issue of FY00 NEPO QAP-2-0 Activity Evaluations.” Interoffice 
+correspondence from R.F. Wemheuer (CRWMS M&O) to R.A. Morgan (CRWMS M&O), 
+October 1, 1999, LV.NEPO.RTPS.TAG.10/99-155, with attachments, Activity Evaluation for 
+Work Package #1401213UM1. ACC: MOL.19991028.0162. 
+Software Cited 
+Software Code: iTOUGH2 V.4.0. STN: 10003-4.0-00. 
+Software Code: GSLIB Module SISIM V.1.203. STN: 10001-1.0MSISIMV1.203-00. 
+Software Code: GSLIB Module GAMV2 V.1.201. STN: 10087-1.0MGAMV2V1.201-00. 
+Software Code: EXT V.1.0. STN: 10047-1.0-00. 
+Macro/Routine: MoveMesh V.1.0. ACC: MOL.19990721.0552. 
+Macro/Routine: AddBound V.1.0. ACC: MOL.19990721.0553. 
+Macro/Routine: Perm2Mesh V.1.0. ACC: MOL.19990721.0554. 
+Macro/Routine: DelMatrix V.1.0. ACC: MOL.19990721.0555. 
+Macro/Routine: Eos9Eos3 V.1.0. ACC: MOL.19990721.0556.
+
+ 
+ 75 
+Macro/Routine: CutNiche V.1.1. ACC: MOL.19990721.0557. 
+Macro/Routine: userobs V.1.01. ACC: MOL.19990721.0558. 
+8.2 STANDARDS, REGULATIONS AND PROCEDURES CITED 
+64 FR (Federal Register) 8640. Disposal of High-Level Radioactive Waste in a Proposed 
+Geologic Repository at Yucca Mountain. Proposed rule 10 CFR 63. Readily available. 
+AP-3.10Q, Rev. 1, ICN 0. Analysis and Models. Washington, D.C.: U.S. Department of Energy, 
+Office of Civilian Radioactive Waste Management. ACC: MOL.19990702.0314. 
+AP-SI.1Q, Rev. 1, ICN 0. Software Management. Washington, D.C.: U.S. Department of 
+Energy, Office of Civilian Radioactive Waste Management. ACC: MOL.19990630.0395. 
+DOE (U.S. Department of Energy) 1998. Quality Assurance Requirements and Description. 
+DOE/RW-0333P, REV 8. Washington D.C.: DOE OCRWM. ACC: MOL.19980601.0022. 
+QAP-2-0, Rev. 5. Conduct of Activities. Las Vegas, Nevada: CRWMS M&O. ACC: 
+MOL.19980826.0209. 
+8.3 SOURCE DATA, LISTED BY DATA TRACKING NUMBER 
+DTN: LB980001233124.002. Air Permeability Testing in Niches 3566 and 3650. Submittal 
+date: 04/23/1998. 
+DTN: LB980001233124.003. Liquid Release Tests Performed to Determine if a Capillary 
+Barrier Exists in Niches 3566 and 3650. Submittal date: 04/23/1998. 
+DTN: LB997141233129.001. Calibrated Basecase Infiltration 1-D Parameter Set for the UZ 
+Flow and Transport Model, FY99. Submittal date: 07/21/1999. 
+8.4 AMR OUTPUT DATA LISTED BY DATA TRACKING NUMBER 
+DTN: LB990831012027.001. Input to Seepage Calibration Model AMR U0080. Submittal date: 
+08/26/1999. 
+8.5 SUPPORTING BIBLIOGRAPHY 
+Birkholzer, J.; Li, G.; Tsang, C.F.; and Tsang, Y. 1999. “Modeling Studies and Analysis of 
+Seepage into Drifts at Yucca Mountain.” Journal Of Contaminant Hydrology, 38 (1-3), 349–384. 
+Amsterdam, The Netherlands: Elsevier Science. TIC: 244160. 
+Birkholzer, J.; Li, G.; Tsang, C.F.; and Tsang, Y. 1998. Drift Scale Modeling: Studies of Seepage 
+into a Drift. Milestone Report SP4CKLM4. Berkeley, California: Lawrence Berkeley National 
+Laboratory. ACC: MOL.19980825.0204. 
+
+ 
+ 76 
+Birkholzer, J.; Li, G.; Tsang, C.F.; Tsang, Y; Trautz, R.C.; and Wang, J. 1998. Drift Scale 
+Modeling: Studies of Seepage into a Drift. Milestone Report SP3CKLM4. Berkeley, California: 
+Lawrence Berkeley National Laboratory. ACC: MOL.19980908.0282. 
+Birkholzer, J.T.; Tsang, C.F.; Tsang, Y.W.; and Wang, J.S.Y. 1996. “Drift Scale Modeling, FY96 
+Project Report.” Chapter 4 of Multi-Scale Modeling to Evaluate Scaling Issues, Percolation Flux 
+and Other Processes for PA Recommendations. Altman S.J. et al., eds. Milestone Report T6540. 
+Albuquerque, New Mexico: Sandia National Laboratories. ACC: MOL.19970320.0116. 
+Cook, P.J.; Trautz, R.C.; and Wang, J.S.Y. 1998. “Compilation of Borehole Permeability Values 
+from the Pre- and Post-Excavation Air Injection Tests.” Chapter 3 of Drift Seepage and Niche 
+Moisture Study: Phase 1 Report on Flux Threshold Determination, Air Permeability Distribution, 
+and Water Potential Measurement, Version 1.0. Wang, J.S.Y. et al. Milestone Report 
+SPC315M4. Berkeley, California: Lawrence Berkeley National Laboratory. ACC: 
+MOL.19980806.0713. 
+Cook, P.J.; Trautz, R.C.; and Wang, J.S.Y. 1997. “Cross-hole Pneumatic Tests of Fracture Flow 
+Paths.” Chapter 2 of Field Testing and Observation of Flow Paths in Niches, Phase 1 Status 
+Report of the Drift Seepage Test and Niche Moisture Study. Wang, J.S.Y et al. Milestone Report 
+SPC314M4. Berkeley, California: Lawrence Berkeley National Laboratory. ACC: 
+MOL.19980121.0078. 
+Finsterle, S. and James, A.L. 1998. “Sensitivity Analysis of Drift Seepage with Two-Dimensional 
+and Three-Dimensional Models.” Chapter 3 of Testing and Modeling of Seepage into Drift: Input 
+of Exploratory Study of Facility Seepage Test Results to Unsaturated Zone Models. Wang, J.S.Y. 
+et al. Milestone Report SP33PLM4. Berkeley, California: Lawrence Berkeley National 
+Laboratory. ACC: MOL.19980508.0004. 
+Finsterle, S.; James, A.L.; Ritcey, A.C.; and Wang, J.S.Y. 1998. Model Prediction of Cross-Drift 
+Impact on Moisture. Milestone Report SP33T1M4. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19980507.0177. 
+Finsterle, S. 1997. ITOUGH2 Sample Problems. Report LBNL-40042. Berkeley, California: 
+Lawrence Berkeley National Laboratory. TIC: 244009. 
+Flint, A. L. and Flint, L. E. 1997. “Niche Moisture Analysis.” Chapter 5 of Field Testing and 
+Observation of Flow Paths in Niches, Phase 1 Status Report of the Drift Seepage Test and Niche 
+Moisture Study. Wang, J.S.Y. et al. Milestone Report SPC314M4. Berkeley, California: 
+Lawrence Berkeley National Laboratory. ACC: MOL.19980121.0078. 
+Flint, L.E. 1998. Characterization of Hydrogeologic Units Using Matrix Properties, Yucca 
+Mountain, Nevada. Water Resources Investigations Report 97–4243. Denver, Colorado: U.S. 
+Geological Survey. ACC: MOL.19980429.0512. 
+Geller, J.T.; Su, G.; and Pruess, K. 1996. Preliminary Studies of Water Seepage through Rough- 
+Walled Fractures. Report LBNL-38810. Berkeley, California: Lawrence Berkeley National 
+Laboratory. TIC: applied for.
+
+ 
+ 77 
+James, A.L. and Finsterle, S. 1997. “Fracture Flow Models for Niche Liquid Release Tests.” 
+Chapter 4 of Field Testing and Observation of Flow Paths in Niches, Phase 1 Status Report of the 
+Drift Seepage Test and Niche Moisture Study. Wang, J.S.Y. et al. Milestone Report SPC314M4. 
+Berkeley, California: Lawrence Berkeley National Laboratory. ACC: MOL.19980121.0078. 
+Hvorslev, M.J. 1951. “Time Lag and Soil Permeability in Ground-Water Observations.” U.S. 
+Army Corps of Engineers Bulletin, 36. Vicksburg, Mississippi: U.S. Army Corps of Engineers. 
+TIC: 238956. 
+Li, G.; Tsang, C.F.; and Birkholzer, J. 1998. Calculation of Drift Seepage for Alternative 
+Emplacement Designs. BB0000000-01717-0200-00011. Berkeley, California: Lawrence 
+Berkeley National Laboratory. ACC: MOL.19990323.0138 
+Philip, J.R. 1989. “The Seepage Exclusion Problem for Sloping Cylindrical Cavities.” Water 
+Resources Research, 25 (6), 1447–1448. Washington, D.C.: American Geophysical Union. TIC: 
+239729. 
+Philip, J.R. 1989. “Asymptotic Solutions for the Seepage Exclusion Problem for Elliptic- 
+Cylindrical, Spheroidal, and Strip- and Disc-Shaped Cavities.” Water Resources Research, 25 
+(7), 1531–1540. Washington, D.C.: American Geophysical Union. TIC: 239858. 
+Philip, J.R.; Knight, J.H. and Waechter, R.T. 1989. “Unsaturated Seepage and Subterranean 
+Holes: Conspectus, and Exclusion Problem for Cylindrical Cavities.” Water Resources Research, 
+25 (1), 16–28. Washington, D.C.: American Geophysical Union. TIC: 239117. 
+Philip, J.R.; Knight, J.H; and Waechter, R.T. 1989. “The Seepage Exclusion Problem for 
+Parabolic and Paraboloidal Cavities.” Water Resources Research, 25 (4), 605–618. Washington, 
+D.C.: American Geophysical Union. TIC: 239116. 
+Pruess, K. 1998. “On Water Seepage and Fast Preferential Flow in Heterogeneous, Unsaturated 
+Rock Fractures.” Journal of Contaminant Hydrology, 30 (3–4), 333–362. Amsterdam, The 
+Netherlands: Elsevier Science. TIC: 238921. 
+Pruess, K.; Faybishenko, B.; and Bodvarsson, G.S. 1997. “Alternative Concepts and Approaches 
+for Modeling Unsaturated Flow and Transport in Fractured Rocks.” Chapter 5 of The Site-Scale 
+Unsaturated-Zone Model of Yucca Mountain, Nevada, for the Viability Assessment. Bodvarsson, 
+G.S.; Bandurraga, T.M.; and Wu, Y.S., eds. LBNL-40376. Berkeley, California: Lawrence 
+Berkeley National Laboratory. ACC: MOL.19971014.0232. 
+Rasmussen, T.C.; Evans, D.D.; Sheets, P.J.; and Blanford, J.H. 1993. “Permeability of Apache 
+Leap Tuff: Borehole and Core Measurements Using Water and Air.” Water Resources Research, 
+29 (7), 1997–2006. Washington, D.C.: American Geophysical Union. TIC: 245278. 
+Salve, R. and Wang, J.S.Y. 1998. “Compilation of Water Potentials Measured in the Niches.” 
+Chapter 4 of Drift Seepage Test and Niche Moisture Study: Phase 1 Report on Flux Threshold 
+Determination, Air Permeability Distribution, and Water Potential Measurement. Wang, J.S.Y. et 
+
+ 
+ 78 
+al. Milestone Report SPC315M4. Berkeley, California: Lawrence Berkeley National 
+Laboratory. ACC: MOL.19980806.0713. 
+Trautz, R.C.; Wang, J.S.Y.; and Cook, P.J. 1998. “Compilation of Seepage Results From the Pre- 
+And Post-Excavation Liquid-Release Tests.” Chapter 2 of Drift Seepage Test and Niche 
+Moisture Study: Phase 1 Report on Flux Threshold Determination, Air Permeability Distribution, 
+and Water Potential Measurement. Wang, J.S.Y. et al. Milestone Report SPC315M4. Berkeley, 
+California: Lawrence Berkeley National Laboratory. ACC: MOL.19980806.0713. 
+Trautz, R.C.; Cook, P.J.; and Wang, J.S.Y. 1997. “Liquid Migration Along Fracture Flow Paths.” 
+Chapter 3 of Field Testing and Observation of Flow Paths in Niches. Milestone Report 
+SPC314M4. Wang, J.S.Y. et al. Berkeley, California: Lawrence Berkeley National Laboratory. 
+ACC: MOL.19980121.0078. 
+Tsang, C.F.; Li, G.; Birkholzer, J.T.; and Tsang, Y.W. 1998 . Abstraction Modeling of Drift 
+Seepage for TSPA/VA. Milestone Report SLX01LB4. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19980730.0607. 
+Tsang, C.F. 1997. Drift-Scale Heterogeneous Permeability Field Conditioned to Field Data. 
+Milestone Report SP331BM4. Berkeley, California: Lawrence Berkeley National Laboratory. 
+ACC: MOL.19971125.0915. 
+Tsang, C.F.; Birkholzer, J.T.; and Li, G. 1997. Drift Scale Modeling: Progress in Studies of 
+Seepage into a Drift. Milestone Report SP331CM4. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19971204.0420. 
+Tsang, C.F.; Birkholzer, J.T.; Li, G; and Tsang, Y.W. 1997. Drift Scale Modeling: Studies of 
+Seepage into a Drift. Milestone Report SP331DM4. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19971208.0369. 
+Tsang, C.F.; Li, G.; Birkholzer, J.T.; and Tsang, Y.S. l997. Drift Scale Abstraction: Evaluation of 
+Seepage into Drifts. Milestone Report NWD98–1. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19980423.0388. 
+Tsang, C.F.; Li, G.; Birkholzer, J.; and Tsang, Y. S 1997. Drift Scale Abstraction: Additional 
+Results on Seepage into Drifts and Model Testing against Niche Liquid Release Test. Milestone 
+Report NWD98–2. Berkeley, California: Lawrence Berkeley National Laboratory. ACC: 
+MOL.19980506.0008. 
+Wang, J.S.Y.; Trautz, R.C.; Salve, R.; Oldenburg, C.M.; Ahlers, C.F.; Finsterle, S.; Cook, P.J.; 
+Doughty, C.; Fairley, J.P.; James, A. Hu, M.Q.; Guell, M.A.; and Freifeld, B. 1998. Progress 
+Report on Fracture Flow, Drift Seepage, and Matrix Imbibition Tests in the Exploratory Studies 
+Facility. Milestone Report SP33PBM4. Berkeley, California: Lawrence Berkeley National 
+Laboratory. 
+Wang, J.S.Y.; Trautz, R.C.; Cook, P.J.; Finsterle, S.; James, A.L.; Birkholzer J.; and Ahlers, C.F. 
+1998. Testing and Modeling of Seepage into Drift: Input of Exploratory Study of Facility Seepage 
+
+ 
+ 79 
+Test Results to Unsaturated Zone Model. Milestone Report SP33PLM4. Berkeley, California: 
+Lawrence Berkeley National Laboratory. ACC: MOL.19980508.0004. 
+Wang, J.S.Y.; Trautz, R.C.; Cook, P.J.; and Salve, R. 1998. Drift Seepage Test and Niche 
+Moisture Study: Phase 1 Report on Flux Threshold Determination, Air Permeability Distribution, 
+and Water Potential Measurement. Milestone Report SPC315M4. Berkeley, California: 
+Lawrence Berkeley National Laboratory. ACC: MOL.19980806.0713. 
+Wang, J.S.Y, Cook, P.; Trautz, R.; James, A.; Finsterle, S. Sonnenthal, E.; Salve, R.; Hesler, G.; 
+and Flint, A. 1997. Drift Seepage Test and Niche Moisture Study: Phase 1 Progress Report on 
+Data Interpretation and Model Prediction. Milestone Report SPC31DM4. Berkeley, California: 
+Lawrence Berkeley National Laboratory. ACC: MOL.19980501.0484. 
+Wang, J.S.Y., Cook, P.J.; Trautz, R.C.; Salve, R.; James, A.L.; Finsterle, S.; Tokunaga, T.K.; 
+Solbau, R.; Clyde, J.; Flint, A.L.; and Flint, L.E. 1997. Field Testing and Observation of Flow 
+Paths in Niches, Phase 1 Status Report of the Drift Seepage Test and Niche Moisture Study. 
+Milestone Report SPC314M4. Berkeley, California: Lawrence Berkeley National Laboratory. 
+ACC: MOL.19980121.0078.
+
+ 
+ 80 
+
+
+ 
+ 81 
+9. ATTACHMENTS 
+Attachment I – Document Input Reference Sheet 
+Attachment II – Software Routines, Input and Output Files
+
+ 
+ 82 
+
+
+ 
+ Attachment I-1 
+ATTACHMENT I–DOCUMENT INPUT REFERENCE SHEET 
+DIRS as of the issue date of this AMR. Refer to the DIRS database for the current status of these 
+inputs. 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+1. DTN: 
+LB980001233124.002. 
+Wang, J. Air permeability 
+testing in Niches 3566 and 
+3650. Submittal date: 
+04/23/1998. Initial use. 
+File 
+S98131_ 
+002, 
+Rows 
+247-277, 
+309-339 
+TBV-3094 6.2, 6.3 Post-excavation air 
+permeability data for 
+conditioning of Seepage 
+Calibration Model 
+1 N/A N/A X 
+2. DTN: 
+LB980001233124.003. 
+Wang, J. Liquid Release 
+Tests Performed to 
+Determine if a Capillary 
+Barrier Exists in Niches 
+3566 and 3650. Submittal 
+date: 04/23/1998. Initial 
+Use. 
+File 
+S98132_ 
+005, 
+Rows 10- 
+14, 20-23 
+TBV-3093 6.2, 6.4 Liquid release test data for 
+calibration and validation 
+1 N/A N/A X 
+3. DTN: 
+LB997141233129.001. 
+Wu, Y.S. Calibrated 
+Basecase Infiltration 1-D 
+Parameter Set for the UZ 
+Flow and Transport Model 
+FY99. Submittal date: 
+07/21/1999. Initial use. 
+IDbaseca 
+se 
+Rlwodis. 
+xls. 
+TBV-3095 6.3 Fracture properties for 
+Seepage Calibration Model 
+1 N/A N/A X
+
+ 
+ Attachment I-2 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+4. Birkholzer, J. and Tsang, 
+C.F. 1997. “Solute 
+Channeling in Unsaturated 
+Heterogeneous Porous 
+Media.” Water Resources 
+Research, 33 (10), 2221– 
+2238. Washington, D.C.: 
+American Geophysical 
+Union. TIC: 235675. 
+Entire N/A - 
+Reference 
+only 
+6.6 Channeling effect N/A N/A N/A N/A 
+5. Carrera, J. and Neuman, 
+S.P. 1986. “Estimation of 
+Aquifer Parameters Under 
+Transient and Steady State 
+Conditions: 1. Maximum 
+Likelihood Method 
+Incorporating Prior 
+Information.” Water 
+Resources Research, 22 
+(2), 199–210. Washington, 
+D.C.: American 
+Geophysical Union. TIC: 
+245915. 
+205 N/A - 
+Reference 
+only 
+6.4 Estimation covariance 
+matrix 
+N/A N/A N/A N/A
+
+ 
+ Attachment I-3 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+6. CRWMS M&O (Civilian 
+Radioactive Waste 
+Management System 
+Management & Operating 
+Contractor) 1999a. M&O 
+Site Investigations. 
+Activity Evaluation. Las 
+Vegas, Nevada: CRWMS 
+M&O. ACC: 
+MOL.19990317.0330. 
+Entire N/A - 
+Reference 
+only 
+2 Standards, Codes & 
+Regulations 
+N/A N/A N/A N/A 
+7. CRWMS M&O 1999b. 
+M&O Site Investigations. 
+Activity Evaluation. Las 
+Vegas, Nevada: CRWMS 
+M&O. ACC: MOL. 
+19990928.0224. 
+Entire N/A - 
+Reference 
+only 
+2 Standards, Codes & 
+Regulations 
+N/A N/A N/A N/A
+
+ 
+ Attachment I-4 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+8. CRWMS M&O 1999c. 
+Analysis & Modeling 
+Development Plan (DP) 
+for U0080 Seepage 
+Calibration Model and 
+Seepage Testing Data, Rev 
+00. TDP-NBS-HS- 
+000005. Las Vegas, 
+Nevada: CRWMS M&O. 
+ACC: 
+MOL.19990826.0109. 
+Entire N/A - 
+Reference 
+only 
+2 Standards, Codes & 
+Regulations 
+N/A N/A N/A N/A 
+9. Deutsch, C.V. and Journel, 
+A.G. 1992. 
+GSLIB.Geostatistical 
+Software Library and 
+User’s Guide. New York, 
+New York: Oxford 
+University Press. TIC: 
+224174. 
+53-55 
+151 
+N/A - 
+Reference 
+only 
+5.3, 
+6.2.3 
+6.3.2 
+Use of modules GAMV2 
+and SISIM 
+N/A N/A N/A N/A
+
+ 
+ Attachment I-5 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+10. Dyer, J.R. 1999. “Revised 
+Interim Guidance Pending 
+Issuance of New U.S. Nuclear 
+Regulatory Commission 
+(NRC) Regulations (Revision 
+01, July 22, 1999), for Yucca 
+Mountain, Nevada.” Letter 
+from J.R. Dyer (DOE) to D.R. 
+Wilkins (CRWMS M&O), 
+September 9, 1999, 
+OL&RC:SB-1714, with 
+enclosure, “Interim Guidance 
+Pending Issuance of New U.S. 
+Nuclear Regulatory 
+Commission (NRC) 
+Regulations (Revision 01).” 
+ACC: MOL.19990910.0079. 
+Entire N/AReference 
+only 
+4.2 Interim Guidance N/A N/A N/A N/A 
+11. Finsterle, S. 1997. 
+ITOUGH2 Command 
+Reference, Version 3.1. 
+Report LBNL-40041. 
+Berkeley, California: 
+Lawrence Berkeley 
+National Laboratory. 
+ACC: 
+MOL.19981008.0015. 
+Entire N/A - 
+Reference 
+only 
+5.2 
+6.3 
+Supports software use N/A N/A N/A N/A
+
+ 
+ Attachment I-6 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+12. Finsterle, S. 1998. 
+ITOUGH2 V3.2 
+Verification and Validation 
+Report. Report LBNL- 
+42002. Berkeley, 
+California: Lawrence 
+Berkeley National 
+Laboratory. ACC: 
+MOL.19981008.0014. 
+p. 14-15 N/A - 
+Reference 
+only 
+5.3.2 
+6.3.4 
+Instructions for application 
+of free-drainage boundary 
+condition 
+N/A N/A N/A N/A 
+13. Finsterle, S. 1999. 
+ITOUGH2 User’s Guide. 
+Report LBNL-40040. 
+Berkeley, California: 
+Lawrence Berkeley 
+National Laboratory. TIC: 
+243018. 
+Entire N/A - 
+Reference 
+only 
+5.3.4 
+6.3.5 
+6.5 
+Objective function, 
+minimization algorithm 
+and error analysis 
+N/A N/A N/A N/A 
+14. LeCain, G. D. 1995. 
+Pneumatic Testing in 45- 
+Degree-Inclined Boreholes 
+in Ash-Flow Tuff near 
+Superior, Arizona. Water 
+Resources Investigations 
+Report 95-4073. Denver, 
+Colorado: U.S. Geological 
+Survey. ACC: 
+MOL.19960416.0160. 
+p. 32 N/A - 
+Reference 
+only 
+5.3.3 Analytical solution for 
+permeability from steadystate 
+air-injection data. 
+N/A N/A N/A N/A
+
+ 
+ Attachment I-7 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+15. Leverett, M.C. 1941. 
+“Capillary Behavior in 
+Porous Solids.” AIME 
+Transactions, Tulsa 
+Meeting, October 1940, 
+142, 152-169. New York, 
+New York: American 
+Institute of Mining, 
+Metallurgical, and 
+Petroleum Engineers. TIC: 
+240680. 
+Entire N/A - 
+Reference 
+only 
+5.2 
+6.3 
+Leverett Scaling Rule N/A N/A N/A N/A 
+16. Luckner, L.; van 
+Genuchten, M.T.; and 
+Nielsen, D.R. 1989. “A 
+Consistent Set of 
+Parametric Models for the 
+Two-Phase Flow of 
+Immiscible Fluids in the 
+Subsurface.” Water 
+Resources Research, 25 
+(10), 2187–2193. 
+Washington, D.C.: 
+American Geophysical 
+Union. TIC: 224845. 
+pp. 2191- 
+2192 
+N/A - 
+Reference 
+only 
+5.2 
+6.3 
+Relative permeability and 
+capillary pressure function 
+N/A N/A N/A N/A
+
+ 
+ Attachment I-8 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+17. Pruess, K. 1991. “Grid 
+Orientation and Capillary 
+Pressure Effects in the 
+Simulation of Water 
+Injection into Depleted 
+Vapor Zones.” 
+Geothermics, 20 (5–6), 
+257–277. Elmsford, New 
+York: Pergamon Press. 
+TIC: 245139. 
+pp. 272- 
+274 
+N/A - 
+Reference 
+only 
+5.3.6 Description of phase 
+dispersion effects 
+N/A N/A N/A N/A 
+18. Pruess, K. 1999. “A 
+Mechanistic Model for 
+Water Seepage through 
+Thick Unsaturated Zones 
+in Fractured Rocks of Low 
+Matrix.” Water Resources 
+Research, 35 (4), 1039– 
+1051. Washington, D.C.: 
+American Geophysical 
+Union. TIC: 244913. 
+pp. 1039- 
+1051 
+N/A - 
+Reference 
+only 
+5.3 Alternative conceptual 
+model description 
+N/A N/A N/A N/A
+
+ 
+ Attachment I-9 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+19. Richards, L.H. 1931. 
+“Capillary Conduction of 
+Liquids Through Porous 
+Media.” Physics, 1, 218– 
+233. Washington, D.C.: 
+American Physical 
+Society. TIC: 225383. 
+pp. 218- 
+233 
+N/A - 
+Reference 
+only 
+5.2 
+6.3 
+Concept of unsaturated 
+flow through porous media 
+N/A N/A N/A N/A 
+20. Wang, J. S. Y., and 
+Elsworth, D. 1999. 
+“Permeability Changes 
+Induced by Excavation in 
+Fractured Tuff.” 
+Proceedings, 37th U.S. 
+Rock Mechanics 
+Symposium, Rock 
+Mechanics for Industry, 2, 
+751–757. Alexandria, 
+Virginia: The American 
+Rock Mechanics 
+Association. TIC: 245246. 
+pp. 751- 
+757 
+N/A - 
+Reference 
+only 
+5.3.2 Description of excavationdisturbed 
+zone around 
+niches 
+N/A N/A N/A N/A
+
+ 
+ Attachment I-10 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+21. Wemheuer, R.F. 1999. “First 
+Issue of FY00 NEPO QAP-2- 
+0 Activity Evaluations.” 
+Interoffice correspondence 
+from R.F. Wemheuer 
+(CRWMS M&O) to R.A. 
+Morgan (CRWMS M&O), 
+October 1, 1999, 
+LV.NEPO.RTPS.TAG.10/99- 
+155, with attachments, 
+Activity Evaluation for Work 
+Package #1401213UM1. 
+ACC: MOL.19991028.0162. 
+WP#1401 
+213UM1 
+N/AReference 
+only 
+2 Activity Evaluation N/A N/A N/A N/A 
+22. Software Code: iTOUGH2 
+v 4.0, STN: 10003-4.0-00 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6.4, 
+6.5, 6.6 
+General software use N/A N/A N/A N/A 
+23. Software Code: GSLIB 
+Module SISIM v 1.203, 
+STN: 10001- 
+1.0MSISIMV1.203-00 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6.3 General software use N/A N/A N/A N/A 
+24. Software Code: GSLIB 
+Module GAMV2 v 1.201, 
+STN: 10087- 
+1.0MGAMV2V1.201-00 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+6.2 General software use N/A N/A N/A N/A
+
+ 
+ Attachment I-11 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+25. Software Code: EXT v 1.0, 
+STN: 10047-1.0-00 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6 General software use N/A N/A N/A N/A 
+26. Software Code: MoveMesh 
+v. 1.0. ACC: 
+MOL.19990721.0552 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6.3 General software use N/A N/A N/A N/A 
+27. Software Code: AddBound 
+v. 1.0. ACC: 
+MOL.19990721.0553. 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6.3 General software use N/A N/A N/A N/A 
+28. Software Code: 
+Perm2Mesh v. 1.0. ACC: 
+MOL.19990721.0554. 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6.3 General software use N/A N/A N/A N/A 
+29. Software Code: DelMatrix 
+v 1.0. ACC: 
+MOL.19990721.0555. 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6.3 General software use N/A N/A N/A N/A 
+30. Software Code: Eos9Eos3 
+v 1.0. ACC: 
+MOL.19990721.0556. 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6.3 General software use N/A N/A N/A N/A
+
+ 
+ Attachment I-12 
+OFFICE OF CIVILIAN RADIOACTIVE WASTE MANAGEMENT 
+DOCUMENT INPUT REFERENCE SHEET 
+1. Document Identifier No./Rev.: 
+/Rev. 00E 
+Change: Title: 
+Seepage Calibration Model & Seepage Testing Data 
+Input Document 4. Input 
+Status 
+5. 
+Section 
+Used in 
+6. Input Description 7. 
+TBV/TBD 
+Priority 
+8. TBV Due To 
+2. Technical Product Input Source 
+Title and Identifier(s) with Version 
+3. 
+Section 
+Unqual. From 
+Uncontrolled 
+Source 
+Unconfirm 
+ed 
+31. Software Code: CutNiche 
+v 1.1. ACC: 
+MOL.19990721.0557. 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6.3 General software use N/A N/A N/A N/A 
+32. Software Code: userobs v 
+1.01. ACC: 
+MOL.19990721.0558. 
+Entire N/AQualified/ 
+Verified/ 
+Confirmed 
+5.3, 6.3 General software use N/A N/A N/A N/A 
+AP-3.15Q.1 Rev. 06/30/1999
+
+ 
+ Attachment II-1 
+ATTACHMENT II
+
+ 
+ Attachment II-2 January 2000
+
+ 
+ Attachment II-3 
+#! /bin/sh 
+#
+# file “maketar” ceates compressed tar file U0080.tar.Z. 
+# DTN: LB990831012027.001, TDIF 308840 
+#
+# Contains input and output files that allow reproduction of all simulations pertinent to AMR U0080, 
+# "Seepage Calibration Model and Seepage Testing Data," ANL-NBS-HS-000004, MOL.19990721.0521 
+#
+# To extract files from U0080_00B.tar.Z on a Unix workstation, type: 
+# uncompress U0080.tar.Z; tar xvf U0080.tar 
+# Requires about 150 MB of disk space. 
+#
+# All commands can be found in the sh.* script files; 
+# consult Scientific Notebooks YMP-LBNL-SAF-1, YMP-LBNL-SAF-2, and YMP-LBNL-RCT-DSM-1. 
+#
+# S. Finsterle, September 1999 
+#
+tar -cvf - \ 
+\
+./maketar \ the file creating the tar file 
+\ 
+./Codes/AddBound.f \ FORTRAN77 source code 
+./Codes/CutNiche.f \ FORTRAN77 source code 
+./Codes/DelMatrix.f \ FORTRAN77 source code 
+./Codes/Eos9Eos3.f \ FORTRAN77 source code 
+./Codes/MoveMesh.f \ FORTRAN77 source code 
+./Codes/Perm2Mesh.f \ FORTRAN77 source code 
+./Codes/sisim.f \ FORTRAN77 source code 
+./Codes/sisimm.f \ FORTRAN77 source code 
+./Codes/sisim.inc \ include file for SISIM 
+./Codes/ext.f \ FORTRAN77 source code 
+./Codes/catalog.f \ FORTRAN77 source code 
+./Codes/inspect.f \ FORTRAN77 source code 
+./Codes/rmesh.f \ FORTRAN77 source code 
+./Codes/gamv2m.f \ FORTRAN77 source code 
+./Codes/gamv2.f \ FORTRAN77 source code 
+./Codes/gamv2.inc \ include file for GAMV2 
+./Codes/userobs.f \ link to iTOUGH2 V4.0 
+./Codes/xAddBound \ Executable for Sun SPARC multiprocessor, Solaris 
+./Codes/xCutNiche \ Executable for Sun SPARC multiprocessor, Solaris 
+./Codes/xDelMatrix \ Executable for Sun SPARC multiprocessor, Solaris 
+./Codes/xEos9Eos3 \ Executable for Sun SPARC multiprocessor, Solaris
+
+ 
+ Attachment II-4 
+./Codes/xExt \ Executable for Sun SPARC multiprocessor, Solaris 
+./Codes/xGamv2 \ Executable for Sun SPARC multiprocessor, Solaris 
+./Codes/xMoveMesh \ Executable for Sun SPARC multiprocessor, Solaris 
+./Codes/xPerm2Mesh \ Executable for Sun SPARC multiprocessor, Solaris 
+./Codes/xSisim \ Executable for Sun SPARC multiprocessor, Solaris 
+./Codes/sh.compile \ Unix shell script file used to compile all codes 
+\ 
+./Codes/gamv2/cluster.dat \ Input data for gamv2 validation case 1 
+./Codes/gamv2/gamv2.par1 \ Input parameter file for gamv2 validation case 1 
+./Codes/gamv2/gamv2.par2 \ Input parameter file for gamv2 validation case 2 
+./Codes/gamv2/gamv2.var1 \ Ouput variogram for gamv2 validation case 1 
+./Codes/gamv2/gamv2.var2 \ Ouput variogram for gamv2 validation case 2 
+./Codes/gamv2/randfield.f \ FORTRAN77 source code to generate random numbers 
+./Codes/gamv2/random.dat \ Input data for gamv2 validation case 2 
+\ 
+./ContDisc/DFNMairk \ TOUGH2 input file air-k test with DFNM, Section 5.3.3 
+./ContDisc/DFNMairki \ iTOUGH2 input file air-k test with DFNM, Section 5.3.3 
+./ContDisc/DFNMairki.out \ iTOUGH2 output file air-k test with DFNM, Section 5.3.3, Figure 4 
+./ContDisc/DFNMlrt \ TOUGH2 input file liquid-release test with DFNM, Section 5.3.4, Table 4 
+./ContDisc/DFNMlrt.out \ TOUGH2 output file liquid-release test with DFNM, Section 5.3.4, Figure 5. 
+./ContDisc/DFNMlrti \ iTOUGH2 input file liquid-release test with DFNM, Section 5.3.4, Table 4 
+./ContDisc/DFNMlrti.out \ iTOUGH2 output file liquid-release test with DFNM, Section 5.3.4, Figure 6 
+./ContDisc/DFNMperm \ TOUGH2 input file for saturated steady-state run with DFNM, Section 5.3.2 
+./ContDisc/DFNMperm.out \ TOUGH2 output file for saturated steady-state run with DFNM, Section 5.3.2, Figure 1a 
+./ContDisc/DFNMpred \ TOUGH2 input file for prediction run with DFNM, Section 5.3.7 
+./ContDisc/DFNMpredi \ iTOUGH2 input file for prediction run with DFNM, Section 5.3.7 
+./ContDisc/DFNMpredi.out \ iTOUGH2 output file for prediction run with DFNM, Section 5.3.7, Figure 10 
+./ContDisc/DFNMseep \ TOUGH2 input file for seepage threshold determination with DFNM, Section 5.3.7 
+./ContDisc/DFNMseepi \ iTOUGH2 input file for seepage threshold determination with DFNM, Section 5.3.7 
+./ContDisc/DFNMseepi.out \ iTOUGH2 output file for seepage threshold determination with DFNM, Section 5.3.7, Figure 11 
+./ContDisc/DFNMss \ TOUGH2 input file for steady-state run with DFNM, Section 5.3.2 
+./ContDisc/DFNMss.out \ TOUGH2 output file for steady-state run with DFNM, Section 5.3.2, Figures 2, 3 
+./ContDisc/DFNM.inc \ Initial condition file (output from DFNMss run), Section 5.3.2 
+./ContDisc/DFNMairk.inc \ Initial condition file for DFNMairk run (converted output from DFNMss run), Section 5.3.2 
+./ContDisc/FCMlrt \ TOUGH2 input file for liquid-release test with FCM, Section 5.3.6 
+./ContDisc/FCMlrt.out \ TOUGH2 output file for liquid-release test with FCM, Section 5.3.6, Figures 7, 9 
+./ContDisc/FCMlrti \ iTOUGH2 input file for liquid-release test with FCM, Section 5.3.6 
+./ContDisc/FCMlrti.out \ iTOUGH2 output file for liquid-release test with FCM, Section 5.3.6, Figure 8 
+./ContDisc/FCMpred \ TOUGH2 input file for prediction run with FCM, Section 5.3.7 
+./ContDisc/FCMpredi \ iTOUGH2 input file for prediction run with FCM, Section 5.3.7 
+./ContDisc/FCMpredi.tec \ iTOUGH2 output file for prediction run with FCM, Section 5.3.7, Figure 10 
+./ContDisc/FCMseep \ TOUGH2 input file for seepage threshold determination with FCM, Section 5.3.7
+
+ 
+ Attachment II-5 
+./ContDisc/FCMseepi \ iTOUGH2 input file for seepage threshold determination with FCM, Section 5.3.7 
+./ContDisc/FCMseepi.out \ iTOUGH2 output file for seepage threshold determination with FCM, Section 5.3.7, Figure 11 
+./ContDisc/FCMseepMC \ TOUGH2 input file for seepage threshold determination with FCM, Section 5.3.7 
+./ContDisc/FCMseepMCi \ iTOUGH2 input file for seepage threshold determination with FCM, Section 5.3.7 
+./ContDisc/FCMseepMCi.tec \ iTOUGH2 output file for seepage threshold determination with FCM, Section 5.3.7, Figure 11 
+./ContDisc/sh.DFNM \ Unix shell script file for all DFNM runs 
+./ContDisc/sh.FCM \ Unix shell script file for all FCM runs 
+\ 
+./Heterogeneity/N2xyk_2-dpost.prn \ Input data for gamv2-4.par, all post-excavation data, Section 6.2.3 
+./Heterogeneity/N2xyk_2-dp_tr.prn \ Input data for gamv2-8.par, truncated post-excavation data, Section 6.2.3, Table 5, Figure 16 
+./Heterogeneity/gamv2-4.par \ Input parameter file for gamv2, all post-excavation data, Section 6.2.3 
+./Heterogeneity/gamv2-4.var \ Output variogram from gamv2, all post-excavation data, Section 6.2.3, Figure 15 
+./Heterogeneity/gamv2-8.par \ Input parameter file for gamv2, truncated post-excavation data, Section 6.2.3 
+./Heterogeneity/gamv2-8.var \ Output variogram from gamv2, truncated post-excavation data, Section 6.2.3, Figures 15, 17 
+./Heterogeneity/condUM442_post.dat \ Conditioning points for test UM 4.42, Section 6.3.2 
+./Heterogeneity/UM442_3.par \ Input parameter file for gamv2, permeability field for test UM 4.42, Section 6.3.2 
+./Heterogeneity/UM442_3.dat \ Output permeability field for test UM 4.42, Section 6.3.2 
+./Heterogeneity/condUM564_post.dat \ Conditioning points for test UM 5.64, Section 6.5 
+./Heterogeneity/UM564_1.par \ Input parameter file for gamv2, permeability field for test UM 5.64, Section 6.5 
+./Heterogeneity/UM564_1.dat \ Output permeability field for test UM 5.64, Section 6.5 
+./Heterogeneity/conditioning.dat \ Conditioning points for FCM model, Section 5.3.5 
+./Heterogeneity/fract2dc.par \ Input parameter file for gamv2, FCM, Section 5.3.5 
+./Heterogeneity/fract2dc.dat \ Output permeability field, FCM, Section 5.3.5 
+./Heterogeneity/fract0.par \ Input parameter file for gamv2, 0-degree fracture set, Section 5.3.2 
+./Heterogeneity/fract0.dat \ Output permeability field, 0-degree fracture set, Section 5.3.2 
+./Heterogeneity/fract45.par \ Input parameter file for gamv2, 45-degree fracture set, Section 5.3.2 
+./Heterogeneity/fract45.dat \ Output permeability field, 45-degree fracture set, Section 5.3.2 
+./Heterogeneity/fract90.par \ Input parameter file for gamv2, 90-degree fracture set, Section 5.3.2 
+./Heterogeneity/fract90.dat \ Output permeability field, 90-degree fracture set, Section 5.3.2 
+./Heterogeneity/fractm45.par \ Input parameter file for gamv2, -45-degree fracture set, Section 5.3.2 
+./Heterogeneity/fractm45.dat \ Output permeability field, -45-degree fracture set, Section 5.3.2 
+./Heterogeneity/sh.2dcont \ Unix shell script file used to generate permeability field for FCM 
+./Heterogeneity/sh.2dfract \ Unix shell script file used to generate permeability field for DFNM 
+./Heterogeneity/var \ Dummy TOUGH2 input file used for variogram model matching, Section 6.3.2 
+./Heterogeneity/vari \ iTOUGH2 input file used for variogram model matching, Section 6.3.2 
+./Heterogeneity/vari.out \ iTOUGH2 input file used for variogram model matching, Section 6.3.2, Figure 17 
+\ 
+./LRT/ThresGS_het-2d \ TOUGH2 input file for 2d-heterogeneous grid search of seepage threshold, Section 6.6 
+./LRT/ThresGS_het-2di \ iTOUGH2 input file for 2d-heterogeneous grid search of seepage threshold, Section 6.6 
+./LRT/ThresGS_het-2di.out \ iTOUGH2 output file for 2d-het. grid search of seepage threshold, Section 6.6, Figure 25 
+./LRT/ThresGS_hom-2d \ TOUGH2 input file for 2d-homogeneous grid search of seepage threshold, Section 6.6 
+./LRT/ThresGS_hom-2di \ iTOUGH2 input file for 2d-homogeneous grid search of seepage threshold, Section 6.6
+
+ 
+ Attachment II-6 
+./LRT/ThresGS_hom-2di.out \ iTOUGH2 output file for 2d-hom. grid search of seepage threshold, Section 6.6, Figure 24 
+./LRT/ThresGS_hom-3d \ TOUGH2 input file for 3d-homogeneous grid search of seepage threshold, Section 6.6 
+./LRT/ThresGS_hom-3di \ iTOUGH2 input file for 3d-homogeneous grid search of seepage threshold, Section 6.6 
+./LRT/ThresGS_hom-3di.out \ iTOUGH2 output file for 3d-hom. grid search of seepage threshold, Section 6.6, Figure 26 
+./LRT/ThresGS_het-3d \ TOUGH2 input file for 3d-heterogeneous grid search of seepage threshold, Section 6.6 
+./LRT/ThresGS_het-3di \ iTOUGH2 input file for 3d-heterogeneous grid search of seepage threshold, Section 6.6 
+./LRT/ThresGS_het-3di.out \ iTOUGH2 output file for 3d-het. grid search of seepage threshold, Section 6.6, Figure 27 
+./LRT/Thres_het-2d \ TOUGH2 input file for 2d-heterogenous MC simulations of threshold, Section 6.6 
+./LRT/Thres_het-2di \ iTOUGH2 input file for 2d-heterogenous MC simulations of threshold, Section 6.6 
+./LRT/Thres_het-2di.out \ iTOUGH2 output file for 2d-heterogenous MC simulations of threshold, Section 6.6, Figure 25 
+./LRT/Thres_hom-2d \ TOUGH2 input file for 2d-homogeneous MC simulations of threshold, Section 6.6 
+./LRT/Thres_hom-2di \ iTOUGH2 input file for 2d-homogeneous MC simulations of threshold, Section 6.6 
+./LRT/Thres_hom-2di.out \ iTOUGH2 output file for 2d-homogeneous MC simulations of threshold, Section 6.6, Figure 24 
+./LRT/UM442_0-2d \ TOUGH2 input file for 2d-homogeneous liquid-release test UM 4.42, Section 6.4 
+./LRT/UM442_0-2di \ iTOUGH2 input file for 2d-homogeneous liquid-release test UM 4.42, Section 6.4 
+./LRT/UM442_0-2di.out \ iTOUGH2 output file for 2d-homogeneous liquid-release test UM 4.42, Section 6.4, Tables 9, 10 
+./LRT/UM442_0-3d \ TOUGH2 input file for 3d-homogeneous liquid-release test UM 4.42, Section 6.4 
+./LRT/UM442_0-3di \ iTOUGH2 input file for 3d-homogeneous liquid-release test UM 4.42, Section 6.4 
+./LRT/UM442_0-3di.out \ iTOUGH2 output file for 3d-homogeneous liquid-release test UM 4.42, Section 6.4, Tables 9, 10 
+./LRT/UM442_3ss-2d \ TOUGH2 input file for 2d-heterogeneous steady-state run, Section 6.4 
+./LRT/UM442_3-2d.inc \ Initial condition file for 2d-heterogeneous runs (output from UM442_3ss-2d), Section 6.4 
+./LRT/UM442_3-2d \ TOUGH2 input file for 2d-heterogeneous liquid-release test UM 4.42, Section 6.4 
+./LRT/UM442_3-2di \ iTOUGH2 input file for 2d-heterogeneous liquid-release test UM 4.42, Section 6.4 
+./LRT/UM442_3-2di.out \ iTOUGH2 output file for 2d-het. liquid-release test UM 4.42, Section 6.4, Tables 9, 10 
+./LRT/UM442_3ss-3d \ TOUGH2 input file for 3d-heterogeneous steady-state run, Section 6.4 
+./LRT/UM442_3-3d.inc \ Initial condition file for 3d-heterogeneous runs (output from UM442_3ss-2d), Section 6.4 
+./LRT/UM442_3-3d \ TOUGH2 input file for 3d-heterogeneous liquid-release test UM 4.42, Section 6.4 
+./LRT/UM442_3-3di \ iTOUGH2 input file for 3d-heterogeneous liquid-release test UM 4.42, Section 6.4 
+./LRT/UM442_3-3di.out \ iTOUGH2 output file for 3d-het. liquid-release test UM 4.42, Section 6.4, Tables 9, 10 
+./LRT/UM564_0-2d \ TOUGH2 input file for 2d-homogeneous validation run, Section 6.5 
+./LRT/UM564_0-2di \ iTOUGH2 input file for 2d-homogeneous validation run, Section 6.5 
+./LRT/UM564_0-2di.out \ iTOUGH2 output file for 2d-homogeneous validation run, Section 6.5, Figure 20 
+./LRT/UM564_0-2di.tec \ iTOUGH2 output file for 2d-homogeneous validation run, Section 6.5, Figure 20 
+./LRT/UM564_1-2d \ TOUGH2 input file for 2d-heterogeneous validation run, Section 6.5 
+./LRT/UM564_1-2d.inc \ Initial condition file for 2d-heterogeneous validation run, Section 6.5 
+./LRT/UM564_1-2di \ iTOUGH2 input file for 2d-heterogeneous validation run, Section 6.5 
+./LRT/UM564_1-2di.out \ iTOUGH2 output file for 2d-heterogeneous validation run, Section 6.5, Figure 21 
+./LRT/UM564_1-2di.tec \ iTOUGH2 output file for 2d-heterogeneous validation run, Section 6.5, Figure 21 
+./LRT/UM564_0-3d.inc \ Initial condition file for 3d-homogeneous validation run, Section 6.5 
+./LRT/UM564_0-3d \ TOUGH2 input file for 3d-homogeneous validation run, Section 6.5 
+./LRT/UM564_0-3di \ iTOUGH2 input file for 3d-homogeneous validation run, Section 6.5 
+./LRT/UM564_0-3di.out \ iTOUGH2 output file for 3d-homogeneous validation run, Section 6.5, Figure 22
+
+ 
+ Attachment II-7 
+./LRT/UM564_0-3di.tec \ iTOUGH2 output file for 3d-homogeneous validation run, Section 6.5, Figure 22 
+./LRT/UM564_1-3dss \ TOUGH2 input file for 3d-heterogeneous steady-state run, Section 6.5 
+./LRT/UM564_1-3d.inc \ Initial condition file for 3d-heterogeneous validation run, Section 6.5 
+./LRT/UM564_1-3d \ TOUGH2 input file for 3d-heterogeneous validation run, Section 6.5 
+./LRT/UM564_1-3di \ iTOUGH2 input file for 3d-heterogeneous validation run, Section 6.5 
+./LRT/UM564_1-3di.out \ iTOUGH2 output file for 3d-heterogeneous validation run, Section 6.5, Figure 23 
+./LRT/UM564_1-3di.tec \ iTOUGH2 output file for 3d-heterogeneous validation run, Section 6.5, Figure 23 
+./LRT/sh.LRT2d \ Unix shell script file used for running 2d liquid-release test calibrations 
+./LRT/sh.LRT3d \ Unix shell script file used for running 3d liquid-release test calibrations 
+./LRT/sh.THR2d \ Unix shell script file used for running 2d MC simulations of seepage threshold 
+./LRT/sh.THRGS2d \ Unix shell script file used for running 2d grid searches of seepage threshold 
+./LRT/sh.THRGS3d \ Unix shell script file used for running 3d grid searches of seepage threshold 
+./LRT/sh.VAL2d \ Unix shell script used for running 2d validation cases 
+./LRT/sh.VAL3d \ Unix shell script used for running 3d validation cases 
+\ 
+./Meshgeneration/MESH2d \ 2d mesh file for FCM 
+./Meshgeneration/MESH2dSS \ 2d mesh file for FCM, for steady-state runs 
+./Meshgeneration/MESH2dUM442_0 \ 2d mesh file for test UM 4.42, homogeneous 
+./Meshgeneration/MESH2dUM442_0SS \ 2d mesh file for test UM 4.42, homogeneous, for steady-state runs 
+./Meshgeneration/MESH2dUM442_3 \ 2d mesh file for test UM 4.42, heterogeneous 
+./Meshgeneration/MESH2dUM442_3SS \ 2d mesh file for test UM 4.42, heterogeneous, for steady-state runs 
+./Meshgeneration/MESH2dUM564_0 \ 2d mesh file for test UM 5.64, homogeneous 
+./Meshgeneration/MESH2dUM564_0SS \ 2d mesh file for test UM 5.64, homogeneous, for steady-state runs 
+./Meshgeneration/MESH2dUM564_1 \ 2d mesh file for test UM 5.64, heterogeneous 
+./Meshgeneration/MESH2dUM564_1SS \ 2d mesh file for test UM 5.64, heterogeneous, for steady-state runs 
+./Meshgeneration/MESH2dfract \ 2d mesh file for DFNM 
+./Meshgeneration/MESH2dfractAK \ 2d mesh file for DFNM, for air injection simulations 
+./Meshgeneration/MESH2dfractNoNiche \ 2d mesh file for DFNM, for run DFNMperm 
+./Meshgeneration/MESH2dfractSS \ 2d mesh file for DFNM, for steady-state runs 
+./Meshgeneration/MESH3dUM442_0 \ 3d mesh file for test UM 4.42, homogeneous 
+./Meshgeneration/MESH3dUM442_0SS \ 3d mesh file for test UM 4.42, homogeneous, for steady-state runs 
+./Meshgeneration/MESH3dUM564_0 \ 3d mesh file for test UM 5.64, homogeneous 
+./Meshgeneration/MESH3dUM564_0SS \ 3d mesh file for test UM 5.64, homogeneous, for steady-state runs 
+./Meshgeneration/mesh2d \ TOUGH2 input file to generate basic 2d mesh for FCM 
+./Meshgeneration/mesh2dfract \ TOUGH2 input file to generate basic 2d mesh for DFNM 
+./Meshgeneration/mesh2dlrt \ TOUGH2 input file to generate basic 2d mesh for calibration/validation 
+./Meshgeneration/mesh3d \ TOUGH2 input file to generate basic 3d mesh 
+./Meshgeneration/onestep \ TOUGH2 input file to run a single time step 
+./Meshgeneration/sh.mesh2d \ Unix shell script file used to generate 2d-mesh for FCM 
+./Meshgeneration/sh.mesh2dfract \ Unix shell script file used to generate 2d-mesh for DFNM 
+./Meshgeneration/sh.mesh2dlrt \ Unix shell script file used to generate 2d-mesh for calibration/validation 
+./Meshgeneration/sh.mesh3d \ Unix shell script file used to generate 3d-mesh for calibration/validation
+
+ 
+ Attachment II-8 
+./Meshgeneration/sh.onestep \ Unix shell script file used to run a single time step 
+\ 
+| compress > U0080.tar.Z \ Compressed tar file containg all files listed above
+

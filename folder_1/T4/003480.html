@@ -1,0 +1,271 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.5.1556">
+    <meta name="RSISYM" content="False">
+    <meta name="TEMPLATEBASE" content="DynHTML">
+    <meta name="LASTUPDATED" content="03/06/07 15:49:44">
+    <title>Combining Morphological Operations</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" />
+  </head>
+
+  <body text="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellpadding="0" cellspacing="0" width="98%" bgcolor="#E2E2E2" valign="bottom" >
+  <tr> 
+    <td width="10%">
+<a href="Thinning_Image_Objects.html"><img src="images/prev.gif" border="0" alt="Previous"></a>    </td>
+    <td width="80%" align="center">
+<font size=-1><i>Image Processing </i>: <a href="Extracting_and_Analyzing_Shapes.html">Extracting and Analyzing Shapes</a></font>    </td>
+    <td width="10%" align="right">
+<a href="Analyzing_Image_Shapes.html"><img src="images/next.gif" border="0" alt="Next"></a>    </td>
+  </tr>
+</table>
+
+<a name="wp1034187"> </a><h2 class="pHeading1">
+Combining Morphological Operations
+</h2>  
+
+<a name="wp1051511"> </a><p class="pBody">
+The following example uses a variety of morphological operations to remove bridges from a satellite image of New York waterways. Complete the following steps for a detailed description of the process.
+</p>  
+
+<a name="wp1051512"> </a><br />
+<table border="0" bgcolor="#E2E2E2" cellpadding="5" width="98%">
+   <tr><td><b>Example Code</b><br />
+   See <code class="cCode"><a href="../../examples/doc/image/removebridges.pro">removebridges.pro </a></code>in the <code class="cCode">examples/doc/image</code> subdirectory of the IDL installation directory for code that duplicates this example.</td></tr>
+</table>
+<br />  
+
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+
+
+<a name="wp1036326"> </a><div class="pSmartList1"><li>Prepare the display device and load a color table:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+DEVICE, DECOMPOSED = 0, RETAIN = 2  
+LOADCT, 0  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1036324"> </a><div class="pSmartList1"><li>Specify the known dimensions and use <a href="READ_BINARY.html">READ_BINARY</a> to load the image:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+xsize = 768   
+ysize = 512   
+img = READ_BINARY(FILEPATH(&#39;nyny.dat&#39;, $  
+&#160;&#160;&#160;SUBDIRECTORY = [&#39;examples&#39;, &#39;data&#39;]), $  
+    DATA_DIMS = [xsize, ysize])  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034199"> </a><div class="pSmartList1"><li>Increase the image&#39;s contrast and display the image:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+img = BYTSCL(img)  
+WINDOW, 1, TITLE = &#39;Original Image&#39;  
+TVSCL, img  
+</pre>
+<a name="wp1052391"> </a><p class="pBodyRelative">
+</P><P class="Ignore">&nbsp;</P>
+<div>
+<P class="Ignore"><I><FONT SIZE=-1><CENTER>
+<a name="wp1036352"> </a>Figure 9-24: Original Image  
+</CENTER></FONT></I></P>
+<table border="0" cellpadding="5" id="wp1036352table1036348">
+  <caption><a name="wp1036352"> </a>Figure 9-24: Original Image  
+</caption>
+  <tr align="left">    <td><a name="wp1036350"> </a><div class="pCellBody">
+</div>
+<div align="center"><img src="images/imgmorph24.gif"  height="264"  width="359" id="wp1036356" border="0" hspace="0" vspace="0"/></div><div class="pCellBody">
+
+</div>  
+
+</td>
+</tr>
+</table>
+</div>
+
+  
+
+
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034201"> </a><div class="pSmartList1"><li>Prepare to threshold the image, using an intensity histogram as a guide for determining the intensity value:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+WINDOW, 4, XSIZE = 400, YSIZE = 300  
+PLOT, HISTOGRAM(img)  
+</pre>
+</ol></div>
+<a name="wp1054663"> </a><p class="pBody">
+
+</p>  
+
+
+<a name="wp1052491"> </a><br />
+<table border="0" bgcolor="#E2E2E2" cellpadding="5" width="98%">
+   <tr><td><b>Note</b><br />
+   Using an intensity histogram as a guide for determining threshold values is described in the section, <a href="Determining_Intensity_Values_for_Threshold_and_Stretch.html">Determining Intensity Values for Threshold and Stretch</a>.</td></tr>
+</table>
+<br />  
+
+
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+
+
+<a name="wp1042192"> </a><div class="pSmartList1"><li>Create a mask of the darker pixels that have values less than 70:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+maskImg = img LT 70  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034204"> </a><div class="pSmartList1"><li>Define and create a small square structuring element, which has a shape similar to the bridges which will be masked out: </li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+side = 3  
+strucElem = DIST(side) LE side  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034208"> </a><div class="pSmartList1"><li>Remove details in the binary mask&#39;s shape by applying the opening operation:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+maskImg = MORPH_OPEN(maskImg, strucElem)  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034210"> </a><div class="pSmartList1"><li>Fuse gaps in the mask&#39;s shape by applying the closing operation and display the image:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+maskImg = MORPH_CLOSE(maskImg, strucElem)  
+WINDOW, 1, title=&#39;Mask After Opening and Closing&#39;  
+TVSCL, maskImg  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034222"> </a><p class="pIndentedRelative">This results in the following figure:</P><P class="Ignore">&nbsp;</P>
+<div>
+<P class="Ignore"><I><FONT SIZE=-1><CENTER>
+<a name="wp1034221"> </a>Figure 9-25: Image Mask After Opening and Closing Operations  
+</CENTER></FONT></I></P>
+<table border="0" cellpadding="5" id="wp1034221table1034214">
+  <caption><a name="wp1034221"> </a>Figure 9-25: Image Mask After Opening and Closing Operations  
+</caption>
+  <tr align="left">    <td><a name="wp1034219"> </a><div class="pCellBody">
+</div>
+<div align="center"><img src="images/imgmorph25.gif"  height="184"  width="252" id="wp1034217" border="0" hspace="0" vspace="0"/></div><div class="pCellBody">
+
+</div>  
+
+</td>
+</tr>
+</table>
+</div>
+    
+
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034223"> </a><div class="pSmartList1"><li>Prepare to remove all but the largest region in the mask by labeling the regions:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+labelImg = LABEL_REGION(maskImg)  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034225"> </a><div class="pSmartList1"><li>Discard the black background by keeping only the white areas of the previous figure: </li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+regions = labelImg[WHERE(labelImg NE 0)]  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034227"> </a><div class="pSmartList1"><li>Define <i>mainRegion</i> as the area where the population of the <i>labelImg</i> region matches the region with the largest population:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+mainRegion = WHERE(HISTOGRAM(labelImg) EQ $  
+&#160;&#160;&#160;MAX(HISTOGRAM(regions)))  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034230"> </a><div class="pSmartList1"><li>Define <i>maskImg</i> as the area of <i>labelImg</i> equal to the largest region of <i>mainRegion</i>, having an index number of 0 and display the image:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+maskImg = labelImg EQ mainRegion[0]  
+Window, 3, TITLE = &#39;Final Masked Image&#39;  
+TVSCL, maskImg  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034234"> </a><p class="pIndentedRelative">This results in a mask of the largest region, the waterways, as shown in the following figure. </P><P class="Ignore">&nbsp;</P>
+<div>
+<P class="Ignore"><I><FONT SIZE=-1><CENTER>
+<a name="wp1034242"> </a>Figure 9-26: Final Image Mask  
+</CENTER></FONT></I></P>
+<table border="0" cellpadding="5" id="wp1034242table1034235">
+  <caption><a name="wp1034242"> </a>Figure 9-26: Final Image Mask  
+</caption>
+  <tr align="left">    <td><a name="wp1034240"> </a><div class="pCellBody">
+</div>
+<div align="center"><img src="images/imgmorph26.gif"  height="184"  width="252" id="wp1034238" border="0" hspace="0" vspace="0"/></div><div class="pCellBody">
+
+</div>  
+
+</td>
+</tr>
+</table>
+</div>
+    
+
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034243"> </a><div class="pSmartList1"><li>Remove noise and smooth contours in the original image:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+newImg = MORPH_OPEN(img, strucElem, /GRAY)  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034245"> </a><div class="pSmartList1"><li>Replace the new image with the original image, where it's not masked:</li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+newImg[WHERE(maskImg EQ 0)] = img[WHERE(maskImg EQ 0)]  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034247"> </a><div class="pSmartList1"><li>View the results using FLICK to alternate the display between the original image and the new image containing the masked areas: </li></div>  
+
+<div class="pPreformatted"><pre class="pPreformatted">
+WINDOW, 0, XSIZE = xsize, YSIZE = ysize  
+FLICK, img, newImg  
+</pre>
+</div>
+<P class="Ignore">&nbsp;</P>
+<a name="wp1034250"> </a><p class="pIndentedRelative">Hit any key to stop the image from flickering. Details of the two images are shown in the following figure.</P><P class="Ignore">&nbsp;</P>
+<div>
+<P class="Ignore"><I><FONT SIZE=-1><CENTER>
+<a name="wp1034258"> </a>Figure 9-27: Details of Original (left) and Resulting Image of New York (right)  
+</CENTER></FONT></I></P>
+<table border="0" cellpadding="5" id="wp1034258table1034251">
+  <caption><a name="wp1034258"> </a>Figure 9-27: Details of Original (left) and Resulting Image of New York (right)  
+</caption>
+  <tr align="left">    <td><a name="wp1034256"> </a><div class="pCellBody">
+</div>
+<div align="center"><img src="images/imgmorph27.gif" id="wp1034254" border="0" hspace="0" vspace="0"/></div><div class="pCellBody">
+
+</div>  
+
+</td>
+</tr>
+</table>
+</div>
+    
+
+</ol></div>
+
+<P></P>
+<P></P>
+<P><FONT COLOR="gray" SIZE="-3">&nbsp;&nbsp;IDL Online Help (March 06, 2007)</FONT></P>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<html lang="es">
+<head>
+<title>Ayuda para FactFinder</title>
+
+<link rel="stylesheet" type="text/css" href="css/helpstyle.css" />
+
+<script language="JavaScript" SRC="/javascript/updateMetadataBrowser.js"></script>
+<script language="JavaScript">
+// fix for IE4+ focus problem
+if (window.focus) self.focus(); 
+</script>
+
+</head>
+
+<body onload="self.focus()">
+<div style="padding-top: 18px; padding-bottom: 20px; background-color: #ffffff;">
+<div align="center" style="background-color: #BECCD7;">
+<table border="0" cellspacing="0" cellpadding="1">	
+	<tr bgcolor="#FFFFFF">
+		<td><img src="1px.gif" width="4" height="1" alt="" /></td>
+		<td class="navsel">Ayuda para FactFinder</td>
+		<td><img src="1px.gif" width="4" height="1" alt="" /></td>
+		<td class="nav"><a href='javascript:updateMetadataBrowser("all","program","","_lang=es")' class="n">Informaci&oacute;n sobre Datos Censales</a></td>
+		<td><img src="1px.gif" width="4" height="1" alt="" /></td>
+		<td class="nav"><a href="/home/es/epss/glossary_a.html" class="n">Glosario</a></td>
+		<td><img src="1px.gif" width="4" height="1" alt="" /></td>
+	</tr>
+</table>
+</div>	
+</div>
+
+<!-- nav buttons -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8f8f8">
+  <tr>
+	<td bgcolor="#ffffff">
+  	<table class="methodtabs" cellspacing="0" cellpadding="0">
+	  <tr valign="bottom">
+	  	<td><span>Tema Actual</span></td>
+	  	<td><a href="toc.html">Contenido</a></td>
+	  </tr>
+	 </table>	
+	</td>
+  </tr>  
+
+  <tr>
+  	<td height="3" bgcolor="#366EA7"><img src="img/1px.gif" width="1" height="3" alt="" /></td>
+  </tr>
+</table>
+
+<br />
+
+<DIV ALIGN="center" CLASS="default"><B>Cómo Bajar una Tabla Rápida
+</B></DIV>
+<BR>
+<TABLE WIDTH="100%" BORDER=0>
+	<TR VALIGN=TOP>
+		<TD WIDTH=15><IMG SRC="1px.gif" WIDTH=15 HEIGHT=1 ALT=""></TD>
+
+<TD>
+Hay varios  formatos de archivos disponibles para bajar las Tabla Rápida: Tres formatos listos para presentación y dos formatos compatibles con bases de datos <BR>
+<BR>
+El <B>formato</B> <B>de</B> <B>presentación </B>conserva el formato de tabla, el título, nota titular y nota(s) al calce exactamente como se muestran en la pantalla. <BR>
+<UL>
+<LI><B>Delimitado por comas (.csv):</B> las celdas de datos están separadas por comas. Este formato es compatible con programas de hoja de cálculo como Microsoft Excel. 
+<LI><B>Delimitado por tabulaciones (.lst):</B> las celdas de datos están separadas por tabulaciones.<B>
+<LI> Formato Rich text file - </B>este es el formato compatible con muchos programas de procesamiento de palabras Si su explorador reconoce el formato .rtf  abrirá el archivo automáticamente en la misma ventana. Utilice <B>Archivo | Salvar Como </B>del menú  para guardar el archivo en su computadora.
+<LI><B>Microsoft Excel </B>(.xls) - este es el formato de archivo compatible con Microsoft Excel  y muchos otros programas de hojas de cálculos. Fíjese que este formato no está disponible (la opción está sombreada) si la combinación de tablas y selecciones geográficas suman a más de 25 tablas.
+</UL>
+<B>
+</B>El límite de la selección de Tabla Rápida es 10; el límite de la selección geográfica es 7000. Si selecciona 10 tablas y 100 geografías tendrá 1000 tablas individuales. Si  hay más de 25 tablas individuales, aparece la opción <B>muestre sólo las tablas y geografías en la pantalla. </B>Si marca esta opción, sólo se bajarán las tablas y geografías que aparecen en la pantalla. Esta opción sólo aplica a los formatos de presentación listados anteriormente.<B><BR>
+</B><BR>
+Los <B>formatos de bases de datos</B>, <I>sólo</I> se bajan filas de datos. El formato de tabla, el título, nota titular o nota(s) al calce se <I>excluyen </I>al bajar el archivo.   Utilice estos formatos si va a bajar los datos a un programa de base de datos. <BR>
+<BR>
+<UL>
+<LI><B>Microsoft Excel </B>(.xls) - este es el formato de archivo compatible con programas de hojas de cálculos,
+<LI><B>Base de datos delimitados por comas </B>(.txt )<B>- </B>las celdas de datos están separadas por comas. 
+</UL>
+
+Los archivos bajados compatibles con bases de datos se comprimen en un solo archivo titulado <B>output.zip</B>.  Este archivo comprimido contiene: <BR>
+<BR>
+<UL>
+<LI>Un  o más <B>archivos de datos </B>- El formato del nombre y el número de estos archivos<B> </B>variará por  conjunto de dato y/o por el número de tablas que haya seleccionado.
+<LI>Un <B>archivo de identificador geográfico</B> - este archivo le permite enlazar múltiples archivos de datos. 
+<LI>Un <B>archivo gct_readme.txt - </B>este archivo explica el contenido de los archivos bajados, cómo enlazar los archivos de datos, anomalías específicas de los conjuntos de datos y la localización de la documentación técnica específica a los conjuntos de datos. 
+<LI>Un <B>archivo readme.txt para un conjunto de datos específico - </B>este archivo explica por qué puede que no haya datos para algunas selecciones geográficas.
+</UL>
+
+Puede incluir el nombre descriptivo largo marcando el encasillado de cotejo <B>incluya nombres de elementos de datos descriptivos</B>. Cada elemento de datos para cada tabla tiene un nombre corto en clave y un nombre descriptivo largo. Por ejemplo:  <BR>
+<BR>
+<UL>
+<LI>Nombre corto en clave: <B>P001001</B> donde P001 es el número de tabla y 001 es el número de elementos de datos en esa tabla.
+<LI>Nombre descriptivo largo: Población Total: Total
+</UL>
+
+<BR>
+<B>CONSEJOS </B>para usar el formato <B>compatible con bases de datos</B>:<B><BR>
+</B><BR>
+<UL>
+<LI>Puede guardar <B>output.zip</B> con ese nombre o con otro de su creación. 
+<LI>Asegúrese de consultar el archivo <B>readme.txt</B> para explicación de todos los tipos de archivos que ha bajado y como enlazarlos
+
+<BR>&nbsp;
+</TD>
+
+		<TD WIDTH=15><IMG SRC="1px.gif" WIDTH=15 HEIGHT=1 ALT=""></TD>
+	</TR>
+</TABLE>
+
+<MAP NAME="tabs">
+<AREA ALT="Table of Contents" COORDS="115,4,232,22" HREF="toc.html">
+<AREA ALT="Current Topic" COORDS="17,2,110,25" NOHREF>
+</MAP>
+
+</BODY>
+</HTML>
+

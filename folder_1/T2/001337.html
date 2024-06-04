@@ -1,0 +1,569 @@
+<html>
+<head>
+<title>
+Of Pixels and Palates: Can Geospatial Technologies Help Produce a Better Wine? 
+</title>
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#ff0000"
+      vlink="#0000ff" alink="#d00000">
+<i>Proceedings, 1st Int'l Conf. Geospatial Information in Agriculture & Forestry</i><br>
+Sponsored by ERIM International<br>
+Lake Buena Vista FL, 1-3 June 1998<br>
+<p>
+<h3>
+OF PIXELS AND PALATES: CAN GEOSPATIAL TECHNOLOGIES HELP PRODUCE A BETTER WINE? 
+</h3>
+<p>
+L. Johnson (NASA/ARC, CSU Monterey Bay)<br>
+B. Lobitz (NASA/ARC, JCWS Inc.)<br>
+D. Bosch, S. Wiechers, D. Williams (Robert Mondavi Winery)<br>
+P. Skinner (Terra Spase)<br>
+<p>
+<b>
+ABSTRACT
+</b>
+<p>
+NASA Ames Research Center partnered with the Robert Mondavi Winery  and Terra Spase Vineyard Consulting to evaluate the use of geospatial technology in a  "precision agriculture" context.  High-spatial resolution (2 m) multispectral images were acquired at mid-season 1997 by an airborne ADAR-5500 digital camera system.  An image frame including a 3 ha study block of chardonnay grapes was converted per-pixel to a Vegetation Index to improve sensitivity to grapevine canopy density.  The Index pixels were then stratified and color-coded for visual discrimination.  A georegistered output image was generated in TIFF-World format for input to (ESRI) ARC/View and (Trimble) Aspen software on the grower's laptop computer.  Low, moderate and high vigor "segments" within the image were selected, flagged and field-sampled for canopy density (light interception, pruning weights), vine physiology (leaf water potential, chlorophyll status), and fruit characteristics (maturity, potential quality).  The laptop image was combined with on-board GPS to physically subdivide the block (with flagging tape) by vigor for harvest.  Grapes from each field segment were fermented separately and the resulting wines were formally evaluated for difference and quality.  Field measurements of canopy density agreed well with image patterns in Vegetation Index, and vigor was in turn related to key fruit characteristics.  With some exception, wines from the different segments were judged to be unique with respect to one another.  In addition, wines from the low- and moderate-vigor segments were judged to be of  "Reserve" (highest quality and value), marking the first time that such wines had been produced from this particular block.
+<p>
+<b>
+MAJOR HEADINGS
+</b>
+<p>
+<a href="#introduction">
+1.0  INTRODUCTION</a><br>
+<a href="#methods">
+2.0 METHODS</a><br>
+<a href="#results">
+3.0 RESULTS</a><br>
+<a href="#conclusions">
+4.0 CONCLUSIONS</a><br>
+<a href="#ack">
+5.0 ACKNOWLEDGMENT</a><br>
+<a href="#references">
+6.0 REFERENCES</a> 
+<p>
+<a name="introduction"></a>
+<b>
+1.0  INTRODUCTION
+</b>
+<p>
+	Winegrowers have known for centuries that grapes harvested from different areas in the vineyard can produce wines with different flavors.  Even when such biological factors as variety, clone and rootstock are identical, grape quality, maturity and resulting wines are influenced by subtle differences in physical characteristics of the vineyard, to include soil, microclimate, slope, exposure, soil water holding capacity, and drainage.
+<p>
+	In certain regions of France, grapes have been grown for more than 1700 years.  Vintners in these regions have had abundant time to understand how vintage varies throughout the vineyard, and generally, field boundaries have been established to minimize within-field differences in growing conditions.  By contrast, winegrowing in California's Napa Valley began in earnest only in the mid-1960's and later still in the nearby Carneros region, the subject of the current study.  The Valley is characterized by relatively large fields ("blocks") that only approximately encompass constant physical conditions.  Growers tend to treat the entire block as a single "minimum management unit" both for within-season cultivation and for harvest.
+<p>
+	During the 1997 growing season, Mondavi Winery partnered with NASA/Ames Research Center and Terra Spase Vineyard Consulting to explore the application of geospatial technologies to the harvest process.  The primary goal of the Canopy Remote-sensing for Uniformly Segmented Harvest (CRUSH) project was to use airborne multispectral imagery to subdivide and harvest a test block by "vigor," ferment grapes from each vigor level separately and evaluate the resulting wines.  Field measurements were made of vine and fruit variables to validate the remotely sensed data and substantiate the wine evaluations.
+<p>
+	Our expectation was that the additional  expenditure of labor and resources required for field segmentation might be rewarded in two ways.  First, winemakers blend wines from different lots to create "complexity" in the final product.  Therefore, a greater number of distinct wine lots will provide the winemaker with increased latitude in blending options.  Second, we speculated that increased uniformity of the wine lot might increase quality.  Either of these outcomes would effectively increase crop value.  
+<p>
+	CRUSH project methods were largely based on previous collaboration between NASA and Mondavi (1993-95) to apply remote sensing to management of phylloxera infestation (Johnson et al., 1996; Baldy et al., 1996; Lobitz et al., 1997).
+<p>
+<a name="methods"></a>
+<b>
+2.0  METHODS
+</b>
+<p>
+2.1  STUDY SITE
+<p>
+	A 3 ha block of chardonnay was selected as the primary study site.  The block was part of Mondavi's Carneros vineyard, located southwest of the city of Napa CA.  The block was planted in 1991 on Haire series (clay-loam) soils.  A multi-wire vertical trellis system was used.  Rows were 2.4 m apart, oriented northeast to southwest; within-row vine spacing was 1.5 m.  The block was clean cultivated (all vegetation removed except grapevines).  Rows contained up to 45 m of relief from southwest (high) to northeast.  The quality of the clone was high but the block has historically produced average to poor wine.
+<p>
+2.2  AIRBORNE IMAGERY
+<p>
+	Almost 200 linear km of flightlines were established over vineyards in California's premiere North Coast winegrowing region (primarily Napa and Sonoma Counties).  Digital photography was acquired on 31 July and 01 August 1997 by Crop Image (Salinas CA) using an ADAR System 5500 (Positive Systems, Whitefish MT).  The CCD-based system recorded 8-bit imagery in the following spectral channels:  blue (450-540 nm), green (520-600 nm), red (610-680 nm) and near-infrared (760-1000 nm).  From flight altitude of 4300 m above ground level, spatial resolution was 2 meters per pixel.  Each image frame was 1000 x 1500 pixels (2 x 3 km).  All images were collected under clear skies within two hours of solar noon.  
+<p>
+	An image frame containing Mondavi's Carneros vineyard and test block was selected for post-processing.  First, a Normalized Difference Vegetation Index (NDVI) [(NIR-red / NIR + red)] was derived for each pixel (Tucker 1979).  Unsupervised classification based on the Iterative Self-Organizing Data Analysis (ISODATA) algorithm (Duda and Hart, 1973) was then used to assign each pixel to one of 12 groups, based on NDVI value.  In a previous study Johnson et al. (1996) reported that this simple approach yielded a reasonably strong relationship (r2=0.76) to vine pruning weights (an indirect measure of canopy density) over two growing seasons.  Each group was assigned a different color on the output "classified NDVI" image to enhance visual interpretation.
+<p>
+	A hardcopy color print of the classified NDVI image was taken to the field in early August 1997 to roughly subdivide the test block into three segments of approximately equal area, representing three levels of density ("vigor"):  high, medium and low.  Seven groups of five consecutive (within-row) vines from throughout the field were selected and flagged:  two groups in the high vigor area, two groups (moderate) and three groups (low).  Subsequent pre-harvest revision of the segment boundaries resulted in the following distribution of sample vine groups:  two (high), one (moderate) and four (low).  Values reported herein are with respect to this revised configuration.
+<p>
+2.3  CANOPY LIGHT TRANSMITTANCE
+<p>
+	A Sunfleck Ceptometer (Decagon Devices, Inc., Pullman WA) was used in the field to estimate the percent of solar irradiance (400-700 nm) transmitted from top-of-canopy to the fruit-zone (FZ) and to mid-canopy leaf zone (LZ) in each sample vine.  This instrument has 80 light sensors placed at one-centimeter intervals along a linear probe.  The probe was exposed to direct sunlight to record ambient insolation (AMB) and inserted into the canopy of the sample vine to record canopy light levels (CAN).  For CAN(FZ) the probe was positioned as close as possible to the trellis fruiting wire, centered between the stakes.  For CAN(LZ) the probe was positioned parallel to and between the first and second catch wires of the trellis, centered between the stakes.  A bubble-level was used to maintain the probe level for all AMB and CAN readings.  All recorded AMB and CAN values were the mean of five replicates taken within 10-15 sec.  A maximum of ten minutes elapsed between AMB and CAN.  Percent canopy transmittance (CT) to FZ and LZ was calculated for each sample vine as:  CT = (CAN / AMB) * 100.  The measurements were made under clear skies on 25-26 August 1997, 10:00 - 11:30 a.m. local time.
+<p>
+2.4  LEAF WATER POTENTIAL
+<p>
+	A pressure bomb (Plant Moisture Stress Instrument Co., Corvallis OR) was used to measure leaf water potential (LWP), which is indicative of water stress, in the sample vines.  A sun-exposed leaf was detached and immediately inserted into the pressure chamber with the petiole protruding.  The chamber was pressurized with CO2 and the amount of pressure required to visibly force sap out through the end of the petiole was recorded.  Higher pressures indicate greater water bonding and greater water stress in the vine.  Vines under chronic water stress generally have smaller leaves and shorter shoots.  LWP measurements were made on the center three vines from each sampling group.  Three leaves were sampled per vine.  Measurements were made under clear skies on 25-26 August 1997 within one hour of solar noon.
+<p>
+2.5  LEAF CHLOROPHYLL
+<p>
+	A SPAD-502 Chlorophyll Meter (Minolta Corp., Ramsey NJ) was used for in-vivo measurement of the ratio of light transmittance through the leaf at 650 nm and 940 nm.  Response of this instrument, which is a self-contained unit including illumination source and detectors, has been shown to be strongly related (r2 = 0.91) to laboratory measurement of chlorophyll concentration in grape leaves (Baldy et al., 1996) and in several other species (Yadava, 1986).  Measurements were made from the inter-vein portions of fully-expanded leaves both in the fruit zone (FZ) and at top-of-canopy (TOC).  Measurements were made under cloudy skies and a manila folder was placed in the approximate solar path to provide further shielding from diffuse illumination.  Each leaf was characterized by the mean of six replicate measurements.  The measurements were made on 20 August 1997.
+<p>
+2.6  FRUIT MEASUREMENTS
+<p>
+	Measurements of Brix (sugar), titratable acidity (TA), pH and malic acid (MA) of fruit were made periodically from early August until harvest.  These measurements were made from juice samples of 150-200 grapes collected from 30-40 vines throughout each of the block segments.  Data reported here were collected on 5 September, 8 September and 10 September 1997 for the moderate, low and high segments respectively (one day pre-harvest in each case).
+<p>
+2.7  HARVEST
+<p>
+	State plane coordinates were recorded along the perimeter of the test block with a  Nav 5000 GPS unit (Magellan Systems, San Dimas CA).  The system used the U.S. Coast Guard beacon to compute positions with sub-meter accuracy.  The resulting data were used as tiepoints to geo-register the classified NDVI image.  This image was converted to TIFF format, with a "world file" for geo-referencing, and these files were then loaded onto a laptop computer with the GPS unit on-board.  Aspen software (Trimble Navigation, Sunnyvale CA) was used to display the current position of the receiver in the test block with respect to the image.  In this way, the test block was physically subdivided for harvest with flagging tape.  
+<p>
+	Harvest occurred 6 September, 9 September and 11 September 1997 for the moderate, low and high vigor segments respectively.  Grapes from each vigor level were allocated to separate wine lots for barrel fermentation.  
+<p>
+2.8  PRUNING WEIGHTS
+<p>
+	After the vines enter dormancy, most of the previous year's growing shoots are typically removed, leaving only two to three buds per shoot for the next year's growth.  In areas of high vigor as much as 95% of the shoot's growth was removed; in very low vigor sites only 50-60%.  Direct measurement of leaf area during the growing season is possible, though time consuming.  Most wineries have found that the pruned brush weight gives a good, albeit retrospective, approximation of overall vine vigor.  The test block was pruned in mid-December 1997 and pruning weights (PW) were recorded for the sample vines.  
+<p>
+2.9  WINE EVALUATION
+<p>
+	In February 1998, a standard ("duo-trio") blind taste-test was performed by a Winery panel to evaluate whether or not there were differences between test block wine lots.  In addition, the winemaker evaluated the overall quality of each lot.
+<p>
+<a name="results"></a>
+<b>
+3.0  RESULTS
+</b>
+<p>
+	The vine measurements are summarized in 
+<a href="#table1">Table 1</a>.  
+The CT measurements, despite having high variance, tended to confirm that the NDVI is responding to canopy density.  That is, there was decreased transmittance through the canopy in vines associated with greater NDVI.  PW also agreed with NDVI, with greater weight in the high vigor segment.  LWP also substantiated the remotely sensed data:  low stress levels, generally associated with longer shoots and and larger leaves, characterized the high vigor segment.  The SPAD measurements showed no discernible trend among segments with respect to chlorophyll concentration.
+<p>
+The fruit measurements are summarized in 
+<a href="#table2">Table 2</a>.  
+The sugar levels (Brix) were similar among segments.  Notably, fruit in the high vigor segment had relatively high concentrations of MA and pH, probably as a result of light deficiency (leaf surplus) in the canopy.  Levels of MA in this segment were in fact some of the highest the grower had ever seen.  Elevated levels of MA and pH can result in immature-tasting grapes and a flat-tasting, lower quality wine.  
+<p>
+	Results of the wine evaluations are shown in 
+<a href="#table3">Table 3</a>.  
+The duo-trio test showed significant differences between the moderate and low vigor wine lots (.05 level) and between the high and low lots (.10 level), with no significant difference between the moderate and high lots.  In the winemakers quality evaluation, the low and moderate lots were judged to be of "Reserve" (highest) quality and the high-vigor lot of lower quality ("District" or "Varietal").  
+<p>
+<a name="conclusions"></a>
+<b>
+4.0  CONCLUSIONS
+</b>
+<p>
+	The remotely-sensed imagery agreed well with three different field measures of canopy density (vigor) in the test block.  Vine vigor was in-turn related to key fruit and resulting wine characteristics.  
+<p>
+	Despite some ambiguity inherent to the subjective wine evaluation process, the balance of evidence shows a successful demonstration of the capability to extract unique wine lots from a block that has historically been treated as a single management unit.  In addition, for the first time ever, the Winery was able to produce Reserve quality wines from the test block, mainly as a result of segregating out grapes from the lower quality parts of the vineyard.  Although formal cost/benefit scenarios have not been developed at this time, both results indicate the potential value of subdividing rather than treating the field as a single harvest unit.  
+<p>
+	During the 1998 growing season, the Winery plans to continue applying the technology to adjust the test block segment boundaries and to expand the analysis to other blocks.  Once in place, segments will be treated as separate management zones.  For instance, vigor can be reduced by adjusting the number of buds left at pruning, cultivating a cover crop later in the season, or delaying the start of irrigation.  Multitemporal images beginning early in the growing season would allow for further customization of vine management in pursuit of block and wine lot uniformity.
+<p>
+	The winegrowing market for geospatial technologies continues to expand in California's North Coast.  During and after the 1997 growing season, some 25 growers in addition to Mondavi evaluated imagery for vineyard management purposes.  At least two or three vineyard consulting and remote sensing "value-added" firms are competing for business in the region and at least one data provider has announced plans for North Coast airborne data collection in 1998.
+<p>
+<b>
+<a name="ack"></a>
+5.0  ACKNOWLEDGMENT
+</b>
+<p>
+LJ and BL were supported by a competitively awarded grant from the NASA Ames Commercial Technology Projects Fund.
+<p>
+<a name="references"></a>
+<b>
+6.0  REFERENCES
+</b>
+<p>
+R. Baldy, J. DeBenedictis, L. Johnson, E. Weber, M. Baldy, and J. Burleigh,	"Relating Chlorophyll and Vine Size to Yields in a Phylloxera Infested 	Vineyard, Vitis, Vol. 35, No. 4, pp. 201-205, 1996.
+<p>
+R. Duda and P. Hart, Pattern Classification and Scene Analysis, John Wiley and 	Sons Inc., New York, NY, 1973.
+<p>
+L. Johnson, B. Lobitz, R. Armstrong, R. Baldy, E. Weber, J. DeBenedictis, and D. 	Bosch,  "Airborne Imaging Aids Vineyard Canopy Evaluation," California 	Agriculture, Vol. 15, No. 4, pp. 14-18, 1996.
+<p>
+B. Lobitz, L. Johnson, C. Hlavka, R. Armstrong, and C. Bell, Grapevine Remote 	Sensing Analysis of Phylloxera Early Stress (GRAPES):  Remote Sensing 	Analysis Summary, NASA Technical Memorandum #112218, December 1997.
+<p>
+C. Tucker, "Red and Photographic Infrared Linear Combinations for 	Monitoring Vegetation," Remote Sensing of Environment, Vol. 8, pp. 127-	150, 1979.
+<p>
+U. Yadava, "A Rapid and Nondestructive Method to Determine Chlorophyll in 	Intact Leaves," HortScience, Vol. 216, No. 6, pp. 1449-1450, 1986.
+<p>
+<p>
+<a name="table1"></a>
+<p align="center">
+<b>
+TABLE 1.  Vine Measurements by Vigor Level
+</b>
+</p>
+<center>
+<table border="1" cellpadding="6">
+<tr>
+<td>
+</td>
+<td>
+<b>
+Vigor
+</b>
+</td>
+<td>
+<b>
+Mean
+</b>
+</td>
+<td>
+<b>
+Std. Dev.
+</b>
+</td>
+<td>
+<b>
+No. Vines
+</b>
+</td>
+</tr>
+<tr>
+<td>
+<b>
+CT(FZ) [%]<br>
+</b>
+<br><br>
+</td>
+<td>
+Low<br>
+Mod<br>
+High
+</td>
+<td>
+44.1<br>
+37.5<br>
+26.6
+</td>
+<td>
+18.6<br>
+25.7<br>
+21.0
+</td>
+<td>
+20<br>
+5<br>
+10
+</td>
+</tr>
+<tr>
+<td>
+<b>
+CT(LZ) [%]<br>
+</b>
+<br>
+<br>
+</td>
+<td>
+Low<br>
+Mod<br>
+High
+</td>
+<td>
+39.9<br>
+11.5<br>
+12.1
+</td>
+<td>
+26.7<br>
+13.4<br>
+11.3
+</td>
+<td>
+20<br>
+5<br>
+10<br>
+</td>
+</tr>
+<td>
+<b>
+LWP [bars]<br>
+</b>
+<br>
+<br>
+</td>
+<td>
+Low<br>
+Mod<br>
+High
+</td>
+<td>
+12.2<br>
+9.7<br>
+8.8
+</td>
+<td>
+1.5<br>
+1.0<br>
+1.2
+</td>
+<td>
+12<br>
+3<br>
+6<br>
+</td>
+</tr>
+<td>
+<b>
+SPAD(FZ) [unitless]
+</b>
+</td>
+<td>
+Low<br>
+Mod<br>
+High
+</td>
+<td>
+40.4<br>
+43.4<br>
+42.3
+</td>
+<td>
+3.7<br>
+3.1<br>
+3.0
+</td>
+<td>
+20<br>
+5<br>
+10
+</td>
+</tr>
+<tr>
+<td>
+<b>
+SPAD(TOC) [unitless]<br>
+</b>
+<br>
+<br>
+</td>
+<td>
+Low<br>
+Mod<br>
+High
+</td>
+<td>
+40.8<br>
+39.3<br>
+42.5
+</td>
+<td>
+2.8<br>
+4.1<br>
+3.8
+</td>
+<td>
+20<br>
+5<br>
+10<br>
+</td>
+</tr>
+<tr>
+<td>
+<b>
+PW [kg]<br>
+</b>
+<br>
+<br>
+</td>
+<td>
+Low<br>
+Mod<br>
+High
+</td>
+<td>
+0.63<br>
+0.79<br>
+1.21
+</td>
+<td>
+--<br>
+--<br>
+--
+</td>
+<td>
+20<br>
+5 <br>
+10
+</td>
+</tr>
+</table>
+</center>
+<br>
+<a href="#results">
+Return to Section 3.0 RESULTS</a><br>
+<br>
+<a name="table2"></a>
+<p align="center">
+<b>
+TABLE 2.  Fruit Measurements by Vigor Level
+</b>
+</p>	
+<center>
+<table border="1" cellpadding="6">
+<tr>
+<td>
+</td>
+<td>
+<b>
+Low
+</b>
+</td>
+<td>
+<b>
+Moderate
+</b>
+</td>
+<td>
+<b>
+High
+</b>
+</td>
+</tr>
+<tr>
+<td>
+<b>
+Brix [g/L]
+</b>
+</td>
+<td>
+24.2
+</td>
+<td>
+24.0
+</td>
+<td>
+23.8
+</td>
+</tr>
+<tr>
+<td>
+<b>
+TA [g/L]
+</b>
+</td>
+<td>
+7.2
+</td>
+<td>
+7.3
+</td>
+<td>
+7.9
+</td>
+</tr>
+<tr>
+<td>
+<b>
+pH [unitless]
+</b>
+</td>
+<td>
+3.51
+</td>
+<td>
+3.51
+</td>
+<td>
+3.6
+</td>
+</tr>
+<tr>
+<td>
+<b>
+MA [g/L]
+</b>
+</td>
+<td>
+3.94
+</td>
+<td>
+4.60
+</td>
+<td>
+5.51
+</td>
+</tr>
+</table>
+</center>
+<br>
+<a href="#results">
+Return to Section 3.0 RESULTS</a><br>
+<br>
+<a name="table3"></a>
+<p align="center">
+<b>
+TABLE 3. Wine Evaluations by Vigor Level: Tests for Difference and Quality
+</b>
+</p>
+<center>
+<table align="center" border="1" cellpadding="6">
+<tr>
+<td>
+</td>
+<td>
+<b>
+vs. Low
+</b>
+</td>
+<td>
+<b>
+vs. Moderate
+</b>
+</td>
+<td>
+<b>
+vs. High
+</b>
+</td>
+<td>
+<b>
+<i>
+Quality
+</i>
+</b>
+</td>
+</tr>
+<tr>
+<td>
+<b>
+Low
+</b>
+</td>
+<td>
+--
+</td>
+<td>
+.05
+</td>
+<td>
+.10
+</td>
+<td>
+<i>
+Reserve
+</i>
+</td>
+</tr>
+<td>
+<b>
+Moderate
+</b>
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+--
+</td>
+<td>
+no sig diff
+</td>
+<td>
+<i>
+Reserve
+</i>
+</td>
+</tr>
+<td>
+<b>
+High
+</b>
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+--
+</td>
+<td>
+<i>
+District, Varietal
+</i>
+</td>
+</tr>
+</table>
+</center>
+<p>
+<a href="#results">
+Return to Section 3.0 RESULTS</a><br>
+<p>
+Back to the <a href="crush.html"> CRUSH Home Page</a>
+</body>
+</html>

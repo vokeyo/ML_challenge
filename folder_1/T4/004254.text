@@ -1,0 +1,230 @@
+Comments (May 2001) to Nov 2000 DOE/NSF Review:
+
+
+===========================================================================
+==  Overall cost of developers and users shifting to an OO paradigm needs
+==  to be tracked and rolled into cost estimates
+===========================================================================
+
+The entire complement of developers funded by the U.S. ATLAS computing
+project is fluent in C++/OO and using this paradigm in their daily work.
+Substantial experience in this paradigm is required of all new hires.
+As a consequence, there are no 'paradigm shift' costs associated with
+the program of core software development that constitutes most of the
+funded software project activity. 
+
+There is indeed, however, a paradigm shift required of the majority of
+the software's physicist user community (subsystem developers and end
+users). Our original project plan took account of the real cost of
+bringing users through this paradigm shift by supporting software
+professionals 'straddling' the core and subsystem software worlds and
+offering development expertise, mentoring and training to the wider
+developer and user community. These positions, however, were zeroed out
+by the agencies. In their absence we are dependent upon physicists and
+professional staff expert in software and funded by base programs to
+help the existing project funded core software teams to provide such
+assistance and mentoring. Base program support for this currently
+appears inadequate. The consequence is a stretch-out in time of the
+subsystem software program and its migration from FORTRAN to C++.
+Recent concrete examples of this stretch-out are the continued reliance
+on Geant3 for trusted simulation and only very slow migration to
+Geant4 (contributing to the recent abandonment of plans to use Geant4
+as the baseline simulation in Data Challenge 1), the extremely slow
+(effort-starved) progress in developing a new C++/OO muon
+reconstruction package, and the slow convergence upon a detector
+description solution meeting the needs of both simulation and
+reconstruction.
+
+===========================================================================
+== A software QA plan needs to be written and a set of key SQA processes
+== needs to be implemented immediately. This must include metrics to
+== track progress against software quality targets.
+===========================================================================
+
+We have not had the available effort to develop a written software QA
+plan yet, as to do so we would be working largely in isolation from
+International ATLAS where software QA has been in a state of
+reorganization. Rather, we have engaged in specific focused activities
+in QA which we feel to have the highest priority, both in quality
+control at the software authorship stage and in quality assurance
+assessing the quality and performance of written software. These
+activities have been closely coordinated with International ATLAS.
+
+1) At the software authorship stage, an immediate priority for
+ATLAS has been the establishment of official C++ coding standards,
+their promulgation to the developer community, their application
+in the software review process, and their incorporation into
+automated software validation tools. We undertook tasks in these areas
+within the auspices of the ATLAS QA group. We took the lead in
+collating and editing the C++ Coding Standards document, incorporating
+input from throughout ATLAS and leading to its release in January.
+We have also done preliminary work on enabling the CodeWizard
+software validation tool in the ATLAS code management system;
+CodeWizard will test ATLAS software for compliance with the
+established standards.
+
+2) Improving software test and validation tools. We have developed a
+facility which produces nightly builds of the full ATLAS software
+based on the most recent tagged versions of packages. It provides
+immediate email feedback to developers on newly introduced software
+bugs and incompatibilities. This system addresses current ATLAS
+difficulties in assembling functional software releases in a timely
+way by providing quantitative feedback on current software quality
+continuously, so the convergence of the software base toward a
+releasable body of code can be tracked. Any given nightly can be
+isolated, preserved and used to define a release, so that a high
+quality build can be preserved and deployed to general users and
+developers. We anticipate extending the system's assessments of
+software quality beyond simple 'did it build' criteria to
+incorporate more substantive metrics provided by eg. unit tests.
+This facility was implemented at BNL with substantial input to
+the design and functionality from LBNL.
+
+This QA/QC work has been done at BNL where only one software developer
+is supported at the moment (in addition to the librarian), and that
+position is vacant following the employee's recent departure. After
+budgetary uncertainties prevented us from re-filling the position, BNL
+has stepped in to enable us to make a hire, now in progress. QA
+activity will increase once new manpower is on board.
+
+References:
+  - C++ coding standards
+    http://atlas.web.cern.ch/Atlas/GROUP/SOFTWARE/OO/qc/C++_Coding_Standard.pdf
+  - BNL nightly builds
+    http://www.usatlas.bnl.gov/computing/software/local_release_status.html
+
+===========================================================================
+== It is advised that the ATLAS software effort adopt a software
+== development process which allows for intermediate rapid prototyping so
+== some capabilities are made evident to the community and feedback may
+== be obtained.
+===========================================================================
+
+The ATLAS software development process is based on intermediate rapid
+prototyping, with high priority given to delivering capability into the
+hands of users as early as possible and accumulating and assimilating
+feedback. This course has been very successful in guiding the development
+of the Athena framework and the Event Model in particular. Development
+of Athena began at the end of 1999. A first prototype was delivered to
+users in May 2000; this aggressive schedule was followed in order to
+gather early feedback. Subsequent iterative releases have been
+frequent (Sep 2000, Dec 2001, May 2001). Our November presentations
+did not effectively convey the degree to which the software presented
+was running and in the hands of users, eg. via demos; we will correct
+this in the next major review.
+
+===========================================================================
+== The hiring of the C++/OO subsystems guru at CERN should be made a
+== priority.
+===========================================================================
+
+The NSF proposal by which we were instructed to seek support for this
+position, submitted early this year, remains un-approved. We are using
+existing resources to support one person at CERN who is a software
+professional and C++ expert actively engaged in the U.S. ATLAS core
+software development program. This person acts as an important
+interface to and resource for both subsystem and core software
+developers at CERN.
+
+===========================================================================
+== Execute continuing assessment of correct balance between frameworks and
+== database efforts -- especially in light of possible shortfalls
+===========================================================================
+
+This assessment is indeed ongoing. We remain convinced that
+U.S. physics analysis interests demand that the U.S. maintain a
+leading role in both these areas. Having established critical mass
+efforts in framework and database at LBNL and ANL respectively, our
+present priority is ramping support at BNL for the critically
+understaffed efforts there in these areas, specifically in event model
+and databases.
+
+===========================================================================
+== The committee urges the project management to evaluate the overall
+== impact of grid-enabling the ATLAS software environment and assess the
+== appropriate ramp of grid-deployment activities relative to other
+== priorities in the program.
+===========================================================================
+
+This has been a major source of attention and concern. Attention to
+grid computing in ATLAS has attained a profile which at least
+threatens to be out of proportion to its prioritized level of
+importance at the present early stage of ATLAS core software
+development. We are exercising caution to ensure that more fundamental
+critical path core software efforts are not deflected or delayed by
+grid activity. Specifically, in the PPDG program US ATLAS was a leader
+in the specification of a very practical, results-directed program of
+grid development over the next three years which will produce material
+benefits to the US ATLAS core software development effort and ATLAS
+users. The program lays out a schedule of concrete deliverables
+culminating in production-level distributed data management and
+processing services. We are striving to focus GriPhyN and other grid
+software efforts on programs of similarly practical and near-term (as
+well as long term) value. Throughout the grid efforts we are coupling
+software development very closely to core software development to
+derive the greatest benefit from the former. cf. next item and its
+references.
+
+
+===========================================================================
+== Triggers and decision points relative to grid activity for
+== distributed computing.
+===========================================================================
+
+This has received a great deal of attention in the development of a
+distributed computing software development plan that is focused on
+experiment needs and deliverables. The plan is quite fine grained for
+the next ~18 months and coarser thereafter at the moment. This plan
+serves as input to the grid projects as an indication of the
+deliverables required by ATLAS to fulfil our distributed computing
+program. The scheduled deliverables in the plan will allow us to
+measure needs against available resources in the grid community, and
+select which grid community tools are a match to our needs and
+timescales. The plan can then be used to track deliverable fulfilment
+in those areas where we are dependent on the delivery of external
+tools, and if necessary trigger pursuit of alternative solutions with
+adequate lead time.
+
+References:
+  - PPDG version of the US ATLAS distributed computing development plan
+    PPDG SciDAC proposal available at http://www.ppdg.net
+  - Full plan
+    http://atlassw1.phy.bnl.gov/servlets/XProject?schedule=yes&keys=usgrid
+
+===========================================================================
+== Implement tasks and milestone dependencies by fully resource loading
+===========================================================================
+
+The tasks and milestones have been greatly developed since November,
+both in content and in coordination with other efforts. Our ATLAS
+software development schedule was fully synchronized with
+International ATLAS. The new version of XProject supporting
+International ATLAS was released in mid-April and is being integrated
+as the standard International ATLAS planning tool, with the U.S. and
+ATLAS working from the same schedule sources. A software development
+program and deliverables/milestones plan was developed for grid
+software, coordinated with the programs of PPDG and GriPhyN and their
+computer science deliverables, with the core software development
+program, with the U.S. ATLAS grid testbed plans, and with the grid-related
+International ATLAS schedule.
+
+Implementing dependencies, while important, must follow the current
+activity in developing and coordinating tasks and milestones among the
+many organizations involved in or relevant to the U.S. ATLAS software
+project. 
+
+Further, the precision implied for our funding profile by resource
+loading our schedule does not exist. Such a precise approach to 
+managing resource usage is inappropriate to the rapidly changing and
+unreliable funding environment existing at present.
+
+References:
+  - US ATLAS, ATLAS, US Grid: tasks, milestones, work breakdown
+    http://atlassw1.phy.bnl.gov/Planning/Planning.html
+
+===========================================================================
+== Missed calibration in this review. Cover it next time.
+===========================================================================
+
+Calibration will be covered in the next full agency review. Work is
+actively underway.

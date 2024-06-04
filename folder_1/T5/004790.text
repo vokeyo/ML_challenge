@@ -1,0 +1,185 @@
+=============================================================================
+
+
+                  INTERNATIONAL LASER RANGING SERVICE
+
+             Deutsches Geodaetisches Forschungsinstitut (DGFI)
+
+                      Analysis Strategy Summary
+
+
+=============================================================================
+ANALYSIS CENTRE   | Deutsches Geodaetisches Forschungsinstitut (DGFI)       |
+                  | Munich, Germany                                         |
+-----------------------------------------------------------------------------
+CONTACT PERSONS   | H. Mueller (mueller@dgfi.badw.de; tel +4989230311277)   |
+-----------------------------------------------------------------------------
+SOFTWARE USED     | DOGS                                                    |
+-----------------------------------------------------------------------------
+ILRS PRODUCTS     | weekly solution for coordinates of global SLR stations  | 
+                  | and daily Earth Orientation Parameters (x,y-pole,       |
+                  | LOD, UT1-UTC) (SINEX format)                            |
+-----------------------------------------------------------------------------
+PREPARATION DATE  | effective since June 1, 2003                            |
+=============================================================================
+
+
+
+
+-----------------------------------------------------------------------------
+|                     MEASUREMENT MODELS                                    |
+|---------------------------------------------------------------------------|
+| Satellites used  | LAGEOS-1, LAGEOS-2, ETALON-1, ETALON-2                 |
+|---------------------------------------------------------------------------|
+| Basic measurement| Satellite Laser Ranging (SLR): round-trip travel time  |
+|                  |--------------------------------------------------------|
+|                  | speed of light         : 299792458 m/s                 |
+|                  | wavelength             : as given on data record       |
+|                  | elevation angle cutoff : 1 degree                      |
+|                  | weighting              : 1.0 m to all data             |
+|                  | range biases           : modeled for stations of choice|
+|                  | time biases            : for editing purposes only     |
+|                  | tropospheric biases    : not modeled/estimated         |
+|---------------------------------------------------------------------------|
+| Data editing     | 3.0 sigma editing                                      |
+|---------------------------------------------------------------------------|
+| Troposphere      | Mendes-Pavlis zenith delay model                       |
+|                  |--------------------------------------------------------|
+|                  | Mendes-Pavlis mapping function                         |
+|---------------------------------------------------------------------------|
+| Ionosphere       | not modeled/estimated                                  |
+|---------------------------------------------------------------------------|
+| Relativity       | scale: LET                                             |
+|                  | effects: light time corrections                        |
+|---------------------------------------------------------------------------|
+| Satellite center | LAGEOS: 0.251 m , 0.246 m for Herstmonceux             | 
+| of mass          | ETALON: 0.558 m                                        |
+|---------------------------------------------------------------------------|
+| Other            |                                                        |
+|---------------------------------------------------------------------------|
+
+
+
+-----------------------------------------------------------------------------
+|                           ORBIT MODELS                                    |
+|---------------------------------------------------------------------------|
+| Geopotential     | EGM96 (static terms through degree and order 70)       |
+|                  |       (C(2,0), C(2,1) and S(2,1) time dependent)       |
+|                  |--------------------------------------------------------|
+|                  | Constants                                              |
+|                  | AE    =  6378.1363 km                                  |
+|                  | 1/F   =  298.2564                                      |
+|                  | GM    =  398600.4415 km3/s2                            |
+|---------------------------------------------------------------------------|
+| Third-body       | planets:                                               |
+|                  | Mercury, Venus, Earth Moon, Mars, Jupiter, Saturn,     |
+|                  | Uranus, Neptune                                        |
+|                  |--------------------------------------------------------|
+|                  | ephemeris: JPL DE405                                   |
+|---------------------------------------------------------------------------|
+| Solar radiation  | IERS Conventions 1996                                  |
+| pressure         |                                                        |
+|                  | direct radiation        : applied   (LAGEOS only)      |
+|                  | albedo radiation        : not applied                  |
+|                  | earth thermal radiation : not applied                  |
+|                  |--------------------------------------------------------|
+|                  | Earth shadow model includes: penumbra                  |
+|                  |                              lunar eclipses            |
+|                  |--------------------------------------------------------|
+|                  | reemitted radiation: not applied                       |
+|---------------------------------------------------------------------------|
+| satellite        | not modeled                                            |
+| thermal thrust   | estimation of empirical along-track constant (every    |
+|                  | 3.5 days) and one once-per-rev per weekly solution and |
+|                  | empirical cross-track accelerations (once-per-rev)     |
+|                  | 1 set per weekly solution)                             |
+|---------------------------------------------------------------------------|
+| Tidal forces     | solid earth tides: Wahr model                          |
+|                  |--------------------------------------------------------|
+|                  | Ocean tides: Ray GOT99.2                               |
+|---------------------------------------------------------------------------|
+| Atmospheric      | not modeled/estimated                                  |
+| gravitational    |                                                        |
+| attraction       |                                                        |
+|---------------------------------------------------------------------------|
+| Dynamic          | applied                                                |
+| polar motion     |                                                        |
+|---------------------------------------------------------------------------|
+| Relativity       | point-mass accelerations, Lense-Thirring effects,      |
+|                  | coriolis force                                         |
+|---------------------------------------------------------------------------|
+| Numerical        | Cowell 7th order predictor-corrector                   |
+| integration      |--------------------------------------------------------|
+|                  | integration step: 60 sec                               |
+|                  |--------------------------------------------------------|
+|                  | arc length (orbits): 7 days                            |
+-----------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+|                    ESTIMATED PARAMETERS (APRIORI VALUES & SIGMAS)         |
+|---------------------------------------------------------------------------|
+| Adjustment       | weighted least-squares adjustment                      |
+|---------------------------------------------------------------------------|
+| Orbital          | Initial position and velocity:                         |
+| parameters       |   estimated for each satellite (unconstrained)         |
+|                  | Solar radiaton pressure: (unconstrained)               |
+|                  | Empirical accelerations (unconstrained)                |
+|---------------------------------------------------------------------------|
+| Stations         | definition: SLR monument (eccentricities subtracted),  |
+|                  |             at mean epoch of each arc                  |
+|                  | a priori values: ITRF2000                              |
+|                  | a priori standard deviation: 1 m                       |
+|---------------------------------------------------------------------------|
+| Troposphere      | not estimated                                          |
+|---------------------------------------------------------------------------|
+| EOP              | definition: x-pole, y-pole, UT1-UTC and LOD            |
+|                  | epoch: at noon of each day                             |
+|                  | frequency: daily                                       |
+|                  | a priori values: IERS 97 C04_05                        |
+|                  | a priori standard deviation: 30 mas 2 msec             |
+|---------------------------------------------------------------------------|
+| Range biases     | for some (non-core) stationsi                          |
+|                  | a priori value: 0 m                                    |
+|                  | a priori standard deviation: 1 m                       |
+|---------------------------------------------------------------------------|
+| Constraints      | loose constraints                                      |
+|---------------------------------------------------------------------------|
+
+
+-----------------------------------------------------------------------------
+|                       REFERENCE FRAMES                                    |
+|---------------------------------------------------------------------------|
+| Inertial         | J2000.0                                                |
+|---------------------------------------------------------------------------|
+| Terrestrial      | SLR2005 (a priori station coordinates)                 |
+|                  | SLR2005 (station velocities)                           |
+|                  | NUVEL-1A (2nd source for station velocities)  (??????) |
+|                  | tidal uplift: Love model (h2=0.609, l2=0.0852)         |
+|                  | ocean loading: Scherneck model, based on GOT99.2       |
+|                  | atmospheric pressure loading: not modeled/estimated    |
+|                  | geocenter motion: not explicitly modeled/estimated     |
+|                  | geocenter tidal frequencies: applied                   |
+|                  | pole tide: IERS Conventions (2003)                     |
+|                  | origin: C(1,0) = C(1,1) = S(1,1) = 0                   |
+|                  | orientation: loose constraints                         |
+|---------------------------------------------------------------------------|
+| Interconnection  | Precession: IAU 2000A (no corrections)                 |
+|                  |--------------------------------------------------------|
+|                  | Nutation: IAU 2000A (no corrections)                   |
+|                  |--------------------------------------------------------|
+|                  | Celestial pole offsets: none                           |
+|                  |--------------------------------------------------------|
+|                  | Relationship between UT1 and GMST: UT1-UTC estimated   |
+|                  |--------------------------------------------------------|
+|                  | Earth Orientation Parameters: estimated                |
+|                  |                               (IERS C04_05 a priori)   |
+|                  |--------------------------------------------------------|
+|                  | Tidal variations in UT1 applied, xp not applied        |
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+|                       OTHER INFORMATION                                   |
+|---------------------------------------------------------------------------|
+|                  |                                                        |
+|---------------------------------------------------------------------------|

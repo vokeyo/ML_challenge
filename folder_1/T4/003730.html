@@ -1,0 +1,121 @@
+<HTML>
+<head>
+	<link rel="schema.sandia"
+	href="http://www.sandia.gov/html_schema.htm">
+	<meta name="sandia.approval_type" content="formal">
+	<meta name="sandia.approved" content="1997-2387"> 
+	<meta name="sandia.create_date" content="09/27/1997">
+	<link rev="owns" title="Patrick Fay"
+	href="mailto:pfay@lanl.gov">
+</head>
+<BODY>
+<PRE>
+     <STRONG>NAME</STRONG>
+	  <STRONG>recv</STRONG> - Receives messages from	connected sockets
+
+     <STRONG>SYNOPSIS</STRONG>
+	  <STRONG>#include</STRONG> <STRONG>&lt;sys/types.h&gt;</STRONG>
+
+	  <STRONG>#include</STRONG> <STRONG>&lt;sys/socket.h&gt;</STRONG>
+
+	  <STRONG>int</STRONG> <STRONG>recv</STRONG> (
+	       <STRONG>int</STRONG> <EM>socket</EM><STRONG>,</STRONG>
+	       <STRONG>char</STRONG> <STRONG>*</STRONG><EM>buffer</EM><STRONG>,</STRONG>
+	       <STRONG>int</STRONG> <EM>length</EM><STRONG>,</STRONG>
+	       <STRONG>int</STRONG> <EM>flags</EM> <STRONG>);</STRONG>
+
+     <STRONG>PARAMETERS</STRONG>
+	  <EM>socket</EM>
+	       Specifies the socket descriptor.
+
+	  <EM>buffer</EM>
+	       Points to an address where the message should be
+	       placed.
+
+	  <EM>length</EM>
+	       Specifies the size of the address pointed to by the
+	       <EM>buffer</EM> parameter.
+
+	  <EM>flags</EM>
+	       Points to a value controlling the message reception.
+	       The <EM>flags</EM> parameter is formed by	logically ORing	one or
+	       more of the following values, defined in	the
+	       <STRONG>sys/socket.h</STRONG> file:
+
+	       MSG_PEEK	 Peek at incoming message.  The	data is
+			 treated as unread and the next	<STRONG>recv()</STRONG> func-
+			 tion (or similar function) will still return
+			 this data.
+
+	       MSG_OOB	 Process out-of-band data.
+
+     <STRONG>DESCRIPTION</STRONG>
+	  The <STRONG>recv()</STRONG> function receives messages	from a connected
+	  socket.  The <STRONG>recvfrom()</STRONG> and <STRONG>recvmsg()</STRONG>	functions receive mes-
+	  sages	from both connected and	unconnected sockets; however,
+	  they are usually used	for unconnected	sockets	only.
+
+	  The <STRONG>recv()</STRONG> function returns the length of the	message. If a
+	  message is too long to fit in	the supplied buffer, excess
+	  bytes	may be truncated depending on the type of socket that
+	  issued the message.
+
+	  If no	messages are available at the socket, the <STRONG>recv()</STRONG> func-
+	  tion waits for a message to arrive, unless the socket	is
+	  nonblocking.	If a socket is nonblocking, <STRONG>errno</STRONG> is set to
+	  [EWOULDBLOCK].
+
+	  Use the <STRONG>select()</STRONG> function to determine when more data
+	  arrives.
+
+     <STRONG>NOTES</STRONG>
+	  The <STRONG>recv()</STRONG> function is identical to the <STRONG>recvfrom()</STRONG> function
+	  with a zero-valued <EM>address</EM>_<EM>len</EM> parameter, and	to the <STRONG>read()</STRONG>
+	  function if no flags are used.  For that reason, the <STRONG>recv()</STRONG>
+	  function is disabled when 4.4BSD behavior is enabled (that
+	  is, when the _SOCKADDR_LEN compile-time option is defined).
+
+     <STRONG>RETURN</STRONG> <STRONG>VALUES</STRONG>
+	  Upon successful completion, the <STRONG>recv()</STRONG> function returns the
+	  length of the	message	in bytes. Otherwise, a value of	-1 is
+	  returned, and	<STRONG>errno</STRONG> is set to	indicate the error.
+
+     <STRONG>ERRORS</STRONG>
+	  If the <STRONG>recv()</STRONG>	function fails,	<STRONG>errno</STRONG> may be set to one	of the
+	  following values:
+
+	  [EBADF]   The	<EM>socket</EM> parameter is not	valid.
+
+	  [ENOTSOCK]
+		    The	<EM>socket</EM> parameter refers	to a file, not a
+		    socket.
+
+	  [EWOULDBLOCK]
+		    The	socket is marked nonblocking, and no data is
+		    waiting to be received.
+
+	  [EINTR]   A signal interrupted the <STRONG>recv()</STRONG> function before
+		    any	data was available.
+
+	  [EFAULT]  The	data was directed to be	received into a	nonex-
+		    istent or protected	part of	the process address
+		    space.  The	<EM>buffer</EM> parameter is invalid.
+
+     <STRONG>RELATED</STRONG> <STRONG>INFORMATION</STRONG>
+	  Functions: <STRONG><A HREF="../man2/recvfrom.2.html">recvfrom(2)</A></STRONG>, <STRONG><A HREF="../man2/recvmsg.2.html">recvmsg(2)</A></STRONG>, <STRONG><A HREF="../man2/send.2.html">send(2)</A></STRONG>, <STRONG><A HREF="../man2/sendmsg.2.html">sendmsg(2)</A></STRONG>,
+	  <STRONG><A HREF="../man2/sendto.2.html">sendto(2)</A></STRONG>, <STRONG><A HREF="../man2/select.2.html">select(2)</A></STRONG>,	<STRONG><A HREF="../man2/shutdown.2.html">shutdown(2)</A></STRONG>, <STRONG><A HREF="../man2/socket.2.html">socket(2)</A></STRONG>,	<STRONG><A HREF="../man2/read.2.html">read(2)</A></STRONG>,
+	  <STRONG><A HREF="../man2/write.2.html">write(2)</A></STRONG>
+
+
+
+
+
+
+
+
+
+</PRE>
+
+<A HREF="http://www.sandia.gov/dis.htm">Acknowledgement and Disclaimer</A>
+</BODY>
+</HTML>

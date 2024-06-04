@@ -1,0 +1,187 @@
+DETAILS.TXT - Details of Drug & Pharmaceutical Price Files
+
+
+Following in a detailed desciption of available price files. 
+
+
+FILE: PRICES.DBF (FSS, BIG4, BPA, NC, FSSTIER, BIG4TIER prices)
+
+Field Name  Format     Description
+
+NDC_1        5 Char   National Drug Code, Part 1
+NDC_2        4 Char   National Drug Code, Part 2
+NDC_3        2 Char   National Drug Code, Part 3
+N            1 Char   Additional NDC identifier
+PKG         14 Char   Package Size
+GENERIC     64 Char   Generic Name
+TRADE_NAME  45 Char   Trade Name
+I            1 Char   "C" for covered items (i.e. drugs that hold an NDA)
+PV           1 Char   Sold by Prime Vendor (True/False)
+CNT_NO      11 Char   FSS Contract Number
+VENDOR      10 Char   Abbreviated Vendor Name
+FSS_END        Date   Last date the price is valid
+QUANT        5 Char   Quantity that must be purchased for tier pricing
+                      This field is blank for regular FSS prices
+FSS_PRICE   Num 9.2   FSS Price
+VA_FSS      Num 9.2   FSS Price available to VA only
+BIG4_PRICE  Num 9.2   BIG4 Price
+BPA_PRICE   Num 9.2   BPA Price
+BPA_AVAIL    1 Char   IF "Y" (yes), there is an incentive BPA available
+                      for this vendor's CONTRACT (not necessarily this
+                      NDC).  Please see the file INCENTIV.DBF for
+                      details. You will have to call the VA National
+                      Acquisition Center for specific prices and
+                      eligibility.
+NC_PRICE    Num 9.2   FSS Price
+NC_VENDOR   10 Char   FSS Price
+
+
+
+
+FILE: FSS.DBF (Federal Supply Schedule prices)
+
+Field Name  Format     Description
+
+NDC_1        5 Char   National Drug Code, Part 1
+NDC_2        4 Char   National Drug Code, Part 2
+NDC_3        2 Char   National Drug Code, Part 3
+PKG         14 Char   Package Size
+GENERIC     64 Char   Generic Name
+TRADE_NAME  45 Char   Trade Name
+FSS_PRICE   Num 9.2   FSS Price
+I            1 Char   "C" for covered items (i.e. drugs that hold an NDA)
+VENDOR      10 Char   Abbreviated Vendor Name
+CNT_NO      11 Char   FSS Contract Number
+CNT_START      Date   Date the price is effective
+CNT_STOP       Date   Last date the price is valid
+PV           1 Char   Sold by Prime Vendor (True/False)
+
+
+
+
+FILE: FSSR.DBF (Restricted Federal Supply Schedule prices)
+
+Field Name  Format     Description
+
+NDC_1        5 Char   National Drug Code, Part 1
+NDC_2        4 Char   National Drug Code, Part 2
+NDC_3        2 Char   National Drug Code, Part 3
+PKG         14 Char   Package Size
+GENERIC     64 Char   Generic Name
+TRADE_NAME  45 Char   Trade Name
+FSS_PRICE   Num 9.2   FSS Price
+VA           1 Char   If "T", price is for for VA
+BOP          1 Char   If "T", price is for Bureau of Prisons
+HHS          1 Char   If "T", price is for Health & Human Services
+IHS          1 Char   If "T", price is for Indian Health Service
+DIHS         1 Char   If "T", price is for Dept of Immigration
+SVH          1 Char   If "T", price is for State Veteran's Homes
+DOD          1 Char   If "T", price is for Dept of Defense
+PHS          1 Char   If "T", price is for Public Health Service (including IHS)
+USCG         1 Char   If "T", price is for US Coast Guard
+TMOP         1 Char   If "T", price is for Tri-care Mailout Pharmacy (DoD)
+CMOP         1 Char   If "T", price is for Consolidated Mailout Pharmacy (VA)
+I            1 Char   "C" for covered items (i.e. drugs that hold an NDA)
+VENDOR      10 Char   Abbreviated Vendor Name
+CNT_NO      11 Char   FSS Contract Number
+CNT_START      Date   Date the price is effective
+CNT_STOP       Date   Last date the price is valid
+PV           1 Char   Sold by Prime Vendor (True/False)
+
+
+
+
+FILE: BIG4.DBF (VA, DoD, Public Health Service, Coast Guard)
+
+Field Name  Format     Description
+
+NDC_1        5 Char   National Drug Code, Part 1
+NDC_2        4 Char   National Drug Code, Part 2
+NDC_3        2 Char   National Drug Code, Part 3
+PKG         14 Char   Package Size
+GENERIC     64 Char   Generic Name
+TRADE_NAME  45 Char   Trade Name
+BIG4_PRICE  Num 9.2   BIG4 Price (only listed if it is LESS than FSS)
+VENDOR      10 Char   Abbreviated Vendor Name
+CNT_NO      11 Char   FSS Contract Number
+CNT_START      Date   Date the price is effective
+CNT_STOP       Date   Last date the price is valid
+PV           1 Char   Sold by Prime Vendor (True/False)
+
+
+
+
+FILE: BPA.DBF (Blanket Purchase Agreements)
+
+Field Name  Format     Description
+
+NDC_1        5 Char   National Drug Code, Part 1
+NDC_2        4 Char   National Drug Code, Part 2
+NDC_3        2 Char   National Drug Code, Part 3
+PKG         14 Char   Package Size
+GENERIC     64 Char   Generic Name
+TRADE_NAME  45 Char   Trade Name
+BPA_PRICE   Num 9.2   BPA Price
+VENDOR      10 Char   Abbreviated Vendor Name
+CNT_NO      11 Char   FSS Contract Number
+CNT_START      Date   Date the price is effective
+CNT_STOP       Date   Last date the price is valid
+PV           1 Char   Sold by Prime Vendor (True/False)
+
+
+
+
+FILE: NC.DBF (National Contracts)
+
+Field Name  Format     Description
+
+NDC_1        5 Char   National Drug Code, Part 1
+NDC_2        4 Char   National Drug Code, Part 2
+NDC_3        2 Char   National Drug Code, Part 3
+PKG         14 Char   Package Size
+GENERIC     64 Char   Generic Name
+TRADE_NAME  45 Char   Trade Name
+NC_PRICE    Num 9.2   National Contract Price
+VA           1 Char   If "T" (true), price is for VA
+DOD          1 Char   If "T", price is for Department of Defense
+BOP          1 Char   If "T", price is for Bureau of Prisons
+HHS          1 Char   If "T", price is for Health & Human Services
+IHS          1 Char   If "T", price is for all of Indian Health Service
+DIHS         1 Char   If "T", price is for Dept of Immigration
+SVH1         1 Char   If "T", price is for State Veteran's Homes (Option 1)
+SVH2         1 Char   If "T", price is for State Veteran's Homes (Option 2)
+IHS2         1 Char   If "T", price is for only SOME of IHS (call NAC).
+NC_VENDOR   10 Char   Abbreviated National Contract vendor name
+N_CONTRACT  11 Char   National Contract number
+CNT_START      Date   Date the price is effective
+CNT_STOP       Date   Last date the price is valid
+PV           1 Char   Sold by Prime Vendor (True/False)
+
+
+
+
+FILE: FSSTIER.DBF (Federal Supply Schedule tiered prices)
+
+Field Name  Format     Description
+
+NDC_1        5 Char   National Drug Code, Part 1
+NDC_2        4 Char   National Drug Code, Part 2
+NDC_3        2 Char   National Drug Code, Part 3
+PKG         14 Char   Package Size
+GENERIC     64 Char   Generic Name
+TRADE_NAME  45 Char   Trade Name
+QUANT        5 Char   Quantity that must be purchased for tier pricing
+FSS_PRICE   Num 9.2   FSS (tier) Price
+I            1 Char   "C" for covered items (i.e. drugs that hold an NDA)
+VENDOR      10 Char   Abbreviated Vendor Name
+CNT_NO      11 Char   FSS Contract Number
+CNT_START      Date   Date the price is effective
+CNT_STOP       Date   Last date the price is valid
+PV           1 Char   Sold by Prime Vendor (True/False)
+
+
+
+
+FILE: BIG4TIER.DBF (Federal Supply Schedule tiered prices)
+
+Same as FSSTIER.DBF, except valid for BIG4 only.

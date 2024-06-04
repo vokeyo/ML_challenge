@@ -1,0 +1,345 @@
+(defun compile-doc (o d)
+  (if (and o d)
+      `(doc ,o ,(concatenate 'string "\"" d "\""))))
+
+
+(defun and-em (l)
+  (if l
+      (if (cdr l)
+	  `(and ,@l)
+	(car l))))
+
+(defun or-em (l)
+  (if l
+      (if (cdr l)
+	  `(or ,@l)
+	(car l))))
+
+
+(defmacro generic-junction (out?  
+			    sp 
+			    j
+			    &key 
+			    ((:documentation d))
+			    ((:in-process p))
+			    ((:pred u))
+			    ((:succ s))
+			    ((:constraints e)))
+  (let* ((l1 (if out? u s))
+	 (ln (if out? s u))
+	 (pu (if out? '?u '?j))
+	 (pj (if out? '?j '?u))
+	 (c-d
+	  (compile-doc j d))
+	 (c-p 
+	  (if p `(forall (?j |:| (activation-of ?j ,j))
+			 (exists (?p |:| (activation-of ?p ,p))
+				 (subactivity ?j ?p)))))
+	 (c-l1     
+	  (if l1 `(follows ,pu ,pj ,p)))
+	 (c-ln
+	  (if ln
+	      (cons 'and 
+		    (cons `(,sp ,j ,p)
+			  (mapcar #'(lambda (x)
+				      `(subactivity ,x ,j))
+				  ln)))))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-p c-l1 c-ln c-e))))
+    (and-em c-all)))
+
+
+
+(defmacro define-fan-out-O-junction (&rest r)
+  (macroexpand-1 `(generic-junction t or_split ,@r)))
+
+(defmacro define-fan-out-&-junction (&rest r)
+  (macroexpand-1 `(generic-junction t and_split ,@r)))
+
+(defmacro define-fan-out-X-junction (&rest r)
+  (macroexpand-1 `(generic-junction t xor_split ,@r)))
+
+
+
+(defmacro define-fan-in-O-junction (&rest r)
+  (macroexpand-1 `(generic-junction nil or_split ,@r)))
+
+(defmacro define-fan-in-&-junction (&rest r)
+  (macroexpand-1 `(generic-junction nil and_split ,@r)))
+
+(defmacro define-fan-in-X-junction (&rest r) 
+  (macroexpand-1 `(generic-junction nil xor_split ,@r)))
+
+
+
+
+(defmacro define-sync-fan-out-O-junction (&rest r)
+  (macroexpand-1 `(generic-junction t sync_start_or_split ,@r)))
+
+(defmacro define-sync-fan-out-&-junction (&rest r)
+  (macroexpand-1 `(generic-junction t sync_start_and_split ,@r)))
+
+(defmacro define-sync-fan-out-X-junction (&rest r)
+  (macroexpand-1 `(generic-junction t sync_start_xor_split ,@r)))
+
+
+
+(defmacro define-sync-fan-in-O-junction (&rest r)
+  (macroexpand-1 `(generic-junction nil sync_finish_or_split ,@r)))
+
+(defmacro define-sync-fan-in-&-junction (&rest r)
+  (macroexpand-1 `(generic-junction nil sync_finish_and_split ,@r)))
+
+(defmacro define-sync-fan-in-X-junction (&rest r) 
+  (macroexpand-1 `(generic-junction nil sync_finish_xor_split ,@r)))
+
+
+
+
+
+
+
+
+(defun indexed-names-generator (s n)
+  #'(lambda ()
+      (prog1
+	  (make-symbol 
+	   (concatenate 'string
+	     s
+	     (princ-to-string n)))
+	(incf n))))
+
+(defun con-names (o)
+  (let ((g (indexed-names-generator "?O" 1)))
+    (mapcar #'(lambda (x)
+		(funcall g))
+	    o)))
+
+(defun con-type (o)
+  (let ((g (indexed-names-generator "?O" 1)))
+    (mapcar #'(lambda (x)
+		`(instance-of ,(funcall g) ,x))
+	    o)))
+
+(defun con-in (o)
+  (let ((g (indexed-names-generator "?O" 1)))
+    (mapcar #'(lambda (x)
+		`(in ,(funcall g) ?a))
+	    o)))
+
+
+
+(defmacro define-UOB (u &key
+		      ((:documentation d))
+		      ((:objects o))
+		      ((:constraints e)))
+  (let* ((c-d
+	  (compile-doc u d))
+	 (c-o 
+	  (if o `(forall (?a |:| (activation-of ?a ,u))
+			 (exists (,@(con-names o) |:|
+				    ,@(con-type o))
+				 ,(and-em (con-in o))))))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-o c-e))))
+    (and-em c-all)))
+
+
+
+
+(defmacro define-UOB-use (i &key
+			    ((:documentation d))
+			    ((:use-of u))
+			    ((:in-process p))
+			    ((:decompositions z))
+			    ((:constraints e)))
+  (let* ((c-d
+	  (compile-doc i d))
+	 (c-u
+	  (if u
+	      `(forall (?a |:| (activation-of ?a ,i))
+		       ,(and-em (mapcar #'(lambda (x)
+					    `(activation-of ?a ,x))
+					u)))))
+	 (c-p 
+	  (if p `(forall (?a |:| (activation-of ?a ,i))
+			 (exists (?p |:| (activation-of ?p ,p))
+				 (subactivity ?a ?p)))))
+	 (c-z
+	  (if z
+	      `(forall (?a |:| (activation-of ?a ,i))
+		       ,(and-em (mapcar #'(lambda (x)
+					    `(activation-of ?a ,x))
+					z)))))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-u c-p c-z c-e))))
+    (and-em c-all)))
+
+	 
+(defmacro define-link (l &key
+			 ((:documentation d))
+			 ((:pred p))
+			 ((:succ s))
+			 ((:constraints e)))
+  (let* ((c-d
+	  (compile-doc l d))
+	 (c-l
+	  `(follows ,p ,s))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-l c-e))))
+    (and-em c-all)))
+
+(defmacro define-lr-link (l &key
+			    ((:documentation d))
+			    ((:pred p))
+			    ((:succ s))
+			    ((:constraints e)))
+  (let* ((c-d
+	  (compile-doc l d))
+	 (c-l
+	  `(follows ,p ,s))
+	 (c-r
+	  `(forall (?p |:| (activation-of ?p ,p))
+		   (exists (?s |:| (activation-of ?s ,s))
+			   (Before (Endof ?p) (Beginof ?s)))))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-r c-l c-e))))
+    (and-em c-all)))
+
+(defmacro define-rl-link (l &key
+			    ((:documentation d))
+			    ((:pred p))
+			    ((:succ s))
+			    ((:constraints e)))
+  (let* ((c-d
+	  (compile-doc l d))
+	 (c-l
+	  `(follows ,p ,s))
+	 (c-r
+	  `(forall (?s |:| (activation-of ?s ,s))
+		   (exists (?p |:| (activation-of ?p ,p))
+			   (Before (Endof ?p) (Beginof ?s)))))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-r c-l c-e))))
+    (and-em c-all)))
+
+(defmacro define-bi-link (l &key
+			    ((:documentation d))
+			    ((:pred p))
+			    ((:succ s))
+			    ((:constraints e)))
+  (let* ((c-d
+	  (compile-doc l d))
+	 (c-l
+	  `(follows ,p ,s))
+	 (c-r1
+	  `(forall (?p |:| (activation-of ?p ,p))
+		   (exists (?s |:| (activation-of ?s ,s))
+			   (Before (Endof ?p) (Beginof ?s)))))
+	 (c-r2
+	  `(forall (?s |:| (activation-of ?s ,s)) 
+		   (exists (?p |:| (activation-of ?p ,p))
+			   (Before (Endof ?p) (Beginof ?s)))))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-r1 c-r2 c-l c-e))))
+    (and-em c-all)))
+
+(defmacro define-general-link (l &key
+				 ((:documentation d))
+				 ((:pred p))
+				 ((:succ s))
+				 ((:constraints e)))
+  (let* ((c-d
+	  (compile-doc l d))
+	 (c-l
+	  `(follows ,p ,s))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-l c-e))))
+    (and-em c-all)))
+
+(defmacro define-relational-link (l &key
+				    ((:documentation d))
+				    ((:pred p))
+				    ((:succ s))
+				    ((:constraints e)))
+  (let* ((c-d
+	  (compile-doc l d))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-e))))
+    (and-em c-all)))
+
+
+(defmacro define-process (p &key
+			    ((:documentation d))
+			    ((:components a))
+			    ((:constraints e)))
+  (let* ((c-d
+	  (compile-doc p d))
+	 (c-a
+	  `(forall (?p |:| (activation-of ?p ,p))
+		   (exists (?u |:| (subactivity ?u ?p))
+			   (forall (?v |:| (activation-of ?u ?v))
+				   (and ,(or-em (mapcar #'(lambda (x)
+							    `(= ?v ,x))
+							a))
+					,@(mapcar #'(lambda (x)
+						      `(not (follows ,x ?v ,p)))
+						  a)
+					(= (beginof ?u) (beginof ?p)))))))
+	 (c-e
+	  e)
+	 (c-all 
+	  (delete nil (list c-d c-a c-e))))
+    (and-em c-all)))
+
+
+
+(defun i2p (idef3file pslfile)
+  (with-open-file (i3 idef3file)
+    (with-open-file (psl pslfile 
+		     :direction :output 
+		     :if-exists :supersede
+		     :if-does-not-exist :create)
+      (do ((f (read i3 nil nil) (read i3 nil nil)))
+	  ((not f))
+	(format psl "~%~%~a~%" (macroexpand-1 f)))))
+  (format t "Done.~%") t)
+
+
+
+(defun do-the-job-and-quit ()
+  (if (= (length sys::*command-line-arguments*) 3)
+      (let ((ideffile (cadr sys::*command-line-arguments*))
+	    (pslfile (caddr sys::*command-line-arguments*)))
+	(format t "~%~%Translating ~a => ~a~%"
+		ideffile pslfile)
+	(i2p ideffile pslfile))
+    (format t "~%~%Usage: ~A ideffile pslfile.~%"
+	    (car sys::*command-line-arguments*)))
+  (exit))
+
+(defun dump ()  
+  (setf *restart-actions* (list #'do-the-job-and-quit))
+  (dumplisp :name "i2p"
+	    :ignore-command-line-arguments t))
+
+--------------AA171A73D4B--
+

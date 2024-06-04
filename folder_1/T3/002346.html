@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [VxW] Re: socket/connect/send
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:vxwexplo%40csg.lbl.gov?Subject=%5BVxW%5D%20Re%3A%20socket/connect/send&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="002886.html">
+   <LINK REL="Next"  HREF="002882.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[VxW] Re: socket/connect/send</H1>
+    <B>Johnny Willemsen</B> 
+    <A HREF="mailto:vxwexplo%40csg.lbl.gov?Subject=%5BVxW%5D%20Re%3A%20socket/connect/send&In-Reply-To="
+       TITLE="[VxW] Re: socket/connect/send">jwillemsen at remedy.nl
+       </A><BR>
+    <I>Tue Aug 26 21:20:04 PDT 2003</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="002886.html">[VxW] 82559 driver source code
+</A></li>
+        <LI>Next message: <A HREF="002882.html">[VxW] Network END driver trouble...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2884">[ date ]</a>
+              <a href="thread.html#2884">[ thread ]</a>
+              <a href="subject.html#2884">[ subject ]</a>
+              <a href="author.html#2884">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+If you can upgrade to VxWorks 5.5 I would recommand to use ACE
+(www.cs.wustl.edu/~schmidt) for these kinds of things. Books are available
+(see site) and hides you from all these horrible C-calls. VxWorks 5.4 is not
+supported by ACE.
+
+Regards,
+
+Johnny
+
+&quot;Fenster&quot; &lt;<A HREF="http://www-csg.lbl.gov/mailman/listinfo/vxwexplo">fenster at croctec.co.uk</A>&gt; wrote in message
+news:CqnO8XBTK0S$<A HREF="http://www-csg.lbl.gov/mailman/listinfo/vxwexplo">EwXk at FensterPC.croctec.co.uk...</A>
+&gt;<i>
+</I>&gt;<i> I'm relatively new to VxWorks and I'm trying to get my first ethernet
+</I>&gt;<i> connection together (in a VxWorks application) but I've got problems,
+</I>&gt;<i> can anyone give some pointers?
+</I>&gt;<i>
+</I>&gt;<i> I've coded up the following (based on the tcpClient.c example from
+</I>&gt;<i> VxWorks Network Programmer's Guide 5.4 except that I've used send()
+</I>&gt;<i> rather than write()).
+</I>&gt;<i>
+</I>&gt;<i> struct sockaddr_in serverAddr;
+</I>&gt;<i>
+</I>&gt;<i> serverAddr.sin_family       = AF_INET;
+</I>&gt;<i> serverAddr.sin_len          = sizeof(struct sockaddr_in);
+</I>&gt;<i> serverAddr.sin_port         = htons(0xDEAD);
+</I>&gt;<i> serverAddr.sin_addr.s_addr  = inet_addr(&quot;10.0.0.55&quot;);
+</I>&gt;<i>
+</I>&gt;<i> int fdFCC = socket(AF_INET, SOCK_STREAM, 0);
+</I>&gt;<i> if (ERROR != fdFCC)
+</I>&gt;<i>     {
+</I>&gt;<i>     if (OK == connect(fdFCC, &amp;serverAddr, sizeof(struct sockaddr_in)))
+</I>&gt;<i>         {
+</I>&gt;<i>         char szMessage[25] = &quot;Hello world\r\n&quot;;
+</I>&gt;<i>         send(fdFCC, szMessage, strlen(szMessage), 0);
+</I>&gt;<i>         }
+</I>&gt;<i>     }
+</I>&gt;<i>
+</I>&gt;<i> This builds on a PC as well as VxWorks 5.4.
+</I>&gt;<i>
+</I>&gt;<i> I have a PC-based server that displays data coming in on port 57005.
+</I>&gt;<i>
+</I>&gt;<i> The PC version of the above runs as expected, the server displays &quot;Hello
+</I>&gt;<i> world&quot;, the VxWorks version doesn't.  If I check the returns the socket
+</I>&gt;<i> is being created/opened, the connection is being made and send() returns
+</I>&gt;<i> the correct number of characters but the server sees nothing.
+</I>&gt;<i>
+</I>&gt;<i> If I do a looped send() it works for a few minutes and then fails, as if
+</I>&gt;<i> the connection has been broken by the server or something.
+</I>&gt;<i>
+</I>&gt;<i> Any help or (polite) suggestions would be greatly appreciated.
+</I>&gt;<i>
+</I>&gt;<i> Cheers.
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> Fenster
+</I>
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="002886.html">[VxW] 82559 driver source code
+</A></li>
+	<LI>Next message: <A HREF="002882.html">[VxW] Network END driver trouble...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2884">[ date ]</a>
+              <a href="thread.html#2884">[ thread ]</a>
+              <a href="subject.html#2884">[ subject ]</a>
+              <a href="author.html#2884">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www-csg.lbl.gov/mailman/listinfo/vxwexplo">More information about the VxWexplo
+mailing list</a><br>
+</body></html>

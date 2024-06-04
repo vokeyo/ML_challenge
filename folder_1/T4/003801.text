@@ -1,0 +1,198 @@
+MARCH 1999
+
+U.S. BUREAU OF THE CENSUS
+VTDP Annotation TIGER/Line(R) (Also known as the TIGER/Line 1998)
+
+Census TIGER(R) and TIGER/Line(R) are registered trademarks of the
+U.S. Bureau of the Census.  
+
+WHAT ARE TIGER/LINE FILES
+
+The TIGER/Line files were created from the Census Bureau's TIGER
+(Topologically Integrated Geographic Encoding and Referencing) data base of selected
+geographic and cartographic information. TIGER was developed at the Census Bureau to support
+the mapping and related geographic activities required by the decennial census and sample survey
+programs.  TIGER/Line files are made available to the public and are typically used by people to
+provide the digital map base for their Geographic Information System or mapping software.
+
+This CD-ROM does not contain software to display or generate maps.  Nor is the data on this
+CD-ROM in the form of a map image.  To create maps with the data on this CD-ROM, one
+would typically use a Geographic Information System package or other mapping software.  For
+information on how to use the TIGER/Line data with a specific package one should contact the
+company that produced the package. For information on companies that sell products that use
+TIGER/Line data or that provide various TIGER/Line-related services refer to the "Vendor's
+List" on the TIGER Page at the Census Bureau's World Wide Web site described below.
+
+WHAT'S NEW
+
+These TIGER/Line files are produced for use by the states participating in the Census
+2000 Redistricting Data Program, Phase 2, the Voting District Project (VTDP) to submit their
+voting districts to the U. S. Census Bureau.   The 1998 TIGER/Line files include approved
+submissions and updates from Phase 1, the Block Boundary Suggestion Project (BBSP), the 1998
+Boundary and Annexation Survey, and other Census Bureau programs
+that update the TIGER data base. It is important to note that even though each TIGER/Line file
+represents a whole county, all new features in existence may not have been added in this release.
+The extent of updates in any given county will vary by program, number of participants, type of
+participant, time of participation, and a given participant's degree of participation in a program. 
+
+
+USING THIS CD-ROM
+
+The 1998 TIGER/Line CD-ROMs contain digital cartographic data files and related documentation.
+The files include the counties, parishes, boroughs, census geographic areas, and equivalent entities
+for each state (or territory, and so forth) participating in the VTDP program.   The data is
+organized in subdirectories by county (or county equivalent) within a state. Each state
+subdirectory is named using the two-digit FIPS code and the Post Office abbreviation for
+the state (ex. 02_AK for Alaska).  Within the state subdirectory each county file has the name
+TGRssccc.ZIP, where the "ss" is the state FIPS code and "ccc" is the county FIPS code.  
+
+The data for each county is stored in this single compressed file that when decompressed results in
+up to 17 separate files representing each of the TIGER/Line record types that exist for that
+county.  Some counties did not require all of the 17 record types and therefore will have less than
+17 files. If the types of data contained in record types 4, 6, 7, 8, 9 and Z are not appropriate for a
+given county then the files for those record types will not be included.  The name of each of these
+files uses a modification of the above convention (TGRssccc.RTx) where "x" is the Record Type. 
+Appendix A of the documentation provides a list of counties and their FIPS codes by state.   
+
+Information on the content of each record type can be found in Chapter 6 of the TIGER/Line
+documentation.  Information on decompressing the data files is found below under the heading
+"Data Compression".  
+
+The files use the TIGER/Line record formats as described in the accompanying documentation. 
+When decompressed they are fixed length ASCII with record separators (carriage return, line
+feed).  The CD-ROM is in ISO 9660 format.  Users with PCS will require Microsoft CD-ROM
+Extensions Version 2.0 or higher.
+
+ADDITIONAL CONTENTS OF THE CD-ROM:
+
+COUNTSss.TXT
+
+Each CD-ROM contains COUNTSss.TXT files in the subdirectory directory for each state under
+the TIGER directory.  The COUNTSss.TXT files show record type file record counts by county
+for all states that are included on the compact disk.  Note that all counties are listed for a given
+state.  The layout of COUNTSss.TXT is  as follows:
+
+FIPS state code       16:17
+FIPS county code    20:22
+Creation date           25:30
+Record type            33:33
+Record Count         36:43
+
+README.TXT
+
+The document that you are presently reading.
+
+DOCUMENTATION
+
+The documentation for the TIGER/Line files is contained in the TECHDOC subdirectory.   The
+file name is TIGER98V.PDF and is provided in the PDF format which requires the ADOBE(TM)
+Acrobat 3.0 Reader.  We are including the installation software for both the Windows 3.1
+(ar16e301.exe) and the Windows 95 (ar32e301.exe) versions of the reader.  They are included
+in the TECHDOC/ACROREAD directory.  Choose the appropriate version of this software, copy it to
+the hard drive of your computer and run it.  It will install the ADOBE Reader software on your
+computer.  When the installation is complete you can view the TIGER/Line documentation by
+running the ADOBE Reader and selecting the TIGER98V.PDF file from the "Open" menu.  To get the
+ADOBE Reader for other computer platforms visit the ADOBE Web site for the proper software
+(http://www.adobe.com).
+
+Windows is a trademark of the Microsoft Corporation.  ADOBE and Acrobat Reader are
+trademarks of Adobe Systems Inc.
+
+GARM
+
+The Census Bureau has published a Geographic Areas Reference Manual (GARM) which is
+available on this CD-ROM in the TEXTDOC/GARM subdirectory.  This publication describes the
+various geographic programs at the Census Bureau and provides definitions of technical terms and
+a wealth of background information on the various geographic concepts used by the Census Bureau. 
+The manual was produced in ADOBE PDF and is separated into individual chapters to provide
+smaller file sizes for easier access.  
+
+DATA COMPRESSION
+
+The TIGER/Line data on this disk has been compressed into an archive file to save space and
+reduce the number of disks required for the data.  If the files were not compressed it would
+require over 40 CD-ROM disks to hold the data needed to cover the entire United States.   Use
+software compatible with PK-ZIP 1.93A or higher to decompress the data.
+
+Info-ZIP's software (Zip, Unzip and related utilities) are examples of packages that can be used. 
+The Info-ZIP software is free and can be obtained as source code or executables from various
+bulletin boards and on line services software archive sites.  There are versions for many
+computer platforms.  One site from which this software can be downloaded is: 
+http://www.cdrom.com/pub/infozip/UnZip.html
+
+KNOWN PROBLEMS AND ANOMALIES WITH THIS TIGER/LINE DATA SET:
+
+ADDRESS ANOMALIES IN PUERTO RICO AND QUEENS, N.Y.
+
+The TIGER/Line files contain some address range coverage for Puerto Rico.  However, use of
+this information for geocoding purposes may be problematic and the data user should proceed
+with caution.  These address ranges are preliminary attempts at using Puerto Rico address ranges
+in Census Bureau files.  Due to the lack of software or resources to handle some of the more
+unique aspects of addressing in Puerto Rico, the address ranges were entered without the
+standard edits and quality checks used in other parts of the United States. Improvements in
+software and address standardization for Puerto Rico are expected in the future.  At present,  there
+are inconsistencies, overlaps, and duplication of address ranges.  Address ranges may lack alpha
+character prefixes or have hyphenated prefixes. The files also lack the community names used in a
+four-line address that the U.S. Postal Service requires to avoid duplicate addresses.  Errors in the
+reference files, and other factors may limit the usefulness of this product for geocoding purposes. 
+
+Address range data for Queens County, NY in TIGER/Line does not show a consistent use of
+hyphenated and non-hyphenated addressing.  The Census Bureau intends to correct this in a future
+version of TIGER products.
+
+CALIFORNIA RECORD TYPE C EXTRANEOUS DATA
+
+Due to some technical problems, Alpine (003) and Contra Costa (013) counties will have
+additional data in their Record Type C (RT C) file.  The additional data consists of 1990 voting
+district and place entity records from adjacent counties in which they had county boundary changes
+with since 1990.  For example, Alpine County has all of Amador County's 1990 voting district and
+place entity records in RT C.  In addition, there may be additional counties with the same problem
+in the state of California or in the United States.  However, the aforementioned counties are the
+only ones exhibiting this problem.   The Census Bureau's Geography Division is in the process of
+fixing the problem.
+
+ROAD  FEATURE  ANOMALIES
+
+The Census Bureau extracts TIGER/Line files from the TIGER data base which is continually
+updated. During the update process for some 1998 TIGER/Line files errors caused anomalies to
+be introduced into some chains represented in Record Types 1 and 2. For these cases road
+features may appear in the 1998 TIGER/Line files unconnected to other road features (so-called
+floating features) or severely skewed in relation to surrounding line features of any type.
+
+Another road feature anomaly is the sporadic occurrence of road segments with a misclassified
+Census Feature Class Code (CFCC).  The result is that complete chains for the affected road features
+will have segments with different CFCC values assigned erroneously.  This problem could affect
+applications that use the CFCC values for network analysis, routing, or for assigning symbology to
+a feature when creating a map.  We believe that these errors were introduced inadvertently during
+an updating operation to edit address range information on new as well as existing records.   These
+errors will be corrected in the version of the 1999 TIGER/Line (also known as the VTDP
+Verification TIGER/Line) scheduled to be released in late 1999.
+
+INTERNAL POINT ANOMALIES 
+
+For some polygon internal points (Record Type P) the latitude and longitude calculated for that
+point lies on a vertex.  These occurances are limited to very small polygons.  For most uses this
+will not be a problem, however, some GIS software applications use a higher precision in
+calculating the locations of features which can cause the internal point to fall slightly outside of
+the polygon.  This in turn can cause the software to malfunction.
+
+QUESTIONS AND ADDITIONAL INFORMATION
+
+Questions regarding the Voting District Project should be directed to either John Byle or Janemary
+Rosenson of the Geography Division at (301)457-1128.  Technical questions about the Census
+TIGER/Line files and future plans for this and other TIGER-related products may be directed to the
+Products and Services Staff of the Geography Division at (301) 457-1128 or to the e-mail
+address tiger@census.gov.  In addition to this Cooperative Program version of TIGER/Line the
+Census Bureau also produces a version of TIGER/Line for public sale and a variety of related
+products based on TIGER data.  General information about these products is available from the
+TIGER page on the Census Bureau's World Wide Web site
+(http://www.census.gov/geo/www/tiger/).  This Web site also is a source of information that is
+of specific interest to TIGER/Line users and of general interest regarding the geographic programs
+at the Census Bureau.  As appropriate, additional information about this product will be posted,
+such as ERRATA or USER NOTES.
+
+
+
+
+
+

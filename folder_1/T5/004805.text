@@ -1,0 +1,1313 @@
+JobOptionsSvc     WARNING [ from ../src/JobOptionsSvc/PropertyCompiler.cpp:87] in function: PropertyCompiler::PropertyCompiler(const std::string&, const std::string&, MsgStream&, JobOptionsCatalogue&): Ignoring invalid search path :/afs/usatlas.bnl.gov/users/damazio/work/atlas_6.5.0/InstallArea/jobOptions:/afs/usatlas.bnl.gov/software/dist/6.5.0/InstallArea/jobOptions:/afs/usatlas.bnl.gov/offline/external/Gaudi/0.12.1/InstallArea/jobOptions
+JobOptionsSvc        INFO 
+
+//##############################################################
+//
+// Job options file
+//
+//==============================================================
+//
+//   read Generator objects from the AthenaRoot file
+//   converts them to transient objects
+//   runs Atlfast
+//
+// --> Including file $EVENTSELECTORATHENAROOTROOT/share/RootEventSelector_jobOptions.txt
+
+
+//##############################################################
+//
+// Job options file for using RootEventSelector as input source. 
+//   it defines input file name, and load EventInfo converter.
+//==============================================================
+
+// --> Including file $ATHENACOMMONROOT/share/Atlas.UnixStandardJob.txt
+
+
+//**************************************************************
+//
+// Unix standard job options file
+//
+//==============================================================
+//--------------------------------------------------------------
+//ApplicationMgr configuration
+//--------------------------------------------------------------
+//default services to be instantiated
+ApplicationMgr.ExtSvc += { "IncidentSvc/IncidentSvc", 
+		           "EvtPersistencySvc/EventPersistencySvc",
+			   "HistogramSvc/HistogramDataSvc",
+			   "NTupleSvc/NTupleSvc",
+			   "ToolSvc/ToolSvc",
+			   "AuditorSvc/AuditorSvc",
+			   "RndmGenSvc/RndmGenSvc",
+			   "ChronoStatSvc/ChronoStatSvc"
+			 };	
+
+ApplicationMgr.DLLs   += { "AthenaServices" };
+ApplicationMgr.EventLoop = "AthenaEventLoopMgr";
+ApplicationMgr.OutStreamType = "AthenaOutputStream";
+AthenaEventLoopMgr.OutStreamType = "AthenaOutputStream";
+
+//--------------------------------------------------------------
+// StoreGate services configuration
+//--------------------------------------------------------------
+// --> Including file $STOREGATEROOT/share/StoreGate_jobOptions.txt
+
+
+ApplicationMgr.DLLs   += { "StoreGate", "CLIDSvc" };
+ApplicationMgr.ExtSvc += { "ClassIDSvc" };
+ApplicationMgr.ExtSvc += { "StoreGateSvc", "StoreGateSvc/DetectorStore", "StoreGateSvc/ConditionsStore" };
+ApplicationMgr.ExtSvc += { "ActiveStoreSvc" };
+//FIXME uncomment to verify that your  CLIDs are good!
+//ClassIDSvc.CLIDDBFiles += { "$CLIDSVCROOT/share/clid.db" };
+
+
+// <-- End of including file $STOREGATEROOT/share/StoreGate_jobOptions.txt
+
+
+//--------------------------------------------------------------
+// Initialization of DetDescrCnvSvc
+//--------------------------------------------------------------
+// --> Including file $DETDESCRCNVSVCROOT/share/DetStore_joboptions.txt
+
+
+//
+// Joboptions for bootstrapping the loading of the DetectorStore with
+// the DetDescrCnvSvc
+//
+
+// DLLs 
+ApplicationMgr.DLLs += { "DetDescrCnvSvc" };
+
+// Add in services
+//  (NOTE: the following does not yet work for the detector store)
+//ApplicationMgr.ExtSvc += { "DetPersistencySvc/DetectorPersistencySvc", 
+//			   "DetDescrCnvSvc" };
+//DetectorPersistencySvc.CnvServices += { "DetDescrCnvSvc" };
+// Instead use the event pers svc:
+ApplicationMgr.ExtSvc += { "DetDescrCnvSvc" };
+EventPersistencySvc.CnvServices += { "DetDescrCnvSvc" };
+
+// Add list of DetectorManagers to be loaded at startup
+// (Currently done in the individual mgr joboptions)
+// DetDescrCnvSvc.DetectorManagers = { "InDetMgr", "LArMgr", "TileMgr", "MuonMgr" };
+
+// Specify primary Identifier dictionary to be used
+DetDescrCnvSvc.IdDictName = "ATLAS_IDS.xml";
+
+// Always include the IdDict jobOptions
+// --> Including file $IDDICTDETDESCRCNVROOT/share/IdDictDetDescrCnv_joboptions.txt
+
+
+//
+//  Joboptions for the loading of the of InDetDDMgr
+//
+
+// DLLs 
+ApplicationMgr.DLLs += { "IdDictDetDescrCnv" };
+
+
+// <-- End of including file $IDDICTDETDESCRCNVROOT/share/IdDictDetDescrCnv_joboptions.txt
+
+
+// Set flag to use compact ids 
+DetDescrCnvSvc.CompactIDsOnly = true;
+
+
+// <-- End of including file $DETDESCRCNVSVCROOT/share/DetStore_joboptions.txt
+
+
+//==============================================================
+//
+// End of Unix standard job options file
+//
+//**************************************************************
+
+
+// <-- End of including file $ATHENACOMMONROOT/share/Atlas.UnixStandardJob.txt
+
+
+ApplicationMgr.DLLs   += { "EventSelectorAthenaRoot", "HbookCnv",
+                      "AthenaRootCnvSvc","EventHdrAthenaRoot",
+                      "RootSvcModules" };
+
+ApplicationMgr.ExtSvc += { "RootSvc","EventSelectorAthenaRoot/EventSelector",
+		      "AthenaRootCnvSvc" };
+
+RootSvc.Input          = {"RootFile.root"};
+EventPersistencySvc.CnvServices     += { "AthenaRootCnvSvc" };
+
+
+
+// <-- End of including file $EVENTSELECTORATHENAROOTROOT/share/RootEventSelector_jobOptions.txt
+
+
+ApplicationMgr.DLLs += { "GeneratorObjectsAthenaRoot" };
+// The input file in Root Objects Format
+RootSvc.Input = { "example.root" };
+
+// Some basic Athena Services
+ApplicationMgr.DLLs   += { "StoreGate", "AthenaServices" };
+ApplicationMgr.ExtSvc += { "StoreGateSvc", "StoreGateSvc/DetectorStore" };
+
+ApplicationMgr.EventLoop = "AthenaEventLoopMgr";
+// The output Stream to output data
+ApplicationMgr.OutStreamType = "AthenaOutputStream";
+//--------------------------------------------------------------
+
+// Basic Athena library
+// ApplicationMgr.DLLs += { "TruthExamples" };
+ApplicationMgr.DLLs += { "GaudiAlg" };
+ApplicationMgr.DLLs += { "GaudiAud" };
+AuditorSvc.Auditors  = { "ChronoAuditor" };
+
+// ROOT Output Parameters
+ApplicationMgr.DLLs += { "RootHistCnv" };
+// Select ROOT persistency
+ApplicationMgr.HistogramPersistency = "ROOT";
+// Output file for Histograms
+HistogramPersistencySvc.OutputFile = "example_result_hist.root";
+// Output file for the Ntuple
+NTupleSvc.Output = {"FILE1 DATAFILE='example_result_ntup.root' TYP='ROOT' OPT='NEW'"};
+
+// Number of events to be processed. If not defined all events
+// in the input file
+// ApplicationMgr.EvtMax = 100;
+
+//--------------------------------------------------------------
+// Output options
+//--------------------------------------------------------------
+
+// OUTPUT PRINTOUT LEVEL
+// Set output level threshold (2=DEBUG, 3=INFO, 4=WARNING, 5=ERROR, 6=FATAL )
+// you can override this for individual modules if necessary
+MessageSvc.OutputLevel               = 3;
+
+// Execution of algorithms given in sequencer
+//
+ApplicationMgr.TopAlg = {"Sequencer/TopSequence"};
+
+// Option to dump
+// GENERATORS SETUP (select by uncommenting/commenting)
+// TopSequence.Members = {"Sequencer/Generator"};
+// if you want to print each MC event for debugging purposes, uncomment:
+// Generator.Members = {"DumpMC"};
+
+// ATLFAST SETUP 
+// Load ATLFast library
+ApplicationMgr.DLLs += { "AtlfastAlgs" };
+// Declare the Algorithm of ATLFast as part of the main algorithm
+TopSequence.Members += {"Sequencer/Atlfast"};
+
+// The Atlfast Parameters are fully declared in the file below
+// If you want to change the options it is better to make a copy
+// of the file and change parameters in the copy
+// --> Including file AtlfastStandardOptions.txt
+
+
+//##############################################################
+//
+// AtlfastStandardOptions file
+//
+//==============================================================
+// --> Including file AtlfastDoNotTouch.txt
+
+
+//##############################################################
+// AtlfastDoNotTouch
+// To be changed by experts only
+//##############################################################
+Atlfast.members = {
+//    Global Event Data:
+        "Atlfast::GlobalEventDataMaker/GlobalEventDataMaker",
+// 
+//    Make calorimeter cell map for the event:
+        "Atlfast::CellMaker/CellMaker", 
+//
+//    Make clusters based on  cells
+        "Atlfast::ClusterMaker/ClusterMaker",
+//
+//    Make electrons 
+        "Atlfast::DefaultReconstructedParticleMaker/ElectronMaker",
+//
+//    Make photons
+        "Atlfast::DefaultReconstructedParticleMaker/PhotonMaker",
+//
+//    Make muons 
+	"Atlfast::DefaultReconstructedParticleMaker/MuonMaker",
+//
+//    Find Associations between eor gamma and clusters 
+//	"Atlfast::Associator/Associator",
+//
+//    Sort the electrons into isolated and non-isolated
+	"Atlfast::Isolator/ElectronIsolator",
+//
+//    Sort the photons into isolated and non-isolated
+        "Atlfast::Isolator/PhotonIsolator",
+//
+//    Sort the muons into isolated and non-isolated
+        "Atlfast::Isolator/MuonIsolator",
+//
+//    Make Jets
+        "Atlfast::JetMaker/JetMaker",
+//
+//    Correct Jets
+        "Atlfast::AtlfastB/AtlfastB",
+//
+//    Make event header
+        "Atlfast::EventHeaderMaker/EventHeaderMaker"
+};
+//---------------------------
+// Locations not to be touched
+//---------------------------
+// Cell Maker 
+CellMaker.InputLocation		= "/Event/McEventCollection";
+CellMaker.OutputLocation        = "/Event/AtlfastCells"; 
+//-------------
+//Cluster Maker
+//-------------
+//Cluster Maker
+ClusterMaker.ProcessCells       = true;
+ClusterMaker.ProcessTracks      = false;
+ClusterMaker.InputCellLocation  = "/Event/AtlfastCells";
+ClusterMaker.InputTrackLocation = "/Event/AtlfastTracks";
+ClusterMaker.OutputLocation     = "/Event/AtlfastClusters";
+ClusterMaker.UnusedCellLocation	= "/Event/AtlfastUnusedCells";
+//------------
+// Track Maker
+//------------
+TrackMaker.MC_eventLocation  = "/Event/McEventCollection";
+TrackMaker.OutputLocation    = "/Event/AtlfastTracks"; 
+//------------
+// Track Dumper
+//------------
+TrackDumper.InputLocation     = "/Event/AtlfastTracks"; 
+//------------------
+// Particles Makers
+//------------------
+// electron 
+ElectronMaker.OutputLocation               = "/Event/AtlfastElectrons";
+ElectronMaker.MC_eventLocation		   = "/Event/McEventCollection";
+//muon
+MuonMaker.OutputLocation                   = "/Event/AtlfastMuons";
+MuonMaker.MC_eventLocation		   = "/Event/McEventCollection";
+//photon
+PhotonMaker.OutputLocation                 = "/Event/AtlfastPhotons";
+PhotonMaker.MC_eventLocation		   = "/Event/McEventCollection";
+//----------
+// Jet Maker
+//----------
+JetMaker.InputLocation                     = "/Event/AtlfastClusters";
+JetMaker.OutputLocation                    = "/Event/AtlfastJets";
+JetMaker.MuonLocation                      = "/Event/AtlfastNonIsolatedMuons";
+JetMaker.MissingMomentumLocation	   = "/Event/AtlfastMissingMomentum";
+JetMaker.McTruthLocation		   = "/Event/McEventCollection";
+JetMaker.UnusedCellLocation		   = "/Event/AtlfastUnusedCells";
+//----------
+// AtlfastB
+//----------
+AtlfastB.InputLocation                     = "/Event/AtlfastJets";
+AtlfastB.OutputLocation                    = "/Event/AtlfastBJets";
+//-------------------
+// Event Header Maker 
+//------------------- 
+EventHeaderMaker.MissingMomentumLocation  = "/Event/AtlfastMissingMomentum";
+EventHeaderMaker.ElectronLocation	  = "/Event/AtlfastIsolatedElectrons";
+EventHeaderMaker.PhotonLocation		  = "/Event/AtlfastIsolatedPhotons";
+EventHeaderMaker.IsolatedMuonLocation     = "/Event/AtlfastIsolatedMuons";
+EventHeaderMaker.NonIsolatedMuonLocation  = "/Event/AtlfastNonIsolatedMuons";
+EventHeaderMaker.JetLocation              = "/Event/AtlfastJets";
+EventHeaderMaker.McTruthLocation          = "/Event/McEventCollection";
+EventHeaderMaker.OutputLocation           = "/Event/AtlfastEventHeader";
+//----------
+// Isolators
+//----------
+// electron
+ElectronIsolator.InputLocation             = "/Event/AtlfastElectrons";
+ElectronIsolator.IsolatedOutputLocation    = "/Event/AtlfastIsolatedElectrons";
+ElectronIsolator.NonIsolatedOutputLocation = "/Event/AtlfastNonIsolatedElectrons";
+ElectronIsolator.CellLocation              = "/Event/AtlfastCells";
+ElectronIsolator.Clusterlocation           = "/Event/AtlfastClusters";
+//photon
+PhotonIsolator.InputLocation               = "/Event/AtlfastPhotons";
+PhotonIsolator.IsolatedOutputLocation      = "/Event/AtlfastIsolatedPhotons";
+PhotonIsolator.NonIsolatedOutputLocation   = "/Event/AtlfastNonIsolatedPhotons";
+PhotonIsolator.CellLocation                = "/Event/AtlfastCells";
+PhotonIsolator.ClusterLocation             = "/Event/AtlfastClusters";
+//muon
+MuonIsolator.InputLocation                 = "/Event/AtlfastMuons";
+MuonIsolator.IsolatedOutputLocation        = "/Event/AtlfastIsolatedMuons";
+MuonIsolator.NonIsolatedOutputLocation     = "/Event/AtlfastNonIsolatedMuons";
+MuonIsolator.CellLocation                  = "/Event/AtlfastCells";
+MuonIsolator.ClusterLocation               = "/Event/AtlfastClusters";
+MuonIsolator.RClusterMatch                 = 0.0;
+//---------------------
+// StandardNtuple Maker 
+//--------------------- 
+StandardNtupleMaker.JetLocation		    = "/Event/AtlfastJets";
+StandardNtupleMaker.ElectronLocation	    = "/Event/AtlfastIsolatedElectrons";
+StandardNtupleMaker.IsolatedMuonLocation    = "/Event/AtlfastIsolatedMuons";
+StandardNtupleMaker.NonIsolatedMuonLocation = "/Event/AtlfastNonIsolatedMuons";
+StandardNtupleMaker.PhotonLocation	    = "/Event/AtlfastIsolatedPhotons";
+StandardNtupleMaker.McTruthLocation         = "/Event/McEventCollection";
+StandardNtupleMaker.EventHeaderLocation     = "/Event/AtlfastEventHeader";
+//-------------------------
+// FinalStateParticleDumper 
+//-------------------------
+FinalStateParticleDumper.InputLocation	= "/Event/McEventCollection";
+//-------
+//Dumpers
+//-------
+ElectronDumper.InputLocation               = "/Event/AtlfastElectrons";
+//
+MuonDumper.InputLocation                   = "/Event/AtlfastMuons";
+//
+IsolatedElectronDumper.InputLocation       = "/Event/AtlfastIsolatedElectrons";
+//
+PhotonDumper.InputLocation                 = "/Event/AtlfastPhotons";
+//
+IsolatedPhotonDumper.InputLocation         = "/Event/AtlfastIsolatedPhotons";
+//-----------------------
+//StandardHistogram Maker
+//-----------------------
+StandardHistogramMaker.ElectronLocation    = "/Event/AtlfastElectrons";
+StandardHistogramMaker.PhotonLocation      = "/Event/AtlfastPhotons";
+StandardHistogramMaker.IsolatedElectronLocation = "/Event/AtlfastIsolatedElectrons";
+StandardHistogramMaker.IsolatedPhotonLocation   = "/Event/AtlfastIsolatedPhotons";
+StandardHistogramMaker.CellLocation        = "/Event/AtlfastCells";
+StandardHistogramMaker.ClusterLocation     = "/Event/AtlfastClusters";
+//
+ElectronHistogramMaker.InputLocation       = "/Event/AtlfastElectrons";
+ElectronHistogramMaker.McTruthLocation     = "/Event/McEventCollection";
+ElectronHistogramMaker.ParticleType        = 11;
+//
+PhotonHistogramMaker.InputLocation         = "/Event/AtlfastPhotons";
+PhotonHistogramMaker.McTruthLocation       = "/Event/McEventCollection";
+PhotonHistogramMaker.ParticleType          = 22;
+//
+MuonHistogramMaker.InputLocation           = "/Event/AtlfastMuons";
+MuonHistogramMaker.McTruthLocation         = "/Event/McEventCollection";
+MuonHistogramMaker.ParticleType            = 13;
+//----------
+//SimpleTest
+//----------
+SimpleTest1.AtlfastEventLocation           = "/Event/Atlfast" ;
+SimpleTest1.JetLocation                    = "/Event/AtlfastJets";
+SimpleTest1.ElectronLocation               = "/Event/AtlfastIsolatedElectrons";
+SimpleTest1.IsolatedMuonLocation           = "/Event/AtlfastIsolatedMuons";
+SimpleTest1.NonIsolatedMuonLocation        = "/Event/AtlfastNonIsolatedMuons";
+SimpleTest1.PhotonLocation                 = "/Event/AtlfastIsolatedPhotons";
+//SimpleTest1.TrackLocation                  = "/Event/AtlfastTracks";
+SimpleTest1.McTruthLocation                = "/Event/McEventCollection";
+SimpleTest1.TriggerLocation                = "/Event/AtlfastTrigger";
+SimpleTest1.EventHeaderLocation            = "/Event/AtlfastEventHeader";
+SimpleTest1.outputLocation                 = "/Event/SimpleTest1";
+//
+SimpleTest2.AtlfastEventLocation           = "/Event/Atlfast" ;
+SimpleTest2.JetLocation                    = "/Event/AtlfastJets";
+SimpleTest2.ElectronLocation               = "/Event/AtlfastIsolatedElectrons";
+SimpleTest2.IsolatedMuonLocation           = "/Event/AtlfastIsolatedMuons";
+SimpleTest2.NonIsolatedMuonLocation        = "/Event/AtlfastNonIsolatedMuons";
+SimpleTest2.PhotonLocation                 = "/Event/AtlfastIsolatedPhotons";
+//SimpleTest2.TrackLocation                  = "/Event/AtlfastTracks";
+SimpleTest2.McTruthLocation                = "/Event/McEventCollection";
+SimpleTest2.TriggerLocation                = "/Event/AtlfastTrigger";
+SimpleTest2.EventHeaderLocation            = "/Event/AtlfastEventHeader";
+SimpleTest2.outputLocation                 = "/Event/SimpleTest2";
+//----------
+//CellDumper
+//----------
+CellDumper.inputLocation                   = "/Event/AtlfastCells";
+//------------------------
+//FinalStateParticleDumper
+//------------------------
+FinalStateParticleDumper.inputLocation     = "/Event/McEventCollection";
+//----------
+//SimpleDiff
+//----------
+SimpleDiff.inputLocation1                  = "/Event/SimpleTest1";
+SimpleDiff.inputLocation2                  = "/Event/SimpleTest2";
+//----------
+//Associator
+//----------
+Associator.ElectronLocation                = "/Event/AtlfastElectrons";
+Associator.PhotonLocation                  = "/Event/AtlfastPhotons"; 
+Associator.MuonLocation                    = "/Event/AtlfastMuons";   
+Associator.ClusterLocation                 = "/Event/AtlfastClusters";
+Associator.JetLocation                     = "/Event/AtlfastJets";
+Associator.AssocElectronLocation           = "/Event/AtlfastAssocElectrons";
+Associator.AssocPhotonLocation             = "/Event/AtlfastAssocPhotons";
+Associator.AssocMuonLocation               = "/Event/AtlfastAssocMuons";
+//--------------------------
+// End of DoNotTouch options
+//-------------------------- 
+
+
+
+
+
+// <-- End of including file AtlfastDoNotTouch.txt
+
+// Standard job options for Atlfast
+//
+// Options for modules which are not used are ignored.
+//
+// Uncomment lines to add an algorithm to ATLFAST sequence:
+//
+//Atlfast.members +={"Atlfast::TrackMaker/TrackMaker"};
+Atlfast.members +={"Atlfast::Monitor/Monitor"};
+//Atlfast.members +={"Atlfast::TrackNtupleMaker/TrackNtupleMaker"};
+Atlfast.members +={"Atlfast::StandardNtupleMaker/StandardNtupleMaker"};
+// Atlfast.members +={"Atlfast::ExampleAnalysis/ExampleAnalysis"};
+// Atlfast.members +={"Atlfast::AtlfastProtoJetMaker/AtlfastProtoJetMaker"};
+
+//--------------------------------------------------------------
+// Algorithm Parameters set to Default Values 
+//--------------------------------------------------------------
+// Default Reconstructed Particle Maker
+//-------------------------------------
+// options for electron maker
+ElectronMaker.ParticleType               = 11;
+ElectronMaker.mcMinimumPt                = 0.0;
+ElectronMaker.mcMaximumEta               = 100.0;
+ElectronMaker.MinimumPt                  = 5.0;
+ElectronMaker.MaximumEta                 = 2.5;
+ElectronMaker.DoSmearing		 = true;
+//
+// options for muon maker
+MuonMaker.ParticleType                   = 13;
+MuonMaker.mcMinimumPt                    = 0.5;
+MuonMaker.mcMaximumEta                   = 2.5;
+MuonMaker.MinimumPt                      = 6.0;
+MuonMaker.MaximumEta                     = 100.0;
+MuonMaker.DoSmearing                     = true;
+MuonMaker.MuonSmearKey			 = 3;
+//
+//options for photon maker
+PhotonMaker.ParticleType                 = 22;
+PhotonMaker.mcMinimumPt                  = 0.0;
+PhotonMaker.mcMaximumEta                 = 100.0;
+PhotonMaker.MinimumPt                    = 5.0;
+PhotonMaker.MaximumEta                   = 2.5;
+PhotonMaker.DoSmearing			 = true;
+//--------------------------------------------------------------
+// Cell Maker
+//-----------------------------------
+CellMaker.EtaCoverage        = 5.0;
+CellMaker.MinETCell          = 0.0;
+CellMaker.GranBarrelEta      = 0.1;
+CellMaker.GranBarrelPhi      = 0.1;
+CellMaker.GranForwardEta     = 0.2;
+CellMaker.GranForwardPhi     = 0.2;
+CellMaker.FastShower         = false;
+//--------------------------------------------------------------
+// Cluster Maker
+//-------------------------------------  
+ClusterMaker.ProcessCells       = true;
+ClusterMaker.ProcessTracks      = false;
+ClusterMaker.RConeBarrel        = 0.401;
+ClusterMaker.RConeForward       = 0.401;
+ClusterMaker.minInitiatorET     = 1.5;
+ClusterMaker.minClusterET       = 5.0;
+ClusterMaker.Strategy           = "Cone";
+
+//--------------------------------------------------------------
+// Jet Maker
+//-------------------------------------  
+JetMaker.MinimumPT        = 10.0;
+JetMaker.MaximumEta       = 5.0;
+JetMaker.DoSmearing       = true;
+JetMaker.RconeB           = 0.400;
+JetMaker.RconeF		  = 0.400;
+JetMaker.bPtMin		  = 5.0;  
+JetMaker.bMaxDeltaR       = 0.2;
+JetMaker.cPtMin		  = 5.0;
+JetMaker.cMaxDeltaR       = 0.2;
+JetMaker.tauPtMin         = 10.0;
+JetMaker.tauMaxDeltaR     = 0.3;
+JetMaker.etaTagMax        = 2.5;
+JetMaker.tauJetPtRatio    = 0.9;
+//--------------------------------------------------------------
+// AtlfastB (jet corrector)
+//-------------------------------------
+ AtlfastB.AtlfBjetSwitch   =true;
+AtlfastB.AtlfCalSwitch     =true;
+AtlfastB.AtlfTauSwitch     =true;
+AtlfastB.AtlfTauVetoSwitch =false;
+AtlfastB.AtlfTrigMuoSwitch =false;
+AtlfastB.JetCorrFile       ="./AtlfastBjet.dat";
+AtlfastB.CJetCorrFile      ="./AtlfastBcjet.dat";
+AtlfastB.AtlfBNSet         = 1; 
+AtlfastB.TauEff            = 0.05;
+AtlfastB.TauVetoOption     = 1;
+//--------------------------------------------------------------
+// Track Maker
+//------------------------------------- 
+TrackMaker.McPtMinimum	     = 0.5;
+TrackMaker.McEtaMaximum      = 2.5;
+TrackMaker.vtMaximum         = 3.0;
+TrackMaker.vlMaximum         = 40.0;
+TrackMaker.DoSmearing	      = true;
+TrackMaker.BField	      = 2.0;
+//--------------------------------------------------------------
+// Event Header Maker 
+//------------------------------------- 
+EventHeaderMaker.BeamEnergy               = 7000.0;
+EventHeaderMaker.TestMode		  = 0;
+//--------------------------------------------------------------
+// FinalStateParticleDumper 
+//------------------------------------
+// choose one of the following values for SelectorName
+//FinalStateParticleDumper.SelectorName	= "Z0selector";
+//FinalStateParticleDumper.SelectorName	= " ";
+//FinalStateParticleDumper.SelectorName	= "qselector";
+//FinalStateParticleDumper.SelectorName	= "bSelector";
+FinalStateParticleDumper.SelectorName	= "All";
+//-------------------------------------- 
+// GlobalEventData Maker 
+//------------------------------------- 
+//Luminosity option: 1=low, 2-high
+GlobalEventDataMaker.Luminosity		= 1;
+GlobalEventDataMaker.Invisibles		= {12,14,16}; 
+GlobalEventDataMaker.RandomSeed		= 12345;
+GlobalEventDataMaker.BFieldOn		= true;
+GlobalEventDataMaker.BarrelForwardEta	= 3.2;
+//
+//--------------------------------------------------------------
+// Algorithms Options
+//--------------------------------------------------------------
+//options for cell maker
+//CellMaker.OutputLevel                  = 2;
+//
+//options for cluster maker
+//CluserMaker.OutputLevel               = 2;
+
+//options for track maker
+//TrackMaker.OutputLevel                 = 2;
+
+//options for electron isolator
+//ElectronIsolator.OutputLevel           = 2;
+
+//options for photon isolator
+//PhotonIsolator.OutputLevel             = 2;
+
+//options for muon isolator
+//MuonIsolator.OutputLevel               = 2;
+
+//options for various histogram makers
+
+ElectronHistogramMaker.HistogramStart    = 1000;
+ElectronHistogramMaker.HistogramTitle    = "All Electrons";
+//ElectronHistogramMaker.OutputLevel     = 3;
+
+PhotonHistogramMaker.HistogramStart      = 2000;
+PhotonHistogramMaker.HistogramTitle      = "All Photons";
+//PhotonHistogramMaker.OutputLevel       = 2;
+
+MuonHistogramMaker.HistogramStart        = 3000;
+MuonHistogramMaker.HistogramTitle        = "All Muons";
+
+//SimpleTest1
+SimpleTest1.writeRef                     = true;
+SimpleTest1.outFile                      = "./outFile1.txt";
+SimpleTest1.refFile                      = "./simpleTest132_11.txt";
+SimpleTest1.cmpFile                      = "./cmpFile1.txt";
+
+//SimpleTest2
+SimpleTest2.writeRef                     = true;
+SimpleTest2.outFile                      = "./outFile2.txt";
+SimpleTest2.refFile                      = "./simpleTest132_07.txt";
+SimpleTest2.cmpFile                      = "./cmpFile2.txt";
+
+//Monitor
+//Monitor.Frequency                        = 100;
+//==============================================================
+//
+// End of job options file
+//
+//##############################################################
+
+// then override any you need specificially for this job
+//
+// for example, get ClusterMaker to print out DEBUG messages as well as INFO
+PythiaModule.OutputLevel = 4;
+//FinalStateParticleDumper.OutputLevel = 2;
+//PhotonMaker.OutputLevel              = 2;
+//MuonMaker.OutputLevel                = 2;
+//MuonMaker.OutputLevel                = 2;
+//JetMaker.OutputLevel                 = 2;
+//AtlfastB.OutputLevel                 = 2;
+//EventHeaderMaker.OutputLevel         = 2;
+//
+// Uncomment lines to add a debugging/test algorithm to ATLFAST sequence:
+//
+//
+// Atlfast.members += {"Atlfast::CellDumper/CellDumper"};
+//Atlfast.members += 
+//		{"Atlfast::FinalStateParticleDumper/FinalStateParticleDumper"};
+// Atlfast.members +=
+//       {"Atlfast::ReconstructedParticleDumper/ElectronDumper"};
+// Atlfast.members +=
+//             {"Atlfast::ReconstructedParticleDumper/IsolatedElectronDumper"};
+// Atlfast.members +=
+//	       {"Atlfast::ReconstructedParticleDumper/PhotonDumper"};
+// Atlfast.members +=
+//             {"Atlfast::ReconstructedParticleDumper/IsolatedPhotonDumper"};
+// Atlfast.members +=
+//             {"Atlfast::StandardHistogramMaker/StandardHistogramMaker"};
+//
+//   Histogram ReconstructedParticles
+// Atlfast.members +=
+//     {"Atlfast::ReconstructedParticleHistogramMaker/ElectronHistogramMaker"};
+// Atlfast.members +=
+//     {"Atlfast::ReconstructedParticleHistogramMaker/PhotonHistogramMaker"};
+// Atlfast.members +=
+//     {"Atlfast::ReconstructedParticleHistogramMaker/MuonHistogramMaker};
+// Atlfast.members +=
+//     {"Atlfast::SimpleTest/SimpleTest1"};
+// Atlfast.members +=
+//     {"Atlfast::SimpleTest/SimpleTest2"};
+// Atlfast.members +=
+//     {"Atlfast::SimpleDiff/SimpleDiff"};
+//
+
+
+  
+
+
+
+
+
+
+
+
+
+
+// <-- End of including file AtlfastStandardOptions.txt
+
+// #include "AtlfastChangedOptions.txt"
+
+//==============================================================
+//
+// End of job options file
+//
+//##############################################################
+
+Job options successfully read in from readObj_to_Atlfast_r.txt
+ServiceManager    WARNING Service factory for type ActiveStoreSvc already declared
+ServiceManager    WARNING Service factory for type ProxyProviderSvc already declared
+ServiceManager    WARNING Service factory for type StoreGateSvc already declared
+WARNING Algorithm factory for type AthenaOutputStream already declared. Overwriting it.
+WARNING Algorithm factory for type AthenaConditionStream already declared. Overwriting it.
+ObjectManager     WARNING Factory for class:AlgContextAuditor already exists.
+ServiceManager    WARNING Service factory for type AlgContextSvc already declared
+ServiceManager    WARNING Service factory for type AtRndmGenSvc already declared
+ServiceManager    WARNING Service factory for type AthenaEventLoopMgr already declared
+ApplicationMgr       INFO Successfully loaded modules: AthenaServices, StoreGate, CLIDSvc, DetDescrCnvSvc, IdDictDetDescrCnv, EventSelectorAthenaRoot, HbookCnv, AthenaRootCnvSvc, EventHdrAthenaRoot, RootSvcModules, GeneratorObjectsAthenaRoot, StoreGate, AthenaServices, GaudiAlg, GaudiAud, RootHistCnv, AtlfastAlgs
+Warning in <Format>: string truncated: .:/afs/usatlas.bnl.gov/offline...
+dlopen error: /afs/usatlas.bnl.gov/offline/external/ROOT/v3.05.05/rh73_gcc32/root/lib/libMinuit.so: undefined symbol: _ZNK7TObject7DoErrorEiPKcS1_Pc
+Load Error: Failed to load Dynamic link library /afs/usatlas.bnl.gov/offline/external/ROOT/v3.05.05/rh73_gcc32/root/lib/libMinuit.so
+ApplicationMgr       INFO Application Manager Configured successfully
+EventPersistenc...   INFO "CnvServices": ["DetDescrCnvSvc", "AthenaRootCnvSvc"]
+HistogramPersis...   INFO "CnvServices": ["HbookHistSvc", "RootHistSvc"]
+RootHistSvc          INFO Writing ROOT histograms to: example_result_hist.root
+HistogramPersis...   INFO Added successfully Conversion service:RootHistSvc
+NTupleSvc            INFO Added stream file:example_result_ntup.root as FILE1
+RndmGenSvc.Engine    INFO Generator engine type:RanluxEngine
+RndmGenSvc.Engine    INFO Current Seed:1234567 Luxury:3
+RndmGenSvc           INFO Using Random engine:HepRndm::Engine<RanluxEngine>
+ClassIDSvc           INFO Initializing ClassIDSvc - package version CLIDSvc-00-00-07
+ClassIDSvc           INFO ClassIDSvc Initialized successfully 
+ConditionsStore      INFO Initializing ConditionsStore - package version StoreGate-02-09-07
+ProxyProviderSvc     INFO Initializing ProxyProviderSvc - package version StoreGate-02-09-07
+ActiveStoreSvc       INFO Initializing ActiveStoreSvc - package version StoreGate-02-09-07
+DetDescrCnvSvc       INFO  initializing 
+DetDescrCnvSvc       INFO Found DetectorStore service
+DetDescrCnvSvc       INFO  filling proxies for detector managers 
+DetDescrCnvSvc       INFO  filling proxies for GeoModel root nodes 
+DetDescrCnvSvc       INFO  filling address for IdDict with CLID 2411 and storage type 68 to detector store 
+RootSvc              INFO initialize() in RootSvc
+RootSvc              INFO Open 1 input ROOT file. 
+RootSvc              INFO   Input[0] = example.root
+EventSelector        INFO  Got Root Service.  
+StoreGateSvc         INFO Initializing StoreGateSvc - package version StoreGate-02-09-07
+DetectorStore        INFO Initializing DetectorStore - package version StoreGate-02-09-07
+TopSequence          INFO Member list: Sequencer/Atlfast
+Atlfast              INFO Member list: Atlfast::GlobalEventDataMaker/GlobalEventDataMaker, Atlfast::CellMaker/CellMaker, Atlfast::ClusterMaker/ClusterMaker, Atlfast::DefaultReconstructedParticleMaker/ElectronMaker, Atlfast::DefaultReconstructedParticleMaker/PhotonMaker, Atlfast::DefaultReconstructedParticleMaker/MuonMaker, Atlfast::Isolator/ElectronIsolator, Atlfast::Isolator/PhotonIsolator, Atlfast::Isolator/MuonIsolator, Atlfast::JetMaker/JetMaker, Atlfast::AtlfastB/AtlfastB, Atlfast::EventHeaderMaker/EventHeaderMaker, Atlfast::Monitor/Monitor, Atlfast::StandardNtupleMaker/StandardNtupleMaker
+================================================================================
+|                                                                              |
+|                        Atlfast GlobalEventData Maker:                        |
+|                                                                              |
+| Invisibles (Neutrinos hardwired invisible):  12 14 16                        |
+| Luminosity:                                  1                               |
+| Initial Random Number Seed:                  12345                           |
+| B-field On:                                  true                            |
+| Barrel Forward Eta:                          3.2                             |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                              Atlfast Cell Maker:                             |
+|                                                                              |
+| min Cell ET              0                                                   |
+| Magnetic Field is on?    true                                                |
+| Input Location           /Event/McEventCollection                            |
+| Output Location          /Event/AtlfastCells                                 |
+|  DoSmearing              false                                               |
+|  Run FastShower          false                                               |
+| Calorimeter Geometry:                                                        |
+|  Total Eta Range         5                                                   |
+|  Barrel Eta Range        3.2                                                 |
+|  Barrel Eta Granularity  0.1                                                 |
+|  Barrel Phi Granularity  0.1                                                 |
+|  Forward Eta Granularity 0.2                                                 |
+|  Forward Phi Granularity 0.2                                                 |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                            Atlfast Cluster Maker:                            |
+|                                                                              |
+| Cluster Strategy             Cone                                            |
+| Endcap Cone Size              0.401                                          |
+| Barrel Cone Size              0.401                                          |
+| Min ET for Cell initiator     1.5                                            |
+| Min ET for cluster           5                                               |
+| Process Cells                true                                            |
+| Process Tracks               false                                           |
+| Input CellLocation           /Event/AtlfastCells                             |
+| Output Location              /Event/AtlfastClusters                          |
+| Unused Cell Location         /Event/AtlfastUnusedCells                       |
+| Unused Track Location        /Event/AtlfastUnusedTracks                      |
+| Massless Jets                true                                            |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                     Atlfast ReconstructedParticle Maker:                     |
+|                                                                              |
+| Particle Type            11                                                  |
+| Luminosity               1                                                   |
+| Minimum four-vector Pt   0                                                   |
+| Maximum four-vector Eta  100                                                 |
+| Minimum particle    Pt   5                                                   |
+| Maximum particle    Eta  2.5                                                 |
+| Do Smearing              true                                                |
+| Muon  Smearing Flag      1                                                   |
+| Random Number Seed       12345                                               |
+| MC location              /Event/McEventCollection                            |
+| Output Location          /Event/AtlfastElectrons                             |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                     Atlfast ReconstructedParticle Maker:                     |
+|                                                                              |
+| Particle Type            22                                                  |
+| Luminosity               1                                                   |
+| Minimum four-vector Pt   0                                                   |
+| Maximum four-vector Eta  100                                                 |
+| Minimum particle    Pt   5                                                   |
+| Maximum particle    Eta  2.5                                                 |
+| Do Smearing              true                                                |
+| Muon  Smearing Flag      1                                                   |
+| Random Number Seed       12345                                               |
+| MC location              /Event/McEventCollection                            |
+| Output Location          /Event/AtlfastPhotons                               |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                     Atlfast ReconstructedParticle Maker:                     |
+|                                                                              |
+| Particle Type            13                                                  |
+| Luminosity               1                                                   |
+| Minimum four-vector Pt   0.5                                                 |
+| Maximum four-vector Eta  2.5                                                 |
+| Minimum particle    Pt   6                                                   |
+| Maximum particle    Eta  100                                                 |
+| Do Smearing              true                                                |
+| Muon  Smearing Flag      3                                                   |
+| Random Number Seed       12345                                               |
+| MC location              /Event/McEventCollection                            |
+| Output Location          /Event/AtlfastMuons                                 |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                               Atlfast Isolator:                              |
+|                                                                              |
+| TES Locations:                                                               |
+|  Particles from             /Event/AtlfastElectrons                          |
+|  Cells from                 /Event/AtlfastCells                              |
+|  Clusters from              /Event/AtlfastClusters                           |
+|  Isolated Particles to      /Event/AtlfastIsolatedElectrons                  |
+|  Non-Isolated Particles to  /Event/AtlfastNonIsolatedElectrons               |
+| Cluster match DeltaR        0.15                                             |
+| Cluster isolation DeltaR    0.4                                              |
+| Cluster isolation E thresh  0                                                |
+| Cell isolation DeltaR       0.2                                              |
+| Cell isolation E thresh     10                                               |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                               Atlfast Isolator:                              |
+|                                                                              |
+| TES Locations:                                                               |
+|  Particles from             /Event/AtlfastPhotons                            |
+|  Cells from                 /Event/AtlfastCells                              |
+|  Clusters from              /Event/AtlfastClusters                           |
+|  Isolated Particles to      /Event/AtlfastIsolatedPhotons                    |
+|  Non-Isolated Particles to  /Event/AtlfastNonIsolatedPhotons                 |
+| Cluster match DeltaR        0.15                                             |
+| Cluster isolation DeltaR    0.4                                              |
+| Cluster isolation E thresh  0                                                |
+| Cell isolation DeltaR       0.2                                              |
+| Cell isolation E thresh     10                                               |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                               Atlfast Isolator:                              |
+|                                                                              |
+| TES Locations:                                                               |
+|  Particles from             /Event/AtlfastMuons                              |
+|  Cells from                 /Event/AtlfastCells                              |
+|  Clusters from              /Event/AtlfastClusters                           |
+|  Isolated Particles to      /Event/AtlfastIsolatedMuons                      |
+|  Non-Isolated Particles to  /Event/AtlfastNonIsolatedMuons                   |
+| Cluster match DeltaR        0                                                |
+| Cluster isolation DeltaR    0.4                                              |
+| Cluster isolation E thresh  0                                                |
+| Cell isolation DeltaR       0.2                                              |
+| Cell isolation E thresh     10                                               |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                               Atlfast JetMaker:                              |
+|                                                                              |
+| TES Locations:                                                               |
+|  Muons from                  /Event/AtlfastNonIsolatedMuons                  |
+|  Clusters from               /Event/AtlfastClusters                          |
+|  GeneratorParticles from     /Event/McEventCollection                        |
+|  Jets to                     /Event/AtlfastJets                              |
+|  unused cell,cluster sum to  /Event/AtlfastMissingMomentum                   |
+| Smearing on                  true                                            |
+| Cluster min Pt               10                                              |
+| Cluster max Eta              5                                               |
+| Luminosity                   1                                               |
+| Initial random seed          12345                                           |
+| End cap Cone size            0.4                                             |
+| Barrel  Cone size            0.4                                             |
+| Eta of start of end cap      3.2                                             |
+| Parameters for tags          true                                            |
+|  Max eta                     2.5                                             |
+|  b-quark min pt              5                                               |
+|  b-quark max DeltaR          0.2                                             |
+|  c-quark min pt              5                                               |
+|  c-quark max DeltaR          0.2                                             |
+|  tau lep min pt              10                                              |
+|  tau lep max DeltaR          0.3                                             |
+|  tau/Jet Pt Ratio            0.9                                             |
+|                                                                              |
+================================================================================
+
+
+AtlfastB             INFO Pt jet correction factors file ./AtlfastBjet.dat open.
+AtlfastB             INFO Pt c jet correction factors file ./AtlfastBcjet.dat open.
+================================================================================
+|                                                                              |
+|                                   AtlfastB:                                  |
+|                                                                              |
+| TES Locations:                                                               |
+|  Jets from                      /Event/AtlfastJets                           |
+|  Calibrated and tagged Jets to  /Event/AtlfastBJets                          |
+| AtlfBje switch:                 true                                         |
+| AtlfBje NSet:                   1                                            |
+| AtlfCal switch:                 true                                         |
+| AtlfTau switch:                 true                                         |
+| AtlfTauVeto switch:             false                                        |
+| AtlfTrigMuo switch:             false                                        |
+|                                                                              |
+================================================================================
+
+
+================================================================================
+|                                                                              |
+|                          Atlfast EventHeader Maker:                          |
+|                                                                              |
+| TestMode                     false                                           |
+| EndCap Begins at (eta)       3.2                                             |
+| Luminosity                   1                                               |
+| Beam Energy                  7000                                            |
+| MC location                  /Event/McEventCollection                        |
+| Electron Location            /Event/AtlfastIsolatedElectrons                 |
+| Photon   Location            /Event/AtlfastIsolatedPhotons                   |
+| Isolated Muon Location       /Event/AtlfastIsolatedMuons                     |
+| Non-Isolated Muon Location   /Event/AtlfastNonIsolatedMuons                  |
+| Jet Location                 /Event/AtlfastJets                              |
+| Cell Location                /Event/AtlfastCells                             |
+| Cluster Location             /Event/AtlfastClusters                          |
+| Unused cell+cluster sum      /Event/AtlfastMissingMomentum                   |
+| Output Location              /Event/AtlfastEventHeader                       |
+|                                                                              |
+================================================================================
+
+
+RFileCnv             INFO opening Root file "example_result_ntup.root" for writing
+================================================================================
+|                                                                              |
+|                          Atlfast StandardNtuleMaker:                         |
+|                                                                              |
+| MC location                  /Event/McEventCollection                        |
+| Electron Location            /Event/AtlfastIsolatedElectrons                 |
+| Photon   Location            /Event/AtlfastIsolatedPhotons                   |
+| Isolated Muon Location       /Event/AtlfastIsolatedMuons                     |
+| Non-Isolated Muon Location   /Event/AtlfastNonIsolatedMuons                  |
+| Jet Location                 /Event/AtlfastJets                              |
+| EventHeaderLocation          /Event/AtlfastEventHeader                       |
+|                                                                              |
+================================================================================
+
+
+ApplicationMgr       INFO Application Manager Initialized successfully
+EventPersistenc...   INFO Added successfully Conversion service:DetDescrCnvSvc
+EventPersistenc...   INFO Added successfully Conversion service:AthenaRootCnvSvc
+ AthenaRootConverter initialize
+ AthenaRootConverter initialize
+StandardNtupleM...   INFO     processing event number 0
+RCWNTupleCnv         INFO Booked TTree with ID: 51 "Atlfast51" in directory example_result_ntup.root:/Atlfast
+*** RootIoModule::Make() == 3 ***
+  0 - RootSvc/.make/input/.make/inputStream_0	.maker
+  1 - RootSvc/.make/input/.make/inputStream_0/.data	TObjectSet
+  1 - RootSvc/.make/input/.make/inputStream_0/.const	TObjectSet
+  2 - RootSvc/.make/input/.make/inputStream_0/.const/.inputFileNames	list
+  1 - RootSvc/.make/input/.make/inputStream_0/.garb	TObjectSet
+  1 - RootSvc/.make/input/.make/inputStream_0/.aliases	TObjectSet
+  1 - RootSvc/.make/input/.make/inputStream_0/.runco	TObjectSet
+  1 - RootSvc/.make/input/.make/inputStream_0/.hist	TObjectSet
+EventSelector        INFO EventSelector: End of input  
+AthenaEventLoopMgr   INFO No more events in event selection 
+GlobalEventData...   INFO Finalizing
+CellMaker            INFO Finalizing
+ElectronMaker        INFO Finalizing
+PhotonMaker          INFO Finalizing
+MuonMaker            INFO Finalizing
+ElectronIsolator     INFO finalizing
+PhotonIsolator       INFO finalizing
+MuonIsolator         INFO finalizing
+JetMaker             INFO finalizing
+AtlfastB             INFO finalizing
+EventHeaderMaker     INFO finalizing 
+Monitor              INFO Finalizing
+StandardNtupleM...   INFO     Number of events processed      = 5
+GlobalEventData...   INFO destructor, Global Event Data
+ElectronMaker        INFO Destructor Called
+ElectronMaker        INFO Deleting smearer
+ElectronMaker        INFO Deleting smearer
+ElectronMaker        INFO Deleting smearer
+PhotonMaker          INFO Destructor Called
+PhotonMaker          INFO Deleting smearer
+PhotonMaker          INFO Deleting smearer
+PhotonMaker          INFO Deleting smearer
+MuonMaker            INFO Destructor Called
+MuonMaker            INFO Deleting smearer
+MuonMaker            INFO Deleting smearer
+MuonMaker            INFO Deleting smearer
+ElectronIsolator     INFO destructor
+PhotonIsolator       INFO destructor
+MuonIsolator         INFO destructor
+JetMaker             INFO Destructor Called
+JetMaker             INFO Deleting jet Smearer
+JetMaker             INFO Deleting Cell Smearer
+Monitor              INFO destructor, deleting smearer
+RootSvc              INFO finalize() in RootSvc
+QAInfo:inputStream_0       : Real Time =   0.11 seconds Cpu Time =   0.08 seconds, Entries = 15
+
+---------------------------------------------------------------------------------
+QAInfo: Total: input       : Real Time =   0.11 seconds Cpu Time =   0.08 seconds
+---------------------------------------------------------------------------------
+QAInfo:inputStream_0       : Real Time = 100.0 %        Cpu Time = 100.0 % 
+=================================================================================
+
+QAInfo:input               : Real Time =   0.00 seconds Cpu Time =   0.00 seconds, Entries = 9
+RootSvc              INFO "Total " time: CPU:  0.08 sec.;  Real: 0.11 sec.; 
+*****Chrono*****     INFO ****************************************************************************************************
+*****Chrono*****     INFO  The Final CPU consumption ( Chrono ) Table (ordered)
+*****Chrono*****     INFO ****************************************************************************************************
+GlobalEventData...   INFO Time User   : Tot=    0 [us] Ave/Min/Max=    0(+-    0)/    0/    0 [us] #=  5
+Monitor:execute      INFO Time User   : Tot=    0 [us] Ave/Min/Max=    0(+-    0)/    0/    0 [us] #=  5
+ElectronMaker:e...   INFO Time User   : Tot=    0 [us] Ave/Min/Max=    0(+-    0)/    0/    0 [us] #=  5
+MuonIsolator:ex...   INFO Time User   : Tot=    0 [us] Ave/Min/Max=    0(+-    0)/    0/    0 [us] #=  5
+ElectronIsolato...   INFO Time User   : Tot=    0 [us] Ave/Min/Max=    0(+-    0)/    0/    0 [us] #=  5
+EventHeaderMake...   INFO Time User   : Tot=    0 [us] Ave/Min/Max=    0(+-    0)/    0/    0 [us] #=  5
+PhotonMaker:exe...   INFO Time User   : Tot=    0 [us] Ave/Min/Max=    0(+-    0)/    0/    0 [us] #=  5
+AtlfastB:execute     INFO Time User   : Tot=   10 [ms] Ave/Min/Max=    2(+-    4)/    0/   10 [ms] #=  5
+PhotonIsolator:...   INFO Time User   : Tot=   10 [ms] Ave/Min/Max=    2(+-    4)/    0/   10 [ms] #=  5
+ClusterMaker:ex...   INFO Time User   : Tot=   10 [ms] Ave/Min/Max=    2(+-    4)/    0/   10 [ms] #=  5
+JetMaker:execute     INFO Time User   : Tot=   10 [ms] Ave/Min/Max=    2(+-    4)/    0/   10 [ms] #=  5
+CellMaker:execute    INFO Time User   : Tot=   20 [ms] Ave/Min/Max=    4(+-  4.9)/    0/   10 [ms] #=  5
+StandardNtupleM...   INFO Time User   : Tot=   30 [ms] Ave/Min/Max=    6(+-    8)/    0/   20 [ms] #=  5
+MuonMaker:execute    INFO Time User   : Tot= 1.07  [s] Ave/Min/Max=  214(+-  428)/    0/1.07e+03 [ms] #=  5
+Atlfast:execute      INFO Time User   : Tot= 1.16  [s] Ave/Min/Max=  232(+-  444)/   10/1.12e+03 [ms] #=  5
+TopSequence:exe...   INFO Time User   : Tot= 1.16  [s] Ave/Min/Max=  232(+-  444)/   10/1.12e+03 [ms] #=  5
+ChronoStatSvc        INFO Time User   : Tot= 1.45  [s]                                             #=  1
+*****Chrono*****     INFO ****************************************************************************************************
+ChronoStatSvc.f...   INFO  Service finalized succesfully 
+ToolSvc              INFO Removing all tools created by ToolSvc
+RFileCnv             INFO dumping contents of /NTUPLES/FILE1
+TFile: name=example_result_ntup.root, title=Athena Trees, option=CREATE
+******************************************************************************
+*Tree    :51        : Atlfast51                                              *
+*Entries :        5 : Total =          711681 bytes  File  Size =       7145 *
+*        :          : Tree compression factor =   1.00                       *
+******************************************************************************
+*Br    0 :NELE      : PLEPTONS::NELE/I                                       *
+*Entries :        5 : Total  Size=      12426 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    1 :KFELE     : PLEPTONS::KFELE[NELE]/I                                *
+*Entries :        5 : Total  Size=      12536 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    2 :PXELE     : PLEPTONS::PXELE[NELE]/F                                *
+*Entries :        5 : Total  Size=      12543 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    3 :PYELE     : PLEPTONS::PYELE[NELE]/F                                *
+*Entries :        5 : Total  Size=      12543 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    4 :PZELE     : PLEPTONS::PZELE[NELE]/F                                *
+*Entries :        5 : Total  Size=      12543 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    5 :EEELE     : PLEPTONS::EEELE[NELE]/F                                *
+*Entries :        5 : Total  Size=      12543 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    6 :NPHO      : PPHOTONS::NPHO/I                                       *
+*Entries :        5 : Total  Size=      12426 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    7 :KFPHO     : PPHOTONS::KFPHO[NPHO]/I                                *
+*Entries :        5 : Total  Size=      12528 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    8 :PXPHO     : PPHOTONS::PXPHO[NPHO]/F                                *
+*Entries :        5 : Total  Size=      12535 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    9 :PYPHO     : PPHOTONS::PYPHO[NPHO]/F                                *
+*Entries :        5 : Total  Size=      12535 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   10 :PZPHO     : PPHOTONS::PZPHO[NPHO]/F                                *
+*Entries :        5 : Total  Size=      12535 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   11 :EEPHO     : PPHOTONS::EEPHO[NPHO]/F                                *
+*Entries :        5 : Total  Size=      12535 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   12 :NMUO      : PLEPTONS::NMUO/I                                       *
+*Entries :        5 : Total  Size=      12426 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   13 :KFMUO     : PLEPTONS::KFMUO[NMUO]/I                                *
+*Entries :        5 : Total  Size=      12548 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   14 :PXMUO     : PLEPTONS::PXMUO[NMUO]/F                                *
+*Entries :        5 : Total  Size=      12555 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   15 :PYMUO     : PLEPTONS::PYMUO[NMUO]/F                                *
+*Entries :        5 : Total  Size=      12555 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   16 :PZMUO     : PLEPTONS::PZMUO[NMUO]/F                                *
+*Entries :        5 : Total  Size=      12555 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   17 :EEMUO     : PLEPTONS::EEMUO[NMUO]/F                                *
+*Entries :        5 : Total  Size=      12555 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   18 :NMUX      : PMUXS::NMUX/I                                          *
+*Entries :        5 : Total  Size=      12423 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   19 :KFMUX     : PMUXS::KFMUX[NMUX]/I                                   *
+*Entries :        5 : Total  Size=      12517 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   20 :PXMUX     : PMUXS::PXMUX[NMUX]/F                                   *
+*Entries :        5 : Total  Size=      12524 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   21 :PYMUX     : PMUXS::PYMUX[NMUX]/F                                   *
+*Entries :        5 : Total  Size=      12524 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   22 :PZMUX     : PMUXS::PZMUX[NMUX]/F                                   *
+*Entries :        5 : Total  Size=      12524 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   23 :EEMUX     : PMUXS::EEMUX[NMUX]/F                                   *
+*Entries :        5 : Total  Size=      12524 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   24 :NJET      : PPJETS::NJET/I                                         *
+*Entries :        5 : Total  Size=      12424 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   25 :KFJET     : PPJETS::KFJET[NJET]/I                                  *
+*Entries :        5 : Total  Size=      12558 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   26 :PXJET     : PPJETS::PXJET[NJET]/F                                  *
+*Entries :        5 : Total  Size=      12565 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   27 :PYJET     : PPJETS::PYJET[NJET]/F                                  *
+*Entries :        5 : Total  Size=      12565 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   28 :PZJET     : PPJETS::PZJET[NJET]/F                                  *
+*Entries :        5 : Total  Size=      12565 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   29 :EEJET     : PPJETS::EEJET[NJET]/F                                  *
+*Entries :        5 : Total  Size=      12565 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   30 :PTcalo    : PPJETS::PTcalo[NJET]/F                                 *
+*Entries :        5 : Total  Size=      12571 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   31 :PTbjet    : PPJETS::PTbjet[NJET]/F                                 *
+*Entries :        5 : Total  Size=      12571 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   32 :PTujet    : PPJETS::PTujet[NJET]/F                                 *
+*Entries :        5 : Total  Size=      12571 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   33 :NJETB     : PPJETS::NJETB/I                                        *
+*Entries :        5 : Total  Size=      12430 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   34 :KFJETB    : PPJETS::KFJETB[NJETB]/I                                *
+*Entries :        5 : Total  Size=      12568 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   35 :PXJETB    : PPJETS::PXJETB[NJETB]/F                                *
+*Entries :        5 : Total  Size=      12575 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   36 :PYJETB    : PPJETS::PYJETB[NJETB]/F                                *
+*Entries :        5 : Total  Size=      12575 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   37 :PZJETB    : PPJETS::PZJETB[NJETB]/F                                *
+*Entries :        5 : Total  Size=      12575 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   38 :EEJETB    : PPJETS::EEJETB[NJETB]/F                                *
+*Entries :        5 : Total  Size=      12575 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   39 :NPART     : PHISTORY::NPART/I                                      *
+*Entries :        5 : Total  Size=      12432 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   40 :KPPART    : PHISTORY::KPPART[NPART]/I                              *
+*Entries :        5 : Total  Size=      12674 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   41 :KSPART    : PHISTORY::KSPART[NPART]/I                              *
+*Entries :        5 : Total  Size=      12674 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   42 :KFPART    : PHISTORY::KFPART[NPART]/I                              *
+*Entries :        5 : Total  Size=      12674 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   43 :KPMOTH    : PHISTORY::KPMOTH[NPART]/I                              *
+*Entries :        5 : Total  Size=      12674 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   44 :KFMOTH    : PHISTORY::KFMOTH[NPART]/I                              *
+*Entries :        5 : Total  Size=      12674 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   45 :PXPART    : PHISTORY::PXPART[NPART]/F                              *
+*Entries :        5 : Total  Size=      12681 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   46 :PYPART    : PHISTORY::PYPART[NPART]/F                              *
+*Entries :        5 : Total  Size=      12681 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   47 :PZPART    : PHISTORY::PZPART[NPART]/F                              *
+*Entries :        5 : Total  Size=      12681 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   48 :EEPART    : PHISTORY::EEPART[NPART]/F                              *
+*Entries :        5 : Total  Size=      12681 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   49 :ISUB      : INFO::ISUB/I                                           *
+*Entries :        5 : Total  Size=      12422 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   50 :JETB      : INFO::JETB/I                                           *
+*Entries :        5 : Total  Size=      12422 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   51 :JETC      : INFO::JETC/I                                           *
+*Entries :        5 : Total  Size=      12422 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   52 :JETTAU    : INFO::JETTAU/I                                         *
+*Entries :        5 : Total  Size=      12434 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   53 :PXMISS    : PMISSING::PXMISS/F                                     *
+*Entries :        5 : Total  Size=      12438 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   54 :PYMISS    : PMISSING::PYMISS/F                                     *
+*Entries :        5 : Total  Size=      12438 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   55 :PXNUE     : PMISSING::PXNUE/F                                      *
+*Entries :        5 : Total  Size=      12432 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   56 :PYNUE     : PMISSING::PYNUE/F                                      *
+*Entries :        5 : Total  Size=      12432 bytes  File Size  =          0 *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+NTupleSvc            INFO NTuples saved successfully
+ApplicationMgr       INFO Application Manager Finalized successfully

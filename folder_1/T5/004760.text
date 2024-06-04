@@ -1,0 +1,1139 @@
+
+Sergio Novaes
+Monday, December 17, 2001
+Webpages updated
+
+I have just updated several webpages with the information provided by the
+group:
+
+	# Documentation page: http://www-d0.fnal.gov/fpd/Links/docs.html
+
+	# Schedule for 2002 (*):
+http://d0server1.fnal.gov/users/novaes/schedule.htm
+
+	# Physics Tasks and Software update (*):
+http://d0server1.fnal.gov/users/novaes/tasks.htm
+
+	# Video conference page:
+http://d0server1.fnal.gov/users/novaes/videoconference.htm
+
+(*) The people that did not send me the requested information appear in red.
+
+Any comment or suggestion is welcome.
+
+__________________________________________________________________________
+
+Michael Strang
+Tuesday, December 18, 2001
+
+Veto counters cable correspondence is:
+
+A5 -> VN1
+A4 -> VN2
+A1 -> VS2
+A3 -> VS1
+
+South is towards our P side pots. North is towards the A side pots. 1
+means the counter is closer to the interaction region, 2 means it is
+further away.
+__________________________________________________________________________
+
+Mike Martens
+Wednesday, December 19, 2001 1
+ACNET variables
+
+Here is a list of all ACNET variables which I think could be relevant to
+the FPD:.
+
+Sequential listing of Tevatron magnets, separators, BPMs, and FPD pots
+
+(Devices in parenthesis are magnets or separators
+which are connected in series.)
+
+C:D0Q5    Q5 low beta quadrupole
+
+T:VC48    vertical dipole corrector
+C:HC48    horizontal dipole corrector
+T:HPC48   horizontal BPM
+T:VPC48   vertical BPM
+
+T:HC48    horizontal dipole corrector
+
+FPD_D2    FPD dipole station D2
+FPD_D1    FPD dipole station D1
+
+T:IRING   Tevatron dipole magnet
+(T:IRING) Tevatron dipole magnet
+(T:IRING) Tevatron dipole magnet
+
+T:VPC49   vertical BPM
+T:HC49    horizontal dipole corrector
+T:VC49    vertical dipole corrector
+T:SQD0    trim skew quadrupole
+
+T:HPC49   horizontal BPM
+
+FPD_A2    FPD pbar station A2
+
+C:C4HSP   horizontal separator
+C:C4HSM   horizontal separator
+C:C4VSP   vertical separator
+C:C4VSM   vertical separator
+(C:C4VSP) vertical separator
+(C:C4VSM) vertical separator
+
+FPD_A1    FPD pbar station A1
+
+C:D0Q2    Q2 low beta quadrupole
+C:D0QT2   Q2 trim low beta quadrupole
+C:D0Q3    Q3 low beta quadrupole
+C:D0QT3   Q3 trim low beta quadrupole
+(C:D0Q4)  Q4 low beta quadrupole
+
+T:HPD0U   horizontal BPM
+T:VPD0U   vertical BPM
+
+D0        D0 detector
+
+T:VPD0D   vertical BPM
+T:HPD0D   horizontal BPM
+
+(C:D0Q4)  Q4 low beta quadrupole
+(C:D0Q3)  Q3 low beta quadrupole
+(C:D0Q2)  Q2 low beta quadrupole
+
+FPD_P1    FPD proton station P1
+
+C:D1HSP   horizontal separator
+C:D1HSM   horizontal separator
+(C:D1HSP) horizontal separator
+(C:D1HSM) horizontal separator
+C:D1VSP   vertical separator
+C:D1VSM   vertical separator
+
+FPD_P2    FPD proton station P2
+
+T:HPD11   horizontal BPM
+
+T:HD11    horizontal dipole corrector
+T:VD11    vertical dipole corrector
+(T:SQD0)  trim skew quadrupole
+T:VPD11   vertical BPM
+
+(T:IRING) Tevatron dipole magnet
+(T:IRING) Tevatron dipole magnet
+(T:IRING) Tevatron dipole magnet
+(T:IRING) Tevatron dipole magnet
+
+(C:D0Q5)  Q5 low beta quadrupole
+T:VD12    vertical dipole corrector
+T:HD12    horizontal dipole corrector
+T:HPD12   horizontal BPM
+T:HVD12   vertical BPM
+
+Collision point monitor (CPM) positions
+
+(Status: Can only get proton vertical and horizontal positions.
+Pbar intensity is too week, so no positions for pbar beam and no
+longitudinal
+cogging information. This could change if pbar intensities are
+increased)
+
+T:D0UHPP        MM      D0_IR UPSTR HOR PROT POS
+T:D0DHPP        MM      D0_IR DNSTR HOR PROT POS
+T:D0UVPP        MM      D0_IR UPSTR VER PROT POS
+T:D0DVPP        MM      D0_IR DNSTR VER PROT POS
+T:D0UHNP        MM      D0_IR UPSTR HOR PBAR POS
+T:D0DHNP        MM      D0_IR DNSTR HOR PBAR POS
+T:D0UVNP        MM      D0_IR UPSTR VER PBAR POS
+T:D0DVNP        MM      D0_IR DNSTR VER PBAR POS
+T:D0UHDF        MM      D0_IR UPSTR HOR P-PB POS
+T:D0DHDF        MM      D0_IR DNSTR HOR P-PB POS
+T:D0UVDF        MM      D0_IR UPSTR VER P-PB POS
+T:D0DVDF        MM      D0_IR DNSTR VER P-PB POS
+T:D0HPSL                D0_IR HOR PROT SLOPE
+T:D0VPSL                D0_IR VER PROT SLOPE
+T:D0HNSL                D0_IR HOR PBAR SLOPE
+T:D0VNSL                D0_IR VER PBAR SLOPE
+T:D0HPIN        MM      D0_IR HOR PROT INTERCEPT
+T:D0VPIN        MM      D0_IR VER PROT INTERCEPT
+T:D0HNIN        MM      D0_IR HOR PBAR INTERCEPT
+T:D0VNIN        MM      D0_IR VER PBAR INTERCEPT
+T:D0IRDT        NSEC    DO_IR DELTA TIME
+T:D0HCER        CM      DO_IR HOR COG ERR +=DNST
+T:DOVCER        CM      DO_IR VER COG ERR +=DNST
+
+BEAM parameters
+
+DC Beam Intensities
+(Status: Working)
+
+T:IBEAM                DCCT
+Total DC beam in the Tevatron
+
+
+Fast bunch integrator
+(Status: Working)
+
+C:FBIPNG[37]    Fast Bunch Integrator, Narrow Gate      Bunch by bunch
+proton
+intensity.
+C:FBIANG[37]    Fast Bunch Integrator, Narrow Gate      Bunch by bunch pbar
+intensity.
+C:FBIPWG[37]    Fast Bunch Integrator, Wide Gate        Bunch by bunch
+proton
+intensity.
+C:FBIAWG[37]    Fast Bunch Integrator, Wide Gate        Bunch by bunch pbar
+intensity
+
+Sampled bunch display  (SBD)
+ (Status: Needs work to convert to 36x36 mode operation.  ACNET
+parameters not yet defined.)
+
+???T:SBPINT???[37]      Sampled Bunch Display   Bunch by bunch proton
+intensity.
+???T:SBAINT???[37]      Sampled Bunch Display   Bunch by bunch pbar
+intensity.
+???T:SBPSIG???[37]      Sampled Bunch Display   Proton rms bunch length.
+???T:SBASIG???[37]      Sampled Bunch Display   pbar rms bunch length.
+
+
+Flying wire beam emittance
+(Status: Needs lots of work. Wires do not give reasonable results.)
+
+T:FWVPSG[37]    Vert Flying wire at E11         Bunch by bunch proton
+vertical
+beam width sigma
+T:FWHPSG[37]    Horz flying wire at E11         Bunch by bunch proton
+horizontal
+beam width sigma
+T:FWEPSG[37]    Horz flying wire at E17         Bunch by bunch proton
+horizontal
+beam width sigma
+
+T:FWVASG[37]    Vert Flying wire at E11         Bunch by bunch pbar vertical
+beam
+width sigma
+T:FWHASG[37]    Horz flying wire at E11         Bunch by bunch pbar
+horizontal
+beam width sigma
+T:FWEASG[37]    Horz flying wire at E17         Bunch by bunch pbar
+horizontal
+beam width sigma
+
+Low beta quad roll and pitch
+
+(Status: working. These are mostly useful to measure
+changes in magnet pitch and roll.)
+
+C;C4Q3P         Pitch of Q3 magnet on C4 side
+C;C4Q3R         Roll of Q3 magnet on C4 side
+C;C4Q4P         Pitch of Q4 magnet on C4 side
+C;C4Q4R         Roll of Q4 magnet on C4 side
+C;D1Q3P         Pitch of Q3 magnet on D1 side
+C;D1Q3R         Roll of Q3 magnet on D1 side
+C;D1Q4P         Pitch of Q4 magnet on D1 side
+C;D1Q4R         Roll of Q4 magnet on D1 side
+
+FPD pot position, limit swtich, and rates parameters
+
+Epics Variable  ACNET variable  Descriptive Text        Units
+
+FPD_RM_TNA1_02-01/UP_POS        C:FPA1UL        FPD A1 UP LVDT position mm
+FPD_RM_TNA1_02-01/DN_POS        C:FPA1DL        FPD A1 DWN LVDT position
+mm
+FPD_RM_TNA1_02-01/IN_POS        C:FPA1IL        FPD A1 IN LVDT position mm
+FPD_RM_TNA1_02-01/OUT_POS       C:FPA1OL        FPD A1 OUT LVDT position
+mm
+FPD_RM_TNA2_02-03/UP_POS        C:FPA2UL        FPD A2 UP LVDT position mm
+FPD_RM_TNA2_02-03/DN_POS        C:FPA2DL        FPD A2 DWN LVDT position
+mm
+FPD_RM_TNA2_02-03/IN_POS        C:FPA2IL        FPD A2 IN LVDT position mm
+FPD_RM_TNA2_02-03/OUT_POS       C:FPA2OL        FPD A2 OUT LVDT position
+mm
+FPD_RM_TNP1_02-11/UP_POS        C:FPP1UL        FPD P1 UP LVDT position mm
+FPD_RM_TNP1_02-11/DN_POS        C:FPP1DL        FPD P1 DWN LVDT position
+mm
+FPD_RM_TNP1_02-11/IN_POS        C:FPP1IL        FPD P1 IN LVDT position mm
+FPD_RM_TNP1_02-11/OUT_POS       C:FPP1OL        FPD P1 OUT LVDT position
+mm
+FPD_RM_TNP2_02-13/UP_POS        C:FPP2UL        FPD P2 UP LVDT position mm
+FPD_RM_TNP2_02-13/DN_POS        C:FPP2DL        FPD P2 DWN LVDT position
+mm
+FPD_RM_TNP2_02-13/IN_POS        C:FPP2IL        FPD P2 IN LVDT position mm
+FPD_RM_TNP2_02-13/OUT_POS       C:FPP2OL        FPD P2 OUT LVDT position
+mm
+FPD_RM_TND1_02-05/IN_POS        C:FPD1IL        FPD D1 IN LVDT position mm
+FPD_RM_TND2_02-05/IN_POS        C:FPD2IL        FPD D2 IN LVDT position mm
+
+FPD_RM_TNA1_02-01/UP_HOME       C:FPA1UH        FPD A1 UP Home limit sw
+in/out
+FPD_RM_TNA1_02-01/DN_HOME       C:FPA1DH        FPD A1 DWN Home limit sw
+in/out
+FPD_RM_TNA1_02-01/IN_HOME       C:FPA1IH        FPD A1 IN Home limit sw
+in/out
+FPD_RM_TNA1_02-01/OUT_HOME      C:FPA1OH        FPD A1 OUT Home limit sw
+in/out
+FPD_RM_TNA2_02-03/UP_HOME       C:FPA2UH        FPD A2 UP Home limit sw
+in/out
+FPD_RM_TNA2_02-03/DN_HOME       C:FPA2DH        FPD A2 DWN Home limit sw
+in/out
+FPD_RM_TNA2_02-03/IN_HOME       C:FPA2IH        FPD A2 IN Home limit sw
+in/out
+FPD_RM_TNA2_02-03/OUT_HOME      C:FPA2OH        FPD A2 OUT Home limit sw
+in/out
+FPD_RM_TNP1_02-11/UP_HOME       C:FPP1UH        FPD P1 UP Home limit sw
+in/out
+FPD_RM_TNP1_02-11/DN_HOME       C:FPP1DH        FPD P1 DWN Home limit sw
+in/out
+FPD_RM_TNP1_02-11/IN_HOME       C:FPP1IH        FPD P1 IN Home limit sw
+in/out
+FPD_RM_TNP1_02-11/OUT_HOME      C:FPP1OH        FPD P1 OUT Home limit sw
+in/out
+FPD_RM_TNP2_02-13/UP_HOME       C:FPP2UH        FPD P2 UP Home limit sw
+in/out
+FPD_RM_TNP2_02-13/DN_HOME       C:FPP2DH        FPD P2 DWN Home limit sw
+in/out
+FPD_RM_TNP2_02-13/IN_HOME       C:FPP2IH        FPD P2 IN Home limit sw
+in/out
+FPD_RM_TNP2_02-13/OUT_HOME      C:FPP2OH        FPD P2 OUT Home limit sw
+in/out
+FPD_RM_TND1_02-05/IN_HOME       C:FPD1IH        FPD D1 IN Home limit sw
+in/out
+FPD_RM_TND2_02-05/IN_HOME       C:FPD2IH        FPD D2 IN Home limit sw
+in/out
+
+FPD_RM_TNA1_02-04/AL_SMO        C:FPA1SM        FPD A1 rack smoke status
+OK/flt
+FPD_RM_TNA2_02-04/AL_SMO        C:FPA2SM        FPD A2 rack smoke status
+OK/flt
+FPD_RM_TNP1_02-04/AL_SMO        C:FPP1SM        FPD P1 rack smoke status
+OK/flt
+FPD_RM_TNP1_02-04/AL_SMO        C:FPP2SM        FPD P2 rack smoke status
+OK/flt
+FPD_RM_TND1_02-04/AL_SMO        C:FPD1SM        FPD D1 rack smoke status
+OK/flt
+
+FPD_RM_TNA1_02-01/UP_REQ        C:FPA1UR        FPD A1 UP Requested pos mm
+FPD_RM_TNA1_02-01/DN_REQ        C:FPA1DR        FPD A1 DWN Requested pos
+mm
+FPD_RM_TNA1_02-01/IN_REQ        C:FPA1IR        FPD A1 IN Requested pos mm
+FPD_RM_TNA1_02-01/OUT_REQ       C:FPA1OR        FPD A1 OUT Requested pos
+mm
+FPD_RM_TNA2_02-03/UP_REQ        C:FPA2UR        FPD A2 UP Requested pos mm
+FPD_RM_TNA2_02-03/DN_REQ        C:FPA2DR        FPD A2 DWN Requested pos
+mm
+FPD_RM_TNA2_02-03/IN_REQ        C:FPA2IR        FPD A2 IN Requested pos mm
+FPD_RM_TNA2_02-03/OUT_REQ       C:FPA2OR        FPD A2 OUT Requested pos
+mm
+FPD_RM_TNP1_02-11/UP_REQ        C:FPP1UR        FPD P1 UP Requested pos mm
+FPD_RM_TNP1_02-11/DN_REQ        C:FPP1DR        FPD P1 DWN Requested pos
+mm
+FPD_RM_TNP1_02-11/IN_REQ        C:FPP1IR        FPD P1 IN Requested pos mm
+FPD_RM_TNP1_02-11/OUT_REQ       C:FPP1OR        FPD P1 OUT Requested pos
+mm
+FPD_RM_TNP2_02-13/UP_REQ        C:FPP2UR        FPD P2 UP Requested pos mm
+FPD_RM_TNP2_02-13/DN_REQ        C:FPP2DR        FPD P2 DWN Requested pos
+mm
+FPD_RM_TNP2_02-13/IN_REQ        C:FPP2IR        FPD P2 IN Requested pos mm
+FPD_RM_TNP2_02-13/OUT_REQ       C:FPP2OR        FPD P2 OUT Requested pos
+mm
+FPD_RM_TND1_02-05/IN_REQ        C:FPD1IR        FPD D1 IN Requested pos mm
+FPD_RM_TND2_02-05/IN_REQ        C:FPD2IR        FPD D2 IN Requested pos mm
+
+
+FPD_CAMAC_0308-SCR/D1IS         C:FPD1IS        FPD D1 IN singles rate  Hz
+FPD_CAMAC_0309-SCR/D2IS         C:FPD2IS        FPD D2 IN singles rate  Hz
+FPD_CAMAC_0306-SCR/A2US         C:FPA2US        FPD A2 UP singles rate  Hz
+FPD_CAMAC_0307-SCR/A2DS         C:FPA2DS        FPD A2 DWN singles rate Hz
+FPD_CAMAC_0600-SCR/A2IS         C:FPA2IS        FPD A2 IN singles rate  Hz
+FPD_CAMAC_0601-SCR/A2OS         C:FPA2OS        FPD A2 OUT singles rate Hz
+FPD_CAMAC_0304-SCR/A1US         C:FPA1US        FPD A1 UP singles rate  Hz
+FPD_CAMAC_0305-SCR/A1DS         C:FPA1DS        FPD A1 DWN singles rate Hz
+FPD_CAMAC_0602-SCR/A1IS         C:FPA1IS        FPD A1 IN singles rate  Hz
+FPD_CAMAC_0603-SCR/A1OS         C:FPA1OS        FPD A1 OUT singles rate Hz
+FPD_CAMAC_0300-SCR/P1US         C:FPP1US        FPD P1 UP singles rate  Hz
+FPD_CAMAC_0301-SCR/P1DS         C:FPP1DS        FPD P1 DWN singles rate Hz
+FPD_CAMAC_0604-SCR/P1IS         C:FPP1IS        FPD P1 IN singles rate  Hz
+FPD_CAMAC_0605-SCR/P1OS         C:FPP1OS        FPD P1 OUT singles rate Hz
+FPD_CAMAC_0302-SCR/P2US         C:FPP2US        FPD P2 UP singles rate  Hz
+FPD_CAMAC_0303-SCR/P2DS         C:FPP2DS        FPD P2 DWN singles rate Hz
+FPD_CAMAC_0606-SCR/P2IS         C:FPP2IS        FPD P2 IN singles rate  Hz
+FPD_CAMAC_0607-SCR/P2OS         C:FPP2OS        FPD P2 OUT singles rate Hz
+__________________________________________________________________________
+
+Sergio Novaes
+Thursday, December 20, 2001
+Measuments of the castle.
+
+I just got the answer from Newton about the measurements of the castle
+that we need. He had to check in the drawing from LNLS and it took a
+while. I did not get anything from Helio yet about his measurements in
+the tunnel.
+
+Here goes the numbers that Newton sent me. Please Newtom correct me if
+I am wrong. Any doubt please write to him:
+
+* From the bottom of the pot to the top of the tube:  10.933" or 277,7
+mm +/- 0,1 mm.
+
+* From the top of the pot (border of the tube) to the bottom of the pot
+(i.e.  to the face of the detector): 277,5 mm +/- 0,1 mm.
+
+* The colar has 15,0 mm and the LVDT arm touchs the colar.
+
+* Therefore the measurements that we need, from the external face of
+the LVDT arm to the face of the detetor is:  262,5 mm +/- 0,1 mm
+
+Helio and I have measured the distance between the the external face of
+the LDVT arm to the external face of the colar. Most of our
+measurements were put by Helio in the FPD News. Some of the Newton's
+drawing that are in our documentation page should also help.
+__________________________________________________________________________
+
+Pierrick Hanlet
+Thursday, December 20, 2001
+Tunnel access results
+
+After having changed the fuses in P1 and P2 we found that we still had
+no power.  After measuring the line voltage, I ascertained that the Sola
+had died.  We swapped it with the D Sola.
+
+The access was fairly successful:
+1) all fuses changed in P1 and P2 A/S LVPSs
+2) all blank off panels for P1 and P2 Control racks installed
+3) tested and saw SLP signals at P1 and P2 LMBs
+4) swapped P1 SLP cable - plugged in wrongly
+5) connected P1 and P2 PIN/Amp ps cables
+6) connected P2 PIN/Amp return cable
+7) Victor saw different signals with P2 A/S on/off/LMB
+8) Jorge measured all of the P2 voltages and recorded them:
+   +15V  ->  +14.9V
+   -15V  ->  -14.8V
+   +12V  ->  +11.7V
+   -12V  ->  -11.8V
+    +5V  ->   +4.8V
+
+The bad news is that the P1 12V supply is bad.  Since the LVPS in Lab 6
+is not yet fully tested, we did not have it at our disposal for swapping.
+We removed the P1 LVPS for repair.
+
+__________________________________________________________________________
+
+FPD Group account [d0fpd@fnal.gov]
+Saturday, December 22, 2001
+Lost beam
+
+Dear all,
+
+At 13:02 we lost the beam due to a TeV quench at A48V. We saw that the
+beam was very instable at the end and we were retracting pots when the
+beam felt.
+We never could reach the nominal operating position 27.1 mm because at
+23mm we affected already the beam at least by 10%.
+The pots are home now and the control lines and HV are off.
+
+Victor and Jorge
+__________________________________________________________________________
+
+Victor Bodyagin [
+Saturday, December 22, 2001
+Lost beam
+
+  We would like to deliver few more details about today's quench.
+
+     We have hard copies for Pots positions and counting rates.
+    Also we have a hard copy from LUMBERJACK when it happened.
+
+  First, we moved P1D and P2D at HIGH speed to 23.0 mm at this
+ position counting rates were  P1D ~ 30KHz
+                               P2D ~ 60KHz
+ at this point we were 4.1mm away off expected working position.
+
+     Please, note at that time D0 had Luminousity ~7*10**30
+
+                   So:
+
+Runplan working   Counting rates  Halo rates     Counting rates    Halo(kHz)
+ position         @home           @home           @23.mm          @23.0mm
+P1D: 27.1mm      P1D: ~25KHz     P : 24KHz       P1D: 30KHz       P: 24-26
+
+P2D: 30.5mm       P2D: ~50KHz    A:  1.3KHz      P2D: 60KHz       A:1.3-1.4
+
+   We started at 12:13 after ~ 2min Pots reached the position at 23.0mm
+   It did not have any affect on CDF losses and had some influence
+   on increase of D0 pbar losses ~7%.
+   Half an hour later at 12:45 we observed a spike of CDF pbar losses.
+   At that time Pots were not moving.
+      Few minutes later we decided to proceed with motion of P2D.
+   A new position was 23.2mm and it was reached at LOW speed mode of
+   motion. D0 pbar losses increased a little bit (total losses increased
+   up to  ~10% comparing home position).
+   Few minutes later we moved P2D to 23.3 mm. At this position counting
+   rates for P2D were 60-62KHz. A few minutes later two big spikes were
+   observed for CDF pbar losses and shortly after that the store was
+   lost. Before the store was lost having seen these big spikes we
+   retracted P2D to 23.00mm
+
+      Obviously, there was not any direct connection between our
+  activity and store loss. In principle, it is possible to imagine
+  an indirect connection between pot motion and store loss today.
+
+   Here we have to ask for the opinion of Mike Martens.
+
+    Could it happen so, that a relatively small perturbation of beam
+  intensity or halo intensity causes rather distant though
+  correlated in time autoexcitement of the beam stabilizing system with a
+  consequent store loss?
+
+              Jorge, Victor.
+__________________________________________________________________________
+
+Pierrick Hanlet
+Monday, December 24, 2001
+Shift today
+
+Hi folks,
+I have completed timing in the Veto-N counters.  There is a known
+discrepency that is noted in the log book about the LM timing.
+
+All veto counter signals now come into the patch panel.  I will attempt
+to set the HV and discriminator thresholds next time that I'm in.
+
+A first look at raw rates (all in kHz):
+
+V1S    101.8
+LM-S   131.7
+
+V2S    127.7
+LM-S   131.2
+
+V1N     73.4
+LM-N   119.8
+
+V2N     54.0
+LM-N   117.0
+__________________________________________________________________________
+
+Michael Strang
+Thursday, December 27, 2001
+Lumberjack plot from saturday
+
+I've recreated the lumberjack plot from Saturday. It can be found at
+
+http://adcon.fnal.gov/userb/pic/capture/dzero/gxpa_2_d0fpd_pot_inser_27dec01
+_1056_149.gif
+
+Actually, if you look at it, you can see that both CDF and D0 baselines
+appear to start creeping upwards while both of our pots are stationary.
+It looks like something started happening to the beam when we were NOT
+moving pots. At least that is what it looks like to me.
+
+One thing about this plot, is I'm only able to get logged CDF
+information on a longer scale rather than the Hz scale you were able to
+get on Saturday because of the logger they use. So there may very well
+have been a spike before the  moving of pots that wasn't stored in the
+logger I was forced to use.
+__________________________________________________________________________
+
+Mike Martens
+Thursday, December 27, 2001
+FPD pot insertion.
+
+
+Dmitri,
+
+The FPD pots are suspected of causing the quench on Saturday 12/22/01 at
+13:02. I have examined this in more detail and cannot determine if the
+pots were responsible for the quench. The pbar halo losses did increase
+during the time the pots were inserted, but the increase was relatively
+small.
+
+It appears that the magnet that quenched first was a low beta quad on
+the B1 side of CDF which would be consistent with increased pbar losses.
+However, the level of losses in C:B0ALOS while the pots were in place is
+similar to the level of losses at the start of the store. (See attached
+plot.) This leads me to believe that the pots were not the cause of the
+quench.
+
+For now I think it is reasonable to assume that the pots were not the
+cause of the quench and continue to gain more experience. But we should
+also closely examine any quench that occurs while the pots are inserted
+before we can conclusively rule out the pots as the culprit.
+
+Given the uncertainty, it is probably wise to keep the pots out of the
+beam during the start of stores. However, instead of only using the last
+2 hours I would suggest that the pots could be moved in during the last
+8 hours of the store. This is a more useful amount of time for pot
+studies. Acting as run coordinator I would be comfortable with such an
+arrangement.
+
+Mike
+__________________________________________________________________________
+
+Andrew Brandt
+Friday, December 28, 2001
+FPD pot insertion. (fwd)
+
+After discussions between DMitri and Mike and
+Dmitri and I we have reached the followed modification
+to the run plan.  NOte that in addition if losses start
+to increase after the pots have been inserted we should
+moniotr the situation closely, notify MCR and remove pots
+if tthe losses reach 20% more than original value.
+
+Mike,
+
+your proposal sounds fine with me. I just talked to Andrew to clarify a
+few issues and will change D0 Run plan to reflect 8 hours before end
+of store pots insertion time. We also agreed that if losses (D0 and/or CDF)
+increase by 20% or more the pots have to be quickly completely removed
+and inserted again only after ~30 minutes of stable running following
+standard pot insertion procedures. Andrew will send information about this
+to FPD group, so we can continue pots insertion starting from next store
+(Friday,
+12/28).
+
+My best wishes, Dmitri.
+
+__________________________________________________________________________
+
+Pierrick Hanlet
+Saturday, December 29, 2001
+shift results
+
+I spent the shift working on the VETO counters.  After a couple of false
+starts, I measured A(peak) <A> and rates, where A is the raw signal
+amplitude as measured by a scope, for each of V1S, V2S, V1N, V2N as
+a function of HV.  For the south(north) counters, I normalized the rates
+by LM-S(LM-N).  I then plotted the ratios as a function of HV; the results
+are in the SCR logbook.  I used the plots to set the HV to 1.5kV.  There
+is not a real plateau curve, but one can see where the PMTs go into
+saturation for the S counters.
+
+Because I originally cut the cables to length based on measuring with LM-N
+and LM-S, and there is an offset of ~25ns between them, I added 25ns delay
+to V1N and V2N to time them into V1S and V2S.
+
+I began also to study the thresholds.  At 1.5kV:
+<A(V1S)> = 1.0V
+<A(V2S)> = 0.4V
+<A(V1N)> = 1.7V
+<A(V2N)> = 0.5V
+Using these numbers, I estimated that we could set the discriminator
+threshold to 200mV.  Unfortunately, this cut the 1*2 coincidence rates
+by 40-60% from a threshold of 30mV.  Presently the threshold is set to
+100mV.  With this the rates are:
+
+V1S*V2S = 129kHz
+LM-S    = 204kHz
+
+V1N*V2N =  95kHz
+LM-N    = 191kHz
+
+V1S*V2S*V1N*V2N =  47kHz
+LM-S*LM-N       = 157kHz
+
+Sometime during the night, the TFW died.  This caused us to loose LM signal.
+However, LM-N and LM-S worked, and so I used these signals.  I'm hoping
+that the definition of LM is close to an AND of LM-S and LM-N.
+
+When I get back in later today, I'll finish setting up the elastic trigger
+for the new detector arms and verify the signals using LM, assuming it
+will be fixed by then.
+__________________________________________________________________________
+
+Pierrick Hanlet
+Monday, December 31, 2001 1
+new trigger and working SLP
+
+Hi folks,
+I set up the trigger for the new detector arms.  Unfortunately, I didn't
+have
+a chance to check the timing because of a lack of beam.  Hopefully it didn't
+change.  The only parts of the trigger for which I really have concern are
+the Early signals which make up part of the veto.
+
+The veto is now defined as:
+(EA1U OR EA2U) OR (EP1D OR EP2D) OR (LM-N * LM-S) OR (V1S*V2S * V1N*V2N)
+
+While I was waiting for beam, I made a TTL copy of the CAL pulser trigger
+which
+is used to trigger the ICD SLP.  I ran a cable to M100 where we have the
+NIM-ECL-NIM converter.  In this crate, I added a NIM-TTL converter, and put
+the output to Channel 14 of the NIM-ECL-NIM converter.  (All of this was
+done
+with the permission of the Heidi, the shift captain, and Michael Begel).
+In the SCR, I took the Channel 14 output, delayed it to get the P1 MAPMT
+signals in the daq gate.
+
+So we now have the SLP to operate our LMBs.  In order to operate the SLPs,
+one needs to go to the python subdirectory on d0ol13, and run fpd_slp.py.
+One can change the SLP voltage and the channel's delay.  For P1, the delay
+is 0 ns.
+
+Unfortunately, the daq is down, so I can't check it with the daq.
+
+At the next CH access, one needs to plug the P2 SLP cable to the one that
+goes into the tunnel; all other cables are in their final configuration.
+We can then clear out the fake SLP hardware that we have in the SCR.  Once
+this is done, I will check the timing for P2.  I just realized that we may
+have an issue with timing both the MAPMT signals and PMT signals; I'll
+ponder more on this.
+
+There are a couple of small problems with using the CAL pulser.  First is
+that when any CAL person shuts it off, we may not be informed.  This is the
+problem with sharing an SLP with the ICD folks.  I'll ask Dean Schamberger
+to notify us if this happens.  Secondly, the rate is small, namely 88Hz.
+This simply means that using an analogue scope is all but useless for
+looking at signals.
+
+I'm turning off the A/S and turning off the HV.
+
+__________________________________________________________________________
+
+FPD Group account
+Sunday, January 06, 2002
+pots
+
+Dear all,
+
+We retract all the pots, we inserted successfully this night and took 1.5
+hours of data. We found the operating positions for AU.PD pots:
+P1U:23.3mm              A1U:28.8mm
+P2U:23.5mm              A2U:28.9mm
+
+The file is in the directory:
+           /home/bodyagin/d0/fpd/camac/daq/socket/vers01/data
+
+At a first glance looks like the elastic rate was low but this we'll have
+to investigate further (may be was due to the position of the pots).
+
+Now pots are home and HV are of for all detectors. and control lines are
+off.
+
+__________________________________________________________________________
+
+Victor Bodyagin [
+Sunday, January 06, 2002
+pots
+
+ let me add a few words more.
+
+  The good news is that the problem of "doubled" pedestals has gone away.
+                          We did it!
+
+  Tha bad news is that the majority of ADC8 channels did not see neither
+ physical signals neither LMBs though the pedestals looked good enough.
+ Probably the cable from the detector is not plugged into A/S properly.
+
+ And one remark more. While looking at LMB signals we saw perfect
+ distributions for ADCs, i.e. perfectly narrow pedestals + gaussian-like
+ distributions to the right from the pedestals. Meanwhile the same
+ distributions look different for physical triggers. One can see that
+ we have a fraction of events with ADC values a little bit lower than the
+ pedestals. These can be explained if to recall that A/S produces a shaped
+ signal of negative polarity with some small spike of positive one at the
+ trailing edge of the pulse. So, if the pulse arrives too early versus
+ ADC gate it can cause such an effect. The nature of these pulses is:
+ halo particles, detector noise, and possible timing problems.
+
+__________________________________________________________________________
+
+FPD Group account
+Tuesday, January 08, 2002
+evenings summary
+
+Today was pretty successful!
+
+After the pots were inserted, I worked on our trigger.  I checked:
+- all discriminator widths (15ns)
+- all discriminator thresholds
+- EP1D and EP2D have same timing
+- EA1U and EA2U have same timing
+- changed EP1D*EP2D to EP1D OR EP2D
+- changed EA1U*EA2U to EA1U OR EA2U
+- adjusted EP1D OR EP2D time wrt L0-N*L0-S (LM)
+  (note that due to a broken module, I could not adjust EA1U OR EA2U;
+   however, there is still a significant overlap)
+- verified V1S*V2S*V1N*V2N is timed in wrt L0-N*L0-S
+- now:
+  VETO=(EP1D OR EP2D) OR (EA1U OR EA2U) OR (L0-S*L0-N) OR (V1S*V2S*V1N*V2N)
+- timed in PMT signals: added 25ns to P1D and 60ns to A1D
+- stretched VETO signal from 60ns to 75ns to cover all of 4-fold signal
+- plateau'd PMTs: P1D set to -1850V
+                  P2D set to -1750V
+                  A1U set to -1700V
+                  A2U set to -1800V
+- made discriminator threshold scans for P1D and P2D: P1D set to 60mV
+                                                      P2D set to 40mV
+
+We wanted to take some data, and Jorge wanted to move the pots in more,
+so I stopped the threshold scans.
+
+At D0 L=1.893E30, we have an elastic rate of 25.5Hz
+
+Details are in the logbook, as are the plots.  I've also included the
+plots of the plateau curves and discriminator threshold scans as
+attachments.
+
+We took about 1/2 hour of data; more by Jorge and Victor.  Jorge is now
+moving the pots in closer.  When that is finished, he and Victor will
+start another run.
+__________________________________________________________________________
+
+FPD Group account
+Tuesday, January 08, 2002
+shift report
+
+Hi all,
+
+At the first part of the shift we inserted the 8 pots to the following in
+positions:
+
+P1D:23.3 mm             A1U:28.8 mm
+P2D:23.5 mm             A2U:28.9 mm
+
+
+P1U:27.2 mm             A1D:37.9 mm
+P2U:29.9 mm             A2D:38.0 mm
+
+Everything behave as expected, first we put the pots AU.PD far away
+from the operational position and they didn't affect the beam at all.
+
+Then we inserted the pots for the branch AD.PU until the operational
+positions and they affected exactly 10% as in the past (before the october
+shutdown).
+
+After that we went further in with the AU.PD pots until their operational
+positions and they didn't affect much the beam (less than 5%).
+Note that we are calling operational position for the branch AU.PU to the
+values reached in the lasts two insertions and not to the first one
+reached inmediatly after shutdown (there's ~4mm difference).
+
+At this point Pierrick made the plateau of the L0 tubes and set the
+discrimination values. The 4 fold coincidence rate together with the veto
+(VETO.4_FOLD_COINC)  at this point (L = 2.25E30) was 31 Hz. He also
+measured the threshold values for P1D and P2D (more details in Pierrick's
+report). Once he finished we took data (run 71) for about 30 m, at a
+initial rate of ~25 Hz (L = 1.98E30)
+
+After that we inserted the AU and PD pots to see if we could find the
+values reached previously of 27.1 and 30.5 mm for P1D and P2D and 33.1 and
+35.0 mm for A1U and A2U respectively.
+The final operating positions found were:
+
+A1U:30.6 mm             P1D:25.0 mm
+A2U:35.0 mm             P2D:27.0 mm
+
+At this positions and with L = 1.85E30 we found the VETO.4_FOLD_COINC
+~62 Hz.
+
+Then 45 min before the planed end of store we took data (run 72).
+
+Now all pots are in home position, control lines are off and HV are all
+off.
+
+Cheers,
+
+Victor, Pierrick, Jorge
+__________________________________________________________________________
+
+Vladimir Sirotenko
+Tuesday, January 08, 2002
+Viewing EPICS variables
+
+There are several ways to examine epics variables from any online Linux
+node:
+
+- go to any online Linux node
+- setup onl_apps
+
+1) to see numbers, you can run PP.py with configureation file (I've put
+three of them into /online/config/fpd/epics/ directory), for example
+
+PP.py /online/config/fpd/epics/pos_variables.pp       -   position variables
+PP.py /online/config/fpd/epics/hom_variables.pp       -   home variables
+PP.py /online/config/fpd/epics/smo_variables.pp       -   smoke variables
+
+If you see red colors, it means that the folloving variable in not
+accessible
+
+2) you can create your own *.pp configuration file (list of epics variables
+you are interested, the
+complete list of fpd variables is in
+/online/config/fpd/epics/all_variables.pp and run PP.py with that file
+
+3) to see stripchart of any variable in real time, you can run
+
+> StripTool
+
+and then supply any epics variable name to look at (you can superimpose
+several plots in one graph)
+
+4) another way to see stripchart is (one variable per graph)
+
+> PvPlot.py <epics-variable-name>
+
+__________________________________________________________________________
+
+Pierrick Hanlet
+Wednesday, January 09, 2002
+day's events + pictures
+
+Hi folks,
+Two tasks were accomplished today (by me that is):
+1) The TPP mounting frame with 1 comb were modified and 1 partially stuffed
+   TPP was mounted.  The modifications were essentially those I wrote about
+   a couple of weeks ago; Russ Rucinski went over them with me, and Bob ?
+   implemented the changes.  We assembled the frame and mounted a TPP; Bob
+   also made a spacer piece to fill the gap left by the short leg of the
+comb.
+
+   I took pictures of it and have them on my web site (URL below); look for
+   the last link under the heading "Integration of FPD detectors into D0
+   electronics"
+
+2) During the last tunnel access, we installed a cable from the LVPS to the
+   RM for monitoring the LVPS voltages.  With Vladimir Siretenko, we checked
+   that we were reading the voltages correctly.  In addition, we defined
+   and created new EPICs variables to monitor all of the LVPS voltages.
+   They are: FPD_RM_P1-LVPS/+05V
+             FPD_RM_P1-LVPS/+12V
+             FPD_RM_P1-LVPS/-12V
+             FPD_RM_P1-LVPS/+15V
+             FPD_RM_P1-LVPS/-15V
+   and so on for P2, A1, A2, and DI.  Following Vladimir's email describing
+   how to look at these variables, I created a file with these EPICs
+   variables; using Vladimir's proceedure, we can now look at them.  For
+   example, from home right now, I know that someone has turned off the
+   FPDGui (which is good).  Later, I'll right some python interface, but
+   this is fine for a while.
+
+   This ability to remotely monitor the LVPS voltages allowed me to figure
+   out that it is the +5V line that has the wrong return line for
+   monitoring.  (I think that I made note of this when documenting the
+   last tunnel access).
+
+One of the tasks in the tunnel tomorrow is to install the cable for
+monitoring the LVPS voltages for P2 A/S crate.
+__________________________________________________________________________
+
+Victor Bodyagin
+Sunday, January 13,
+some DAQ news
+
+ now we can run daq_v03 version of DAQ. In fact, this is a new version
+ of data logger or more specifically a new version of histgramming based
+ on fully unpacked and decoded events. In this version a new set
+ of multiplot windows has been added:
+
+           ALL TDC channels
+           ALL PLANES MULTIPLICITIES
+
+  Of course, all set of old plots is in effect. Moreover, now we can
+ easily introduce different two-dimensional plots to see correlating
+ firing fibers. This is in project. Do not miss to watch an exciting
+ movie!
+          A new store is not expected to be before 4.00 a.m.
+
+__________________________________________________________________________
+
+FPD Group account
+Sunday, January 13, 2002
+shift report
+
+Dear all,
+
+We (Jorge and Victor) started moving the pots at 17:30, we moved P1D, P2D,
+A1U and A2U.
+We could put all the pots in operating positions except P2D that only
+reached 29.0 mm instead of the 30.5 mm reached in the last insertion. We had
+to
+retract the P2D from 29.5 to 29.0 mm because the losses passed the 20%.
+
+The PD insertion was very slow because we were affecting the A_HALO. We
+didn't have any problems with the AU insertion and it was fast.  Now
+Pierrick is working with the timing and then he will finish finding the
+threshold of the A detectors (more details in his report). After that
+Victor will take data.
+
+Cheers,
+
+Jorge
+__________________________________________________________________________
+
+Pierrick Hanlet
+Sunday, January 13, 2002
+trigger ready
+
+Hi folks,
+I managed to set the discriminator thresholds for A1U and A2U.  The HV
+and discriminator thresholds are now:
+
+Detector      HV (kV)         Threshold (mV)
+--------------------------------------------
+  P1D          1.85               60
+  P2D          1.70               40
+  A1U          1.75               60
+  A2U          1.80               70
+
+With D0 L=2.322E30/(cm*cm*s), we have an elastic rate of 12Hz.
+
+I also checked the timing of the TDCs.  They are all sitting at about
+200ns; I did have to adjust a couple.  With Victor's new histograms,
+we can see a peak in the TDC distributions at ~200ns.  Hence, these
+are also working.
+
+Victor is now taking data.  Though this won't be a large data sample due
+to the fact that the store will be dumped in 25 minutes, it should be a
+very clean sample.  Victor has also generated histograms of hit
+multiplicities in each plane.  These look very good; lots of zeros
+and ones.  The data is in run 73.
+
+For clean track purposes, we can now cut on TDC distributions and plane
+multiplicities.
+
+I did not attempt the new halo track trigger, as we wanted to start a
+run asap, and I did not want to take a chance on screwing up the other
+trigger.  If we don't get anything out of this run, I'll work on setting
+up this trigger.
+__________________________________________________________________________
+
+FPD Group account
+Monday, January 14, 2002
+shift report
+
+Dear all,
+
+We finished taking data. We took data runs 74, 75, 76, 77, and 78 ~10k
+events each. While data taking we were playing with different cuts
+for two-dimensional plot for X vs X' planes channels.
+All ADC responds were discriminated at the level Ped + 3*PedSigma + 2
+counts. It could be seen that this cut was "soft" enough.
+  After that we were looking at X-X' under different terms:
+1. No multiplicity cuts. Maximum ADC values in X and X' respectively were
+plotted.
+2. No multiplicity cuts. Weighted maximimum values were plotted.
+
+3. No multiplicity cuts. For each plane Fiber No. was calculated as:
+ (Sum nfiber*adc_val)/(Sum adc_val).
+
+4. Multiplicity in each plane < 3. Fibers were calculated as in case 3.
+
+5. Multiplicity = 1. Most severe cut.
+
+  In all cases "diagonal" is clearly seen. Of course, the distribution
+cleaner at multiplicity = 1. But case No. 4 looks very promising:
+  a. The distribution looks clean.
+  b. Multiplicity < 3 is not a severe cut as it follows from
+     Multiplicity distributions for all planes.
+
+  all the pictures mentioned above can found in the directory:
+  /home/d0fpd/daq_plots/..
+
+   Their names start from XvsXprime...
+   Also you can see all_planes.ps
+
+We could insert the pots to their final operating positions without
+problems. As yesterday the PD pots were the slowest ones while the AU's
+where faster and cleaner (in the sense we didn't affect the P_HALO so
+much). We also insert the the PU's pots and they also affected the A_HALO
+in ~20% like the PD's.
+
+Now pots are home, L0 and MAPMT HV are off VETO at standby and control
+lines are off.
+
+Victor and Jorge
+__________________________________________________________________________
+
+Jorge Luis Vivas Barreto
+Tuesday, January 15, 2002 3
+data progress
+
+Yes, we also need the values of the 3 quadrupoles
+magnet strengths at the proton side, their absolute
+position from the center of the Dzero, the separator
+electric fields, their absolute position from Dzero,
+and lenght, but just in case these values are not
+the same as the values from the original Tevatron's
+lattice for Run II, gave to me by M. Martens a long
+time ago.
+
+If we get nice events, we can plot
+xi- and t-distributions of it. Will that be
+sufficient? We can also have some plots
+given x- and y-positions as a function of z (beam)
+at some points of the lattice (magnets, separators,
+etc).
+
+For those of you interested in the tracking
+documentation, there are few technical reports you
+can find at
+
+        www.if.ufrj.br/~barreto/fpd.html
+
+Then, download the files track_fpd.ps, det_id.ps,
+accept_tot.ps and FPD_reco.ps. The former three
+describe the tracking in the (old) FORTRAN
+ages, but they give a rather good idea about
+the tracking logic. The C++ version of the
+actual code is described in the FPD_reco.ps
+file, which is a first version of our
+(single hit) code. Please, let we know
+if you have any question about it.
+
+__________________________________________________________________________
+
+Victor Bodyagin
+Thursday, January 17, 2002
+and the last DAQ news for today
+
+                Andrew,
+ I think it's a very good news. Everyone saw that doubled subtraction of
+ the pedestals while drawing daq plots did not kill our ADC pictures
+ completely. It makes me suspicious that we have to make serious studies
+ on our MAPMT operating HVs and on widths of our ADC gates. It's very
+ likely that HV are tooooo high either gates are tooooooo wide.
+ I've created already fully simulated data file for our offline
+ community in order people could verify once more all our
+ packing/unpacking stuff.
+   This file is /home/d0fpd/vme/daq/data/simulated.dat
+
+   It contains: ~1000 events
+
+   scalers simulated as scaler[i] = 1000*[i+1]
+   TDCs    simulated as tdc[i] = 100*[i+1]
+   ADCs    simulated as adc[i] = i+1
+
+   DAQ packing/unpacking and mapping gave perfect result on these data.
+   Now, I'm going to simulate more sophisticated data for ADCs
+   filled fractionally with zeroes because in our case the
+   packing/unpacking and decoding of ADCs is the most complicated.
+__________________________________________________________________________
+
+Gilvan A. Alves
+Friday, January 18, 2002
+possible hit (fwd)
+
+Yes we got it. We were actually checking the Pot positions and
+found out an error we did yesterday on reco. We were actually using
+the 8 sigma positions and not the ones given by Mike, that is
+16.61mm for P1D and 11.93mm for P2D. Using this values the actual
+numbers are:
+xi_reco = 0.0229729  t_reco = 1.35054
+
+Playing games with this values we acually have
+xi_reco = 0.0143169  t_reco = 1.24069
+for P1D = 15.61 and P2D = 10.93
+
+xi_reco = 0.0050155  t_reco = 1.13617
+for P1D = 14.61 and P2D = 9.93 that is -2.mm from Mike's values.
+given our resolution in xi of about 0.006 we can not go beyond
+that, but with more events we can get a good estimate of the actual
+positions. I should say that we are still using the old lattice so
+this is not the final word. We REALLY, ABSOLUTELY, POSITIVELY need
+the new lattice values.
+
+        Gilvan, for the tracking group.
+

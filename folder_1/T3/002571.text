@@ -1,0 +1,242 @@
+Adding Netnews Groups
+_____________________
+
+
+Subject: Re: [Req #2696] New netnews group - help with adding one 
+In-reply-to: Your message of Wed, 11 Jan 1995 09:17:39 -0800.
+             <199501111717.JAA01890@design1.lbl.gov> 
+From: Case Larsen <clarsen@mh1.lbl.gov>
+
+>1) I'd like to add a Netnews newsgroup with an educational purpose:
+>  the East Bay Physics Alliance,
+>which is a volunteer organization that aims for communication between
+>local high school physics teachers, local college teachers and local
+>lab/industry researchers.
+
+You can also try starting a mailing list if you already know who
+you're trying to reach and can just tell them to subscribe to the
+list.  Ask postmaster@lbl.gov.  That is a less time consuming task
+than starting a newsgroup.
+
+>2) Can such a group be added at LBL with a name like
+>ba.eastbay.physics.alliance
+>or
+>alt.education.physics.sfbay.east
+>or does it have to start with "lbl" like
+>lbl.physics.alliance.
+
+If the groupname starts with lbl, it will probably not be seen very
+widely around the bay.  If it starts with alt, perhaps not either.  To
+add a 'ba.*' group, you should initiate discussion in
+news.announce.newgroups.
+
+>3) In addition to finding out what is possible to add here,
+>I'd like to find out what the odds are that the high school
+>teachers can actually see such a new newsgroup, either
+>through their school system setup or through
+>commercial online services such as AmericaOnline.
+
+AOL and other commericial services should see the newsgroup if it's
+ba.* or alt.*.
+
+>4) Finally, what are the procedures and costs of installing and
+>maintaining a newsgroup?
+
+Note that there is an approximate two month lag between when a
+newsgroup is first proposed to when it is finally created.  This is
+all to ensure that the newsgroup is really desirable.  The main cost
+is the required newsgroup discussion in news.announce.newgroups.  You
+should do the discussion yourself because if someone questions you
+about its purpose and rationale, you'll need to respond.  A newsgroup
+should at least have a charter (which is the one line description you
+provided in #1 above).  Perhaps more detailed if you're trying to
+rally votes.
+
+Adding the group to the server is no trouble once you've got the
+go-ahead.
+
+Here's the procedure for creating a new newsgroup.  Note that you need
+at least 100 interested parties to create a newsgroup if there are no
+opposing votes -- more if you have opposition.  It may be easier to
+have a mailing list if you have less than 100 people interested.  If
+you can't get the required number of interested people, you'll have to
+wait 6 months before bringing up the newsgroup for discussion again.
+This is from ftp@rtfm.mit.edu:/pub/usenet-by-group/news.groups/
+How_to_Create_a_New_Usenet_Newsgroup:
+
+>Path: bloom-beacon.mit.edu!gatech!swrinde!pipex!uunet!not-for-mail
+>From: tale@uunet.uu.net (David C Lawrence)
+>Newsgroups: news.announce.newusers,news.groups,news.admin.misc,news.announce.newgroups,news.answers
+>Subject: How to Create a New Usenet Newsgroup
+>Supersedes: <howto_781163884@uunet.uu.net>
+>Followup-To: news.newusers.questions
+>Date: 1 Jan 1995 19:50:53 -0500
+>Organization: UUNET Technologies Inc, Falls Church, VA, USA
+>Lines: 158
+>Approved: tale@uunet.uu.net
+>Expires: 3 Mar 95 12:50:51 GMT
+>Message-ID: <howto_789007851@uunet.uu.net>
+>NNTP-Posting-Host: rodan.uu.net
+>Summary: creating new groups in comp, misc, news, rec, sci, soc, or talk
+>Xref: bloom-beacon.mit.edu news.announce.newusers:771 news.groups:71276 news.admin.misc:28673 news.announce.newgroups:3373 news.answers:32250
+
+Archive-name: usenet/creating-newsgroups/part1
+Original-author: woods@ncar.ucar.edu (Greg Woods)
+Comment: enhanced & edited until 5/93 by spaf@cs.purdue.edu (Gene Spafford)
+Last-change: 2 Nov 1994 by tale@uunet.uu.net
+
+		 GUIDELINES FOR USENET GROUP CREATION
+
+REQUIREMENTS FOR GROUP CREATION:
+
+   These are guidelines that have been generally agreed upon across
+USENET as appropriate for following in the creating of new newsgroups in
+the "standard" USENET newsgroup hierarchy. They are NOT intended as 
+guidelines for setting USENET policy other than group creations, and they
+are not intended to apply to "alternate" or local news hierarchies. The 
+part of the namespace affected is comp, news, sci, misc, soc, talk, rec,
+which are the most widely-distributed areas of the USENET hierarchy.
+   Any group creation request which follows these guidelines to a
+successful result should be honored, and any request which fails to
+follow these procedures or to obtain a successful result from doing so
+should be dropped, except under extraordinary circumstances.  The
+reason these are called guidelines and not absolute rules is that it is
+not possible to predict in advance what "extraordinary circumstances"
+are or how they might arise.
+   It should be pointed out here that, as always, the decision whether or not
+to create a newsgroup on a given machine rests with the administrator of that
+machine. These guidelines are intended merely as an aid in making those
+decisions.
+
+
+The Discussion
+
+1) A request for discussion on creation of a new newsgroup should be posted to
+   news.announce.newgroups, and also to any other groups or mailing lists at
+   all related to the proposed topic if desired.  The group is moderated, and
+   the Followup-to: header will be set so that the actual discussion takes
+   place only in news.groups.  Users on sites which have difficulty posting to
+   moderated groups may mail submissions intended for news.announce.newgroups
+   to newgroups@uunet.uu.net.
+
+   The article should be cross-posted among the newsgroups, including
+   news.announce.newgroups, rather than posted as separate articles.  Note that
+   standard behaviour for posting software is to not present the articles in
+   any groups when cross-posted to a moderated group; the moderator will handle
+   that for you.
+
+2) The name and charter of the proposed group and whether it will be moderated
+   or unmoderated (and if the former, who the moderator(s) will be) should be
+   determined during the discussion period. If there is no general agreement on
+   these points among the proponents of a new group at the end of 30 days of
+   discussion, the discussion should be taken offline (into mail instead of
+   news.groups) and the proponents should iron out the details among
+   themselves.  Once that is done, a new, more specific proposal may be made,
+   going back to step 1) above.  
+
+3) Group advocates seeking help in choosing a name to suit the proposed
+   charter, or looking for any other guidance in the creation procedure,
+   can send a message to group-advice@uunet.uu.net; a few seasoned news
+   administrators are available through this address.
+
+The Vote
+
+The Usenet Volunteer Votetakers (UVV) are a group of neutral third-party
+vote-takers who currently handle vote gathering and counting for all newsgroup
+proposals.  Ron Dippold <uvv-contact@qualcomm.com> co-ordinates this group.
+Contact him to arrange the handling of the vote.  The mechanics of vote will
+be handled in accord with the paragraphs below.
+
+1) AFTER the discussion period, if it has been determined that a new group is
+   really desired, a name and charter are agreed upon, and it has been
+   determined whether the group will be moderated and if so who will
+   moderate it, a call for votes may be posted to news.announce.newgroups and
+   any other groups or mailing lists that the original request for discussion
+   might have been posted to. There should be minimal delay between the
+   end of the discussion period and the issuing of a call for votes.
+   The call for votes should include clear instructions for how to cast
+   a vote. It must be as clearly explained and as easy to do to cast a
+   vote for creation as against it, and vice versa.  It is explicitly
+   permitted to set up two separate addresses to mail yes and no votes
+   to provided that they are on the same machine, to set up an address
+   different than that the article was posted from to mail votes to, or
+   to just accept replies to the call for votes article, as long as it
+   is clearly and explicitly stated in the call for votes article how
+   to cast a vote.  If two addresses are used for a vote, the reply
+   address must process and accept both yes and no votes OR reject
+   them both.
+
+2) The voting period should last for at least 21 days and no more than 31
+   days, no matter what the preliminary results of the vote are. The exact
+   date that the voting period will end should be stated in the call for
+   votes. Only votes that arrive on the vote-taker's machine prior to this
+   date will be counted.
+
+3) A couple of repeats of the call for votes may be posted during the vote, 
+   provided that they contain similar clear, unbiased instructions for
+   casting a vote as the original, and provided that it is really a repeat
+   of the call for votes on the SAME proposal (see #5 below). Partial vote
+   results should NOT be included; only a statement of the specific new
+   group proposal, that a vote is in progress on it, and how to cast a vote.
+   It is permitted to post a "mass acknowledgement" in which all the names
+   of those from whom votes have been received are posted, as long as no
+   indication is made of which way anybody voted until the voting period
+   is officially over.
+
+4) ONLY votes MAILED to the vote-taker will count. Votes posted to the net
+   for any reason (including inability to get mail to the vote-taker) and 
+   proxy votes (such as having a mailing list maintainer claim a vote for 
+   each member of the list) will not be counted.
+
+5) Votes may not be transferred to other, similar proposals. A vote shall
+   count only for the EXACT proposal that it is a response to. In particular,
+   a vote for or against a newsgroup under one name shall NOT be counted as
+   a vote for or against a newsgroup with a different name or charter,
+   a different moderated/unmoderated status or (if moderated) a different
+   moderator or set of moderators.
+
+6) Votes MUST be explicit; they should be of the form "I vote for the
+   group foo.bar as proposed" or "I vote against the group foo.bar
+   as proposed". The wording doesn't have to be exact, it just needs to
+   be unambiguous. In particular, statements of the form "I would vote
+   for this group if..." should be considered comments only and not
+   counted as votes.
+
+7) A vote should be run only for a single group proposal.  Attempts to create
+   multiple groups should be handled by running multiple parallel votes rather
+   than one vote to create all of the groups.
+
+The Result
+
+1) At the completion of the voting period, the vote taker must post the
+   vote tally and the E-mail addresses and (if available) names of the voters
+   received to news.announce.newgroups and any other groups or mailing lists
+   to which the original call for votes was posted. The tally should include
+   a statement of which way each voter voted so that the results can be
+   verified.
+
+2) AFTER the vote result is posted, there will be a 5 day waiting period,
+   beginning when the voting results actually appear in 
+   news.announce.newgroups, during which the net will have a chance to
+   correct any errors in the voter list or the voting procedure.
+
+3) AFTER the waiting period, and if there were no serious objections that might
+   invalidate the vote, and if 100 more valid YES/create votes are received
+   than NO/don't create AND at least 2/3 of the total number of valid votes
+   received are in favor of creation, a newgroup control message may be sent 
+   out.  If the 100 vote margin or 2/3 percentage is not met, the group should 
+   not be created.
+
+4) The newgroup message will be sent by the news.announce.newgroups moderator
+   at the end of the waiting period of a successful vote.  If the new group is
+   moderated, the vote-taker should send a message during the waiting period to
+   David C. Lawrence <tale@uunet.uu.net> with both the moderator's contact
+   address and the group's submission address. 
+
+5) A proposal which has failed under point (3) above should not again be
+   brought up for discussion until at least six months have passed from the
+   close of the vote.  This limitation does not apply to proposals which never
+   went to vote.
+
+
+								-Case

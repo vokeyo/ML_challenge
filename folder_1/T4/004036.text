@@ -1,0 +1,784 @@
+346 MONTHLY WEATHER REVIEW VOI. 98, NO. 5
+UDC 651.678.7:661.601.81: 651.609.324: &51.589.1(773) “1967”
+CHARACTERISTICS OF HAIL-PRODUCING RADAR ECHOES IN ILLIN
+NEIL G. TOWERY and STANLEY A. CHANGNON, JR.
+Illinois State Water Survey, Urbana, 111.
+ABSTRACT
+Data from 103 hail echoes on 24 days in 1967 and 50 no-hail echoes from the same days were analyzed to describe
+hailstorm characteristics and to provide information useful in operational detection and forecasting of hail-producing
+echoes. Echo characteristics investigated included locations of echo formation and dissipation, echo reflectivities,
+echo-top heights, echo duration, direction of motion, speed, time of occurrence, and associated synoptic weather
+conditions. A single hail-echo model could not be derived because of the extreme variability found in all character-
+istics. However, distinctive echo models could be developed for the three predominant hail-producing synoptic
+weather conditions, cold fronts, stationary fronts, and low-pressure centers. The frontal hailstorms were faster
+moving, longer lived, and had taller echoes than those with low-pressure systems. Hail production after echo inception
+varied from an average of 32 min for low conditions to 59 min for cold frontal echoes. The average hail-echo top
+exhibited a 5,000-ft growth in the 15-min period prior to the average time of hail, suggesting that a major updraft
+surge was the prime producer of hail. The no-hail echoes occurring on hail days had characteristics of speed, direction
+of motion, reflectivity, and location that were very similar to the hail-producing echoes. The only distinct consistent
+difference between the hail and no-hail echoes in all synoptic situations wm that the hail-echo tops averaged between
+2,000 and 4,000 f t higher throughout their entire durations.
+1. INTRODUCTION
+Information concerning the behavior of hail-producing
+echoes was sought as part of a comprehensive hail research
+program in Illinois (Changnon 1969). Knowledge of the
+characteristics of both hail-producing and no-hail echoes
+has value in two areas. One concerns the identification and
+point-area prediction of hailstorms on an operational basis
+for aircraft storm avoidance, public warnings, and selec-
+tion of approaching storms for seeding in hail suppression
+projects. Most prior research on hail-echo identification
+has concerned their heights (Douglas 1963) or reflectivity
+profiles (Donaldson 1958, Wilk 1961), but recent studies
+(Rinehart et al. 1968, Dennis and Musil 1968) have shown
+that high-reflectivity characteristics aloft are not well
+correlated with surface hail. Information about character-
+istics of hail-producing echoes is also quite meaningful for
+increasing knowledge of the causes of hail generation.
+Results on various hail-echo characteristics including
+location, duration, direction of motion, speed, time of
+occurrence, reflectivity values, echo-top heights, and
+associated synoptic weather conditions were obtained for
+103 hail-producing echoes. These results are compared
+with those obtained for 50 no-hail echoes. From these
+analyses, models of typical Illinois hailstorm echoes are
+developed, and results that have meaning for either
+hailstorm identification or hailstorm physics are identi-
+fied and summarized.
+4. DATA AND ANALYTICAL TECHNIQUES
+The radar data consisted of PPI photographs taken in
+CPS-9 radar operations on 24 days during April-Sep-
+tember 1967. The radar was operated with a maximum
+range of 80 n.mi. and with automatic sequential antenna-
+tilt and receiver gain reductions (gain step). A photo-
+graph was taken at each tilt angle and gain step. The
+surface reports of hail and no-hail came from a network
+of 1,380 cooperative hail observers and two smaller
+networks of 65 raingage-hailpad sites in an 18,000-sq mi
+area of central Illinois (fig. 1). These sources provided a
+total of 352 observer reports of hail time, 271 observer
+reports of no-hail, and 130 hail-time occurrences from the
+raingage-hailpad sites for the 24 days studied.
+Initially, the analytical procedure consisted of making
+a “track” of each hail-producing echo by plotting the
+location of the hail, finding the echo on the film that
+corresponded, and plotting its location as far back in time
+(prior to hail) and as far forward in time (after hail) as
+possible. The plots were of the centroid of the echo on
+every 0” tilt photograph (available approximately once
+every 10 min) as depicted on a medium level of receiver
+gain. The line connecting the centroid positions became the
+echo track for its entire duration. The tracks of 50 ran-
+domly chosen no-hail echoes were determined in much the
+same way, except that the track was started from the echo
+formation time and continued for approximately 1 hr.
+The medium gain-step level chosen for echo definition
+was normally the one midway between maximum sensi-
+tivity level and that level where all echoes were eliminated.
+This generally was in the 20-28 dB (decibel) range of
+reduction from maximum sensitivity.
+Table 1 gives the number of hail-echo tracks that
+occurred with each synoptic situation, classified according
+to their formation and dissipation locations. The location
+of the first identifiable appearance (beginning) and the
+last identifiable appearance (ending) was determined for
+all echoes. However, the actual formation and/or dissipa-
+tion locations of about half of the echoes could not be
+May 1970 Neil G. Towery and Stanley A. Changnon, Jr. 341
+"$Y Kankakee
+Peoria
+/.
+SCALE OF NAUTICAL MILES I
+/
+20 40
+a
+4 n
+z
+z -
+FIGURE 1.-Areas from which 1967 hail data were collected.
+TABLE 1.-Frequency of haibecho tracks by synoptic weather classi$cations
+Number of tracks
+Cold Stationary 'Low Air Total front front maSs
+Echo characteristic
+Formed and dissipated in range- - .___..____ 5 7 21 2 35
+Formed in range, but did not dissipate in
+range _______________.____---...----..----- 5 9 1 0 1 5
+Dissipated in range, but did not form in
+range.. __ __. _____. _____. .____. . _.._.._. - .. 9 2 1 1 7
+Neither Iormed nor dissipated in range. - -.. 4 2 1 8 3 3 6
+Total ____________________-----------.- 19 46 32 6 103
+5
+established because they formed or dissipated beyond
+the maximum radar range or within a large echo mass. -. - . __ -_ .- _. The totals in table 1 reveal that 50 echoes formed in range,
+52 echoes dissipated in range, and 35 of these had known .. x x .
+. .. .. tormation and dissipation points.
+In addition to the 103 hail-echo tracks, 50 randomly
+chosen no-hail echoes were tracked, each of which formed
+in range. Sixty percent of the no-hail echoes passed over
+10 or more volunteer observers reporting no hail, and all
+passed over four or more observers reporting no hail.
+These no-hail echoes were chosen from the 14 days on
+which the 50 hail echoes (formed in range) occurred, and
+the number from each day was made proportional to the
+number of hail echoes on that day.
+I n the analyses, the data for most hailstorm character-
+istics were ranked and divided into thirds, with each third
+considered to be a class of that characteristic.
+TABLE 2.-Total duration and duration f r o m formation to first hail for hail-producing echoes
+Duration, Total echo formation to % of total Cumulative duration, min % of total Cumulative hail, min % (35 echoes) % (50 echoes)
+0-19 18 18
+20-39 38 66
+4&69 22 78
+80-79 8 86
+80-99 8 04
+2100 6 100
+Median = 3 7 d n
+Average= 44 min
+Shortest= 6min
+bngest=l52 min
+20- 39 14 14
+40- 69 17 31
+60- 79 14 45
+80- <99 23 88
+100-119 23 91
+2120 9 100
+Median = 80min
+Average= E4dn
+Shortest= 30mIn
+bngest=197 rnin
+The seven synoptic situations sampled in this study
+were grouped into four categories. The fist category was
+the cold front, and the second was the stationary frontal
+category which included the few warm frontal cases. The
+few cases with closed Lows or troughs at the surface and
+aloft were included in the low category. The fourth
+category was air mass, but certain analyses of this category
+were limited by the small sample (table 1).
+3. LOCATION
+Possible preferred areas of formation and dissipation
+of hailstorms were studied from map plots of echo tracks.
+Since the sample was relatively small for the area involved,
+the echo formations and dissipations were grouped and
+studied according to their occurrence in six 60" sectors.
+The analyses revealed that the northwest sector (270'-
+330" ezimuth) was a slightly preferred area for individual
+echo formation, and the northern sector (33OO-030'
+azimuth) was a preferred area for dissipation or endings.
+An analysis of formation and dissipation areas for the
+hail echoes when sampled by synoptic causes, time of
+day, direction of motion, and duration did not reveal
+any preferred areas.
+4. DURATION
+The aspects of echo duration are summarized in table 2.
+More than half of the 50 echoes that formed in range
+produced hail in less than 40 min after formation (first
+detected on Oo tilt), and the average time was 44 min.
+More than two-thirds of the 35 echoes that both formed
+and dissipated in range had a total duration of less than
+99 min, and the average duration was 84 min.
+A comparison of direction of movement and echo dura-
+tion before hail for the 50 echoes that formed in range
+revealed that northeast-moving echoes had moderate
+(30-49 min) to long (2 5 0 min) durations prior to hail
+with one-half having long durations prior to hail. The
+echoes moving southeast and east-southeast had a
+tendency for short (1 2 9 min) durations prior to the hail
+with 56 percent producing hail within 29 min after
+formation.
+340 MONTHLY WEATHER REVIEW Vol. 98, No. 5
+TABLE 3.--Comparison of echo duration from formation to jirst hail with average echo speed and time of day TABLE 4.-Average speed (kt) for the three speed categories during each phase of echo duration
+Percent of total for each duration class
+Short Moderate Long 529mln 30-49min ISOmin
+Characterlstics
+speed:
+Slow, 519 kt __________ ___
+~
+____ ~.
+~
+____ ____ __ ____ 42
+Moderate, 20-29 kt _______ __ ..................... 68 78 42
+Fast, 230 kt _____ __ ____ ___
+~
+_____
+~
+__ ____ _________ 0 16
+Morning (0032-1159) _____.____.______.__-.
+~
+______ 35 31 15
+6 21
+11
+21
+24
+Time of day:
+Afternoon (1200-1759) .... __ - ..._____. _____ .___._ 65 63 64
+Evening (18W-2359) _____. . -. . -. __ __ _.____ __. -. __ 0
+A comparison of echo durations prior to hail with av-
+erage echo speeds is shown in table 3. Moderate speeds
+dominated the moderate and short durations, and there
+was an equal occurrence of moderate and slow speeds in
+the long-duration class.
+The comparisons of durations prior to hail and time of
+day (table 3) reveal that the morning storms had a
+tendency to produce hail quickly. The evening storms
+showed no short durations, and a greater frequency of long
+durations than of moderate durations. For echoes that
+both formed and dissipated in range, there was no rela-
+tionship between time of dag and duration.
+5. DIRECTION OF MOTION
+A comparison of hail-echo speed against direction of
+motion revealed that 89 percent of the southeast- and
+east-southeast-moving echoes moved faster than 19 k t with
+70 percent in the 20- to 29-kt class. The north- and
+northeast-moving echoes moved most frequently at
+slower speeds with 50 percent between 5 and 19 kt.
+Echoes moving east-northeast and east had slow-to-
+moderate speeds averaging 24 kt. The predominant echo
+direction in the morning was east-southeast, that in the
+afternoon was toward the northeast, and that in the
+evening was to the southeast.
+6. SPEED
+The everage speed over the entire track of all the echoes
+was 24 kt, and this agrees with the movement of lines of
+thunderstorms given by Changnon (196Qa). Average
+speeds for the periods before, during, and after hail were
+23.6, 24.6, and 24.1 kt, respectively. The average speeds
+for echoes in the morning, afternoon, and evening were
+26.6, 21.9, and 30.8 kt, respectively. The higher speeds
+in the evening were related to the fact that 75 percent of
+the evening echoes were cold frontal, and this category
+produced the fastest moving echoes. The average speeds
+of the three (bast, moderate, slow) categories of speed in
+the periods before, during, and after hail are shown in
+table 4.
+7. TIME OF DAY
+The morning, afternoon, and evening storms comprise
+24, 64, and 12 percent, respectively, of the 103 echoes.
+The decided preference for afternoon occurrence agrees
+with resdts for surface hail studies (Changnon 1969).
+Speed class Bsfore hail Duringhail After hail
+Fast, 230 kt ___________.____________
+~
+_______ __ 39.6 39.0 35.8
+Moderate, 20-29 kt ________ __ ____ __ ____ __ _.__ __ 23.0 22.9 23.8
+15.1 15.2 16.3 Slow, 519 kt __________ ______. _____
+~
+______ ___.
+Comparison of the t h e of echo occurrence and the fre-
+quency of echo turn prior to hail according to left turn,
+right turn, or no turn was made. This was achieved by
+drawing a line from the beginning location of the hail
+echo through the echo location just prior to hail, and then
+another line from this priorlocation through the first known
+location after hail. The angle formed by these two lines
+was the echo turn. This analysis revealed that 50 percent
+of the evening storms had right turns, 17 percent had no
+turn, and 33 percent had left turns. With morning storms,
+44 percent turned left, 32 percent had no turn, md 24
+percent turned right. Afternoon storms showed no distinct
+preference for turning.
+8. REFLECTIVITY
+The average equivalent radar reflectivity factor (here-
+after called reflectivity) at formation of the 50 hail echoes
+that formed in range was 6.1X102mm6m--3, and the
+average reflectivity at dissipation for the 52 hail echoes
+which dissipated in range was 1.62X103 mm6 m-3. The
+average reflectivity at formation for the 50 no-hail
+echoes was 5.5X102 mme m-3, which is very close to the
+hail-echo reflectivity at formation. The average reflectivity
+at or within 5 min of hail time for the 103 hail echoes was
+2X lo5 mm6 m-3. The average reflectivity of the no-hail
+echoes at 44 min after their formation (the average time
+of hail after formation for the hail echoes) was about an
+order of magnitude lower, 1.6 X lo4 mms m-3.
+The average range from the radar to the formation
+point for echoes (which formed in range) was 51 n.mi.,
+that to the dissipation point was 46 n.mi., and that to the
+hail location for all 103 hail echoes was 43 n.mi. Thus,
+range differences were not great and could not markedly
+affect the differences between the average reflectivities.
+9. ECHO-TQB HEIGHTS
+The analysis of echo heights was performed for the 50
+hail and 50 no-hail echoes that formed in range. The radar
+was operated with variable sequential tilting of the an-
+tenna up to 8 O , and this made it possible t o calculate most
+echo-top heights during the echo duration. A plot of all
+hail echo-top heights against time after formation was
+used to prepare 90 percent envelope curves and an average
+height curve (fig. 2). The range of echo heights measured
+a t any time is quit,e large, but tends to become smaller
+with time. The relatively rapid growth in the average
+echo height in the 10-15 min prior to the average hail
+time (at 44 min) and the decline in the ensuing 10 min
+suggest a strong convective surge during hail growth, and
+then a loss of strong updrafts immediately after hail.
+May 1970 Neil G. Towery and Stc
+60
+50
+L Y Y
+0 40
+z
+2 30
+z 4
+I I-
++ I
+E 20
+I
+10
+0
+0 10 20 30 40 50 60 70
+TIME AFTER ECHO FORMATION, MINUTES
+0 I c-
+; 25
+2 k?
+8
+15.
+FIGURE 2.-Average height curve and 90 percent envelope cxves
+(made by upper and lower bands) for hail echoes for time after
+echo formation. Ten-minute intervals after formation were used
+to prepare the curves.
+- LOW -
+20:
+I
+Figure 3 is a time-height graph based on average echo
+height for three weather categories. To allow comparison
+of echo-top behavior between echoes of varying duration,
+the heights were determined for the 0 (formation), 25,
+50, 75, and 100 percent (hail time) points in time from
+formation to the time of hail. Hail-producing echoes
+occurring with the three synoptic conditions exhibit most
+of their growth in the first 25 percent of their life prior
+to hail. Growth is still apparent in the last 25 percent
+time interval before hail for the cold and stationary
+frontal cases. The differences in the amount of growth
+between figures 2 and 3 result from the different means of
+expressing time (real time versus percentage time).
+Several comparisons between the 50 hail-echo tops and
+the 50 no-hail-echo tops, all of which formed in range,
+were made. Figure 4 is a real time average height graph
+depicting curves for hail and no-hail echoes as stratified
+by synoptic weather conditions. The average hail-echo
+tops were higher than those of the no-hail echoes in all
+but the earliest 20 min of stationary frontal echoes.
+The no-hail echoes exhibited very little growth after the
+1 l-20-min time interval, whereas the hail echoes almost
+always exhibited some increase after this interval.
+Table 5 shows probabilities for different frequencies of
+taller echoes that will produce hail on any given hail day.
+Values indicate the possible confidence in predicting that
+tall echoes will be hailstorms. These probabilities are
+based on a comparison of the heights of the 50 hail echoes
+with those of the 50 no-hail echos at formation, at average
+hailtime, and at dissipation. The taller half of the echoes
+on each day were used in this analysis. The probabilities
+at formation time show that on 38 percent of the days
+81 percent or more of the taller echoes will become
+hailstorms and that on 54 percent of the days more than
+60 percent will become hailstorms. On 84 percent of the
+hail days, more than 60 percent of the taller half of the
+echoes a t hail time and a t dissipation will be hailstorms.
+FIGURE 3.-Height curves of hail echoes for three synoptic weather
+categories as determined for the indicated percent of time from
+formation to the time of hail.
+Since prediction at formation time is the most useful
+operational knowledge, it is important to realize that
+on 77 percent of the days more than half of the taller
+echoes at formation became hailstorms, and on 54 percent
+of the hail days more than 65 percent of the taller echoes
+became hailstorms.
+Figure 5 is a plot of the echo heights against percentage
+of total echo life for'all the hail and no-hail echoes that
+formed and dissipated in range. The hail echoes were
+higher than the no-hail echoes, but the shapes of the curves
+are quite similar with a constant difference in height of
+about 2,500 f t . This suggests similar processes in cloud
+echo evolution, but more vigorous convection throughout
+the life of a hailstorm. In a study of heights of 33 echoes
+at hail time, as depicted on an RHI of a 3-cm TPS-10
+radar, Changnon (1969) calculated an average height of
+29,600 ft. The average height at hail time for the 35 hail
+echoes that formed and dissipated in range was 27,000 ft.
+10. COMPARISONS OF HAIL AND NO-HAIL ECHOES
+The comparisons of characteristics of hail echoes and
+no-hail echoes are summarized in table 6. In general, the 50
+hail echoes that formed in range were used for the compar-
+ison. As can be seen, there is very little difference in the
+values for echo time, direction, speed, and reflectivity at
+echo formation. There was some difference in the average
+reflectivities at the average hail time (44 min) after echo
+formation. For the echoes that formed and dissipated in
+range, the average heights of the hail echoes were higher
+than those of the no-hail echoes at all times.
+11. SYNOPTIC WEATHER CONDITIONS
+The durations of echoes between formation and first
+hail were determined for three primary synoptic cate-
+gories. Cold frontal storms tend to have longer prehail
+durations than do echoes with the other categories with
+50 percent having long (2 5 0 min) durations. Echoes
+formed under stationary frontal conditions showed about
+equal preference for short (32 percent) , moderate (32
+percent), and long (36 percent) durations. Echoes with
+3 50 MONTHLY
+15
+30
+AVERAGE
+--------
+30
+25
+COLO FRONT
+AVERAGE
+----
+STATIONARY FRONT
+I I I I I ’
+I I I I I
+$ w 2 5 L
+= 20
+LOW
+WEATHER REVIEW voo. 98, No. 5
+NO-HAIL ECHOES ‘
+; 20
+2
+I
+Y
+I
+‘7 1 5 1 0 25 50 75 100
+FORMAT1 ON DISSIPATION
+CUMULATIVE PERCENT OF TIME
+FIGURE 5.-Height curves for all hail and nehail echoes as de-
+termined for the indicated percent of time from formation to
+dissipation in range.
+TABLE 6.-Comparison of charactwistics of hail echoes with those of no-hail echoes*
+FIGURE 4.-Height curves of hail and no-hail echoes for three
+major synoptic weather categories for time intervals after for-
+mation.
+TABLE 5.-Daily probabilities that the tallest half of the echoes at different stages will produce hail
+Probability, percent, at dmerent stages
+Formation ., Hail time* Dissipation Percent of tallest half of the echoes
+*The heights used for analyzing no-hail echoes were those at the time corresponding
+to the average time of hail (44 min after formation), as based on all 60 hail echoes.
+Lows produced hail more quickly after echo formation
+with 50 percent producing hail in less than 29 min.
+The analysis of speed with each synoptic category
+showed in general that the cold frontal echoes moved
+with moderate (20-29 kt) to fast (2 3 0 kt) speeds with
+90 percent moving faster than 19 kt. More than 40 per-
+cent moved with fast (2 3 0 kt) speeds. Stationary frontal
+echoes moved with slow (I 19 kt) to moderate (20-29
+kt) speeds. Forty-seven percent moved with slow speeds,
+and 43 percent moved with moderate speeds. Low echoes
+moved with moderate speeds. More than 70 percent
+moved with moderate speeds. An analysis of echo speeds
+before, during, and after hail for each synoptic category
+showed no signifhant differences against time.
+The directions of echo motion (toward which the 103
+echoes were moving) were grouped by synoptic categories
+(fig. 6). Stationary frontal echoes (fig. sa) had a marked
+Echo characteristics Hail No-hail
+Preferred time of occurrence, CST _____ __ ____ __ ______. _____. ___ __.
+Average direction of movement, degrees- ____. _____. . ____
+~
+._ ____ Average speed, kt - - - __ - - - .- -. ___
+~
+- __ -
+~ ~
+__
+~
+- - ~.
+~
+__ .-. - - - -
+~
+- - - - -
+~
+Average reflectivity at formation, 1111116 mJ. _____ __. . ____ __ __ ___ Average reflectivity at hail time,+ 1111110 m-s_-. . __ ___. __ _.__ __ -.
+Average height at formation, It ______..____ ____ ____..
+~
+____._____
+Average height at hail time,t ft ____ ___ ___. ___ ___. __ __. . __ __ ~. ~.-
+Average height at dissipation, ft. __ __ ____ __ - ___ __ __ __ ____ __. ____
+1200-1800
+81.9
+23.8
+6.1XlDa
+7.3XlO1
+25,600
+27, OD0
+21,800
+1200-1800
+85.9
+24.2
+5.5XlG
+1.6XlO1
+23, OOO
+24,700
+18,500
+‘All values are based on the 50 no-hail echoes and on the 50 hail echoes that formed in
+range, except the height values which are bnsed on the 35 hail echoes that formed and
+dissipated in range.
+tAvexage hail time was 44 min after formation.
+tendency to move in a northeast direction, and those
+with Lows frequently moved t o the east-southeast and
+southeast. The cold frontal echoes showed a preference
+for northeast or southeast motions. When the directions
+of all 103 echoes were grouped, preferences for northeast
+and east-southeast were indicated (fig. 6d).
+An analysis by synoptic category was also done for the
+echo turning in the period prior to first hail, according to
+left turn, right turn, or no turn. This analysis revealed
+no marked preference Rmong the three turn options for
+the echoes with cold and stationary fronts (figs. 7a and
+7b). The echoes with Lows had more of a tendency to
+turn to the left, or to not turn, than to turn to the right
+(fig. 7c). This indicates considerable variability in steering
+level winds with each category.
+Also shown in figures 7a, 7b, and 7c are the average
+degrees of turn to the right or left for each synoptic
+situation. The cold frontal echoes which turn tend to have
+a 50 percent greater turn to the right than to the left,
+whereas the echoes with other synoptic categories average
+about the same degrees of turn to the right as to the left.
+May 1970 Neil G. Towery and Stanley A. Changnon, Jr. 351
+a. Stationary front b. Lon
+7 4 3 20% 10% I 0 10%
+m m
+B
+9 9
+C . Cold front d . All cases
+FIGURE 6.-Percent of occurrence of hail-echo motion (toward which
+the echoes were moving) for each synoptic weather category and
+for all cases.
+When the times of day for the beginning times of the
+103 echo tracks were grouped by synoptic situations, the
+cold frontal cases were found to occur largely in the after-
+noon and evening. Afternoon tendency for beginnings was
+very predominant for the stationary frontal echoes. The
+echoes with low conditions had a decided preference for
+beginning in the morning and afternoon. Diurnal heating
+was obviously an important factor in hailstorm occurrence
+in all three classes.
+19. ECHO MODELS
+Analyses of the echo characteristics,: when sorted and
+then grouped for the three synoptic weather categories,
+revealed distinctly different and reasonable models for each
+(table 7). These synoptic models, or typical hail echoes,
+provide some information that can be used as guidance in
+making operational decisions concerning potential hail-
+producing echoes.
+The hail-echo model for cold fronts is faster moving, as
+would be expected from the normal upper level steering
+winds with cold fronts, than are the other echo models.
+380-965 %70---3
+1 ’URN
+FIGURE 7.-Percent of occurrence of hail echoes turning and not
+turning and average degrees of turns for each synotic weather
+category.
+The cold frontal model also is the longest lived and highest
+storm (entire duration), and has relatively high reflectivi-
+ties. The considerable instability associated with cold
+fronts indicates these findings are’ reasonable. The high
+reflectivity values also may relate to the fact that hail from
+cold frontal storms is relatively long lasting and that cold
+frontal hailstorms usually are associated with relatively
+heavy rainfall (Changnon 1969).
+The stationary frontal model of hail echoes indicates
+a right turn prior to the development of hail. Newton
+(1963) has indicated that severe storms embedded in warm
+moist air masses (which is the case for this condition) tend
+to obtain their indraft air at low levels along their south-
+east flank. Thus, new growth develops along the right
+flank which results in an apparent right turn in such 8.n
+environment. The preference for afternoon echo develop-
+ment in the stationary frontal conditions further reflects
+the importance of low-level local heating on the develop-
+ment of hail echoes under this condition. The tendency for
+a left turn by hail echoes with cold fronts suggests that
+the heavier precipitation in these storms effectively blocks
+the primary upward inflow for the storm (Phillips 1969).
+The primary flow circles inward on the left flank, which
+results in displacement of the updraft to the left and
+growth on the left flank in many cold frontal storms.
+The stationary frontal hail-echo model (table 7) is
+shown by its reflectivity and height values to be a strong
+vigorous storm. This is not unexpected. Changnon (1960b)
+352 MONTHLY WEATHER REVIEW Vol. 98, No. 5
+TABLE 'I.-Summary of echo characteristics for each synoptic
+classification
+Stationary Echo characteristies Coldfront front Low
+Average speed (kt) ____.._._________._.-.-.-----.---
+Average duration prior to hail (min)---. . -. -. . __ __.
+Average total duration (min). ___. .- - -.. ___ __. . .. -.-
+Preferred direction of motion..- ___ __. . __ __. ___ .- .--
+Preferred direction of turn ___.._.______.___.__.-----
+Average number of degrees turn (when turning) in
+preferred direction _______________
+~
+_____.__________
+Preferred time of day, C~T--- - - _.__. - _________.__ ___ Average reflectivity at formation (m a m-3) __._. __ -
+Average reflectivity at hail time (m o r n -3 ) ________ Average reflectivity at dissipation (mmam-3) .-.-...
+Average top height for echo duration (lol ft) _____.._
+Average top height at hail time (lol ft) _____ -. -. __. -
+30
+59
+90
+NE
+Left
+12
+5.6X101
+2.6X105
+3.6X101
+38
+37
+12W2400 1
+21 25
+49 32
+83 75
+NE ESE
+Right Noturn
+17 0
+L200-18M m1800
+5.1X101 4.6XIOa
+4.6XlOS 5.2X104
+9. lXlW 2.6Xlol
+36 19
+38 20
+indicated that a large number of damaging Illinois hail-
+storms were produced under stationary frontal conditions,
+and a recent study of hailstreaks (Changnon 1969) shows
+that the volume of hail per unit area was quite large from
+hailstorms occurring during stationary frontal conditions.
+The typical hailstorm produced by low conditions is
+the weakest and shortest lived of the three synoptic
+weather models. These storms exhibit a capability of
+producing hail fairly quickly after echo formation, but
+in turn the echo life is considerably shorter than those of
+the other models.
+In general, the values in table 7, which are considered
+t o be models of Illinois hail echoes, appear t o be reasonable
+because they are in agreement with prior findings on
+surface hail, instability with severe weather, and the
+mechanics of hailstorm development.
+13. SUMMARY AND CONCLUSIONS
+This study has considered various parameters associated
+with hail-producing echoes in Illinois. Those parameters
+included echo location, duration, direction of motion,
+speed, time of day, associated synoptic weather condi-
+tions, and their relationships with each other. I n addition,
+analyses were done on echo reflectivities and heights.
+The echo location analysis indicated that the echoes
+have a slight tendency to form in the area northwest of
+the radar site. Dissipation location of the hail echoes
+shows a preference for the north sector, a condition related
+t o the preferred area of formation. The sample was too
+small to ascertain any small (1,000 sq mi) areas of echo
+development, but the findings concerning greater hail-
+echo frequency in the northwest and north sectors agree
+with climatological findings on warm-season-average hail-
+day frequencies (Changnon 1963) which show a maximum
+in these areas of central Illinois.
+The average height of the hail-echo tops revealed a
+5,000-ft increase during the 10-15 min prior to f i s t hail
+(fig. 2) which was the most rapid growth on the average
+echo height profile. This indicates that a sustained up-
+draft surge was related to the hail production, and this
+could fit the hailstorm model proposed by Gaviola and
+Fuertes (1947) and subsequently elaborated on by Ludlam
+(1958), 8s well as the Bates model (1965).
+The most striking finding from this hail-echo study was
+the great variability. Hail-producing echoes had maximum
+tops ranging anywhere between 9,000 and 54,000 ft at
+the time of hail, lifetimes from 30-197 min, average
+speeds from 5-50 kt, reflectivities at hail time from IO2
+to lo8 mm6 mW3, and were produced by all types of synoptic
+weather classifications that produce summer precipitation
+in Illinois. Consequently, the establishment of a single
+model of a hail-producing echo would be difficult, and
+any such model would be relatively meaningless. However,
+three synoptic models were developed as discussed in the
+previous section.
+Comparison of the characteristics of the hail-producing
+echoes with those of no-hail echoes on the same days to
+discern forecasting guides revealed great similiarity in all
+aspects except echo height. Throughout the echo duration
+for each synoptic category, the hail-echo top had an
+average height that was between 2,000 and 4,000 ft higher
+than that of the no-hail echo. The similarity in the shapes
+of the time-height curves of the average hail echo and the
+no-hail echo indicates a similar evolution of growth and
+dissipation of convection. However, the continuously
+greater height of the average hail echo indicates 1)
+stronger early convection prior to echo development,
+and 2) sustenance of greater convection throughout its
+duration. Thus, as has been shown by Douglas (1963)
+for Alberta hailstorms, the probability of hail in an
+Illinois storm is tied to the degree of vertical development
+of a storm.
+Two-thirds of the echoes turned to the right or left
+prior to hail production. However, there was no marked
+preference for right or left turns.
+Echo speed at time of hail was not markedly different
+from that prior to and after hail. Thus, changes in echo
+speed could not be used to indicate hail-producing echoes.
+The average echo-top heights at hail time shown in
+table 7 for the two frontal models agree remarkably well
+with the average maximum heights for frontal thunder-
+storms in Ohio (Byers and Braham 1949). The average
+total durations of the hail echoes, 75-90 min (table 7),
+were 15-30 min longer than those found for thunderstorm
+echoes in Ohio (Byers and Braham 1949).
+ACKNOWLEDGMENTS
+This research was supported by funds from the Atmospheric
+Sciences Section of the National Science Foundation, NSF GA-
+4618, and the State of Illinois. The advice and suggestions of
+Donald W. Staggs, Floyd A. Huff, and J. Loreena Ivens of the
+Survey staff are appreciated.
+May 1910 Neil G. Towery and Stanley A. Changnon, j r . 353
+Donaldson, Ralph J., Jr., “Vertical Profiles of Radar Echo Re- REFERENCES
+Bates, F. C., “The Mechanics of Hail Generation in Sloping Up-
+drafts,” paper presented a t the Conference on Cloud Physics and
+Severe Local Storms, Reno, Nev., Oct. 19-21, 1965,5 pp.
+Byers, Horace R., and Braham, Roscoe R., Jr., The Thunderstorm;
+Report of the Thunderstorm Project, U.S. Weather Bureau, Wash-
+ington, D.C., June 1949, 247 pp.
+Changnon, Stanley A., Jr., “Climatological Study of Radar-De-
+picted Lines in the Middle West,” paper presented at the 8th
+Weather Radar Conference, San Francisco, Calif., Apr. 11-14,
+1960a.
+Changnon, Stanley A., Jr., “Twenty-Five Most Severe Summer
+Hailstorms in Illinois During 1915-1959,” Research Report No. 4,
+Crop-Hail Insurance Actuarial Association, Chicago, Ill., 1960b,
+Changnon, Stanley A., Jr., ‘ Wonthly and Semi-Monthly Distri-
+butions of Hail Days in Illinois,” Research Report No. 17, Crop-
+Hail Insurance Acturial Association, Chicago, Ill., 1963, 21 pp.
+Changnon, Stanley A., Jr., “Hail Evaluation Techniques,” Part 1,
+Final Report, Contract No. NSF GA-482, State Water Survey,
+Urbana, Ill., 1969, 97 pp.
+Dennis, A. S., and Musil, D. J., “Identification of Incipient Hail-
+storms,” Proceedings of the 1Sth Radar Meteorology Conference,
+McGill University, Montreal, August 20-25, 1968, American
+Meteorological Society, Boston, Mass., 1968, pp. 428-431.
+18 PP.
+Aectivity in Thunderstorms,’’ Proceedings of the 7th Weather
+Radar Conference, Miami Beach, Florida, November 17-20, 1958,
+American Meteorological Society, Boston, Mass., 1958, pp.
+Douglas, R. H., “Recent Hail Research: A Review,” Meteorological
+Monographs, Vol. 5, No. 27, Sept. 1963, pp. 157-172.
+Gaviola, E., and Fuertes, F. Alsina, “Hail Formation, Vertical
+Currents, and Icing of Aircraft,” Journal of Meteorology, Vol. 4,
+Ludlam, Frank H., “The Hail Problem,” Nubila, Vol. 1, No. 1,
+Verona, Italy, 1958, pp. 12-96.
+Newton, Chester W., “Dynamics of Severe Convective Storms,’’
+Meteorological Monographs, Vol. 5 , No. 27, Sept. 1963, pp. 33-58.
+Phillips, Byron B., “Water Load in Convective Storms and Its
+Influence on Storm Kinetics,” ESSA Technical Memorandum
+ERLTM-APCL 6, U.S. Department of Commerce, Applied
+Physics and Chemistry Laboratory, Boulder, Colo., Mar. 1969,
+55 pp.
+Rinehart, R. E., Staggs, D. W., and Changnon, Stanley A., Jr.,
+“Identification of Hail and No-Hail Echoes,” Proceedings of the
+1 3th Radar Meteorology conference, McGill University, Montreal
+August 20-23, 1968, American Meteorological Society, Boston,
+Mass., 1968, pp. 422-427.
+Wilk, Kenneth E., “Radar Investigations of Illinois Hailstorms,”
+Scientific Report No. 1, Contract No. AF19(604)-4940, State
+Water Survey, Urbana, Ill., Jan. 15, 1961, 42 pp.
+B:8-16.
+NO. 4, Aug. 1947, pp. 116-120.
+[Received September 22, 1969; revised November 2.4, 19691

@@ -1,0 +1,83 @@
+
+NCNR                        NG3-SANS Instrument Schedule
+B. Hammouda  Tel: (301)975-3961  Fax: (301)921-9847, E-mail: hammouda@nist.gov
+Instrument   Tel: (301)975-4163          Changeover time: 10:00 a.m.
+--------------------------------------------------------------------------------
+Start  Num                       UniqID
+Date   Days  Users               S-No    Experiments              Equip Contact
+-----  ----- ------------------  ------- ------------------------ ----- --------
+May 2    1   T. Misra (NCNR)             Detector Calibration      10CB Misra
+
+
+May 3    3   S. Woodson(JHU)+U.  3070    Folding Pathways of RNA   10CB Krueger
+             Perez+S. Krueger    SP13-12 by Cation Condensation
+             (NIST)                      and Pressure
+May 6    1   S. Krueger+P.       3178    Conformational Change in  10CB Krueger
+             Reddy+S. Reddy              Adenyllyl Cylase
+             (NIST)
+May 7    3   A. Mayes+J.         2416    Polyolefin Copolymers     NPC  Hammouda
+             Gonzales+M.H. Acar  S12-49
+             (MIT)
+May 10   3   Y. Ijiri (Oberlin   2915    Magnetic correlations in  HM1  Kline
+             C.)+S. Majetich     S13-08  iron nanoparticles
+             (CMU)+J.
+May 13   1   S. Krueger+D.       3213    MS2 Particles as          10CB Krueger
+             Kuzmanovic (NIST)           Standards for Malignant
+                                         Melanoma Assays
+May 14   3   E. Kaler+B.         2979    Surfactant Fluids         10CB Kline
+             Baser+K. Hermanson  SP13-03
+             (U. Del)
+May 17   3   N. Balsara+T.       3078    Self Assembly of Highly   NPC  Hammouda
+             Rappl+M. Ruegg (UC. S13-48  Immiscible Polymers
+             Berkeley)                   Using a Balanced
+May 20   2   Proprietary                 R. Tadday (Bend Res.)     7HB  Hammouda
+             Research
+
+May 22   2   M. Foster+JS Lee+HW 3144    Effect of chain end       7HB  Ho
+             Huang (U. Akron)    SC13-08 functionalization on
+                                         thermodynamic
+May 24   2   T.A. Hatton+G.D.    2959    SANS Structural           10CB Kline
+             Moeser+P.E.         S13-14  Characterization of
+             Laibinis (MIT)              Polymer-Coated Magnetic
+May 26   2   T.A. Hatton+T.      2962    Light-Directed Structural 10CB Kline
+             Shang+K. Smith      S13-17  Changes in Photo-
+             (MIT)                       Responsive Surfactant
+May 28   3   S. Bhatia+M.        3034    Interaction of            10CB Kline
+             Crichton (U. Mass-  S13-31  Polyelectrolyte Micelles
+             Amherst)                    with Oppositely Charged
+May 31   3   A. Gast+C.          2952    Structure and Dynamics of 10CB Porcar
+             Stancik+J. Pople    SP13-02 Novel Branched Polymers
+             (Stanford U)+J.
+Jun 3    4   SANS Scientists             Summer School 2002
+
+
+Jun 7    1   Facility Shutdown
+
+
+Jun 8    3   D. Ho (NCNR)        3351    Alignment of Unimolecular SE   Ho
+                                         Semiconducting Polymer
+                                         Cylinders in
+--------------------------------------------------------------------------------
+Equipment: 
+   9P: 9-Position ambient sample changer; 
+   10CB: 10-Position sample changer (-10 to 100 deg C); 
+   VF: Vacuum Furnace; 
+   7CB: 7-Position sample changer (-10 to 100 deg C);
+   7H: 7-Position Heating Block (up to 200 deg C); 
+   7HB: 7-Position Heating Block with BN (up to 300 deg C); 
+   HM1: Horizontal High-Field Electromagnet (2 Tesla); 
+   HM2: Horizontal Low-Field Electromagnet (1 Tesla); 
+   DI: Closed cycle, displex, refrigerator (10 K to 330 K); 
+   MSC: Minnesota Sliding Plate Shear Cell, 
+   BSC: Boulder Couette Flow Shear Cell; 
+   NPC: NIST Pressure Cell; 
+   SCMA:  Superconducting Magnet (9 Tesla); 
+   2H: 2-Position, high precision heating stage (up to 250 deg C); 
+   SE: Special Environment; 
+   VR: Vertical Rotation Stage;
+   OC: Orange Cryostat;
+
+Contacts:
+    Cedric Gagnon (x2020), John Barker (x6732), Paul Butler (x2028),  
+    Boualem Hammouda (x3961), Susan Krueger (x6734), Steve R. Kline (x6243)
+    Andrew Jackson (x3149), Lionel Porcar (x5049), Mark Laver (x4404), 

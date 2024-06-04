@@ -1,0 +1,371 @@
+<html>
+<head>
+<title>MCG - Morphological Galaxy Catalog</title>
+</head>
+<body bgcolor="#cceeff">
+
+<table border=0 cellpadding=10 width=100% align=center>
+  <tr>
+    <td align=left><a href="/db-perl/W3Browse/w3table.pl?tablehead=name%3Dmcg&Action=More+Options">Browse<br>this table...</a></td>
+    <td align=center><h1>MCG - Morphological Galaxy Catalog</h1></td>
+    <td align=right><a href="/docs/archive.html">HEASARC<br>Archive</a></td>
+  </tr>
+</table>
+<hr>
+<h2><a name="overview">Overview</a></h2>
+The MCG database contains the &quot;Morphological Catalogue of Galaxies,&quot; a
+compilation of information for approximately 34,000 galaxies found and
+examined on the Palomar Observatory Sky Survey (POSS). Individual identifiers
+are assigned for about 29,000 galaxies and information on the remaining 5,000
+is present in the extensive notes of the published catalogs
+(Vorontsov-Velyaminov et al. 1962-1968). The catalog is structured according
+to the POSS zones and is numbered from +15 (corresponding to +90 deg) to +01
+(+06 deg zone) and +00 (equatorial zone) to -05 (-30 deg zone); the fields are
+numbered with increasing right ascension. The original goal of the
+compilation was to be complete for galaxies brighter than magnitude 15.1, but
+the final catalog lists many objects considerably fainter.
+<p>
+
+Information given in the original printed volumes includes: cross-
+identifications to the NGC (Dreyer 1888) and IC (Dreyer 1895, 1908)
+catalogs, equatorial coordinates for 1950.0, magnitude, estimated sizes
+and intensities of the bright inner region and the entire object,
+estimated inclination, and coded description (by symbols) of the
+appearance of the galaxy. Each field is then followed by notes on
+individual objects. All of the above data except the coded description
+are included in the machine version, except that special coding (e.g.
+for uncertainty or source designation) is not present (other than for
+the NGC/IC cross identifications [added at the Astronomical Data Center
+for this machine version]). Although the notes are not computerized,
+the presence of a note in the original is flagged in the machine version
+<p>
+
+Detailed descriptions of modifications, corrections and the record format
+are provided for the machine-readable version of the &quot;Morphological Catalogue
+of Galaxies&quot; (Vorontsov-Velyaminov et al. 1962-68); see the Additional
+Information section below. In addition to hundreds of individual corrections,
+a detailed comparison of the machine-readable with the published catalog
+resulted in the addition of 116 missing objects, the deletion of 10 duplicate
+records, and a format modification to increase storage efficiency.
+
+<hr><h3><a name="catalog_bibcode">Catalog Bibcode</a></h3>
+<a href="http://adsabs.harvard.edu/cgi-bin/bib_query?1962TrSht..32....1V">1962TrSht..32....1V</a>
+
+<hr><h3><a name="references">References</a></h3>
+Source Catalog Reference: Vorontsov-Velyaminov, B. A. et al.,
+1962-1968, 1962, Morpholoqical Trudy Gos. Astron. Inst. Shternberga
+<p>
+
+Documentation Reference: Warren Jr., W. H. 1982, NSSDC/WDC-A-R&amp;S 82-31
+<p>
+
+Vorontsov-Velyaminov, B. A. and Krasnogorskaya, A. A. 1962, Morphological
+Catalogue of Galaxies, Part I, Catalogue of 7200 Galaxies from +90 to +45 deg
+Declination (Moscow: Sternberg Institute 32).
+<p>
+
+Vorontsov-Velyaminov, B. A. and Arhipova, A. A. 1963, Morphological Catalogue
+of Galaxies, Part III, Catalogue of 6740 Galaxies from +15 to -9 deg
+Declination (Moscow: Sternberg Institute 33).
+<p>
+
+Vorontsov-Velyaminov, B. A. and Arhipova, A. A. 1964, Morphological Catalogue
+of Galaxies, Part II, Catalogue of 9650 Galaxies from +45 to +15 deg
+Declination (Moscow: Sternberg Institute 34).
+<p>
+
+Vorontsov-Velyaminov, B. A. and Arhipova, A. A. 1968, Morphological Catalogue
+of Galaxies, Part IV, Catalogue of 5410 Galaxies from -9 to -33 deg Declination
+(Moscow: Sternberg Institute 38).
+<p>
+
+Documentation Reference: Warren Jr., W. H. 1982, NSSDC/WDC-A-R&amp;S 82-31
+<p>
+
+Bigay, J. 1951, Ann. Astrophys. 14, 319.
+<p>
+
+Dreyer, J. L. E. 1888, New General Catalogue of Nebulae and Clusters of Stars,
+Mem. Roy. Astron. Soc. 49, Part I (London: Royal Astronomical Society 1962,
+reprinted).
+<p>
+
+Dreyer, J. L. E. 1895, Index Catalogue of Nebulae found in the Years 1888-1894,
+with Notes and Corrections to the New General Catalogue, Mem. Roy. Astron. Soc.
+51, 185 (London: Royal Astronomical Society 1962, reprinted).
+<p>
+
+Dreyer, J. L. E. 1908, Second Index Catalogue of Nebulae and Clusters of Stars,
+containing Objects found in the years 1895-1907, with Notes and Corrections to
+the New General Catalogue and to the Index Catalogue for 1888-94, Kern. Roy.
+Astron. Soc. 59, Part 2, 105 (London: Royal Astronomical Society 1962,
+reprinted).
+<p>
+
+Holmberg, E. 1937, AM. Obs. Lund. No. 6.
+<p>
+
+Holmberg, E. 1958, Lund. Medd. 2, No. 136.
+<p>
+
+Humason, M. L., Mayall, N. U. and Sandage, A. R. 1956, Astron. J. 61, 97.
+<p>
+
+Pettit, E. 1954, Astrophys. J. 120, 413.
+<p>
+
+Reiz, A. 1941, Ann Obs. Lund. No. 9.
+
+<hr><h3><a name="additional_information">Additional Information</a></h3>
+The machine readable version of the MCG was received from Dr. Robert S. Dixon
+of the Ohio State University Radio Observatory on 7 December 1981. As
+received, the catalog consisted of 28904 records of length 90 bytes. Each
+logical record contained a number giving the approximate sequential position of
+the object in the original published catalog volumes, but the machine version
+was ordered by right ascension. Upon listing the data and scanning some records
+manually, enough errors were found such that it was deemed necessary to check
+the records more closely.
+<p>
+
+Appreciation is expressed to B. G. Corbin of the U.S. Naval Observatory for
+making the published volumes of the MCG available, to Dr. R. S. Dixon of the
+Ohio State University Radio Observatory for supplying the original tape
+version, and to Dr. N. G. Roman for help with translation and interpretation of
+parts of the Russian preface to the published catalog.
+
+<hr><h3><a name="parameters">Parameters</a></h3>
+<p>
+<b><a name="name">Name</a></b><br>
+  Catalog Designation
+<p>
+<b><a name="flag">Flag</a></b><br>
+  Asterisk (*) if there is a note for this galaxy at the end of the field in the
+  published edition; otherwise blank.
+<p>
+<b><a name="cat_num">Cat_Num</a></b><br>
+  Catalog number from the NGC (Dreyer 1888) or the IC (Dreyer 1895, 1908);
+  otherwise blank. Format as follows: 'NGC' 16-18, number 20-23, component 24;
+  'IC' 16-17, number 19-22, component 23.
+  <p>
+
+  The components in byte 23 or 24 are a, b, c, etc. for components of NGC or IC
+  object; slash (/) to denote NGC(IC) and NGC(IC) + 1 numbers together (e.g. NGC
+  5906/7); a colon (:) indicates an uncertain identification according to the
+  authors (? in published catalog) [a : occurs in byte 24 in one case
+  (MCG+10-23-065) where a / should also occur.]
+<p>
+<b><a name="ra">RA</a></b><br>
+  The Right Ascension of the object. RA Precision reported varies from whole
+  minutes to hundredths of a minute. The greater precision is used to
+  discriminate objects close together, but does not indicate greater accuracy.
+<p>
+<b><a name="dec">Dec</a></b><br>
+  The Declination of the object.
+<p>
+<b><a name="mag">Mag</a></b><br>
+  Magnitude taken from various sources in order of preference (Holmberg 1958;
+  Humason, Mayall and Sandage 1956; Pettit 1954; Reiz 1941; Bigay 1951). In the
+  published version, various symbols are used to indicate the sources above, e.g.
+  surrounded by (), [], or //. These codes are not present in the machine
+  version; however, magnitudes from Holmberg (1958) are reported to a hundredth
+  and Humason et al. (1956) to a tenth. Any other coding is indistinguishable in
+  the present machine version. Blank for missing data.
+<p>
+<b><a name="in_maj">In_Maj</a></b><br>
+  Diameter of the major axis of the bright inner port of the galaxy can be found
+  in the &lt;majaxis_in&gt; column. This column is blank if absent. The special
+  coding (: for uncertainty) is not present in this machine version. If only one
+  number is given in the published version, it is given in this field and bytes
+  49-53 are blank. (To clarify the units, the reporting of all diameters in
+  tenths means that MCG+15-01-001 has inner region dimensions of 0.2 x 0.05
+  arcmin and overall dimensions of 1.6 x 1.3 arcmin [divide diameters by ten to
+  obtain arcminutes].)
+<p>
+<b><a name="in_min">In_Min</a></b><br>
+  Diameter of the minor axis of the bright inner part of the galaxy can be found
+  in the &lt;minaxis_in&gt; column. This column is blank if absent or if only one
+  diameter is reported.
+<p>
+<b><a name="maj_axis">Maj_Axis</a></b><br>
+  Diameter of the major axis of the entire galaxy can be found in the &lt;majaxis&gt;
+  column. This column is blank if no data. The special coding (e.g. : for
+  uncertainty) used in the published catalog is not present in the machine
+  version. If only one number is given in the published edition (object round)
+  it is given in this field and bytes 60-64 are blank. (The larger data field is
+  required to accommodate M 31 at 1600 arcmin [MCG+07-02-016].)
+<p>
+<b><a name="min_axis">Min_Axis</a></b><br>
+  Diameter of the minor axis of the entire galaxy can be found in the &lt;minaxis&gt;
+  column. This column is blank if absent or if only one diameter is reported.
+<p>
+<b><a name="int_in">Int_In</a></b><br>
+  Intensity of the inner region of the galaxy I_d on a scale from 1 (completely
+  black image) to 6 (image barely visible) can be found in the &lt;int_in&gt; column.
+  This column is blank if absent.
+<p>
+<b><a name="int_out">Int_Out</a></b><br>
+  Intensity of the outer region (I_D) can be found in the &lt;int_out&gt; column and is
+  on same scale as above. This column is blank if absent.
+<p>
+<b><a name="incl">Incl</a></b><br>
+  Inclination of the principal Plane estimated on a scale from 1 (face on) to 5
+  (edge on). This column is blank if absent.
+<p>
+<b><a name="ra_1950">RA_1950</a></b><br>
+  Right Ascension in 1950 Coordinates
+<p>
+<b><a name="dec_1950">Dec_1950</a></b><br>
+  Declination in 1950 Coordinates
+<p>
+<b><a name="lii">LII</a></b><br>
+  The galactic latitude of the object.
+<p>
+<b><a name="bii">BII</a></b><br>
+  The galactic longitude of the object.
+<p>
+<b><a name="cra">CRA</a></b><br>
+  RA given in sexagesimal character notation, Epoch J2000 (i.e. hhmmss.s for RA
+  and ddmmss.s for DEC).
+<p>
+<b><a name="cdec">CDec</a></b><br>
+  DEC given in sexagesimal character notation, Epoch J2000 (i.e. hhmmss.s for RA
+  and ddmmss.s for DEC).
+<p>
+<b><a name="class">Class</a></b><br>
+  Browse Object Classification
+
+<hr><h3><a name="contact_person">Contact Person</a></h3>
+Questions regarding the MCG database table can be addressed to the
+<a href="/cgi-bin/Feedback">HEASARC User Hotline</a>.
+
+<!--================================================================-->
+<style type="text/css">
+<!--
+.footer {
+  font-size: 70%;
+}
+-->
+</style>
+<hr>
+</td></tr>
+<tr><td bgcolor="#cccccc" colspan=3>
+<DIV class="navigation">
+<table cellpadding=5><tr><td valign=top>
+<div class="footer">
+<p align="center">
+<a href="http://science.hq.nasa.gov/universe/">Science Mission Directorate Universe Division</a><br>
+<a href="http://universe.nasa.gov/">Beyond Einstein</a> | <a href="http://origins.jpl.nasa.gov/">Origins</a>
+</p>
+
+<UL>
+<LI><a href="/docs/faq.html">
+FAQ/Comments/Feedback</a> 
+<LI><a href="/docs/outreach.html">
+Education Resources</a> 
+<LI><a href="/docs/plugins.html">
+Find helper applications like Adobe Acrobat</a>
+</UL>
+<P>
+</div>
+</td>
+<td valign="top">
+<div class="footer">
+
+A service of the 
+<A HREF="http://astrophysics.gsfc.nasa.gov/">
+Astrophysics Science Division</A>
+at 
+<A HREF="http://www.nasa.gov/">NASA/</A>
+<A HREF="http://www.nasa.gov/goddard">GSFC</A><br>
+and the <a href="http://www.cfa.harvard.edu/hea/">High Energy
+Astrophysics Division</a> 
+of the <a href="http://cfa-www.harvard.edu/">
+Smithsonian Astrophysical Observatory</a> (SAO)
+
+
+<p>
+HEASARC Director: 
+Dr. Alan P. Smale<br> 
+
+HEASARC Associate Director: Dr. Roger Brissenden
+<br>
+Responsible NASA Official: 
+<rno>
+<a href="/cgi-bin/Feedback?selected=heasarc">
+Phil Newman</a></rno>
+<br>
+Web Curator:
+<webpoc>
+<a href="/cgi-bin/Feedback?selected=heasarc">Karen Smale</a>
+</webpoc>
+</div>
+
+</td></tr>
+<tr><td colspan=2>
+<div class="footer">
+
+<a href="http://www.nasa.gov/about/highlights/HP_Privacy.html">Privacy Policy and Important Notices.</a> 
+
+</div>
+
+</td></tr>
+</table>
+</DIV>
+</td></tr>
+</table>
+
+
+<!-- close content table -->
+</td>
+</tr>
+</table>
+
+<!-- close white table -->
+</td></tr>
+</table>
+
+
+<hr>
+<em>Page Author:</em> <a href="/cgi-bin/Feedback">Browse Software Development Team</a><br>
+<em>Last Modified:</em> Tuesday, 09-Nov-2004 16:15:15 EST
+
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+</body>
+</html>

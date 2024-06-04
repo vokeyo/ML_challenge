@@ -1,0 +1,510 @@
+<html>
+  <head>
+    <TITLE>Download fv</TITLE>
+              <LINK REL=StyleSheet HREF="/lheasoft/lheasoft.css" TYPE="text/css">
+
+<!-- Load local web template -->
+
+      <script type="text/javascript" language="JavaScript1.2">
+
+/*
+Change Cell Backgrounds -
+&copy; Shivaji Basu (www.shivbasu.com)
+To add more shock to your site, visit www.DHTML Shock.com
+*/
+
+function cOn(td){
+if(document.getElementById||(document.all && !(document.getElementById))){
+td.style.backgroundColor="#006699";
+}
+}
+
+function cOut(td){
+if(document.getElementById||(document.all && !(document.getElementById))){
+td.style.backgroundColor="#666666";
+}
+}
+
+function gofOut(td){
+if(document.getElementById||(document.all && !(document.getElementById))){
+td.style.backgroundColor="#000000";
+}
+}
+
+function epoOut(td){
+if(document.getElementById||(document.all && !(document.getElementById))){
+td.style.backgroundColor="#dd0000";
+}
+}
+
+function liteOut(td){
+if(document.getElementById||(document.all && !(document.getElementById))){
+td.style.backgroundColor="#888888";
+}
+}
+</script>
+
+<link type="text/css" rel=stylesheet href="/docs/portal.css">
+<link rel="stylesheet" type="text/css" href="/docs/print.css" media="print">
+
+<script type="text/javascript" language="JavaScript">
+var dtt_agent = navigator.userAgent.toLowerCase();
+var dtt_isAlpha = dtt_agent.indexOf("alpha") != -1
+var dtt_isOSF = dtt_agent.indexOf("osf1") != -1
+var dtt_isSunOS = dtt_agent.indexOf("sunos") != -1
+if (dtt_isAlpha || dtt_isOSF || dtt_isSunOS) {
+    document.write('<link type=text/css rel=stylesheet href="/docs/portal_osf.css">\n');
+}
+</script>
+
+</head>
+<body topmargin="0" bgcolor="#000000">
+
+<a href="#content"><img alt="skip to content" border="0" src="/Images/pixel.gif" width=1 height=1></a>
+
+
+<!-- main white cell -->
+<table width=750 cellpadding=0 border=0 align=center bgcolor="#FFFFFF">
+
+<tr>
+<td>
+&nbsp;<!--<h2 align="center"><a href="/docs/downtime.html">HEASARC server downtime scheduled for Sept 5-6 - 
+all archives affected</a></h2>-->
+
+<DIV class="navigation">
+
+<!-- NASA header & search box-->
+        <table border=0 width=730 cellpadding=0 align=center>
+        <tr>
+        <td bgcolor="#cccccc" width=300>
+	<img src="/Images/portal/head_nasa_sao.gif" usemap="#nasa_sao" width="300" height="63" 
+	alt="Goddard Space Flight Center, Smithsonian Astrophysical Observatory" border="0">
+<MAP name="nasa_sao">
+<area alt="GSFC" shape="rect" coords="17,3 272,31"
+href="http://www.nasa.gov/goddard">
+<area alt="SAO" shape="rect" coords="17,32 283,60"
+href="http://cfa-www.harvard.edu/">
+</MAP>
+
+</td>
+        <td bgcolor="#cccccc" width=100>
+&nbsp;	<a class="news" href="/docs/faq.html">Help/FAQ</a><br>
+&nbsp;	<a class="news" href="/docs/heasarc/whatsnew.html">What's New</a><br>
+&nbsp;	<a class="news" href="/docs/sitemap.html">Site Map</a><br>
+&nbsp;  <a class="news" href="http://www.nasa.gov/">NASA Homepage</a><br>
+        </td>
+        <td bgcolor="#006699" width=300 align=center>
+        <form method="post" action="/cgi-bin/search/search.pl">
+        <label for="search"><a href="/cgi-bin/search/search.pl">
+        <font color="#ffffff"><b>Search</b></font></a></label>
+<input name="tquery" id="search" size="20" maxlength="60" value="enter search terms" onfocus="this.value='';">
+&nbsp;&nbsp;	<a class="menuunderline" href="/cgi-bin/search/search.pl">Advanced Search</a>
+        </form>
+        <table><tr><td>
+<form name=form><font size=-2>
+<label for="archives"><a class="menu" href="/docs/corp/goto_text.html"><u>HEASARC Quick Links</u></a></label></font><br>
+
+<script type="text/javascript" language="JavaScript">
+            <!-- Hide from non JavaScript browsers
+
+document.write('<select class="Menu" name=archives size=1 id="archives" onChange="formHandler()">');
+document.write('<option class="MenuColorHEADER" value="/" selected>---Quick Links---<\/option>');
+document.write('<option class="MenuColorHEADER" value="/docs/archive.html">---Archive Interfaces---<\/option>');
+document.write('<option value="/cgi-bin/argus/argus.pl">Argus: proposal info<\/option>');
+document.write('<option value="/docs/archive.html">Browse: search HEASARC archives<\/option>');
+document.write('<option value="/vo/">NVO DataScope<\/option>');
+document.write('<option value="http://skys.gsfc.nasa.gov/skymorph/skymorph.html">SkyMorph: search variable objects<\/option>');
+document.write('<option value="http://skyview.gsfc.nasa.gov/">SkyView: virtual observatory<\/option>');
+document.write('<option class="MenuColorHEADER" value="/docs/software.html">---Software & Tools---<\/option>');
+document.write('<option value="/docs/heasarc/caldb/caldb_intro.html">CalDB: Calibration database<\/option>');
+document.write('<option value="/cgi-bin/Tools/convcoord/convcoord.pl">Coord Converter<\/option>');
+document.write('<option value="/cgi-bin/Tools/DateConv/dateconv.pl">Date Converter<\/option>');
+document.write('<option value="/cgi-bin/Tools/energyconv/energyConv.pl">Energy Converter<\/option>');
+document.write('<option value="/docs/heasarc/fits.html">FITS: standard data format<\/option>');
+document.write('<option value="/docs/software/fitsio/fitsio.html">FITSIO: FITS subroutine library<\/option>');
+document.write('<option value="/docs/software/ftools/ftools_menu.html">FTOOLS: general s/w for FITS files<\/option>');
+document.write('<option value="/docs/software/ftools/fv.html">fV: FITS file editor<\/option>');
+document.write('<option value="/hera/">Hera: remote data analysis service<\/option>');
+document.write('<option value="/cgi-bin/Tools/HEXTErock/HEXTErock.pl">HEXTErock<\/option>');
+document.write('<option value="/cgi-bin/Tools/w3nh/w3nh.csh">nH: Column Density<\/option>');
+document.write('<option value="/RPS/">RPS proposal submission<\/option>');
+document.write('<option value="/xte_weather/">RXTE ASM weather map<\/option>');
+document.write('<option value="/cgi-bin/Tools/timeline/timeline.pl">Timeline (RXTE, Swift & HETE-2)<\/option>');
+document.write('<option value="/topbase/">TIPTOPbase: atomic data<\/option>');
+document.write('<option value="/Tools/Viewing.html">Viewing: possible obs times<\/option>');
+document.write('<option value="/Tools/w3pimms.html">WebPIMMS: flux/cnt converter<\/option>');
+document.write('<option value="/webspec/webspec.html">WebSpec: spectral sims<\/option>');
+document.write('<option value="/cgi-bin/Tools/xraybg/xraybg.pl">X-ray Background Tool<\/option>');
+document.write('<option value="/docs/xanadu/xanadu.html">Xanadu: data analysis suite<\/option>');
+document.write('<option value="/cgi-bin/Tools/high_energy_source/high_energy_source.pl">X-ray, Gamma-ray, EUV Source Finder<\/option>');
+document.write('<option value="/cgi-bin/Tools/xTime/xTime.pl">xTime: RXTE & Swift time converter<\/option>');
+document.write('<option class="MenuColorHEADER" value="/docs/HHP_heasarc_info.html">---Resources---<\/option>');
+document.write('<option value="/Tools/bibrefs.html">Bibliography<\/option>');
+document.write('<option value="/docs/heasarc/contact.html">Contact Info<\/option>');
+document.write('<option value="/docs/heasarc/headates/headates.html">Deadlines (proposals & meeting regist.)<\/option>');
+document.write('<option value="/docs/heasarc/headates/heahistory.html">History of High-Energy Astronomy<\/option>');
+document.write('<option value="/docs/heasarc/meetings.html">Meetings<\/option>');
+document.write('<option value="/docs/heasarc/staff/OGIP_staff.html">Staff<\/option>');
+document.write('<option value="/cgi-bin/tour/slideshow.pl?Slide_file=/cgi-bin/tour/slides.data">Tour the site<\/option>');
+document.write('<option value="/docs/heasarc/whatsnew.html">What\'s New<\/option>');
+document.write('<option class="MenuColorHEADER" value="/docs/outreach.html">---Education & Pub. Outreach---<\/option>');
+document.write('<option class="MenuColorEPO" value="http://antwrp.gsfc.nasa.gov/apod/astropix.html">APOD: Astronomy Picture of the Day<\/option>');
+document.write('<option class="MenuColorEPO" value="http://imagine.gsfc.nasa.gov/docs/ask_astro/ask_an_astronomer.html">Ask an Astrophysicist<\/option>');
+document.write('<option class="MenuColorEPO" value="/docs/objects/heapow/heapow.html">HEASARC Picture of the Week<\/option>');
+document.write('<option class="MenuColorEPO" value="/docs/objects/">Images, Spectra, Light curves<\/option>');
+document.write('<option class="MenuColorEPO" value="http://imagine.gsfc.nasa.gov/">Imagine the Universe!<\/option>');
+document.write('<option class="MenuColorEPO" value="http://starchild.gsfc.nasa.gov/">StarChild (K-8 EPO)<\/option>');
+document.write('<option class="MenuColorEPO" value="/docs/outreach/webstars.html">WebStars: gen. astronomy info/news<\/option>');
+document.write('<\/select>');
+
+
+function formHandler(){
+var URL = document.form.archives.options[document.form.archives.selectedIndex].value;
+window.location.href = URL;
+}
+
+// End -->
+
+</script>
+
+</form>
+
+</td></tr>
+</table>
+
+
+        </td>
+        </tr></table>
+</DIV>        
+</td></tr>
+
+
+<tr><td>
+<DIV class="navigation">
+        <table width=730 cellpadding=3 align=center><tr align=center>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='http://heasarc.gsfc.nasa.gov/'">
+        <a class="menu" href="http://heasarc.gsfc.nasa.gov/">HEASARC&nbsp;HOME</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/observatories.html'">
+        <a class="menu" href="/docs/observatories.html">OBSERVATORIES</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/archive.html'">
+        <a class="menu" href="/docs/archive.html">ARCHIVE</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/heasarc/caldb/caldb_intro.html'">
+        <A class="menu" HREF="/docs/heasarc/caldb/caldb_intro.html">CALIBRATION</A></td>
+        <td bgcolor="#006699" onClick="location.href='/docs/software.html'">
+        <a class="menu" href="/docs/software.html">SOFTWARE</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/tools.html'">
+        <a class="menu" href="/docs/tools.html">TOOLS</a></td>
+        <td bgcolor="#dd0000" onMouseOver="cOn(this);" onMouseOut="epoOut(this);" onClick="location.href='/docs/outreach.html'">
+        <a class="menu" href="/docs/outreach.html">STUDENTS&nbsp;/&nbsp;TEACHERS&nbsp;/&nbsp;PUBLIC</a></td>
+        </tr></table>
+</DIV>
+</td></tr>
+<tr>
+<td align=center><img alt="HEASARC: Software" src="/Images/portal/swbanner.jpg"></td>
+</tr>
+<tr><td>
+<DIV class="navigation">
+        <table width=730 cellpadding=3 align=center><tr align=center>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/software/lheasoft/'"> 
+		<a class="menu" href="/docs/software/lheasoft/">HEASOFT</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/xanadu/xanadu.html'"> 
+		<a class="menu" href="/docs/xanadu/xanadu.html">XANADU</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/software/ftools/ftools_menu.html'"> 
+		<a class="menu" href="/docs/software/ftools/ftools_menu.html">FTOOLS</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/software/lheasoft/ftools/xselect/xselect.html'"> 
+		<a class="menu" href="/docs/software/lheasoft/ftools/xselect/xselect.html">XSELECT</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/software/profit/'"> 
+		<a class="menu" href="/docs/software/profit/">PROFIT</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/software/xstar/xstar.html'"> 
+		<a class="menu" href="/docs/software/xstar/xstar.html">XSTAR</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/software/ftools/fv/'"> 
+		<a class="menu" href="/docs/software/ftools/fv/">FV</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/hera/'"> 
+		<a class="menu" href="/hera/">HERA</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/heasarc/astro-update/'"> 
+		<a class="menu" href="/docs/software/fitsio/fitsio.html">FITSIO</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/heasarc/fits.html'"> 
+		<a class="menu" href="/docs/astroe/prop_tools/maki.html">MAKI</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/astroe/prop_tools/maki.html'"> 
+		<a class="menu" href="/docs/heasarc/astro-update/">Update</a></td>
+        <td bgcolor="#666666" onMouseOver="cOn(this);" onMouseOut="cOut(this);" onClick="location.href='/docs/heasarc/astro-update/'"> 
+		<a class="menu" href="/docs/heasarc/fits.html">FITS&nbsp;STANDARDS</a></td>
+        </tr></table>
+</DIV>        
+</td></tr>
+<tr><td>
+
+<p align=center>
+<table valign=top width=730 cellpadding=10><tr><td>
+<a name="content">&nbsp;</a>
+<DIV class="content">
+<!-- **************** END OF HEADER *********************** -->
+
+
+
+
+<!--  Place common top-of-page code here
+
+<P align=left>
+Return to <A HREF="/ftools/fv/"><I>fv</I></A>'s homepage.
+<HR>
+</P>
+
+-->
+
+
+<A HREF="fv.html">[fv Home]</A>
+<center>
+<font size="+2"><B>
+Download <I>fv</I> v5.2.1 Here</font>
+</B> 
+</center>
+
+<P><I>fv</I> is built and distributed as a standard
+component of the large
+<a href="/lheasoft">HEASOFT package</A> of programs
+for manipulating and analyzing FITS data files, but you
+can also download the latest 
+version of the <i>fv</i> binary executable by itself from this page.
+
+<P><font color="#FF0000">The fv distributed with latest HEASOFT release (6.5) is version <b>5.2.</b></font></P>
+
+<P>Versions of <i>fv</i> are available for various Unix platforms 
+(including Mac OS X), for
+Windows PCs, and for older versions of Mac OS. In each case
+the distribution is completely self-contained and includes several sample FITS
+files that can be used to explore <i>fv</i>'s capabilities.
+
+<P> If you experience problems using the following
+FTP links to download this software, click
+<A href="/lheasoft/ftp_pblms.html">here </A>
+for instructions on downloading <i>fv</i> using 'HTTP'.
+</p>
+
+<font size="+1"><B>Executable Binary Distributions</B></font>
+<p>
+<BLOCKQUOTE>
+
+<font size="+1"><B>Linux / Solaris</B></font> 
+
+<BLOCKQUOTE>
+
+Download the tar file appropriate for your platform:
+<p>
+    <LI><A HREF="ftp://heasarc.gsfc.nasa.gov/software/lheasoft/fv/fv521_pc_linux.tar.gz">PC Linux</A>
+    <LI><A HREF="ftp://heasarc.gsfc.nasa.gov/software/lheasoft/fv/fv521_solaris.tar.gz">Sun Solaris</A>
+
+<p>These links will retrieve a gzipped tar file (roughly 3 MB in size).
+To unpack the file, type:</p>
+
+<PRE>
+   &gt; <b>gunzip -c fv521_&lt;ARCH&gt;.tar.gz | tar xf -</b>
+</PRE>
+
+where <TT>&lt;ARCH&gt;</TT> depends on the file downloaded.  This will create
+a fv5.2.1 directory containing a platform-specific directory (pre-compiled
+binaries and libraries used by fv), associated documentation, sample data,
+and sample scripts.  Once unpacked, <i>fv</i> can be run immediately; either add
+the fv5.2.1 directory to your executable PATH environment variable, or
+<tt>`cd'</tt> to that directory and then type <tt>`./fv'</tt>.
+</p>
+
+<P><B>NOTE to Users with <i>fv</i> installed as part of the HEASOFT 
+software package: </B>
+<br>
+If you want to replace the <i>fv</I> in your HEASOFT distribution with the newest
+version of <i>fv</i>, simply move (or copy) the <B><I>contents</B></I> of the untarred
+fv5.2.1/ directory into the $HEADAS/bin/ directory.  You may want to move aside
+the existing $HEADAS/bin/fv to e.g. $HEADAS/bin/fv_old first since you will
+be copying in a new <i>fv</i> executable.
+
+</BLOCKQUOTE>
+
+<font size="+1"><B>Windows PCs</B></font>
+<BLOCKQUOTE>
+
+<P>Windows users should download this
+<A HREF="ftp://heasarc.gsfc.nasa.gov/software/lheasoft/fv/fv521.exe">self-extracting 
+executable</A> file (11.3 Meg).  Once you've downloaded the file, double-click
+on it to launch InstallShield, which will guide you through the installation
+process. 
+
+<P>fv installation will produce two more icons (in addition to the
+regular fv icon), Hera and Student Hera, on user's desktop.
+
+<P>For information to Hera and Student Hera, please visit these pages:
+
+<P>For Hera, please go <a href="http://heasarc.gsfc.nasa.gov/hera">here</a>
+<P>For Student Hera please go <a href="http://imagine.gsfc.nasa.gov/docs/teachers/hera/overview.html">here</a>
+</BLOCKQUOTE>
+<P><B><font size="+1">Mac OS-X </font></B>
+<BLOCKQUOTE>
+
+Download 
+<A HREF="ftp://heasarc.gsfc.nasa.gov/software/lheasoft/fv/fv5.2.1_MacOS10.x.dmg.gz">Mac OS X</A> package then drag it onto 
+<a href="http://www.apple.com/downloads/macosx/system_disk_utilities/stuffitexpander.html">Stuffit Expander</a>
+to decompress it (Stuffit Expander may launch and decompress the file
+automatically).  If the disk image doesn't mount automatically,
+double-click on the .dmg file to mount it.
+Once the disk image mounts, open it, and drag the fv icon onto your
+hard disk. We recommend that you copy it to the Applications folder.
+
+<P>Same as installation for Microsoft Windows, fv installation for Mac OS X, as of
+version 5.2.1 will also create 2 more icons for user to try out HEASARC Hera service. And 
+it is also recommand that user copies them to the Applications folder to connect to Hera 
+and Student Hera.
+
+<p>
+To start Fv double click on the fv icon or type <b>open -a fv</b>
+from
+the command line. As with other Mac versions of Fv, the X11 graphical
+environment needs to be installed.
+
+<p>
+Select QUIT (command-Q) from the fv menu if the Quit button on the
+Fv interface does not work.
+
+</BLOCKQUOTE>
+<P><B><font size="+1">Older versions of Mac&nbsp;OS (before Mac OS X) </font></B>
+<BLOCKQUOTE>
+
+<P>
+Users of previous Mac operating systems (OS-8, OS-9)
+should download the older <A HREF="http://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/fv/fv30_mac.sit">
+Fv 3.0 executable</A> here (1.9 Meg). The lastest version of <i>fv</i> is not supported
+on the older Mac OS.   Decompress the file and run <i>fv</i>.  An
+included AppleScript can be used to set files' Creator/File types so
+that they will be opened by <i>fv</i> when double-clicked. Use the "File
+Exchange" control panel to have the ".fits" (and other) filename extension(s)
+recognized as being a <i>fv</i> FITS file when moving files to your computer from
+PCs or downloading them from the internet.  More details can be found in an
+included <a HREF="macintosh.html">README</a> file.
+
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<font size="+1"><B>Source Code Distribution</B></font>
+<p>
+A source code distribution of fv 5.2.1 is now available
+<A Href="http://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/fv/fv521_src.tar.gz">here</A>.
+Users should refer to the standard <A Href="/lheasoft/install.html">HEASOFT-INSTALL</A>
+document for instructions on how to build HEASOFT source code distributions,
+specifically the section titled "STEP BY STEP INSTALLATION INSTRUCTIONS".
+</p>
+
+
+<A HREF="fv.html">[fv Home]</A>
+
+
+	
+<HR>
+
+<font size="-1">
+<address>Pages maintained by
+<A HREF="http://heasarc.gsfc.nasa.gov/docs/nospam/irby.html">Bryan Irby</A>
+</address>
+Send bug reports or feature requests via the
+<a href="http://heasarc.gsfc.nasa.gov/cgi-bin/ftoolshelp">FTOOLS help desk</a>.
+</font>
+
+
+
+<hr>
+<a href="http://heasarc.gsfc.nasa.gov/">HEASARC Home</a> | 
+<a href="/docs/observatories.html">Observatories</a> | 
+<a href="/docs/archive.html">Archive</a> | 
+<a href="/docs/heasarc/caldb/caldb_intro.html">Calibration</a> | 
+<a href="/docs/software.html">Software</a> | 
+<a href="/docs/tools.html">Tools</a> | 
+<a href="/docs/outreach.html">Students/Teachers/Public</a>
+<div class=lastmod>
+<hr>
+<span class=news>Last modified: Monday, 28-Jul-2008 16:08:07 EDT</span></div>
+<div class=news align=center>
+<!--<h2 align="center"><a href="/docs/downtime.html">HEASARC server downtime scheduled for Sept 5-6 - 
+all archives affected</a></h2>-->
+
+</div>
+
+</td></tr>
+<tr><td bgcolor="#cccccc" colspan=3>
+<DIV class="navigation">
+<table cellpadding=5><tr><td valign=top>
+<div class="footer">
+<p align="center">
+<a href="http://science.hq.nasa.gov/universe/">Science Mission Directorate Universe Division</a><br>
+<a href="http://universe.nasa.gov/">Beyond Einstein</a> | <a href="http://origins.jpl.nasa.gov/">Origins</a>
+</p>
+
+<UL>
+<LI><a href="/docs/faq.html">
+FAQ/Comments/Feedback</a> 
+<LI><a href="/docs/outreach.html">
+Education Resources</a> 
+<LI><a href="/docs/plugins.html">
+Find helper applications like Adobe Acrobat</a>
+</UL>
+<P>
+</div>
+</td>
+<td valign="top">
+<div class="footer">
+
+A service of the 
+<A HREF="http://astrophysics.gsfc.nasa.gov/">
+Astrophysics Science Division</A>
+at 
+<A HREF="http://www.nasa.gov/">NASA/</A>
+<A HREF="http://www.nasa.gov/goddard">GSFC</A><br>
+and the <a href="http://www.cfa.harvard.edu/hea/">High Energy
+Astrophysics Division</a> 
+of the <a href="http://cfa-www.harvard.edu/">
+Smithsonian Astrophysical Observatory</a> (SAO)
+
+
+<p>
+HEASARC Director: 
+Dr. Alan P. Smale<br> 
+
+HEASARC Associate Director: Dr. Roger Brissenden
+<br>
+Responsible NASA Official: 
+<rno>
+<a href="/cgi-bin/Feedback?selected=heasarc">
+Phil Newman</a></rno>
+<br>
+Web Curator:
+<webpoc>
+<a href="/cgi-bin/Feedback?selected=heasarc">Karen Smale</a>
+</webpoc>
+</div>
+
+</td></tr>
+<tr><td colspan=2>
+<div class="footer">
+
+<a href="http://www.nasa.gov/about/highlights/HP_Privacy.html">Privacy Policy and Important Notices.</a> 
+
+</div>
+
+</td></tr>
+</table>
+</DIV>
+</td></tr>
+</table>
+
+
+<!-- close content table -->
+</td>
+</tr>
+</table>
+
+<!-- close white table -->
+</td></tr>
+</table>
+
+
+
+        
+</body> 
+</html>

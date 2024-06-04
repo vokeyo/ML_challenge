@@ -1,0 +1,2390 @@
+
+ 
+<html ><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<script language="Javascript1.1" type="text/javascript">
+<!--
+
+var session_cookie = getCookie('session2452565.1243');
+if (session_cookie == null) {
+	var session_dt = "0";
+	var session_j = "0";
+}  else {
+	var session_array = session_cookie.split("&");
+	var session_dt = session_array[0];
+	var session_j = session_array[1];
+}
+
+
+function getCookie(name) {
+	var cname = name + "=";
+	var dc = document.cookie;
+
+	if (dc.length > 0) {
+		begin = dc.indexOf(cname);
+		if (begin != -1) {
+			begin += cname.length;
+			end = dc.indexOf(";", begin);
+			if (end == -1)  {
+				end = dc.length;
+			} // end if
+			return (dc.substring(begin, end));
+		} // end if
+	} // end if
+	return null;
+}
+
+
+var u_cookie = getCookie('ubber2452565.1243');
+if(u_cookie) {
+	u_array = u_cookie.split("&");
+} else {
+	u_array = new Array("", "", "", "", "", "", "", null, null, null);
+} // end if
+
+var ami = "";
+if(('' == u_cookie) ||  (null == u_cookie)) {
+	ami = ".ip-is-loggedin { display: none; } .ip-is-notloggedin { display: }";
+} else {
+	ami = ".ip-is-loggedin { display: ; } .ip-is-notloggedin { display: none }";
+} // end if
+document.writeln('<' + 'style type="text/css">' + ami + '<' + '/style>');
+
+var MONTH_NAMES = Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "Jan", "Feb", "Mar", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+var AMPM = Array("AM", "PM");
+// 5 and 6 are reserved
+if(u_array[7]) {
+	dfrm = unescape(u_array[7]);
+} else {
+	dfrm = 'MMM dd, yyyy';
+} // end if
+if(u_array[8]) {
+	tfrm = unescape(u_array[8]);
+} else {
+	tfrm = 'hh:mm a';
+} // end if
+if(u_array[9]) {
+	fudge = unescape(u_array[9]);
+} else {
+	fudge = 0;
+} // end if
+
+//-->
+
+</script>
+<script src="http://www.dnr.sc.gov/ubb/datelib.js" language="Javascript1.3" type="text/javascript"></script>
+<title>SCDNR Outdoor Forums: back from black river </title>
+<meta http-equiv="Pragma" content="no-cache" />
+<link rel="shortcut icon" href="http://www.dnr.sc.gov/ubb/favicon.ico" />
+	<base href="http://www.dnr.sc.gov/ubb/" />
+<style type="text/css">
+body	{
+	margin:	0;
+	font-family: Verdana, Arial;
+	font-size: 9pt;
+	background-color: #EEE6CA;
+	}
+td	{
+	font-family: Verdana, Arial;
+	font-size: 9pt;
+	}
+span.datestamp-1 {
+	font-weight: bold;
+}
+span.timestamp-1 {
+	color: #800080;
+}
+</style>
+<!--  --><!--  -->
+
+<!--  -->
+<script language="Javascript1.3" type="text/javascript">
+		var nuke_quick_reply = 0;
+
+		var real = document.location.href ? document.location.href : document.location;
+		if((real.indexOf("iframe=1") > -1) || (real.indexOf("iframe/1") > -1)) {
+			nuke_quick_reply = 1;
+		} // end if
+
+		u_cookie = getCookie('ubber2452565.1243');
+		if(!u_cookie || u_cookie == null || u_cookie.length < 1) {
+			nuke_quick_reply = 1;
+		} else {
+			u_array = u_cookie.split("&");
+			if(u_array[12] == 1) {
+				nuke_quick_reply = 1;
+			} // end if
+		} // end if
+
+		if(nuke_quick_reply == 1) {
+			document.writeln("<" + "style type=" + '"text/css">');
+			document.writeln("#quickreply { display: none; }");
+			document.writeln("<" + "/style>");
+		} // end if
+</script>
+<!--  -->
+</head>
+
+<body  bgcolor="#EEE6CA" text="#000000" link="#000080" vlink="#2f2f4f" alink = "#800000" >
+
+
+ <script language="Javascript1.1" type="text/javascript">
+<!--
+
+	var julians = new Array("2454698.2250", "2454699.0005", "2454699.0123", "2454699.0745", "2454699.0825", "2454699.0825", "2454699.1006", "2454699.1016", "2454699.1019", "2454699.1022", "2454699.1110", "2454699.1121", "2454699.1243", "2454699.1325", "2454699.1337", "2454699.1417", "2454699.1546", "2454699.1559", "2454699.1746", "2454699.1758", "2454699.2224", "2454700.1553", "2454700.1559", "2454701.0917", "2454701.0936", "2454701.1018", "2454701.1020", "2454701.1034", "2454701.1043", "2454701.1056", "2454701.1102", "2454701.1110", "2454701.1111", "2454701.1114", "2454701.1125", "2454701.1127", "2454701.1132", "2454701.1135", "2454701.1140", "2454701.1142", "2454701.1147", "2454701.1148", "2454701.1156", "2454701.1157", "2454701.1206", "2454701.1215", "2454701.1222", "2454701.1233", "2454701.1252", "2454701.1315", "2454701.1318", "2454701.1319", "2454701.1351", "2454701.1358", "2454701.1402", "2454701.1414", "2454701.1414", "2454701.1419", "2454701.1436", "2454701.1440", "2454701.1506", "2454701.1530", "2454701.1553", "2454701.1610", "2454701.1612", "2454701.1614", "2454701.1622", "2454701.1643", "2454701.1643", "2454701.1658", "2454701.1704", "2454701.1704", "2454701.1719", "2454701.1736", "2454701.2247", "2454701.2254", "2454701.2318", "2454702.0737", "2454702.1134");
+	var posts = new Array("000000", "000001", "000002", "000003", "000004", "000005", "000006", "000007", "000008", "000009", "000010", "000011", "000012", "000013", "000014", "000015", "000016", "000017", "000018", "000019", "000020", "000021", "000022", "000023", "000024", "000025", "000026", "000027", "000028", "000029", "000030", "000031", "000032", "000033", "000035", "000036", "000037", "000038", "000039", "000040", "000041", "000042", "000043", "000044", "000045", "000046", "000047", "000048", "000049", "000050", "000051", "000052", "000054", "000056", "000057", "000060", "000061", "000062", "000063", "000064", "000065", "000068", "000069", "000071", "000073", "000074", "000076", "000078", "000079", "000082", "000083", "000084", "000085", "000086", "000087", "000088", "000089", "000090", "000091");
+	var pages = new Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2);
+
+	var replies = julians.length;
+
+	function bluearrow () {
+
+		var counter = 0;
+		var baseurl = "http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480";
+		var shorturl = document.location.href;
+		var p = 1;
+		var url = "";
+
+		var ploc = shorturl.indexOf("#");
+		if(ploc > -1) {
+			shorturl = shorturl.substr(0, ploc);
+		} // end if
+
+		var reversed = 0;
+
+		while(counter < replies) {
+
+			if((session_j > julians[counter]) && !reversed) {
+				if((pages[counter] == 1) || (pages[counter] == p)) {
+					url = shorturl + "#" + posts[counter];
+				} else {
+					tp = pages[counter] ? pages[counter] : p;
+					url = baseurl + ";p=" + tp + "#" + posts[counter];
+				}
+				counter++;
+				continue;
+			} else if((session_j < julians[counter]) && reversed) {
+				if((pages[counter] == 1) || (pages[counter] == p)) {
+					url = shorturl + "#" + posts[counter];
+				} else {
+					tp = pages[counter] ? pages[counter] : p;
+					url = baseurl + ";p=" + tp + "#" + posts[counter];
+				}
+				counter++;
+				continue;
+			} else {
+				if(pages[counter] < 1) {
+					continue;
+				}
+				if(pages[counter] == p) {
+					url = shorturl + "#" + posts[counter];
+				} else {
+					tp = pages[counter] ? pages[counter] : p;
+					url = baseurl + ";p=" + tp + "#" + posts[counter];
+				}
+				break;
+			} // endif
+
+		} // endwhile
+		return url;
+
+	} // endfunc
+
+//-->
+</script>
+
+<script language="Javascript1.3" type="text/javascript">
+
+	function latest_check () {
+		var real = document.location.href ? document.location.href : document.location;
+		if(real.indexOf("#LATEST") > -1) {
+			document.location.href = bluearrow();
+		} // end if
+	} // end mer
+
+</script>
+
+<center>
+<table border="0" width="95%">
+<tr><td>
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi"><img src="http://www.dnr.sc.gov/ubb/dnrtitle.jpg" border="0" alt="SCDNR Outdoor Forums" /></a><font size="1" face="Verdana, Arial"></font>
+</td>
+<td align="center">
+
+<font size="1" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=newtopic;f=1"><img src="http://www.dnr.sc.gov/ubb/topic5.gif" alt="Post New Topic" border="0" /></a>&nbsp;&nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=reply;f=1;t=009480"><img src="http://www.dnr.sc.gov/ubb/reply5.gif" border="0" alt="Post A Reply" /></a>
+<br />
+</font>
+<font size="1" face="Verdana, Arial" >
+<span class="ip-is-loggedin"><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=my_profile" title="View your profile">my profile</a> | <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=directory" title="Community member directory">directory</a> </span><span class="ip-is-notloggedin"><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=login"  title="Log in to post and check your profile">login</a> | <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=agree" title="Registration is free!">register</a> </span>  | <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=search;search_forum=1" title="Search">search</a> | <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=faq" title="Frequently Asked Questions">faq</a> | <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi" title="Forum Home">forum home</a><br />
+</font>
+</td></tr></table>
+</center>
+
+<br />
+
+
+<table border="0" cellpadding="2" cellspacing="0" width="95%" align="center">
+<tr><td align="left" valign="bottom"><font face="Verdana, Arial" size="2"><small>
+<script language="Javascript1.3" type="text/javascript">
+<!--
+	var thisurl = bluearrow()
+	if(session_j) {
+		document.writeln("<br /><a href='" + thisurl + "'>Jump to new posts</a> " + "&" + "nbsp" + ";" + "<a href='" + thisurl + "'><img align='middle' src='down.gif' border='0' alt='Jump to Latest Posts' /></a>&nbsp;&nbsp;");
+	} // end if
+//-->
+</script>
+ &nbsp;</small></font></td>
+<td valign="bottom" align="right"><font face="Verdana, Arial" size="2"><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=next_topic;f=1;t=009480;go=older"><img src="http://www.dnr.sc.gov/ubb/prev_topic.gif" border="0" alt="next oldest topic" /></a> &nbsp; <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=next_topic;f=1;t=009480;go=newer"><img src="http://www.dnr.sc.gov/ubb/next_topic.gif" border="0" alt="next newest topic" /></a></font></td></tr></table>
+
+<table border="0" cellpadding="1" cellspacing="1" width="95%" align="center">
+<tr bgcolor="#000000"><td>
+<table border="0" width="100%" cellpadding="3" cellspacing="0">
+
+<tr bgcolor="#FFFFFF">
+<td valign="top" align="left">
+<font size="1" face="Verdana, Arial">
+<b>
+&#187; 
+<script language="Javascript" type="text/javascript">
+<!--
+
+var user_cookie = getCookie('ubber2452565.1243');
+
+if(('' == user_cookie) || (null == user_cookie)) {
+	// User is not logged in
+	document.writeln('You are not logged in.' , ' <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=login">Login</a> or <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=agree">register</a>')
+} else {
+	// User is logged in
+	var user_array=user_cookie.split("&");
+	user_array[2] = unescape(user_array[2]);
+	document.writeln('Hello, ', user_array[2]);
+	document.writeln('[ <a title="Click here to log out." href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=logoff">log out</a> ]');
+
+	// PM check
+	var haspms = '<?php echo checkUserPMs(); ?>';
+	if(haspms > 0) {
+		document.writeln("<" + "b" + "r />");
+		document.writeln("<" + "a");
+		document.writeln(' href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=my_profile"');
+		document.writeln(">" + "<" + "im" + "g src=" + '"http://www.dnr.sc.gov/ubb/newpm.gif" border="0" valign="middle" alt=" [New PM] " ' + "/");
+		document.writeln(">You have  " + haspms + "  unread private messages.<" + "/" + "a>");
+	} // end if
+
+} // end else
+
+//-->
+</script>
+
+</b>
+</font>
+</td>
+<td valign="top" align="right">
+<font size="1" face="Verdana, Arial">
+<b>
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi">SCDNR Outdoor Forums</a> &raquo; <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?category=1"><b>Hunting</b></a> &raquo; <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=forum;f=1"><b>Hunting - Deer</b></a> &raquo; back from black river (Page 1)</b>
+</font>
+</td>
+</tr>
+
+</table></td></tr></table>
+
+
+
+<br />
+
+
+
+<script language="JavaScript1.1" type="text/javascript">
+<!--
+	var ubber_cookie = getCookie('ubber2452565.1243')
+	var ubber_cookie_array = new Array(6);
+	if(ubber_cookie != null) { ubber_cookie_array = ubber_cookie.split("&"); }
+
+	function avatar_line (avatarURL) {
+		if(ubber_cookie_array[6] != 1) {
+			return "<img src='" + avatarURL + "' alt='Avatar Image'  />";
+		} // end if
+	} // end function
+// -->
+</script>
+
+<center>
+
+<!-- UBB Friend  -->
+
+<table border="0" width="95%">
+<tr>
+<td valign="bottom" align="left">
+<font size="1" face="Verdana, Arial">
+ &nbsp;
+</font>
+</td>
+
+<td align="right" valign="bottom">
+<font size="1"  face="Verdana, Arial">
+<b>This topic comprises 2 pages:&nbsp;1&nbsp;&nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=2">2</a>&nbsp;</b> &nbsp;
+</font></td>
+
+</tr>
+</table>
+
+<!-- End UBB Friend  -->
+
+<table border="0" cellpadding="1" cellspacing="1" width="95%" align="center">
+<tr bgcolor="#000000"><td>
+<table border="0" width="100%" cellpadding="3" cellspacing="0">
+
+
+<tr bgcolor="#208C65">
+<td valign="middle" width="18%" align="left">
+<font size="1" face="Verdana, Arial" color="#FFFFFF"><b>
+Author
+</b></font>
+</td>
+<td valign="middle" align="left">
+<font size="1" face="Verdana, Arial" color="#FFFFFF"><b>
+Topic: back from black river</b></font>
+</td>
+</tr>
+
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000000"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" style="color: #000000; text-decoration: none;" target="_blank"><b>Drake_sc</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2333
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000000"><img src="http://www.dnr.sc.gov/ubb/icons/icon13.gif" border="0" alt="Icon 13" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,19,22,50,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 19, 2008</span> <span class="timeformat-0">10:50 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Drake_sc" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002333"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Drake_sc" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000000;u=00002333"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+just got back, supposed to been a 3day hunt, but turned out to be a 1 1/2 day hunt. we saw 0 deer but i did see a racoon though.the reason our hunt was cut short, cause some doctors were having a party today and the guide ask us to come back at a later date of my choosing. the first evening and morning, i had to drive my self to the stand and locate the stand my self with zero knowledge of the place, cause the guide wanted to be with his girlfriend filming her hunt that evening, then they slept till 12 today, no comment!! i will post more tomorrow, im off to bed..<br /><br />scale 1 to 10 with 10 the best<br /><br />lodging- 8<br />guide- 3<br />knowledge- 5<br />lay of land- 7<br />the looks 0f food plots- 8<br />stand quality- 8 to 10<br />the guides girlfriend who knew everything about everything- priceless!!!<br /><br />--------------------<br />Mathews DXT Bow G5 Optix XR Sight whisker biscuit Carbon Express Aramid KV Arrows Crimson Talon XT Fixed Blade Broadheads  74lb draw<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002333" style="color: #000000; text-decoration: none;">Posts: <b>964</b></a> | From: <b>west columbia</b> | Registered: <b>Sep 2006</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000000">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000001"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002114" style="color: #000000; text-decoration: none;" target="_blank"><b>lonewolf_3:16</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2114
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002114">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000001"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,0,5,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">12:05 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002114" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for lonewolf_3:16" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002114"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email lonewolf_3:16" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000001;u=00002114"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+sorry to hear that Drake, sounds like the place has changed very bad... we went about 4 or 5 years ago & had a blast. I really hate to hear it went down hill like that & your hunt was such a let down<br /><br />--------------------<br />No Fear... Bull HOCKEY, DO YOU SEE THE TEETH ON THAT CRITTER<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002114" style="color: #000000; text-decoration: none;">Posts: <b>502</b></a> | From: <b>Rock Hill</b> | Registered: <b>Jan 2006</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000001">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000002"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002894" style="color: #000000; text-decoration: none;" target="_blank"><b>StrutnBPS</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2894
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002894">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002894"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000002"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,1,23,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">01:23 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002894" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for StrutnBPS" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002894"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email StrutnBPS" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000002;u=00002894"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+I've heard your same complaints more than once.  How's the "wonder kid" as everyone calls him?
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002894" style="color: #000000; text-decoration: none;">Posts: <b>1046</b></a> | From: <b>Bennettsville/Greeleyville</b> | Registered: <b>Jun 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000002">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000003"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003703" style="color: #000000; text-decoration: none;" target="_blank"><b>Overcups</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3703
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003703">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000003"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,7,45,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">07:45 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003703" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Overcups" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003703"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Overcups" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000003;u=00003703"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+I'm sure you are already paid up for your hunts with Black River, however if you can get a refund, I would call Hunter at www.riverlandguideservice.com.  I have hunted with the Riverland outfit and it is truely a unique hunting experience.  You won't be kept in a fancy lodge, but the camp will be clean, the food good, and the hunting will be exceptional.  I just booked a 5 day December hunt with them.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003703" style="color: #000000; text-decoration: none;">Posts: <b>30</b></a> | From: <b>Raleigh, NC</b> | Registered: <b>Feb 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000003">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000004"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" style="color: #000000; text-decoration: none;" target="_blank"><b>badfaulkner</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3594
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000004"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,8,25,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">08:25 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for badfaulkner" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003594"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email badfaulkner" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000004;u=00003594"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Sorry, Drake.  That was WRONG of them to put the doctors ahead of you, let alone the guide's split-tail.  OMG.  You deserve a full refund.  <br /><br />Give them a thorough review at:<br /><br />http://www.huntinfo.com/reviews/outfitter_reviews.php3<br /><br />I've always wanted to go to Waccamaw Hunting Services in Hemingway but I did the next best thing at joined a club only 12 miles South of it.  If you go to that site I listed above, you'll notice there are no bad reviews of Waccamaw.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003594" style="color: #000000; text-decoration: none;">Posts: <b>3358</b></a> | From: <b>Conway, SC</b> | Registered: <b>Jan 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000004">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000005"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003062" style="color: #000000; text-decoration: none;" target="_blank"><b>Joe Hudson</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3062
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003062">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000005"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,8,25,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">08:25 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003062" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Joe Hudson" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003062"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Joe Hudson" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000005;u=00003062"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+I don't think I would be as gracious with my rating of this place. I know things can happen, but this just sounds like a poorly managed business. I would want a total refund and go somewhere else.<br /><br />--------------------<br />Today I'm 52, Yesterday I was 12. My how time passes.<br /><br />Hunt with your kids<br />Not For them<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003062" style="color: #000000; text-decoration: none;">Posts: <b>1658</b></a> | From: <b>In here, Looking out.</b> | Registered: <b>Aug 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000005">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000006"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" style="color: #000000; text-decoration: none;" target="_blank"><b>Drake_sc</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2333
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000006"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,10,6,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">10:06 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Drake_sc" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002333"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Drake_sc" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000006;u=00002333"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+it is very poorly manage!!! i pay them to take me to the stand, meals and etc. and i had to do everything my self. the so call guide is about 23 to 25yrs old. there were a cpl of hunting shows filming hunts for the outdoor channel there, they were there on a 5day hunt and they ended up leaving on the 2nd day due to the above what i mention from what they told me. i do know for a fact the next paid hunt i go on, will be in texas without a doubt, the camara guy from north america hunter, told me a cpl places to go in texas that they highly recommand. the kid told me, that i can come back at a later date to finish my hunts i paid for, so i guess i will give it another go around mid sept..<br /><br />--------------------<br />Mathews DXT Bow G5 Optix XR Sight whisker biscuit Carbon Express Aramid KV Arrows Crimson Talon XT Fixed Blade Broadheads  74lb draw<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002333" style="color: #000000; text-decoration: none;">Posts: <b>964</b></a> | From: <b>west columbia</b> | Registered: <b>Sep 2006</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000006">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000007"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213" style="color: #000000; text-decoration: none;" target="_blank"><b>Santee11</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3213
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000007"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,10,16,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">10:16 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Santee11" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003213"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Santee11" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000007;u=00003213"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Hey Drake, Where is that place? I think I have heard of it.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003213" style="color: #000000; text-decoration: none;">Posts: <b>25</b></a> | From: <b>Clarendon Couny</b> | Registered: <b>Oct 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000007">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000008"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" style="color: #000000; text-decoration: none;" target="_blank"><b>Drake_sc</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2333
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000008"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,10,19,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">10:19 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Drake_sc" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002333"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Drake_sc" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000008;u=00002333"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+in new zion, on the other side of sumter about 5 to 10mins away from manning<br /><br />--------------------<br />Mathews DXT Bow G5 Optix XR Sight whisker biscuit Carbon Express Aramid KV Arrows Crimson Talon XT Fixed Blade Broadheads  74lb draw<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002333" style="color: #000000; text-decoration: none;">Posts: <b>964</b></a> | From: <b>west columbia</b> | Registered: <b>Sep 2006</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000008">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000009"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213" style="color: #000000; text-decoration: none;" target="_blank"><b>Santee11</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3213
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000009"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,10,22,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">10:22 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Santee11" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003213"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Santee11" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000009;u=00003213"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Yep that's it. I know some of those folks.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003213" style="color: #000000; text-decoration: none;">Posts: <b>25</b></a> | From: <b>Clarendon Couny</b> | Registered: <b>Oct 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000009">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000010"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" style="color: #000000; text-decoration: none;" target="_blank"><b>badfaulkner</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3594
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000010"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,11,10,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">11:10 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for badfaulkner" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003594"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email badfaulkner" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000010;u=00003594"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+This place seems like it'd be better served as a corporate/executive hunting club rather than a pay per day place.  <br /><br />Santee11...should we read into what you're NOT saying? LOL.  Kinda' like, "Oh, I know those folks.  Bless their heart..."
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003594" style="color: #000000; text-decoration: none;">Posts: <b>3358</b></a> | From: <b>Conway, SC</b> | Registered: <b>Jan 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000010">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000011"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" style="color: #000000; text-decoration: none;" target="_blank"><b>Drake_sc</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2333
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000011"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,11,21,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">11:21 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Drake_sc" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002333"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Drake_sc" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000011;u=00002333"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+exectly bf i agree, <br /><br />they want 5500 for a year memebership, for i belive it includes,5 or 6 3day deer hunts, 1 turkey hunts and unlimited hog hunts, 1 or 2 duck hunts. to me if i am paying 5500 a year, i should be able to hunt anything at anytime i would want too long as its in season and within the laws.<br /><br />--------------------<br />Mathews DXT Bow G5 Optix XR Sight whisker biscuit Carbon Express Aramid KV Arrows Crimson Talon XT Fixed Blade Broadheads  74lb draw<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002333" style="color: #000000; text-decoration: none;">Posts: <b>964</b></a> | From: <b>west columbia</b> | Registered: <b>Sep 2006</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000011">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000012"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" style="color: #000000; text-decoration: none;" target="_blank"><b>badfaulkner</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3594
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000012"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,12,43,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">12:43 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for badfaulkner" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003594"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email badfaulkner" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000012;u=00003594"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Agreed, Drake.  <br /><br />For 5500 every stand better have fresh corn and a mint and brandy for the deer, too.  LOL.  <br /><br />No way should they be able to interrupt a paying hunter's hunt for some other engagement.  <br /><br />I saw that unlimited hog hunts proviso.  I'd check in on December 26th and leave on January 4th.  LOL.  There'd be less pork on the premises than at a bar mitzvah.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003594" style="color: #000000; text-decoration: none;">Posts: <b>3358</b></a> | From: <b>Conway, SC</b> | Registered: <b>Jan 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000012">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000013"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003317" style="color: #000000; text-decoration: none;" target="_blank"><b>DEADFALL</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3317
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003317">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003317"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000013"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,13,25,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">01:25 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003317" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for DEADFALL" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003317"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email DEADFALL" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000013;u=00003317"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Drake thats typical of most pay to hunt operations in this state they are all geared around getting the biggest bang for the buck( no pun intended).By that i mean they want as much cash on the table as they can get for the product right down to figuring what the net worth of every animal or bird  thats shot eguates to.One turkey eguals-x One duck eguals -y and so forth.Its not geared around a statagey of pricing for the experience and the value of the hunt and thats the problem.There is alot of time and effort put  forth by reputable services to produce an enjoyable hunt for their guests and have the price egual the experience and also have the number of hunts figured to the extent that it does not over tax the land and the game on it and there is where alot of your cost structure goes to on those places. its used to keep good staff on hand and to have the appropriate resources to manage the place so that it has a lifespan of longer than five or six seasons wich seems to be the limit of most poorely run setups.By the seventh or eighth season places like blackriver are usually down the tubes so if you look at its history youll probably find that either its a new comer and poorly run from inexperience or its about reached its shelf life. Its a shame but thats really how it is some guy owns some land or they get together and lease a bunch of property with dollar signs in their eyes, they set up and shoot it down then just let it die a slow torturous death while people who have paid good money look on.Bostick is a prime example of that.The only recourse you have is to do your reasearch on the place before hand to get an indication you are going to get what you  pay for before you cut the check.What you are paying for is service and a reasonable opportunity to see game.You cant have one with out the other on a pay establishment with out dissapointing people if you are looking for a long term buisness and most just aren't looking too far into the future.When a place starts offering club memberships with extreme prices as well as day hunts they are usually already down the drain and are trying to get what they can while the gettins good.If you think about it how can you have both on one property ?Day hunters and club members with out some riff occuring amonsgst the ranks. the same staff has to handle both entities with the same ammount of time and effort put forth to both. How is that possible with a limited staff?The answer is its not!Not unless you have unlimited resources available for staffing and wildlife management.You would also need a tremendous ammount of property at your disposal so neither group, day hunt or member would interfere with one another otherwise both are beating down the same ground day in and day out.I have a long history in that buisness. you don't know me so you will have to take my word on this, i have worked with and on many places both top of the line and bottom of the barrel and just about everything in between and it is a coin toss unless you do your research. you have to look at the setup, how many hunts they run a year, wether the owner -operator is hands on or not, how much property is involved and how many different species they are hunting there.how long have the guides been associated with the place and how many years has it been in operation.This would be the case wether you booked another hunt in S.C. or texas or argentina.I'm sorry you had a bad experience but you just have to chalk it up to the learning curve as unfortunate as that is for those who utilise such establisments.<br /><br />--------------------<br />I do my best!Thats all we can do!<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003317" style="color: #000000; text-decoration: none;">Posts: <b>532</b></a> | From: <b>WALTERBORO S.C</b> | Registered: <b>Nov 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000013">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000014"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" style="color: #000000; text-decoration: none;" target="_blank"><b>badfaulkner</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3594
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000014"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,13,37,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">01:37 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for badfaulkner" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003594"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email badfaulkner" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000014;u=00003594"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Deadfall...tell more stories to us about your experiences as a guide.  I could read your stuff all day.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003594" style="color: #000000; text-decoration: none;">Posts: <b>3358</b></a> | From: <b>Conway, SC</b> | Registered: <b>Jan 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000014">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000015"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003317" style="color: #000000; text-decoration: none;" target="_blank"><b>DEADFALL</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3317
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003317">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003317"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000015"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,14,17,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">02:17 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003317" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for DEADFALL" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003317"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email DEADFALL" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000015;u=00003317"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Bf, all i can say is that would take a month or two.I just went on BRs web site.Been in operation five years it seems. well there you go!And the experience drake had with having his hunt interupted by a doctors party, paying members no doubt,is all the proof i would need.Along with the fact its a scant three thousand acres with a large ammout of it in flooded timber for the poor pen raised mallards to meet their maker in as well as the fact that memberships apparently offer you year round access to certain things.Every living animal in there could identify their pursuer by the smell of his f@rts<br /> <br /> <small>[ August 20, 2008, 02:23 PM: Message edited by: DEADFALL ]</small><br /><br />--------------------<br />I do my best!Thats all we can do!<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003317" style="color: #000000; text-decoration: none;">Posts: <b>532</b></a> | From: <b>WALTERBORO S.C</b> | Registered: <b>Nov 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000015">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000016"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" style="color: #000000; text-decoration: none;" target="_blank"><b>badfaulkner</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3594
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000016"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,15,46,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">03:46 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for badfaulkner" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003594"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email badfaulkner" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000016;u=00003594"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+DF,<br /><br />It never occurred to me (duh) that you could hunt a place to death but it does sound logical.  And yes, as you mentioned earlier, Bostick seems to be replete with bad reviews.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003594" style="color: #000000; text-decoration: none;">Posts: <b>3358</b></a> | From: <b>Conway, SC</b> | Registered: <b>Jan 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000016">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000017"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001678" style="color: #000000; text-decoration: none;" target="_blank"><b>cane_creek</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 1678
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001678">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000017"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,15,59,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">03:59 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001678" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for cane_creek" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00001678"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email cane_creek" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000017;u=00001678"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+What's the name of this place?  Website?<br /><br />I think I found it http://www.blackriverplantationsc.com/<br /> <br /> <small>[ August 20, 2008, 04:03 PM: Message edited by: cane_creek ]</small>
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00001678" style="color: #000000; text-decoration: none;">Posts: <b>1821</b></a> | From: <b>Mt Pleasant</b> | Registered: <b>Jan 2005</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000017">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000018"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" style="color: #000000; text-decoration: none;" target="_blank"><b>Drake_sc</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2333
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000018"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,17,46,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">05:46 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Drake_sc" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002333"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Drake_sc" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000018;u=00002333"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+you are correct cane creek.... after this experince. iam going back and think on a possitive side when i do and just hope for the best and put the rest behide me. it leaves me very skeptic about other places around the state, i been on 3 paid hunts and 2 of the 3 were the worst and the 3rd one was more than i could ever ask for me as for seeing game, being treated and more, my buddy and i saw over 300 deer total in a day of a 3day hunt and we took 9 doe's, 3 bucks and couldnt find a 4th buck i shot.<br /><br />--------------------<br />Mathews DXT Bow G5 Optix XR Sight whisker biscuit Carbon Express Aramid KV Arrows Crimson Talon XT Fixed Blade Broadheads  74lb draw<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002333" style="color: #000000; text-decoration: none;">Posts: <b>964</b></a> | From: <b>west columbia</b> | Registered: <b>Sep 2006</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000018">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000019"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005247" style="color: #000000; text-decoration: none;" target="_blank"><b>Longbeard Roller</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 5247
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005247">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005247"><img src="user_ratings_5.gif" border="0" alt="5" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000019"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,17,58,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">05:58 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005247" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Longbeard Roller" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00005247"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Longbeard Roller" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000019;u=00005247"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Drake, sucks that the guide didn't come through for you... even worse for your lady havin paid all that money for the trip.  I'm takin an old retired buddy over to Lake Murray Saturday morning, I'll send you some pictures if I get any trophy bass.  Congrats again on the opening day hog!  Send me some pictures when you get that first set of antlers this season!  <img border="0" title="" alt="[Smile]" src="smile.gif" /><br /><br />--------------------<br />"One does not hunt in order to kill, but kills in order to have hunted... I hunt ...because I must, because it is in the blood, because I am the descendent of a thousand generations of hunters. I hunt because I am a hunter."<br />- Finn Aagard<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00005247" style="color: #000000; text-decoration: none;">Posts: <b>827</b></a> | From: <b>West Columbia, SC</b> | Registered: <b>Jul 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000019">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000020"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" style="color: #000000; text-decoration: none;" target="_blank"><b>Drake_sc</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2333
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000020"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,20,22,24,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 20, 2008</span> <span class="timeformat-0">10:24 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002333" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Drake_sc" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002333"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Drake_sc" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000020;u=00002333"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+yeah it does suck like a donkey tail... go in with very high expectations and find it out the hard way, but you live n learn and move on.<br /><br /><br />longbeard, thanks, you should have busted his tail, had your name all over it... i will be in darlington this weekend so i should be able to bust one on a bean field in the evening...<br /><br />--------------------<br />Mathews DXT Bow G5 Optix XR Sight whisker biscuit Carbon Express Aramid KV Arrows Crimson Talon XT Fixed Blade Broadheads  74lb draw<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002333" style="color: #000000; text-decoration: none;">Posts: <b>964</b></a> | From: <b>west columbia</b> | Registered: <b>Sep 2006</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000020">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000021"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213" style="color: #000000; text-decoration: none;" target="_blank"><b>Santee11</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3213
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000021"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,21,15,53,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 21, 2008</span> <span class="timeformat-0">03:53 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Santee11" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003213"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Santee11" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000021;u=00003213"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Hey Badfalner, Yes that is kinda it.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003213" style="color: #000000; text-decoration: none;">Posts: <b>25</b></a> | From: <b>Clarendon Couny</b> | Registered: <b>Oct 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000021">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000022"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" style="color: #000000; text-decoration: none;" target="_blank"><b>badfaulkner</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3594
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000022"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,21,15,59,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 21, 2008</span> <span class="timeformat-0">03:59 PM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for badfaulkner" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003594"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email badfaulkner" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000022;u=00003594"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+LOL...Thought so, Santee.  LOL.  I would've loved to have seen your facial reaction when you heard it was that place in New Zion.  <br /><br />Really...we need to warn each other about places that aren't what they advertise.  Word of mouth is the best warning or advertising and word of keyboard is too.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003594" style="color: #000000; text-decoration: none;">Posts: <b>3358</b></a> | From: <b>Conway, SC</b> | Registered: <b>Jan 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000022">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000023"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427" style="color: #000000; text-decoration: none;" target="_blank"><b>North American Safari</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+New Member
+<br />
+Member # 5427
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000023"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,9,17,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">09:17 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for North American Safari" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00005427"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email North American Safari" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000023;u=00005427"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+I just thought I would chime in.  I am the producer, owner and host of North American Safari.  I have taken hundreds of hunting trips and not that I don’t feel for Drake_sc but we were one of the hunting shows that were filming and the last day of our hunt was Sunday and WE ALL left when we were suppose to and would have stayed longer if we could have.  THERE WERE NO CAMERA MEN THERE ON MONDAY so I am not sure how he could have spoke to one of ours.  On our 3 day hunt I shot a cull buck, had a shot a a 250lb hog, and saw a 125 and 140+ class velvet bucks.  There were 11 hunters in camp when we were there and most of them had a shot at an animal they were hunting.<br /><br />   The guy running the place and the other 2 guides works as hard as any guide we have encountered.  Maybe we got special treatment? NO!  Other hunters were seeing more game then me with no cameras.  As far as age, I would rather have a 20 year old put me on game than have a 50 year old make me feel nice, warm and fuzzy and not put me on the game … complaining about the age of a guide … HUH?  I am still trying to figure that one out.<br /><br />  Just for the record, I am a yankee from Maine and that was my 1st (not last) trip to BlackRiver and have no reason to speak highly of them.  I kept reading the forum thinking that guy could not be talking about Blackriver Plantation because there are many statements, even about us that is strait false and never do I get involved in these rants, but everything written above this compelled me to.<br /><br />  If you are looking for a hunting trip … I rate them a 10.  If you are looking to “KILL” there are dozens of 50 acre pens to go kill animals but Blackriver offers a top notch hunting operation with only 1 fault, They can’t be perfect you know …. They don’t charge enough for the hunts.<br /><br />You can email or call me anytime and I will be happy to speak to anyone interested in going to BRP.<br />blaine@nasafari.com<br />207-238-9500<br /><br />Blaine Anthony<br /><br />--------------------<br />Blaine<br />Host and Producer<br />North American Safari<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00005427" style="color: #000000; text-decoration: none;">Posts: <b>5</b></a> | From: <b>United States</b> | Registered: <b>Aug 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000023">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000024"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001633" style="color: #000000; text-decoration: none;" target="_blank"><b>Catdaddy</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 1633
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001633">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001633"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000024"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,9,36,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">09:36 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001633" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Catdaddy" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00001633"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Catdaddy" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000024;u=00001633"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Is Black River fenced?  I realize it's big, but  I was just wondering.<br /><br />--------------------<br />Catdaddy<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00001633" style="color: #000000; text-decoration: none;">Posts: <b>1960</b></a> | From: <b>all over</b> | Registered: <b>Dec 2004</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000024">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000025"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427" style="color: #000000; text-decoration: none;" target="_blank"><b>North American Safari</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+New Member
+<br />
+Member # 5427
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000025"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,10,18,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">10:18 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for North American Safari" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00005427"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email North American Safari" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000025;u=00005427"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+For the most part no.  They do have a low fence out there, I think 500 acres but the animals come and go as they please.<br /><br />--------------------<br />Blaine<br />Host and Producer<br />North American Safari<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00005427" style="color: #000000; text-decoration: none;">Posts: <b>5</b></a> | From: <b>United States</b> | Registered: <b>Aug 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000025">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000026"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001467" style="color: #000000; text-decoration: none;" target="_blank"><b>RidgeRunner</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 1467
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001467">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001467"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000026"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,10,20,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">10:20 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001467" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for RidgeRunner" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00001467"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email RidgeRunner" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000026;u=00001467"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+sounds like the big swamp hunt!<br /> <br /> <small>[ August 22, 2008, 10:21 AM: Message edited by: RidgeRunner ]</small><br /><br />--------------------<br />"If there must be trouble, let it be in my day, that my child may have peace" - Thomas Paine<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00001467" style="color: #000000; text-decoration: none;">Posts: <b>3266</b></a> | From: <b>Out in the Bushes</b> | Registered: <b>Sep 2004</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000026">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000027"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002907" style="color: #000000; text-decoration: none;" target="_blank"><b>DDG</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2907
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002907">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000027"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,10,34,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">10:34 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002907" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for DDG" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002907"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email DDG" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000027;u=00002907"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+ROTFLMAO!!!!!!!<br /><br />I wan't around for the swamp hunt deal, but I've heard a little bit about it.  RR, you just won the "greatest kick in the b@lls" post of the year award!<br /><br />--------------------<br />"Kill 'em all, let God sort 'em out. If you're offended by that sentiment, vote for Obama, pucker up, and then kiss me between the back pockets."<br />-badfaulkner<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002907" style="color: #000000; text-decoration: none;">Posts: <b>765</b></a> | From: <b>SC</b> | Registered: <b>Jun 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000027">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000028"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001897" style="color: #000000; text-decoration: none;" target="_blank"><b>archer8030</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 1897
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001897">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000028"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,10,43,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">10:43 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001897" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for archer8030" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00001897"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email archer8030" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000028;u=00001897"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Hmmmmm...the plot thickens as a wiff of the "big swamp hunt" lingers on the wind.  <img border="0" title="" alt="[Razz]" src="tongue.gif" />   <img border="0" title="" alt="[Big Grin]" src="biggrin.gif" />   Good call RR!<br /><br />"Kick in the b@lls post of the year"...that's funny right there!  <img border="0" title="" alt="[Big Grin]" src="biggrin.gif" /><br /><br />--------------------<br />"The only easy day was yesterday!"<br />Hoss, you aint right.<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00001897" style="color: #000000; text-decoration: none;">Posts: <b>6166</b></a> | From: <b>West Columbia</b> | Registered: <b>Sep 2005</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000028">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000029"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" style="color: #000000; text-decoration: none;" target="_blank"><b>badfaulkner</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3594
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000029"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,10,56,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">10:56 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003594" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for badfaulkner" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003594"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email badfaulkner" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000029;u=00003594"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+I don't think Drake's a liar about what happened to him.  <br /><br />Blaine, Drake wasn't complaining about not seeing a deer.  He did not say your crew was filming a girl hunt either.  <br /><br />Was your hunt comped? No offense.  If I'm wrong, just say so.  <br /><br />Were you left guideless so some guide could get some ******? <br /><br />It's one thing if I go get a shot of tail while my buddy hunts for free at my club and I leave him on his own to find the stand.  It's quite another to pay $300 a day and be left on your own.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003594" style="color: #000000; text-decoration: none;">Posts: <b>3358</b></a> | From: <b>Conway, SC</b> | Registered: <b>Jan 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000029">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000030"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002907" style="color: #000000; text-decoration: none;" target="_blank"><b>DDG</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 2907
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002907">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000030"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,2,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:02 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00002907" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for DDG" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00002907"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email DDG" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000030;u=00002907"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+For $300, you better be with the girl while the guide hunts on his own. JMHO.<br /><br />--------------------<br />"Kill 'em all, let God sort 'em out. If you're offended by that sentiment, vote for Obama, pucker up, and then kiss me between the back pockets."<br />-badfaulkner<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00002907" style="color: #000000; text-decoration: none;">Posts: <b>765</b></a> | From: <b>SC</b> | Registered: <b>Jun 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000030">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000031"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003584" style="color: #000000; text-decoration: none;" target="_blank"><b>bentrod</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3584
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003584">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003584"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000031"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,10,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:10 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003584" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for bentrod" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003584"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email bentrod" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000031;u=00003584"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Blaine,  "complaining about the age of a guide … HUH? I am still trying to figure that one out."  <br />I'm trying to figure out where he complained about his age.  I see he called him a "so-called guide" and pointed out he was young, but not "complaining about age".<br />Also I didn't read anything about he talked to your guy Monday.  I just read that he talked to one of your cameramen.<br /> <br /> <small>[ August 22, 2008, 11:45 AM: Message edited by: bentrod ]</small>
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003584" style="color: #000000; text-decoration: none;">Posts: <b>469</b></a> | From: <b>Charleston,SC</b> | Registered: <b>Jan 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000031">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000032"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213" style="color: #000000; text-decoration: none;" target="_blank"><b>Santee11</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3213
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000032"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,11,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:11 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003213" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Santee11" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003213"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Santee11" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000032;u=00003213"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+I know that place has a lot of big deer and hogs. So it would be hard to srcew up a hunt. I don't know the guy that runs it, but I know his girl friend. She has probably killed more big deer than I have, and I am 10 or 12 years older than her. She is also very nice to look at, and loves to deer hunt, and not just with her boy friend. She will go sit in the woods by her self. I just thought it was funny that she was mentioned in this post. There are not to many Girls like her running around the Low Country.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003213" style="color: #000000; text-decoration: none;">Posts: <b>25</b></a> | From: <b>Clarendon Couny</b> | Registered: <b>Oct 2007</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000032">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000033"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427" style="color: #000000; text-decoration: none;" target="_blank"><b>North American Safari</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+New Member
+<br />
+Member # 5427
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000033"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,14,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:14 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for North American Safari" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00005427"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email North American Safari" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000033;u=00005427"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+We did get a small discount, but we did pay.<br /><br />I am certainly not calling Drake liar except for the fact that he said he spoke with one of our camera men .... He did not, that is a lie.  We did not leave early ... that is a lie.<br /><br />  We were brought close to our stands and walked in like every other outfitter we have been to and so was everyone else.  If they just said there is the woods go hunt and good luck, It certainly does not sound like the same place I went to nor the places we were hunting, I don't know how a man could find where to hunt.  I know my guide left the area, but that is what I expected and would want them to do.<br /><br />--------------------<br />Blaine<br />Host and Producer<br />North American Safari<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00005427" style="color: #000000; text-decoration: none;">Posts: <b>5</b></a> | From: <b>United States</b> | Registered: <b>Aug 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000033">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000035"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003781" style="color: #000000; text-decoration: none;" target="_blank"><b>redhead0126</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 3781
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003781">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000035"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,25,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:25 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00003781" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for redhead0126" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00003781"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email redhead0126" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000035;u=00003781"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Is this guy by chance the one that has the girlfriend on SCDUCKS website that killed the 13 point while he filmed it?  If so, I'd give him $300 dollars to "film" with his girl.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00003781" style="color: #000000; text-decoration: none;">Posts: <b>124</b></a> | From: <b>sc</b> | Registered: <b>Feb 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000035">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000036"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005429" style="color: #000000; text-decoration: none;" target="_blank"><b>rage23</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+New Member
+<br />
+Member # 5429
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005429">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000036"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,27,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:27 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005429" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for rage23" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00005429"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email rage23" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000036;u=00005429"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+You guys probably would never pay to go on a hunt here in SC, what real hunter would. Isnt it better to get out and do it yourself. I think we should not make cuts at this young lady either,it seems she has nothing to do with this.I have personally heard of what an outstanding place that is to hunt. I have also heard the guides there take care of their clients.
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00005429" style="color: #000000; text-decoration: none;">Posts: <b>15</b></a> | From: <b>south carolina</b> | Registered: <b>Aug 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000036">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000037"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001633" style="color: #000000; text-decoration: none;" target="_blank"><b>Catdaddy</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 1633
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001633">Member Rated</a>:<br /><a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001633"><img src="user_ratings_4.gif" border="0" alt="4" /></a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000037"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,32,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:32 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001633" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for Catdaddy" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00001633"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email Catdaddy" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000037;u=00001633"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+"Is this guy by chance the one that has the girlfriend on SCDUCKS website that killed the 13 point while he filmed it? "<br /><br /><br />No<br /><br />--------------------<br />Catdaddy<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00001633" style="color: #000000; text-decoration: none;">Posts: <b>1960</b></a> | From: <b>all over</b> | Registered: <b>Dec 2004</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000037">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000038"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427" style="color: #000000; text-decoration: none;" target="_blank"><b>North American Safari</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+New Member
+<br />
+Member # 5427
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000038"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,35,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:35 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005427" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for North American Safari" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00005427"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email North American Safari" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000038;u=00005427"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Agreed ...  I have never read a board like this before that most people are just hating ... and trying to mince words for instance the age thing, that was not brought up as a posative thing to say.  and he did say "the camara guy from north america hunter, told me a cpl places to go in texas that they highly recommand."  That is my camera guy who never spoke to anyone about black river.  <br /><br />People have different opinions, I just wanted to state what happened to the 11 folks that were at camp the week before he came.<br /><br />On the other comment ... Oh Man ... Maine is a difficult place to hunt.  We can shoot 1 deer period except for a couple extended zones.  I wish I could kill a buck here every year and we need 52 hunts on film for our show so we have to travel and I LOVE hunting down south ... I cleaned up in Alabama last year and have been hunting SC for 4 years with no luck, this was the first time I saw a buck in SC and in velvet .... You all are lucky to have that many deer TRUST ME !!<br /><br />Happy Hunting to you all and good luck.  I don't want to mince words anymore ... just wanted to state my point of view that is all.<br /><br />--------------------<br />Blaine<br />Host and Producer<br />North American Safari<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00005427" style="color: #000000; text-decoration: none;">Posts: <b>5</b></a> | From: <b>United States</b> | Registered: <b>Aug 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000038">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#FFFFFF" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#FFFFFF">
+<td width="18%" valign="top" align="left"><a name="000039"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001897" style="color: #000000; text-decoration: none;" target="_blank"><b>archer8030</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+Member
+<br />
+Member # 1897
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001897">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000039"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,40,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:40 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00001897" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for archer8030" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00001897"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email archer8030" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000039;u=00001897"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Blaine,<br />You kind of stacked the cards against yourself when you said, "Just for the record, I am a yankee..."  You might as well wiped your butt on a Confederate flag while singing Yankee Doodle Dandy and giving praise to Sherman.<br /><br />And for the record, all of the haters on here will never admit to it.  They'll just blame it on all of the "northerners" coming to SC and their "northern ways."  Don't blame them though...it's the fault of their education system.  <img border="0" title="" alt="[Big Grin]" src="biggrin.gif" />   <img border="0" title="" alt="[Razz]" src="tongue.gif" /> <br /><br />I get what you're saying, but a lot of fellas on here pretty much tuned out most of what you were saying and only looked for things to jump on you about.  You know, the whole "defend your own" mentality.   <img border="0" title="" alt="[Wink]" src="wink.gif" />    Trust me, being a transplant from MD (I've been here fore just over 15 years now) I get that all of the time.<br /><br />Hmmm...I've been here this long and yet I haven't gone on a shooting spree yet...I think I've finally turned a corner!   <img border="0" title="" alt="[Big Grin]" src="biggrin.gif" />     <img border="0" title="" alt="[Big Grin]" src="biggrin.gif" /><br /> <br /> <small>[ August 22, 2008, 11:43 AM: Message edited by: archer8030 ]</small><br /><br />--------------------<br />"The only easy day was yesterday!"<br />Hoss, you aint right.<br />
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00001897" style="color: #000000; text-decoration: none;">Posts: <b>6166</b></a> | From: <b>West Columbia</b> | Registered: <b>Sep 2005</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000039">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td bgcolor="#ebebeb" colspan="2">
+
+<table width="100%" cellpadding="3" cellspacing="0">
+<tr bgcolor="#ebebeb">
+<td width="18%" valign="top" align="left"><a name="000040"></a>
+<font size="2" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005429" style="color: #000000; text-decoration: none;" target="_blank"><b>rage23</b></a>
+</font>
+<br /><font size="1" face="Verdana, Arial">
+
+New Member
+<br />
+Member # 5429
+<br /><br />
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005429">Rate Member</a>
+</font>
+</td>
+<td align="left">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=1#000040"><img src="http://www.dnr.sc.gov/ubb/icons/icon1.gif" border="0" alt="Icon 1" /></a>
+<font size="1" color="#800080" face="Verdana, Arial">
+posted <script language="JavaScript1.3" type="text/javascript">
+document.write(timestamp(new Date(2008,7,22,11,42,0), dfrm, tfrm, 0, 0, 0, 0));
+</script><noscript><span class="dateformat-0">August 22, 2008</span> <span class="timeformat-0">11:42 AM</span></noscript>  &nbsp;&nbsp;&nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_profile;u=00005429" target="_blank"><img src="http://www.dnr.sc.gov/ubb/profile.gif" border="0" alt="Profile for rage23" /></a>&nbsp;
+
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=email;ToWhom=00005429"><img src="http://www.dnr.sc.gov/ubb/email.gif" border="0" alt="Email rage23" /></a>&nbsp;
+&nbsp;
+ &nbsp; &nbsp;
+ &nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=edit_post;f=1;t=009480;reply_num=000040;u=00005429"><img src="http://www.dnr.sc.gov/ubb/edit_ubb6.gif" border="0" alt="Edit/Delete Post" /></a>&nbsp;
+
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="2" face="Verdana, Arial">
+Well said Blaine, Its time to bury the hatchet on this. There is always two sides to every story and everyone has their version. Good hunting to all...
+</font>
+<hr size="1" style="color:#dedfdf" />
+<font size="1" face="Verdana, Arial">
+ <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=recent_user_posts;u=00005429" style="color: #000000; text-decoration: none;">Posts: <b>15</b></a> | From: <b>south carolina</b> | Registered: <b>Aug 2008</b> 
+ &nbsp;|&nbsp; IP: <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_ip;f=1;t=009480;reply_num=000040">Logged</a>
+</font>
+</td></tr>
+</table>
+</td></tr>
+
+
+</table></td></tr></table>
+
+
+<!-- Time Zone and Page Jumps -->
+
+<table border="0" width="95%">
+<tr>
+<td align="left" valign="bottom">
+<font size="1" face="Verdana, Arial">
+&nbsp;
+</font>
+</td>
+<td valign="bottom" align="right">
+<font size="1" face="Verdana, Arial">
+<b>This topic comprises 2 pages:&nbsp;1&nbsp;&nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=1;t=009480;p=2">2</a>&nbsp;</b> &nbsp;
+</font>
+</td>
+</tr>
+</table>
+
+<!-- Quick Reply -->
+
+
+<div id="quickreply">
+<br />
+
+<script language="Javascript" type="text/javascript">
+<!--
+
+graems = null;
+previewindow = null;
+function Graems () {
+	graems = window.open(
+		"http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=graemlin_list",
+		"graems",
+		"width=250,height=240,toolbar=no,location=no,directories=no,status,menubar=no,scrollbars,resizable,copyhistory=no"
+		);
+	graems.focus();
+} // end
+
+function Preview () {
+
+	var user_cookie = getCookie('ubber2452565.1243');
+	if( ('' == user_cookie) || (null == user_cookie) ) {
+		alert("Sorry, you must be registered and logged in to preview your post.");
+		return true;
+	}
+
+	previewindow = window.open(
+		"http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=preview_post;f=1;type=reply;quick=1",
+		"preview",
+		"width=550,height=300,toolbar=no,location=no,directories=no,status,menubar=no,scrollbars,resizable,copyhistory=no"
+		);
+	previewindow.focus();
+} // end
+
+function storeCaret (textEl) {
+	if (textEl.createTextRange) {
+		textEl.caretPos = document.selection.createRange().duplicate();
+	} // end if
+} // end storeCaret
+
+function insertAtCaret (textEl, text) {
+	if (textEl.createTextRange && textEl.caretPos) {
+		// MSIE
+		var caretPos = textEl.caretPos;
+		caretPos.text =
+			caretPos.text.charAt(caretPos.text.length - 1) == ' ' ?
+			text + ' ' : text;
+	} else if(textEl.selectionStart && textEl.setSelectionRange) {
+		// Mozilla 1.3+
+		var val = textEl.value;
+		var cpos = textEl.selectionStart;
+		var fpos = cpos + text.length;
+
+		var before = val.substr(0,cpos);
+		var after = val.substr(cpos, val.length);
+		var aspace = after.charAt(0) == ' ' ? "" : " ";
+		var bspace = before.charAt(before.length) == ' ' ? "" : " ";
+
+		textEl.value = before + bspace + text + aspace + after;
+		textEl.setSelectionRange(fpos,fpos); // set cursor pos to end of text
+		textEl.focus();
+	} else {
+		textEl.value  = textEl.value + text; // otherwise just append
+	}
+
+	return true;
+} // end insertAtCaret
+
+// -->
+</script>
+
+<form method="post" action="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi" name="replier" style="display: inline;"
+onsubmit="if(previewindow != null) previewindow.close(); if(graems != null) graems.close();">
+<input type="hidden" name="ubb" value="submit_new_reply" />
+<input type="hidden" name="quick" value="yes" />
+<input type="hidden" name="f" value="1" />
+<input type="hidden" name="t" value="009480" />
+
+<table border="0" cellpadding="1" cellspacing="1" width="95%" align="center">
+<tr bgcolor="#000000"><td>
+<table border="0" width="100%" cellpadding="3" cellspacing="0">
+
+<tr bgcolor="#208C65">
+<td align="left" colspan="2">
+<font size="2" face="Verdana, Arial" color="#FFFFFF"><b>
+Quick Reply
+</b></font>
+</td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td width="18%" rowspan="2" valign="top" align="left"><font face="Verdana, Arial" size="2">
+<b>Message:</b>
+<br /><br />
+</font>
+<font face="Verdana, Arial" size="1">
+HTML is not enabled.
+<br />
+UBB Code&trade; is not enabled.
+<br />
+
+<br />
+<a href="javascript:void(0);" onclick="Graems()">Instant Graemlins</a>
+<br />
+<!-- Always append the siggy and don't disable graemlins -->
+<input type="hidden" name="disable_smilies" value="0" />
+<input type="hidden" name="Signature" value="yes" />
+</font></td>
+<td valign="top" align="left">
+<textarea name="message" rows="10" cols="50" wrap="virtual"></textarea>
+</td>
+</tr>
+<tr bgcolor="#FFFFFF">
+<td valign="top" align="left">
+<input type="submit" name="submitted" value="Add Reply" />
+&nbsp;
+
+<input type="button" name="preview" value="Preview Post" onclick="Preview()" />
+&nbsp;
+
+<input type="submit" name="full" value="Full Reply Form" />
+</td>
+</tr>
+
+</table></td></tr></table>
+
+</form>
+
+<br />
+
+</div>
+
+<br />
+
+<!-- Bottom Navigation Table -->
+
+
+<table border="0" cellpadding="1" cellspacing="1" width="95%" align="center">
+<tr bgcolor="#000000"><td>
+<table border="0" width="100%" cellpadding="3" cellspacing="0">
+
+
+<tr>
+
+<td width="25%" bgcolor="#FFFFFF" nowrap="nowrap" valign="bottom" align="center">
+<font size="1" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=newtopic;f=1"><img src="http://www.dnr.sc.gov/ubb/topic5.gif" alt="Post New Topic" border="0" /></a>&nbsp;&nbsp;<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=reply;f=1;t=009480"><img src="http://www.dnr.sc.gov/ubb/reply5.gif" border="0" alt="Post A Reply" /></a>
+</font>
+</td>
+
+<td width="50%" bgcolor="#ebebeb" valign="bottom" align="center">
+<font size="1" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=close_topic;t=009480;f=1"><img src="http://www.dnr.sc.gov/ubb/close_topic.gif" border="0" alt="Close Topic" /></a>
+&nbsp; <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=stick_topic;f=1;t=009480"><img src="http://www.dnr.sc.gov/ubb/feature_topic.gif" border="0" alt="Feature Topic" /></a>
+&nbsp; <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=transfer;t=009480;f=1"><img src="http://www.dnr.sc.gov/ubb/move_topic.gif" border="0" alt="Move Topic" /></a>
+&nbsp; <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=delete_topic;f=1;t=009480"><img src="http://www.dnr.sc.gov/ubb/delete_topic.gif" border="0" alt="Delete Topic" /></a>
+</font>
+</td>
+
+<td width="25%" bgcolor="#FFFFFF" align="right" valign="middle">
+<font size="1" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=next_topic;f=1;t=009480;go=older"><img src="http://www.dnr.sc.gov/ubb/prev_topic.gif" border="0" alt="next oldest topic" /></a> &nbsp; <a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=next_topic;f=1;t=009480;go=newer"><img src="http://www.dnr.sc.gov/ubb/next_topic.gif" border="0" alt="next newest topic" /></a>
+</font>
+</td>
+
+</tr>
+
+
+</table></td></tr></table>
+
+
+<!-- Hop To Box -->
+
+<table border="0" width="95%">
+<tr>
+<td align="left" valign="top" width="50%">
+<font size="1" face="Verdana, Arial">
+<a href="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi?ubb=print_topic;f=1;t=009480"><img src="http://www.dnr.sc.gov/ubb/print_topic.gif" border="0" alt=" - " title="" /> Printer-friendly view of this topic</a>
+</font>
+</td>
+<td align="right" valign="top" nowrap="nowrap" width="50%">
+<form action="http://www.dnr.sc.gov/cgi-bin/ubb/ultimatebb.cgi" method="get">
+<font size="2" face="Verdana, Arial">
+<input type="hidden" name="ubb" value="forum" />
+<b>Hop To: </b><select name="f">
+
+<option value=''>Select a Forum:</option>
+<option value=''></option>
+
+<option value="">&nbsp;</option>
+<option value="CAT:1">Category: Hunting</option>
+<option value="">--------------------</option>
+<option value="1" selected="selected">Hunting - Deer</option>
+<option value="2">Hunting - Other</option>
+<option value="15">Waterfowl Advisory Committee</option>
+<option value="14">Becoming an Outdoors Woman</option>
+
+<option value="">&nbsp;</option>
+<option value="CAT:2">Category: Fishing</option>
+<option value="">--------------------</option>
+<option value="4">Freshwater</option>
+<option value="5">Saltwater</option>
+
+<option value="">&nbsp;</option>
+<option value="CAT:3">Category: Boating</option>
+<option value="">--------------------</option>
+<option value="8">Boating</option>
+
+<option value="">&nbsp;</option>
+<option value="CAT:4">Category: Nature</option>
+<option value="">--------------------</option>
+<option value="3">Wildlife Conservation</option>
+<option value="9">Birding</option>
+<option value="12">Native Plants</option>
+<option value="13">Amphibians/Reptiles</option>
+
+<option value="">&nbsp;</option>
+<option value="CAT:5">Category: Other</option>
+<option value="">--------------------</option>
+<option value="10">GIS Data Clearinghouse</option>
+
+</select>
+<input type="submit" name="submit" value="Go" />
+</font></form>
+</td>
+</tr>
+</table>
+</center>
+<br />
+
+<script language="JavaScript" type="text/javascript">
+	setTimeout("latest_check();", 1000);
+</script>
+
+
+<br />
+ <center>
+<font size="2" face="Verdana, Arial">
+<a href="mailto:webmaster@dnr.sc.gov">Contact Us</a> | <a href="http://www.dnr.sc.gov">SCDNR Home Page</a></font> <br /> <br /> 
+<font color="#dedfdf" size="1" face="Verdana, Arial">
+
+<a href="http://www.groupee.com/landing/goto.php?a=ubb.classic">Powered by UBB.classic&trade; 
+6.7.3<!-- 06070301.590 --></a>
+
+
+<br /><!-- Translators: Put your "translation by" wording here -->
+</font>
+</center>
+<br />
+
+
+</body>
+</html>
+ 

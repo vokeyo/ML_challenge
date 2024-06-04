@@ -1,0 +1,132 @@
+<html lang="es">
+<head>
+<title>Ayuda para FactFinder</title>
+
+<link rel="stylesheet" type="text/css" href="css/helpstyle.css" />
+
+<script language="JavaScript" SRC="/javascript/updateMetadataBrowser.js"></script>
+<script language="JavaScript">
+// fix for IE4+ focus problem
+if (window.focus) self.focus(); 
+</script>
+
+</head>
+
+<body onload="self.focus()">
+<div style="padding-top: 18px; padding-bottom: 20px; background-color: #ffffff;">
+<div align="center" style="background-color: #BECCD7;">
+<table border="0" cellspacing="0" cellpadding="1">	
+	<tr bgcolor="#FFFFFF">
+		<td><img src="1px.gif" width="4" height="1" alt="" /></td>
+		<td class="navsel">Ayuda para FactFinder</td>
+		<td><img src="1px.gif" width="4" height="1" alt="" /></td>
+		<td class="nav"><a href='javascript:updateMetadataBrowser("all","program","","_lang=es")' class="n">Informaci&oacute;n sobre Datos Censales</a></td>
+		<td><img src="1px.gif" width="4" height="1" alt="" /></td>
+		<td class="nav"><a href="/home/es/epss/glossary_a.html" class="n">Glosario</a></td>
+		<td><img src="1px.gif" width="4" height="1" alt="" /></td>
+	</tr>
+</table>
+</div>	
+</div>
+
+<!-- nav buttons -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8f8f8">
+  <tr>
+	<td bgcolor="#ffffff">
+  	<table class="methodtabs" cellspacing="0" cellpadding="0">
+	  <tr valign="bottom">
+	  	<td><span>Tema Actual</span></td>
+	  	<td><a href="toc.html">Contenido</a></td>
+	  </tr>
+	 </table>	
+	</td>
+  </tr>  
+
+  <tr>
+  	<td height="3" bgcolor="#366EA7"><img src="img/1px.gif" width="1" height="3" alt="" /></td>
+  </tr>
+</table>
+
+<br />
+
+<div align="center" class="default"><b>Cómo Bajar Datos de Mapas Temáticos  
+</b></div>
+<br />
+<table width="100%" border="0">
+	<tr valign="top">
+		<td width="15"><IMG SRC="1px.gif" WIDTH=15 HEIGHT=1 ALT=""></td>
+		<td width="200">
+		
+		<div class="helptopics">
+		<ul>
+		<li>Cómo Bajar Datos de Mapas Temáticos
+</li>
+ <li><a href="tm_download_2.html">Cómo Bajar el Mapa y la Leyenda
+</a></li>
+ 
+		</ul>
+		</div>
+
+		</td>
+		<td><img src="1px.gif" width="15" height="1" alt="" /></td>
+<td>
+<div align="center"><b>Cómo Bajar Datos de Mapas Temáticos
+</b></div>
+<br />
+Los dos formatos  de archivos son compatibles con bases de datos, es decir, sólo se bajan las filas de datos.<BR>
+<BR>
+<UL>
+<LI><B>Microsoft Excel</B> - este es el formato de archivo compatible con hojas de cálculos (.xls file).
+<LI><B>Base de datos delimitados por comas - </B>este formato de archivo es para bajar los récords de datos para poder cargarlos al programa de computadora de base de datos para manipular los datos (.txt file)<B>
+</UL>
+</B>
+Los archivos bajados compatibles con bases de datos se comprimen en un solo archivo titulado <B>output.zip</B>.  Este archivo comprimido contiene: <BR>
+<BR>
+<UL>
+<LI>Un  <B>archivo de datos</B>- este archivo contiene las filas de datos para las Tablas de Comparación Geográfica que usted ha seleccionado. Cada fila de datos contiene las partidas de datos y la siguiente información geográfica:
+<ul>
+<li>Identificador Geográfico (GEO_ID)
+<li>Nombre de Ruta (PATH_NAME)
+<li>Código del Componente Geográfico (GEOCOMP)
+<li>Códigos FIPS y nombres geográficos específicos para las selecciones geográficas para los mapas (por ejemplo, Puerto Rico por municipio,  municipio por sector censal, etc.)
+</ul>
+<li>Datos de Mapa (MAP_DATA) - el valor de los datos usado para crear el mapa de las características
+<li>Clase de Mapa (CLASS) - el grupo numérico al cual se clasifica el valor de datos en el mapa</ul>
+<LI>Un archivo <B>meta.txt </B>- este archivo explica la formula para crear el mapa, el tipo de la clase de mapa y las divisiones en clases.
+<LI>Un archivo <B>tm_readme.txt- </B>este archivo explica el contenido de los archivos bajados, las anomalías específicas al conjunto de datos y la localización de la documentación específica relacionada con el conjunto de datos.
+<LI>Un archivo <B>readme.txt</B> específico para el conjunto de datos - este archivo explica porque puede que no haya datos para algunas selecciones geográficas.
+</UL>
+
+<B>Nota</B>: Los Mapas Temáticos  sólo pueden mostrarse y bajarse uno a la vez.<BR>
+<BR>
+<B>Casilla de cotejo Opciones </B>"Activada" (predeterminada) significa: <BR>
+<BR>
+Incluya el nombre descriptivo largo en el archivo bajado. Cada elemento de datos para cada tabla tiene un nombre corto en clave y un nombre descriptivo largo. Por ejemplo:  <BR>
+<BR>
+<UL>
+<LI>Nombre corto en clave: P007006 donde P007 es el número de tabla y 006 es el número de elementos de datos en esa tabla del cualse deriva el valor de MAP_DATA.
+<LI>Nombre descriptivo largo: Total 
+</UL>
+
+<B>Casilla de cotejo Opciones </B>"Desactivada" significa:<BR>
+<BR>
+<UL>
+<LI>Sólo aparecerá el nombre en clave en el archivo bajado<B>
+</UL>
+</B>
+<B>CONSEJOS </B>para usar el formato <B>compatible con bases de datos</B>:<B><BR>
+</B><BR>
+<UL>
+<LI>Puede guardar <B>output.zip</B> con ese nombre o con otro de su creación. 
+<LI>Asegúrese de consultar el archivo <B>readme.txt</B> para explicación de todos los tipos de archivos que ha bajado.
+
+<br />&nbsp;
+</td>
+
+		<td><IMG SRC="1px.gif" WIDTH=15 HEIGHT=1 ALT=""></td>
+	</tr>
+</table>
+
+</body>
+</html>
+

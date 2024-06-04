@@ -1,0 +1,288 @@
+Identification_Information: 
+  Citation: 
+    Citation_Information: 
+      Originator: NOAA Pacific Island Fisheries Science Center, Coral Reef Ecosystem Division (CRED), Pacific Islands Benthic Habitat Mapping Center
+      Publication_Date: 200508
+      Title: CRED Acoustic Backscatter Guam 2003, Imagery Extracted from Gridded Bathymetry
+      Geospatial_Data_Presentation_Form: raster digital data
+      Online_Linkage: http://www.pifsc.noaa.gov/cred/hmapping/
+  Description: 
+    Abstract: Backscatter extracted from gridded bathymetry of the banktops and shelf environments of Guam, of the Mariana Islands
+      Archipelago.
+    Purpose: This acoustic backscatter imagery was created using data gathered from multibeam soundings for use as a planning and
+      reference document. Refer to supplemental information for description of instrument and survey.
+    Supplemental_Information: Data were collected aboard the R/V AHI (Acoustic Habitat Investigator),a 25' survey launch owned and operated by the
+      NOAA Pacific Islands Fisheries Science Center in Honolulu, HI.  The R/V AHI's survey sensors include a 240 kHz RESON
+      8101-ER sonar providing bathymetry and imagery data, a TSS/Applanix POS/MV Model 320 which measures position,
+      velocity, attitude and heading, and a Seabird SBE 19 CTD used to measure sound velocity profiles.
+      
+      Equipment serial numbers and software versions are as follows:
+      
+      RESON 8101-ER multibeam echosounder
+      DOC inventory #:  CD0000537418
+      Firmware, dry: 8101-2.07-2D4D
+      Firmware, wet: 8101-1.06-2F6B
+      
+      POS/MV Model 320, version 3
+      DOC inventory #: CD0000476647
+      PCS serial #: 474
+      IMU serial #: 203
+      Controller software: v 1.0.5.0
+      
+      Seabird SBE19 CTD:
+      Serial #: 3029
+      
+      R/V AHI Lever Arm Distances and Alignment Offsets
+      The R/V AHI Reference Point (RP) is defined to be the intersection of the vessel's centerline, the cabin deck and
+      the bulkhead immediately aft of the transducer.  This is marked by a punch in the deck weld at that location.
+      Positive X means the point is forward of the RP, positive Y means the point is to starboard of the RP, positive Z
+      means the point is below the RP.  The loaded waterline is defined as the intersection of the vessel's performance
+      wing with the hull at the transom.
+      
+      Antenna Baseline Distance, m: 1.229
+      Transducer depth below waterline, m 0.62
+      
+      RP to IMU                            0.80  0.00  0.08
+      RP to Primary GPS Antenna           -3.55 -0.61 -1.88
+      RP to Vessel                         0.16  0.00  0.77
+      RP to Sensor 1(MB transducer)        0.16  0.00  0.77
+      RP to Sensor 2                       0     0     0
+      RP to Aux. GPS Antenna               0     0     0
+      RP to Heave lever arm(deg)          -0.67  0.00  0.00
+      IMU rotation Ref. Frame, deg         0     0     0
+      Sensor 1 rotation Ref. Frame, deg    0     0     0
+      Sensor 2 rotation Ref. Frame, deg    0     0     0
+      
+      Roll offset:    +0.5 deg
+      Pitch offset:    0.0 deg
+      Gyro offset:     0.0 deg
+  Time_Period_of_Content: 
+    Time_Period_Information: 
+      Range_of_Dates/Times: 
+        Beginning_Date: 20030823
+        Ending_Date: 20030912
+    Currentness_Reference: ground condition
+  Status: 
+    Progress: Complete
+    Maintenance_and_Update_Frequency: As needed
+  Spatial_Domain: 
+    Bounding_Coordinates: 
+      West_Bounding_Coordinate: 144.843324
+      East_Bounding_Coordinate: 144.973913
+      North_Bounding_Coordinate: 13.671329
+      South_Bounding_Coordinate: 13.543463
+  Keywords: 
+    Theme: 
+      Theme_Keyword_Thesaurus: CoRIS Theme Thesaurus
+      Theme_Keyword: EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Water Depth
+    Theme: 
+      Theme_Keyword_Thesaurus: None
+      Theme_Keyword: Acoustic Imagery
+      Theme_Keyword: Sidescan
+      Theme_Keyword: AHI0304
+    Theme: 
+      Theme_Keyword_Thesaurus: CoRIS Discovery Thesaurus
+      Theme_Keyword: Geographic Information > Backscatter
+    Theme: 
+      Theme_Keyword_Thesaurus: ISO 19115 Topic Category
+      Theme_Keyword: oceans
+      Theme_Keyword: 014
+      Theme_Keyword: elevation
+      Theme_Keyword: 006
+    Place: 
+      Place_Keyword_Thesaurus: CoRIS Place Thesaurus
+      Place_Keyword: OCEAN BASIN > Pacific Ocean > Western Pacific Ocean > Guam > Guam (13N144E0000)
+      Place_Keyword: COUNTRY/TERRITORY > United States of America > Guam > Guam (13N144E0000)
+    Place: 
+      Place_Keyword_Thesaurus: None
+      Place_Keyword: Mariana Islands Archipelago
+      Place_Keyword: Guam
+  Access_Constraints: None
+  Use_Constraints: These data are not to be used for navigation purposes. Please acknowledge the NOAA Coral Reef Ecosystem
+    Division, Pacific Islands Fisheries Science Center as the source of this information.
+  Point_of_Contact: 
+    Contact_Information: 
+      Contact_Organization_Primary: 
+        Contact_Organization: Pacific Islands Benthic Habitat Mapping Center, Coral Reef Ecosystem Division (CRED), PIFSC,NOAA
+        Contact_Person: Jonathan Weiss
+      Contact_Address: 
+        Address_Type: mailing and physical address
+        Address: 1680 East West Road, POST 833
+        City: Honolulu
+        State_or_Province: HI
+        Postal_Code: 96822
+        Country: USA
+      Contact_Voice_Telephone: 808-956-2192
+      Contact_Electronic_Mail_Address: jonathan.weiss@noaa.gov
+  Data_Set_Credit: Pacific Islands Benthic Habitat Mapping Center, Coral Reef Ecosystem Division (CRED), Pacific Islands
+    Fisheries Science Center (PIFSC), NOAA
+Data_Quality_Information: 
+  Attribute_Accuracy: 
+    Attribute_Accuracy_Report: Data are collected for resource management and research purposes and are tested for
+      internal consistency; however,no effort is made to compare these data to external references or to other published data.
+  Logical_Consistency_Report: Unspecified
+  Completeness_Report: Complete
+  Positional_Accuracy: 
+    Horizontal_Positional_Accuracy: 
+      Horizontal_Positional_Accuracy_Report: Horizontal positioning system: GPS SPS
+        Horizontal position accuracy: 1.0 meters
+    Vertical_Positional_Accuracy: 
+      Vertical_Positional_Accuracy_Report: Range resolution of sonar: approximately 1.25 cm
+        Raw sounding resolution: 1 cm
+        Vertical accuracy of gridded product: approximately 1 meter
+  Lineage: 
+    Process_Step: 
+      Process_Description: Science Applications International Corporation's (SAIC) ISS-2000 acquires, processes and records data, provides
+        survey control and underway quality control displays.  SAIC's SABER processing software is used to process the raw
+        soundings, analyze the results, manually edit the sounding data to remove outliers and derive average gridded data values.
+        The data have been corrected for observed tides from Guam tide gauge 1630000 with a time corrector of 18 minutes
+        and a tide height multiplier of 0.94 using SABER postprocessing software.  The data were also recorrected for
+        observed sound velocities in postprocessing.
+        Hawaii Mapping Research Group (HMRG) processing software was then used to extract values of acoustic intensity from
+        the soundings. HMRG is an organization of scientists, engineers and technicians whose mission is to design, build,
+        and operate tools for mapping the seafloor. HMRG is a group within the School of Ocean and Earth Science and
+        Technology at the University of Hawaii at Manoa. The gsf2mr program (July, 2003) converts the swath bathymetry ping
+        records contained within a GSF (Generic Sensor Format) version 2.02 dataset into mr1file format. This is done as
+        follows: (i) position each beam's bottom detect intensity sample at the across-track location of that beam's
+        bathymetry value; (ii) assuming a flat bottom in the near neighborhood of the beam, compute across-track distances
+        for all of the beam's remaining intensity samples based on their temporal relation to the bottom detect sample and
+        the computed average sound velocity for that beam as derived from its range and travel time; (iii) after all of the
+        intensity samples from all beams of a ping have been located in across-track distance, fill the gaps between them
+        as necessary by interpolation.
+        The conversion described above is necessary in order to run HMRG backscatter processing operations on the data,
+        such as filtering to remove noise, and to create netCDF grids, raster images and geotiffs.
+        GMT was then used to reformat the acoustic imagery when necessary. Interactive Visualization System's Fledermaus,
+        ESRI ArcGIS, and RSI ENVI were used for viewing results and creating browse objects.
+        Software used:
+        SAIC ISS-2000 Acquisition Software, v 3.4 (20030610)
+        SAIC SABER Processing Software, v 2.0.2 (20030610)
+        Hawaii Mapping Research Group (HMRG) Processing Software
+        GMT Generic Mapping Tools, v 3.4.2 (20021002)
+      Process_Date: 20050512
+Spatial_Data_Organization_Information: 
+  Direct_Spatial_Reference_Method: Raster
+  Raster_Object_Information: 
+    Raster_Object_Type: Grid Cell
+    Row_Count: 6520
+    Column_Count: 7668
+    Vertical_Count: 1
+Spatial_Reference_Information: 
+  Horizontal_Coordinate_System_Definition: 
+    Planar: 
+      Grid_Coordinate_System: 
+        Grid_Coordinate_System_Name: Universal Transverse Mercator
+        Universal_Transverse_Mercator: 
+          UTM_Zone_Number: 55
+          Transverse_Mercator: 
+            Scale_Factor_at_Central_Meridian: 9.9996
+            Longitude_of_Central_Meridian: 147
+            Latitude_of_Projection_Origin: 0
+            False_Easting: 500000
+            False_Northing: 0
+      Planar_Coordinate_Information: 
+        Planar_Coordinate_Encoding_Method: Row and Column
+        Coordinate_Representation: 
+          Abscissa_Resolution: 1
+          Ordinate_Resolution: 1
+        Planar_Distance_Units: meters
+    Geodetic_Model: 
+      Horizontal_Datum_Name: D_WGS_1984
+      Ellipsoid_Name: WGS_1984
+      Semi-major_Axis: 6378137.000000
+      Denominator_of_Flattening_Ratio: 298.257224
+  Vertical_Coordinate_System_Definition: 
+    Depth_System_Definition: 
+      Depth_Datum_Name: mean lower low water
+      Depth_Resolution: 0.01
+      Depth_Distance_Units: meters
+      Depth_Encoding_Method: Attribute Values
+Entity_and_Attribute_Information: 
+  Overview_Description: 
+    Entity_and_Attribute_Overview: Sidescan data within a GSF file are arranged as small sequences of intensity
+      values, one sequence per beam per ping. The intensity values represent the
+      amplitude of echo returns to the sensor and can be related to seabed
+      roughness.
+    Entity_and_Attribute_Detail_Citation: none
+Distribution_Information: 
+  Distributor: 
+    Contact_Information: 
+      Contact_Organization_Primary: 
+        Contact_Organization: Pacific Islands Benthic Habitat Mapping Center, CRED, PIFSC, NOAA
+        Contact_Person: Jonathan R. Weiss
+      Contact_Position: Seafloor Mapping Specialist
+      Contact_Address: 
+        Address_Type: mailing and physical address
+        Address: 1680 East West Road, POST 833
+        City: Honolulu
+        State_or_Province: Hawaii
+        Postal_Code: 96822
+        Country: USA
+      Contact_Voice_Telephone: 808-956-2192
+      Contact_Electronic_Mail_Address: jonathan.weiss@noaa.gov
+  Resource_Description: Downloadable Data
+  Distribution_Liability: These data are not to be used for navigational purposes.
+    NOAA makes no warranty regarding these data, expressed or implied, nor
+    does the fact of distribution constitute such a warranty. NOAA cannot
+    assume liability for any damages caused by any errors or omissions in
+    these data, nor as a result of the failure of these data to function
+    on a particular system.
+  Standard_Order_Process: 
+    Digital_Form: 
+      Digital_Transfer_Information: 
+        Format_Name: net CDF, Binary netCDF Grid
+        File_Decompression_Technique: unZIP
+      Digital_Transfer_Option: 
+        Online_Option: 
+          Computer_Contact_Information: 
+            Network_Address: 
+              Network_Resource_Name: http://www.pifsc.noaa.gov/cred/hmapping/map_guam.php
+          Access_Instructions: These files are formatted as 2-D binary netCDF grid files.  This is the default grid file format used by
+            GMT (Generic Mapping Tools), which created this file. More information can be be located at
+            http://gmt.soest.hawaii.edu and http://unidata.ucar.edu/packages/netcdf/index.html
+            List of Guam netCDF grid files:
+            ahi0304-8-20.grd.zip
+            ahi0304-8-21.grd.zip
+            ahi0304-8-22.grd.zip
+    Digital_Form: 
+      Digital_Transfer_Information: 
+        Format_Name: GeoTIFF
+        File_Decompression_Technique: unZIP
+      Digital_Transfer_Option: 
+        Online_Option: 
+          Computer_Contact_Information: 
+            Network_Address: 
+              Network_Resource_Name: http://www.pifsc.noaa.gov/cred/hmapping/map_guam.php
+          Access_Instructions: These files are formatted as 2-D binary GeoTIFF files. This is the default file format used by GMT
+            (Generic Mapping Tools), which created this file. More location can be located at
+            http://www.pifsc.noaa.gov/cred/hmapping/map_guam.php
+            List of Guam GeoTIFF files:
+            ahi0304-8-20.zip
+            ahi0304-8-21.zip
+            ahi0304-8-22.zip
+    Fees: None
+Metadata_Reference_Information: 
+  Metadata_Date: 20080812
+  Metadata_Contact: 
+    Contact_Information: 
+      Contact_Organization_Primary: 
+        Contact_Organization: Pacific Islands Benthic Habitat Mapping Center, CRED, PIFSC, NOAA
+        Contact_Person: Dr. Michael Parke
+      Contact_Position: Research Biologist
+      Contact_Address: 
+        Address_Type: mailing and physical address
+        Address: 1125 'B' Ala Moana Blvd
+        City: Honolulu
+        State_or_Province: Hawaii
+        Postal_Code: 96814
+        Country: USA
+      Contact_Voice_Telephone: 808-592-7025
+      Contact_Electronic_Mail_Address: michael.parke@noaa.gov
+  Metadata_Standard_Name: FGDC Content Standard for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+CoRIS: 
+  CoRIS_ID: 20070329124630
+  CoRIS_Children: None
+  CoRIS_Beginning_Date: 20030823
+  CoRIS_Ending_Date: 20030912
+  CoRIS_Metadata_Link: http://www.coris.noaa.gov/metadata/records/txt/cred_backscatter_guam_2003.txt
+  CoRIS_Tracking_ID: 1683

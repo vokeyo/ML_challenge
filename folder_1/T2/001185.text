@@ -1,0 +1,67 @@
+/usr/bin/gmake  all-recursive
+gmake[1]: Entering directory `/home/legoater/redhat/BUILD/blcr-0.5.0'
+Making all in .
+gmake[2]: Entering directory `/home/legoater/redhat/BUILD/blcr-0.5.0'
+if test -d libcr32; then /usr/bin/gmake  -C libcr32 all; fi
+gmake[2]: Leaving directory `/home/legoater/redhat/BUILD/blcr-0.5.0'
+Making all in include
+gmake[2]: Entering directory `/home/legoater/redhat/BUILD/blcr-0.5.0/include'
+gmake[2]: Nothing to be done for `all'.
+gmake[2]: Leaving directory `/home/legoater/redhat/BUILD/blcr-0.5.0/include'
+Making all in libcr
+gmake[2]: Entering directory `/home/legoater/redhat/BUILD/blcr-0.5.0/libcr'
+if /bin/sh ../libtool --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/   -Wall -Wno-unused-function -fno-stack-protector  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_async.lo -MD -MP -MF ".deps/libcr_la-cr_async.Tpo" -c -o libcr_la-cr_async.lo `test -f 'cr_async.c' || echo './'`cr_async.c; \
+	then mv -f ".deps/libcr_la-cr_async.Tpo" ".deps/libcr_la-cr_async.Plo"; else rm -f ".deps/libcr_la-cr_async.Tpo"; exit 1; fi
+mkdir .libs
+ gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/ -Wall -Wno-unused-function -fno-stack-protector -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_async.lo -MD -MP -MF .deps/libcr_la-cr_async.Tpo -c cr_async.c  -fPIC -DPIC -o .libs/libcr_la-cr_async.o
+if /bin/sh ../libtool --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/   -Wall -Wno-unused-function -fno-stack-protector  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_core.lo -MD -MP -MF ".deps/libcr_la-cr_core.Tpo" -c -o libcr_la-cr_core.lo `test -f 'cr_core.c' || echo './'`cr_core.c; \
+	then mv -f ".deps/libcr_la-cr_core.Tpo" ".deps/libcr_la-cr_core.Plo"; else rm -f ".deps/libcr_la-cr_core.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/ -Wall -Wno-unused-function -fno-stack-protector -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_core.lo -MD -MP -MF .deps/libcr_la-cr_core.Tpo -c cr_core.c  -fPIC -DPIC -o .libs/libcr_la-cr_core.o
+cr_core.c:538: warning: 'cri_sa_restorer' used but never defined
+if /bin/sh ../libtool --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/   -Wall -Wno-unused-function -fno-stack-protector  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_cs.lo -MD -MP -MF ".deps/libcr_la-cr_cs.Tpo" -c -o libcr_la-cr_cs.lo `test -f 'cr_cs.c' || echo './'`cr_cs.c; \
+	then mv -f ".deps/libcr_la-cr_cs.Tpo" ".deps/libcr_la-cr_cs.Plo"; else rm -f ".deps/libcr_la-cr_cs.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/ -Wall -Wno-unused-function -fno-stack-protector -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_cs.lo -MD -MP -MF .deps/libcr_la-cr_cs.Tpo -c cr_cs.c  -fPIC -DPIC -o .libs/libcr_la-cr_cs.o
+if /bin/sh ../libtool --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/   -Wall -Wno-unused-function -fno-stack-protector  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_pthread.lo -MD -MP -MF ".deps/libcr_la-cr_pthread.Tpo" -c -o libcr_la-cr_pthread.lo `test -f 'cr_pthread.c' || echo './'`cr_pthread.c; \
+	then mv -f ".deps/libcr_la-cr_pthread.Tpo" ".deps/libcr_la-cr_pthread.Plo"; else rm -f ".deps/libcr_la-cr_pthread.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/ -Wall -Wno-unused-function -fno-stack-protector -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_pthread.lo -MD -MP -MF .deps/libcr_la-cr_pthread.Tpo -c cr_pthread.c  -fPIC -DPIC -o .libs/libcr_la-cr_pthread.o
+if /bin/sh ../libtool --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/   -Wall -Wno-unused-function -fno-stack-protector  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_sig_sync.lo -MD -MP -MF ".deps/libcr_la-cr_sig_sync.Tpo" -c -o libcr_la-cr_sig_sync.lo `test -f 'cr_sig_sync.c' || echo './'`cr_sig_sync.c; \
+	then mv -f ".deps/libcr_la-cr_sig_sync.Tpo" ".deps/libcr_la-cr_sig_sync.Plo"; else rm -f ".deps/libcr_la-cr_sig_sync.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/ -Wall -Wno-unused-function -fno-stack-protector -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_sig_sync.lo -MD -MP -MF .deps/libcr_la-cr_sig_sync.Tpo -c cr_sig_sync.c  -fPIC -DPIC -o .libs/libcr_la-cr_sig_sync.o
+if /bin/sh ../libtool --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/   -Wall -Wno-unused-function -fno-stack-protector  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_syscall.lo -MD -MP -MF ".deps/libcr_la-cr_syscall.Tpo" -c -o libcr_la-cr_syscall.lo `test -f 'cr_syscall.c' || echo './'`cr_syscall.c; \
+	then mv -f ".deps/libcr_la-cr_syscall.Tpo" ".deps/libcr_la-cr_syscall.Plo"; else rm -f ".deps/libcr_la-cr_syscall.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/ -Wall -Wno-unused-function -fno-stack-protector -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_syscall.lo -MD -MP -MF .deps/libcr_la-cr_syscall.Tpo -c cr_syscall.c  -fPIC -DPIC -o .libs/libcr_la-cr_syscall.o
+if /bin/sh ../libtool --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/   -Wall -Wno-unused-function -fno-stack-protector  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_trace.lo -MD -MP -MF ".deps/libcr_la-cr_trace.Tpo" -c -o libcr_la-cr_trace.lo `test -f 'cr_trace.c' || echo './'`cr_trace.c; \
+	then mv -f ".deps/libcr_la-cr_trace.Tpo" ".deps/libcr_la-cr_trace.Plo"; else rm -f ".deps/libcr_la-cr_trace.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/ -Wall -Wno-unused-function -fno-stack-protector -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_trace.lo -MD -MP -MF .deps/libcr_la-cr_trace.Tpo -c cr_trace.c  -fPIC -DPIC -o .libs/libcr_la-cr_trace.o
+cr_trace.c: In function 'libcr_trace':
+cr_trace.c:94: warning: ignoring return value of 'write', declared with attribute warn_unused_result
+if /bin/sh ../libtool --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/   -Wall -Wno-unused-function -fno-stack-protector  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_strerror.lo -MD -MP -MF ".deps/libcr_la-cr_strerror.Tpo" -c -o libcr_la-cr_strerror.lo `test -f 'cr_strerror.c' || echo './'`cr_strerror.c; \
+	then mv -f ".deps/libcr_la-cr_strerror.Tpo" ".deps/libcr_la-cr_strerror.Plo"; else rm -f ".deps/libcr_la-cr_strerror.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I.. -D_GNU_SOURCE -D_REENTRANT -I../include -I../include -I./arch/i386/ -Wall -Wno-unused-function -fno-stack-protector -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT libcr_la-cr_strerror.lo -MD -MP -MF .deps/libcr_la-cr_strerror.Tpo -c cr_strerror.c  -fPIC -DPIC -o .libs/libcr_la-cr_strerror.o
+/bin/sh ../libtool --mode=link gcc  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables   -o libcr.la -rpath /usr/lib -Wc,-nostdlib -version-info 1:3:1 libcr_la-cr_async.lo libcr_la-cr_core.lo libcr_la-cr_cs.lo libcr_la-cr_pthread.lo libcr_la-cr_sig_sync.lo libcr_la-cr_syscall.lo libcr_la-cr_trace.lo libcr_la-cr_strerror.lo -ldl -lpthread 
+gcc -shared  .libs/libcr_la-cr_async.o .libs/libcr_la-cr_core.o .libs/libcr_la-cr_cs.o .libs/libcr_la-cr_pthread.o .libs/libcr_la-cr_sig_sync.o .libs/libcr_la-cr_syscall.o .libs/libcr_la-cr_trace.o .libs/libcr_la-cr_strerror.o  -ldl -lpthread  -m32 -march=i686 -mtune=generic -nostdlib -Wl,-soname -Wl,libcr.so.0 -o .libs/libcr.so.0.1.3
+(cd .libs && rm -f libcr.so.0 && ln -s libcr.so.0.1.3 libcr.so.0)
+(cd .libs && rm -f libcr.so && ln -s libcr.so.0.1.3 libcr.so)
+creating libcr.la
+(cd .libs && rm -f libcr.la && ln -s ../libcr.la libcr.la)
+gmake[2]: Leaving directory `/home/legoater/redhat/BUILD/blcr-0.5.0/libcr'
+Making all in util
+gmake[2]: Entering directory `/home/legoater/redhat/BUILD/blcr-0.5.0/util'
+Making all in cr_checkpoint
+gmake[3]: Entering directory `/home/legoater/redhat/BUILD/blcr-0.5.0/util/cr_checkpoint'
+if gcc -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include -I../../include   -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -MT cr_checkpoint.o -MD -MP -MF ".deps/cr_checkpoint.Tpo" -c -o cr_checkpoint.o cr_checkpoint.c; \
+	then mv -f ".deps/cr_checkpoint.Tpo" ".deps/cr_checkpoint.Po"; else rm -f ".deps/cr_checkpoint.Tpo"; exit 1; fi
+/bin/sh ../../libtool --mode=link gcc -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables   -o cr_checkpoint  cr_checkpoint.o -L../../libcr -lcr 
+mkdir .libs
+gcc -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=generic -fasynchronous-unwind-tables -o .libs/cr_checkpoint cr_checkpoint.o  -L/home/legoater/redhat/BUILD/blcr-0.5.0/libcr /home/legoater/redhat/BUILD/blcr-0.5.0/libcr/.libs/libcr.so -ldl -lpthread
+/usr/bin/ld: .libs/cr_checkpoint: hidden symbol `__stack_chk_fail_local' in /usr/lib/libc_nonshared.a(stack_chk_fail_local.oS) is referenced by DSO
+/usr/bin/ld: final link failed: Nonrepresentable section on output
+collect2: ld returned 1 exit status
+gmake[3]: *** [cr_checkpoint] Error 1
+gmake[3]: Leaving directory `/home/legoater/redhat/BUILD/blcr-0.5.0/util/cr_checkpoint'
+gmake[2]: *** [all-recursive] Error 1
+gmake[2]: Leaving directory `/home/legoater/redhat/BUILD/blcr-0.5.0/util'
+gmake[1]: *** [all-recursive] Error 1
+gmake[1]: Leaving directory `/home/legoater/redhat/BUILD/blcr-0.5.0'
+make: *** [all] Error 2
+

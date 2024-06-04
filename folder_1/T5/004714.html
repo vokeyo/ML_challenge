@@ -1,0 +1,200 @@
+
+<html>
+<title>
+How to Turn On 50A Correctors, and How to Compensate for Tripped
+Correctors
+During a Store
+</title>
+<body>
+Jump to <a href="#tripped">How to Compensate for Tripped Correctors</a>
+<br>
+<br>
+<font size=7>
+<center>
+<hr><b>
+How to Turn on 50A Correctors</b>
+</font>
+<hr>
+<br>
+<font size=6>
+The program used to turn on the correctors is <i>Launch</i> started from
+<i>StartUp</i> under <i>start/General Programs/Launch</i>.  The correctors
+are not in the quench link, however it may be prudent to wait until
+zero, park, or injection if you are attempting to bring on many of
+them.  Expand the <i>Launch</i> tree to <i>RHIC/PowerSupplies/StateControl</i>.
+The three submenus will be <i> Get, Set</i> and <i>Check</i>.
+<br><br> 
+<i>Get</i> will tell you the state of power supplies,
+<br><i>Set</i> will change the state of power supplies and
+<br><i>Check</i> is similar to <i>Get</i> but it will pause when an error
+(state mismatch) is reached.
+<br><br>
+To send an <i>On</i>, <i>Stby</i>, or <i>Off</i> command to the power
+supplies select <i>Set</i>.  In this submenu, under <i>Ring</i> select
+the desired ring(s) (<i>Yellow</i> and/or <i>Blue</i>) in which the
+correctors will brought on.  Under <i>Type</i>, select <i>Corrector</i>,
+and under <i>Status</i>, select <i>Active</i>.
+<br><br>  
+There are three types of 50Amp Correctors currently used in RHIC:<i> V
+Steer</i>,<i> H Steer</i>, and<i> Skew Quads</i>.<Br>Unfortunately, only
+one group can be brought on at a time. Under <i>Magnets</i>, select the
+magnet type to be brought on (for example <i>H Steer</i>).  Under the
+<i>Locations</i> section, select the desired alcove in which the
+correctors will be brought on.  If more than one alcove has correctors
+which need to be brought on, use of "Ctrl-button and Click" will select
+multiple alcoves.
+<Br><Br>
+<center><img src=Launch1.gif width="515" height="577"></center>
+<b>NOTE:</b> 
+Correctors are only in <u>odd-numbered</u> alcoves (1001-A, 1001-B,
+1001-C, 1003-A, 1003-B, etc).
+<br><br>  
+If attempting to bring on <b>all</b> the correctors,
+select all <u>odd-numbered</u> alcoves by use of "Ctrl-button and
+Click."  Select the state (<i> On, Stby</i> or <i>Off</i>) which to send
+to the corrector power supplies under <i>Control Value</i>.  If the
+supplies are <i>Off</i>, bring them to <i>Stby</i>; if they are in
+<i>Stby</i>, bring them to <i>On</i>; if they are in <i>Stby-Error</i>,
+they may need to be turned <i>Off</i> and then brought back to 
+<i>Stby</i>, then <i>On</i>.  Click <i>OK</i> then click 
+<i>Run</i>
+<br><br>
+Repeat this procedure for the other types of correctors if needed.
+<Br><br>
+If problems arise in bringing the correctors from <i>Off</i> to
+<i>Stby</i>, the current reference may need to be zeroed.  This is done in
+the<i> Launch</i> tree under <i>RHIC/Correctors/Set</i> where the
+<i>Desired Current</i> is set to "0".  Click <i>OK</i> then
+<i>Run</i><br><br><center><img src=Launch2.gif width="515" height="612"></center>
+<br>
+The state of the power supplies can be checked using
+<i>RHIC/PowerSupplies/StateControl/Get</i> or
+<i>RHIC/PowerSupplies/StateControl/Check</i> in <i>Launch</i>
+<center>
+<br>
+<img src=Launch3.gif width="798" height="664">
+</center> 
+</font> 
+<font size=7>
+<br>
+<br>
+<hr>
+<a Name="tripped">
+<b>How to Compensate for Tripped Correctors During a Store</b></a>
+</center>
+</font>
+<hr>
+<br> 
+<center>
+<basefont size=6>
+Sometimes during a store, a corrector magnet power supply will trip
+off.  When this happens, the effects may be unnoticeable or quite
+significant.  For example, look at what happens to the collision rates
+at 3:25 when the corrector yo5-tv21 trips off and then is brought
+back on at 3:35 (and then again trips a couple of minutes later).
+<br><br>
+<center>
+<img src=Collisions.gif width="715" height="574">
+</center>
+<br><br>
+If a corrector has tripped off, it should be attempted to be brought back
+on.  If this fails and the corrector needs to be compensated for,
+steering can be done using the <i>Orbit</i> application.  <i>Orbit</i> is
+found in <i>StartUp</i> under <i>start/RHIC Applications</i>.  There is
+one application for each ring (<i>Yellow</i> and <i>Blue</i>). After
+opening <i>Orbit</i>, you must get data before you can make any
+changes. In <i>Orbit</i> under the menu <i>Acquire</i> select <i>Closed
+Orbit</i>. <br><br><img src=Orbit.gif width="740" height="787"><br>
+<i>Acquisition mode set to Closed Orbit</i> should now display in the
+message area at the bottom of <i>Orbit</i>.<br><br>
+In order to acquire data, a trigger must be sent using <i>pet</i>.  The
+trigger page can be found in the petTree under
+<i>RHIC/Magnets/Ramp</i>.  Trigger the event to measure the average orbit
+as shown below in brown. <br>(Use the blue trigger if acquiring data for
+the blue ring.)
+<br><br><center>
+<img src=Ramp.gif width="882" height="561"></center>
+<br><br>
+Now in the <i>Orbit</i> application an average orbit should be
+displayed.  Under the menu <i>Correction</i> select <i>Local/Model</i>
+and the <i>Orbit Bump</i> window will appear.  Set the <i>Get corrector
+data from</i> field to
+<i>Specified Stone</i>.  Set the <i>Ramp file</i> field to the current
+ramp (usually <i>ramp9</i>) and set the <i>StepStone row</i> field to the
+current stone (at injection it is <i>1</i> and at flattop during a store
+it is usually <i>15</i>). 
+<br><br><center>
+<img src=Bump.gif width="940" height="697">
+</center>
+Now click the <i>Get Data</i> bar
+<br><br>
+Soon we will apply bumps to compensate for the loss of the corrector, 
+<u>but first</u> the <i>Orbit</i> application must be told to use the the
+tripped corrector for calculation.  Click <i>Correction Data</i> and a
+table of correctors will appear.  Find the tripped corrector and change
+its <i>Status</i> to
+<i>OK</i>.  Now note the location of the corrector, found in the 
+<i>S(m)</i> column.  Close the <i>Correction Data</i> window.
+<br><img src=Orbit2.gif width="697" height="728">
+<br><br>
+In the <i>Orbit Bump</i> window select the appropriate <i>Plane</i> for
+the tripped corrector.  Now input the location of the corrector in the
+field <i>Correct at s(m)</i>.  The goal is to get the tripped
+corrector as the <u>last</u> (third) of three correctors making up the
+3-bump.  If the
+tripped corrector is not in the bottom box in the <i>SWN</i> column, try
+decreasing (or increasing) the location by ~50 meters in the <i>Correct
+at
+s(m)</i> field.  Now note the strength of the tripped corrector in the
+<i>Initial [mrad]</i> column.  The goal here is to distribute <u>half</u>
+of this strength to the other two correctors in the 3-bump.  This is done
+by entering a value in the <i>Bump strength(mm)</i> field.  The value
+entered in this field will be on the order of millimeters (not 0.1 mm for
+those used to IR steering).  Change the value in the <i>Bump strength
+(mm)</i> until the <i>final [mrad]</i> column is half the value it is in
+the <i>initial [mrad]</i> column <u>for the tripped corrector</u>.  Now
+half of the strength of the tripped corrector has
+been compensated
+by the two correctors <u>before</u> it. <br><br>
+(Below y05-tv21 is the third corrector in the three bump.  Note by
+entering
+-1.15 in the <i>Bump Strength</i> box it's strength has decreased from
+<i>0.0514</i> to roughly half at <i>0.0259</i>)<br><img
+src=Orbit3.gif width="940" height="697"><br><br>
+ The next goal is to
+distribute
+the second half of this strength to the two correctors <u>after</u>.  To
+do this another 3-Bump must be made with the tripped corrector as the
+<u>first</u> corrector in the three bump.  Change the value of the 
+location in the <i>Correct at s(m)</i> by ~50 meters until the
+tripped
+corrector is in the <u>top</u> box of the three correctors in the
+3-bump.  Now note the value <i>final [mrad]</i> for the tripped
+corrector.  This number will be brought to <i>0.00</i> by entering values
+in the the <i>Bump Strength(mm)</i> as before.  When the value in the
+<i>final [mrad]</i> column for the tripped corrector reads <i>0.00</i>
+the corrector has been compensated for by the two correctors before it and
+the two correctors after it.  To apply the correction click the
+<i>Apply Bumps</i> button (it is important not to click the
+<i>Save Bumps</i> button). <br><br>(Now yo5-tv21 is the first
+corrector in the three bump.  By increasing the <i>Bump
+Strength</i> by <i>-1.16</i> the <i>Final [mrad]</i> column reads
+<i>0.00</i> for the corrector)<br><img src=Orbit4.gif width="940" height="697"><br><br> Finally, to
+make the correction live for the
+active ramp (and the current store), it must be <i>activated</i> in the
+<i>Ramp Editor</i> program. This program is usually already open during
+the ramp to flattop but in case it is not, it is found in
+<i>StartUp</i>
+under
+<i>start/RHIC Applications/Ramp Editor</i> (you must press <i>enter</i> in
+the box to open the StepStone editor).  In the StepStone Editor window of
+<i>Ramp Editor</i> pull down the <i>File</i> menu and choose
+<i>activate</i>.  Now the correction should be applied to the current
+ramp.  During a store, if the
+tripped corrector negatively affected the
+ZDC rates, they should climb after the corrector has been compensated for.
+<br><br><img src=Stepstone.gif width="414" height="617"><br><br>
+
+</basefont>
+</body> 
+</html>

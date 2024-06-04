@@ -1,0 +1,1586 @@
+
+
+%started 2/12/90
+%REPORTMASTER (revised 8/24/88)
+\documentstyle[12pt]{article}
+%\input [alvarez.texcom]style.tex
+%\input [alvarez.texcom]math_macros.tex
+\input math_macros.tex
+\def\baselinestretch{1.2}
+\def\thefootnote{\fnsymbol{footnote}}
+\def\ref#1{$^{#1)}$}
+%\preprint   %default is \journal (one page per page)
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\today     \hfill    LBL-28574\\
+          \hfill    EXPANDED\\
+
+\vskip .25in
+
+{\large \bf A QUANTUM THEORY OF THE MIND--BRAIN INTERFACE}
+\footnote{This work was supported by the Director, Office of Energy 
+Research, Office of High Energy and Nuclear Physics, Division of High 
+Energy Physics of the U.S. Department of Energy under Contract 
+DE-AC03-76SF00098.}
+%alternate footnote for faculty:
+%\footnote{This work was supported in part by the Director, Office of 
+%Energy Research, Office of High Energy and Nuclear Physics, Division of 
+%High Energy Physics of the U.S. Department of Energy under Contract 
+%DE-AC03-76SF00098 and in part by the National Science Foundation under 
+%grant PHY85-15857.}
+
+\vskip .25in
+
+Henry P. Stapp \\[.25in]
+
+{\em Theoretical Physics Group\\
+     Physics Division\\
+     Lawrence Berkeley Laboratory\\
+     1 Cyclotron Road\\
+     Berkeley, California 94720}
+\end{center}
+
+\vskip .25in
+
+\begin{abstract}
+The Heisenberg quantum mechanical conception of nature is extended and
+applied to the brain.
+Strict adherence to the principle of parsimony, and to quantum thinking,
+produces naturally, on the basis of an overview of brain
+operation compatible with the information provided  by the
+ brain sciences, a unified description of the physical and
+mental aspects of nature that can account in principle for the full content 
+of felt human experience.
+
+
+ \end{abstract}
+
+\vskip 9pt
+Invited Presentation to the Conference: Consciousness within Science, 
+Cole Hall, University of California at San Francisco, Feb.
+17--18, 1990.
+%insert abstract here
+
+%
+\end{titlepage}
+%THIS PAGE (PAGE ii) CONTAINS THE LBL DISCLAIMER
+%TEXT SHOULD BEGIN ON NEXT PAGE (PAGE 1)
+\renewcommand{\thepage}{\roman{page}}
+\setcounter{page}{2}
+\mbox{ }
+
+\vskip 1in
+
+\begin{center}
+{\bf Disclaimer}
+\end{center}
+
+\vskip .2in
+
+\begin{scriptsize}
+\begin{quotation}
+This document was prepared as an account of work sponsored by the United
+States Government.  Neither the United States Government nor any agency
+thereof, nor The Regents of the University of California, nor any of their
+employees, makes any warranty, express or implied, or assumes any legal
+liability or responsibility for the accuracy, completeness, or usefulness
+of any information, apparatus, product, or process disclosed, or represents
+that its use would not infringe privately owned rights.  Reference herein
+to any specific commercial products process, or service by its trade name,
+trademark, manufacturer, or otherwise, does not necessarily constitute or
+imply its endorsement, recommendation, or favoring by the United States
+Government or any agency thereof, or The Regents of the University of
+California.  The views and opinions of authors expressed herein do not
+necessarily state or reflect those of the United States Government or any
+agency thereof of The Regents of the University of California and shall
+not be used for advertising or product endorsement purposes.
+\end{quotation}
+\end{scriptsize}
+
+
+\vskip 2in
+
+\begin{center}
+\begin{small}
+{\it Lawrence Berkeley Laboratory is an equal opportunity employer.}
+\end{small}
+\end{center}
+
+\newpage
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+%THIS IS PAGE 1 (INSERT TEXT OF REPORT HERE)
+ \noindent{\bf Contents}
+
+\begin{enumerate} 
+\item The Origin of the Problem: Classical Mechanics.
+\item A Quantum Ontology  
+\item The Functioning of the Brain: An Overview
+ \item 
+Incorporation of Quantum Mechanics 
+\item Brain and Consciousness
+\item Qualia: The Experiential or Felt Quality of Actual Events 
+\item  Comparison to Other Treatments
+\item Related Philosophical Issues
+\item Summary
+\end{enumerate} \newpage \noindent {\bf 1. The Origin of the Problem: Classical
+Mechanics}
+
+Advances in science often unify  conceptually things previously thought to
+be unconnected.
+Thus  Newtonian mechanics unified our understanding of stellar and
+terrestial motions,
+ and Maxwell's theory unified our understanding of
+electro--magnetic phenomena and light. Einstein's special theory of relativity
+unified our concepts of space and time, and his general theory unified our
+conceptions of spacetime and gravity.
+               My thesis here is that the integration of consciousness into science requires 
+considering together two outstanding fundamental problems in contemporary science,
+namely the problem of the connection between mind and brain, and the problem of
+measurement in quantum theory.
+Each of these problems concerns the interface between two domains of phenomena
+that are currently described by using different conceptual systems:
+mind and brain are described in psychological and physical terms, respectively,
+whereas the measurement problem in quantum theory is to reconcile the concepts
+of classical physics that are used to describe the world of visible objects
+with the concepts of quantum theory that are used to describe the world of
+atomic processes.
+In each case the problem of constructing a coherent overarching 
+conceptualization appears to be so intractable that many scientists have judged the
+problem to be a pseudo problem not suited to scientific
+study.
+However, technological advances are now providing data that bear increasingly
+on the interfaces between the domains that had heretofore  been empirically
+ separate.
+Given these new data, and the prospect of more to come, science can now
+profitably  take up
+the challenge of providing a conceptual framework that unifies the mental,
+physical, classical, and quantal aspects of nature.
+
+William James highlighted the seemingly intractable character of the
+mind--brain problem with the following two quotations:$^{1)}$
+\begin{quotation}
+               Suppose it to have become quite clear that a shock in
+consciousness and a molecular motion are the subjective and objective faces of
+the same thing; we continue utterly incapable of uniting the two so as to
+conceive the reality of which they are the  two faces. (Spencer)
+\end{quotation}
+and
+\begin{quotation}
+               The passage from the physics of the brain to the corresponding
+facts of consciousness is unthinkable.
+Granted that a definite thought and a definite molecular action in the brain
+occur simultaneously; we do not possess the intellectual organ, nor apparently
+any rudiment of the organ, which would allow us to pass, by a process of
+reasoning, from one to the other.
+(Tyndall)
+\end{quotation}
+
+
+In commenting on this issue James clearly recognized that the
+problem was with the concepts of classical physics.
+Referring to the scientists who would one day illuminate the problem he said:
+
+\begin{quotation}
+\noindent the necessities of the case will make them ``metaphysical''.
+Meanwhile the best way in which we can facilitate their advent is to understand
+how great is the darkness in which we grope, and never forget that the
+natural--science assumptions with which we started are provisional and
+revisable things.$^{2)}$
+
+\end{quotation}
+James evidently foresaw, on the basis of considerations of the mind--brain
+problem, the eventual dislodgement of classical mechanics from the position it
+held during his day.
+             We now know  that classical mechanics fails at the atomic level:
+it has been superseded by quantum mechanics.
+
+That classical mechanics is not capable of integrating consciousness into science
+is manifest.
+Classical physics is an expression of Descartes' idea that nature is divided
+into two logically unrelated and  noninteracting parts, mind and matter.
+However, the integration of consciousness into science requires, instead,
+ a logical framework in which these two aspects of nature are linked
+in ways that can account for both the observed influence of brain processes on
+mental processes, and the apparent influence of mental processes on brain
+processes.
+
+Brain process depends in a sensitive way upon 
+atomic processes. 
+Hence a quantum mechanical treatment is mandated in principle.
+However, the brain has a hierarchical structure, with larger structures being
+built from smaller ones, and as one moves to higher
+levels the concepts of classical physics seem to 
+ work increasingly 
+well.
+Since consciousness appears to be a high--level process one might think
+that it should  be comprehended within the conceptual framework of classical
+physics.
+In support of   this idea  some scientists have noted that, even in
+nonbiological systems,  as one moves  to higher levels 
+of organization new structures often
+emerge that exercise effective control
+over lower--level processes.
+Thus it is argued that just as a ``vortex'' can, within the conceptual
+framework of classical physics, emerge as an entity that controls the motions
+of the molecules from which it is built, so might there emerge, from a stratum
+of brain activities completely compatible with the concepts of classical
+physics, a ``consciousness'' that controls lower--level brain processes.
+
+There is, however, an essential conceptual difference between consciousness and
+a system such as a vortex that is compatible with the concepts of classical
+physics.
+The essential characteristic of consciousness       is that it is felt: it is 
+felt
+experience;  felt awareness. Any system that is compatible with the concepts
+of classical physics can be described, insofar as its physical  behavior is concerned,
+as composed of the physical elements provided by classical physics, such as
+atoms, and electro--magnetic fields.
+However, 
+the description in terms of these elements does not, by itself, specify whether
+the system has an appended experiential aspect --- a feel.
+Nature may elect to add  feel, but the classical physicists can consider             
+the purely physical version without any added quality of feel, and this latter version
+behaves, according to the precepts of classical physics, in exactly the same
+way as the one with feel.
+Thus within the framework of classical physics feel is, per se,
+nonefficacious: it has no effect on the physical world.
+
+This problem has  been clearly understood for hundreds of years, and is the core
+of the mind--brain problem.
+ 
+
+It is only recently that the  brain sciences have amassed enough data to make
+feasible a serious effort to understand the dynamics of the mind--brain
+connection within the framework of the basic laws of physics.
+An adequate  classical--physics treatment of  
+the mind--brain problem is not possible,
+  for the reason discussed above.  On the other hand,
+                 the application of quantum mechanics appears to be blocked
+by three major technical problems.
+
+The first problem, which has already been mentioned, 
+is that quantum theory is primarily a theory of atomic processes,
+whereas consciousness appears to be connected with macroscopic
+brain activities, and macroscopic processes are well described by classical
+physics.
+
+The second problem is that, due to a failure of an essential condition of
+isolation, quantum theory, as developed for the study of atomic processes, does
+not apply to biological systems, such as brains.
+
+The third problem is that the orthodox Copenhagen  interpretation of quantum
+theory instructs us to regard the quantum formalism as merely a set of rules
+for calculating expectations about our observations, not as a description, or
+picture, of physical reality itself.
+However, without a description of physical reality  consciousness becomes a puzzle within an enigma.
+
+Any acceptable quantum mechanical treatment of the connection between mind and brain must
+resolve these three major technical problems.
+In the treatment to be described here the resolution of the third problem 
+resolves automatically also the other two.
+
+
+\noindent{\bf 2. A Quantum Ontology}
+
+The mathematical concepts in quantum theory are
+fundamentally different from those of classical physics.
+This difference makes it difficult to form a unified  conception of nature.
+The Copenhagen strategy for circumventing these conceptual difficulties, by
+settling for a set of computational rules connecting human observations,
+rather than striving to comprehend the nature of the underlying reality, was
+strongly opposed by Einstein, Schroedinger, and many other principal contributors
+to the development of quantum theory.
+However,  those critics  were unable to put forth any alternative 
+proposals.
+Eventually  Werner Heisenberg, one of the chief architects and strongest 
+defenders of the 
+Copenhagen interpretation, did try to form a coherent 
+picture of what is actually happening.
+
+In Heisenberg's picture, which is the one informally adopted by most practicing
+quantum physicists, the classical world of material particles, evolving in
+accordance with local deterministic mathematical laws,
+is replaced by the Heisenberg state of the universe.
+This state can be pictured as a complicated wave, which, like its classical
+counterpart, evolves in accordance with local deterministic laws of motion.
+However, this Heisenberg state represents not the actual physical universe 
+itself, in the normal sense, but merely a set of ``objective tendencies'',
+or ``propensities'', connected to an impending {\it actual event}.
+The connection is this: for each of the alternative possible forms that this
+impending event might take the Heisenberg state specifies a propensity, or
+tendency, for the event to take that form.
+The choice between these alternative possible forms is asserted to be governed
+by ``pure chance'', weighted by these propensities.
+
+The actual event itself is simply an abrupt change in the Heisenberg state: it
+is sometimes called ``the collapse of the wave function''.
+The new state describes the tendencies associated with the {\it next} actual
+event.
+This leads to an alternating succession of states and events, in which the
+state at each stage describes the propensities associated with the event that
+follows it.
+In this way the universe becomes controlled in part by strictly deterministic
+mathematical laws, and in part by mathematically defined ``pure chance''.
+
+The actual events become, in Heisenberg's ontology, the
+fundamental entities from which the evolving universe is built.
+ The properties of these 
+actual events are determined by the quantum formalism.
+    These properties are remarkable: they        lead to a quantum world profoundly
+different from the one pictured in classical physics.
+
+Each  Heisenberg actual event has both local and global aspects.
+Locally, each such event acts over  a {\it macroscopic} domain in an {\it
+integrative} fashion: it actualizes, {\it as a unit}, some integrated
+high--level action or activity, such as the firing of a Geiger counter.
+This essential quality of the actual event to {\it grasp as a unit}, and actualize as
+a whole, an entire high--level  pattern of activity injects into the quantum
+universe an {\it integrative} aspect wholly lacking in the classical conception of
+nature.
+This fundamentally  integrative action of the Heisenberg actual event is the foundation of the quantum
+theory of consciousness  developed here.
+
+Each actual event has also a global or universal aspect:
+its action is not wholly confined to any local region, but extends to distant
+parts of the universe.
+These two intertwined aspects arise 
+from 
+the fact
+that the Heisenberg actual event  is represented within the quantum formalism 
+by the change induced in
+the Heisenberg state of the universe by the action upon it of a localized
+operator.
+This change in the state of the universe, although induced by the action of a
+localized operator, produces  a {\it global} change in
+the tendencies for the next actual event.
+Thus each actual event is a global change in the tendencies for the next actual
+event.
+
+
+By introducing in this way a quantum {\it ontology},
+and thus departing from the purely epistemological stance of the strictly
+orthodox Copenhagen interpretation, one can remove the subjective human
+observer from the quantum description of the physical world 
+and speak directly about the
+actual dispositions  of the measuring devices, rather than the knowledge of the
+observer.
+Thus the moon can be said to be ``really there'' even when nobody is
+looking.
+And Schroedinger's cat is, {\it actually}, either dead or alive.
+More importantly, the degrees of freedom of a biological system that correspond
+to its {\it macroscopic} features can be considered to be highly constrained,
+and to specify a classical framework, or matrix, within which one can consider
+the atomic processes that are essential to its functioning.
+
+
+This useful ontology has 
+two defects.
+The first is its run--away ontology: the supposedly actual things to which the
+tendencies refer consist only of shifts in tendencies for future actual
+things, which consist, in turn, only of shifts in tendencies for still more
+distantly future things, and  so on  ad infinitum: each actuality is defined only in
+terms of possible future ones, in a sequence that never ends.
+
+The second defect is the omission from the description of nature of the one
+thing really known to exist: human thought.
+
+These two difficulties fit hand--in--glove: the first is that some
+authentic actual things are needed to break the infinite
+regress; the second is that some authentic actual things
+have been left out.
+
+These considerations motivate the first basic proposal of this work,
+which is to attach to  each Heisenberg actual event an experiential aspect.
+The latter is called the {\it feel} of this event, and it can be considered to
+be the aspect of the actual event that gives it its status as an intrinsic
+actuality. 
+
+The central question then becomes: What principle determines the structure of
+the feel of an actual event?
+More narrowly: How is the structure of human experience connected to the
+structure of human brain processes?
+
+The answer, according to the present theory,  is this: Each human experience has a compositional structure that is
+isomorphic to the compositional structure of the actual brain event of
+which it is the feel.
+
+To understand the nature of these two compositional structures one must look
+closely at brain processes and psychological processes.
+We begin by giving a general overview of the former.
+
+               \vskip 9pt
+ \noindent{\bf 3. The  Functioning of the Brain: An Overview}
+
+The primary function of the brain is to gather information about both its
+environment and the body, to formulate possible plans of action, to choose a
+{\it single} plan of action, and to oversee the execution of that plan.
+Various patterns of neural excitation become activated in the course of these
+activities.
+These patterns must presumably represent, among other things, the  information
+that needs to be processed, such as the sensed state of the body and the
+environment, and the programs for coordinated motor action.
+
+Gerald Edelman$^{4)}$ has given recently a scientifically based account of 
+how the brain could have: 
+(1), evolved under natural selection; (2), developed during its individual
+growth; and (3), become conditioned by its individual history, in such a way as
+to allow these features that need to be processed to become represented by
+patterns of neural excitations.
+One key ingredient is the idea of the {\it facilitation} of such patterns by
+physical changes at the synaptic junctions.
+This process permits certain recurring patterns of excitations in the cerebral
+cortex that are originally weakly activated by a particular neural activity to
+become strongly and selectively activated by that activity.
+Facilitation also permits {\it association}, whereby the excitation of parts of
+a facilitated pattern activates, under certain conditions, the rest of that
+pattern.
+This association process provides a neural mechanism for retrieval of memories.
+
+
+To do its job the brain must evidently possess a representation of the body and
+its environment.
+I call  this representation the body--world schema.
+A lizard, or a frog, as it watches a moving insect, is, by its attention,
+continually updating parts of its body--world schema.
+Quite generally, a basic element of brain operation is the periodic updating,
+by attention to particular details, of parts of the body--world schema.
+
+When I choose to raise my arm I do not consciously instruct each muscle.
+I mentally raise my arm to its intended place, and unconscious processes execute
+the implied instruction.
+Thus we evidently possess a ``{\it projected} body--world schema'' whose content
+is akin to that of the ``{\it current} body--world schema'',
+but which specifies a {\it goal} or {\it intention},
+rather
+ than the current state of
+affairs.
+It shares with the current body--world schema the feature that its contents are
+periodically updated in response to conscious acts of attention.
+
+Each item in the body--world schema (current, projected, and historical) has a
+certain key part, which is part of the directive, or instruction, that
+ led to the placement of that item in the schema.
+Thus if I consult my body--world schema to find out what I just saw on my
+right, the instruction by which I can reconfirm or update that item is
+immediately available through association: upon releasing an inhibition 
+this instruction becomes carried
+out by the unconscious levels of processing.
+
+When I choose to raise my arm I also generally choose, or intend, at the same
+time, to monitor its motion.
+Thus, just as for the current body--world schema, an item placed in the
+projected body--world schema  can generally contain an {\it instruction}
+of the same   kind as the instruction that produced that
+item.
+This instruction placed in the projected body--world schema will, 
+if not amended, normally be carried out at the
+appropriate time by the unconscious processes.
+
+It  appears from these considerations that the brain can, under
+suitable conditions of alertness,
+ sustain
+a ``top--level process'' with the following three
+general characteristics:
+\begin{enumerate}
+\item Its elements are events that actualize {\it instructions} to lower--level processes.
+\item These instructions cause the lower--level processes to gather
+information, prepare for and execute actions, {\it and construct the next 
+top--level instruction.}
+\item Each top--level instruction is an updating of the body--world schema, or
+of some  generalization of that schema.
+\end{enumerate}
+
+At the neural level this sort of arrangement can be implemented by a category of
+patterns of neural excitations that I call ``symbols''.
+Each top--level instruction consists of a collection , or ``chord'',
+of these symbols. 
+Each such symbol when ``released'' (e.g., by blocking some inhibitory signals)
+ tends to activate, by association, the lower--level processes that it
+symbolizes.
+
+This general picture of brain operation, which will be amplified later,  
+appears compatible with the
+growing body of evidence coming from the brain sciences
+(See ref. 27).
+I shall not review the evidence here, but will simply
+ accept this overall picture
+and proceed to 
+explore the impact of  treating quantum mechanically certain important atomic processes
+that occur in the alert brain.
+
+              \vskip 9pt
+
+\noindent{\bf 4. Incorporation of Quantum Mechanics}
+
+An element of brain dynamics where atomic processes play a key role is the
+release of the contents of a vesicle containing neurotransmitter into a synaptic junction.
+Our theoretical picture$^{5)}$ of this process is that an action--potential pulse
+opens channels for calcium ions, which then migrate by diffusion to release
+sites.
+Several such ions must attach at a site to effect the release.
+
+In the model of ref. 5 a calcium ion travels about 50nm in a time of about 
+200$\mu s$, on its way from channel exit to release site.
+Simple estimates of the uncertainty principle limitations upon
+body--temperature calcium ions diffusing in this way show that the wave packet 
+of the  calcium ion must grow to a size many orders larger than the
+size of the calcium ion itself.
+Hence that the idea of a single classical trajectory becomes inappropriate:
+quantum concepts must in principle be used.
+
+
+According to quantum theory the quantum state generated by this process 
+of diffusion is a
+complex multiparticle state whose one--particle probabilities should 
+approximate the probabilities given by the classical calculation.
+
+The probability for an action--potential pulse to release a vesicle at a 
+cortical synapse appears to be about 50\%.$^{6)}$
+If, in some small time window (say a fraction of a millisecond), $N$ synapses
+receive action--potential pulses then there will be $2^N$ {\it alternative}
+ possible
+configurations of vesicle releases, each with a roughly equal probability.
+{\it Each alternative possibility is represented in the evolving} \ 
+{\it  quantum mechanical wave
+function.}
+
+The brain is a highly nonlinear system with feedback. Classical computer
+simulations$^{7)}$ show that the macroscopic state into which it will evolve is 
+very sensitive to small variations at the synaptic level.
+It is therefore,  I think, virtually inconceivable that a variation over the 
+$2^N$ alternative possible
+configurations of vesicle releases could, in general, have no influence on the eventual
+macroscopic state into which the system evolves.
+Nonlinear systems  are generally very sensitive to small changes, and there is no
+reason to believe that the brain could be totally insensitive to such
+differences.
+Thus a universe containing a conscious brain, 
+  represented quantum mechanically, must be
+expected to evolve into a state that represents a {\it superposition of} 
+ {\it macroscopically different alternative} {\it possibilities } {\it for  the 
+brain},
+provided there is no actual event that
+reduces the state to one that is not a superposition of this kind.
+
+
+This raises the key question: At what point  does an actual event intervene?
+
+This issue was addressed by John von Neumann in an analysis$^{8)}$ that constitutes
+the foundation of the quantum theory of measurement.
+von Neumann considered a sequence of measuring  devices, with the first 
+one measuring the atomic system, and each other device measuring the response of the
+one before it, with the last one being, conceptually at least,
+some innermost level of the brain.
+He showed that, for his idealized case, it made hardly any difference at all at
+which point the actual event intervened to select one of the several
+macroscopically different possibilities: the quantum mechanical probabilities
+were virtually independent of where the ``Heisenberg cut''
+was drawn between the ``quantum system'' and the classically described 
+device that was measuring it.
+
+I shall exploit von Neumann's result by assuming that in the alert brain
+the main actual events occur at the point where a choice is made
+between {\it alternative possible instructions in the top--level process}.
+Since top--level instructions generally initiate large and differing
+responses by the lower--level processing mechanisms, this assumption is analogous
+to Heisenberg's assumption for inanimate objects that the actual event
+occurs only at a high level, where it chooses between states corresponding to {\it macroscopically different}
+actions of the object, such as the firing or nonfiring of a Geiger counter.
+ Human conscious events are assumed to be the feels of these top--level events,
+which actualize {\it macroscopic} patterns of neural activity.
+We now have in place a general description of brain operation compatible with
+quantum theory, and can pose the question of the connection of brain to  consciousness.
+
+\noindent
+{\bf 5.  Brain and Consciousness}
+
+We are not conscious of what is going on in our brains. 
+We are conscious of, for example, Beethoven symphonies, and sunsets.
+How can such a felt experience be the ``feel'' of some events in the brain?
+
+To start with something simpler than a Beethoven symphony consider a triangle:
+Why, when we look at a triangle, do we experience three lines joined at three
+points, and not some pattern of neuron firings?
+
+To answer this question let us consider first Edelman's explanation of how the
+visual cortex comes to be organized.
+The problem is this: the growth of the neurons connecting the retina to the
+visual cortex is not completely determined by genetic programming: there is a
+great deal of contingency.
+But then how does the structural information present at the retina get properly
+reconstituted at the cortex, rather than becoming hopelessly scrambled by the
+randomness of the neural connections?
+
+The answer is that the saccadic movements of the eye cause the neurons that
+receive signals from adjacent retinal regions to receive {\it temporally} correlated
+signals.
+The resulting spatially distributed but  temporally correlated patterns of excitation  in the visual cortex
+then become automatically associated, by the facilitation process.
+Thus some of the structure at the retinal level becomes mapped into a spatially 
+distributed
+{\it analog} structure in the realm of the cortical patterns of excitation.
+
+Building up from this initial organization, initiated by the saccadic eye
+movements, repetitious patterns occurring at the retina {\it facilitate}
+corresponding patterns in the cortex.
+
+Thus even though the neural wiring is somewhat haphazard,
+the process of facilitation nevertheless automatically establishes {\it
+analogs} of attended or recurring retinal patterns within the realm of the
+cortical patterns of excitations.
+
+Patterns present in the visual cortex become associated, in the same way, with
+the neural accompaniments of those motor actions that bring them into being.
+Thus recurring features of the external visual scene will come to be
+associated with complex patterns of excitations that include the patterns that
+produce the motor actions that allow these features to be sensed.
+
+Due to this mapping of structure the cortical patterns generated by attention
+to the external triangle will be ``congruent'' to the
+external triangle.
+For example, the adjacency properties of the points along the three lines of
+the triangle will have their symbolic representations among the cortical patterns
+originally facilitated by the saccadic eye movements.
+Similarly, the various other perceived structural features of the external
+triangle will be represented by  symbols that have been previously
+constructed by brain processes to represent such connections.
+
+The act of attending to the external triangle implants this symbolic
+representation of the external triangle into the body--world schema.
+More specifically, this act of attending leads to an actual event that updates the
+body--world schema by actualizing an integrated chord of symbols that is 
+``congruent'' to
+the external triangle, in the sense that it will contain symbols that are the
+analogs of the various structural features that characterize the external
+triangle itself.
+
+It might seem that this shift from the  external triangle to a congruent inner
+representation has not helped at all, but only made things worse.
+Even if we  grant the
+congruency property the question remains: Why do we experience the 
+{\it triangle} rather than the
+firings of neurons?
+We do not wish to introduce
+an homunculus that
+  surveys the brain,
+and is able to decipher its complex activity  and see a triangle.
+
+This deciphering problem arises, however,  only if one slides back to the classical concepts.
+In the   quantum ontology a brain attending to an external triangle
+is not performing the retrograde act of transforming an actual external
+triangle into some congruent structure of particle motions, which must then be
+deciphered to be perceived as a triangle.
+Rather it is transforming the external triangle, which 
+exists only as a pattern of
+{\it disjoint} events and tendencies, into a {\it single event} that 
+actualizes, in integrated form,
+an image of 
+the structural connections that inhere in the perceived triangle.
+The brain, therefore, does not convert an actual whole
+ triangle into some jumbled
+set of particle motions; rather it converts a 
+concatenation of separate
+external events
+into the actualization of 
+some single integrated pattern of neural activity  that is congruent to 
+the perceived whole triangle.
+           The central question is then:
+Why is the actualizing of this
+ integrated pattern of activity 
+felt as the perceiving of the triangle?
+More generally: Why do brain events feel the way they do?
+               \vskip 9pt
+\noindent {\bf 6. Qualia: The Experiential or Felt Quality of Actual Events.}
+
+The present theory asserts that each human conscious experience is the feel of
+an event in the top--level process occurring in a human brain.
+This brain process is asserted to consist of a sequence of Heisenberg actual
+events called the top--level events.
+Each such event actualizes some macroscopic quasi--stable pattern of neural
+activity.
+The pattern actualized by a top--level event is called a symbol.  
+It normally consists of a set of other symbols, called its {\it components},
+linked together by a superposed neural activity.
+                                                                 
+Actualizing a symbol $S$  engenders enduring physical changes in
+the synapses (facilitation) that cause any subsequent actualization of any
+component of $S$ to create a pattern of dispositions for the activations of the
+other components of $S$ (association). Thus the actualization of any symbol $S$
+creates a pattern of dispositions for the activation of all symbols having a
+component  that is a component also of $S$.
+
+The actualization of any symbol $S$ thus produces tendencies for the activation of
+various collections of symbols.
+One such collection, $C$, may be far more strongly disposed to activation than
+the others.
+Then the actualization of $S$ constitutes an instruction for the actualization
+of that collection of symbols $C$.
+
+Due to  quantum indeterminancy many alternative possible collections $C$ must
+have nonzero weight.
+The next top--level event   actualizes one collection, together with a superposed structure of neural activity that grows up around
+it and gives the whole pattern stability and distinctiveness, allowing it to
+stand out from the chaotic continuum of background activity and be actualized
+as a distinct quasi--stable pattern of neural activity.           
+The full set of symbols, and of dispositions of symbols to activate symbols, created during the
+life of the brain by the top--level process, is called the {\it generalized
+body--world schema}.
+The body--world schema mentioned earlier is an integral part of it.
+Each top--level event augments the generalized body--world schema, and is
+therefore an updating of it.
+
+The generalized body--world schema is an organizational structure in which all
+symbols are effectively stored, in latent form, for later retrieval by
+cross--referencing.
+The retrieval mechanism is presumably this: if a symbol $S$ has a disposition
+to be activated by several symbols, then the simultaneous actualization of
+these several symbols will cause $S$ to be activated more quickly, and hence
+become actualized {\it before} the symbols less strongly disposed to activation
+reach the threshold for possible actualization.
+
+This retrieval mechanism can allow brain process to actualize, by
+cross--referencing, the symbol that represents, for example, the occupant of
+a certain place at a certain time, without
+ interference from the symbols representing the occupants of that place at
+other times, or the occupants of other places at that time; and to actualize the
+symbol that represents the place where an object represented by a certain 
+symbol is located at a certain time, without
+interference from the symbols representing the locations of that object at
+other times. The generalized body--world schema thus becomes the physical basis
+for the long--term memory system.
+The top--level process is the generator of this memory system.
+
+We may now state an essential point: Each top--level event actualizes a symbol,
+and this symbol has {\it components} that are themselves symbols.
+Thus each top--level event is represented by a symbol that has a {\it
+compositional structure}: it has components that are entities of the same kind
+as itself.                          
+
+  Consider next the mental side.
+The structure of mental states has been extensively studied.
+I accept the conclusions of William James, who cites with strong approbation
+the following quotation: ``Our mental states always have an {\it essential
+unity}, such that each state of apprehension, however variously compounded, is
+a single whole of which every component is, therefore, strictly apprehended (so
+far as it is apprehended) as a part.
+Such is the elementary bases from which all our intellectual operations
+commence''.\ref{9}
+
+A component of a thought, so far as it is apprehended, is itself a possible
+thought.
+Thus each thought has a compositional structure: it has components that are
+entities of the same kind as itself.
+Our basic principle is that the compositional structure of the feel of a
+top--level event is isomorphic to the compositional structure of the symbol
+actualized by that event: there is a one--to--one mapping of symbols to feels,
+and this mapping preserves compositional structure.
+
+
+The fundamentally integrative character of the Heisenberg actual event enters
+here in a critical way.
+The Heisenberg event {\it grasps as a whole} an entire integrated pattern of
+physical activity.
+This essential unity of the actualized physical state accords with the
+essential unity of its mental counterpart.
+
+William James has described the profound conceptual inadequacy of
+classical mechanics -- as a basis for understanding the connection between brain
+and mind -- that is so satisfactorily resolved at this point by quantum theory.
+Having emphasized the essential unity of each thought, and a first difficulty
+that arises from it, James goes on to say:
+``The second difficulty is deeper still. {\it The `entire brain--process' is
+not a physical fact at all}.
+It is the appearance to an onlooking mind of  a multitude of physical facts.
+`Entire brain' is nothing but our name for the way in which a million of
+molecules arranged in certain positions may affect our senses.
+On the principles of the corpuscular or mechanical philosophy, the only
+realities are the separate molecules, or at most the cells.
+Their aggregation into a `brain' is a fiction of popular speech.
+Such a fiction cannot serve as the objectively real counterpart to any psychic
+state whatever. Only a genuine physical fact can so serve.
+But the molecular fact is the only genuine physical fact ---''\ref{10}
+
+In the quantum ontology the only genuine physical facts are the actual events.
+Hence some actual event must `serve as the objectively real counterpart to
+[each] psychic state.'
+But in this case the essential unity of the phychic state -- so incomprehensible
+within reductionist classical thought --- mirrors the essential
+unity of its physical counterpart.
+In both case the ontological progression is from the ontologically fundamental
+wholes to their ontologically subordinate components, rather than from presumed
+ontologically fundamental elements to assemblies thereof. 
+This shift from synthetic ontology to analytic ontology is the foundation 
+of the present work.
+
+A fundamental feature of experience is the feel of the `flow of consciousness',
+or the `perception of time'.
+On the other hand, each actual event is ontologically distinct from all
+others, and its feel is the feel of itself alone.
+Thus the ``present'' mental event is the feel exclusively of the ``present''
+physical event; it has no access to past physical events.
+
+But how, then, does one account for the `flow  of consciousness' and the
+`perception of time'?
+These phrases refer to an extensively analyzed empirical structure described in
+rough terms by William James in the following way:
+``If the present thought is of ABCDEFG, the next one will be of BCDEFGH,
+and the one after that of CDEFGHI --- the lingerings of the past dropping
+successively away, and the incomings of the future  making up the
+loss''.\ref{11}
+
+According to this picture, each {\it immediately present} mental event contains
+{\it within itself} a sequence of parts perceived as ``temporally''
+ordered.
+
+This ``temporal'' structure of each mental event evidently arises, in part, in
+the following way: due to the quasi---stable character of symbols the symbol
+actualized by a top--level event will generally have among its components, many
+of the components of the symbol actualized by the preceding top--level event:
+the set of components of the new symbol will include many of the components of
+its predecessor, together with some new symbols.
+Thus the feel of the new event will have components that correspond to
+components of earlier events.
+
+If someone recites quickly an unfamiliar sequence of four numbers an attentive
+listener can readily repeat the sequence, or repeat the part of it starting
+from any one of its four components.
+However, reciting the sequence the reverse order requires more effort.
+Thus there is evidently a dynamical tendency for associations between the
+temporal slices of a thought to move from any slice to its temporal 
+successor, rather
+than randomly about. The existence of this tendency
+means that the superposed structure of the symbol, which creates the
+dispositional ``associations'' between its components, must give larger
+dispositions to the associations that run forward in the ``temporal'' ordering. 
+Since this enveloping neural structure tends to recreate the
+earlier temporally ordered patterns of activity, such a biasing for ``forward''
+association is to be expected. 
+It will be accommodated in our representation of the compositional structure of
+a symbol in terms of its components by allowing both a ``+'' composition that
+is commutative [$a+b=b+a$] and also a ``sequential product'' that is noncommutative
+and nonassociative $[(abcd) \neq (abdc), ((abc)(def))\neq (abcdef)]$.
+The ``+'' composition combines symbols without ``temporal'' biasing, and the
+sequential composition combines symbols with ``temporal'' biasing.
+Thus the brain event that follows upon the hearing of the spoken 
+sequence (5, 6, 2, 8) is represented by (5628), and it is felt as the heard
+sequence (5, 6, 2, 8).
+Here I have used the same numeric symbols to represent the spoken words,
+ the
+components of the symbol actualized by the top--level brain event, and the
+components of the feel of that event.
+
+James' picture of a marching sequence of {\it fixed} letters is only a first
+approximation.
+Each actualized symbol creates dispositions for the activation of various
+symbols that were actualized together with itself in earlier top--level events.
+Thus as one of James' letters marches through the sequence of successive events
+its original symbolic counterpart becomes embellished by an expanding network
+of symbols, consisting of symbols that were actualized together with it during
+earlier top--level events.
+The feel tied to the marching letter consequently becomes embellished by the
+feels of these earlier events:
+its ``meaning'' becomes enlarged and sharpened by the agglutination of feels
+associated with related past events.
+
+The symbols are quasi--stable structures with fatigue characteristics that
+cause them  eventually to fade out.
+Thus after an initial period of intensity, accompanied by a growing sense of
+``meaning'',
+the feel tied to any fixed letter in James' picture will begin to fade out,
+and it will eventually die away. 
+James has described this waxing and waning of the intensity and sharpness of
+the ``temporal'' components of a present mental state, when it is analysed in
+terms of the variation of the ``temporal'' variable: the newest components are
+still vague, the ones later in the ``temporal'' sequence are clearer, 
+and the older 
+ones fade away.
+
+
+The range of possible ``meanings'', as characterized by the number of possible
+structural forms of these embellishments, can be huge.
+James cites evidence that a mental event may have as many as 40 temporally
+distinguished parts.\ref{12} 
+Suppose there are just ten fundamental symbols, and that all others are formed
+by simply the sequential compositions of these ten.
+Then the number of possible embellishments generated in the first 20 steps,
+e.g., before the fading sets in, is 10$^{20}$.
+
+Embellishment leads to ``meaning'' because the embellished symbol is
+experienced as a felt structure of feelings each of which corresponds to a
+related past event: an observed ``bicycle'' comes to be associated with a
+structure of feels in which are imbedded childhood experiences of locomotion,
+spills, adventures, etc.,: i.e., of what a bicycle {\it led to} in the past,
+and hence might lead to again.
+
+These ``meanings'' arise, however, only from the {\it structural content} of the
+symbol: the ten basic symbols act as undefined symbols from which all the
+structures are built, but the 10! permutations of these ten basic symbols leave
+the internal structural content unchanged: all {\it connections} between feels
+are left unchanged by these permutations.
+Thus the possible shades of meaning number, in principle, $10^{20}/10$!, in
+this example.
+
+The distinction being emphasized here is between the elemental, or absolute,
+units of experience, such as the immediate direct experience of redness, or of
+the pitch of high $C$, and  the meanings of symbols that arise from their
+compositional structures.
+The former are the feels of certain actualized patterns of neural activity, and
+would be different if the patterns of neural activity representing these symbols were different.
+The former reside in the internal structural composition of the symbol and would
+be left unchanged if the feel of all symbols were shifted in a way that
+maintained the feel of ``nearness'' that feels can have to one another.
+
+The dynamical process of embellishment considered above, in which the symbolic
+counterpart of each ``letter'' in the temporal sequence develops associations
+by itself, as if it  developed in isolation from the other symbols actualized
+together with it, is an over simplification: symbols actualized together act
+together; they act as combined dispositions for the activation of other
+symbols.
+It is this capacity of the different temporal components of a single 
+top--level event to act jointly that gives brain process its capacity to
+compare and combine symbols, and to manipulate them in other ways.
+
+Each normal top--level event contains a background of symbols that persists
+through the various ``temporal'' slices into which it is divided.
+This background of symbols is felt as a persisting background of intentions and
+other feels, against which the more transitory feels are contrasted.
+This background  constitutes the feel of ``self'' that pervades each normal
+human experience.
+
+This felt ``self'' is simply {\it part} of the experience.
+The only  {\it carrier} that links these experiences together is the brain: 
+the brain is the only 
+{\it receiver} of the experiences. Each experience exists, 
+and has a structure that mirrors the structure
+ actualized in the brain by the event it reifies.
+What could be more simple and natural?
+
+
+
+\vskip 9pt
+
+ 
+                        \noindent{\bf 7. Comparison to Other Treatments}
+
+Gerald Edelman and John Eccles have recently set forth detailed proposals
+concerning the connection between mind and brain.
+Their proposals, which constitute serious efforts to accommodate, and integrate,
+the growing body of neurophysiological, neuropsychological, and other relevant
+scientific data, are compared in this section to the theory described above.
+       Comparison is made also to the positions of Bohr, von Neumann, and
+Wigner.
+\vskip 9pt
+7.1 Comparison to Edelman
+
+
+
+Edelman's theory rests on a comprehensive general account of the development of
+the brain during evolution, during embryonic growth, and during the life of
+the individual person.
+This account provides a fairly detailed description, based on the relevant
+scientific data, of the development and functioning of a level of neural
+processing that is subsumed in my term ``lower--level processing''.
+
+According to Edelman's theory these lower--level brain process must contain
+four specific components if consciousness is to emerge.
+The first of these components is  {\it perceptual categorization},
+which is a neural process mediated by synaptic change that causes particular
+patterns of neural activity to become activated by, and hence associated with,
+particular patterns of signals from sense organs.
+The second lower--level component deemed necessary for the emergence of
+consciousness is the functioning of neural pathways dedicated to the
+incorporation into brain processing of {\it values} pertaining to the
+physiological and other needs of the organism.$^{13)}$
+The third necessary lower--level component is {\it memory}, which, in this
+context, is a system property of the brain, mediated by synaptic change, which
+arises from the continual creation of new patterns of neural activity
+representing new categories.
+These new categories, expressed as neural activities, correlate and compare the
+categories previously created.$^{14)}$
+The fourth component of lower--level neural processing deemed necessary for
+consciousness is a component that affects {\it learning}, which is
+``context--dependent behavioral change governed by positive or negative value
+under conditions of expectancy''.$^{15)}$
+
+These four components of brain processing can, according to Edelman's
+theory, function without the occurrence of conscious awareness, i.e., without
+consciousness.
+According to Edelman's theory, ``Consciousness is the result of an ongoing
+categorical comparison of the workings of two kinds of nervous organization.
+This comparison is based on a special kind of memory, and is related to the
+satisfaction of  certain physiologically determined needs as that memory is
+brought up to date by the perceptual categorizations that emerge from ongoing
+present experience.
+Through behavior and particularly through learning, the continual interaction
+of this kind of memory with present perception results in
+consciousness.''$^{16)}$
+
+The terms ``memory'' and ``perception'',
+as used here, do not in themselves carry any connotation of conscious
+awareness: they pertain to {\it neural} process, as described above.
+Consciousness is thus claimed to be the   {\it result} of an interaction
+between these two components of the unconscious neural processing.
+
+This key process of the emergence of consciousness is described in various
+places in Edelman's book: `` . . .  imagine that the various memory repertoires
+dedicated to the storage of the categorization of {\it past} matches of value
+to perceptual category are [reciprocally] connected to [the neural systems]
+dealing with {\it current} sensory input and motor response.
+By such means, past correlations of category with value are now interactive
+in real time with current
+perceptual categorizations {\it before} they are altered by the
+value--dependent portions of the nervous system.
+A kind of bootstrapping occurs in which current value--free perceptual
+categorization interacts with value--dominated memory before further
+contributing to alteration of that memory.  
+Primary consciousness thus emerges from a ... recategorical memory (relating
+{\it previous} value--category sequences) as it interacts with current
+ input categories arising from neural systems dedicated
+to present value--free perceptual categorizations.''$^{17)}$
+``It is the discriminative comparison between value--dominated memory involving
+the conceptual system and the current ongoing perceptual categorization that
+generates primary consciousness of objects and events''$^{18)}$''
+``the generation of a `mental image' ... emerges as a result of a series of ...
+correlations of  [perceptual] categories to ... values ...'' $^{19)}$ ``The
+functioning of these key [reciprocal] connections [between past
+value--category connections and current perceptual categorizations] provides
+the sufficient condition for the appearance of primary consciousness''$^{20)}$.
+
+The question arises as to how one is to interpret this claim that this special
+neural process is a {\it sufficient condition} for consciousness to occur.
+Does this claim mean that the occurrence of consciousness is {\it logically
+entailed} by the occurrence of this neural process?
+
+At the beginning of his book Edelman lists  a set of constraints on his
+undertaking.
+The first of these is the condition that ``Any adequate global theory of brain
+function must include a scientific theory of consciousness,
+but to be scientifically acceptable it must avoid the Cartesian dilemma.
+In other words, it must be uncompromisingly physical and be based on {\it res
+extensa}, and indeed be derivable from them''$^{21)}$
+
+This condition seems to demand that the emergence of consciousness be {\it 
+derivable} from the properties of matter.
+Edelman accepts ``modern physics as an adequate description for our purposes of
+the nature of material properties''$^{22)}$
+Thus Edelman's demand appears to be that the emergence of consciousness must be
+actually derivable from physics, or at least from properties of systems
+describable in principle in terms of the concepts of physics.
+This  strong interpretation is reinforced by the claim made in the final chapter
+that ``no special addition to physics is required for the emergence of
+consciousness''$^{23)}$.
+
+If this indeed be the claim then Edelman's account falls short.
+For the particular neural process that is claimed to be sufficient for the
+emergence of consciousness is a physical process describable in principle in
+terms of neural patterns of excitation, and hence, if one ignores the subtleties
+connected to quantum theory, as Edelman does, in terms of atoms, and electrons,
+etc. According to the precepts of physics (if quantum effects are ignored)
+these atoms and electrons, etc., will behave in exactly the same way whether or
+not a quality of conscious awareness emerges in connection with this particular 
+physical process.
+
+This particular neural process may be connected in some very natural way to
+some particular quality or kind of awareness.
+However, that fact, joined to the laws of physics does not {\it entail} that
+this particular quality of awareness must actually come into existence when
+that physical process occurs.
+Consequently, the assertion that this quality of awareness does come into
+existence under those special physical conditions is ``a special addition
+physics'': it is not entailed by, or derivable from, the principles of physics.
+
+To the extent that one ignores the effects introduced by quantum theory, and
+hence adheres to the precepts of classical physics, this extra or added quality
+of awareness is necessarily nonefficacious: it has no effect on the ongoing
+neural process.
+The theory therefore does not succeed in avoiding the Cartesian dilemma, as the
+initial condition demanded, but introduces a causally disconnected {\it res
+cogitans}.
+
+Edelman has, it appears to me, accepted a tacit assumption that if there is a
+neural action that {\it functions} in a way that is a natural image of the
+subjective {\it feel} of a possible conscious event, then this conscious event
+will in fact occur if the neural action occurs.
+This is Edelman's
+implicit analog of my explicit postulates about feels.
+
+The problem with Edelman's approach is that if one
+adheres to his demand that the ``view of brain function and consciousness should
+be based on materialist metaphysics''$^{24)}$,
+and hence rules out quantum physics, and perforce retreats to classical
+physics, then there is nothing in the {\it physics}  that singles out these
+special processes as being in any way special.
+They are special only because they can be associated in a certain way with
+things outside classical physics, namely possible conscious experiences.
+But then the claimed connection between these two domains is, from the physics
+point of view, completely ad hoc.
+This ad--hocness is connected to the fact that the conscious awareness, 
+per se, is, within
+the conceptual framework of classical physics, wholly nonefficacious.
+
+In the Heisenberg quantum ontology, on the  other hand, the place where
+consciousness enters is, from the {\it physics} point of view, {\it dynamically
+singled out},
+and consciousness is able to become causally efficacious.
+Consequently, the quantum theory of consciousness comes much closer to filling
+Edelman's demand that the theory  be based on res extensa, as described by
+modern physics, than his theory does.
+
+                                \vskip 9pt
+7.2 Comparison to Eccles
+
+
+The theory of Eccles$^{25)}$ is explicitly dualistic: it postulates a mental
+entity that {\it interacts} with the brain, and that continues to exist after
+the death and destruction of the brain.
+This `` homunculus'' is allowed to influence brain process by exploiting the
+lack of determinism allowed by quantum theory.
+Although Eccles'  theory thus exploits the freedom introduced by quantum
+theory, it neither appeals to, nor exploits, the profound conceptual change
+wrought by quantum theory.
+
+Eccles' theory is fundamentally different from the theory proposed here, which
+explicitly ties {\it every} human conscious event to a corresponding 
+physical event in a human brain.
+Neuropsychological evidence exists  that discriminates, I believe,  between
+Eccles' theory and mine.
+It comes from the behavior of certain patients who have suffered massive
+parietal lobe damage, and subsequently exhibit  a neglect syndrome: a loss of
+ability to attend to certain parts of their bodies located 
+contralateral to the damaged area of the brain.
+ Their behaviors suggests that the impairment is more than just a loss of ability to
+control or sense parts of the body, or even to communicate or speak about them,
+but is rather  a  complete disappearance of any representation of the afflicted
+part of the body from the patient's repertoire of conscious thoughts: the
+afflicted  part seems simply to disappear from the patient's conception of
+his body.
+
+Such an effect can be naturally understood as a consequence of elimination of
+the representation of the afflicted part from the body schema by the
+destruction of the neural basis of the patterns of activity that constitute the
+symbols that correspond to that part of the body.
+In the quantum theory of consciousness proposed here the mental universe of
+each human being consists exclusively of the felt quality of actual events
+constructed out of the symbols that are the building blocks of the
+(generalized) body--world schema: consciousness is the felt quality of the
+manipulating actions of these symbols upon each other.
+These symbols are thus the {\it  currency of consciousness} and the destruction
+of any of them must cause a reduction in the person's mental universe.
+
+A homunculus residing in a separate mental world, and able to survive the death
+and destruction of the brain, 
+would, presumably, not be itself impaired by the brain damage: {\it its} mental
+universe would be left essentially intact.
+The damaged brain would be unable to respond as fully to the action of the
+homunculus upon it, and  this impairment would result in problems in
+communication, and control, and  in the reciprocal action of sensing.
+But the representation of the afflicted part would not disappear from the
+patient's mental universe itself, as is suggested by the evidence: the
+patient should not be {\it puzzled} to discover that there is a left arm
+connected to his body;$^{26, 27)}$ the patient should ``know'' that he has a
+left arm, even though he has recently been deprived by brain damage of the
+ability to directly sense or control it. Hence he should not be {\it puzzled} to
+discover it.
+
+
+Some other evidence supportive of the quantum theory, but not necessarily
+discrimative relative to Eccles' theory, is the data of Libet$^{28)}$
+pertaining to the {\it delay} in the occurrence of the conscious awareness of a
+voluntary intention to act, relative to the onset of the neural activity that
+prepares for the conscious event.
+The foundations of  the quantum theory of consciousness are: (1), the idea
+that the brain functions to plan,
+select, and execute single integrated actions; (2), the idea that, due to the unavoidable
+intrusion of quantum uncertainties into  the synaptic processing, and the
+subsequent amplification of these quantum synaptic processes, the brain functions in a way that
+is basically similar to a quantum measuring device such as a Geiger counter, in
+the specific sense that the evolution of the physical system in accordance with
+the basic local law of evolution (i.e., the Schroedinger or Heisenberg
+equations of motion)
+ necessarily produces, normally, a state that represents a {\it superposition}
+of macroscopically distinctive states, such as the firing or nonfiring of the
+Geiger counter, or the activation or nonactivation of the 
+neural activities that represent the intention to raise
+an arm; and (3), the acceptance of  Heisenberg's
+position that these two alternative macroscopic  possibilities {\it do not both}
+{\it  actually occur},
+in some absolute sense, as is claimed by the competing ``many--worlds''
+interpretation of quantum theory, but that, instead,   the representation of 
+the physical system by a 
+quantum--mechanical  state is a representation not of the {\it actual}
+world itself, but  rather of the {\it tendencies} for the occurrence of 
+ an actual
+event that will select and actualize {\it one} of the macroscopically distinct
+alternatives.
+
+In the context of the Libet experiments the critical point is that according to
+the Heisenberg picture there must {\it first} be a separation, generated by the
+ evolution in accordance with the deterministic equation of motion, of the physical state
+into parts representing several macroscopically distinct possibilities {\it before}
+the act of choosing one of these macroscopically distinct alternatives occurs.
+In the brain most of the processing activity is done at the unconscious level:
+the lower--level process first prepares the distinctive alternatives, and the
+Heisenberg actual event then selects and actualizes one of them.
+Thus the delay found by Libet is demanded by this quantum mechanical theory of
+consciousness.
+
+
+In the homuncular theory it would seem that the homunculus could {\it first}
+decide to raise the arm, and then interact with the brain in order to bring
+about its desired end, and that the conscious event would therefore {\it
+precede} the neural activity that leads to the motor action.
+              \vskip 9pt
+7.3 Comparison to Bohr
+
+The strictly orthodox Copenhagen interpretation of quantum theory brings human
+experience into physics in a way much more explicit than classical theory did.
+The quantum theory is interpreted as {\it fundamentally} a theory that allows
+the scientist to form expectations about certain of his experiences.
+These are experiences that can be described in terms of specifications
+formulated in terms of the concepts of classical physics.
+This last stipulation effectively removes the individual 
+human experience from any place of prominence, for it makes the referents of
+the theory a class of external facts that all observers generally agree upon.
+So, in the end, the role of the subjective observer is no different than it was
+in classical physics: he is the subjective observer of essentially objective
+external facts.
+The issue of the connection of brain processes to mental process is thus never
+brought into question.
+In fact, this issue is moved by Bohr outside the domain to which quantum theory
+might apply by raising certain objections in principle to the application of
+quantum theory to biological systems.
+
+In Bohr's words: ``The incessant exchange of matter which is inseparably
+connected with life will even imply the impossibility of regarding an organism
+as a well--defined system of material particles like the system considered in
+any account of the ordinary and physical chemical properties of matter.
+In fact, we are led to conceive the proper biological regularities as
+representing laws of nature complementary to the account of properties of
+inanimate bodies ...''\ref{29}.
+
+The problem behind these words is that the interaction of a quantum
+system with its environment introduces conceptual difficulties that are, in
+fact, much more severe than those of classical physics.
+In classical physics when a particle leaves the system and becomes part of the
+environment it leaves the system in a state that is well defined in principle.
+In quantum theory this is not the case.
+The state of the residual system alone is not well defined: one must, in
+principle, for a complete description, keep track of each particle that has left;
+the state of the residual part depends on the location of each particle 
+that has left, but each such location is defined only as a smeared--out
+superposition of possibilities.
+This means that each current brain state is not a single state in which the
+parts have well--defined locations, but is rather a superposition of states in
+which the parts have locations that depend on the ill--defined 
+locations of the many particles that  have long since left the brain and 
+  body.
+But what thought  can be associated with such a smeared--out superposition 
+of brain states?
+
+As Bohr emphasizes, some new ideas are needed: the strictly orthodox
+interpretation of  quantum
+theory gives neither a practically useful nor conceptually cogent picture of
+what is going on in brains.
+The Heisenberg ontology, provides the simplest cogent  extention of the strictly
+orthodox position.
+In it the actual brain events constitute a closely packed sequence of events
+that continually redefine the key macroscopic features of the brain state.
+
+\vskip 9pt
+7.4. Comparison to von Neumann and Wigner
+
+von Neumann's analysis of the process of measurement involves a sequence of
+measuring  devices, each of which detects the result of a measurement performed
+by the device prior to it in this sequence, with the final ``device'' lying
+deep within the brain.
+von Neumann accepted a principle of ``pscho--physical parallelism'',
+which asserts that the process of subjective perception has a counterpart in
+the objective physical world, described in ordinary space.
+
+von Neumann's colleague, Eugene Wigner, elaborated upon this idea, suggesting,
+rather, a
+reciprocal {\it interaction} between mind and matter.\ref{30}
+However, in his later works\ref{31} Wigner rejected the idea that unmodified
+orthodox quantum theory can be applied to {\it macroscopic} systems. 
+He, like Bohr, cited the important effects of interactions with an
+uncontrollable environment.
+
+It is worth emphasizing that in the proposal being advanced here the actual
+events associated with human conscious experiences are not presumed to be the
+{\it only} actual events: actual events associated for example with the firing
+of a Geiger counter are presumed to exist, as Heisenberg assumed.
+Here it is merely accepted that, under similar conditions, the brain,
+which {\it also} is a physical system, should {\it also} be subject to the
+collapsing action of actual events.
+
+
+
+              \vskip 9pt
+
+\noindent{\bf 8. Related Philosophical Issues}
+
+The success of classical physics in earlier centuries gave credence to the
+Newtonian idea of the universe as a machine, and  to the concomitant Cartesian idea
+of consciousness as an impotent witness to a {\it pre--ordained} course of events. 
+The rise of quantum theory in this century modified the Cartesian idea only
+slightly.
+In the absence of a quantum--mechanical treatment of the brain,
+consciousness became, instead, an impotent witness to a {\it whimsical} course of
+events.  This constitutes no basic change in the Cartesian conception of the
+role of consciousness.
+
+This Cartesian idea, backed by the authority of science, has exerted an
+enormous influence on philosophy, and a corrosive influence on the
+philosophical foundations of human values.
+On the other hand, the quantum theory of consciousness 
+described above will, if validated by ongoing empirical studies, constitute a
+scientifically supported alternative to the Cartesian ontology. It will,
+as such, have far--reaching philosophical ramifications.
+Two of these are briefly mentioned.
+
+
+8.1  The Efficacy of Consciousness
+
+In Heisenberg's ontology the actual event is efficacious: it actualizes one
+localized macroscopic pattern of activity from among a set of previously
+allowed possibilities.
+These possibilities, or, more precisely, the tendencies for the actualization
+of these alternative possible activities, are generated in a mathematically
+deterministic way by Heisenberg's equations of motion, which are the quantum
+analogs of corresponding classical equations of motion.
+
+According to the theory advanced here each actual event has two aspects; a
+feel, and a physical representation within the quantum formalism.
+The feel is asserted to be a veridical image of the effect of the action 
+of the
+physically described event.
+
+
+
+
+At the purely physical level the Heisenberg actual event is passive: it
+is simply the coming into being of a new set of tendencies.
+However, in the context of the present ontology the actual event must
+be construed actively: the event {\it actualizes} the shift in tendencies.
+If the  feel is identified as the active aspect of the event  then
+the feel is the veridical feel of actively actualizing the new state of 
+affairs, and consciousness becomes the efficacious agent that it veridically 
+feels itself
+to be.
+ 
+
+
+
+8.2  The Quantum Choice
+
+The question arises: What determines {\it which} of the alternative possible
+brain activities is actualized by an actual event?
+
+According to contemporary quantum theory, two  factors contribute to
+this quantum choice.
+The first is the local deterministic evolution of tendencies governed by the
+Heisenberg equation of motion.
+This factor brings in all of the local historical influences such as heredity,
+learning, reflective contemplation on priorities and values, etc., that
+contribute to the formation of the current state of the brain.
+These factors determine, however, only the {\it tendencies}, or {\it weights},
+associated with the various possible distinct courses 
+of action.
+Then an actual event occurs.
+     This event actualizes one of the distinct top--level patterns of brain
+activity, and hence selects one of these distinct possible courses of action.
+This selection is, according to contemporary quantum theory, made by the second
+factor: pure chance.
+
+Pure brute stochasticity, with no ontological substrate, is in my opinion an
+absurdity: the statistical regularities must have some basis.
+On the other hand, the answer provided by contemporary quantum theory is
+probably correct in the sense that the basis for the quantum choices cannot be
+conceptualized in terms of the ideas that it employs.
+Within that framework these choices {\it must} therefore appear to come out of
+nowhere; they must be, in the word used by  Pauli and by Bohr ,  ``irrational''.
+
+
+This inadequacy of the usual concepts can, I believe, be deduced 
+by attending to certain features 
+of the mathematical structure of the quantum formalism
+itself.
+The Heisenberg ontology is a kind of pictorial representation of this
+mathematical structure.
+It has, however, one exceedingly strange feature.
+This feature  is superficially similar to the correlation effects that occur in
+classical statistical mechanics.
+Classically, if two systems become statistically correlated, due to 
+some interaction between
+them, and each of them subsequently moves to one of two regions 
+that are spatially well separated, then a measurement on one of the systems can
+provide statistical information about the other system, even though the two
+systems are far apart.
+There is nothing strange about this.
+However, if the statistical weights are interpreted
+as ``objective tendencies'', which have {\it objective} existence, 
+which is the basic idea of Heisenberg's ontology, then the
+change in the far--away statistical properties as a consequence of a
+measurement performed here would constitute an instantaneous
+action--at--a--distance.
+
+The Heisenberg ontology manifests precisely such an action--at--a--distance, and hence
+would seem to be unacceptable.
+At least it seemed to be unacceptable until the work of J.S. Bell in
+1964.$^{32)}$
+That work, suitably reformulated$^{33)}$, shows, however, that if the choices
+between macroscopically distinct alternatives, such as the firing or nonfiring
+of a Geiger counter, are indeed made by nature, as the Heisenberg ontology
+maintains (in opposition to the many--worlds view, which maintains that  {\it
+both} alternatives occur, but in noncommunicating branches of the universe)
+then these choices {\it cannot} be implemented by local actions: they can be
+implemented {\it only} by actions that transcend spacetime separation; i.e.,
+that can act without attenuation over large space--like distances.
+
+
+The conclusion, here, is that if the many--world idea is incorrect, and the {\it
+macroscopic} world is therefore roughly what it appears to be, then the 
+structure of the {\it
+predictions} of quantum theory itself demands that the basic process of nature
+be intrinsically global: it {\it cannot} respect spatial separations in the 
+way that familiar causal processes do.
+Thus to the extent that we confine our thinking to processes of the familiar
+local
+kind the quantum choice {\it must} appear to come from nowhere.
+
+The implication of the foregoing considerations is that although the flow of
+conscious events associated with a particular human brain has important
+personal aspects, which arises from the fact that the content of these events
+is the feel of the acts of manipulation of the web of symbols created by 
+the brain upon that web itself,nevertheless the fundamental process that is expressing itself through
+these local events is intrinsically global in character: it cannot be
+understood as being localized in the brain, or in the body.
+Rather it must act in a
+coordinated way over much of space.
+Neither contemporary science nor the present work addresses the issue of how
+that global process works.
+Our ignorance concerning this intrinsically global process is
+ represented in these theories by the introduction of ``pure choice''.
+
+\vskip 9pt
+
+\noindent{\bf 9. Summary}
+
+The quantum theory of consciousness developed here :
+
+1.  Makes consciousness efficacious.
+
+2. Rests directly  on the mathematical formalism of  quantum theory.
+
+3.  Parsimoniously accepts no kinds of entities not present in the Heisenberg
+or Copenhagen conceptions of nature.
+
+4. Adheres fully to quantum thinking.
+
+5. Meets the Einstein demand that basic physical theory describe the processes
+of nature, not merely our knowledge of those processes.
+
+
+6.  Mends the Cartesian cut by identifying an entity, the Heisenberg actual
+event, that unites as its two faces the subjective and objective 
+aspects  of mind--brain action.
+
+7. Enunciates a principle of mind--brain isomorphism that seems able to
+account for the full content and structure of
+felt human experience, and its connection to brain process. 
+
+ 8.  Identifies the ``self'' as a slowly evolving background component of
+ human experience, not as the owner of that experience.
+
+9. Describes the  consciousness of man as a localized aspect of a global integrative process.
+\newpage
+
+
+
+
+
+\noindent{\bf References}
+
+\begin{enumerate}
+\item William James, The Principles of Psychology, Dover, New York, 1950, Vol.
+I p. 146.
+\item William James, Psychology: Briefer Course,  Henry Holt, New York, 1983, p.
+468.
+\item Werner Heisenberg, Physics and Philosophy, Harper and Rowe, New York,
+1958, Chapt. III.
+\item Gerald Edelman, The Remembered Present: A Biological Theory of
+consciousness, Basic Books, New York, 1990; Neural Darwinism: The Theory of
+Neuronal Group Selection, Basic Books, New York, 1987.
+\item Aaron Fogelson and Robert Zucker, Presynaptic Calcium Diffusion from
+Various Arrays of Single Channels: Implications for Transmitter Release and
+Synaptic 
+Facilitation, Biophys. J, {\bf 48}, 1003--1017, 1985.
+\item Henri Korn and Donald Faber, Regulation and Significance of Probabilistic
+Release Mechanisms at Central Synapses, in Synaptic Function, eds. Edelman,
+Gall, and Gowan, Wiley, New York, 1987.
+\item Lester Ingber, Statistical Mechanics of Neocortical Interactions Dynamics
+of Synaptic Modification. {\it Phys. Rev. } {\bf A8}, 385-416, {1983}.
+\item John von Neumann, Mathematical Foundations of Quantum Mechanics,
+Princeton University Press, 1955, Chapt. VI.
+\item William James, The Principles of Psychology, Vol. one, (Reprint of 1890
+Text) Dover, New York, 1950, p. 241.
+\item Ibid, p. 178
+\item Ibid, p. 606
+\item Ibid p. 612
+\item   Ref. 4, pp.93--94.
+\item ibid, p. 56, pp. 109--112.
+\item ibid, p. 93, 57.
+\item ibid, p. 93.
+\item ibid, p. 97.
+\item ibid, p. 155.
+\item ibid, p. 101.
+\item ibid, p. 100.
+\item ibid, p. 10.
+\item ibid, p. 19, 253.
+\item ibid, p. 19, 260.
+\item ibid, p. 10.
+\item John C. Eccles, Proc. R. Soc. Lond {\bf B227}, 411-428 (1986);
+A Unitary hypothesis of mind--brain interaction in the cerebral cortex:
+dendrons, psychens, the 5th Dennis Gabor Lecture; The Microsite Hypothesis of
+the Mind--Brain Problem, in this volume.
+\item B. Williams, {\it Brain Damage, Behavior and the Mind}, New York, Wiley,
+1976; D.L. Schacter, M. P. Mc Andrews, and M. Moscovich, Access to
+consciousness: Dissociations between implicit and explicit knowledge in
+neurophysiological syndromes, in {\it Thought Without Language}, ed. L.
+Weiskrants 242--78, Oxford: Clarendon, 1988; Karl Pribram, Ref. 22 Ch.6.
+\item Karl Pribram, {\it Brain and Perception}, 1990.
+Professor Pribram, commenting on my paper, says ``there is good evidence that
+the brain process responsible for updating are coextensive with those involved
+in processing conscious awareness of the {\it projected body--world schema}.
+This reflective aspect of `self--consciousness' is called intentionality by
+philosophers  [and] is dependent upon paying attention ...''.  
+My theory claims,
+essentially, that {\it all} conscious awareness is a generalization of this
+kind of consciousness.
+Professor Pribram also suggests that my term ``symbol''
+be replaced by the term ``action pattern'',
+to distinguish it from the AI use of the term ``symbol''.
+He also affirms that there is a wealth of neurophysiological and
+neuropsychological data to support my picture of brain organization in terms
+of a top--level process that issues instructions to lower--level processes as
+described in the text.
+\item Benjamin Libet, Cerebral ``time--on'' theory of conscious and unconscious
+mental function, in this volume.
+\item N. Bohr, Atomic Physics and Human Knowledge, John Wiley, New York, 1959
+p.20-21.
+\item E. Wigner, in the Scientist Speculates, I.J. Good (Ed.) Windmill Press,
+Surrey England (1967).
+\item E. Wigner, in Quantum Optics, Experimental Gravitation, and Measurement
+Theory, NATO AS1 Series, Series B: Physics, Vol. 94. 
+\item J.S. Bell, Physics {\bf 1}, 1964.
+\item H.P. Stapp, EPR and Bell's Theorem: A Critical 
+Review.
+To be published in Foundations of Physics.
+
+
+\end{enumerate}
+
+\end{document}
+

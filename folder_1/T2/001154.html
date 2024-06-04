@@ -1,0 +1,405 @@
+ 
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en">
+<head>
+<title></title>
+<script language="JavaScript" type="text/javascript" src="/styleswitcher.js"></script> 
+<link rel="stylesheet" type="text/css" href="/default.css" title="Default">
+<link rel="alternate stylesheet" type="text/css" href="/bigger.css"
+title="Bigger">
+<META name="keywords" content="ohiosearchkeyoac, Ohio Arts Council, Grants, Arts, Riffe Gallery, Percent for Art, Ohio, art">
+<script language="JavaScript" TYPE="text/javascript">
+<!--
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+/* Functions that swaps images. */
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+/* Functions that handle preload. */
+function MM_preloadImages() { //v3.0
+ var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+   var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+   if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function fwLoadMenus() {
+	if (window.fw_menu_0) return;
+	
+	//About OAC
+	window.fw_menu_0 = new Menu("root",136,18,"Verdana, Arial, Helvetica, sans-serif",11,"#ffffff","#ffffff","#dd6600","#666666");
+		fw_menu_0.addMenuItem("Accessibility","location='/aboutOAC/accessibility.asp'");
+		fw_menu_0.addMenuItem("Agency Description","location='/aboutOAC/agency.asp'");
+		fw_menu_0.addMenuItem("OAC Board","location='/aboutOAC/board.asp'");
+		fw_menu_0.addMenuItem("Mailing List Sign-up","location='/aboutOAC/OACMail/OACMailinglistSignup.asp'");
+		fw_menu_0.addMenuItem("Making The Case","location='/MakingTheCase/default.asp'");
+		fw_menu_0.addMenuItem("Site Map","location='/aboutOAC/sitemap.asp'");
+		fw_menu_0.addMenuItem("Staff Directory","location='/aboutOAC/staff.asp'");
+		fw_menu_0.addMenuItem("Public Value","location='/aboutOAC/publicvalue.asp'");
+		fw_menu_0.addMenuItem("OAC Board Meetings","location='/aboutOAC/BoardMinutes.asp'");
+	fw_menu_0.hideOnMouseOut=true;
+	
+	
+	//Grants Submenu
+	window.fw_menu_1_1 = new Menu("Grants",195,18,"Verdana, Arial, Helvetica, sans-serif",11,"#ffffff","#ffffff","#dd6600","#666666");
+		
+		fw_menu_1_1.addMenuItem("Deadlines &amp; Panel Meetings","location='/grantsprogs/deadlines.asp'");
+		fw_menu_1_1.addMenuItem("Guidelines","location='/grantsprogs/guidelines/guide_intro.asp'");
+		fw_menu_1_1.addMenuItem("OLGA","location='http://www.culturegrants-oh.org'");
+		fw_menu_1_1.addMenuItem("Legal Requirements","location='/grantsprogs/guidelines/guide_legal.asp'");
+		fw_menu_1_1.addMenuItem("OAC Funding History","location='/search/grants/SearchGrants.asp'");
+		fw_menu_1_1.addMenuItem("OAC Logos &amp; Credit Materials","location='/grantsprogs/logos.asp'");
+	fw_menu_1_1.hideOnMouseOut=true;
+	
+	//Progams Submenu
+	window.fw_menu_1_2 = new Menu("Programs",195,18,"Verdana, Arial, Helvetica, sans-serif",11,"#ffffff","#ffffff","#dd6600","#666666");
+		fw_menu_1_2.addMenuItem("Arts Access","location='/grantsprogs/ArtsAccess.asp'");
+		fw_menu_1_2.addMenuItem("Arts Innovation","location='/grantsprogs/ArtsInnovation.asp'");
+		fw_menu_1_2.addMenuItem("Arts Learning","location='/grantsprogs/ArtsLearning.asp'");
+		fw_menu_1_2.addMenuItem("Capacity Building","location='/grantsprogs/CapacityBuilding.asp'");
+		fw_menu_1_2.addMenuItem("Individual Artist Grant","location='/grantsprogs/IndividualCreativity.asp'");
+		fw_menu_1_2.addMenuItem("International Partnership","location='/grantsprogs/InternationalPartnership.asp'");
+		fw_menu_1_2.addMenuItem("Sustainability","location='/grantsprogs/Sustainability.asp'");
+		fw_menu_1_2.addMenuItem("Other Programs and Services","location='/grantsprogs/OtherPrograms.asp'");
+	fw_menu_1_2.hideOnMouseOut=true;
+	
+	//Grants & Programs  (this code must be undeneath the Submenu code to work)
+	window.fw_menu_1 = new Menu("root",81,18,"Verdana, Arial, Helvetica, sans-serif",11,"#ffffff","#ffffff","#dd6600","#666666");
+		fw_menu_1.addMenuItem(fw_menu_1_1,"location='/grantsprogs/grants.asp'");
+		fw_menu_1.addMenuItem(fw_menu_1_2,"location='/grantsprogs/progs.asp'");
+		fw_menu_1.childMenuIcon="/images/arrows.gif";
+	fw_menu_1.hideOnMouseOut=true;
+	
+	
+	//Riffe Gallery
+	window.fw_menu_2 = new Menu("root",140,18,"Verdana, Arial, Helvetica, sans-serif",11,"#ffffff","#ffffff","#dd6600","#666666");
+		fw_menu_2.addMenuItem("Current Exhibition","location='/riffe/CurrentExhibition/CurrentExhibition.asp'");
+		fw_menu_2.addMenuItem("Education","location='/riffe/education.asp'");
+		fw_menu_2.addMenuItem("Events","location='/riffe/events.asp'");
+		fw_menu_2.addMenuItem("Upcoming Exhibitions","location='/riffe/upcoming.asp'");
+		fw_menu_2.addMenuItem("Past Exhibitions","location='/riffe/past.asp'");
+	fw_menu_2.hideOnMouseOut=true;
+	
+	
+	//Events
+	window.fw_menu_3 = new Menu("root",170,18,"Verdana, Arial, Helvetica, sans-serif",11,"#ffffff","#ffffff","#dd6600","#666666");
+		fw_menu_3.addMenuItem("ArtsinOhio.com","location='http://www.artsinohio.com'");
+		fw_menu_3.addMenuItem("OAC Calendar","location='/events/SearchPublicEvents.asp'");
+		fw_menu_3.addMenuItem("Ohio Festivals","location='/search/OACFestival/SearchFestivals.asp'");
+		fw_menu_3.addMenuItem("Governor's Awards","location='/events/GovAwards/Default.asp'");  
+		fw_menu_3.addMenuItem("Riffe Gallery","location='/riffe/events.asp'");
+		fw_menu_3.addMenuItem("Arts & Humanities Month","location='/events/artsandhumanitiesmonth.asp'");
+		fw_menu_3.addMenuItem("Workshops","location='/events/workshops.asp'");
+		fw_menu_3.addMenuItem("Poetry Out Loud","location='/events/PoetryOutLoud/Default.asp'");
+	fw_menu_3.hideOnMouseOut=true;
+	
+	
+	//News
+	window.fw_menu_4 = new Menu("root",128,18,"Verdana, Arial, Helvetica, sans-serif",11,"#ffffff","#ffffff","#dd6600","#666666");
+		fw_menu_4.addMenuItem("Press Releases","location='/News/pr.asp'");
+		fw_menu_4.addMenuItem("ArtsOhio","location='/News/artsohio.asp'");
+		fw_menu_4.addMenuItem("ArtsPerspective","location='/News/artsper.asp'");
+		fw_menu_4.addMenuItem("Arts Learning News","location='/News/ArtsLearningNews.asp'");
+		fw_menu_4.addMenuItem("Archives","location='/News/archive.asp'");
+	fw_menu_4.hideOnMouseOut=true;
+	
+	
+	//Resources
+	window.fw_menu_5 = new Menu("root",170,18,"Verdana, Arial, Helvetica, sans-serif",11,"#ffffff","#ffffff","#dd6600","#666666");
+		fw_menu_5.addMenuItem("Arts Learning","location='/resources/ArtsLearningResources.asp'");
+		fw_menu_5.addMenuItem("For Grantees","location='/resources/grantees.asp'");
+		fw_menu_5.addMenuItem("Ohio Citizens for the Arts","location='http://www.ohiocitizensforthearts.org'");
+		fw_menu_5.addMenuItem("National","location='/resources/national.asp'");
+		fw_menu_5.addMenuItem("Regional","location='/resources/regional.asp'");
+		fw_menu_5.addMenuItem("Statewide","location='/resources/statewide.asp'");
+		fw_menu_5.addMenuItem("State of the Arts Report","location='http://www.ohiosoar.org'");
+	fw_menu_5.hideOnMouseOut=true;
+	
+	
+	//Search Databases
+	window.fw_menu_6 = new Menu("root",237,18,"Verdana, Arial, Helvetica, sans-serif",11,"#ffffff","#ffffff","#dd6600","#666666");
+		fw_menu_6.addMenuItem("Arts Learning Artist in Residence","location='/search/AIE/'");
+		fw_menu_6.addMenuItem("Appalachian Artists","location='/search/AppalachianArts/'");
+		fw_menu_6.addMenuItem("ArtsinOhio.com","location='http://www.artsinohio.com'");
+		fw_menu_6.addMenuItem("Capacity Building Consultants","location='/search/CapacityBuilding/SearchCapacityBuilding.asp'");
+		fw_menu_6.addMenuItem("Educational Grant Opportunities","location='/search/GrantOpportunities/SearchGrantOpportunities.asp'");
+		fw_menu_6.addMenuItem("Governor's Awards Winner History","location='/Events/GovAwards/PublicPastWinners.asp'");
+		fw_menu_6.addMenuItem("Individual Artists Opportunities","location='/search/IndividualArtistOpportunities/SearchArtistOpportunities.asp'");
+		fw_menu_6.addMenuItem("OAC Funding History","location='/search/grants/SearchGrants.asp'");
+		fw_menu_6.addMenuItem("OAC International Projects","location='/search/International/SearchInternational.asp'");
+		fw_menu_6.addMenuItem("Ohio Percent for Art","location='/search/Percent/SearchPercent.asp'");
+		fw_menu_6.addMenuItem("Ohio Creative Writers","location='/search/writers/SearchWriters.asp'");
+		fw_menu_6.addMenuItem("Ohio Arts Festivals","location='/search/OACFestival/SearchFestivals.asp'");
+		fw_menu_6.addMenuItem("Ohio Arts Organizations","location='/search/OhioArtsOrganizations/SearchOhioArtsOrganizations.asp'");
+		fw_menu_6.addMenuItem("Ohio Artists on Tour","location='/search/ArtistsOnTour/'");
+		fw_menu_6.addMenuItem("Ohio Heritage Fellowships","location='/search/OhioHeritageFellowships/SearchFellowshipNominations.asp'");
+		fw_menu_6.addMenuItem("Online Visual Artist Registry","location='http://www.ohioonlinearts.org'");
+		fw_menu_6.addMenuItem("Small Arts Organizations","location='http://www.ohiosoar.org/SmallArts/DB/'");
+		fw_menu_6.addMenuItem("Higher Education Degrees in the Arts","location='http://www.ohiosoar.org/Libraries/DB/'");
+	fw_menu_6.hideOnMouseOut=true;
+
+
+	//This writes all the menues to the screen
+	fw_menu_6.writeMenus();
+} // fwLoadMenus()
+
+//-->
+</script>
+<script language="JavaScript1.2" src="/fw_menu.js"></script>
+</head>
+
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#FFFFFF" onLoad="MM_preloadImages('/images/aboutoac_f2.gif','/images/grantprogs_f2.gif','/images/riffe_f2.gif','/images/events_f2.gif','/images/news_f2.gif','/images/resources_f2.gif','/images/search_f2.gif','/images/home_f2.gif');">
+<!--The following section is an HTML table which reassembles the sliced image in a browser.-->
+<!--Copy the table section including the opening and closing table tags, and paste the data where-->
+<!--you want the reassembled image to appear in the destination document. -->
+<!-------------------------- BEGIN COPYING THE HTML HERE ---------------------------->
+<script language="JavaScript1.2">fwLoadMenus();</script>
+<script language="JavaScript">
+<!-- hide from JavaScript-challenged browsers
+	function OACWindow(url) 
+	{
+	  popupWin = window.open(url, 'CallDoc', 'menubar,toolbar,scrollbars,resizable,width=630,height=550,left=25,top=25')
+	}
+// done hiding -->
+</script>
+<a name="top"></a> 
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td bgcolor="#DD6600" width="100%">
+		<p>
+		<a href="/"><img src="/images/oacLogo.gif" width="124" height="79" alt="This image shows the logo for the Ohio Arts Council (OAC). It is a stylized outline of a map of Ohio, with the words Ohio Arts Council written underneath. Clicking on this image, which is located in the same place on each page, will always take you to the Home page of the Ohio Arts Council." border="0"></a>
+
+		<!-- SKIP THE TOP NAVIGATION -->
+		<a href="#SkippedTopNavigation"><img src="/images/SkipInvisibleLink.gif" alt="Skip to Main Content" width="1" height="1" border=0></a>
+		</p>
+		
+    </td>
+    <td bgcolor="#DD6600"><img src="/images/topfade.jpg" width="159" height="79" alt=" "></td>
+    <td bgcolor="#DD6600"><img src="/images/random/18.jpg" width="358" height="79" alt="guitarist Jeff Moyer">
+	</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <!-- row 2 -->
+    <td><a href="/aboutOAC/default.asp" onMouseOut="MM_swapImgRestore();FW_startTimeout();"  onMouseOver="window.FW_showMenu(window.fw_menu_0,0,107);MM_swapImage('aboutoac','','/images/aboutoac_f2.gif',1);" ><img name="aboutoac" src="/images/aboutoac.gif" width="92" height="28" border="0" alt="About OAC"></a></td>
+    <td><a href="/grantsprogs/default.asp" onMouseOut="MM_swapImgRestore();FW_startTimeout();"  onMouseOver="window.FW_showMenu(window.fw_menu_1,93,107);MM_swapImage('grantprogs','','/images/grantprogs_f2.gif',1);" ><img name="grantprogs" src="/images/grantprogs.gif" width="131" height="28" border="0" alt="Grants &amp; Programs"></a></td>
+    <td><a href="/riffe/default.asp" onMouseOut="MM_swapImgRestore();FW_startTimeout();"  onMouseOver="window.FW_showMenu(window.fw_menu_2,224,107);MM_swapImage('riffe','','/images/riffe_f2.gif',1);" ><img name="riffe" src="/images/riffe.gif" width="92" height="28" border="0" alt="Riffe Gallery"></a></td>
+    <td><a href="/events/default.asp" onMouseOut="MM_swapImgRestore();FW_startTimeout();"  onMouseOver="window.FW_showMenu(window.fw_menu_3,316,107);MM_swapImage('events','','/images/events_f2.gif',1);" ><img name="events" src="/images/events.gif" width="56" height="28" border="0" alt="Events"></a></td>
+    <td><a href="/News/default.asp" onMouseOut="MM_swapImgRestore();FW_startTimeout();"  onMouseOver="window.FW_showMenu(window.fw_menu_4,372,107);MM_swapImage('news','','/images/news_f2.gif',1);" ><img name="news" src="/images/news.gif" width="51" height="28" border="0" alt="News"></a></td>
+    <td><a href="/resources/default.asp" onMouseOut="MM_swapImgRestore();FW_startTimeout();"  onMouseOver="window.FW_showMenu(window.fw_menu_5,423,107);MM_swapImage('resources','','/images/resources_f2.gif',1);" ><img name="resources" src="/images/resources.gif" width="80" height="28" border="0" alt="Resources"></a></td>
+    <td><a href="/search/default.asp" onMouseOut="MM_swapImgRestore();FW_startTimeout();"  onMouseOver="window.FW_showMenu(window.fw_menu_6,503,107);MM_swapImage('search','','/images/search_f2.gif',1);" ><img name="search" src="/images/search.gif" width="121" height="28" border="0" alt="Search Databases"></a></td>
+    <td bgcolor="#666666"><a href="/" onMouseOut="MM_swapImgRestore();"  onMouseOver="MM_swapImage('home','','/images/home_f2.gif',1);" ><img name="home" src="/images/home.gif" width="54" height="28" border="0" alt="Home"></a></td>
+    <td width="100%" background="/images/navbkgd.gif" bgcolor="#666666"><img name="navbkgd" src="/images/navbkgd.gif" width="38" height="28" border="0" alt=" "></td>
+  </tr>
+</table>
+
+<a name="SkippedTopNavigation"></a>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td rowspan="2"><img src="/images/spacer.gif" width="20" height="20" alt=" "></td>
+    <td width="100%" rowspan="2" valign="top"> 
+      <p><a name="top"></a><br>
+	  <center><span class=error>The Article is no longer avaiable.  Please try again</span></center><p><b class="head"></b><br>
+      </p>
+      <p>[<a href="#top">top</a>]</p>
+      <p>&nbsp;</p>
+    </td>
+    <td rowspan="2"><img src="/images/spacer.gif" width="20" height="20" alt=" "></td>
+	
+	<td background="/images/rightBkgd.gif" valign="top" align=center>
+	
+	
+	<!-- SEARCH SIGHT -->
+	<img src="/images/searchsite.gif" width="160" height="25" alt="">
+	
+		<form method="get" action="http://search.ohio.gov/search">
+		  <!--  COMMENTED OUR FOR OUT SITE <input type="text" name="q" size="25" maxlength="255" value=""/>-->
+		  <input type="image" value="Submit" border="0" name="btnG" src="/images/searchsite2.gif" width="133" height="34" alt="Search Any State Agency Web Site in Ohio">
+		  <!--  COMMENTED OUR FOR OUR SITE AND REPLACERD WITH CODE IN LINE ABOVE <input type="submit" name="btnG" value="Search"/>-->
+		  <input type="hidden" name="site" value="OAC"/>
+		  <input type="hidden" name="client" value="ohio_gov"/>
+		  <input type="hidden" name="proxystylesheet" value="ohio_gov"/>
+		  <input type="hidden" name="output" value="xml_no_dtd"/>
+		  </form>
+	
+		<!--	PREVIOUS VERSION
+		<FORM method="post"	action="http://search.ohio.gov/cgi-bin/query?mss=search&custom2=oac">
+			<input type="image" value="Submit" border="0" name="Submit" src="/images/searchsite2.gif" width="133" height="34" alt="Search Any State Agency Web Site in Ohio">
+		</FORM>
+		-->
+	
+	<!-- QUICKLINKS -->
+    <img src="/images/quicklinks.gif" width="160" height="27" alt=""> 
+    
+		<table width="160" border="0" cellspacing="0" cellpadding="0">
+		 <tr> 
+	  		<td><img src="/images/spacer.gif" width="10" height="10"></td>
+          
+	  	
+			<td width="140" valign="top">
+				<p>
+				<br>
+				<font size=2 face=Verdana color=#AC4F00><Strong>Popular site links:</Strong></font><br><br>				
+				
+				<Strong><a href="/aboutOAC/staff.asp" class="quicklinks">Staff</a></Strong>
+				<br>
+				<Strong><a href="/events/SearchPublicEvents.asp" class="quicklinks">OAC Calendar</a></Strong>
+				<br>
+				<Strong><a href="/grantsprogs/guidelines/guide_intro.asp" class="quicklinks">Funding Guidelines</a></Strong>
+				<br>
+				<Strong><a href="http://www.culturegrants-oh.org" class="quicklinks">OLGA--OnLine Grant Applications</a></Strong>
+				<br>
+				<Strong><a href="/grantsprogs/logos.asp" class="quicklinks">OAC Logos</a></Strong>
+				<br>
+				<a href="/aboutOAC/OACMail/OACMailinglistSignup.asp"><Strong>Mailing List Sign-up</Strong></a>
+				<br>
+				<Strong><a href="/aboutOAC/publicvalue.asp" class="quicklinks">Public Value Stories</a></Strong>
+				<br>
+				<Strong><a href="/aboutOAC/accessibility.asp" class="quicklinks">Accessibility Options</a></Strong>
+				
+
+	  			<br>
+	  			<br>
+				</p>
+	  			
+			</td>
+	  		<td><img src="/images/spacer.gif" width="10" height="10"></td>
+		</tr>
+		</table>
+		
+		
+	<!-- CURRENT EVENTS -->
+	<img src="/images/currentevents.gif" width="160" height="27" alt="Current Event Article"><br>
+		<table width="160" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><img src="/images/spacer.gif" width="10" height="10"></td>
+          
+			<td width="140" valign="top"> <span class="small11"><br>
+				The OAC has developed this new Web page to provide access to resources that will aid you in making the case for the arts in your community and beyond. The arts are part of the solution for a better Ohio and this Web page provides you the resources you need to demonstrate key points effectively to community leaders and elected officials across the state.</p>
+
+<a href="http://www.oac.state.oh.us/MakingTheCase/">Click here</a> for more information.&nbsp;&nbsp;
+			</td>
+			<td><img src="/images/spacer.gif" width="10" height="10"></td>
+        </tr>
+		</table>
+    
+    <br>
+    
+
+	<!-- SITE TEXT LINKS -->
+		<table width="160" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><img src="/images/spacer.gif" width="10" height="10"></td>
+			<td width="140" valign="top">
+	  			<br>
+	  			<Strong>Site Text Size Links:</Strong>
+	  			<br> 
+	  			<a href="#" onMouseOver="window.status='Text Size : Default'; return true;" onMouseOut="window.status=''; return true;" onclick="setActiveStyleSheet('Default'); return false;" alt="Standard Size" class="quicklinks">Standard Text</a>
+	  			<br><a href="#" onMouseOver="window.status='Text Size : Bigger'; return true;" onMouseOut="window.status=''; return true;" onclick="setActiveStyleSheet('Bigger'); return false;" alt="Larger Size" class="quicklinks">Larger Text</a>
+	  			<br>
+	  			<br>
+			</td>
+			<td><img src="/images/spacer.gif" width="10" height="10"></td>
+		</tr>
+		</table>
+
+
+	
+
+    
+	
+	<!-- ARTS IN OHIO LINK -->
+		<table width="160" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td background="/images/rightBkgd.gif" valign="bottom"><a href="javascript:OACWindow('http://www.artsinohio.com');"><img src="/images/artsinohio.gif" width="160" height="45" alt="ArtsinOhio.com - Online calendar of cultural events in Ohio" border="0"></a></td>
+		</tr>
+	</table>
+
+
+
+</td>
+  
+
+
+  </td>
+
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td bgcolor="#666666"> 
+      <div align="center"><br>
+        <span class="white11"><a href="/aboutOAC/default.asp" class="white11">About 
+        OAC</a> | <a href="/grantsprogs/default.asp" class="white11">Grants & Programs</a> 
+        | <a href="/riffe/default.asp" class="white11">Riffe Gallery</a> | <a href="/events/default.asp" class="white11">Events</a> 
+        | <a href="/news/default.asp" class="white11">News</a> | <a href="/resources/default.asp" class="white11">Resources</a> 
+        | <a href="/search/default.asp" class="white11">Search Databases</a> | 
+        <a href="/" class="white11">Home</a></span> <br>
+        <br>
+      </div>
+    
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td bgcolor="#333333"><img src="/images/spacer.gif" width="1" height="1" alt=" "></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td bgcolor="#999999" align=center> 
+      <!--<a href="mailto:webmaster@oac.state.oh.us"><img src="/images/oacBOT.gif" width="735" height="25" alt="Send Email to Webmaster" border="0"></a>-->
+      <!--<a href="mailto:webmaster@oac.state.oh.us"><img src="/images/oacBOT.gif" width="735" height="25" alt="" border="0"></a> -->
+      <img src="/images/oacBOT.gif" width="735" height="25" alt="" border="0">
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td bgcolor="#333333"><img src="/images/spacer.gif" width="1" height="1" alt=" "></td>
+  </tr>
+
+</table>
+
+</body>
+</html>

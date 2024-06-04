@@ -1,0 +1,2049 @@
+
+;-------------------------------------------------------------------------------
+;
+;  Unit Name : l_PlotRtns.pro
+;
+;  Purpose   : File contains different generic routines used in creating and
+;              generating plots.
+;
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH                4/01           v1.0            corrected ps file name in
+;                                                    plots to pdf
+;  RLW                08/01          v1.0.7          modified char_size and 
+;                                                    char_size_1 values
+;  ELH                09/24/01       v1.0.7          added l_DrawXTickNLabel
+;
+;  File Revision Number:   %I%
+;  File Last Modified  :   %E%  %T%
+;
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+;  Procedure:  l_SetUpDisplay
+;
+;  Description:
+;     Set up the display based on display option.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  display               string        I        indicates display type (X,GIF,Z,PS)
+;  l_pltpos              struct        I        generic plot parameters
+;  l_rgb_table           struct        I        generic color table parameters
+;  color_table           float[]       I        color table values
+;  colorbar              float[]       I        color bar values
+;  nplots                long          I        total # of plots to be plotted
+;   
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  l_LenaPlot.pro
+;   rlw_plot_parms                                            plot attributes specific
+;                                                             to Richard West's image
+;                                                             plots
+;                     char_size        float        G         character sizes
+;                     char_size_1      float        G
+;                     window_width     float        G         window width
+;                     window_height    float        G         window height
+;                     x_inches         float        G         length of X axis in plot in inches
+;                     y_inches         float        G         height of Y axis in plot in inches
+;
+;      MYCOLORS
+;                     N_COLOR_TABLE    long         G         number of colors in color table
+;                     N_GRAYS          long         G         number of grays in color table
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH                               v1.0             Original implementation
+;  RLW                08/01          v1.0.7           . changed sizes of
+;                                                        char_size   = 1.0 to 0.75
+;                                                        char_size_1 = 1.2 to 0.9 
+;                                                      in Z buffer
+;                                                     . added char_size = 0.75 and 
+;                                                       char_size_1 = 1.1 to postscript
+;                                                       case
+;  ELH                01/02          v1.0.8           . changed font size to small from
+;                                                       med when the number of plots is
+;                                                       less than 2
+;  ELH                02/03          v1.0.10          . From X window option, changed
+;                                                       pseudo_color keyword in device
+;                                                       to decompose in order to handle
+;                                                       both 8 bit & 24 bit displays 
+;-------------------------------------------------------------------------------
+
+PRO l_SetUpDisplay, display, l_pltpos, l_rgb_table, $
+color_table, colorbar, nplots, webOpt
+common rlw_plot_parm, char_size, char_size_1, window_width, window_height, $
+                      x_inches, y_inches
+COMMON MYCOLORS, N_COLOR_TABLE, N_GRAYS
+
+
+   ctLoaded = 0L
+
+   x_inches = l_pltpos.xin 
+   y_inches = l_pltpos.yin
+
+   window_width = fix(x_inches * 75)   ; 75 = screen pixels per inch
+   window_height = fix(y_inches * 75)
+
+
+   case display of
+        'Z': begin
+               set_plot, 'Z' 
+               device, set_resolution=[l_pltpos.window_width, $
+                                       l_pltpos.window_height], $
+                       set_colors = N_COLOR_TABLE 
+               l_pltpos.lg_font = 1.2D
+               l_pltpos.md_font = 1.0D
+               l_pltpos.sm_font = 0.8D
+               l_pltpos.xsm_font= 0.8D
+               if (nplots le 2) then begin
+                  l_pltpos.plot_font = l_pltpos.md_font
+               endif else begin
+                  if (nplots ge 3) then begin
+                     l_pltpos.plot_font = 1.3D
+                  endif
+               endelse 
+
+               char_size = 0.75
+               char_size_1 = 0.9 
+               !p.position = [0.0,0.0,1.0,1.0]
+               erase
+
+            end
+        'P': begin
+               set_plot, 'ps'
+               device, FILENAME=l_pltpos.filename, $
+                       /INCHES, $
+                       /COLOR, $
+                       bits_per_pixel = 8, $
+                       XOFFSET = l_pltpos.ps_xoffset, $
+                       YOFFSET = l_pltpos.ps_yoffset, $
+                       XSIZE = l_pltpos.ps_xsize, $
+                       YSIZE = l_pltpos.ps_ysize, $
+                       /PORTRAIT
+
+               l_pltpos.lg_font = 1.5D
+               l_pltpos.md_font = 1.0D
+               l_pltpos.sm_font = 0.9D
+               l_pltpos.xsm_font= 0.9D
+               l_pltpos.plot_font = 1.2D 
+
+               char_size = 0.75
+               char_size_1 = 1.1
+
+            end
+        else: begin  ; default is X windows
+            ;-----------------------------------------
+            ; only for X windows, need to load color 
+            ; table before defining device, force to
+            ; use 8-bit colors instead of HW default
+            ;-----------------------------------------
+            l_LoadColorTable, color_table, l_rgb_table, colorbar
+            ctLoaded = 1L
+            set_plot, 'X' 
+            ;-----------------------------------------
+            ; since we are using our own color table
+            ; and using color indexing, this must be 
+            ; set to undecompose in order to handle both
+            ; 8 bit and 24 bit displays
+            ;-----------------------------------------
+            device, decomposed=0
+            window, title='LENAPLOT', $
+                    xsize=l_pltpos.window_width, $
+                    ysize=l_pltpos.window_height, $
+                    retain=2, colors= N_COLOR_TABLE
+
+            char_size = 1.0
+            char_size_1 = 1.2
+            !p.position = [0.0,0.0, 1.0, 1.0]
+            erase
+
+            ;-----------------------------------------------------------
+            ; if device fonts are less than 12, need to use larger
+            ; font sizes
+            ;-----------------------------------------------------------
+            if (!D.X_CH_SIZE lt 12) AND (!D.Y_CH_SIZE lt 12) then begin
+               l_pltpos.lg_font = 1.8D
+               l_pltpos.md_font = 1.1D
+               l_pltpos.sm_font = 1.0D
+               l_pltpos.xsm_font= .85D
+               if (nplots le 2) then begin
+                  l_pltpos.plot_font = l_pltpos.sm_font
+               endif else begin
+                  if (nplots ge 3) then begin
+                     l_pltpos.plot_font = 1.35D
+                  endif
+               endelse 
+            endif else begin
+               l_pltpos.lg_font = 1.0D
+               l_pltpos.md_font = 0.9D
+               l_pltpos.sm_font = 0.6D
+               l_pltpos.xsm_font= 0.45D
+               if (nplots le 2) then begin
+                  l_pltpos.plot_font = l_pltpos.md_font 
+               endif else begin
+                  if (nplots ge 3) then begin
+                     l_pltpos.plot_font = 1.1D
+                  endif
+               endelse 
+            endelse
+        end
+    endcase
+
+    !p.color = 1
+    !p.background = 0
+
+    ;-----------------------------------------
+    ; for all other devices, load the color 
+    ; table after the device defined, if not the
+    ; code hangs, this has to do with whether
+    ; your HW device uses 24 bit or higher
+    ; resolution.  Since LENA uses 8 bit RGB,
+    ; this only affects X windows. 
+    ;-----------------------------------------
+    if (color_table eq 0) then color_table = 1
+    if (ctLoaded eq 0L) then begin
+       l_LoadColorTable, color_table, l_rgb_table, colorbar
+    endif
+
+
+RETURN
+END
+
+;-------------------------------------------------------------------------------
+;  Function: l_DrawXTick
+;  Description:
+;      Draw the just the x ticks, major and minor ticks, on the plot.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  l_pltpos              struct        I        generic plot parameters
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  None
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH                               v1.0             Original implementation
+;-------------------------------------------------------------------------------
+
+
+PRO l_DrawXTick, l_pltpos
+
+
+   ntcks   = l_pltpos.nticks
+   lb_xpmn = l_pltpos.xpltmn
+   lb_xpmx = l_pltpos.xpltmx
+   lb_ypmn = l_pltpos.ypltmn
+   lb_ypmx = l_pltpos.ypltmx
+
+   lb_xdel = 0.03
+   lb_ydel = 0.018
+
+   lb_xpos_base = l_pltpos.xpltmn
+   lb_ypos_base = l_pltpos.ypltmn - 0.02
+
+
+   ;------------------------------------------------------------
+   ;  add trailer
+   ;------------------------------------------------------------
+   lb_xpos = 0.01
+   lb_ypos = lb_ypos_base
+
+
+   ;------------------------------------------------------------
+   ; the begin/end time of actual data on plot in hours
+   ;------------------------------------------------------------
+   tmin = l_pltpos.min_time_axis_len
+   tmax = l_pltpos.max_time_axis_len
+
+   ;------------------------------------------------------------
+   ; find the length of the time based on begin/end time of data
+   ;------------------------------------------------------------
+   tdel = tmax - tmin
+
+   ;------------------------------------------------------------
+   ; find the size of the plot based on the x axis size and
+   ; size of the drawable area
+   ;------------------------------------------------------------
+   xdel = l_pltpos.axis_size/l_pltpos.xin
+   xpltmn = 0.92/l_pltpos.xin
+
+   ;------------------------------------------------------------
+   ; draw the x axis time labels on plot
+   ;------------------------------------------------------------
+   min_x_pos = lb_xpmn - 0.001
+   max_x_pos = lb_xpmx + 0.001
+
+
+   for i = 0, ntcks-1 do begin
+
+      lb_ypos = lb_ypos_base
+
+      ;------------------------------------------------------------
+      ; calculate the position of the major tick mark based on the
+      ; start time of actual data and time of label
+      ;------------------------------------------------------------
+      curr = l_pltpos.xtick_locs[i]
+      lb_xpos = (curr - tmin)/ tdel * xdel + xpltmn
+
+
+      if (lb_xpos ge min_x_pos) AND (lb_xpos le max_x_pos) then begin
+         plots, [lb_xpos, lb_xpos], [lb_ypmn-0.006, lb_ypmn], /normal
+         plots, [lb_xpos, lb_xpos], [lb_ypmx+0.006, lb_ypmx], /normal
+         lb_ypos = lb_ypos - lb_ydel
+      endif
+
+      ;------------------------------------------------------------
+      ; determine the position of the minor tick marks
+      ;------------------------------------------------------------
+      for j = 1, l_pltpos.xmn_tick do begin
+          xmn_xpos = double(((curr+j*l_pltpos.mn_tick_delta) - tmin)/ tdel * xdel + xpltmn)
+          if (xmn_xpos ge min_x_pos) AND (xmn_xpos le max_x_pos) then begin
+             plots, [xmn_xpos, xmn_xpos], [lb_ypmn-0.003, lb_ypmn], /normal
+             plots, [xmn_xpos, xmn_xpos], [lb_ypmx+0.003, lb_ypmx], /normal
+          endif
+      endfor
+
+   endfor
+
+
+RETURN
+END
+
+
+;-------------------------------------------------------------------------------
+;  Function: l_DrawXTickNLabel
+;  Description:
+;      Draw the x axis labels to the plot.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  l_pltpos              struct        I        generic plot parameters
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  None
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH                               v1.0             Original implementation
+;-------------------------------------------------------------------------------
+
+
+PRO l_DrawXTickNLabel, l_pltpos
+
+
+   ntcks   = l_pltpos.nticks
+   lb_xpmn = l_pltpos.xpltmn
+   lb_xpmx = l_pltpos.xpltmx
+   lb_ypmn = l_pltpos.ypltmn
+   lb_ypmx = l_pltpos.ypltmx
+
+   lb_xdel = 0.03
+   lb_ydel = 0.018
+
+   lb_xpos_base = l_pltpos.xpltmn
+   lb_ypos_base = l_pltpos.ypltmn - 0.02
+
+   x_axis_len = lb_xpmx-lb_xpmn
+   xtck_delta = x_axis_len/ntcks
+
+
+   ;------------------------------------------------------------
+   ;  add trailer
+   ;------------------------------------------------------------
+   lb_xpos = 0.01
+   lb_ypos = lb_ypos_base
+
+   xyouts, lb_xpos, lb_ypos, '!5UT', size=l_pltpos.sm_font, /NORMAL
+   lb_ypos = lb_ypos - lb_ydel
+
+
+   ;------------------------------------------------------------
+   ; the begin/end time of actual data on plot in hours
+   ;------------------------------------------------------------
+   tmin = l_pltpos.min_time_axis_len
+   tmax = l_pltpos.max_time_axis_len
+
+   ;------------------------------------------------------------
+   ; find the length of the time based on begin/end time of data
+   ;------------------------------------------------------------
+   tdel = tmax - tmin
+
+   ;------------------------------------------------------------
+   ; find the size of the plot based on the x axis size and
+   ; size of the drawable area
+   ;------------------------------------------------------------
+   xdel = l_pltpos.axis_size/l_pltpos.xin
+   xpltmn = 0.92/l_pltpos.xin
+
+
+   ;------------------------------------------------------------
+   ; draw the x axis time labels on plot
+   ;------------------------------------------------------------
+   first = 0
+   min_x_pos = lb_xpmn - 0.001
+   max_x_pos = lb_xpmx + 0.001
+
+
+   for i = 0L, ntcks-1L do begin
+
+      lb_ypos = lb_ypos_base
+
+      ;------------------------------------------------------------
+      ; calculate the position of the major tick mark based on the
+      ; start time of actual data and time of label
+      ;------------------------------------------------------------
+      curr = l_pltpos.xtick_locs[i]
+      lb_xpos = double((curr - tmin)/ tdel * xdel + xpltmn)
+
+
+      if (lb_xpos ge min_x_pos) AND (lb_xpos le max_x_pos) then begin
+         plots, [lb_xpos, lb_xpos], [lb_ypmn-0.006, lb_ypmn], /normal
+         plots, [lb_xpos, lb_xpos], [lb_ypmx+0.006, lb_ypmx], /normal
+         if (first eq 0) then begin
+            l_pltpos.first_time_label = l_pltpos.xtick_locs[i]
+            first = 1
+         endif
+
+         label=l_pltpos.xtick_labels[i]
+         xyouts, lb_xpos, lb_ypos, label, /normal, $
+                 size=l_pltpos.sm_font, alignment=0.5
+         lb_ypos = lb_ypos - lb_ydel
+
+         if (l_pltpos.X_axis_ymd_label eq 'Y') then begin
+            label2=l_pltpos.xtick_ymd_labels[i]
+            xyouts, lb_xpos, lb_ypos, label2, /normal, $
+                    size=l_pltpos.sm_font, alignment=0.5
+            lb_ypos = lb_ypos - lb_ydel
+         endif
+
+      endif
+
+      ;------------------------------------------------------------
+      ; determine the position of the minor tick marks
+      ;------------------------------------------------------------
+      for j = 1, l_pltpos.xmn_tick do begin
+          xmn_xpos = double(((curr+j*l_pltpos.mn_tick_delta) - tmin)/ tdel * xdel + xpltmn)
+          if (xmn_xpos ge min_x_pos) AND (xmn_xpos le max_x_pos) then begin
+             plots, [xmn_xpos, xmn_xpos], [lb_ypmn-0.003, lb_ypmn], /normal
+             plots, [xmn_xpos, xmn_xpos], [lb_ypmx+0.003, lb_ypmx], /normal
+          endif
+      endfor
+
+   endfor
+
+
+   ;------------------------------------------------------------
+   ; calculate the position for the text label on the x axis 
+   ;------------------------------------------------------------
+   lb_xpos = lb_xpos_base + (ntcks*xtck_delta) + 0.05
+   lb_ypos = lb_ypos_base
+
+
+   ndays = fix(tdel/3600./24.)
+
+
+   if (l_pltpos.X_axis_eq_time eq 'Y') then begin
+      if (ndays le 1) then begin
+         if (l_pltpos.X_axis_label eq 'T') then begin
+            xyouts, lb_xpos, lb_ypos, 'yy/mm/dd', size=l_pltpos.sm_font, /NORMAL
+         endif else begin
+            if (l_pltpos.X_axis_label eq 'D') then begin
+               xyouts, lb_xpos, lb_ypos, 'doy', size=l_pltpos.sm_font, /NORMAL
+            endif else begin
+               xyouts, lb_xpos, lb_ypos, 'hh:mm', size=l_pltpos.sm_font, /NORMAL
+            endelse
+         endelse
+         lb_ypos = lb_ypos - lb_ydel
+      endif else begin
+         if (l_pltpos.X_axis_label eq 'T') then begin
+            xyouts, lb_xpos, lb_ypos, 'yy/mm/dd', size=l_pltpos.sm_font, /NORMAL
+         endif else begin
+            xyouts, lb_xpos, lb_ypos, 'doy', size=l_pltpos.sm_font, /NORMAL
+         endelse
+         lb_ypos = lb_ypos - lb_ydel
+      endelse
+   endif 
+
+   if (l_pltpos.X_axis_ymd_label eq 'Y') then begin
+      xyouts, lb_xpos, lb_ypos, 'y/m/d', size=l_pltpos.xsm_font, /NORMAL
+   endif
+
+
+   l_pltpos.ypltmn = lb_ypos
+
+
+RETURN
+END
+
+;-------------------------------------------------------------------------------
+;  Procedure :  l_PlotTokarDisplay
+;  Description:
+;    Plots just the border of the plot with tick marks. Frames the plot.
+;  This routine is specifically for the Tokar LTT displays.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  nplots                long          I        total number of plots to be plotted
+;  X                     array         I        x values
+;  Y                     array         I        y values
+;  img_pos               long[]        I        image coordinates (position)
+;  l_pltpos              struct        I        generic plot parameters
+;  plotted               long          I        number of plots plotted
+;  title                 string        I        main plot title
+;  btime                 long[]        I        UDF begin time [yr,doy,hh,mm,ss]
+;  Yaxis_range           float[]       I        min/max of Y axis 
+;  y_func                char          I        Y-axis is by hour or spins
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  l_LenaPlot.pro
+;     PLOTDEFS         MAX_PLOTS        int         G         max # plots per page
+;                      MAX_WEB_SPINS    int         G         max # spins per plot
+;                                                             when using web interface
+;                      NO_CNTS          double      G         no counts indicator
+;                      NO_DATA          double      G         no data indicator
+;
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH                               v1.0             Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_PlotTokarDisplay, nplots,  X, Y, img_pos, l_pltpos, plotted, title, $
+btime, Yaxis_range, y_func
+COMMON PLOTDEFS, MAX_PLOTS, MAX_WEB_SPINS, NO_CNTS, NO_DATA
+
+
+   blankticks = strarr (30)
+   blankticks(*) = ' '
+
+   ;---------------------------------------------
+   ; Y-axis are hours
+   ;---------------------------------------------
+   if (y_func eq 'H') then begin
+      YRange_Vals = [-1*Yaxis_range, Yaxis_range]
+   endif else begin
+      ;---------------------------------------------
+      ; Y-axis are spins 
+      ;---------------------------------------------
+      YRange_Vals = [min(Y), max(Y)]
+   endelse
+
+   if (nplots le 1) OR (plotted eq MAX_PLOTS-1) then begin
+
+       ;---------------------------------------------
+       ; last plot on page
+       ;---------------------------------------------
+       PLOT, X, Y, $
+             /normal, $
+             /noerase, $
+             /nodata, $
+             ytitle = title, $
+             xstyle=1, $
+             ystyle=1, $
+             yrange = YRange_Vals, $
+             xrange = [min(X), max(X)], $
+             yticks = 4, $
+             yminor = l_pltpos.ymn_tick,$ 
+             charsize = l_pltpos.plot_font, $
+             ycharsize=l_pltpos.plot_font, $
+             xtickname = blankticks, $
+             xticks = 1, $
+             yticklen = -0.01, $
+             position = img_pos, $
+             background = 0
+
+       l_DrawXTickNLabel, l_pltpos
+
+   endif else begin
+
+       ;---------------------------------------------
+       ; not the last plot on page
+       ;---------------------------------------------
+       PLOT, X, Y, $
+             /normal, $
+             /noerase, $
+             /nodata, $
+             ytitle = title, $
+             xstyle=1, $
+             ystyle=1, $
+             yrange = YRange_Vals, $
+             yrange = [-7, 7], $
+             xrange = [min(X), max(X)], $
+             yticks = 4, $
+             yminor = l_pltpos.ymn_tick,$ 
+             charsize = l_pltpos.plot_font, $
+             ycharsize=l_pltpos.plot_font, $
+             xtickname = blankticks, $
+             xcharsize=l_pltpos.plot_font, $
+             xticks = 1, $
+             yticklen = -0.01, $
+             position = img_pos, $
+             background = 0
+
+        l_DrawXTick, l_pltpos 
+
+   endelse
+
+   nplots = nplots - 1L
+
+RETURN
+END
+
+;-------------------------------------------------------------------------------
+;  Procedure :  l_PlotFrame
+;
+;  Description:
+;    Plots just the border of the plot with tick marks. Frames the plot.
+;  This routine is for the regular spectrograms.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  nplots                long          I        total number of plots to be plotted
+;  X                     array         I        x values
+;  Y                     array         I        y values
+;  img_pos               long[]        I        image coordinates (position)
+;  l_pltpos              struct        I        generic plot parameters
+;  plotted               long          I        number of plots plotted
+;  l_oa                  struct        I        OA data parameters 
+;  title                 string        I        main plot title
+;  btime                 long[]        I        UDF begin time [yr,doy,hh,mm,ss]
+;  l_hskp                struct *      I        HSKP data parameters
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  l_LenaPlot.pro
+;     PLOTDEFS         MAX_PLOTS        int         G         max # plots per page
+;                      MAX_WEB_SPINS    int         G         max # spins per plot
+;                                                             when using web interface
+;                      NO_CNTS          double      G         no counts indicator
+;                      NO_DATA          double      G         no data indicator
+;
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH                               v1.0             Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_PlotFrame, nplots,  X, Y, img_pos, l_pltpos, plotted, l_oa, title, $
+btime, l_hskp
+COMMON PLOTDEFS, MAX_PLOTS, MAX_WEB_SPINS, NO_CNTS, NO_DATA
+
+   blankticks = strarr (30)
+   blankticks(*) = ' '
+
+
+   if (nplots le 1) OR (plotted eq MAX_PLOTS-1) then begin
+
+       PLOT, X, Y, $
+             /normal, $
+             /noerase, $
+             /nodata, $
+             ytitle = title, $
+             xstyle=1, $
+             ystyle=1, $
+             yrange = [min(Y), max(Y)], $
+             xrange = [min(X), max(X)], $
+             yticks = 4, $
+             yminor = l_pltpos.ymn_tick,$ 
+             charsize = l_pltpos.plot_font, $
+             ycharsize=l_pltpos.plot_font, $
+             xtickname = blankticks, $
+             xticks = 1, $
+             yticklen = -0.01, $
+             position = img_pos, $
+             background = 0
+
+       l_DrawXTickNLabel, l_pltpos
+       l_OAPlot, l_oa, l_pltpos, btime
+       l_InstData, l_hskp, l_pltpos
+
+   endif else begin
+
+       PLOT, X, Y, $
+             /normal, $
+             /noerase, $
+             /nodata, $
+             ytitle = title, $
+             xstyle=1, $
+             ystyle=1, $
+             yrange = [min(Y), max(Y)], $
+             xrange = [min(X), max(X)], $
+             yticks = 4, $
+             yminor = l_pltpos.ymn_tick,$ 
+             charsize = l_pltpos.plot_font, $
+             ycharsize=l_pltpos.plot_font, $
+             xtickname = blankticks, $
+             xcharsize=l_pltpos.plot_font, $
+             xticks = 1, $
+             yticklen = -0.01, $
+             position = img_pos, $
+             background = 0
+
+        l_DrawXTick, l_pltpos 
+
+   endelse
+
+   nplots = nplots - 1L
+
+RETURN
+END
+
+
+;-------------------------------------------------------------------------------
+;  Procedure:  l_PlotStuff 
+;
+;  Description:
+;   Plots line plots only.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  nplots                long          I        total number of plots to be plotted
+;  X                     array         I        x values
+;  Y                     array         I        y values
+;  minV                  long          I        minimum Y range
+;  maxV                  long          I        maximum Y range
+;  title                 string        I        main plot title
+;  l_pltpos              struct        I        generic plot parameters
+;  plotted               long          I        number of plots already plotted
+;  l_oa                  struct *      I        OA data parameters
+;  btime                 long[]        I        UDF begin time [yr,doy,hh,mm,ss]
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  l_LenaPlot.pro
+;     PLOTDEFS         MAX_PLOTS        int         G         max # plots per page
+;                      MAX_WEB_SPINS    int         G         max # spins per plot
+;                                                             when using web interface
+;                      NO_CNTS          double      G         no counts indicator
+;                      NO_DATA          double      G         no data indicator
+;
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH                               v1.0             Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_PlotStuff, nplots, X, Y, minV, maxV, title, l_pltpos, plotted, $
+l_oa, btime
+COMMON PLOTDEFS, MAX_PLOTS, MAX_WEB_SPINS, NO_CNTS, NO_DATA
+
+   blankticks = strarr (30)
+   blankticks(*) = ' '
+
+
+   plot_font = l_pltpos.plot_font - .05
+
+   if (nplots le 1) OR (plotted eq MAX_PLOTS-1) then begin
+
+      ;-------------------------------------------------
+      ; draws the last plot which will include the
+      ; time labels and necessary documentation
+      ;-------------------------------------------------
+
+      y_no_data = where (Y eq NO_DATA, y_nd_wcnt)
+      y_no_cnts = where (Y eq NO_CNTS, y_nc_wcnt)
+      y_nele = n_elements(Y)
+
+      ;-------------------------------------------------
+      ; determines if the plot has no counts or no
+      ; data
+      ; if the plot has no data, don't plot anything
+      ; if the plot has no counts, plot zeros
+      ;-------------------------------------------------
+      if ((y_nd_wcnt+y_nc_wcnt) eq y_nele) then begin
+         ;-------------------------------------------------
+         ; plot has zero counts
+         ;-------------------------------------------------
+         if (y_nc_wcnt ne 0) then begin
+            PLOT, X , Y, $
+                  position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                            l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                  PSYM = 3, $
+                  xstyle=1, $
+                  ystyle=1, $
+                  YRANGE = [0.0, 1.0], $
+                  xrange = [min(X), max(X)], $
+                  xtickname = blankticks, $
+                  CHARSIZE = plot_font, $
+                  YCHARSIZE = plot_font, $
+                  XCHARSIZE = plot_font, $
+                  xticks = 1, $
+                  BACKGROUND = 0, COLOR = 1, $
+                  YTITLE = title
+          endif else begin
+            ;-------------------------------------------------
+            ; plot has no data
+            ;-------------------------------------------------
+            PLOT, X , Y, $
+                  /nodata, $
+                  position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                            l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                  PSYM = 3, $
+                  xstyle=1, $
+                  ystyle=1, $
+                  xtickname = blankticks, $
+                  ytickname = blankticks, $
+                  CHARSIZE = plot_font, $
+                  xticks = 1, $
+                  BACKGROUND = 0, COLOR = 1, $
+
+            new_ymax = l_pltpos.ypltmx - ((l_pltpos.ypltmx - l_pltpos.ypltmn)/2.)
+            new_xmax = l_pltpos.xpltmx + 0.05
+            xyouts, new_xmax, new_ymax, 'no data', /normal, $
+                    alignment = 0.5, charsize=l_pltpos.sm_font 
+
+          endelse
+
+      endif else begin
+          ;-------------------------------------------------
+          ; a normal plot with data
+          ;-------------------------------------------------
+          if (l_pltpos.X_axis_eq_time eq 'Y') then begin
+              if (l_pltpos.linestyle eq 'Y') then begin
+                 PLOT, X , Y, $
+                       position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                                 l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                       xstyle=1, $
+                       ystyle=1, $
+                       YRANGE = [minV, maxV], $
+                       xrange = [min(X), max(X)], $
+                       xtickname = blankticks, $
+                       CHARSIZE = plot_font, $
+                       YCHARSIZE = plot_font, $
+                       XCHARSIZE = plot_font, $
+                       xticks = 1, $
+                       BACKGROUND = 0, COLOR = 1, $
+                       YTITLE = title
+               endif else begin
+                 PLOT, X , Y, $
+                       position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                                 l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                       PSYM = 3, $
+                       xstyle=1, $
+                       ystyle=1, $
+                       YRANGE = [minV, maxV], $
+                       xrange = [min(X), max(X)], $
+                       xtickname = blankticks, $
+                       CHARSIZE = plot_font, $
+                       YCHARSIZE = plot_font, $
+                       XCHARSIZE = plot_font, $
+                       xticks = 1, $
+                       BACKGROUND = 0, COLOR = 1, $
+                       YTITLE = title
+               endelse
+
+           endif else begin
+               ;-------------------------------------------------
+               ; a normal plot with data, X axis is not time
+               ; used for mass spectrum plots
+               ;-------------------------------------------------
+
+               PLOT, X , Y, $
+                     position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                               l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                     ;PSYM = 3, $
+                     ;linestyle = 0, $
+                     xstyle=1, $
+                     ystyle=1, $
+                     YRANGE = [minV, maxV], $
+                     XRANGE = [min(X), max(X)], $
+                     CHARSIZE = plot_font, $
+                     YCHARSIZE = plot_font, $
+                     XCHARSIZE = plot_font, $
+                     XTICKNAME = blankticks, $
+                     xticks = 1, $
+                     BACKGROUND = 0, COLOR = 1, $
+                     XTITLE = l_pltpos.xtitle, $
+                     YTITLE = title 
+
+           endelse
+       endelse
+
+       ;-------------------------------------------------
+       ; add documenation 
+       ;-------------------------------------------------
+       l_DrawXTickNLabel, l_pltpos
+       if (l_pltpos.data_type ne 'l_ltt') AND (l_pltpos.X_axis_eq_time eq 'Y') then begin
+          l_OAPlot, l_oa, l_pltpos, btime
+       endif
+
+   endif else begin
+
+      ;-------------------------------------------------
+      ; not the last plot of the page to plot
+      ;-------------------------------------------------
+      y_no_data = where (Y eq NO_DATA, y_nd_wcnt)
+      y_no_cnts = where (Y eq NO_CNTS, y_nc_wcnt)
+      y_nele    = n_elements(Y)
+
+      ;-------------------------------------------------
+      ; determine if the plot contains no data or no 
+      ; counts
+      ; if the plot contains no data, don't plot anything
+      ; if the plot contains no counts, plot zeros
+      ;-------------------------------------------------
+      if ((y_nd_wcnt+y_nc_wcnt) eq y_nele) then begin
+         if (y_nc_wcnt ne 0) then begin
+            ;-------------------------------------------------
+            ; plot with no counts
+            ;-------------------------------------------------
+            PLOT, X, Y ,$
+                  xstyle=1, $
+                  ystyle=1, $
+                  position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                            l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                  PSYM = 3, $
+                  XTICKNAME = blankticks, $
+                  xticks = 1, $
+                  YRANGE = [0.0, 1.0], $
+                  xrange = [min(X), max(X)], $
+                  CHARSIZE = plot_font, $
+                  YCHARSIZE = plot_font, $
+                  BACKGROUND = 0, COLOR = 1, $
+                  YTITLE = title
+         endif else begin
+            ;-------------------------------------------------
+            ; plot with no data
+            ;-------------------------------------------------
+            PLOT, X, Y ,$
+                  /nodata, $
+                  xstyle=1, $
+                  ystyle=1, $
+                  position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                            l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                  PSYM = 3, $
+                  XTICKNAME = blankticks, $
+                  YTICKNAME = blankticks, $
+                  xticks = 1, $
+                  YRANGE = [0.0, 1.0], $
+                  xrange = [min(X), max(X)], $
+                  CHARSIZE = plot_font, $
+                  BACKGROUND = 0, COLOR = 1, $
+                  YTITLE = title
+
+            new_ymax = l_pltpos.ypltmx - ((l_pltpos.ypltmx - l_pltpos.ypltmn)/2.)
+            new_xmax = l_pltpos.xpltmx + 0.05
+            xyouts, new_xmax, new_ymax, 'no data', /normal, $
+                    alignment=0.5, $
+                    charsize=l_pltpos.sm_font
+
+         endelse
+      endif else begin
+         ;-------------------------------------------------
+         ; a plot with data
+         ;-------------------------------------------------
+
+         PLOT, X, Y ,$
+               xstyle=1, $
+               ystyle=1, $
+               position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                         l_pltpos.xpltmx,l_pltpos.ypltmx], $
+               PSYM = 3, $
+               XTICKNAME = blankticks, $
+               xticks = 1, $
+               YRANGE = [minV, maxV], $
+               xrange = [min(X), max(X)], $
+               CHARSIZE = plot_font, $
+               YCHARSIZE = plot_font, $
+               BACKGROUND = 0, COLOR = 1, $
+               YTITLE = title
+
+      endelse
+
+      l_DrawXTick, l_pltpos
+
+   endelse
+
+   ;-------------------------------------------------
+   ; decrement the number of plots plotted
+   ;-------------------------------------------------
+   nplots = nplots - 1L
+
+RETURN
+END
+
+;-------------------------------------------------------------------------------
+;  Procedure: l_PlotLttStuff
+;
+;  Description:  Plot a line plot for long term trending data.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  nplots                long          I        number of plots to be plotted
+;  X                     array[]       I        X data
+;  Y                     array[]       I        Y data
+;  minV                  float         I        min X value        
+;  maxV                  float         I        max X value
+;  title                 string        I        plot title
+;  l_pltpos              struct        I        general plot parameters
+;  plotted               long          I        number of plots plotted
+;  l_setup               struct        I        general setup parameters
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  l_LenaPlot.pro
+;     PLOTDEFS         MAX_PLOTS        int         G         max # plots per page
+;                      MAX_WEB_SPINS    int         G         max # spins per plot
+;                                                             when using web interface
+;                      NO_CNTS          double      G         no counts indicator
+;                      NO_DATA          double      G         no data indicator
+;
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH               04/23/03       v1.0.11           Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_PlotLttStuff, nplots, X, Y, minV, maxV, title, l_pltpos, plotted, l_setup
+COMMON PLOTDEFS, MAX_PLOTS, MAX_WEB_SPINS, NO_CNTS, NO_DATA
+
+
+   logFlag = 0L
+
+   blankticks = strarr (30)
+   blankticks(*) = ' '
+
+
+   plot_font = l_pltpos.plot_font - .05
+
+   if (nplots le 1) OR (plotted eq MAX_PLOTS-1) then begin
+
+      ;-------------------------------------------------
+      ; draws the last plot which will include the
+      ; time labels and necessary documentation
+      ;-------------------------------------------------
+
+      y_no_data = where (Y eq NO_DATA, y_nd_wcnt)
+      y_no_cnts = where (Y eq NO_CNTS, y_nc_wcnt)
+      y_nele = n_elements(Y)
+
+      ;-------------------------------------------------
+      ; determines if the plot has no counts or no
+      ; data
+      ; if the plot has no data, don't plot anything
+      ; if the plot has no counts, plot zeros
+      ;-------------------------------------------------
+      if ((y_nd_wcnt+y_nc_wcnt) eq y_nele) then begin
+         ;-------------------------------------------------
+         ; plot has zero counts
+         ;-------------------------------------------------
+         if (y_nc_wcnt ne 0) then begin
+            PLOT, X , Y, $
+                  position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                            l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                  linestyle = 0, $
+                  xstyle=1, $
+                  ystyle=1, $
+                  YRANGE = [0.0, 1.0], $
+                  xrange = [min(X), max(X)], $
+                  xtickname = blankticks, $
+                  CHARSIZE = plot_font, $
+                  YCHARSIZE = plot_font, $
+                  XCHARSIZE = plot_font, $
+                  xticks = 1, $
+                  BACKGROUND = 0, COLOR = 1, $
+                  YTITLE = title
+          endif else begin
+            ;-------------------------------------------------
+            ; plot has no data
+            ;-------------------------------------------------
+            PLOT, X , Y, $
+                  /nodata, $
+                  position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                            l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                  linestyle = 0, $
+                  xstyle=1, $
+                  ystyle=1, $
+                  xtickname = blankticks, $
+                  ytickname = blankticks, $
+                  CHARSIZE = plot_font, $
+                  xticks = 1, $
+                  BACKGROUND = 0, COLOR = 1, $
+                  YTITLE = title
+
+            new_ymax = l_pltpos.ypltmx - ((l_pltpos.ypltmx - l_pltpos.ypltmn)/2.)
+            new_xmax = l_pltpos.xpltmx + 0.05
+            xyouts, new_xmax, new_ymax, 'no data', /normal, $
+                    alignment = 0.5, charsize=l_pltpos.sm_font
+
+          endelse
+
+
+      endif else begin
+          ;-------------------------------------------------
+          ; a normal plot with data
+          ;-------------------------------------------------
+          if (l_pltpos.X_axis_eq_time eq 'Y') then begin
+              if (l_pltpos.linestyle eq 'Y') then begin
+                 PLOT, X , Y, $
+                       position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                                 l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                       linestyle = 0, $
+                       xstyle=1, $
+                       ystyle=ystyleFlag, $
+                       YLOG = logFlag, $
+                       /YNOZERO, $
+                       YRANGE = [minV, maxV], $
+                       XRANGE = [min(X), max(X)], $
+                       xtickname = blankticks, $
+                       CHARSIZE = plot_font, $
+                       YCHARSIZE = plot_font, $
+                       XCHARSIZE = plot_font, $
+                       xticks = 1, $
+                       BACKGROUND = 0, COLOR = 1, $
+                       YTITLE = title
+
+               endif else begin
+                 PLOT, X , Y, $
+                       position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                                 l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                       linestyle = 0, $
+                       xstyle=1, $
+                       ystyle=ystyleFlag, $
+                       YLOG = logFlag, $
+                       /YNOZERO, $
+                       YRANGE = [minV, maxV], $
+                       xrange = [min(X), max(X)], $
+                       xtickname = blankticks, $
+                       CHARSIZE = plot_font, $
+                       YCHARSIZE = plot_font, $
+                       XCHARSIZE = plot_font, $
+                       xticks = 1, $
+                       BACKGROUND = 0, COLOR = 1, $
+                       YTITLE = title
+
+               endelse
+
+           endif else begin
+               ;-------------------------------------------------
+               ; a normal plot with data, X axis is not time
+               ; used for mass spectrum plots
+               ;-------------------------------------------------
+
+               PLOT, X , Y, $
+                     position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                               l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                     linestyle = 0, $
+                     xstyle=1, $
+                     ystyle=ystyleFlag, $
+                     YLOG = logFlag, $
+                     /YNOZERO, $
+                     YRANGE = [minV, maxV], $
+                     XRANGE = [min(X), max(X)], $
+                     CHARSIZE = plot_font, $
+                     YCHARSIZE = plot_font, $
+                     XCHARSIZE = plot_font, $
+                     XTICKNAME = blankticks, $
+                     xticks = 1, $
+                     BACKGROUND = 0, COLOR = 1, $
+                     YTITLE = title
+                    
+
+           endelse
+       endelse
+
+       l_DrawXTickNLabel, l_pltpos
+
+   endif else begin
+
+      ;-------------------------------------------------
+      ; not the last plot of the page to plot
+      ;-------------------------------------------------
+      y_no_data = where (Y eq NO_DATA, y_nd_wcnt)
+      y_no_cnts = where (Y eq NO_CNTS, y_nc_wcnt)
+      y_nele    = n_elements(Y)
+
+      ;-------------------------------------------------
+      ; determine if the plot contains no data or no
+      ; counts
+      ; if the plot contains no data, don't plot anything
+      ; if the plot contains no counts, plot zeros
+      ;-------------------------------------------------
+      if ((y_nd_wcnt+y_nc_wcnt) eq y_nele) then begin
+         if (y_nc_wcnt ne 0) then begin
+            ;-------------------------------------------------
+            ; plot with no counts
+            ;-------------------------------------------------
+            PLOT, X, Y ,$
+                  xstyle=1, $
+                  ystyle=1, $
+                  position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                            l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                  linestyle = 0, $
+                  XTICKNAME = blankticks, $
+                  xticks = 1, $
+                  YRANGE = [0.0, 1.0], $
+                  xrange = [min(X), max(X)], $
+                  CHARSIZE = plot_font, $
+                  YCHARSIZE = plot_font, $
+                  BACKGROUND = 0, COLOR = 1, $
+                  YTITLE = title
+         endif else begin
+            ;-------------------------------------------------
+            ; plot with no data
+            ;-------------------------------------------------
+            PLOT, X, Y ,$
+                  /nodata, $
+                  xstyle=1, $
+                  ystyle=1, $
+                  position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                            l_pltpos.xpltmx,l_pltpos.ypltmx], $
+                  linestyle = 0, $
+                  XTICKNAME = blankticks, $
+                  YTICKNAME = blankticks, $
+                  xticks = 1, $
+                  YRANGE = [0.0, 1.0], $
+                  xrange = [min(X), max(X)], $
+                  CHARSIZE = plot_font, $
+                  BACKGROUND = 0, COLOR = 1, $
+                  YTITLE = title
+
+
+            new_ymax = l_pltpos.ypltmx - ((l_pltpos.ypltmx - l_pltpos.ypltmn)/2.)
+            new_xmax = l_pltpos.xpltmx + 0.05
+            xyouts, new_xmax, new_ymax, 'no data', /normal, $
+                    alignment=0.5, $
+                    charsize=l_pltpos.sm_font
+
+         endelse
+      endif else begin
+         ;-------------------------------------------------
+         ; a plot with data
+         ;-------------------------------------------------
+         PLOT, X, Y ,$
+               xstyle=1, $
+               position=[l_pltpos.xpltmn,l_pltpos.ypltmn, $
+                         l_pltpos.xpltmx,l_pltpos.ypltmx], $
+               linestyle = 0, $
+               YLOG = logFlag, $
+               XTICKNAME = blankticks, $
+               xticks = 1, $
+               YRANGE = [minV, maxV], $
+               xrange = [min(X), max(X)], $
+               CHARSIZE = plot_font, $
+               YCHARSIZE = plot_font, $
+               BACKGROUND = 0, COLOR = 1, $
+               YTITLE = title
+
+      endelse
+
+      l_DrawXTick, l_pltpos
+
+   endelse
+
+   ;-------------------------------------------------
+   ; decrement the number of plots plotted
+   ;-------------------------------------------------
+   nplots = nplots - 1L
+
+
+RETURN
+END
+
+
+;-------------------------------------------------------------------------------
+;  Procedure: l_DrawLegend
+;
+;  Description: 
+;      Draws the boxes indicating no data or no counts.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  l_pltpos              struct        I        generic plot parameters
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  None
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH                               v1.0             Original implementation
+;  ELH               01/02           v1.0.8           Added sun, ram, B legend 
+;  ELH               01/03           v1.0.10          Changed function polyfill 
+;                                                     to create background box to
+;                                                     use tv() for sun, ram, B legend 
+;-------------------------------------------------------------------------------
+
+PRO l_DrawLegend, l_pltpos
+
+
+    ;--------------------------
+    ; draw sun indicator
+    ; draw a gray box for the sun
+    ; symbol/markers
+    ;--------------------------------
+    sunbox = bytarr(15,13)
+    sunbox (*,*) = 3 
+
+    bar_w = 12 / float(l_pltpos.window_width)
+    bar_h = 12 / float(l_pltpos.window_height)
+    bar_x = 0.80
+    bar_y = 0.965
+
+    y1 = .98
+    y2 = y1 - 0.015
+    x1 = 0.82
+    x2 = x1 - 0.02
+
+    tv, sunbox, bar_x, bar_y, xsize=bar_w, ysize=bar_h, /normal
+    xyouts,x1-0.009,y2+0.003586,'--',/normal,size=1,color=0, $
+             alignment=0.5, charthick=2
+    xyouts,0.86,y1-0.01,'sun',/normal,alignment=1.0,size=l_pltpos.sm_font
+
+    ;--------------------------
+    ; draw Ram indicator
+    ;--------------------------
+    y1 = .96
+    y2 = y1 - 0.015
+    x1 = 0.82 
+    x2 = x1 - 0.02
+
+    rambox = bytarr(15,13)
+    rambox (*,*) = 3 
+
+    bar_w = 12 / float(l_pltpos.window_width)
+    bar_h = 12 / float(l_pltpos.window_height)
+    bar_x = 0.80
+    bar_y = 0.945
+
+    tv, rambox, bar_x, bar_y, xsize=bar_w, ysize=bar_h, /normal
+    xyouts,x1-0.009,y2+0.003586,'x',/normal,size=1,color=0, $
+             alignment=0.5, charthick=1.5
+    xyouts,0.86,y1-0.01,'ram',/normal,alignment=1.0,size=l_pltpos.sm_font
+
+
+    ;--------------------------
+    ; draw B indicator
+    ;--------------------------
+    y1 = .94
+    y2 = y1 - 0.015
+    x1 = 0.82
+    x2 = x1 - 0.02
+
+    bbox = bytarr(15,13)
+    bbox (*,*) = 3 
+
+    bar_w = 12 / float(l_pltpos.window_width)
+    bar_h = 12 / float(l_pltpos.window_height)
+    bar_x = 0.80
+    bar_y = 0.925
+
+    tv, bbox, bar_x, bar_y, xsize=bar_w, ysize=bar_h, /normal
+    xyouts,x1-0.009,y2+0.003586,'!M+!5',/normal,size=1,color=2, $
+             alignment=0.5, charthick=1.5
+    xyouts,0.86,y1-0.01,'B',/normal,alignment=1.0,size=l_pltpos.sm_font
+
+
+    ;--------------------------
+    ; draw no data box
+    ;--------------------------
+    nodata = bytarr(10,10)
+    nodata(*,*) = 3 
+
+    bar_w = 10 / float(l_pltpos.window_width)
+    bar_h = 10 / float(l_pltpos.window_height)
+    bar_x = 0.89
+    bar_y = 0.96
+    tv, nodata, bar_x, bar_y, xsize=bar_w, ysize=bar_h, /normal
+    xyouts, bar_x+.055, bar_y, 'no data', $
+           alignment=0.5, charsize=l_pltpos.sm_font, /normal
+
+
+    ;--------------------------
+    ; draw no counts box
+    ;--------------------------
+    if (l_pltpos.color_table lt 4) then begin
+       if (l_pltpos.color_table eq 3) then begin
+          nocnts_color = 1
+       endif else begin
+          nocnts_color = 4 
+       endelse
+    endif else begin
+       nocnts_color = 5
+    endelse
+    nocnts = bytarr(10,10)
+    nocnts(*,*) = nocnts_color 
+
+    bar_w = 10 / float(l_pltpos.window_width)
+    bar_h = 10 / float(l_pltpos.window_height)
+    bar_x = 0.89
+    bar_y = 0.93
+    tv, nocnts, bar_x, bar_y, xsize=bar_w, ysize=bar_h, /normal
+    xyouts, bar_x+.055, bar_y, 'no cnts', $
+           alignment=0.5, charsize=l_pltpos.sm_font, /normal
+
+
+RETURN
+END
+
+
+;-------------------------------------------------------------------------------
+;  Procedure :  l_CreatePlotHdr
+;
+;  Description:
+;    Generates generic plot header documentation. 
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  l_pltpos              struct        I        generic plot parameters
+;  l_setup               struct        I        generic setup parameters
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  None
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH               04/23/03       v1.0.11          Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_CreatePlotHdr, l_pltpos, l_setup
+
+   if (l_setup.l_line_plots eq 'N') then begin
+      l_DrawLegend, l_pltpos
+   endif
+
+   ;--------------------
+   ; plot info
+   ;--------------------
+   xpos=0.01
+   ypos=0.97
+   ydelta=0.022
+
+   header = '!5IMAGE/LENA ' + l_pltpos.plot_hdr_title 
+   xyouts, xpos, ypos, /normal, header, charsize=l_pltpos.lg_font
+   ypos=ypos-ydelta
+
+   mo = 0
+   dy = 0
+
+   l_ConvDOY2YMD, l_setup.l_start_dtime[1], l_setup.l_start_dtime[0], mo, dy
+   btime = STRING(l_setup.l_start_dtime[0], mo, dy, $
+                  l_setup.l_start_dtime[1], $
+                  l_setup.l_start_dtime[2], $
+                  l_setup.l_start_dtime[3], $
+                  l_setup.l_start_dtime[4], $
+   FORMAT="(i4,'/',i2.2,'/',i2.2,'  ', '(',i3,')','  ',i2.2,':',i2.2,':',i2.2)")
+
+   plot_txt = 'Start Time: ' + btime
+   xyouts, xpos, ypos, /normal, plot_txt, charsize=l_pltpos.lg_font
+
+
+   ypos=ypos-ydelta
+
+   mo = 0
+   dy = 0
+
+
+   l_ConvDOY2YMD, l_setup.l_stop_dtime[1], l_setup.l_stop_dtime[0], mo, dy
+   etime = STRING(l_setup.l_stop_dtime[0], mo, dy, $
+                  l_setup.l_stop_dtime[1], $
+                  l_setup.l_stop_dtime[2], $
+                  l_setup.l_stop_dtime[3], $
+                  l_setup.l_stop_dtime[4], $
+   FORMAT="(i4,'/',i2.2,'/',i2.2,'  ','(',i3,')','  ',i2.2,':',i2.2,':',i2.2)")
+
+   plot_txt = 'Stop Time: ' + etime 
+   xyouts, xpos, ypos, /normal, plot_txt, charsize=l_pltpos.lg_font
+   ypos=ypos-ydelta
+
+END
+
+
+;-------------------------------------------------------------------------------
+;  Procedure :  l_TrailerDoc
+;
+;  Description:
+;     Generates generic documentation after plots.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  l_pltpos              struct        I        generic plot parameters
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  None
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH               04/23/03       v1.0.11          Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_TrailerDoc, l_pltpos
+
+
+
+   xpos   = 0.01
+   ypos   = l_pltpos.doc_ymn - 0.02
+   ydelta = l_pltpos.yspace
+
+
+   plot_txt = l_pltpos.sw_ver
+   xyouts, xpos, ypos, /normal, plot_txt, charsize=l_pltpos.sm_font
+
+   ;-----------------------------------------------
+   ; distiller needs to look for a *.ps extension 
+   ; in order to convert to PDF.  The filename on
+   ; the actual plot needs to reflect the *.pdf
+   ; filename and not the *.ps.
+   ;-----------------------------------------------
+   if (l_pltpos.ps eq 'Y') then begin
+       ps_pos = strpos (l_pltpos.filename, '.ps')
+       new_filename = l_pltpos.filename + ' ' 
+       strput, new_filename, '.pdf', ps_pos
+       xyouts, xpos+0.30, ypos, /normal, $
+            new_filename, charsize=l_pltpos.sm_font
+   endif else begin
+       xyouts, xpos+0.30, ypos, /normal, $
+            l_pltpos.filename, charsize=l_pltpos.sm_font
+   endelse
+   ypos=ypos-ydelta
+
+   plot_txt = systime()
+   xyouts, xpos, ypos, /normal, plot_txt, charsize=l_pltpos.sm_font
+   ypos=ypos-ydelta
+
+   l_pltpos.doc_ymn = ypos
+   l_pltpos.doc_ymx = l_pltpos.doc_ymx - l_pltpos.yspace
+
+   if (l_pltpos.data_source eq 'D') then begin
+      ds = 'UDF Definitive'
+   endif else begin
+      ds = 'UDF Quicklook'
+   endelse
+   label = 'Data: ' + ds
+   xyouts, xpos, ypos, /normal, label, charsize = l_pltpos.sm_font 
+   ypos=ypos-ydelta
+
+   if (l_pltpos.linePlots eq 'N') then begin
+      if (l_pltpos.ang_zero eq 'S') then begin
+         label = 'zero spin angle: Sun'
+      endif else begin
+         if (l_pltpos.ang_zero eq 'M') then begin
+            label = 'zero spin angle: Moon'
+         endif else begin
+            if (l_pltpos.ang_zero eq 'E') then begin
+                label = 'zero spin angle: Earth'
+            endif else begin
+                label = 'zero spin angle: ---'
+            endelse
+         endelse
+      endelse
+      xyouts, xpos, ypos, /normal, label, $
+              charsize = l_pltpos.sm_font 
+   endif
+   ypos=ypos-ydelta
+
+
+END
+   
+;-------------------------------------------------------------------------------
+;  Procedure :  l_TrailerLttDoc
+;
+;  Description:
+;     Generates generic documentation after long term trending plots.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  l_pltpos              struct        I        generic plot parameters
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  None
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH               04/23/03       v1.0.11          Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_TrailerLttDoc, l_pltpos
+
+   xpos   = 0.01
+   ypos   = l_pltpos.ypltmn - 0.02
+   ydelta = l_pltpos.yspace
+
+   plot_txt = l_pltpos.sw_ver
+   xyouts, xpos, ypos, /normal, plot_txt, charsize=l_pltpos.sm_font
+
+   ;-----------------------------------------------
+   ; distiller needs to look for a *.ps extension
+   ; in order to convert to PDF.  The filename on
+   ; the actual plot needs to reflect the *.pdf
+   ; filename and not the *.ps.
+   ;-----------------------------------------------
+   if (l_pltpos.ps eq 'Y') then begin
+       ps_pos = strpos (l_pltpos.filename, '.ps')
+       new_filename = l_pltpos.filename + ' '
+       strput, new_filename, '.pdf', ps_pos
+       xyouts, xpos+0.30, ypos, /normal, $
+            new_filename, charsize=l_pltpos.sm_font
+   endif else begin
+       xyouts, xpos+0.30, ypos, /normal, $
+            l_pltpos.filename, charsize=l_pltpos.sm_font
+   endelse
+   ypos=ypos-ydelta
+
+   plot_txt = systime()
+   xyouts, xpos, ypos, /normal, plot_txt, charsize=l_pltpos.sm_font
+   ypos=ypos-ydelta
+
+END
+
+
+;-------------------------------------------------------------------------------
+;  Procedure: l_ChckCompPg
+;
+;  Description:
+;     This routine checks to see if it is the last plot to be plotted
+;     on the page.  If it is then it writes the page to a gif file or
+;     close the postscript file.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  plotted               long         I/O       # plots already plotted
+;  nplots                long          I        # of plots to be plotted
+;  pages                 long         I/O       total # of pages needed
+;  l_setup               struct        I        generic setup parameters
+;  windx                 long[]        I        window index
+;  l_pltpos              struct        I        generic plot parameters
+;  l_rgb_table           struct        I        generic color table parameters
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  l_LenaPlot.pro
+;     PLOTDEFS         MAX_PLOTS        int         G         max # plots per page
+;                      MAX_WEB_SPINS    int         G         max # spins per plot
+;                                                             when using web interface
+;                      NO_CNTS          double      G         no counts indicator
+;                      NO_DATA          double      G         no data indicator
+;
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH                               v1.0             Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_ChckCompPg, plotted, nplots, pages, l_setup, $
+windx, l_pltpos, l_rgb_table 
+COMMON PLOTDEFS, MAX_PLOTS, MAX_WEB_SPINS, NO_CNTS, NO_DATA
+
+
+   if (plotted ge MAX_PLOTS) OR (nplots le 0) then begin
+   
+
+       if (l_pltpos.ps ne 'Y') then begin
+          !p.multi = 0
+
+          sn1 = strcompress(strtrim(string(pages), 1))
+          sn2 = string(format='(I4.4)', sn1)
+
+          l_GenFileName, l_setup, sn2
+          if (l_setup.l_output_plot_format eq 'PNG') then begin
+             l_pltpos.filename = l_setup.l_prod_dst + '/' + l_setup.l_filename + '.png'
+          endif else begin
+             l_pltpos.filename = l_setup.l_prod_dst + '/' + l_setup.l_filename + '.gif'
+          endelse
+
+          l_CreatePlotHdr, l_pltpos, l_setup
+          l_TrailerDoc, l_pltpos
+          ;------------------------------------------------
+          ; if plot type is not postscript and the plot is
+          ; to be displayed as X window and not over the
+          ; web where just the output file is generated 
+          ; and a plot is not displayed
+          ;------------------------------------------------
+          if (l_setup.l_plot_type ne 'P') then begin
+             if (l_setup.l_via_web eq 'N') then begin 
+                if (l_setup.l_output_plot_format eq 'PNG') then begin
+                   img_plot = TVRD (True=1, /ORDER)
+                endif else begin
+                   img_plot = TVRD (True=1)
+                endelse
+             endif else begin
+                if (l_setup.l_output_plot_format eq 'PNG') then begin
+                    img_plot = TVRD (/ORDER)
+                endif else begin
+                    img_plot = TVRD ()
+                endelse
+             endelse
+          endif
+
+          ;------------- write plots to PNG or GIF file ------------
+          if (l_setup.l_output_plot_format eq 'PNG') then begin
+              l_GenPng, img_plot, pages, l_setup, l_rgb_table
+          endif else begin
+              l_GenGif, img_plot, pages, l_setup, l_rgb_table
+          endelse
+        
+
+
+          pages = pages + 1L
+
+          plotted = 0L
+          if (plotted lt nplots) AND (l_setup.l_via_web eq 'N') AND $
+             (l_setup.l_gen_sum eq 'N') then begin
+              erase
+              wset, windx[pages]
+          endif
+
+          if (!D.NAME eq 'Z') then begin
+            if (l_setup.l_via_web eq 'Y') or (l_setup.l_gen_sum eq 'Y') then begin
+               device, /close
+            endif
+          endif
+
+
+          l_pltpos.ypltmx = l_pltpos.top_ypltmx
+          l_pltpos.ypltmn = l_pltpos.top_ypltmn
+          !P.Multi = [0, 1, MAX_PLOTS, 0, 0]
+
+       endif else begin
+
+
+           !p.multi = 0
+           l_CreatePlotHdr, l_pltpos, l_setup
+           l_pltpos.filename = l_setup.l_prod_dst + '/' + $
+                               l_setup.l_filename + '.ps'
+
+           l_TrailerDoc, l_pltpos
+
+           ;---------------------------
+           ; close the postscript file
+           ;---------------------------
+           device, /close_file
+
+           if (!D.NAME eq 'Z') then begin
+             if (l_setup.l_via_web eq 'Y') or (l_setup.l_gen_sum eq 'Y') then begin
+                device, /close
+             endif
+           endif
+
+
+
+           pages = pages + 1L
+           if (plotted le nplots) or (nplots gt 0) then begin
+              l_pltpos.ps = 'Y'
+              l_GenFileName, l_setup, string(pages)
+              l_pltpos.filename = l_setup.l_prod_dst + '/' + $
+                                  l_setup.l_filename + '.ps'
+              l_SetUpDisplay, 'P', l_pltpos, l_rgb_table, $
+                   l_setup.l_color_tbl, color_bar, l_setup.l_via_web
+           endif
+
+           plotted = 0L
+           l_pltpos.ypltmx = l_pltpos.top_ypltmx
+           l_pltpos.ypltmn = l_pltpos.top_ypltmn
+           !P.Multi = [0, 1, MAX_PLOTS, 0, 0]
+
+       endelse
+
+   endif
+
+RETURN
+END
+
+
+;-------------------------------------------------------------------------------
+;  Procedure :  l_SetUpZBuffer
+;
+;  Description:
+;    Calls the routines to set up buffers and displays.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  l_pltpos              struct        I        generic plot parameters
+;  l_setup               struct        I        generic setup parameters
+;  l_rgb_table           struct        I        generic color table parameters
+;  colorbar              float[]       I        color bar values
+;  nplots                long          I        total # of plots to be plotted
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  l_LenaPlot.pro
+;     PLOTDEFS         MAX_PLOTS        int         G         max # plots per page
+;                      MAX_WEB_SPINS    int         G         max # spins per plot
+;                                                             when using web interface
+;                      NO_CNTS          double      G         no counts indicator
+;                      NO_DATA          double      G         no data indicator
+;
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH              04/23/03        v1.0.11           Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_SetUpZBuffer, l_pltpos, l_setup, l_rgb_table, colorbar, nplots
+COMMON PLOTDEFS, MAX_PLOTS, MAX_WEB_SPINS, NO_CNTS, NO_DATA
+
+   ;------------------------------------------
+   ;  sets up to plot the maximun number of
+   ;  plots per page
+   ;------------------------------------------
+   !P.Multi = [0, 1, nplots, 0, 0]
+
+
+   ;------------------------------------------
+   ; if running via the web, then only
+   ; set up the Z buffer to generate gif files
+   ;------------------------------------------
+   
+   if (l_setup.l_via_web eq 'Y') then begin 
+      if (l_pltpos.ps eq 'Y') then begin
+          l_SetUpDisplay, 'P', l_pltpos, l_rgb_table, $
+                          l_setup.l_color_tbl, colorbar, $
+                          nplots, l_setup.l_via_web
+       endif else begin
+          l_SetUpDisplay, 'Z', l_pltpos, l_rgb_table, $
+                           l_setup.l_color_tbl, colorbar, $
+                           nplots, l_setup.l_via_web
+       endelse
+   endif else begin
+       ;------------------------------------------
+       ; if generating summary plots, then only set
+       ; up Z buffer
+       ;------------------------------------------
+       if (l_setup.l_gen_sum eq 'Y') and $
+          (l_pltpos.ps eq 'Y') then begin 
+          l_SetUpDisplay, 'P', l_pltpos, l_rgb_table, $
+                           l_setup.l_color_tbl, colorbar, $
+                           nplots, l_setup.l_via_web
+       endif else begin
+          if (l_setup.l_gen_sum eq 'Y') then begin 
+             l_SetUpDisplay, 'Z', l_pltpos, l_rgb_table, $
+                             l_setup.l_color_tbl, colorbar, $
+                             nplots
+          endif else begin
+             if (l_pltpos.ps eq 'Y') then begin
+                 l_SetUpDisplay, 'P', l_pltpos, l_rgb_table, $
+                              l_setup.l_color_tbl, colorbar, $
+                              nplots, l_setup.l_via_web
+              endif else begin
+                 ;------------------------------------------
+                 ; if working at workstation and want the X
+                 ; window
+                 ;------------------------------------------
+                 l_SetUpDisplay, 'X', l_pltpos, l_rgb_table, $
+                                 l_setup.l_color_tbl, colorbar, $
+                                 nplots, l_setup.l_via_web
+              endelse
+          endelse
+       endelse
+   endelse
+
+
+RETURN
+END
+
+
+;-------------------------------------------------------------------------------
+;  Procedure :  l_AdjPlotSize
+;
+;  Description:
+;      Adjust each of the plot sizes on the plot based on the number of
+;      plots to be plotted.
+;
+;  Return Value:  type =
+;  Value                         Description
+;  -------------------------     ------------------------------
+;  None
+;
+;  Argument List:
+;  Name                  Type         Use       Description
+;  -----------------     ------       ---       ---------------------------
+;  l_pltpos              struct        I        generic plot parameters
+;  l_setup               struct        I        generic setup parameters
+;  nplots                long          I        total # of plots to be plotted
+;
+;
+;  External Variables:
+;  Source              Name            Type        Use        Description
+;  ---------------     ---------       ----        ----       --------------------
+;  l_LenaPlot.pro
+;     PLOTDEFS         MAX_PLOTS        int         G         max # plots per page
+;                      MAX_WEB_SPINS    int         G         max # spins per plot
+;                                                             when using web interface
+;                      NO_CNTS          double      G         no counts indicator
+;                      NO_DATA          double      G         no data indicator
+;
+;
+;  Development History:
+;  Author             Date           Build            Description of Change
+;  --------------   ---------       --------         -------------------------
+;  ELH               04/23/03       v1.0.11          Original implementation
+;-------------------------------------------------------------------------------
+
+PRO l_AdjPlotSize, l_pltpos, l_setup, nplots
+COMMON PLOTDEFS, MAX_PLOTS, MAX_WEB_SPINS, NO_CNTS, NO_DATA
+
+    if (nplots lt MAX_PLOTS) then begin
+       if (nplots eq 1) then begin
+           new_plot_size = 3.55
+           if (l_setup.l_pwrsup_bars eq 'Y') then begin
+              l_pltpos.ypltmx = 7.8/l_pltpos.yin
+              l_pltpos.ydel = (new_plot_size / l_pltpos.yin) - 0.03
+           endif else begin
+              l_pltpos.ydel = (new_plot_size / l_pltpos.yin)
+           endelse
+        endif else begin
+           new_plot_size = floor(l_pltpos.yin/(nplots+1))
+           if (l_setup.l_pwrsup_bars eq 'Y') then begin
+               l_pltpos.ypltmx = 7.8/l_pltpos.yin
+               l_pltpos.ydel = (new_plot_size / l_pltpos.yin) - 0.03
+               if (nplots eq 4) then begin
+                  l_pltpos.ydel = (new_plot_size / l_pltpos.yin) + 0.02
+               endif
+               if (nplots ge 5) then begin
+                  l_pltpos.ydel = (new_plot_size / l_pltpos.yin) + 0.0025
+               endif
+           endif else begin
+               l_pltpos.ydel = (new_plot_size / l_pltpos.yin) 
+               if (nplots eq 4) then begin
+                  l_pltpos.ydel = (new_plot_size / l_pltpos.yin) + 0.05
+               endif
+               if (nplots ge 5) then begin
+                  l_pltpos.ydel = (new_plot_size / l_pltpos.yin) + 0.005
+               endif
+           endelse
+        endelse
+        l_pltpos.ypltmn = l_pltpos.ypltmx - l_pltpos.ydel
+     endif else begin
+        if (l_setup.l_pwrsup_bars eq 'Y') then begin
+            ;new_plot_size = floor(l_pltpos.yin/(nplots+1))
+            new_plot_size = floor(l_pltpos.yin/(MAX_PLOTS+1))
+            l_pltpos.ypltmx = 7.8/l_pltpos.yin
+            l_pltpos.ydel = (new_plot_size / l_pltpos.yin) - 0.03
+            if (nplots eq 4) then begin
+               l_pltpos.ydel = (new_plot_size / l_pltpos.yin) + 0.02
+            endif
+            if (nplots ge 5) then begin
+               l_pltpos.ydel = (new_plot_size / l_pltpos.yin) + 0.0025
+            endif
+
+            l_pltpos.ypltmn = l_pltpos.ypltmx - l_pltpos.ydel
+        endif
+
+     endelse
+
+RETURN
+END

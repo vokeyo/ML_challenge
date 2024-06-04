@@ -1,0 +1,749 @@
+
+<html>
+<head>
+
+<title>Departments -- City of Danville, Virginia</title>
+<link href="/upload/images/styles.css" type="text/css" rel="stylesheet">
+<style>
+.topbg{
+ background-image : url("/upload/images/1.jpg");
+ background-repeat : no-repeat;
+ background-position : top left;
+}
+</style><script language="javascript" src="/upload/images/PreloadImages.js"></script>
+<script language="JavaScript1.2" src="/upload/images/coolmenus4.js" type="text/javascript"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function handleAllTags(bolVisible) {
+var arrayOfSelects;
+  if (document.all) {
+    arrayOfSelects = document.all.tags("select");
+  }
+  else if (document.getElementById) {
+    arrayOfSelects = document.getElementsByTagName("select");
+  }
+  else {
+    
+  }
+  if (arrayOfSelects){ 
+     for (i=0; i < arrayOfSelects.length; i++){
+       if (document.layers){
+          if(bolVisible){arrayOfSelects(i).visibility = "hide";}
+          else{arrayOfSelects(i).visibility = "show";}
+       }
+       if (document.all){
+          if(bolVisible){arrayOfSelects(i).style.visibility = "hidden"; }
+          else{arrayOfSelects(i).style.visibility = "visible"; }
+       }
+     }
+  }
+}
+
+
+// -->
+</SCRIPT>
+</head>
+<body bgcolor="#ffffff" BOTTOMMARGIN="0" LEFTMARGIN="0" TOPMARGIN="0" RIGHTMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="1">
+<Script language="javascript">
+/*** 
+This is the menu creation code - place it right after you body tag
+Feel free to add this to a stand-alone js file and link it to your page.
+**/
+//Menu object creation
+oCMenu=new makeCM("oCMenu") //Making the menu object. Argument: menuname
+oCMenu.frames = 0
+//Menu properties   
+oCMenu.pxBetween=1
+oCMenu.fromLeft=20 
+oCMenu.fromTop=110   
+oCMenu.rows=1 
+oCMenu.menuPlacement="left"
+                                                             
+oCMenu.offlineRoot="" 
+oCMenu.onlineRoot="" 
+oCMenu.resizeCheck=1 
+oCMenu.wait=1000 
+oCMenu.fillImg="/upload/images/cm_fill.gif"
+oCMenu.zIndex=0
+//Background bar properties
+oCMenu.useBar=0
+oCMenu.barWidth="100%"
+oCMenu.barHeight="menu" 
+oCMenu.barClass="clBar"
+oCMenu.barX=0 
+oCMenu.barY=0
+oCMenu.barBorderX=0
+oCMenu.barBorderY=0
+oCMenu.barBorderClass=""
+//Level properties - ALL properties have to be spesified in level 0
+oCMenu.level[0]=new cm_makeLevel() //Add this for each new level
+oCMenu.level[0].width=120
+oCMenu.level[0].height=20 
+oCMenu.level[0].regClass="clLevel0"
+oCMenu.level[0].overClass="clLevel0over"
+oCMenu.level[0].borderX=0
+oCMenu.level[0].borderY=0
+oCMenu.level[0].borderClass="clLevel0border"
+oCMenu.level[0].offsetX=0
+oCMenu.level[0].offsetY=0
+oCMenu.level[0].rows=0
+oCMenu.level[0].arrow=0
+oCMenu.level[0].arrowWidth=0
+oCMenu.level[0].arrowHeight=0
+oCMenu.level[0].align="bottom"
+//EXAMPLE SUB LEVEL[1] PROPERTIES - You have to specify the properties you want different from LEVEL[0] - If you want all items to look the same just remove this
+oCMenu.level[1]=new cm_makeLevel() //Add this for each new level (adding one to the number)
+oCMenu.level[1].width=160
+oCMenu.level[1].height=16
+oCMenu.level[1].regClass="clLevel1"
+oCMenu.level[1].overClass="clLevel1over"
+oCMenu.level[1].borderX=1
+oCMenu.level[1].borderY=1
+oCMenu.level[1].align="right" 
+oCMenu.level[1].offsetX=0
+oCMenu.level[1].offsetY=0
+oCMenu.level[1].borderClass="clLevel1border"
+/******************************************
+Menu item creation:
+myCoolMenu.makeMenu(name, parent_name, text, link, target, width, height, regImage, overImage, regClass, overClass , align, rows, nolink, onclick, onmouseover, onmouseout) 
+*************************************/
+oCMenu.makeMenu('2815','','&nbsp;Home','home.asp','',60);
+oCMenu.makeMenu('2815123','','|','','',1,22,'','','clsep','clsep','','','true');
+oCMenu.makeMenu('2816','','&nbsp;Council / Elected Officials','officials.asp?menuid=2816','',200);
+oCMenu.makeMenu('2816123','','|','','',1,22,'','','clsep','clsep','','','true');
+oCMenu.makeMenu('2841','2816','City Council','officials.asp?menuid=2816&sub1menuid=2841','','',17,'','','','','');
+oCMenu.makeMenu('2907','2841','Minutes','l_City_CM.asp?menuid=2816&sub1menuid=2841&sub2menuid=2907','',190,17,'','','','','');
+oCMenu.makeMenu('2905','2841','Agendas: Regular','l_City_CA.asp?menuid=2816&sub1menuid=2841&sub2menuid=2905','',190,17,'','','','','');
+oCMenu.makeMenu('2906','2841','Agendas: Work Sessions','l_City_CWSA.asp?menuid=2816&sub1menuid=2841&sub2menuid=2906','',190,17,'','','','','');
+oCMenu.makeMenu('2904','2841','Regular Meeting Guidelines','officials.asp?menuid=2816&sub1menuid=2841&sub2menuid=2904','',190,17,'','','','','');
+oCMenu.makeMenu('2909','2841','2020 Vision Statement','officials.asp?menuid=2816&sub1menuid=2841&sub2menuid=2909','',190,17,'','','','','');
+oCMenu.makeMenu('3848','2841','Danville City Government','officials.asp?menuid=2816&sub1menuid=2841&sub2menuid=3848','',190,17,'','','','','');
+oCMenu.makeMenu('2828','2816','City Clerk','officials.asp?menuid=2816&sub1menuid=2828','','',17,'','','','','');
+oCMenu.makeMenu('3074','2828','Boards & Commissions','l_boardsc.asp?menuid=2816&sub1menuid=2828&sub2menuid=3074','',190,17,'','','','','');
+oCMenu.makeMenu('11023','2828','City Seal','page.asp?menuid=2816&sub1menuid=2828&sub2menuid=11023','',190,17,'','','','','');
+oCMenu.makeMenu('2842','2816','Clerk of Circuit Court','officials.asp?menuid=2816&sub1menuid=2842','','',17,'','','','','');
+oCMenu.makeMenu('2910','2842','Clerk of Court Overview','officials.asp?menuid=2816&sub1menuid=2842&sub2menuid=2910','',190,17,'','','','','');
+oCMenu.makeMenu('2919','2842','Administration of Estates','officials.asp?menuid=2816&sub1menuid=2842&sub2menuid=2919','',190,17,'','','','','');
+oCMenu.makeMenu('2917','2842','Case File Information','officials.asp?menuid=2816&sub1menuid=2842&sub2menuid=2917','',190,17,'','','','','');
+oCMenu.makeMenu('2923','2842','Certificate of Fictitious / Assumed Name','officials.asp?menuid=2816&sub1menuid=2842&sub2menuid=2923','',190,31,'','','','','');
+oCMenu.makeMenu('2912','2842','Daily Docket','officials.asp?menuid=2816&sub1menuid=2842&sub2menuid=2912','',190,17,'','','','','');
+oCMenu.makeMenu('2918','2842','Land Records','officials.asp?menuid=2816&sub1menuid=2842&sub2menuid=2918','',190,17,'','','','','');
+oCMenu.makeMenu('2921','2842','Marriage License','officials.asp?menuid=2816&sub1menuid=2842&sub2menuid=2921','',190,17,'','','','','');
+oCMenu.makeMenu('2914','2842','Notary Public','officials.asp?menuid=2816&sub1menuid=2842&sub2menuid=2914','',190,17,'','','','','');
+oCMenu.makeMenu('2915','2842','Public Records','officials.asp?menuid=2816&sub1menuid=2842&sub2menuid=2915','',190,17,'','','','','');
+oCMenu.makeMenu('3686','2816','Commissioner of Revenue','officials.asp?menuid=2816&sub1menuid=3686','','',17,'','','','','');
+oCMenu.makeMenu('3738','3686','Business License','officials.asp?menuid=2816&sub1menuid=3686&sub2menuid=3738','',190,17,'','','','','');
+oCMenu.makeMenu('3740','3686','Meals Tax','officials.asp?menuid=2816&sub1menuid=3686&sub2menuid=3740','',190,17,'','','','','');
+oCMenu.makeMenu('2924','3686','Personal Property Taxes','officials.asp?menuid=2816&sub1menuid=3686&sub2menuid=2924','',190,17,'','','','','');
+oCMenu.makeMenu('2925','3686','Virginia State Income Tax','officials.asp?menuid=2816&sub1menuid=3686&sub2menuid=2925','',190,17,'','','','','');
+oCMenu.makeMenu('2844','2816','Commonwealth`s Attorney','officials.asp?menuid=2816&sub1menuid=2844','','',17,'','','','','');
+oCMenu.makeMenu('2928','2844','Assistant Commonwealth`s Attorneys','officials.asp?menuid=2816&sub1menuid=2844&sub2menuid=2928','',190,31,'','','','','');
+oCMenu.makeMenu('2929','2844','Circuit Court Convictions','l_Commonwealth_ACC.asp?menuid=2816&sub1menuid=2844&sub2menuid=2929','',190,17,'','','','','');
+oCMenu.makeMenu('11280','2844','Commonwealth\'s Attorney\'s staff','officials.asp?menuid=2816&sub1menuid=2844&sub2menuid=11280','',190,31,'','','','','');
+oCMenu.makeMenu('2934','2844','Victim / Witness Services','officials.asp?menuid=2816&sub1menuid=2844&sub2menuid=2934','',190,17,'','','','','');
+oCMenu.makeMenu('2845','2816','City Treasurer','officials.asp?menuid=2816&sub1menuid=2845','','',17,'','','','','');
+oCMenu.makeMenu('2935','2845','Decals','officials.asp?menuid=2816&sub1menuid=2845&sub2menuid=2935','',190,17,'','','','','');
+oCMenu.makeMenu('2937','2845','Dog Tags','officials.asp?menuid=2816&sub1menuid=2845&sub2menuid=2937','',190,17,'','','','','');
+oCMenu.makeMenu('3693','2845','State Tax','officials.asp?menuid=2816&sub1menuid=2845&sub2menuid=3693','',190,17,'','','','','');
+oCMenu.makeMenu('2846','2816','City Sheriff','officials.asp?menuid=2816&sub1menuid=2846','','',17,'','','','','');
+oCMenu.makeMenu('4410','2846','Sheriff Dooley','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=4410','',190,17,'','','','','');
+oCMenu.makeMenu('2941','2846','Chief Deputy','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=2941','',190,17,'','','','','');
+oCMenu.makeMenu('2943','2846','Civil Process','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=2943','',190,17,'','','','','');
+oCMenu.makeMenu('2944','2846','Court Services','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=2944','',190,17,'','','','','');
+oCMenu.makeMenu('2946','2846','Administrative Services','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=2946','',190,17,'','','','','');
+oCMenu.makeMenu('2950','2846','Organizational Chart','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=2950','',190,17,'','','','','');
+oCMenu.makeMenu('10855','2846','Mission Statement','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=10855','',190,17,'','','','','');
+oCMenu.makeMenu('4766','2846','History','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=4766','',190,17,'','','','','');
+oCMenu.makeMenu('10899','2846','Accreditation','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=10899','',190,17,'','','','','');
+oCMenu.makeMenu('2947','2846','Correctional Services','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=2947','',190,17,'','','','','');
+oCMenu.makeMenu('4778','2947','Jail Administrator','page.asp?menuid=2816&sub1menuid=2846&sub2menuid=2947&sub3menuid=4778','',190,17,'','','','','');
+oCMenu.makeMenu('4408','2947','Deputy Jail Administrator','page.asp?menuid=2816&sub1menuid=2846&sub2menuid=2947&sub3menuid=4408','',190,17,'','','','','');
+oCMenu.makeMenu('4150','2947','Assistant Jail Administrator','page.asp?menuid=2816&sub1menuid=2846&sub2menuid=2947&sub3menuid=4150','',190,31,'','','','','');
+oCMenu.makeMenu('11060','2947','Classification','page.asp?menuid=2816&sub1menuid=2846&sub2menuid=2947&sub3menuid=11060','',190,17,'','','','','');
+oCMenu.makeMenu('4405','2947','Receiving of items for inmates','page.asp?menuid=2816&sub1menuid=2846&sub2menuid=2947&sub3menuid=4405','',190,31,'','','','','');
+oCMenu.makeMenu('4407','2947','Visitation','page.asp?menuid=2816&sub1menuid=2846&sub2menuid=2947&sub3menuid=4407','',190,17,'','','','','');
+oCMenu.makeMenu('4409','2947','Good News Jail and Prison Ministry','page.asp?menuid=2816&sub1menuid=2846&sub2menuid=2947&sub3menuid=4409','',190,31,'','','','','');
+oCMenu.makeMenu('4767','2846','Photo Gallery','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=4767','',190,17,'','','','','');
+oCMenu.makeMenu('2948','2846','Project Lifesaver','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=2948','',190,17,'','','','','');
+oCMenu.makeMenu('4770','2846','March Of Dimes','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=4770','',190,17,'','','','','');
+oCMenu.makeMenu('4771','2846','Muscular Dystrophy','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=4771','',190,17,'','','','','');
+oCMenu.makeMenu('4774','2846','Special Olympics','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=4774','',190,17,'','','','','');
+oCMenu.makeMenu('2951','2846','Address and Phone Numbers','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=2951','',190,17,'','','','','');
+oCMenu.makeMenu('9191','2846','Comments/Concerns','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=9191','',190,17,'','','','','');
+oCMenu.makeMenu('9192','2846','Public Safety','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=9192','',190,17,'','','','','');
+oCMenu.makeMenu('11154','2846','Annual Report','officials.asp?menuid=2816&sub1menuid=2846&sub2menuid=11154','',190,17,'','','','','');
+oCMenu.makeMenu('2817','','&nbsp;Services','services.asp','',85);
+oCMenu.makeMenu('2817123','','|','','',1,22,'','','clsep','clsep','','','true');
+oCMenu.makeMenu('2819','','&nbsp;Living In Danville / Quick Links','living.asp?menuid=2819','',245);
+oCMenu.makeMenu('2819123','','|','','',1,22,'','','clsep','clsep','','','true');
+oCMenu.makeMenu('2820','','&nbsp;Departments','departments.asp?menuid=2820','',106);
+oCMenu.makeMenu('2820123','','|','','',1,22,'','','clsep','clsep','','','true');
+oCMenu.makeMenu('2824','2820','City Manager','departments.asp?menuid=2820&sub1menuid=2824','','',17,'','','','','left');
+oCMenu.makeMenu('2848','2824','Deputy City Manager','departments.asp?menuid=2820&sub1menuid=2824&sub2menuid=2848','',190,17,'','','','','left');
+oCMenu.makeMenu('2851','2824','Office of Economic Development','departments.asp?menuid=2820&sub1menuid=2824&sub2menuid=2851','',190,31,'','','','','left');
+oCMenu.makeMenu('3910','2824','Organization','departments.asp?menuid=2820&sub1menuid=2824&sub2menuid=3910','',190,17,'','','','','left');
+oCMenu.makeMenu('5018','2824','City-TV 20','departments.asp?menuid=2820&sub1menuid=2824&sub2menuid=5018','',190,17,'','','','','left');
+oCMenu.makeMenu('5078','5018','City Council Webcast','page.asp?menuid=2820&sub1menuid=2824&sub2menuid=5018&sub3menuid=5078','',190,17,'','','','','left');
+oCMenu.makeMenu('11112','5018','Planning Commission Webcast','http://www.danville-va.gov/page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872&sub3menuid=11104','',190,31,'','','','','left');
+oCMenu.makeMenu('9043','5018','City Update','http://www.danville-va.gov/news.asp?cid=3094','',190,17,'','','','','left');
+oCMenu.makeMenu('9228','5018','Danville In-Focus','page.asp?menuid=2820&sub1menuid=2824&sub2menuid=5018&sub3menuid=9228','',190,17,'','','','','left');
+oCMenu.makeMenu('10606','5018','FireWatch','page.asp?menuid=2820&sub1menuid=2824&sub2menuid=5018&sub3menuid=10606','',190,17,'','','','','left');
+oCMenu.makeMenu('11092','5018','City Currents','page.asp?menuid=2820&sub1menuid=2824&sub2menuid=5018&sub3menuid=11092','',190,17,'','','','','left');
+oCMenu.makeMenu('5022','5018','Bulletin Board','page.asp?menuid=2820&sub1menuid=2824&sub2menuid=5018&sub3menuid=5022','',190,17,'','','','','left');
+oCMenu.makeMenu('5023','5018','Programming Schedule','page.asp?menuid=2820&sub1menuid=2824&sub2menuid=5018&sub3menuid=5023','',190,17,'','','','','left');
+oCMenu.makeMenu('2827','2820','City Attorney','departments.asp?menuid=2820&sub1menuid=2827','','',17,'','','','','left');
+oCMenu.makeMenu('3970','2827','Meet the City Attorney','page.asp?menuid=2820&sub1menuid=2827&sub2menuid=3970','',190,17,'','','','','left');
+oCMenu.makeMenu('3862','2820','City Registrar','departments.asp?menuid=2820&sub1menuid=3862','','',17,'','','','','left');
+oCMenu.makeMenu('3969','3862','Electoral Board','page.asp?menuid=2820&sub1menuid=3862&sub2menuid=3969','',190,17,'','','','','left');
+oCMenu.makeMenu('3975','3862','Work at the Polls','page.asp?menuid=2820&sub1menuid=3862&sub2menuid=3975','',190,17,'','','','','left');
+oCMenu.makeMenu('3977','3862','Election Calendar','page.asp?menuid=2820&sub1menuid=3862&sub2menuid=3977','',190,17,'','','','','left');
+oCMenu.makeMenu('4466','3862','Voting Machines','page.asp?menuid=2820&sub1menuid=3862&sub2menuid=4466','',190,17,'','','','','left');
+oCMenu.makeMenu('2829','2820','Community Development','departments.asp?menuid=2820&sub1menuid=2829','','',17,'','','','','left');
+oCMenu.makeMenu('3394','2829','Development Incentives','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=3394','',190,17,'','','','','left');
+oCMenu.makeMenu('4142','2829','Enterprise Zone','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=4142','',190,17,'','','','','left');
+oCMenu.makeMenu('2873','2829','Housing & Development','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2873','',190,17,'','','','','left');
+oCMenu.makeMenu('3122','2873','Program Information','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2873&sub3menuid=3122','',190,17,'','','','','left');
+oCMenu.makeMenu('3125','2873','Housing Programs','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2873&sub3menuid=3125','',190,17,'','','','','left');
+oCMenu.makeMenu('3944','2873','Income Requirements','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2873&sub3menuid=3944','',190,17,'','','','','left');
+oCMenu.makeMenu('3115','2873','Neighborhood Program','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2873&sub3menuid=3115','',190,17,'','','','','left');
+oCMenu.makeMenu('3011','2873','Fair Housing','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2873&sub3menuid=3011','',190,17,'','','','','left');
+oCMenu.makeMenu('2871','2829','Inspections','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871','',190,17,'','','','','left');
+oCMenu.makeMenu('4998','2871','Contractor License Information','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871&sub3menuid=4998','',190,31,'','','','','left');
+oCMenu.makeMenu('4176','2871','Current Building Codes','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871&sub3menuid=4176','',190,17,'','','','','left');
+oCMenu.makeMenu('11127','2871','Demolition Procedures','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871&sub3menuid=11127','',190,17,'','','','','left');
+oCMenu.makeMenu('11136','2871','Permit Guidelines','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871&sub3menuid=11136','',190,17,'','','','','left');
+oCMenu.makeMenu('4065','2871','Rental Housing Inspection Program','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871&sub3menuid=4065','',190,31,'','','','','left');
+oCMenu.makeMenu('4244','2871','Vacant Home Catalog','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871&sub3menuid=4244','',190,17,'','','','','left');
+oCMenu.makeMenu('3009','2871','Permit Fees','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871&sub3menuid=3009','',190,17,'','','','','left');
+oCMenu.makeMenu('11114','2871','Elevator Information','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871&sub3menuid=11114','',190,17,'','','','','left');
+oCMenu.makeMenu('11144','2871','Permit Forms and Applications','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2871&sub3menuid=11144','',190,31,'','','','','left');
+oCMenu.makeMenu('2872','2829','Planning & Zoning','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872','',190,17,'','','','','left');
+oCMenu.makeMenu('11111','2872','Board of Zoning Appeals','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872&sub3menuid=11111','',190,17,'','','','','left');
+oCMenu.makeMenu('4219','2872','Board of Zoning Appeals Agenda','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872&sub3menuid=4219','',190,31,'','','','','left');
+oCMenu.makeMenu('11104','2872','City Planning Commission','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872&sub3menuid=11104','',190,17,'','','','','left');
+oCMenu.makeMenu('3968','2872','City Planning Commission Agenda','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872&sub3menuid=3968','',190,31,'','','','','left');
+oCMenu.makeMenu('11118','2872','Commission of Architectural Review (CAR)','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872&sub3menuid=11118','',190,31,'','','','','left');
+oCMenu.makeMenu('4040','2872','CAR Agenda','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872&sub3menuid=4040','',190,17,'','','','','left');
+oCMenu.makeMenu('4185','2872','Business License Information','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872&sub3menuid=4185','',190,31,'','','','','left');
+oCMenu.makeMenu('4184','2872','Residential Lot Plans','page.asp?menuid=2820&sub1menuid=2829&sub2menuid=2872&sub3menuid=4184','',190,17,'','','','','left');
+oCMenu.makeMenu('2874','2829','Development Review Process','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2874','',190,17,'','','','','left');
+oCMenu.makeMenu('2869','2829','Contact Our Staff','departments.asp?menuid=2820&sub1menuid=2829&sub2menuid=2869','',190,17,'','','','','left');
+oCMenu.makeMenu('2830','2820','Emergency Services','departments.asp?menuid=2820&sub1menuid=2830','','',17,'','','','','left');
+oCMenu.makeMenu('5064','2830','Emergency Management','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5064','',190,17,'','','','','left');
+oCMenu.makeMenu('10757','5064','Emergency GO PAK','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5064&sub3menuid=10757','',190,17,'','','','','left');
+oCMenu.makeMenu('10895','5064','Evacuation','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5064&sub3menuid=10895','',190,17,'','','','','left');
+oCMenu.makeMenu('8843','5064','Tornado Safety','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5064&sub3menuid=8843','',190,17,'','','','','left');
+oCMenu.makeMenu('10896','5064','Emergency Shelters','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5064&sub3menuid=10896','',190,17,'','','','','left');
+oCMenu.makeMenu('10754','5064','Flood Preparedness','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5064&sub3menuid=10754','',190,17,'','','','','left');
+oCMenu.makeMenu('3661','5064','Storm Ready Community','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5064&sub3menuid=3661','',190,17,'','','','','left');
+oCMenu.makeMenu('11277','5064','¿Está usted Listo?','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5064&sub3menuid=11277','',190,17,'','','','','left');
+oCMenu.makeMenu('5069','2830','Emergency Communications','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5069','',190,17,'','','','','left');
+oCMenu.makeMenu('5070','5069','Emergency Medical Dispatch','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5069&sub3menuid=5070','',190,17,'','','','','left');
+oCMenu.makeMenu('3659','5069','Wireless  911','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5069&sub3menuid=3659','',190,17,'','','','','left');
+oCMenu.makeMenu('8977','5069','911 success stories','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5069&sub3menuid=8977','',190,17,'','','','','left');
+oCMenu.makeMenu('10602','5069','MEET 9-1-1','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5069&sub3menuid=10602','',190,17,'','','','','left');
+oCMenu.makeMenu('5098','5069','S.N.A.P  Program','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5069&sub3menuid=5098','',190,17,'','','','','left');
+oCMenu.makeMenu('10947','2830','Doing our best','departments.asp?menuid=2820&sub1menuid=2830&sub2menuid=10947','',190,17,'','','','','left');
+oCMenu.makeMenu('10950','10947','911 Accreditation','departments.asp?menuid=2820&sub1menuid=2830&sub2menuid=10947&sub3menuid=10950','',190,17,'','','','','left');
+oCMenu.makeMenu('10949','10947','9-1-1 Governors Award & Regional Award (2007)','departments.asp?menuid=2820&sub1menuid=2830&sub2menuid=10947&sub3menuid=10949','',190,31,'','','','','left');
+oCMenu.makeMenu('10952','10947','91-1 Regional Award (2005)','departments.asp?menuid=2820&sub1menuid=2830&sub2menuid=10947&sub3menuid=10952','',190,17,'','','','','left');
+oCMenu.makeMenu('10951','10947','Stewardship Award Finalist','departments.asp?menuid=2820&sub1menuid=2830&sub2menuid=10947&sub3menuid=10951','',190,17,'','','','','left');
+oCMenu.makeMenu('3839','2830','CERT Program','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=3839','',190,17,'','','','','left');
+oCMenu.makeMenu('5073','3839','CERT training','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=3839&sub3menuid=5073','',190,17,'','','','','left');
+oCMenu.makeMenu('5071','3839','CERT in Action','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=3839&sub3menuid=5071','',190,17,'','','','','left');
+oCMenu.makeMenu('5092','2830','File of Life Program','page.asp?menuid=2820&sub1menuid=2830&sub2menuid=5092','',190,17,'','','','','left');
+oCMenu.makeMenu('2831','2820','Finance','departments.asp?menuid=2820&sub1menuid=2831','','',17,'','','','','left');
+oCMenu.makeMenu('2879','2831','Accounting','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2879','',190,17,'','','','','left');
+oCMenu.makeMenu('3013','2879','CAFR','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2879&sub3menuid=3013','',190,17,'','','','','left');
+oCMenu.makeMenu('3014','2879','Unclaimed Property','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2879&sub3menuid=3014','',190,17,'','','','','left');
+oCMenu.makeMenu('4425','2879','W9 Form','page.asp?menuid=2820&sub1menuid=2831&sub2menuid=2879&sub3menuid=4425','',190,17,'','','','','left');
+oCMenu.makeMenu('2850','2831','Budget Office','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2850','',190,17,'','','','','left');
+oCMenu.makeMenu('2881','2831','Central Collections','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2881','',190,17,'','','','','left');
+oCMenu.makeMenu('3184','2881','Payment Options','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2881&sub3menuid=3184','',190,17,'','','','','left');
+oCMenu.makeMenu('2882','2831','Purchasing','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882','',190,17,'','','','','left');
+oCMenu.makeMenu('3236','2882','Bidder Application','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3236','',190,17,'','','','','left');
+oCMenu.makeMenu('4421','2882','Bonds','page.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=4421','',190,17,'','','','','left');
+oCMenu.makeMenu('3340','2882','City Business License','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3340','',190,17,'','','','','left');
+oCMenu.makeMenu('4045','2882','Commodity Codes','page.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=4045','',190,17,'','','','','left');
+oCMenu.makeMenu('4420','2882','Construction Permits','page.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=4420','',190,17,'','','','','left');
+oCMenu.makeMenu('3020','2882','Contact Us','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3020','',190,17,'','','','','left');
+oCMenu.makeMenu('3022','2882','Current Bids','l_Purchasing_CB.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3022','',190,17,'','','','','left');
+oCMenu.makeMenu('3023','2882','Delivery of Goods','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3023','',190,17,'','','','','left');
+oCMenu.makeMenu('3024','2882','Doing Business with the City','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3024','',190,31,'','','','','left');
+oCMenu.makeMenu('3025','2882','Ethics in Procurement','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3025','',190,17,'','','','','left');
+oCMenu.makeMenu('3027','2882','Payment Policies','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3027','',190,17,'','','','','left');
+oCMenu.makeMenu('3029','2882','Procurement Codes','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3029','',190,17,'','','','','left');
+oCMenu.makeMenu('3031','2882','Purchasing Cards','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3031','',190,17,'','','','','left');
+oCMenu.makeMenu('3033','2882','Standard Requirements & Info','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3033','',190,31,'','','','','left');
+oCMenu.makeMenu('3021','2882','State Contractor\'s Licenses','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3021','',190,31,'','','','','left');
+oCMenu.makeMenu('3019','2882','W 9 Form','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2882&sub3menuid=3019','',190,17,'','','','','left');
+oCMenu.makeMenu('2880','2831','Real Estate','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2880','',190,17,'','','','','left');
+oCMenu.makeMenu('3015','2880','Elderly Tax Relief','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2880&sub3menuid=3015','',190,17,'','','','','left');
+oCMenu.makeMenu('3016','2880','Land Use Program','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2880&sub3menuid=3016','',190,17,'','','','','left');
+oCMenu.makeMenu('11237','2880','Real Estate Land Books','page.asp?menuid=2820&sub1menuid=2831&sub2menuid=2880&sub3menuid=11237','',190,17,'','','','','left');
+oCMenu.makeMenu('3116','2880','Tax Abatement (Bldgs. Razed, Destroyed or Damaged)','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2880&sub3menuid=3116','',190,31,'','','','','left');
+oCMenu.makeMenu('3017','2880','Tax Abatement Rehabilitated Bldgs.','departments.asp?menuid=2820&sub1menuid=2831&sub2menuid=2880&sub3menuid=3017','',190,31,'','','','','left');
+oCMenu.makeMenu('2832','2820','Fire','departments.asp?menuid=2820&sub1menuid=2832','','',17,'','','','','left');
+oCMenu.makeMenu('2886','2832','Facilities','l_fire.asp?menuid=2820&sub1menuid=2832&sub2menuid=2886','',190,17,'','','','','left');
+oCMenu.makeMenu('4252','2886','Fire Station #1/Headquarters','l_fire.asp?menuid=2820&sub1menuid=2832&sub2menuid=2886&cid=3537','',190,31,'','','','','left');
+oCMenu.makeMenu('4253','2886','Fire Station #2','l_fire.asp?menuid=2820&sub1menuid=2832&sub2menuid=2886&cid=3560','',190,17,'','','','','left');
+oCMenu.makeMenu('4254','2886','Fire Station #3','l_fire.asp?menuid=2820&sub1menuid=2832&sub2menuid=2886&cid=3565','',190,17,'','','','','left');
+oCMenu.makeMenu('4255','2886','Fire Station #4','l_fire.asp?menuid=2820&sub1menuid=2832&sub2menuid=2886&cid=3566','',190,17,'','','','','left');
+oCMenu.makeMenu('4256','2886','Fire Station #5','l_fire.asp?menuid=2820&sub1menuid=2832&sub2menuid=2886&cid=3567','',190,17,'','','','','left');
+oCMenu.makeMenu('4257','2886','Fire Station #6','l_fire.asp?menuid=2820&sub1menuid=2832&sub2menuid=2886&cid=3569','',190,17,'','','','','left');
+oCMenu.makeMenu('4258','2886','Fire Station #7','l_fire.asp?menuid=2820&sub1menuid=2832&sub2menuid=2886&cid=3570','',190,17,'','','','','left');
+oCMenu.makeMenu('4259','2886','Regional Training Center','l_fire.asp?menuid=2820&sub1menuid=2832&sub2menuid=2886&cid=3590','',190,17,'','','','','left');
+oCMenu.makeMenu('2888','2832','Fire Prevention and Education','departments.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888','',190,31,'','','','','left');
+oCMenu.makeMenu('4326','2888','Fire Prevention Week 2008','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=4326','',190,17,'','','','','left');
+oCMenu.makeMenu('3004','2888','Enforcement, Investigations & Permits','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=3004','',190,31,'','','','','left');
+oCMenu.makeMenu('3005','2888','Fire & Life Safety Programs','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=3005','',190,31,'','','','','left');
+oCMenu.makeMenu('3588','2888','...Talks & Tours','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=3588','',190,17,'','','','','left');
+oCMenu.makeMenu('3586','2888','...Citizens\' Fire Academy','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=3586','',190,17,'','','','','left');
+oCMenu.makeMenu('3587','2888','...Fire Time','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=3587','',190,17,'','','','','left');
+oCMenu.makeMenu('3592','2888','...Child Safety Seat Inspections','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=3592','',190,31,'','','','','left');
+oCMenu.makeMenu('3003','2888','Smoke Alarms','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=3003','',190,17,'','','','','left');
+oCMenu.makeMenu('3006','2888','Fire Prevention Tips','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=3006','',190,17,'','','','','left');
+oCMenu.makeMenu('3594','2888','Kids Coloring Page','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=2888&sub3menuid=3594','',190,17,'','','','','left');
+oCMenu.makeMenu('2883','2832','History','departments.asp?menuid=2820&sub1menuid=2832&sub2menuid=2883','',190,17,'','','','','left');
+oCMenu.makeMenu('2887','2832','Job Opportunities','departments.asp?menuid=2820&sub1menuid=2832&sub2menuid=2887','',190,17,'','','','','left');
+oCMenu.makeMenu('2999','2887','Organization','departments.asp?menuid=2820&sub1menuid=2832&sub2menuid=2887&sub3menuid=2999','',190,17,'','','','','left');
+oCMenu.makeMenu('3000','2887','Career Opportunities','departments.asp?menuid=2820&sub1menuid=2832&sub2menuid=2887&sub3menuid=3000','',190,17,'','','','','left');
+oCMenu.makeMenu('2891','2832','Special Operations','l_fire_so.asp?menuid=2820&sub1menuid=2832&sub2menuid=2891','',190,17,'','','','','left');
+oCMenu.makeMenu('4250','2891','Hazardous Materials Response Team','l_fire_so.asp?menuid=2820&sub1menuid=2832&sub2menuid=2891&cid=3052','',190,31,'','','','','left');
+oCMenu.makeMenu('4251','2891','Tactical Response Team','l_fire_so.asp?menuid=2820&sub1menuid=2832&sub2menuid=2891&cid=3523','',190,17,'','','','','left');
+oCMenu.makeMenu('2889','2832','Training','l_fire_training.asp?menuid=2820&sub1menuid=2832&sub2menuid=2889','',190,17,'','','','','left');
+oCMenu.makeMenu('4261','2889','Emergency Medical Services','l_fire_training.asp?menuid=2820&sub1menuid=2832&sub2menuid=2889&cid=3534','',190,17,'','','','','left');
+oCMenu.makeMenu('4260','2889','Fire Training','l_fire_training.asp?menuid=2820&sub1menuid=2832&sub2menuid=2889&cid=3002','',190,17,'','','','','left');
+oCMenu.makeMenu('3530','2832','Gallery','page.asp?menuid=2820&sub1menuid=2832&sub2menuid=3530','',190,17,'','','','','left');
+oCMenu.makeMenu('2833','2820','Human Resources','departments.asp?menuid=2820&sub1menuid=2833','','',17,'','','','','righttop');
+oCMenu.makeMenu('2893','2833','Benefits','departments.asp?menuid=2820&sub1menuid=2833&sub2menuid=2893','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2892','2833','Employment Opportunities','l_HR_Jobs_List.asp?menuid=2820&sub1menuid=2833&sub2menuid=2892','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3128','2833','Hiring Process','departments.asp?menuid=2820&sub1menuid=2833&sub2menuid=3128','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2896','2833','Occupational Health','departments.asp?menuid=2820&sub1menuid=2833&sub2menuid=2896','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2834','2820','Human Services','departments.asp?menuid=2820&sub1menuid=2834','','',17,'','','','','righttop');
+oCMenu.makeMenu('3165','2834','Adult Detention','departments.asp?menuid=2820&sub1menuid=2834&sub2menuid=3165','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3166','2834','Juvenile Detention','departments.asp?menuid=2820&sub1menuid=2834&sub2menuid=3166','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3817','3166','Education Services','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3166&sub3menuid=3817','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3819','3166','Alternative Detention','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3166&sub3menuid=3819','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3801','2834','Library','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3801','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3804','3801','Adult','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3801&sub3menuid=3804','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3805','3801','Children','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3801&sub3menuid=3805','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3806','3801','Genealogy','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3801&sub3menuid=3806','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3802','3801','Law Library','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3801&sub3menuid=3802','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3807','3801','Online Catalogue','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3801&sub3menuid=3807','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4113','3801','Online Resources','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3801&sub3menuid=4113','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3808','3801','Reference','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3801&sub3menuid=3808','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3809','3801','Westover Branch','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3801&sub3menuid=3809','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3173','2834','Social Services','departments.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3829','3173','Adoption','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3829','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3823','3173','Adult Protective Services','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3823','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3827','3173','Adult Services','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3827','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3825','3173','Child Protective Services','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3825','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3826','3173','Day Care','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3826','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3830','3173','Family Services','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3830','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3821','3173','Food Stamps','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3821','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3828','3173','Fuel Assistance and Cooling Program','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3828','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3831','3173','Mediation Services','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3831','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3822','3173','Medicaid','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3822','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3820','3173','Temporary Assistance for Needy Families (TANF)','page.asp?menuid=2820&sub1menuid=2834&sub2menuid=3173&sub3menuid=3820','',190,31,'','','','','righttop');
+oCMenu.makeMenu('2835','2820','Information  Technology','departments.asp?menuid=2820&sub1menuid=2835','','',17,'','','','','righttop');
+oCMenu.makeMenu('11101','2835','Application Support','departments.asp?menuid=2820&sub1menuid=2835&sub2menuid=11101','',190,17,'','','','','righttop');
+oCMenu.makeMenu('10869','2835','City Web Site Statistics','departments.asp?menuid=2820&sub1menuid=2835&sub2menuid=10869','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3666','2835','GIS','departments.asp?menuid=2820&sub1menuid=2835&sub2menuid=3666','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11122','2835','Help Desk / Administration','page.asp?menuid=2820&sub1menuid=2835&sub2menuid=11122','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11107','2835','Network Support','departments.asp?menuid=2820&sub1menuid=2835&sub2menuid=11107','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11106','2835','Organizational Chart','departments.asp?menuid=2820&sub1menuid=2835&sub2menuid=11106','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11108','2835','PC Support','departments.asp?menuid=2820&sub1menuid=2835&sub2menuid=11108','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11123','2835','Techno Tips','page.asp?menuid=2820&sub1menuid=2835&sub2menuid=11123','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4596','2835','Terminology','departments.asp?menuid=2820&sub1menuid=2835&sub2menuid=4596','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4503','2835','Wireless in Danville','departments.asp?menuid=2820&sub1menuid=2835&sub2menuid=4503','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2836','2820','Parks, Recreation & Tourism','departments.asp?menuid=2820&sub1menuid=2836','','',31,'','','','','righttop');
+oCMenu.makeMenu('2903','2836','Ballou Recreation Program / Services','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3473','2903','Blood Pressure Checks','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3473','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3481','2903','Bowling Tournaments','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3481','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3532','2903','Classes and Programs','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3532','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3484','2903','Dance Programs','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3484','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3531','2903','Fitness Programs','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3531','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4555','2903','Lighten Up 4 Life- V','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=4555','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3556','2903','Reduced Refuse Program','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3556','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3674','2903','Senior Transportation Services','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3674','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3572','2903','Services, Safety and Outreach Programs','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3572','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3891','2903','Special Events','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3891','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3888','2903','Special Interest Groups','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2903&sub3menuid=3888','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11077','2836','Community Market','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=11077','',190,17,'','','','','left');
+oCMenu.makeMenu('2899','2836','Community Recreation Programs','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899','',190,31,'','','','','left');
+oCMenu.makeMenu('4007','2899','Adult Arts & Crafts','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4007','',190,17,'','','','','left');
+oCMenu.makeMenu('4014','2899','Adult Hobbies & Interests','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4014','',190,17,'','','','','left');
+oCMenu.makeMenu('4012','2899','Adult Music and Dance','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4012','',190,17,'','','','','left');
+oCMenu.makeMenu('4010','2899','Adult Socialization & Recreation','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4010','',190,31,'','','','','left');
+oCMenu.makeMenu('4006','2899','Adult Wellness & Fitness','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4006','',190,17,'','','','','left');
+oCMenu.makeMenu('3716','2899','After School & School Break Programs','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=3716','',190,31,'','','','','left');
+oCMenu.makeMenu('4301','2899','Children\'s Hobbies & Special Interests','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4301','',190,31,'','','','','left');
+oCMenu.makeMenu('4302','2899','Children\'s Special Events & Trips','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4302','',190,31,'','','','','left');
+oCMenu.makeMenu('4269','2899','Children\'s Sports and Fitness','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4269','',190,31,'','','','','left');
+oCMenu.makeMenu('4283','2899','Preschool Special Events and Programs','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4283','',190,31,'','','','','left');
+oCMenu.makeMenu('4282','2899','Preschool Sports & Fitness','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4282','',190,17,'','','','','left');
+oCMenu.makeMenu('3568','2899','Teen After School Programs','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=3568','',190,17,'','','','','left');
+oCMenu.makeMenu('4272','2899','Teen Open Recreation','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4272','',190,17,'','','','','left');
+oCMenu.makeMenu('4274','2899','Teen Self Improvement','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4274','',190,17,'','','','','left');
+oCMenu.makeMenu('4271','2899','Teen Special Events & Tournaments','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4271','',190,31,'','','','','left');
+oCMenu.makeMenu('4273','2899','Teen Special Interest Programs','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4273','',190,31,'','','','','left');
+oCMenu.makeMenu('4270','2899','Teen Sports and Fitness','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2899&sub3menuid=4270','',190,17,'','','','','left');
+oCMenu.makeMenu('2900','2836','Facilities','l_Parks_Facilities.asp?menuid=2820&sub1menuid=2836&sub2menuid=2900','',190,17,'','','','','left');
+oCMenu.makeMenu('2901','2836','Outdoor Recreation Services','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901','',190,31,'','','','','left');
+oCMenu.makeMenu('10600','2901','2008 Mountain Bike Photos','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=10600','',190,17,'','','','','left');
+oCMenu.makeMenu('3310','2901','Assumption of Risk Form','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=3310','',190,17,'','','','','left');
+oCMenu.makeMenu('10601','2901','Ballou Park Shelter Photos','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=10601','',190,17,'','','','','left');
+oCMenu.makeMenu('4793','2901','Dan Daniel Memorial Park Shelter Photos','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=4793','',190,31,'','','','','left');
+oCMenu.makeMenu('4346','2901','Directions to Anglers Park','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=4346','',190,17,'','','','','left');
+oCMenu.makeMenu('5014','2901','Directions to Ballou Park and Dan Daniel Memorial Park','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=5014','',190,45,'','','','','left');
+oCMenu.makeMenu('10970','2901','Equipment Rental','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=10970','',190,17,'','','','','left');
+oCMenu.makeMenu('3314','2901','Parks','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=3314','',190,17,'','','','','left');
+oCMenu.makeMenu('3311','2901','Picnic Rentals','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=3311','',190,17,'','','','','left');
+oCMenu.makeMenu('3313','2901','Skate Park','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=3313','',190,17,'','','','','left');
+oCMenu.makeMenu('10965','2901','Skate Park Rules and Regulations','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=10965','',190,31,'','','','','left');
+oCMenu.makeMenu('4729','2901','Special Services 2008','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=4729','',190,17,'','','','','left');
+oCMenu.makeMenu('3312','2901','Trails','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=3312','',190,17,'','','','','left');
+oCMenu.makeMenu('10966','2901','Winter Programs 2009','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=10966','',190,17,'','','','','left');
+oCMenu.makeMenu('10604','2901','Facility Guide','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2901&sub3menuid=10604','',190,17,'','','','','left');
+oCMenu.makeMenu('3167','2836','Park Maintenance','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=3167','',190,17,'','','','','left');
+oCMenu.makeMenu('2908','2836','Sports & Athletic Programs / Classes','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2908','',190,31,'','','','','left');
+oCMenu.makeMenu('10063','2908','2009 Optimist Basketball Schedule','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2908&sub3menuid=10063','',190,31,'','','','','left');
+oCMenu.makeMenu('3402','2908','Sports for Adults','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2908&sub3menuid=3402','',190,17,'','','','','left');
+oCMenu.makeMenu('3400','2908','Sports for Youth','page.asp?menuid=2820&sub1menuid=2836&sub2menuid=2908&sub3menuid=3400','',190,17,'','','','','left');
+oCMenu.makeMenu('2911','2836','Therapeutic Recreation','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2911','',190,17,'','','','','left');
+oCMenu.makeMenu('3331','2911','Programs / classes','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2911&sub3menuid=3331','',190,17,'','','','','left');
+oCMenu.makeMenu('3172','2911','Theme Parties / Special Events','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2911&sub3menuid=3172','',190,31,'','','','','left');
+oCMenu.makeMenu('3170','2911','Other Services','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2911&sub3menuid=3170','',190,17,'','','','','left');
+oCMenu.makeMenu('3287','2911','Volunteer','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2911&sub3menuid=3287','',190,17,'','','','','left');
+oCMenu.makeMenu('2916','2836','Tourism Division','departments.asp?menuid=2820&sub1menuid=2836&sub2menuid=2916','',190,17,'','','','','left');
+oCMenu.makeMenu('2837','2820','Police','departments.asp?menuid=2820&sub1menuid=2837','','',17,'','','','','righttop');
+oCMenu.makeMenu('3451','2837','Chief of Police','departments.asp?menuid=2820&sub1menuid=2837&sub2menuid=3451','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3453','2837','Deputy Chief of Police','departments.asp?menuid=2820&sub1menuid=2837&sub2menuid=3453','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2922','2837','Operations Division','departments.asp?menuid=2820&sub1menuid=2837&sub2menuid=2922','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4060','2922','Community Police Division','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=2922&sub3menuid=4060','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3854','2922','Investigations Division','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=2922&sub3menuid=3854','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3852','2922','Patrol Division','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=2922&sub3menuid=3852','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2927','2837','Services Division','departments.asp?menuid=2820&sub1menuid=2837&sub2menuid=2927','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3676','2927','Crime Scene','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=2927&sub3menuid=3676','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3675','2927','Records Division','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=2927&sub3menuid=3675','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3855','2927','School Resource Officers','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=2927&sub3menuid=3855','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2926','2837','Professional Standards','departments.asp?menuid=2820&sub1menuid=2837&sub2menuid=2926','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2930','2837','Employment Opportunities','departments.asp?menuid=2820&sub1menuid=2837&sub2menuid=2930','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3322','2837','Media Releases','l_police_media_releases_List.asp?menuid=2820&sub1menuid=2837&sub2menuid=3322','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3836','2837','Phone Directory','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=3836','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4647','2837','History','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4647','',190,17,'','','','','righttop');
+oCMenu.makeMenu('10955','4647','Photo Gallery','departments.asp?menuid=2820&sub1menuid=2837&sub2menuid=4647&sub3menuid=10955','',190,17,'','','','','righttop');
+oCMenu.makeMenu('8880','2837','Danville Police Chaplain Unit','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=8880','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3596','2837','Danville`s Most Wanted','departments.asp?menuid=2820&sub1menuid=2837&sub2menuid=3596','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4432','2837','Crime Prevention','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4432','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4435','4432','Business Watch','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4432&sub3menuid=4435','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4434','4432','Crime Stoppers','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4432&sub3menuid=4434','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11299','4432','Keep Your Cool!!','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4432&sub3menuid=11299','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4445','4432','Most asked questions','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4432&sub3menuid=4445','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4431','4432','Neighborhood Watch','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4432&sub3menuid=4431','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4436','4432','Scams and schemes','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4432&sub3menuid=4436','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4794','2837','The Danville Police Department Patch','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4794','',190,31,'','','','','righttop');
+oCMenu.makeMenu('5130','2837','Active Warrant List','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=5130','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4738','2837','Arrest Information','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=4738','',190,17,'','','','','righttop');
+oCMenu.makeMenu('9169','2837','Reported Incidents','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=9169','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11103','2837','Distracted Driver','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=11103','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11079','2837','Winter Driving Tips','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=11079','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11018','2837','Officers\' Awards and Commendations','departments.asp?menuid=2820&sub1menuid=2837&sub2menuid=11018','',190,31,'','','','','righttop');
+oCMenu.makeMenu('5128','2837','Crime Rate Information','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=5128','',190,17,'','','','','righttop');
+oCMenu.makeMenu('10981','2837','2006 Annual Report','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=10981','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11141','2837','National Night Out 2008','page.asp?menuid=2820&sub1menuid=2837&sub2menuid=11141','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2838','2820','Public Works','departments.asp?menuid=2820&sub1menuid=2838','','',17,'','','','','righttop');
+oCMenu.makeMenu('2933','2838','Administration','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2933','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2949','2838','Building Maint','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2949','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2952','2838','Cemeteries','l_Public_WCC.asp?menuid=2820&sub1menuid=2838&sub2menuid=2952','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3040','2952','Burial Statistics','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2952&sub3menuid=3040','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3036','2952','Fees','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2952&sub3menuid=3036','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3037','2952','Hours/Locations','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2952&sub3menuid=3037','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3039','2952','Plot Decorations','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2952&sub3menuid=3039','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3038','2952','Rules & Regulations','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2952&sub3menuid=3038','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2936','2838','Code Enforcement','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2936','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2939','2838','Communications','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2939','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2954','2838','Engineering','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2954','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3658','2954','Erosion & Sediment Control','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2954&sub3menuid=3658','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3644','2954','Permits','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2954&sub3menuid=3644','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4779','2954','Street Resurfacing','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2954&sub3menuid=4779','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3034','2954','Traffic Control','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2954&sub3menuid=3034','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2953','2838','Grounds Maint','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2953','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3324','2838','Landscaping','page.asp?menuid=2820&sub1menuid=2838&sub2menuid=3324','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2942','2838','Motorized Equip','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2942','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3987','2942','Warehouse','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2942&sub3menuid=3987','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2956','2838','Sanitation','l_Public_WS.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3776','2956','Appliance Pick Up','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3776','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3777','2956','Compost/Mulch','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3777','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3778','2956','Dead Animals','page.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3778','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3779','2956','Litter Pick Up','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3779','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3780','2956','Loose Leaves','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3780','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3895','2956','Recycling','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3895','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3896','2956','Refuse Collection','page.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3896','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3897','2956','Sanitary Sewers','page.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3897','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3898','2956','Storm Drains','page.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3898','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3907','2956','Yard Waste','page.asp?menuid=2820&sub1menuid=2838&sub2menuid=2956&sub3menuid=3907','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4521','2838','Snow Removal','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=4521','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3744','2838','Street Maintenance','departments.asp?menuid=2820&sub1menuid=2838&sub2menuid=3744','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2839','2820','Transportation','departments.asp?menuid=2820&sub1menuid=2839','','',17,'','','','','righttop');
+oCMenu.makeMenu('2960','2839','Danville Regional Airport','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2960','',190,17,'','','','','righttop');
+oCMenu.makeMenu('9325','2960','Approaches & Access','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2960&sub3menuid=9325','',190,17,'','','','','righttop');
+oCMenu.makeMenu('9327','2960','Development Opportunities','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2960&sub3menuid=9327','',190,17,'','','','','righttop');
+oCMenu.makeMenu('9324','2960','Safety and Security','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2960&sub3menuid=9324','',190,17,'','','','','righttop');
+oCMenu.makeMenu('9326','2960','Services','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2960&sub3menuid=9326','',190,17,'','','','','righttop');
+oCMenu.makeMenu('9328','2960','Location','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2960&sub3menuid=9328','',190,17,'','','','','righttop');
+oCMenu.makeMenu('9329','2960','Facility Information','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2960&sub3menuid=9329','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2963','2839','Mass Transit','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2963','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3050','2963','Title VI Rights','http://www.danville-va.gov/upload/images/Transportation/Danville Transit Title VI Program.pdf','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3341','2963','Fare and General Service Information','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2963&sub3menuid=3341','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3051','2963','New Bus Service','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2963&sub3menuid=3051','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3045','2963','System Map','http://www.danville-va.gov/upload/images/Transportation/Lastmap.pdf','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3041','2963','Route/Schedule Information','l_Transportation_MTFR.asp?menuid=2820&sub1menuid=2839&sub2menuid=2963&sub3menuid=3041','',190,17,'','','','','righttop');
+oCMenu.makeMenu('10728','2963','Bus Stop Listings','http://www.danville-va.gov/upload/images/Transportation/Bus Stops.pdf','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3042','2963','Handivan Service','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2963&sub3menuid=3042','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3043','2963','Reserve a Ride Service','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2963&sub3menuid=3043','',190,17,'','','','','righttop');
+oCMenu.makeMenu('10301','2963','Trolley Service','departments.asp?menuid=2820&sub1menuid=2839&sub2menuid=2963&sub3menuid=10301','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3385','2820','Utilities','departments.asp?menuid=2820&sub1menuid=3385','','',17,'','','','','righttop');
+oCMenu.makeMenu('3850','3385','About Danville Utilities','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3850','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4677','3850','Our Staff','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3850&sub3menuid=4677','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4584','3850','Events & Workshops','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3850&sub3menuid=4584','',190,17,'','','','','righttop');
+oCMenu.makeMenu('10997','3850','2007 Biennial Utility Rate Study','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3850&sub3menuid=10997','',190,31,'','','','','righttop');
+oCMenu.makeMenu('4019','3850','Frequently Asked Questions','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3850&sub3menuid=4019','',190,17,'','','','','righttop');
+oCMenu.makeMenu('10729','3385','Electricity','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=10729','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3893','10729','Electric Safety','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=10729&sub3menuid=3893','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4674','10729','Electricity Blackouts','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=10729&sub3menuid=4674','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3685','10729','Pinnacles Hydro Complex','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=10729&sub3menuid=3685','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2973','10729','Electric Rates','departments.asp?menuid=2820&sub1menuid=3385&sub2menuid=10729&sub3menuid=2973','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3835','10729','Deregulation Frequently Asked Questions','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=10729&sub3menuid=3835','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3678','3385','Natural Gas','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3678','',190,17,'','','','','righttop');
+oCMenu.makeMenu('10998','3678','How to Light a Pilot Light','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3678&sub3menuid=10998','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3894','3678','Gas Safety','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3678&sub3menuid=3894','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2974','3678','Natural Gas Rates','departments.asp?menuid=2820&sub1menuid=3385&sub2menuid=3678&sub3menuid=2974','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4700','3678','Closing of the Propane Plant','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3678&sub3menuid=4700','',190,31,'','','','','righttop');
+oCMenu.makeMenu('10730','3385','Water','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=10730','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4676','10730','Water Quality','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=10730&sub3menuid=4676','',190,17,'','','','','righttop');
+oCMenu.makeMenu('2975','10730','Water Rates','departments.asp?menuid=2820&sub1menuid=3385&sub2menuid=10730&sub3menuid=2975','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3677','3385','Telecommunications','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3677','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11000','3677','nDanville Fiber Optic Network','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3677&sub3menuid=11000','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3392','3677','Danville\'s Hot Parks','departments.asp?menuid=2820&sub1menuid=3385&sub2menuid=3677&sub3menuid=3392','',190,17,'','','','','righttop');
+oCMenu.makeMenu('3853','3385','Customer Service','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3853','',190,17,'','','','','righttop');
+oCMenu.makeMenu('10999','3853','Service Policies and Procedures','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3853&sub3menuid=10999','',190,31,'','','','','righttop');
+oCMenu.makeMenu('4673','3853','Starting or Stopping Services','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3853&sub3menuid=4673','',190,31,'','','','','righttop');
+oCMenu.makeMenu('4663','3853','About Your Meter','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3853&sub3menuid=4663','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4660','3853','About Your Bill','departments.asp?menuid=2820&sub1menuid=3385&sub2menuid=3853&sub3menuid=4660','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4672','3853','Payment Options','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3853&sub3menuid=4672','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4285','3385','Key Accounts','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=4285','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11007','4285','Key Accounts Newsletter','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=4285&sub3menuid=11007','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11129','4285','Energy Symposium','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=4285&sub3menuid=11129','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4702','3385','Kids Pages','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=4702','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4693','3385','Conserve and Save','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=4693','',190,17,'','','','','righttop');
+oCMenu.makeMenu('5036','4693','Efficiencies in Manufacturing','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=4693&sub3menuid=5036','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3860','4693','Conserving Energy','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=4693&sub3menuid=3860','',190,17,'','','','','righttop');
+oCMenu.makeMenu('4275','4693','Energy Conservation for Businesses','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=4693&sub3menuid=4275','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3551','3385','In The News','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3551','',190,17,'','','','','righttop');
+oCMenu.makeMenu('11004','3551','Energy Efficient Habitat House','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3551&sub3menuid=11004','',190,31,'','','','','righttop');
+oCMenu.makeMenu('3824','3385','Links','page.asp?menuid=2820&sub1menuid=3385&sub2menuid=3824','',190,17,'','','','','righttop');
+
+//Leave this line - it constructs the menu
+oCMenu.construct()  
+</Script>
+<table width="100%" border="0" cellpadding = "0" cellspacing = "0" height="" align="center">
+
+
+
+<tr><td width="100%" valign="top" height="109" bgcolor="#1E1502">
+<table width="100%" border="0" cellpadding = "0" cellspacing = "0" height="109">
+<tr>
+<td width="100%" valign="top" HEIGHT=109 class="topbg"><br></td>
+</tr>
+</table>
+<div class="flydiv">
+<table width="100%" border="0" cellpadding = "0" cellspacing = "0" height="109">
+<tr>
+<td width="680" valign="top" HEIGHT="109">
+<A href="home.asp"><img src="/upload/images/banners/4.jpg" alt="Danville, Virginia.. The Heart of Southern VA" border="0"></a>
+</td>
+<td width="1" valign="top" HEIGHT="109"><img src="/upload/images/pixel.gif" WIDTH="1" height="109" alt="_"></td>
+<td width="100%" valign="top" HEIGHT="109">
+<table width="100%" border="0" cellpadding = "0" cellspacing = "0" height="109" align="center" bgcolor="">
+<tr> 
+<TD WIDTH="100%" valign="top" height="1" bgcolor=""><img src="/upload/images/pixel.gif" WIDTH="140" height="1" alt="_"></TD>
+</tr>
+<tr>
+<TD WIDTH="100%" valign="middle" height="109"><div class="topmenu">
+
+   <a class=txtSmallWhite href="home.asp"><script language="javascript">document.write("HOME")</script></a>
+
+
+<br>
+   <a class=txtSmallWhite href="sitemap.asp"><script language="javascript">document.write("SITEMAP")</script></a>
+
+
+<br>
+   <a class=txtSmallWhite href="contacts.asp"><script language="javascript">document.write("CONTACT")</script></a>
+
+
+<br>
+   <a class=txtSmallWhite href="calendar.asp"><script language="javascript">document.write("CALENDAR")</script></a>
+
+
+<br>
+</div>
+<table border="0" cellpadding = "0" cellspacing = "2"><noindex><form name=searchform method=post action="sitesearch.asp"><tr><td valign="middle"><LABEL for="RequestStr" style="display:none;" accesskey="S"><script>document.write("search:")</script></LABEL><input type=text class="stdInput" style="margin-top:6;" ID="RequestStr" name="RequestStr" value="SEARCH" onclick="if (this.value=='SEARCH'){this.value='';}"><input type="submit" Value="go" name="txtInput" class="searchButton"></td></tr></form></noindex></table></TD>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td></tr>
+<!--#0B095C  #336699  background="/upload/images/bg2.gif"   -->
+
+<tr><td bgcolor="#000000" valign="top" align="left" height="1" width="100%"><img src="/upload/images/pixel.gif" width="200" height="1" alt="_"><td></tr>
+<tr><td bgcolor="#0D0B69" valign="top" align="left" height="21"><table border=0 cellspacing=0 cellpadding=0><tr><td width="20" valign="top" id="td1"><img src="/upload/images/pixel.gif" width="20" height="1" alt="_"></td><td width="20" valign="top"><img src="/upload/images/pixel.gif" width="20" height="1" alt="_"></td></tr></table></td></tr>
+<tr><td bgcolor="#000000" valign="top" align="left" height="1" width="100%"><img src="/upload/images/pixel.gif" width="200" height="1" alt="_"><td></tr>
+<tr>
+<TD WIDTH=100% bgcolor="#FFFFFF" valign="top" height="1" background="/upload/images/bg3.gif"><img src="/upload/images/pixel.gif" WIDTH="300" height="1" alt="_"></TD>
+</tr>
+
+
+
+
+<tr><td width="100%" valign="top" bgcolor="#ffffff">
+<!-- body -->
+
+<table width="100%" border="0" cellpadding = "0" cellspacing = "0" >
+<tr>
+
+
+<td rowspan="2" width="223" valign="top" bgcolor="#0F1067">
+<table width="223" border="0" cellpadding = "0" cellspacing = "0" align="center">
+<!-- <tr>
+<TD colspan="2" WIDTH=223 valign="top" height="7" background="/upload/images/bg1.gif"><img src="/upload/images/pixel.gif" WIDTH="1" height="7" alt="_"></TD>
+</tr> -->
+
+<tr>
+<TD colspan="2" WIDTH=223 valign="top" height="36" background="/upload/images/bg6.gif"><div class="header_right"><script language="javascript">document.write("Menu")</script></div></TD>
+</tr>
+<tr>
+<TD WIDTH="189" valign="top"><table cellpadding="1" cellspacing="0" border="0" width="100%"></table><br><br>
+</TD>
+<TD WIDTH="34"  class="bg_right1" height="337" valign="bottom"><img src=/upload/images/img1.gif alt="_"></TD>
+</tr>
+
+<tr>
+<TD WIDTH=189 bgcolor="#FFFFFF" valign="top" height="1" background="/upload/images/bg3.gif"><img src="/upload/images/pixel.gif" WIDTH="189" height="1" alt="_"></TD><TD WIDTH=34 bgcolor="#FFFFFF" valign="top" height="1"><img src="/upload/images/pixel.gif" WIDTH="34" height="1" alt="_"></TD>
+</tr>
+
+<tr>
+<TD colspan="2" WIDTH=223 valign="top" height="35" background="/upload/images/bg8.gif"><div class="header_right"><script language="javascript">document.write("F.A.Q.")</script></div></TD>
+</tr>
+<tr>
+<TD WIDTH="189" valign="top" height="90">
+<div class="contentoright">
+<a class="txtWhite" href="faq.asp?cid=3158&menuid=2820&sub1menuid=
+&sub2menuid=
+&sub3menuid=">How do I apply for a position with the City of Danville?</a>
+</div>
+
+<div class="contentoright">
+<a class="txtWhite" href="faq.asp?cid=3175&menuid=2820&sub1menuid=
+&sub2menuid=
+&sub3menuid=">How do I contact a council member?</a>
+</div>
+
+<div class="contentoright">
+<a class="txtWhite" href="faq.asp?cid=4023&menuid=2820&sub1menuid=
+&sub2menuid=
+&sub3menuid=">Utilities:  Frequently Asked Questions</a>
+</div>
+</TD>
+<TD WIDTH="34" class="bg_right2"><br></TD>
+</tr>
+
+</table></td>
+
+
+<td width="100%" valign="top" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding = "0" cellspacing = "0" align="left" bgcolor="#ffffff">
+<tr>
+<TD WIDTH=223 valign="top" height="7" background="/upload/images/bg3.gif"><img src="/upload/images/pixel.gif" WIDTH="1" height="7" alt="_"></TD>
+</tr>
+
+
+<tr><td>
+<table width=96% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td align=right>
+<a onclick="window.open('?menuid=2820&sub1menuid=%0D%0A&sub2menuid=%0D%0A&cid=5030&view=print','_blank');" href="#" onMouseOver="rollOn('print');" onMouseOut="rollOff('print');"><img src="/upload/images/print_normal.gif" alt="Print this page" name="print" border="0"></a>&nbsp;<a onMouseOver="rollOn('print')" onMouseOut="rollOff('print')" name=a_print class=short onclick="window.open('?menuid=2820&sub1menuid=%0D%0A&sub2menuid=%0D%0A&cid=5030&view=print','_blank');" href="#" title='Print this page'><small><script language="javascript">document.write('Print');</script></small></a>
+</td></tr></table>
+</td></tr>
+
+<tr><td><table width=100% border=0 cellspacing=0 cellpadding=0 class="homepagecontent"><tr><td><a href="home.asp" class="header_center_shade"><script language="javascript">document.write("Home")</script></a><font class="header_center">:<a href="departments.asp?menuid=2820" class="header_center"><script language="javascript">document.write("Departments")</script></a></font></td></tr></table></td></tr>
+
+<tr><TD WIDTH="99%" valign="top" bgcolor="#ffffff"><div class="homepagecontent">
+
+<br><br>
+
+<ul>
+<b>Subject:</b> <strong>8-20-07  CAR CRASH</strong><br>
+<b>Summary:</b> DANVILLE POLICE, FIRE, AND RESCUE UNITS REPONDED TO A CRASH ON PINEY FOREST ROAD THIS MORNING<br>
+<P align=center><IMG height=148 src="/upload/images/Police/Police.gif" width=417></STRONG></P>
+<b></b> <P><FONT size=4><STRONG>This morning at approximately 7:09 A.M. Danville Police, Fire, and Rescue units responded to a reported vehicle crash at the intersection of Piney Forest Road and Nelson Avenue. The subsequent investigation of the crash revealed the driver in this single vehicle accident to be Rafael Hernandez. Hernandez was driving northbound on Piney Forest Road when he lost control of his 1993 Dodge pick up truck, crossed the southbound lanes of traffic, and struck a utility pole. Hernandez had to extricated from his vehicle and transported to the Danville Regional Medical Center where he is listed in stable condition. </STRONG></FONT></P>
+<P align=center><IMG height=225 alt="Crashed 1993 Dodge Pick up" src="/upload/images/Police/PINEY FOREST CRASH.JPG" width=300></P>
+<P align=center>The truck Hernandez was driving</P>
+<P><STRONG><FONT size=4></FONT></STRONG>&nbsp;</P>
+<P><FONT size=4><STRONG>Anyone with information about this incident is encouraged to contact Danville Crimestoppers at (434) 793-0000, or via our crime tips line on your computer at </STRONG></FONT><A href="mailto:crimetips@ci.danville.va.us"><FONT size=4><STRONG>crimetips@ci.danville.va.us</STRONG></FONT></A><FONT size=4><STRONG>. Information given will remain confidential. </STRONG></FONT></P>
+<P><FONT size=4><STRONG>Citizens who contact Crimestoppers by telephone are eligible for a cash reward of up to $1,000.00. </STRONG></FONT></P>
+<P><FONT size=4><STRONG>Looking for a past press release? You can view them online at; </STRONG></FONT></P>
+<P><A href="http://danville-va.gov/l_police_media_releases_List.asp?menuid=2820&amp;sub1menuid=2837&amp;sub2menuid=3322"><STRONG><FONT size=2>http://danville-va.gov/l_police_media_releases_List.asp?menuid=2820&amp;sub1menuid=2837&amp;sub2menuid=3322</FONT></STRONG></A></P><br>
+
+</ul>
+<br><br>
+</div></TD></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%" valign="bottom" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding = "0" cellspacing = "1" height="" align="left" bgcolor="white">
+<tr>
+<TD WIDTH="99%" valign="top" align="center" bgcolor="#FFFFFF"><!--#E3E3E3--><CENTER>
+<span class="footer"><a href="home.asp"><img src="/upload/images/logo.gif" border="0" alt="Danville - Discover the Possibilites!"></a></span><br>
+
+<table cellpadding="0" border="0" width=100% align="center" bgcolor="#FFFFFF"><tr><td align="left" valign="top"><img src='/upload/images/logo1%2Egif' alt='State of Virginia Seal' border=0 width='77' height='70'></td>
+<td align="center" valign="middle">
+<span class="footer">
+This site is optimized for Internet Explorer 6.0+<BR>
+1024 X 768 screen resolution recommended<BR>
+Problems with this Website? <a class="footer" href="mailto:Webmaster@ci.danville.va.us?subject=City%20Web%20Site
+"><u>Email the Webmaster</u></a><BR>
+<a href="site_terms.asp" class="footer"><u>Site Terms & Privacy Statement</u></a>
+</span>
+</td><td align="right" valign="top"><img src='/upload/images/logo2%2Egif' alt='City of Danville Seal' border=0 width='77' height='70'></td></tr>
+</table>
+<span class="footer">City of Danville, Virginia.  Copyright © 2008 City of Danville, VA   All rights reserved<br>&nbsp;</span>
+
+
+</CENTER></TD>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="223" valign="bottom" height="1" bgcolor="#0F1067"><img src="/upload/images/pixel.gif" WIDTH="223" height="1" alt="_"></td>
+<td width="100%" valign="top" height="1" bgcolor="#ffffff"></td>
+</tr>
+</table>
+<!-- /body -->
+</td></tr>
+</table>
+
+
+<script language="javascript">
+   preloadImages('/upload/images/', 'print_normal.gif', 'print_over.gif');
+</script>
+</body>
+</html><!-- END -->

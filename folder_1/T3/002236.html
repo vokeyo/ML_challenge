@@ -1,0 +1,684 @@
+<HTML><HEAD>
+<link rel="P3Pv1" href="/w3c/p3p.xml">
+<link rel="SHORTCUT ICON" href="/favicon.ico">
+<SCRIPT LANGUAGE="JavaScript" SRC="/fsrscripts/oeTriggerParams.js"></SCRIPT> 
+<SCRIPT LANGUAGE="JavaScript" SRC="/fsrscripts/oeLauncher.js"></SCRIPT>
+
+<script language="JavaScript" type="text/javascript" src="/includes/browserCheck2.js"></script>
+<script language=javascript type="text/javascript" src="/includes/style_logic2.js"></script>
+<script language="JavaScript" type="text/javascript" src="/includes/images2.js"></script>
+
+<style type="text/css">
+
+
+
+#dropmenudiv{
+
+position:absolute;
+
+border:1px solid black;
+
+border-bottom-width: 0;
+
+font:normal 12px Verdana;
+
+line-height:18px;
+
+z-index:100;
+
+}
+
+
+
+#dropmenudiv a{
+
+width: 100%;
+
+display: block;
+
+text-indent: 3px;
+
+border-bottom: 1px solid black;
+
+padding: 1px 0;
+
+text-decoration: none;
+
+font-weight: none;
+
+}
+
+
+
+#dropmenudiv a:hover{ /*hover background color*/
+
+background-color: #e7e1d0;
+
+}
+
+
+
+
+
+/* DRUG PUBS BOX DIV */
+ 
+.drugpubs-box{
+border:solid 1px #000;
+width: 190px;
+background:#fff;
+color:#000;
+padding:10px;
+text-align:center;
+}
+
+
+/* PDF & ESPANOL BOX DIV */
+ 
+.pdfespanol-box{
+border:solid 1px #000;
+width: 190px;
+background:#fff;
+color:#000;
+padding:10px;
+text-align:center;
+}
+
+
+/* DRUG PUBS BUTTON */
+ 
+a.squarebutton{
+background: transparent url('/images/square-brown-left.gif') no-repeat top left;
+display: block;
+
+font: 12px Arial; /* Change 12px as desired */
+line-height: 15px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 23px) */
+height: 23px; /* Height of button background height */
+padding-left: 9px; /* Width of left menu image */
+text-decoration: none;
+}
+
+a:link.squarebutton, a:visited.squarebutton, a:active.squarebutton{
+color: white; /*button text color*/
+}
+
+a.squarebutton span{
+background: transparent url('/images/square-brown-right.gif') no-repeat top right;
+display: block;
+padding: 4px 9px 4px 0; /*Set 9px below to match value of 'padding-left' value above*/
+}
+
+a.squarebutton:hover{ /* Hover state CSS */
+background-position: bottom left;
+}
+
+a.squarebutton:hover span{ /* Hover state CSS */
+background-position: bottom right;
+color: white;
+font-weight: bold;
+}
+
+.buttonwrapper{ /* Container you can use to surround a CSS button to clear float */
+overflow: hidden; /*See: http://www.quirksmode.org/css/clearing.html */
+width: 100%;
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+//Contents for menu 2
+
+var menu2=new Array()
+
+menu2[0]='<a href="/drugpages/alcohol.html">Alcohol</a>'
+
+menu2[1]='<a href="/drugpages/clubdrugs.html">Club Drugs</a>'
+
+menu2[2]='<a href="/drugpages/cocaine.html">Cocaine</a>'
+
+menu2[3]='<a href="/drugpages/heroin.html">Heroin</a>'
+
+menu2[4]='<a href="/drugpages/inhalants.html">Inhalants</a>'
+
+menu2[5]='<a href="/drugpages/acidLSD.html">LSD (Acid)</a>'
+
+menu2[6]='<a href="/drugpages/marijuana.html">Marijuana</a>'
+
+menu2[7]='<a href="/drugpages/mdma.html">MDMA (Ecstasy)</a>'
+
+menu2[8]='<a href="/drugpages/methamphetamine.html">Methamphetamine</a>'
+
+menu2[9]='<a href="/drugpages/nicotine.html">Nicotine</a>'
+
+menu2[10]='<a href="/drugpages/pcp.html">PCP (Phencyclidine)</a>'
+
+menu2[11]='<a href="/drugpages/prescription.html">Prescription Medications</a>'
+
+menu2[12]='<a href="/drugpages/steroids.html">Steroids (Anabolic)</a>'
+
+menu2[13]='<a href="/drugpages/steroids.html"><br></a>'
+
+menu2[14]='<a href="/drugpages/cj.html">Crime & Drug Abuse Treatment</a>'
+
+menu2[15]='<a href="/Infofacts/driving.html">Drugged Driving</a>'
+
+menu2[16]='<a href="/drugpages/testing.html">Drug Testing</a>'
+
+menu2[17]='<a href="/drugpages/HIV.html">HIV and Drug Abuse</a>'
+
+menu2[18]='<a href="/consequences/">Medical Consequences of Drug Abuse</a>'
+
+menu2[19]='<a href="/drugpages/prevention.html">Prevention Research</a>'
+
+menu2[20]='<a href="/drugpages/PSAHome.html">Public Service Announcements</a>'
+
+menu2[21]='<a href="/drugpages/stress.html">Stress & Drug Abuse</a>'
+
+menu2[22]='<a href="/drugpages/treatment.html">Treatment Research</a>'
+
+menu2[23]='<a href="/drugpages/stats.html">Trends and Statistics</a>'
+
+		
+
+var menuwidth='235px' //default menu width
+
+var menubgcolor='#edf2eb'  //menu bgcolor
+
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+
+var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+
+
+/////No further editting needed
+
+
+
+var ie4=document.all
+
+var ns6=document.getElementById&&!document.all
+
+
+
+if (ie4||ns6)
+
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+
+
+function getposOffset(what, offsettype){
+
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+
+var parentEl=what.offsetParent;
+
+while (parentEl!=null){
+
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+
+parentEl=parentEl.offsetParent;
+
+}
+
+return totaloffset;
+
+}
+
+
+
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+
+if (ie4||ns6)
+
+dropmenuobj.style.left=dropmenuobj.style.top="-500px"
+
+if (menuwidth!=""){
+
+dropmenuobj.widthobj=dropmenuobj.style
+
+dropmenuobj.widthobj.width=menuwidth
+
+}
+
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+
+obj.visibility=visible
+
+else if (e.type=="click")
+
+obj.visibility=hidden
+
+}
+
+
+
+function iecompattest(){
+
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+
+}
+
+
+
+function clearbrowseredge(obj, whichedge){
+
+var edgeoffset=0
+
+if (whichedge=="rightedge"){
+
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+
+}
+
+else{
+
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move up?
+
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either?
+
+edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge
+
+}
+
+}
+
+return edgeoffset
+
+}
+
+
+
+function populatemenu(what){
+
+if (ie4||ns6)
+
+dropmenuobj.innerHTML=what.join("")
+
+}
+
+
+
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+
+if (window.event) event.cancelBubble=true
+
+else if (e.stopPropagation) e.stopPropagation()
+
+clearhidemenu()
+
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+
+populatemenu(menucontents)
+
+
+
+if (ie4||ns6){
+
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+
+dropmenuobj.x=getposOffset(obj, "left")
+
+dropmenuobj.y=getposOffset(obj, "top")
+
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+
+}
+
+
+
+return clickreturnvalue()
+
+}
+
+
+
+function clickreturnvalue(){
+
+if (ie4||ns6) return false
+
+else return true
+
+}
+
+
+
+function contains_ns6(a, b) {
+
+while (b.parentNode)
+
+if ((b = b.parentNode) == a)
+
+return true;
+
+return false;
+
+}
+
+
+
+function dynamichide(e){
+
+if (ie4&&!dropmenuobj.contains(e.toElement))
+
+delayhidemenu()
+
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+
+delayhidemenu()
+
+}
+
+
+
+function hidemenu(e){
+
+if (typeof dropmenuobj!="undefined"){
+
+if (ie4||ns6)
+
+dropmenuobj.style.visibility="hidden"
+
+}
+
+}
+
+
+
+function delayhidemenu(){
+
+if (ie4||ns6)
+
+delayhide=setTimeout("hidemenu()",disappeardelay)
+
+}
+
+
+
+function clearhidemenu(){
+
+if (typeof delayhide!="undefined")
+
+clearTimeout(delayhide)
+
+}
+
+
+
+if (hidemenu_onclick=="yes")
+
+document.onclick=hidemenu
+
+
+
+</script>
+
+
+
+
+
+
+<TITLE>Director's Report 5/95 - Intramural Research</TITLE></HEAD>
+
+
+
+
+
+<BODY onload="preloadImages();" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" BGCOLOR=#E7E1D0>
+
+<CENTER>
+
+<br>
+<!-- IN USE, DRAFT HOME PAGE -->
+
+<p style="font-size: 0px;margin:0px 0px;padding: 0px 0px;position: absolute;z-index: -2;"><a href="#skipnav" style="color:white;">Skip Navigation</a></p>
+<table width="788" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="middle" bgcolor="#c4b495" width="300"><a href="http://www.nih.gov/"><img src="/1homeimages/nih_header.gif" alt="Link to  the National Institutes of Health" width="300" height="18" border="0" /></a></td>
+<td align="right" valign="middle" bgcolor="#c4b495"><font size="1" color="white">NIDA NEWS</font><font size="1"> </font></td>
+<td align="right" valign="middle" bgcolor="#c4b495" width="50"><a href="/nidanews.xml"><img src="/Images/rss.gif" alt="NIDA News RSS Feed" width="44" height="16" border="0" /></a><img src="/Images/spacer.gif" alt="" height="1" width="2" border="0" /></td>
+</tr>
+</table>
+<table width="788" border="0" cellspacing="0" cellpadding="0" bgcolor="#000066">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="1" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#223c75">
+<tr>
+<td align="left" valign="top"><a href="/index.html"><img src="/1homeimages/NIDA1.gif" alt="The Science of Drug Abuse and Addiction from the National Institute on Drug Abuse" width="341" height="70" border="0"></a></td>
+<td align="right" valign="top"><img src="/1homeimages/bannerhead6.gif" alt="Keep Your Body Healthy" width="270" height="70" border="0"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000066">
+<tr>
+<td align="left" valign="bottom" height="22" NOWRAP width="578"><a onmouseover="changeImages( /*CMP*/'nav_home_off',/*URL*/'/1homeimages/nav_home_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_home_off',/*URL*/'/1homeimages/nav_home_off2.gif');return true" href="/NIDAHome.html"><img src="/1homeimages/nav_home_off2.gif" alt="Go to the Home page" name="nav_home_off" width="59" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_about_off',/*URL*/'/1homeimages/nav_about_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_about_off',/*URL*/'/1homeimages/nav_about_off2.gif');return true" href="/AboutNIDA.html"><img src="/1homeimages/nav_about_off2.gif" alt="Go to the About Nida page" name="nav_about_off" width="99" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_news_off',/*URL*/'/1homeimages/nav_news_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_news_off',/*URL*/'/1homeimages/nav_news_off2.gif');return true" href="/NIDANews.html"><img src="/1homeimages/nav_news_off2.gif" alt="Go to the News page" name="nav_news_off" width="56" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_events_off2',/*URL*/'/1homeimages/nav_events_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_events_off2',/*URL*/'/1homeimages/nav_events_off2.gif');return true" href="/NIDAevents.html"><img src="/1homeimages/nav_events_off2.gif" alt="Go to the Meetings &amp; Events page" name="nav_events_off2" width="142" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_funding_off',/*URL*/'/1homeimages/nav_funding_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_funding_off',/*URL*/'/1homeimages/nav_funding_off2.gif');return true" href="/funding/"><img src="/1homeimages/nav_funding_off2.gif" alt="Go to the Funding page" name="nav_funding_off" width="79" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_pubs_off',/*URL*/'/1homeimages/nav_pubs_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_pubs_off',/*URL*/'/1homeimages/nav_pubs_off2.gif');return true" href="/Pubcat/"><img src="/1homeimages/nav_pubs_off2.gif" alt="Go to the Publications page" name="nav_pubs_off" width="108" height="22" border="0"></a></td>
+<form method="get" action="http://search2.google.cit.nih.gov/search" name="search">
+<label for="searchbox" style="z-index:-1;position:relative;margin-right:-50px; font-size:0px;">Search the NIDA website</label>
+
+<td align="right" valign="middle" height="22" NOWRAP>
+<input id="searchbox" type="text" name="q" size="16" maxlength="255" value=""></input>
+<input type="hidden" name="site" value="NIDA"></input>
+<input type="hidden" name="client" value="NIDA_frontend"></input>
+<input type="hidden" name="proxystylesheet" value="NIDA_frontend"></input>
+<input type="hidden" name="output" value="xml_no_dtd"></input>
+<input type="hidden" name="filter" value="0"></input>
+<input type="hidden" name="getfields" value="*"></input>
+<input type="image" src="/1homeimages/nav_search.gif" align="absmiddle" width="60" height="22" border="0"  name="btnG" id="btnG" alt="Search" ></input>
+</td>
+</form>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="788" border="0" cellspacing="0" cellpadding="0">
+<tr height="36">
+<td align="right" valign="top" bgcolor="#e7e1d0" width="530" height="36"><a onmouseover="changeImages( /*CMP*/'b1',/*URL*/'/1homeimages/newnav/physicians_on.gif');return true" onmouseout="changeImages( /*CMP*/'b1',/*URL*/'/1homeimages/newnav/physicians_off.gif');return true" href="/medstaff.html"><img src="/1homeimages/newnav/physicians_off.gif" alt="Physicians" name="b1" height="36" width="136" border="0"></a><a onmouseover="changeImages( /*CMP*/'b2',/*URL*/'/1homeimages/newnav/researchers_on.gif');return true" onmouseout="changeImages( /*CMP*/'b2',/*URL*/'/1homeimages/newnav/researchers_off.gif');return true" href="/researchers.html"><img src="/1homeimages/newnav/researchers_off.gif" alt="Researchers" name="b2" height="36" width="107" border="0"></a><a onmouseover="changeImages( /*CMP*/'b3',/*URL*/'/1homeimages/newnav/parents_on.gif');return true" onmouseout="changeImages( /*CMP*/'b3',/*URL*/'/1homeimages/newnav/parents_off.gif');return true" href="/parent-teacher.html"><img src="/1homeimages/newnav/parents_off.gif" alt="Parents/Teachers" name="b3" height="36" width="91" border="0"></a><a onmouseover="changeImages( /*CMP*/'b4',/*URL*/'/1homeimages/newnav/students_on.gif');return true" onmouseout="changeImages( /*CMP*/'b4',/*URL*/'/1homeimages/newnav/students_off.gif');return true" href="/students.html"><img src="/1homeimages/newnav/students_off.gif" alt="Students/Young Adults" name="b4" height="36" width="114" border="0"></a><a onmouseover="changeImages( /*CMP*/'b5',/*URL*/'/1homeimages/newnav/espanol_on.gif');return true" onmouseout="changeImages( /*CMP*/'b5',/*URL*/'/1homeimages/newnav/espanol_off.gif');return true" href="/nidaespanol.html"><img src="/1homeimages/newnav/espanol_off.gif" alt="En Espa&ntilde;ol" name="b5" height="36" width="82" border="0"></a></td>
+<td align="right" valign="middle" bgcolor="#e7e1d0" height="36"><font color="#e7e1d0">
+<a href="#" onClick="return dropdownmenu(this, event, menu2, '235px')" onMouseout="delayhidemenu()"><img src="/1homeimages/newnav/drugs_on.gif" alt="Drugs of Abuse &amp; Related Topics" name="b6" height="36" width="238" border="0"></a>
+</font>
+</td>
+</tr>
+</table>
+<table width="788" border="0" cellspacing="0" cellpadding="1" bgcolor="#C4B595">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="white">
+<tr>
+<td><A Name="skipnav"></a>
+
+
+
+
+
+
+
+
+<BODY onload="preloadImages();" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" BGCOLOR=#E7E1D0>
+
+<CENTER>
+
+<br>
+<!-- IN USE, DRAFT HOME PAGE -->
+
+<p style="font-size: 0px;margin:0px 0px;padding: 0px 0px;position: absolute;z-index: -2;"><a href="#skipnav" style="color:white;">Skip Navigation</a></p>
+<table width="788" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="middle" bgcolor="#c4b495" width="300"><a href="http://www.nih.gov/"><img src="/1homeimages/nih_header.gif" alt="Link to  the National Institutes of Health" width="300" height="18" border="0" /></a></td>
+<td align="right" valign="middle" bgcolor="#c4b495"><font size="1" color="white">NIDA NEWS</font><font size="1"> </font></td>
+<td align="right" valign="middle" bgcolor="#c4b495" width="50"><a href="/nidanews.xml"><img src="/Images/rss.gif" alt="NIDA News RSS Feed" width="44" height="16" border="0" /></a><img src="/Images/spacer.gif" alt="" height="1" width="2" border="0" /></td>
+</tr>
+</table>
+<table width="788" border="0" cellspacing="0" cellpadding="0" bgcolor="#000066">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="1" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#223c75">
+<tr>
+<td align="left" valign="top"><a href="/index.html"><img src="/1homeimages/NIDA1.gif" alt="The Science of Drug Abuse and Addiction from the National Institute on Drug Abuse" width="341" height="70" border="0"></a></td>
+<td align="right" valign="top"><img src="/1homeimages/bannerhead6.gif" alt="Keep Your Body Healthy" width="270" height="70" border="0"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000066">
+<tr>
+<td align="left" valign="bottom" height="22" NOWRAP width="578"><a onmouseover="changeImages( /*CMP*/'nav_home_off',/*URL*/'/1homeimages/nav_home_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_home_off',/*URL*/'/1homeimages/nav_home_off2.gif');return true" href="/NIDAHome.html"><img src="/1homeimages/nav_home_off2.gif" alt="Go to the Home page" name="nav_home_off" width="59" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_about_off',/*URL*/'/1homeimages/nav_about_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_about_off',/*URL*/'/1homeimages/nav_about_off2.gif');return true" href="/AboutNIDA.html"><img src="/1homeimages/nav_about_off2.gif" alt="Go to the About Nida page" name="nav_about_off" width="99" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_news_off',/*URL*/'/1homeimages/nav_news_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_news_off',/*URL*/'/1homeimages/nav_news_off2.gif');return true" href="/NIDANews.html"><img src="/1homeimages/nav_news_off2.gif" alt="Go to the News page" name="nav_news_off" width="56" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_events_off2',/*URL*/'/1homeimages/nav_events_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_events_off2',/*URL*/'/1homeimages/nav_events_off2.gif');return true" href="/NIDAevents.html"><img src="/1homeimages/nav_events_off2.gif" alt="Go to the Meetings &amp; Events page" name="nav_events_off2" width="142" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_funding_off',/*URL*/'/1homeimages/nav_funding_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_funding_off',/*URL*/'/1homeimages/nav_funding_off2.gif');return true" href="/funding/"><img src="/1homeimages/nav_funding_off2.gif" alt="Go to the Funding page" name="nav_funding_off" width="79" height="22" border="0"></a><a onmouseover="changeImages( /*CMP*/'nav_pubs_off',/*URL*/'/1homeimages/nav_pubs_on2.gif');return true" onmouseout="changeImages( /*CMP*/'nav_pubs_off',/*URL*/'/1homeimages/nav_pubs_off2.gif');return true" href="/Pubcat/"><img src="/1homeimages/nav_pubs_off2.gif" alt="Go to the Publications page" name="nav_pubs_off" width="108" height="22" border="0"></a></td>
+<form method="get" action="http://search2.google.cit.nih.gov/search" name="search">
+<label for="searchbox" style="z-index:-1;position:relative;margin-right:-50px; font-size:0px;">Search the NIDA website</label>
+
+<td align="right" valign="middle" height="22" NOWRAP>
+<input id="searchbox" type="text" name="q" size="16" maxlength="255" value=""></input>
+<input type="hidden" name="site" value="NIDA"></input>
+<input type="hidden" name="client" value="NIDA_frontend"></input>
+<input type="hidden" name="proxystylesheet" value="NIDA_frontend"></input>
+<input type="hidden" name="output" value="xml_no_dtd"></input>
+<input type="hidden" name="filter" value="0"></input>
+<input type="hidden" name="getfields" value="*"></input>
+<input type="image" src="/1homeimages/nav_search.gif" align="absmiddle" width="60" height="22" border="0"  name="btnG" id="btnG" alt="Search" ></input>
+</td>
+</form>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="788" border="0" cellspacing="0" cellpadding="0">
+<tr height="36">
+<td align="right" valign="top" bgcolor="#e7e1d0" width="530" height="36"><a onmouseover="changeImages( /*CMP*/'b1',/*URL*/'/1homeimages/newnav/physicians_on.gif');return true" onmouseout="changeImages( /*CMP*/'b1',/*URL*/'/1homeimages/newnav/physicians_off.gif');return true" href="/medstaff.html"><img src="/1homeimages/newnav/physicians_off.gif" alt="Physicians" name="b1" height="36" width="136" border="0"></a><a onmouseover="changeImages( /*CMP*/'b2',/*URL*/'/1homeimages/newnav/researchers_on.gif');return true" onmouseout="changeImages( /*CMP*/'b2',/*URL*/'/1homeimages/newnav/researchers_off.gif');return true" href="/researchers.html"><img src="/1homeimages/newnav/researchers_off.gif" alt="Researchers" name="b2" height="36" width="107" border="0"></a><a onmouseover="changeImages( /*CMP*/'b3',/*URL*/'/1homeimages/newnav/parents_on.gif');return true" onmouseout="changeImages( /*CMP*/'b3',/*URL*/'/1homeimages/newnav/parents_off.gif');return true" href="/parent-teacher.html"><img src="/1homeimages/newnav/parents_off.gif" alt="Parents/Teachers" name="b3" height="36" width="91" border="0"></a><a onmouseover="changeImages( /*CMP*/'b4',/*URL*/'/1homeimages/newnav/students_on.gif');return true" onmouseout="changeImages( /*CMP*/'b4',/*URL*/'/1homeimages/newnav/students_off.gif');return true" href="/students.html"><img src="/1homeimages/newnav/students_off.gif" alt="Students/Young Adults" name="b4" height="36" width="114" border="0"></a><a onmouseover="changeImages( /*CMP*/'b5',/*URL*/'/1homeimages/newnav/espanol_on.gif');return true" onmouseout="changeImages( /*CMP*/'b5',/*URL*/'/1homeimages/newnav/espanol_off.gif');return true" href="/nidaespanol.html"><img src="/1homeimages/newnav/espanol_off.gif" alt="En Espa&ntilde;ol" name="b5" height="36" width="82" border="0"></a></td>
+<td align="right" valign="middle" bgcolor="#e7e1d0" height="36"><font color="#e7e1d0">
+<a href="#" onClick="return dropdownmenu(this, event, menu2, '235px')" onMouseout="delayhidemenu()"><img src="/1homeimages/newnav/drugs_on.gif" alt="Drugs of Abuse &amp; Related Topics" name="b6" height="36" width="238" border="0"></a>
+</font>
+</td>
+</tr>
+</table>
+<table width="788" border="0" cellspacing="0" cellpadding="1" bgcolor="#C4B595">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="white">
+<tr>
+<td><A Name="skipnav"></a>
+
+
+<h4><Center>Director's Report to the National Advisory Council on Drug Abuse<br>May, 1995</Center></h4><HR><h3>Research Findings</h3><A Name="Intramural"><h4>Intramural Research<HR></h4><p>Work from Dr. George Uhl's laboratories and his collaborations with Drs. Ivy Caroll, RTI, and Shigeo Kitayama, Hiroshima, Japan, have been broadly cited in the press as one of the principal bases for establishment of Gell Pharmaceuticals, a small Baltimore company dedicated to work with anticocaine pharmacotherapeutics.  Collaborative research arrangements between Gell and the NIDA IRP Molecular Neurobiology Branch to allow pursuit of Dr. Uhl's observations that dopamine transporter mutagenesis can dissect cocaine recognition from dopamine uptake, and his identification of lead compounds with potencies 30-40-fold greater in blocking cocaine analog recognition than in inhibition of dopamine uptake are being actively pursued. <p><HR><h4>Medications for Cocaine Abuse and Dependence</h4>Desirable properties of medications for treating cocaine abuse that will substitute for cocaine include long duration of action, slow entry into the brain, and potency.  Scientists in the Molecular Pharmacology Section have recently shown, in a series of studies (some in press), that many cocaine analogs studied by our group have these properties.  Thus these may be potential medications.  Compounds continue to be characterized with this goal in mind.<p><HR><h4>Lesch-Nyhan Disease Exhibits Loss of Dopaminergic Neurons</h4>Using a PET scanning probe developed for studying cocaine receptor sites in brain, scientists in the Molecular Pharmacology Section, in collaboration with Dr James Harris and Dr Dean Wong from Johns Hopkins, recently showed that the brains of patients with Lesch-Nyhan Disease have severely reduced dopaminergic nerve terminals in the nigro-striatal tract.  This supports some earlier observations and suggests a focus for future studies of the disease.<p><HR><h4>Cocaine Binding Sites on the Dopamine Transporter</h4>By using cocaine analogs that are irreversible and radiolabeled as probes for binding to the dopamine transporter, and by treating the probe-transporter complex with specific proteases, scientists in the Molecular Pharmacology Section are identifying binding domains of the transporter for cocaine.  This knowledge will help us understand how the transporter is structured in the membrane, and possibly how to develop cocaine-like agonists and blockers.<p>Using volumetric magnetic resonance imaging (MRI) assessment, investigators in the Neuroimaging and Drug Action Section (NDAS) have demonstrated that the ventricle-to-brain ratio, a index reflecting cerebral atrophy, is not larger in physically healthy polysubstance abusers than in control subjects, without even a tendency toward ventriculomegaly in the drug abuse group.  The results indicate that drugs of abuse may not produce generalized abnormalities in brain anatomy or that potential cerebral structural deficits associated with illicit substance abuse, if any, would be regional.  High resolution volumetric MRI studies focusing on specific brain regions which may contribute to vulnerability to or specific effects of drug abuse are in progress. X Liu, RL Phillips, SM Resnick, VL Villemagne, DF Wong, JM Stapleton, and ED London.:  No evidence of ventriculomegaly in polydrug abusers:  A volumetric magnetic resonance imaging study. Acta Neurologica Scandinavica,  in press.<p>The development of agents to image <I>sigma </I>receptors <I>in vivo  </I>by positron emission tomography (PET) or single photon emission tomography (SPECT) would aid the assessment of the mechanism by which drugs that bind to <I>sigma </I>receptors alleviate symptoms of schizophrenia and some neurodegenerative disorders. For this purpose, intramural investigators evaluated radiolabeled 4-phenyl-1-(4-phenylbutyl)piperidine (4-PPBP), a potent and selective ligand for <I>sigma </I>receptors, as an <I>in vivo </I>ligand for the <I>sigma </I>receptor.  The regional distribution of its uptake in mouse brain parallels the distribution of <I>sigma </I>receptors as assayed by <I>in vitro </I>binding.  These results and the finding that ligands which bind to <I>sigma </I>receptors block its uptake into mouse brain suggest that 4-PPBP would be a suitable radioligand for <I>in vivo </I>imaging of <I>sigma </I>receptors. K Hashimoto, U Scheffel, and ED London:  In vivo labeling of sigma receptors in mouse brain with [3H]4-phenyl-1-(4-phentylbutyl)piperidine.  Synapse, in press.<p>Although subtypes of <I>sigma</I> receptors (<I>sigma</I> 1 and <I>sigma </I>2) have been identified, their functional roles are unclear.  To date, only ligands that are non selective or demonstrate high (nanomolar) affinity for <I>sigma </I>1 sites have been identified. Intramural investigators compared isomers and analogues of ifenprodil as potential <I>sigma </I>2 ligands.  Their results suggest that <I>threo</I>-ifenprodil is a relatively selective ligand for the <I>sigma </I>2 site and may be useful for delineating the functional roles of sigma 2 receptors. K Hashimoto and ED London:  Interactions of erythro-ifenprodil, threoifenprodil, erythro-iodoifenprodil, and eliprodil with subtypes of <I>sigma</I>  receptors.  European Journal of Pharmacology, in press.<p>Although the nicotinic acetylcholine receptor is thought to be the site where nicotine acts to produce tobacco dependence and this site has been implicated in various neuropathological and physiological states, no suitable radioligand for <I>in vivo </I> imaging of this receptor is presently available.  The recent discovery that epibatidine, an extract of frog skin, is an extremely potent ligand for central nicotinic acetylcholine receptors <I>in vitro</I>  led intramural investigators to study the <I>in vivo </I>binding properties of [3H]epibatidine in mice.  The time-course and regional distribution of its uptake in brain and its sensitivity to blockade by nicotinic drugs suggest that radiolabeled analogs of epibatidine hold exceptional promise for the study of nicotinic acetylcholine receptors <I>in vivo</I>. ED London, U Scheffel, AS Kimes, and KJ Kellar:  In vivo labeling of nicotinic cholinergic receptors in brain with [3H]epibatidine.  European Journal of Pharmacology, in press.<p>The Molecular Neuropsychiatry Section was the first group to demonstrate that the neurotoxicity of methamphetamine, MDMA (Ecstasy), and MDA involves the production of superoxide radicals. The section accomplished this by using a combination of molecular and neurochemical techniques. We used transgenic mice that overexpress the human gene CuZn-superoxide dismutase (SOD-Tg)  and tested these animals for possible toxic and lethal of these drugs. The transgenic mice were protected against the toxic effects in a dose-dependent and in a gene dosagedependent fashion.<p>The Section was also the first to show that the toxic effects of METH also involves nitric oxide (NO) production.  These studies were done by using primary cultures of fetal mesencephalic areas. Investigators also showed for the first time that in vitro application of methamphetamine can cause gliosis and this process also involves NO production.  These results raised the intriguing possibility that NO and the superoxide radicals might cooperate to cause the toxic effects of amphetamine analogs and that cellular redox status might play a role in the plastic changes that are associated with the administration of drugs of abuse.<p>This idea has been tested by assessing the effects of METH on the regulation of transcription factors in SOD-Tg mice.  Recently it has been demonstrated that the activation of AP-1 is differentially regulated in these mice when compared to non-transgenic animals. Since these results suggest that the hypothesis might be correct, these observations are currently being extended to other drugs of abuse.<p>The results listed above are providing for the first time a coherent picture for a role of cellular redox state in changes associated with drugs of abuse. These results have application beyond the field of drugs of abuse because some of these plastic changes might be related to memory and motivational behaviors.<p><HR><h4>Psychobiology Section, Preclinical Pharmacology Branch</h4>Scientists in the Psychobiology Section have prepared a series of benztropine analogs as probes for the dopamine transporter.  Several of these analogs, most notably the 4',4"-dihalogenated compounds, demonstrate high affinity binding (Ki<30 nM) to the dopamine transporter that is selective (>100-fold) over the other monoamine transporters.  These compounds block dopamine uptake in vitro and yet are not efficacious locomotor stimulants nor are they recognized as being cocaine-like in a drug discrimination paradigm.  This series of compounds has recently been extended to include those that have, as well as those that do not have cocaine-like behavioral activity.  This recent development will allow for the development of structure-activity studies that will reveal the pharmacophore for cocaine-like behavioral effects.  Further, studies of the interaction of these drugs with the dopamine transporter will provide models of specific sites on the transporter that are responsible for cocaine-like behavioral effects.<p>Both<I> in vitro</I> binding studies and studies of dopamine uptake have indicated that there is a heterogeneity of action of cocaine and cocaine analogs.  Both high- and low-affinity binding sites have been identified.  Some drugs that bind to the dopamine transporter show both high- and lowaffinity components while others do not.  Behavioral studies have indicated that the high-affinity component appears to be the one most directly involved in the actions of cocaine related to abuse.  These conclusions are based on correlations of affinities and psychomotor stimulant effects and subjective effects determined with cocaine discrimination techniques.  In addition, tolerance to the psychomotor stimulant effects of cocaine occurs with a concomitant change in only the highaffinity component for dopamine uptake.  Certain dopamine uptake inhibitors appear to have only actions mediated by the low-affinity component.  These drugs bind to the dopamine transporter and inhibit dopamine uptake, however, they do not have behavioral effects like those of cocaine.  This finding is a critical point of inquiry for the dopamine hypothesis because, based on the neurochemical data, these drugs should have behavioral actions like those of cocaine.  In contrast, some of these drugs antagonize the behavioral effects of cocaine, suggesting that the low-affinity site somehow modulates the actions mediated by the high-affinity site.  Continuing research is directed at: 1) a better characterization of the heterogeneity of the dopamine transporter and functional endpoints, 2) the development of pharmacological tools that will allow independent manipulation of high- and low-affinity components, 3) a characterization of how these components are regulated by, for example, chronic drug exposure, and 4) a better understanding of mechanisms for interactions among the components.<p><HR><h4>Treatment Branch</h4>Scientists in the Treatment Branch of NIDA's Intramural Research Program, in collaboration with colleagues at the Department of Radiology, Johns Hopkins University, have recently demonstrated increased binding to opiate receptors in certain brain regions of cocaine addicts, using trace amounts of a radioactive synthetic opiate and the technique of positron emission tomography (PET).  This finding confirms animal studies that found chronic cocaine exposure increased brain opiate receptor binding, and suggests a possible role for endogenous opiate systems in cocaine addiction.  The increased opiate binding persisted over 4 weeks of abstinence in the majority of subjects, and was positively correlated with self-reported cocaine craving and negatively correlated with urine levels of the cocaine metabolite benzoylecgonine.  Ongoing research is aimed at  confirming and extending these findings, including their implications for long-term changes in the brain of cocaine addicts and for predicting relapse to cocaine use.<p>Scientists in the Treatment Branch of NIDA's Intramural Research Program have recently evaluated the safety and efficacy of the combination of two dopamine medications, bromocriptine plus bupropion, in the treatment of cocaine dependence.  In an open-label study, they found the combination was well tolerated by outpatients, with some evidence of efficacy in terms of better treatment retention and decreased cocaine use.  These findings suggest that this approach, which has been used successfully in other areas of neuropsychiatry (e.g., obsessive-compulsive disorder, Parkinson's disease), can help improve the treatment of drug abuse.  Future studies will evaluate this combination more definitively with a double-blind clinical trial, and evaluate other medication combinations which influence brain neurotransmitter activity by different mechanisms, with the goal of enhancing efficacy while minimizing side-effects.<HR NOSHADE>[<A HREF="/about/welcome/directorpage.html">Officeof the Director</A>][<A HREF="DirectorRepIndex.html">Report Index</A>][<A HREF="DirectorReport7.html">NextReport Section</A>]
+
+
+<hr noshade size="1" color="#C4B595" width="100%">		
+<table width="776" border="0" cellspacing="0" cellpadding="0" bgcolor="white">
+<tr nowrap>
+<td align="center" valign="top"><br><a HREF="/NIDAHome.html" class="contentlinks">NIDA Home</a> | <a  HREF="/tools/NIDATOC.html" class="contentlinks">Site Map</a> | <a href="http://search2.google.cit.nih.gov/search?filter=0&access=p&getfields=*&output=xml_no_dtd&sort=date%3AD%3AL%3Ad1&site=NIDA&ie=UTF-8&client=NIDA_frontend&oe=UTF-8&proxystylesheet=NIDA_frontend&proxycustom=<ADVANCED/>" class="contentlinks">Search</a> | <a href="/tools/FAQ.html" class="contentlinks">FAQs</a> | <a href="/tools/Accessibility.html" class="contentlinks">Accessibility</a> | <a href="/tools/Privacy.html" class="contentlinks">Privacy</A> | <a href="http://www.nih.gov/icd/od/foia/index.htm" class="contentlinks">FOIA (NIH)</a> | <a href="/whatsnew/Employment/" class="contentlinks">Employment</a> | 
+
+
+<a href="http://www.nida.nih.gov/headerset.html" class="contentlinks">Print Version</a>	
+	
+		
+<br><br>
+
+<hr noshade size="1" color="#C4B595" width="100%">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10" bgcolor="white">
+<tr>
+<td width=100 valign="top" align="center"><a href="http://www.nih.gov/"><img src="/Images/nihseal2.gif" border=0 width="36" height="37" alt="National Institutes of Health logo"></a><font color="white">_</font><a href="http://www.hhs.gov/"><img src="/Images/dhhs_sm.gif" border=0 width="36" height="37" alt="Department of Health and Human Services Logo"></a></td>
+<td><font size="1">The National Institute on Drug Abuse (NIDA) is part of the <a href="http://www.nih.gov/">National Institutes of Health (NIH)</a> , a component of the <a href="http://www.hhs.gov/">U.S. Department of Health and Human Services</a>. Questions? See our <a href="/about/AboutNIDA.html"><b>Contact Information</b></a>. <i>Last updated on Wednesday, May 23, 2007</i></font>.</td>
+<td align="left" valign="top" width="155"><a href="http://www.usa.gov/"><img src="/1homeimages/usagov.gif" alt="The U.S. government's official web portal" width="129" height="37" border="0"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></form><br>
+
+
+
+
+
+<hr noshade size="1" color="#C4B595" width="100%">		
+<table width="776" border="0" cellspacing="0" cellpadding="0" bgcolor="white">
+<tr nowrap>
+<td align="center" valign="top"><br><a HREF="/NIDAHome.html" class="contentlinks">NIDA Home</a> | <a  HREF="/tools/NIDATOC.html" class="contentlinks">Site Map</a> | <a href="http://search2.google.cit.nih.gov/search?filter=0&access=p&getfields=*&output=xml_no_dtd&sort=date%3AD%3AL%3Ad1&site=NIDA&ie=UTF-8&client=NIDA_frontend&oe=UTF-8&proxystylesheet=NIDA_frontend&proxycustom=<ADVANCED/>" class="contentlinks">Search</a> | <a href="/tools/FAQ.html" class="contentlinks">FAQs</a> | <a href="/tools/Accessibility.html" class="contentlinks">Accessibility</a> | <a href="/tools/Privacy.html" class="contentlinks">Privacy</A> | <a href="http://www.nih.gov/icd/od/foia/index.htm" class="contentlinks">FOIA (NIH)</a> | <a href="/whatsnew/Employment/" class="contentlinks">Employment</a> | 
+
+
+<a href="http://www.nida.nih.gov/headerset.html" class="contentlinks">Print Version</a>	
+	
+		
+<br><br>
+
+<hr noshade size="1" color="#C4B595" width="100%">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10" bgcolor="white">
+<tr>
+<td width=100 valign="top" align="center"><a href="http://www.nih.gov/"><img src="/Images/nihseal2.gif" border=0 width="36" height="37" alt="National Institutes of Health logo"></a><font color="white">_</font><a href="http://www.hhs.gov/"><img src="/Images/dhhs_sm.gif" border=0 width="36" height="37" alt="Department of Health and Human Services Logo"></a></td>
+<td><font size="1">The National Institute on Drug Abuse (NIDA) is part of the <a href="http://www.nih.gov/">National Institutes of Health (NIH)</a> , a component of the <a href="http://www.hhs.gov/">U.S. Department of Health and Human Services</a>. Questions? See our <a href="/about/AboutNIDA.html"><b>Contact Information</b></a>. <i>Last updated on Wednesday, May 23, 2007</i></font>.</td>
+<td align="left" valign="top" width="155"><a href="http://www.usa.gov/"><img src="/1homeimages/usagov.gif" alt="The U.S. government's official web portal" width="129" height="37" border="0"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></form><br>
+
+
+</Body></HTML>

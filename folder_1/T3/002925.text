@@ -1,0 +1,78 @@
+Archivo Readme para Perfiles Iterados
+
+1. ip_readme.txt
+
+Este archivo Readme se provee para explicar las convenciones para nombrar archivos y el contenido general de los archivos que se bajan.
+
+Cuando sea aplicable, también se provee un segundo archivo Readme específico para un conjunto de datos para explicar las brechas potenciales en los datos para las áreas geográficas seleccionadas. En muchos conjuntos de datos de American FactFinder (AFF) no todos los datos están disponibles para todas las áreas geográficas. La razón específica varía con cada conjunto de datos, pero, en general, se debe a una de las razones siguientes:
+
+- tamaños de la muestra
+- umbrales de población
+- umbrales geográficos para tablas seleccionadas 	  
+
+Asegúrese de consultar el archivo Readme específico para el conjunto de datos cuando éste se provee.
+
+2. Archivos de datos de Tablas Detalladas y lo que éstos contienen.
+
+a) Extensiones del tipo de archivo: 
+
+Loa archivos de datos son archivos de texto delimitados por coma o archivos de Microsoft Excel (.xls) files. Se crean dos tipos de archivos de datos:
+
+	ip_<dataset>_data1.<ext> = archivo que se produce de forma dinámica con valores de datos
+	ip_<dataset>_geo.<ext> = archivo que se produce de forma dinámica con los valores de códigos geográficos
+
+	<dataset> = el nombre exclusivo del conjunto de datos
+	<ext> = la extensión de archivo que se selecciona (.txt or .xls)
+
+
+b) Archivos de datos no iterados: <dataset>_data1.<ext>
+
+Lo que se baja puede contener uno o más archivos que se producen de forma dinámica con valores de datos. Éstos recibirán el nombre de ip_<dataset>_data1.<ext>,ip_<dataset>_data2.<ext> etc. Cada archivo de datos incluye claves primarias para establecer enlaces con otros archivos de datos:
+
+	GEO_ID: el Identificador Geográfico
+	GEO_ID2: el Identificador Geográfico compatible con GIS
+	SUM_LEVEL: el Código de Nivel de Compendio
+
+Cada archivo de datos tiene un máximo de 250 columnas de datos. Cuando se excede esa cantidad, se crea un nuevo archivo de datos. Cuando se baja algo grande de muchas tablas se obtendrán múltiples archivos de datos.
+
+
+c) Archivos de Datos Iterados: ip_<dataset>_data001_1.<ext>
+ 
+Estos conjuntos de datos contienen tablas que se repiten para Razas y Grupos Étnicos (REG) y/o Ascendencia, por ejemplo, los Archivos de Compendio 2 y 4 del Censo 2000. 
+
+Lo que se baja de estos conjuntos de datos recibirá el nombre de:
+
+ip_<dataset>_data001_1.<ext>
+ip_<dataset>_data001_2.<ext> 
+ip_<dataset>_data002_1.<ext>
+ip_<dataset>_data003_1.<ext>   etc.
+
+ 
+Cada archivo contendrá datos para una Raza o Grupo Étnico (REG); la REG se identifica con el código de 3 cifras en el nombre del archivo *data001*.<ext>. Cada archivo contendrá no más de 250 columnas de datos, las claves incluidas, por lo tanto, se pueden crear múltiples archivos de datos para cada  REG. Sin embargo, cada archivo contendrá datos para solamente una REG. Los archivos de datos iterados contienen claves primarias para establecer enlaces con otros archivos de datos:
+
+	GEO_ID: el Identificador Geográfico
+	GEO_ID2: el Identificador Geográfico compatible con GIS
+	SUM_LEVEL: el Código de Nivel de Resumen
+	CHARITER: el código de 3 cifras que corresponde a la Raza y/o Grupo Étnico  
+
+	
+d) Archivo de Contenido Geográfico: ip_<dataset>_geo.<ext> 
+
+Este archivo se produce de forma dinámica y contiene los valores de códigos geográficos para todas las áreas geográficas seleccionadas. Ese archivo puede establecer un enlace con varios archivos de datos mediante las claves primarias de: 
+
+	GEO_ID: el Identificador Geográfico
+	GEO_ID2: el Identificador Geográfico compatible con GIS
+	SUMLEV: el Código de Nivel de Compendio
+	
+El GEO_ID se usa en la aplicación American FactFinder para identificar de manera exclusiva cada geografía. Un GEO_ID se forma al agregar una serie de secuencias de textos: código de nivel de compendio de 3 cifras + '00US' + códigos geográficos aplicables. Por ejemplo, el GEO_ID para el condado de Autauga, Alabama se formaría al agregar: '050' + '00US' + '01' (FIPS del estado) + '001' (FIPS del condado) para producir: '05000US01001'.
+
+El GEO_ID2 lo pueden utilizar los usuarios de programas GIS que usan los datos del Censo y necesitan una clave común para establecer enlaces entre los datos tabulares de la AFF y los datos espaciales de TIGER.  GEO_ID2 es un campo que contiene los códigos geográficos aplicables sin el código de nivel de compendio de tres cifras y el '00US'.
+
+
+CONSEJO: Los nombres de archivos *data*.txt y *geo.txt no solamente reflejan los contenidos del archivo.
+Los mismos nombres de archivos se volverán a usar cuando se baje algo posteriormente con contenido diferente. Asegúrese de modificar los nombres de sus archivos cuando baje archivos varias veces. 
+
+3) Refiérase al Readme_<dataset>.txt para más información
+
+Las selecciones geográficas en el archivo *geo.txt podrían no tener valores de datos que se correspondan en los archivos data.txt. Las razones de esto varían según el conjunto de datos. Refiérase a los archivos Readme individuales de cada conjunto de datos para más explicación. 
+

@@ -1,0 +1,705 @@
+
+      SUBROUTINE XPLTIT(Instrg, Lenn, Ear, Esavar, Fluxar, Igroup,
+     &                  Ichanb, Ichane, Respon, Effar, Qinter, Qplot,
+     &                  Tclstr)
+
+      CHARACTER Instrg*(*), Tclstr*(*)
+
+      INTEGER Lenn
+
+      REAL Ear(0:*), Esavar(*), Fluxar(*)
+      REAL Respon(*), Effar(*)
+      INTEGER Igroup(*) , Ichanb(*) , Ichane(*)
+
+      LOGICAL Qinter, Qplot
+
+C---
+C XSPEC subroutine to handle the plot command.
+C Note, user-defined PLT commands must go at the end of the list
+C to ensure that they override the generated commands.  Therefore
+C it would be most logical to add to the CMD list downward from the
+C end.
+C---
+C Arguments :
+C     Instrg       c          i: Command string
+C     Lenn         i          i: Parse position in Instrg
+C     Ear          r          i: Response energies
+C     Esavar       r          i: Model components
+C     Fluxar       r          i: Total model
+C     Igroup       i          i: Response groups per energy
+C     Ichanb       i          i: Start channel for response group
+C     Ichane       i          i: Stop channel for response group
+C     Respon       r          i: Response elements
+C     Effar        r          i: Efficiency
+C     Qinter       l          i: If true then interactive plot
+C     Qplot        l          i: If true then plotting else outputting to Tcl
+C     Tclstr       c          r: Tcl output string
+C---
+C 18 Dec 1983 - rashafer
+C 1.0: Only the folded data is plotted, no subcommands
+C 1.1: Subcommands added to allow additional plots, including
+C   'data', 'model', 'efficien'
+C 2.0: additional arguments for new form of pltfld
+C 3.0: time and area arguments for effective area plots
+C 4.0: files can be grouped for plotting purposes
+C 4.1: residual, folded model, and insensitivity plots installed
+C 5.0: more workspace arrays, and sensitivity and energy corrector plots
+C 6.0: include channel elow and ehi arrays for plot of channel data vs
+C   energy, e.g. 'ecdata' and 'ecresids'.
+C 7.0: Use XPARSE and the DSETSPEC include file
+C 1989-Feb-12 - Modified for use with PLT - [AFT]
+C 1989-Jun-22 - Added "unfolded spectrum" option - kaa
+C 1989-Sep-13 - Added contour plot feed through
+C 1989-Nov-24 - Added "contribution to chisquared" option - kaa
+C 1990-Jun-15 - Added "ratio" option - kaa
+C 1993-Apr-24 - Added "delchi" and "edelchi" options - kaa
+C 1993-May-28 - Added "donly", "ecdonly", "counts", and "ecounts" options - kaa
+C 1993-Jun-14 - Added "ldata", "lecdata" options - kaa
+C 1993-Oct-25 - Added "ecdech" and "datchi" options - kaa
+C 1993-Nov-27 - Reworked plotting to allow two options to be specified so that
+C               things other than residuals can be plotted in the lower pane.
+C 1994-Oct-20 - Changed Y to a 1-D array in this routine and its subroutines
+C               in order to save memory. Data is stored as though it is a 2-D
+C               routine with first dimension NPTS and this is what PLT is told.
+C 1996-Dec-24 - Removed entries since they are now handled by PLOT object.
+C 1999-Jan-1  - Added "genetic" option.
+C 1999-Mar-1  - Added "foldmodel" option.
+C 1999-Mar-9  - Added model option to the tclout code
+C---
+
+      INCLUDE '../../inc/xspec.inc'
+
+      REAL NO
+      PARAMETER(NO=-1.2e-34)
+      INTEGER MAXSCM, MXSCM2, MXTCM
+      PARAMETER (MAXSCM=24, MXSCM2=5, MXTCM=5)
+      INTEGER MXCMD
+      PARAMETER (MXCMD=1000)
+      INTEGER LENACT
+
+      CHARACTER cmd(MXCMD)*72
+      CHARACTER subcom(MAXSCM)*9, sbcom2(MXSCM2)*9, tclcom(MXTCM)*9
+      CHARACTER cpdev*70
+      INTEGER iy, iflxbuf, iphacmp
+      INTEGER iery(100)
+
+      INTEGER i , icom , ier , iflag , idelim , ipt, iplgrp, itcom
+      INTEGER ncmd , npts , nvec , icom2, ixopt, ieopt, ioff, nret
+      INTEGER idset, nadd, ntchan, ntener, nsize, istat
+      LOGICAL qeff, qerr(MAXSCM), qmodel(MAXSCM)
+      CHARACTER cplot*36, ctmp*4, wrtstr*255, pchsen*9, pchsn2*9
+
+      INTEGER cgncmp, dgndst, dgndtg, rgnenr, dgnbne, dgnbnb, dgnplg
+      INTEGER dgchan, ggbcmp, ggecmp, rgtnen, xpgncm, ggfpop
+      INTEGER cgnchn, cgtchl
+      CHARACTER fgauxf*255, fgflnm*255, xpgcpd*70, xpgucm*72, xpgxop*4
+      CHARACTER xgstat*11
+      LOGICAL cgisad, xpgqpn, xpgqad
+      EXTERNAL cgncmp, dgndst, fgauxf, fgflnm, dgndtg, rgnenr, ggfpop
+      EXTERNAL dgnbne, dgnbnb, dgchan, ggbcmp, ggecmp, cgisad, dgnplg
+      EXTERNAL rgtnen, xpgqpn, xpgcpd, xpgncm, xpgucm, xpgxop, xpgqad
+      EXTERNAL xgstat, cgnchn, cgtchl
+
+      SAVE icom , icom2, itcom, iplgrp
+
+      DATA icom/1/ , icom2/1/, itcom/1/, iplgrp/1/, iflxbuf/0/
+      DATA subcom/'data' , 'counts', 'ldata', 'residuals' , 'chisq' ,
+     &     'delchi', 'ratio', 'summary', 'model', 'emodel', 'eemodel',
+     &     'contour' , 'efficien' , 'ufspec', 'eufspec', 'eeufspec',
+     &     'dem', 'insensitv' , 'sensitvty' , 'genetic', 'foldmodel',
+     &     'icounts', 'mcmc', 'margin' /
+      DATA sbcom2/'none', 'residuals', 'chisq', 'delchi', 'ratio'/
+      DATA qerr/4*.TRUE., .FALSE., 3*.TRUE.,5*.FALSE.,3*.TRUE.,
+     &          5*.FALSE., .TRUE., 2*.FALSE./
+      DATA qmodel/3*.TRUE., 10*.FALSE., 3*.TRUE., 5*.FALSE., .TRUE.,
+     &            2*.FALSE./
+      DATA tclcom/'x', 'xerr', 'y', 'yerr', 'model'/
+
+C Set up values needed for memory allocation
+
+      iy = 0
+
+      ntener = 0
+      ntchan = 0
+      DO i = 1, dgndst()
+         ntchan = ntchan + dgchan(i) + 1
+         ntener = ntener + rgnenr(i) + 1
+      ENDDO
+
+      nadd = 0
+      DO i = ggbcmp(1), ggecmp(1)
+         IF( cgisad(i) ) nadd = nadd + 1
+      ENDDO
+
+C It is necessary to flush out ALL possible commands.
+
+      DO i = 1 , MXCMD
+         cmd(i) = ' '
+      ENDDO
+
+C Find the plot option specified on the command line.
+
+      CALL XGTMCH(Instrg,Lenn,subcom,MAXSCM,'`plot'' sub-commands',icom,
+     &            iflag,idelim)
+      pchsen = subcom(icom)
+
+C  Let user escape without plotting (if desired)
+
+      IF ( iflag .LT. 0 ) RETURN
+      IF ( icom .GT. MAXSCM ) THEN
+         wrtstr =
+     & ' *Strange ERROR*:XPLTIT: plot subcommand index out of range'
+         CALL xwrite(wrtstr, 2)
+         RETURN
+      ENDIF
+
+C If the delchi option is chosen but we are not using chi-squared then
+C write a warning message and give up.
+
+      IF ( pchsen .EQ. 'delchi' .AND. 
+     &     xgstat() .NE. 'Chi-Squared' ) THEN
+         CALL xwrite(
+     &    'The delchi plot option can only be used with chi-squared', 5)
+         RETURN
+      ENDIF
+
+C If plotting and either 'data', 'counts', 'icounts', or 'ldata' was 
+c specified then get the subsidiary option. If no option was given 
+c then use whatever was set before.
+
+      IF ( Qplot ) THEN
+
+         IF ( ( pchsen .EQ. 'data' .OR. 
+     &          pchsen .EQ. 'counts' .OR. 
+     &          pchsen .EQ. 'icounts' .OR. 
+     &          pchsen .EQ. 'ldata' ) .AND. iflag .NE. 1) THEN
+
+            icom2 = 1
+            CALL XGTMCH(Instrg,Lenn,sbcom2,MXSCM2,
+     &                  '`2nd plot'' sub-commands',icom2,iflag,idelim)
+
+            IF ( iflag .LT. 0 ) icom2 = 1
+            IF ( icom2 .GT. MXSCM2 ) THEN
+               wrtstr =
+     & ' *Strange ERROR*:XPLTIT: 2nd plot subcommand index out of range'
+               CALL xwrite(wrtstr, 2)
+               RETURN
+            ENDIF
+
+         ENDIF
+         pchsn2 = sbcom2(icom2)
+
+C If the delchi option is chosen but we are not using chi-squared then
+C write a warning message and give up.
+
+         IF ( pchsn2 .EQ. 'delchi' .AND. 
+     &        xgstat() .NE. 'Chi-Squared' ) THEN
+            CALL xwrite(
+     &    'The delchi plot option can only be used with chi-squared', 5)
+            RETURN
+         ENDIF
+
+C If icounts is the primary option then only residuals is allowed as the
+c second.
+
+         IF ( pchsen .EQ. 'icounts' .AND.
+     &        .NOT.(pchsn2 .EQ. 'residuals' .OR. pchsn2 .EQ. 'none')
+     &       ) THEN
+            CALL xwrite('Only residuals can be plotted with icounts', 5)
+            RETURN
+         ENDIF
+
+      ELSE
+
+C If outputting to Tcl then set the subsidiary plot to 'none' but find out
+C the sub-array requested
+
+         pchsn2 = 'none'
+
+         CALL XGTMCH(Instrg, Lenn, tclcom, MXTCM, 
+     &               'x, xerr, y, yerr, or model', itcom, iflag, 
+     &               idelim)
+
+         IF ( iflag .LT. 0 ) itcom = 1
+         IF ( itcom .GT. MXTCM ) THEN
+            wrtstr =
+     & ' *Strange ERROR*:XPLTIT: tcl subcommand index out of range'
+            CALL xwrite(wrtstr, 2)
+            RETURN
+         ENDIF
+
+c For some plot options only x and y are valid. Check that the user hasn't
+c asked for error information where none exits.
+
+         IF ( .NOT.qerr(icom) .AND. (itcom.EQ.2 .OR. itcom.EQ.4) ) THEN
+            CALL xwrite(
+     & 'xerr or yerr requested when plot option has no errors', 5)
+            RETURN
+         ENDIF
+
+c Check whether the user has asked for the model array for a valid plot
+c option
+
+         IF ( .NOT.qmodel(icom) .AND. (itcom.EQ.5) ) THEN
+            CALL xwrite(
+     & 'model requested when plot option does not include this array',
+     &                  5)
+            RETURN
+         ENDIF
+
+c Check whether the user specified a plot group
+
+         CALL xgtint(instrg, lenn, 1, 'Plot group', 1, iplgrp, nret, 
+     &               iflag, -1)
+         IF ( iflag .LT. 0 ) RETURN
+         IF ( iplgrp .LT. 1 .OR. iplgrp .GT. dgnplg() ) THEN
+            WRITE(wrtstr, '(a,i4,a)') 
+     &        'Plot group is out of valid range (', dgnplg(), ')'
+            CALL xwrite(wrtstr, 5)
+            RETURN
+         ENDIF
+
+      ENDIF
+
+c Set up the X-axis plot option
+
+      ixopt = 1
+      IF ( xpgxop() .EQ. 'ener' ) ixopt = 2
+      IF ( xpgxop() .EQ. 'wave' ) ixopt = 3
+
+      ncmd = 0
+      qeff = .FALSE.
+
+c First check if we have the data available to produce the requested plot
+
+      IF ( pchsen .EQ. 'data' .OR. pchsen .EQ. 'counts' .OR.
+     &     pchsen .EQ. 'ldata' .OR. pchsen .EQ. 'residuals' .OR.
+     &     pchsen .EQ. 'chisq' .OR. pchsen .EQ. 'delchi' .OR.
+     &     pchsen .EQ. 'ratio' .OR. pchsen .EQ. 'foldmodel' .OR.
+     &     pchsen .EQ. 'icounts' ) THEN
+
+c Check that there is enough information to create the requested plots
+
+         IF ( ( pchsen .EQ. 'data' .OR. pchsen .EQ. 'counts' .OR.
+     &          pchsen .EQ. 'ldata' .OR. pchsen .EQ. 'icounts' ) 
+     &         .AND. pchsn2 .EQ. 'none' ) THEN
+            CALL pltest(pchsen, dgnbne(dgndst()), 1, 1, ier)
+         ELSE
+            CALL pltest(pchsen, dgnbne(dgndst()), 1, cgncmp(), ier)
+         ENDIF
+         IF ( ier .NE. 0 ) GOTO 300
+
+         IF ( ixopt .NE. 1 ) THEN
+            DO idset = 1, dgndst()
+               IF ( dgnbne(idset) .GT. dgnbnb(idset) ) THEN
+                  CALL pltest(pchsen, 1, rgnenr(idset), 1, ier)
+                  IF ( ier .NE. 0 ) THEN
+                     WRITE(wrtstr, '(a,i4)') ' for dataset ', idset
+                     CALL xwrite(wrtstr, 10)
+                     GOTO 300
+                  ENDIF
+               ENDIF
+            ENDDO
+         ENDIF
+
+      ELSE IF ( pchsen .EQ. 'ufspec' .OR. pchsen .EQ. 'eufspec' .OR.
+     &          pchsen .EQ. 'eeufspec' .OR. pchsen .EQ. 'summary' .OR. 
+     &          pchsen .EQ. 'contour' .OR. pchsen .EQ. 'margin' ) THEN
+
+         CALL PLTEST(pchsen,dgnbne(dgndst()),1,Cgncmp(),ier)
+         IF ( ier.NE.0 ) GOTO 300
+
+         DO idset = 1, dgndst()
+            CALL pltest(pchsen, 1, rgnenr(idset), 1, ier)
+            IF ( ier .NE. 0 ) THEN
+               WRITE(wrtstr, '(a,i4)') ' for dataset ', idset
+               CALL xwrite(wrtstr, 10)
+               GOTO 300
+            ENDIF
+         ENDDO
+
+      ELSEIF ( pchsen .EQ. 'efficien' ) THEN
+
+         CALL pltest(pchsen, 1, rgtnen(), 1, ier)
+         IF ( ier .NE. 0 ) GOTO 300
+
+         DO idset = 1, dgndst()
+            CALL pltest(pchsen, 1, rgnenr(idset), 1, ier)
+            IF ( ier .NE. 0 ) THEN
+               WRITE(wrtstr, '(a,i4)') ' for dataset ', idset
+               CALL xwrite(wrtstr, 10)
+               GOTO 300
+            ENDIF
+         ENDDO
+
+      ELSEIF ( pchsen .EQ. 'model' .OR. pchsen .EQ. 'emodel' .OR.
+     &         pchsen .EQ. 'eemodel' .OR. pchsen .EQ. 'sensitvty' .OR. 
+     &         pchsen .EQ. 'insensitv' .OR. pchsen .EQ. 'dem' ) THEN
+
+         CALL PLTEST(pchsen,1,rgtnen(),Cgncmp(),ier)
+         IF ( ier.NE.0 ) GOTO 300
+
+         DO idset = 1, dgndst()
+            CALL pltest(pchsen, 1, rgnenr(idset), 1, ier)
+            IF ( ier .NE. 0 ) THEN
+               WRITE(wrtstr, '(a,i4)') ' for dataset ', idset
+               CALL xwrite(wrtstr, 10)
+               GOTO 300
+            ENDIF
+         ENDDO
+
+      ELSEIF ( pchsen .EQ. 'genetic' .OR. pchsen .EQ. 'mcmc' ) THEN
+
+         CALL PLTEST(pchsen,dgnbne(dgndst()),1,Cgncmp(),ier)
+         IF ( ier.NE.0 ) GOTO 300
+
+      ENDIF
+
+c Now another case statement to set up the required plot.
+c First the cases that call PLTFLD
+
+      IF ( pchsen .EQ. 'data' .OR. pchsen .EQ. 'counts' .OR.
+     &     pchsen .EQ. 'ldata' .OR. pchsen .EQ. 'residuals' .OR.
+     &     pchsen .EQ. 'chisq' .OR. pchsen .EQ. 'delchi' .OR.
+     &     pchsen .EQ. 'ratio' .OR. pchsen .EQ. 'foldmodel' .OR.
+     &     pchsen .EQ. 'icounts' ) THEN
+
+c If the option is data, counts, or ldata then calculate the folded model
+c components if requested
+
+         CALL udmget( 2*ntchan*nadd, 6, iphacmp, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         IF ( ( pchsen .EQ. 'data' .OR. pchsen .EQ. 'counts' .OR.
+     &          pchsen .EQ. 'ldata' .OR. pchsen .EQ. 'icounts' ) 
+     &        .AND. cgncmp() .GT. 0 .AND. xpgqad() ) THEN
+
+            CALL udmget( 2*rgtnen(), 6, iflxbuf, istat )
+            IF( istat .NE. 0 ) CALL xwrite(
+     &           ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+            CALL fldadd(Esavar, Ear, Igroup, Ichanb, Ichane, Respon,
+     &                  Effar, memr(iFlxbuf), nadd, ntchan, iphacmp )
+
+            CALL udmfre( iflxbuf, 6, istat )
+            IF( istat .NE. 0 ) CALL xwrite(
+     &           ' WARNING: Memory deallocation failed in XPLTIT.', 2)
+
+         ELSE
+            nadd = 0
+         ENDIF
+
+         CALL udmget( ntchan*(7+nadd), 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL PLTFLD(pchsen, pchsn2, ixopt, Fluxar, Ear, nadd, ntchan, 
+     &               iphacmp,  memr(iy), iery, npts, nvec, cmd, ncmd)
+
+         CALL udmfre( iphacmp, 6, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+c Then the other types of plot
+
+      ELSEIF ( pchsen .EQ. 'summary' ) THEN
+
+c  **Case of summary
+
+         CALL udmget( ntchan*14, 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL PLTSUM(Fluxar,Ear,memr(iy),iery,npts,nvec,cmd,ncmd)
+
+      ELSEIF ( pchsen .EQ. 'contour' ) THEN
+
+c  **Case of contour plot
+c NB: Currently CONTPL exists as an entry point into STPPAR.
+
+         CALL CNTSIZ(nsize)
+
+         CALL udmget(nsize, 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL CONTPL(Instrg,Lenn,memr(iy),iery,npts,
+     &               nvec,cmd,ncmd)
+
+      ELSEIF ( pchsen .EQ. 'efficien' ) THEN
+
+c  **Case of efficiency
+
+         CALL udmget( ntener*3, 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL PLTEFF(Ear,Igroup,Ichanb,Ichane,Respon,Effar,
+     &               memr(iy),iery,npts,nvec,cmd,ncmd,ixopt)
+         qeff = .TRUE.
+
+      ELSEIF ( pchsen .EQ. 'model' .OR. pchsen .EQ. 'emodel' .OR.
+     &         pchsen .EQ. 'eemodel' ) THEN
+
+c  **Case of model in f(E), Ef(E), or EEf(E)
+
+         CALL udmget( ntener*(3+nadd), 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         ieopt = 0
+         IF ( pchsen .EQ. 'emodel' ) ieopt = 1
+         IF ( pchsen .EQ. 'eemodel' ) ieopt = 2
+     
+         CALL pltmod(Ear,Fluxar,memr(iy),iery,npts,nvec,cmd,
+     &               ncmd,Esavar,ixopt,ieopt)
+
+      ELSE IF ( pchsen .EQ. 'ufspec' .OR. pchsen .EQ. 'eufspec' .OR.
+     &          pchsen .EQ. 'eeufspec' ) THEN
+
+c  **Case of Unfolded spectrum in ph/cm^2/s/keV, keV/cm^2/s/keV, or
+c                                 keV(keV/cm^2/s/keV).
+
+         CALL udmget( ntchan*(11+nadd), 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL udmget( rgtnen(), 6, iflxbuf, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         ieopt = 0
+         IF ( pchsen .EQ. 'eufspec' ) ieopt = 1
+         IF ( pchsen .EQ. 'eeufspec' ) ieopt = 2
+
+         CALL pltufs(fluxar,ear,memr(iy),iery,npts,nvec,cmd,ncmd,
+     &               memr(iflxbuf),esavar,ieopt,ixopt)
+
+         CALL udmfre( iflxbuf, 6, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory deallocation failed in XPLTIT.', 2)
+
+      ELSEIF ( pchsen .EQ. 'sensitvty' ) THEN
+
+c  **Case of sensitivity
+
+         CALL udmget( 3*ntener, 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL udmget( rgtnen(), 6, iflxbuf, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL PLTSNS(Ear,Fluxar,memr(iFlxbuf),Igroup,Ichanb,Ichane,
+     &               Respon,Effar,memr(iy),iery,npts,nvec,cmd,ncmd)
+
+         CALL udmfre( iflxbuf, 6, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory deallocation failed in XPLTIT.', 2)
+
+      ELSEIF ( pchsen .EQ. 'insensitv' ) THEN
+
+c  **Case of insensitivity
+
+         CALL udmget( ntener*3, 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL udmget( rgtnen(), 6, iflxbuf, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL pltins(Ear,memr(iFlxbuf),Igroup,Ichanb,Ichane,Respon,
+     &               Effar,memr(iy),iery,npts,nvec,cmd,ncmd)
+
+         CALL udmfre( iflxbuf, 6, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory deallocation failed in XPLTIT.', 2)
+
+      ELSEIF ( pchsen .EQ. 'dem' ) THEN
+
+c  **Case of dem plot
+c NB: Currently DEMPLT exists as an entry point into SUMDEM
+
+         CALL DEMSIZ(nsize)
+
+         CALL udmget(nsize, 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL DEMPLT(memr(iy),iery,npts,nvec,cmd,ncmd)
+
+      ELSEIF ( pchsen .EQ. 'genetic' ) THEN
+
+c  **Case of genetic plot
+
+         nsize = ggfpop()
+         CALL udmget(nsize*nsize, 6, iy, istat)
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL genplt(Instrg,Lenn,memr(iy),iery,npts,nvec,cmd,ncmd,ier)
+         IF ( ier.NE.0 ) GOTO 300
+
+      ELSEIF ( pchsen .EQ. 'mcmc' ) THEN
+
+c  **Case of Markov Chain Monte Carlo plot
+
+         nsize = 2*(cgtchl() + cgnchn()-1)
+         CALL udmget(nsize, 6, iy, istat)
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL mcplot(Instrg,Lenn,memr(iy),iery,npts,nvec,cmd,ncmd,ier)
+         IF ( ier.NE.0 ) GOTO 300
+
+      ELSEIF ( pchsen .EQ. 'margin' ) THEN
+
+c  **Case of margin plot
+c NB: Currently MARGPL exists as an entry point into MARGIN
+
+         CALL MRGSIZ(nsize)
+
+         CALL udmget(nsize, 6, iy, istat )
+         IF( istat .NE. 0 ) CALL xwrite(
+     &        ' WARNING: Memory allocation failed in XPLTIT.', 2)
+
+         CALL MARGPL(Instrg,Lenn,memr(iy),iery,npts,
+     &               nvec,cmd,ncmd)
+
+      ENDIF
+
+C End of case statement
+
+      IF ( ncmd.EQ.0 ) RETURN
+
+C If we are plotting then set up the PLT commands
+
+      IF ( Qplot ) THEN
+
+C If required write filenames into the "LABEL F" field
+
+         IF ( pchsen .NE. 'dem' .AND. pchsen .NE. 'contour' ) THEN
+            ncmd = ncmd + 1
+            cmd(ncmd) = 'LA F '
+            ipt = 5
+            DO i = 1 , dgndst()
+               IF ( qeff ) THEN
+                  cmd(ncmd) = cmd(ncmd)(:ipt) // fgauxf(i,'r')
+                  ipt = MIN(ipt+LENACT(fgauxf(i,'r'))+1,LEN(cmd(ncmd)))
+               ELSE
+                  cmd(ncmd) = cmd(ncmd)(:ipt) // fgflnm(i)
+                  ipt = MIN(ipt+LENACT(fgflnm(i))+1,LEN(cmd(ncmd)))
+               ENDIF
+            ENDDO
+         ENDIF
+
+C If the plot device has been set but not opened then we are doing a 
+C PostScript plot of some type so tack the cpd command onto the list
+
+         IF ( .NOT.xpgqpn() ) THEN
+            cpdev = xpgcpd()
+            WRITE(cmd(ncmd+1),'(a,a)') 'CPD ', 
+     &        cpdev(:MIN(LEN(cpdev),LEN(CMD(NCMD+1))-4))
+            ncmd = ncmd + 1
+         ENDIF
+
+c Add the user-defined commands to the list. Tack the plot and exit
+c commands on the end if not an interactive plot
+
+         IF ( .NOT.Qinter ) THEN
+            DO i = ncmd+1, MIN(ncmd+xpgncm(),MXCMD-2)
+               cmd(i) = xpgucm(i-ncmd)
+            ENDDO
+            IF ( ncmd+xpgncm() .GT. MXCMD-2 ) THEN
+               CALL xwrite('Oops : run out of space for user-commands',
+     &                     10)
+               ncmd = MXCMD - 2
+            ELSE
+               ncmd = ncmd + xpgncm()
+            ENDIF
+            cmd(ncmd+1) = 'PLOT'
+            cmd(ncmd+2) = 'EXIT'
+            ncmd = ncmd + 2
+         ELSE
+            DO i = ncmd+1, MIN(ncmd+xpgncm(),MXCMD)
+               cmd(i) = xpgucm(i-ncmd)
+            ENDDO
+            IF ( ncmd+xpgncm() .GT. MXCMD ) THEN
+               CALL xwrite('Oops : run out of space for user-commands',
+     &                     10)
+               ncmd = MXCMD
+            ELSE
+               ncmd = ncmd + xpgncm()
+            ENDIF
+
+         ENDIF
+
+         DO i = 1, ncmd
+            CALL xwrite(cmd(i),25)
+         ENDDO
+
+         CALL PLT(memr(iy),iery,npts,npts,nvec,cmd,ncmd,ier)
+
+      ELSE
+
+C Otherwise return the appropriate string to Tcl. 
+C If this is a contour plot then just dump the steppar data
+
+         IF ( pchsen .EQ. 'contour' ) THEN
+
+            Tclstr = ' '
+            ipt = 1
+            DO ioff = 0, nsize-1
+               WRITE(Tclstr(ipt:),'(1x,1pg15.8)') MEMR(iy+ioff)
+               ipt = ipt + 16
+            ENDDO
+
+         ELSE
+
+C Else first loop through the MEMR(IY) array to find the start of 
+c the data requested.
+
+            ioff = (itcom-1) * npts
+            DO i = 1, iplgrp-1
+               DO WHILE( MEMR(iy+ioff) .NE. NO )
+                  ioff = ioff + 1
+               ENDDO
+               ioff = ioff + 1
+            ENDDO
+
+c Now write the values into the string
+
+            Tclstr = ' '
+            ipt = 1
+            DO WHILE ( MEMR(iy+ioff) .NE. NO .AND. 
+     &                 ioff .LE. (itcom*npts-1) .AND.
+     &                 ipt+16 .LE. len(Tclstr) )
+               WRITE(Tclstr(ipt:),'(1x,1pg15.8)') MEMR(iy+ioff)
+               ipt = ipt + 16
+               ioff = ioff + 1
+            ENDDO
+
+         ENDIF
+
+      ENDIF
+
+      CALL udmfre( iy, 6, istat )
+      IF( istat .NE. 0 ) CALL xwrite(
+     &     ' WARNING: Memory deallocation failed in XPLTIT.', 2)
+
+
+C---
+C Jump to here to skip the plot
+c *** reset the indirect file suffix
+      ctmp = 'xcm'
+ 300  CALL XSETIN(ctmp)
+
+      RETURN
+      END
+
+
+
+

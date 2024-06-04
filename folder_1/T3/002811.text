@@ -1,0 +1,6151 @@
+Seepage Model for PA Including Drift Collapse Rev 00, ICN 00
+
+MDL-NBS-HS-000002
+
+February 2000
+
+1. PURPOSE 
+The purpose of this Analysis/Model Report (AMR) is to document the predictions and analysis 
+performed using the Seepage Model for Performance Assessment (PA) and the Disturbed Drift 
+Seepage Submodel. These results will be used by PA to develop the probability distribution of 
+water seepage into waste emplacement drifts at Yucca Mountain, Nevada, as part of the 
+evaluation of the long term performance of the potential repository. This is in accordance with 
+the AMR Development Plan for U0075 Seepage Models for Performance Assessment (PA) 
+Including Drift Collapse (CRWMS M&O 1999a). This purpose is accomplished by performing 
+numerical simulations with stochastic representations of hydrological properties using the 
+Seepage Model for PA and evaluating the effects of an alternative drift geometry representing a 
+partially collapsed drift using the Disturbed Drift Seepage Submodel. This AMR supports: 
+• PA 
+• Abstraction of Drift-Scale Seepage 
+• Unsaturated Zone (UZ) Flow and Transport Process Model Report (PMR) 
+Seepage into drifts is evaluated by applying numerical models with stochastic representations of 
+hydrological properties and performing multiple realizations of the permeability field around the 
+drift. The Seepage Model for PA uses the distribution of permeabilities derived from seepage 
+testing in niches to stochastically simulate the 3D flow of water in the fractured host rock in the 
+vicinity of potential emplacement drifts under ambient conditions. The Disturbed Drift Seepage 
+Submodel evaluates the impact of the partial collapse of a drift on seepage. Drainage in rock 
+below the emplacement drift is also evaluated. 
+The work scope is to: (1) evaluate percolation flux predictions for UZ Site Scale Flow and 
+Transport Model (UZ model) for use in establishing a range of flux rates to be applied at the 
+upper boundary of the drift seepage model, (2) use the calibrated parameter sets developed using 
+the Seepage Calibration Model, (3) design a set of simulations for evaluating drift seepage, 
+(4) perform multiple realizations of heterogeneous rock properties and subsequent simulations of 
+drift seepage using the Seepage Model for PA and provide input for the evaluation of the 
+distribution probability of water dripping onto waste packages, (5) evaluate dependence of 
+predictions on the effective local correlation length and the degree of heterogeneity of hydrologic 
+parameters, (6) evaluate existing models of tunnel or drift collapse provided by the Engineered 
+Barrier System (EBS) group for representation as an alternative drift geometry and develop a 
+simplified representation of partial drift collapse, (7) perform simulations using this simplified 
+representation, and (8) use Seepage Model for PA to evaluate drainage of rocks below a drift 
+(CRWMS M&O 1999a, p. 4). 
+This AMR is classified as a scientific analysis because it documents predictions and analyses for 
+seepage into drifts for use in the evaluation of the performance of natural barriers. The terms 
+“model” and “analysis” are used interchangeably throughout this AMR and refer to predictions 
+and evaluation of seepage and not necessarily to the classification of this AMR per AP-3.10Q, 
+Analyses and Models.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 12 February 2000 
+The primary caveats and limitations in the scope of this AMR and the results from the Seepage 
+Model for PA are that its basis is limited to the current repository design and available site data 
+including the drift configuration defined by the current design, available hydrologic properties 
+data from the site, limitations reported in the AMRs that directly support this AMR, and 
+consideration of seepage under ambient conditions only. Thus thermal-hydrologic and thermalhydrological-
+mechanical effects are not considered in this AMR. Also since the main available 
+seepage-related data are for the Topopah Spring middle nonlithophysal geological unit (Tptpmn) 
+at Yucca Mountain, evaluation in this AMR is mainly for this unit. 
+Note that the purpose of this AMR is to document the predictions from the Seepage Model for 
+PA and not to draw conclusions on final PA predictions. Thus it forms a vital link between the 
+field data and calibrated-model parameters and the PA effort. The AMR establishes trends of 
+seepage over ranges of parameter values with a state-of-art understanding of the processes 
+involved. PA, working under a separate AMR, will discuss probability weighting factors for 
+parameter values and scenarios, that are appropriate to the potential repository horizon at Yucca 
+Mountain. Thus for this AMR, the data that have been surveyed are not used directly but are 
+used as corroborative information to establish the limits of the parameter ranges to be used. 
+Similarly the scenarios (such as rockfalls) are taken to indicate trends and potential values of the 
+results. In other words, this AMR does not utilize a particular parameter set, but considers ranges 
+of possible values for these input parameters. Indeed, PA can select any of the combinations of 
+input values for their analyses.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 13 February 2000 
+2. QUALITY ASSURANCE 
+The activities documented in this AMR were evaluated with other related activities in 
+accordance with QAP-2-0, Conduct of Activities, and were determined to be subject to the 
+requirements of the U.S. DOE Office of Civilian Radioactive Waste Management (OCRWM) 
+Quality Assurance Requirements and Description (QARD) (DOE 1998). This evaluation is 
+documented in M&O Site Investigations CRWMS M&O 1999b, c; and Wemheuer 1999 (Activity 
+Evaluation for Work Package WP 1401213UM1). 
+The modeling activities documented in this AMR have been conducted in accordance with the 
+CRWMS M&O quality assurance program, using OCRWM Administrative Procedures (APs) 
+and YMP-LBNL Quality Implementing Procedures (QIPs) identified in the AMR Development 
+Plan for U0075, Seepage Models for PA Including Drift Collapse and Drainage, Rev.00 
+(CRWMS M&O 1999a). This AMR has been developed in accordance with procedure 
+AP-3.10Q, Rev. 1, ICN 1, Analyses and Models.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 14 February 2000 
+INTENTIONALLY LEFT BLANK
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 15 February 2000 
+3. COMPUTER SOFTWARE AND MODEL USAGE 
+The software codes and routines used in this study are listed in Table 1 and were used in 
+accordance with AP-SI.1Q, Rev. 2, ICN 1, Software Management. These are appropriate for the 
+intended application and were used only within the range of software validation. The software 
+codes were submitted to and obtained from software configuration management. The use of 
+ITOUGH V3.2_drift (ITOUGH2 V3.2_drift, STN: 10055-3.2_DRIFT-00, Version 3.2) prior to 
+obtaining it from configuration management and issuance of a user’s request has been reviewed 
+per AP-3.17, Rev. 0, ICN 0, Impact Reviews, and has been found to have no impact on this AMR 
+and its products. The qualification status of this software is given in the Document Input 
+Reference System (DIRS) included as Attachment I and in the DIRS database. 
+Table 1. Computer Software and Routines 
+Software Name Version Software Tracking Number 
+(STN) 
+Computer Platform 
+ITOUGH2 V3.2_drift 3.2 10055-3.2_DRIFT-00 SUN and DEC w/Unix OS 
+GSLIB V 2.0 
+(SISIM module of 
+GSLIB package) 
+2.0 10098-2.0MSISIMV2.0-00 SUN w/Unix OS and PC 
+w/DOS 
+AMESH V 1.0 1.0 10045-1.0-00 SUN w/UNIX OS 
+Routines: Accession Number (ACC): 
+frac_calc 1.1 MOL.19990903.0032 PC w/DOS 
+Read_TDB 1.0 MOL.19990903.0031 
+MOL.20000104.0304 
+PC w/DOS 
+Meshbd.f 1.0 MOL.20000217.0297 SUN w/Unix OS 
+mininipresf.f 1.0 MOL20000217.0298 SUN w/Unix OS 
+mddf.f 1.0 MOL.20000217.0299 SUN w/Unix OS 
+mk_gener.f 1.0 MOL.20000217.0300 SUN w/Unix OS 
+mk_scale_k.f 1.0 MOL.20000217.0301 SUN w/Unix OS 
+mininipresf_ir.f 1.0 MOL.20000217.0302 SUN w/Unix OS 
+mddf_CC8.f 1.0 MOL.20000217.0303 SUN w/Unix OS 
+mddf_CS8.f 1.0 MOL.20000217.0304 SUN w/Unix OS 
+mddf_cc.f 1.0 MOL.20000217.0305 SUN w/Unix OS 
+minrefine3df.f 1.0 MOL.20000217.0306 SUN w/Unix OS 
+The codes ITOUGH2 V3.2_drift, SISIM module of the GSLIB package (GSLIB V2.0, STN: 
+10098-2.0MSISIMV2.0-00, Version 2.0) and AMESH (AMESH V1.0, STN: 10045-1.0-00, 
+Version 1.0) were reverified as part of the YMP Configuration Management Software 
+Revalidation effort under AP-SI.1Q, Rev. 1, ICN 0. The routines were qualified per Section 5.1 
+of AP-SI.1Q, Rev. 1, ICN 0 (the first two routines listed in Table 1) and AP-SI.1Q, Rev. 2, ICN 
+1 (all other routines). The source codes for the routines are provided in Attachment III. All other
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 16 February 2000 
+related documentation per AP-SI.1Q, including test cases, has been submitted under the 
+corresponding ACC number in Table 1 (see column 3). 
+The AMESH V1.0 code is used in the analysis to generate numerical grids for modeling 
+simulations of the undisturbed and partially collapsed drifts. The SISIM module of GSLIB is 
+used to generate stochastic representations of the permeability fields in the host rock surrounding 
+the drifts using the air-k test data obtained from niche studies. ITOUGH2 V3.2_drift is used to 
+perform forward simulations and calibration inversions during the analyses. 
+The first two routines (frac_calc and Read_TDB) in Table 1 were used for pre-processing of data 
+from the TDMS and calculating fracture spacing for the discussion of alternative conceptual 
+models in Section 6.7. The other macros listed in Table 1 were used for pre-processing and 
+preparing input files for ITOUGH2 V3.2_drift. 
+The commercially-available visual-display graphics program TECPLOT (Version 7.0) was also 
+used. It was used for plotting data and presentation purposes only and therefore is exempt from 
+software quality assurance requirements per Section 2.0 of AP-SI.1Q, Rev. 2, ICN 1. 
+This AMR documents the analysis using the Seepage Model for PA. The input and output files 
+for the model runs presented in this AMR are listed in Attachment II. It also utilizes results from 
+the Seepage Calibration Model which is documented in CRWMS M&O (2000a).
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 17 February 2000 
+4. INPUTS 
+The inputs to the models were obtained from the Technical Data Management System (TDMS) 
+and their development is documented in other AMRs. The field and developed data used to 
+characterize the seepage conditions in the models are discussed below. 
+4.1 DATA AND PARAMETERS 
+The input data used for the development of the Seepage Model for PA include the following: 
+• Proposed drift and waste package configuration (Table 2, Row 1) 
+• Calibrated drift-scale properties to establish parameter ranges (Table 2, Row 3) 
+• Fracture properties (frequency and calibrated van Genuchten a and n parameters) for the 
+potential repository host rock to establish parameter ranges (Table 2, Row 2) 
+• Fracture permeabilities from air-k niche test results to corroborate the choice of 
+permeability range (Table 2, Row 4) 
+• Pneumatic pressure data used for estimating air permeability from the Single Heater Test 
+(SHT) (Table 2, Row 5; Tsang and Birkholzer 1999, p. 393) and Drift Scale Test (DST) 
+(Table 2, Row 5; Birkholzer et al. 1999, p. 359) areas to corroborate the choice of 
+parameter ranges 
+• Detailed line survey of fractures in the Topopah Spring middle nonlithophysal 
+geological unit along the Exploratory Studies Facility (ESF) Main Drift (Stations 27 + 
+20 to 37 + 80) to corroborate the use of the fracture continuum approach (Table 2, Rows 
+6–8) 
+• General drift shape from the EBS AMR Drift Degradation Analysis (CRWMS M&O 
+2000b) (Table 2, Row 1) 
+Specific input data sets and the associated Data Tracking Numbers (DTNs) are listed in Table 2. 
+The current Q-status of these data are provided in the DIRS which is included as Attachment I 
+and in the DIRS database.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 18 February 2000 
+Table 2. Input Data Used 
+DTN Data Description 
+SN9908T0872799.004 Drift geometry and waste package 
+length and spacing 
+LB997141233129.001 Mountain-scale, calibrated 
+parameter sets for base-case 
+infiltration 
+LB990861233129.001 Drift-scale, calibrated parameter 
+sets for base-case infiltration 
+LB980001233124.002 Pre- and post-excavation air 
+permeability data from Niche 3650 
+LB960500834244.001 
+LB970600123142.001 
+Pneumatic pressure data from air 
+injection tests in the SHT and DST 
+areas used for air permeability 
+estimates 
+GS971108314224.025 Fracture type (location, strike, dip, 
+length) Sta. 26+00 to 30+00 
+GS960708314224.008 Fracture type (location, strike, dip, 
+length) Sta. 30+00 to 35+00 
+GS960808314224.011 Fracture type (location, strike, dip, 
+length) Sta. 35+00 to 40+00 
+In the data listed in Table 2, Rows 1, 4, and 5 are labeled to be verified (TBV) with TBV 
+numbers 3471, 3094, 3247 and 3248, respectively. Their impact will be discussed in Section 7. 
+Reports documenting past numerical modeling related to drift seepage at Yucca Mountain as 
+well as other pertinent documents are listed in Section 8.5, Supporting Bibliography. This 
+bibliography is for information only, and this AMR does not directly rely on any of the listed 
+documents. 
+4.2 CRITERIA 
+This AMR complies with the DOE interim guidance (Dyer 1999). Subparts of the interim 
+guidance that apply to this analysis or modeling activity are those pertaining to the 
+characterization of the Yucca Mountain Site (Subpart B, Section 15), the compilation of 
+information regarding hydrology of the site in support of the License Application (Subpart B, 
+Section 21(c)(1)(ii)), and the definition of hydrologic parameters and conceptual models used in 
+performance assessment (Subpart E, Section 114(a)). 
+4.3 CODES AND STANDARDS 
+No specific formally established standards have been identified as applying to this analysis and 
+modeling activity.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 19 February 2000 
+5. ASSUMPTIONS 
+The Seepage Model for PA follows the approach and modeling framework described in 
+Birkholzer et al. (1999, pp. 358–362) and CRWMS M&O (2000a, Sections 5 and 6). These 
+documents provide the necessary scientific and technical background for the readers to 
+understand this AMR. 
+The general model assumptions and justifications are similar to those of CRWMS M&O (2000a, 
+pp. 19–20). The applicable assumptions are discussed below. 
+Assumption 1: It is assumed that the continuum approach is a valid concept to calculate 
+percolation flux and drift seepage at Yucca Mountain. Rationale: The rationale for this 
+assumption is presented in Section 5.3 of CRWMS M&O 2000a (also see Section 6.7 of 
+this AMR). 
+Assumption 2: Adopting the continuum approach, water flow under unsaturated conditions is 
+assumed to be governed by Richards’ equation (Richards 1931, pp. 318–333). Rationale: 
+This general concept is believed reasonable for unsaturated water flow through both 
+porous matrix and fractures. Richards’ equation simply states that water flows under the 
+combined effect of gravitational and capillary forces, and that flow resistance is a 
+function of saturation, thus neglecting resistance due to the presence of air. 
+Assumption 3: Permeabilities determined from air-injection tests are assumed to be 
+representative of the hydraulic conductivity of the fracture medium at the site. Rationale: 
+The injected air will seek out the most permeable paths in the medium that have the least 
+capillary suction. These are in the fracture continuum part of the medium. The short 
+duration of the air injection tests also implies that there is insignificant phase change 
+during the tests so that the conventional single phase analysis method applies. 
+Assumption 4: Relative permeability and capillary pressure are assumed to be described as 
+continuous functions of effective liquid saturation, following the expressions given by the 
+van Genuchten-Mualem model (van Genuchten 1980, pp. 892–898; Luckner et al. 1989, 
+pp. 2191–2192) as implemented in the ITOUGH2 code (Finsterle 1997, p. 224). 
+Rationale: The van Genuchten-Mualem model is the standard model used in the suite of 
+UZ flow and transport models; it was chosen here for consistency. Furthermore, the 
+applicability of relative permeability and capillary pressure functions is consistent with 
+the continuum assumption and seems appropriate also for fractures, which are likely to be 
+rough and/or partially filled with porous material. 
+Assumption 5: Water removal from the formation and the capture system by vapor diffusion and 
+evaporation is assumed to be small and hence the drift acts as having 100% relative 
+humidity condition and as a capillary barrier to flow. Rationale and discussion: Under 
+isothermal conditions, potential evaporation in the drift is small compared to the amount 
+of water percolating through the medium. It is important to realize that prescribing a 
+100% relative humidity boundary condition in a seepage prediction model is a 
+conservative assumption. While such a model underestimates vapor flow, it yields the 
+maximum liquid-phase influx, which is defined here as drift seepage. The
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 20 February 2000 
+underestimation of vapor flow is irrelevant, since the assumption of 100% relative 
+humidity already implies that the moisture content in the drift environment is at its 
+maximum. 
+Assumption 6: Imbibition and flow into the matrix continuum is not considered. Rationale: In the 
+current AMR, except for the episodic percolation flux case (Sections 6.5 and 6.6.7), we 
+are calculating steady-state flow conditions over long time frames. At steady-state, the 
+flow exchange between fracture and matrix continua will settle to a small amount with 
+the matrix close to full saturation. The flow partitions between the fracture and matrix 
+continua according to their effective permeabilities and porosities, and it follows that the 
+matrix with its five to six orders-of-magnitude lower permeability would not have 
+significant effects on seepage into drift, which would be controlled by the flow in the 
+fracture continuum. For the episodic percolation flux case (Sections 6.5 and 6.6.7), the 
+matrix continuum provides a damping effect on seepage in the fracture continuum, and 
+neglecting it represents a conservative case. 
+Note that assumption 5 in CRWMS M&O (2000a, Section 5) states that the van Genuchten 
+parameter 1 a is assumed to be correlated to the absolute permeability according to the Leverett 
+scaling rule (Leverett 1941, p. 159). This scaling rule, which states that 1 a is inversely 
+proportional to the square root of the absolute permeability, was developed for porous media. For 
+fractured media, a large permeability could possibly result from both larger fracture apertures 
+and an increase in the intensity of fracturing. The former affects the a values and the latter does 
+not. In our calculations, we have chosen to assume a to be constant over the heterogeneous 
+domain for each case, which allows more efficient numerical computation. Then the impact of a- 
+k correlation according to the Leverett relationship is calculated as a correction factor (see 
+Section 6.6.4) 
+All of the above assumptions are used throughout this report. None of the above assumptions 
+require further confirmation, either because we have addressed its uncertainty in this AMR, we 
+have taken a more conservative alternative, or we have attached a range to the parameters used.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 21 February 2000 
+6. ANALYSIS/MODEL 
+6.1 OBJECTIVES AND OUTLINE 
+This AMR models drift seepage under long-term, steady-state and episodic conditions for a 
+range of parameters and conditions (such as drift collapse scenarios). The model used follows 
+that of Birkholzer et al. (1999, pp. 358-362). The objectives are to calculate seepage values for 
+different values of percolation flux down to the drift, to discuss the effect on seepage resulting 
+from various processes such as excavation-induced drift degradation (i.e. drift collapse), and to 
+provide results as input to PA. 
+This section will first discuss the validity of this analysis for its intended purpose as required by 
+AP-3.10Q Analyses and Models. Then, the geometry used, the ranges of parameters, and the 
+choice of conditions will be presented and rationalized. Next, results will be given. Finally, the 
+AMR will conclude with discussions of alternative models and conclusions. 
+Key scientific notebooks (with relevant page numbers) used for modeling activities described in 
+this AMR are listed in Table 3. 
+Table 3. Scientific Notebooks 
+LBNL Scientific Notebook 
+ID 
+M&O Scientific 
+Notebook Register ID 
+Page Numbers Accession Numbers (ACC) 
+YMP-LBNL-CFT-2 SN-LBNL-SCI-058-V1 91–108 MOL.19991103.0330 
+YMP-LBNL-CFT-GL-1 SN-LBNL-SCI-033-V1 71–72, 86–89, 
+125–156 
+MOL.19991103.0331 
+YMP-LBNL-DSM-MC-1 SN-LBNL-SCI-052-V1 1–42 MOL.19991025.0236 
+YMP-LBNL-GSB-1.9 SN-LBNL-SCI-053-V1 105 MOL.19990908.0227 
+6.2 MODEL VALIDATION 
+As required by AP-3.10Q, Rev. 1, ICN 1, a model should be valid for its intended purpose. This 
+normally requires testing model results against relevant data which are not used in the original 
+development of the model and which are appropriate to the intended use of the model. For the 
+Seepage Model for PA, these data should include percolation flux at low flow rates over periods 
+of years, even hundreds of years, in many locations in the repository block (for proper statistical 
+representation). Those data are not available. Further, data for adequate validation would need to 
+cover the wide range of conditions (such as drift degradation and collapse with time) studied in 
+this AMR. Those are not available either. Hence we cannot use the approach of Section 5.3a of 
+AP-3.10Q for model validation, and an alternative approach under Section 5.3b is used. First, the 
+relevant physics of the problem as represented by Richards' equation (Richards, 1931, 
+pp. 318-333), van Genuchten-Mualem model (Luckner et al. 1989, pp. 2191–2192), Philip's 
+studies (Philip et al. 1989, pp. 16–28), and effects of flow channelization resulting from 
+heterogeneity and ponding (Birkholzer and Tsang, 1997, pp. 2221–2224; Birkholzer et al. 1999, 
+pp. 370–379) are used. These are all in the open literature and have gone through proper 
+technical peer review and which have withstood scrutiny of the scientific community since their
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 22 February 2000 
+dates of publication (AP-3.10Q, Section 5.3.b.2). Further, the model is consistent with results 
+from niche seepage tests in the ESF (Wang et al. 1999, pp. 332–338). These data were used in 
+the Seepage Calibration Model on which the seepage model is based (AP-3.10Q, Section 
+5.3.b.5), as described in CRWMS M&O (2000a, Section 6). Further, parameters used are 
+reasonable and consistent with all relevant data (AP-3.10Q, Section 5.3.b.3). Thus, based on 
+these external pieces of evidence, we conclude that the analysis and predictions using the 
+Seepage Model for PA presented here, with proper uncertainty ranges assigned to these 
+predictions, is an acceptable representation of the process system. 
+6.3 CALCULATION MODEL AND SELECTION OF CASES 
+The calculation model follows that of Birkholzer et al. (1999, pp. 358-362), which provides the 
+scientific and technical background for the readers to understand this AMR. The conceptual 
+model is a heterogeneous permeability field for the fracture continuum generated with 
+parameters discussed below using the SISIM module of the GSLIB package (GSLIB V2.0, STN: 
+10098-2.0MSISIMV2.0-00,Version 2.0). The 3D field is 20 m vertical, 15 m wide normal to 
+drift axis and 5.23 m along the drift axis. With the drift of 5.5 m diameter (see Section 6.3.1) and 
+the distance to either side boundary of 4.75 m, we expect the vertical cross section to capture the 
+flow features around the drift. The distance along the drift axis is defined by the waste package 
+length being 5.13 m (see below) with 0.1 m between the waste packages. The side boundary 
+conditions are no-flow, the lower boundary condition is gravity drainage, and the upper 
+boundary surface is simulated by an extra grid cell with constant percolation flux connected to 
+all the grid cells in the upper boundary, so that flow is free to move into these cells according to 
+local property parameters. A comment may be added on the no-flow boundary condition on the 
+two planes at the end of the waste package normal to the drift axis. For homogeneous, constantproperty 
+medium, these are symmetric planes between successive waste packages and a no-flow 
+boundary condition is justified. For a heterogeneous system, the issue is the length of the flow 
+domain versus the spatial correlation length .. From Section 6.3.5 below, . = 0.5 m so that the 
+length of the domain is about 10 correlation lengths, and the effect of the no-flow boundary 
+should not have a significant effect on the flow results. 
+The mesh is generated using the AMESH V1.0 code (AMESH V1.0, STN: 10045-1.0-00, 
+Version 1.0) and the grid cell used is 0.5 × 0.5 × 0.5 m, chosen as a compromise between being 
+fine enough to include the main flow features and being coarse enough to allow the feasibility of 
+about 1000 3D stochastic simulations. As discussed in Section 6.7 of this AMR, the choice of 
+grid size is not related to Philip's boundary layer at the drift crown (Philip et al. 1989, p. 21, 
+Figure 1), but to heterogeneity field characteristics. A numerical study (YMP-LBNL-CFT-GL-1, 
+pp. 86–89) has shown that 0.5 m is an adequate grid size for our calculations. 
+Flow calculation was performed using ITOUGH2 V3.2_drift (ITOUGH V3.2_drift, 
+STN: 10055-3.2_DRIFT-00, Version 3.2). A number of routines were also used for preprocessing 
+of inputs for ITOUGH2 V3.2_drift and these are listed in Table 1 and documented in 
+YMP-LBNL-CFT-GL-1, and provided in Attachment III. 
+The selection of parameter ranges and particular cases to be modeled is presented in this 
+subsection together with rationale for the selection. We shall consider a drift emplaced in 
+Topopah Springs middle nonlithophysal unit (UZ model layer tsw34 or the lithostratigraphic unit
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 23 February 2000 
+Tptpmn). The discussion of parameter values below refers to this unit. Figure 1 is a sketch 
+summarizing the modeling cases, which can be used as a guide as one follows the discussions 
+below. The top part of Figure 1 shows a 3D grid, spanned by the three parameters, which are 
+most sensitive in affecting drift seepage; namely, fracture continuum permeability kFC, van 
+Genuchten a value and the standard deviation s in ln kFC, which is a measure of heterogeneity of 
+the permeability field. For each combination of these three parameters, i.e. at each grid point, 
+seepage model calculations (Birkholzer et al. 1999, pp. 358–362) will be made for 3 realizations, 
+using a range of values for percolation flux Qp at the repository level. Two particular 
+combinations of parameters, Set A and Set B, are selected for additional studies. Their selection 
+and values are discussed in Section 6.3.5. 
+x 
+x 100 
+30 
+300 
+1000 
+0.9 x 10-14 0.9 x 10-13 0.9 x 10-12 0.9 x 10-11 
+kFC (m2) 
+1
+a 
+a = constant 
+1.66
+1.93
+2.5 
+slnk 
+. = "random" 
+. = 1 m 
+n = 2.7 
+3 realizations 
+for each 
+grid point 
+3 realizations 
+. = 4 m 
+5 realizations 
+Qp = 5, 14.6, 72.3, 
+213, 500 mm/yr 
+t 
+Qp 
+(Pa) 
+Set A 
+Set B 
+Set B Set B 
+B 
+Set A 
+Set B 
+Figure 1. Cases Studied. 
+The middle part of Figure 1 indicates a study of drift seepage for three alternative permeability 
+spatial correlation lengths .. This allows an evaluation of the effect of this important parameter, 
+which is difficult to determine in the field. The minimum set of parameters that describe a simple
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 24 February 2000 
+heterogeneous field can be the two parameters s and .. Thus this AMR will investigate how 
+seepage depends on the heterogeneous field. 
+The lower right part of Figure 1 shows the disturbed drift seepage submodel. Based on a review 
+of current information, alternative drift degradation modes are evaluated (see below) and four 
+scenarios are identified for seepage model studies as indicated. The lower left part of Figure 1 
+shows the case when the percolation flux above the drift is episodic rather than at a constant 
+average value, so that all the flux comes within a short period of time, with no flux between such 
+pulses. This case will also be evaluated. 
+All the cases are computed on 3D heterogeneous unsaturated systems. Since some cases involve 
+more than one run, altogether more than 1000 runs were made. What follows below, after the 
+specification of drift geometry, are the choices of parameter ranges on which seepage 
+calculations are performed. These choices are based on a comprehensive review of available 
+relevant data. However the data are not used directly to produce a single set of simulation results, 
+but are used as references to establish parameter ranges. 
+6.3.1 Geometry 
+As provided in DTN: SN9908T0872799.004, the drift diameter is 5.5 m and the drift section 
+under study has the same length as that of a waste package with half the spacing to the next 
+waste packages on its two ends. Since the waste package length is 5.13 m and the spacing 
+between the waste packages is 0.1 m, the drift section modeled is 5.23 m. This drift section is 
+emplaced in a heterogeneous fracture continuum of dimension 15 m wide and 20 m high, 
+following Birkholzer et al. (1999, p. 360). 
+6.3.2 Fracture Continuum Permeability kFC 
+As shown in Figure 1, the range of permeability chosen for the fracture continuum kFC is from 
+0.9 × 10-14 m2 to 0.9 × 10-11 m2. The choice is based on the air permeability tests at Niche 3650 
+in the ESF, which give a mean log permeability of -11.66 or 2.2 × 10-12 m2 (CRWMS M&O 
+2000a, p.43, Table 5), which is within our range. Note that the parameter is based on field airpermeability 
+data (see Table 2, Row 4 for DTN) around the niche that has been impacted by 
+excavation effect. Air permeability represents mainly permeability of the fractures, whose 
+permeability is much larger and whose water capillary effect is much smaller than those of the 
+rock matrix. The excavation is a coupled hydromechanical process in which the fracture 
+apertures may be made larger in the immediate neighborhood of the opening. The permeability 
+change associated with these aperture changes can be as much as two orders of magnitude 
+(Wang et al. 1999, p. 328, Figure 3). 
+The fracture permeability before excavation was also measured by Wang et al. (1999, p. 328) 
+and the mean value is 6.6 × 10-14 m2. This is based on their tests in boreholes at their niche 
+experiment, with a packer interval of 0.3 m (Wang et al. 1999, p. 325). Air-permeability tests 
+were also carried out in the SHT area in the ESF. There, the packer intervals are typically 3 to 
+7 m, and the mean permeability was found to be 5.8 × 10- 14 m2 (Tsang and Birkholzer, 1999, p. 
+393). Air-permeability measurements were also carried out in the DST block in the ESF, where 
+they found the mean permeability to be 10-13 m2 with a standard deviation in ln kFC to be 2
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 25 February 2000 
+(Birkholzer et al. 1999, p. 359). Here, the packer intervals are mainly between 10 and 20 m in 
+length. The DTNs for these data are provided in Table 2, Rows 4 and 5. 
+The mean air permeability values without excavation effects, as mentioned in the last paragraph, 
+are 0.7 × 10-13 m2, 0.6 × 10-13 m2 and 10-13 m2 after being rounded to one significant figure. 
+They are quite consistent to each other even though the packer intervals used in the tests ranged 
+from 0.3 m to ~20 m. These values are somewhat more than one order of magnitude smaller than 
+post-excavation values (mean k = 2.2 × 10-12 m2). For seepage into drifts, the permeability of 
+rock near the drift is the relevant value. Thus, the weighting of seepage results in this table 
+should be at this larger permeability value. On the other hand, the excavation effect on 
+permeability depends on local fracture orientation, distribution, and density as well as on 
+excavation methods. This has sufficient uncertainty to require the computation of seepage 
+percentages over the full range of fracture continuum permeability, 0.9 × 10-14 m2 to 0.9 × 10- 
+11 m2, as shown in Figure 1. 
+It is interesting to note that Ahlers et al. (1999, p. 66), from their pneumatic data analysis in 
+surface-based boreholes, give air permeability for the TSw units of 4 × 10-12 m2, vertical, to 
+8 × 10-13 m2 horizontal. Also, LeCain’s air-injection tests in four surface-based deep boreholes, 
+UE–25 UZ#16, USW SD–12, USW NRG–6 and USW NRG–7a (LeCain 1997, pp. 2, 11–14), 
+give permeability for the Tptpmn unit as ranging from ~2.5 × 10-14 to ~1 × 10-11 m2, based on 
+measurements with packer intervals of 3.5–4.9 m. These results are all covered by the full range 
+of values in Figure 1. 
+6.3.3 Standard Deviation in ln kFC 
+Finsterle and Trautz in CRWMS M&O (2000a, p. 43, Table 5) give the standard deviation of 
+fracture continuum permeability in log base 10 to be 0.72, which translates to the standard 
+deviation s (in ln kFC) of 1.66. Birkholzer et al. (1999, p. 359) on the other hand used s = 2.1. 
+According to Birkholzer et al. (1999, p. 371, Figure 14) drift seepage tracks the probability for 
+finding local ponding in the heterogeneous field and, further, the ponding probability is smaller 
+for smaller permeability standard deviations (Birkholzer et al. 1999, p. 375, Figure 17). Hence 
+we expect less seepage for smaller s values. Thus, in our simulations we decided to study the 
+dependence on s by going to larger values than 1.66. Three alternatives, s = 1.66, 1.93, and 2.5, 
+are selected for our study. 
+6.3.4 van Genuchten Parameters 
+The van Genuchten n parameter used by Birkholzer et al. (1999, p. 354, Table 1) has a value of 
+2.7 corresponding to m parameter equal to 0.63, based on a review of fracture properties in the 
+ESF (YMP–LBNL–GSB–1.9, p. 105). Finsterle and Trautz (CRWMS M&O 2000a, p. 52, 
+Table 8), on the other hand, use a value n = 2.551. In their calibration study, this parameter is not 
+varied, since it is not as sensitive a parameter as the van Genuchten a parameter and the effective 
+porosity, which were indeed varied in the calibration (CRWMS M&O 2000a, p. 51). On the 
+other hand, n is varied in another calibration study (Bandurraga and Bodvarsson 1999, p. 33). 
+Considering these studies, we decided to use one single value for n = 2.7, since it is based on
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 26 February 2000 
+fracture information in the ESF, and then a sensitivity study is made by running several cases 
+with n = 2.55. As will be seen below, (Section 6.6.3), the differences in seepage results are not 
+significant. 
+For a value, CRWMS M&O (2000a, p. 57, Table 10) provides a value of 1.82 for log (1/a [Pa]) 
+through their calibration exercise, for the case of the 3D heterogeneous model. This translates to 
+1/a = 66 Pa. For the four alternative models they used, the smallest value obtained through their 
+calibration is 31.6 Pa. Birkholzer et al. (1999, p. 354, Table 1), on the other hand, used an a 
+value of 9.73 × 10–4 Pa–1, which translates to 1/a = 1028 Pa. We decided to use four 1/a values 
+bracketed by values used in these two references, i.e., 1/a = 30, 100, 300, and 1000 Pa, as shown 
+in Figure 1. 
+For the main part of this AMR, for each case corresponding to the grid point (kFC, a) in Figure 1 
+(top), we consider a to be constant over the 3D heterogeneous field. Thus, the kFC value is the 
+mean fracture permeability over the heterogeneous field with its standard deviation given by s, 
+but a is constant at all points in the 3D space. This is the "uncorrelated a" case. We also study 
+the impact of a being correlated with the square root of local kFC values, according to the 
+Leverett (1941, p. 159) scaling rule. In such cases the kFC and a values specified will be 
+considered as the reference, and the local a value at each point in the 3D heterogeneous field is 
+calculated by Leverett's scaling rule from the reference values, according to the local kFC value, 
+i.e. 
+a ( )local = a · 
+kFC ( )local 
+kFC 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+1
+2 
+Simulations using this method will be referred to as the "correlated a" cases (Section 6.6.4). 
+6.3.5 Spatial Correlation Length . of kFC 
+The analysis of air-permeability tests in the AMR by Finsterle and Trautz (CRWMS M&O 
+2000a, Section 6.3.2) suggests that “the permeability is essentially random without a noticeable 
+spatial correlation.” Thus, for the main set of calculations, we adopt this result and generate 
+heterogeneous fields with . equal to grid size, corresponding to no spatial correlation. Note that 
+Finsterle and Trautz shows a result that .=3.87 m (CRWMS M&O, 2000a, Section 6.3.2), but in 
+this case, the nugget is 0.40 and the sill is 0.53. With the nugget value close to the sill value, the 
+accuracy of determining . is very poor, and in fact, if the nugget and sill values are equal, . is 
+undefined. To be consistent within this AMR, we have taken the nugget to be zero, then Finsterle 
+and Trautz’s result is equivalent to the .-0 case, based on which they made the statement 
+referenced above. 
+For each combination of kFC, 1/a and s values (see top part of Figure 1), we shall conduct 
+calculations for three realizations to obtain an estimate of the variation range as a result of 
+geostatistics. These multiple-realization results give a preliminary indication on the probability 
+distribution spread of seepage predictions due to the geostatistical uncertainty.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 27 February 2000 
+Since . is not a well-determined parameter in situ, we decided to investigate its sensitivity by 
+computing seepage for alternative . values. For this, we shall select only two particular 
+parameter sets out of the 3D table of (kFC, 1/a, s) values (see Figure 1). We designate the first 
+Set A, close to the base case of Birkholzer et al. (1999, p. 354, Table 1), with 
+kFC = 0.9 ×10–13m2 
+1/a =1000 Pa 
+s =1.93 
+. = 0.5m 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+(Set A) 
+and the second parameter set is chosen to be close to Finsterle and Trautz’s (CRWMS M&O 
+2000a, Tables 5 and 10) calibrated model parameters, with 
+kFC = 0.9 ×10–12m2 
+1/a =100 Pa 
+s =1.66 
+. = 0.5m 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+(Set B) 
+For these two cases, we study the alternatives of . = 1 m and . = 4 m. For the former, again 
+three realizations will be considered, while for the latter, because of the large . value as 
+compared with the drift diameter, we expect large variations in results and five realizations will 
+be evaluated. It should be remarked here that while the many calculations made in this AMR 
+help us to understand the trends of seepage results, parameter Sets A and B are closest to the data 
+we have so far from the field. 
+6.3.6 Percolation Flux, Qp 
+Wu et al. (1999, p. 210) calculated the percolation flux expected at the repository level, based on 
+a 3D UZ model of Yucca Mountain. They obtained an averaged fracture flow of 4 to 5 mm/yr at 
+the repository level under present conditions. Ritcey and Wu (1999, p. 262) found that under a 
+simulated 21-ka pluvial scenario, the percolation flux ranges from 0 to 120 mm/yr, with the peak 
+of the probability distribution to be around 20 mm/yr. For our calculations, we decided to select 
+5 values for Qp ranging from 5 to 500 mm/yr; more specifically at Qp = 5, 14.6, 73.2, 213 and 
+500 mm/yr. The upper limit of 500 mm/yr is chosen to safely bracket an uncertainty range more 
+than four times the high flux value of 120 mm/yr. 
+6.4 IMPACT OF DRIFT DEGRADATION ON SEEPAGE 
+Drift degradation may occur in three ways: 
+1. Loosening of rock blocks and hence wider fracture aperture (fracture dilation) 
+2. Rock fall from the ceiling of the drift 
+3. Extended rock failure in drift roof.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 28 February 2000 
+These are discussed below. Based on these discussions, a drift degradation submodel is designed 
+to evaluate the impact of drift degradation on seepage, and it is shown in Figure 2 as four 
+alternative scenarios. 
+1 m 
+3 m 
+1 m 
+1 m 
+2 m 
+1 m 
+Set A 
+Set B 
+Set B Set B 
+Set B
+s 
+Figure 2. Drift Degradation Submodel Scenarios, with Associated Parameter Set Used in the Modeling 
+6.4.1 Fracture Dilation 
+Because of excavation, stress is relieved at the drift and fractures are expected to dilate at certain 
+areas around the drift. Hart in Brekke et al. (1999, pp. E3-E29) shows that such fracture dilation 
+depends on the orientation of the fracture set and generally occurs within one drift radius. An 
+increase in fracture aperture generally causes an increase in fracture permeability and a decrease 
+in 1/a value. We believe that the increase in permeability from the pre-excavation to the postexcavation 
+values (Wang et al. 1999, p. 328) is a result of this effect. In this sense, Set B, Section 
+6.3.5 (see also Figure 1), which is based on in-situ post-excavation results (CRWMS M&O 
+2000a, p. 42), already has taken this into account. This means that the fracture dilation 
+neighboring the drift causes properties to change from parameter Set A to Set B in Figure 1, as 
+the new rock properties to represent the total effect of the near-field distributed zone and the far
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 29 February 2000 
+field as shown in Figure 2, lower-left. Results with parameter Set B are shown in Tables 4-8, and 
+no further calculations are necessary. 
+There is a possibility that new fractures may be formed during fracture dilation. In this case, kFC 
+will be increased with a relatively smaller decrease in the 1/a value. This is, however, not 
+studied. 
+6.4.2 Rock Fall from Drift Ceiling 
+Kicker in CRWMS M&O (2000b, p. 53, Tables 23 and 24) used the key block theory to calculate 
+the rock fall probability in the drifts based on fracture maps in the ESF. For the Topopah Spring 
+middle nonlithophysal zone, he calculated 39 key blocks per km of the drift and 19 m3 volume of 
+total rock fall per km. This implies that rock fall occurs on the average with one block every 25 
+m and that the mean size of the block is about 0.5 m3. Kicker also estimated that 90% of the 
+blocks have size less than 1.18 m3 (CRWMS M&O 2000b, p. 48, Table 17). Hart in Brekke et al. 
+(1999, p. E-12) used a 2D discrete-element method and found rock fall to occur at the spring line 
+of the drift and the size of the block to depend on the assumed fracture spacing. To study the 
+effect of rock fall on seepage, we use parameter Set B and do two calculations, one in which a 
+(1.0 m)3 block is taken out from the crown of the drift and the second in which the (1.0 m)3 
+block is taken out at the spring line (see Figure 2). The size used for the block is close to Kicker's 
+90 percentile value, to study a more significant event. 
+6.4.3 Extended Rock Failure at the Drift Roof 
+Over time, extended rock failure may also occur at the roof of the drift. Kaiser (Brekke et al. 
+1999, pp. D12-D14) estimated the failure at the roof to be 0.1–1 m in depth, and it would be 
+0.4–1.2 m in depth if one were to include seismic effects. Generally he expected that stressinduced 
+failure at the drift crown to be over a distance of 1/2 drift radius, i.e., ~1.25 m. Kicker in 
+CRWMS M&O (2000b, p. 56, Figure 28; p. 60, Figure 32) used a discrete-region key-block 
+analysis, which shows a more extended failure region up to one drift diameter above the drift 
+roof. In our seepage study, we designed a case in which an extended cavity is found in the drift 
+roof with a step shape of 0.5 m at the crown, 1 m depth at 0.5 m to one side, and so on, reaching 
+3 m depth at 2 m laterally from the drift crown (see Figure 2, lower right). Further, the stepshaped 
+failure is 1 m thick (into the page in Figure 2, lower right). Parameter Set B is used. 
+6.5 EPISODIC PERCOLATION FLUX 
+The cases discussed thus far use a steady-state percolation flux, ranging from 5 to 500 mm/yr. To 
+study the sensitivity of seepage to episodic flux, we shall do a transient calculation for seepage 
+percentage by assuming that, every year, the total flux over the year is concentrated in the first 
+two months and no flux occurs in the other 10 months. The results will be compared with the 
+cases using steady-state percolation. 
+6.6 RESULTS 
+Seepage percentage is defined as the liquid that seeped into the drift divided by the total liquid 
+arriving on a cross-sectional area corresponding to the footprint of the drift. All results are
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 30 February 2000 
+submitted to TDMS under DTN: LB991101233129.002, and the input/output files for the model 
+computation are submitted under DTN: LB991101233129.001 and described as in 
+Attachment II. 
+6.6.1 Seepage Over (kFC, 1/a) Space 
+For values of kFC = 0.9 × 10–14, 0.9 × 10–13, 0.9 × 10–12 and 0.9 × 10–11 m2, 1/a = 30, 100, 300, 
+1000 Pa and . = 0.5 m, Tables 4–8 give the seepage percentages in a matrix form of kFC and 1/a 
+coordinates. Within each table are three subtables giving results of three realizations of the 
+heterogeneous field R1, R2, and R3, indicating the spread of geostatistical uncertainty. 
+Generally, to calculate the spread of geostatistical uncertainty, many realizations, much more 
+than three, are needed. However, because of the need to keep computations within reasonable 
+limits, three realizations are used to indicate the possible spread of this uncertainty. Also, the 
+tables show a definite decrease of seepage percentage with increasing 1/a or kFC. Thus when the 
+seepage percentage is zero for a given case, the cases with larger 1/a and kFC also have zero 
+seepage. This reduces the amount of calculations needed significantly. In all these tables, results 
+are presented to two significant figures. 
+Tables 4a, 4b, and 4c give results for the same Qp = 5mm/yr and s = 1.66, 1.93 and 2.5 
+respectively. 
+Table 4a. Seepage Percentage as a Function of kFC and 1/a for s = 1.66 and Qp = 5 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+0 
+0.0 
+4.5 
+37 
+0.0 
+0.0 
+0.0 
+0.0 
+000
+0 
+000
+0 
+R2 
+1000 
+300 
+100 
+30 
+0 
+0.0 
+4.5 
+33 
+00
+0 
+0.0 
+00
+00 
+00
+00 
+R3 
+1000 
+300 
+100 
+30 
+0 
+0.0 
+7.4 
+34 
+0
+00
+0.0 
+0
+000 
+0
+000
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 31 February 2000 
+Table 4b. Seepage Percentage as a Function of kFC and 1/a for s = 1.93 and Qp = 5 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+0.0 
+0.0 
+6.2 
+38 
+0.0 
+0.0 
+0.0 
+0.0 
+0
+000 
+0
+000 
+R2 
+1000 
+300 
+100 
+30 
+0 
+0.0 
+5.1 
+33 
+00
+0.0 
+0.0 
+0000 
+0000 
+R3 
+1000 
+300 
+100 
+30 
+0 
+0.0 
+9.0 
+34 
+000
+0.0 
+0000 
+0000
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. 
+Table 4c. Seepage Percentage as a Function of kFC and 1/a for s = 2.5 and Qp = 5 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+0.0 
+0.0 
+8.4 
+41 
+00
+0.0 
+0.02 
+000
+0.0 
+000
+0 
+R2 
+1000 
+300 
+100 
+30 
+0 
+0.0 
+6.0 
+34 
+000
+0.0 
+000
+0 
+000
+0 
+R3 
+1000 
+300 
+100 
+30 
+0.0 
+2.6 
+12 
+35 
+00
+0 
+0.0 
+00
+00 
+00
+00
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. 
+Then, Tables 5a–c through Tables 8a–c give results for Qp = 14.6, 73.2, 213 and 500 mm/yr, 
+respectively.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 32 February 2000 
+Table 5a. Seepage Percentage as a Function of kFC and 1/a for s = 1.66 and Qp = 14.6 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+0.0 
+6.2 
+38 
+66 
+0
+0 
+0.0 
+3.9 
+0
+00
+0.0 
+0
+000 
+R2 
+1000 
+300 
+100 
+30 
+0.0 
+5.7 
+34 
+59 
+0
+0 
+0.0 
+5.8 
+0
+00
+0.0 
+0
+000 
+R3 
+1000 
+300 
+100 
+30 
+0.0 
+9.9 
+36 
+64 
+00
+0.0 
+7.0 
+000
+0.0 
+0000Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. 
+Table 5b. Seepage Percentage as a Function of kFC and 1/a for s = 1.93 and Qp = 14.6 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+0.0 
+7.2 
+41 
+65 
+0.0 
+0.0 
+0.0 
+5.9 
+000
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+R2 
+1000 
+300 
+100 
+30 
+0.0 
+6.1 
+34 
+58 
+0 
+0.0 
+0.0 
+6.5 
+000
+0.0 
+000
+0 
+R3 
+1000 
+300 
+100 
+30 
+0.0 
+11 
+36 
+65 
+00
+0.0 
+8.7 
+00
+0 
+0.0 
+00
+00
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 33 February 2000 
+Table 5c. Seepage Percentage as a Function of kFC and 1/a for s = 2.5 and Qp = 14.6 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+0.0 
+8.3 
+42 
+68 
+00
+0.0 
+9.0 
+000
+0.0 
+000
+0 
+R2 
+1000 
+300 
+100 
+30 
+0.0 
+6.8 
+35 
+60 
+00
+0.0 
+7.8 
+00
+0 
+0.0 
+00
+00 
+R3 
+1000 
+300 
+100 
+30 
+2.1 
+13 
+35 
+64 
+0 
+0.0 
+0.12 
+11 
+0
+00
+0.0 
+0
+000
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. 
+Table 6a. Seepage Percentage as a Function of kFC and 1/a for s = 1.66 and Qp = 73.2 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+24 
+57 
+75 
+85 
+0 
+0.0 
+15 
+52 
+00
+0.0 
+0.09 
+000
+0.0 
+R2 
+1000 
+300 
+100 
+30 
+20 
+51 
+69 
+81 
+0 
+0.0 
+15 
+46 
+00
+0.0 
+0.02 
+000
+0.0 
+R3 
+1000 
+300 
+100 
+30 
+27 
+57 
+75 
+84 
+0 
+0.0 
+17 
+48 
+00
+0.0 
+0.28 
+000
+0.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 34 February 2000 
+Table 6b. Seepage Percentage as a Function of kFC and 1/a for s = 1.93 and Qp = 73.2 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+24 
+57 
+75 
+85 
+0.0 
+0.0 
+15 
+52 
+00
+0.0 
+0.83 
+0.0 
+0.0 
+0.0 
+0.0 
+R2 
+1000 
+300 
+100 
+30 
+19 
+51 
+68 
+81 
+0.0 
+0.0 
+15 
+46 
+0
+0 
+0.0 
+0.63 
+0
+00
+0.0 
+R3 
+1000 
+300 
+100 
+30 
+26 
+56 
+75 
+84 
+0.0 
+1.5 
+17 
+44 
+0
+0 
+0.0 
+0.66 
+0
+000.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. 
+Table 6c. Seepage Percentage as a Function of kFC and 1/a for s = 2.5 and Qp = 73.2 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+23 
+56 
+75 
+86 
+0.0 
+0.05 
+16 
+55 
+00
+0.0 
+1.88 
+000
+0.0 
+R2 
+1000 
+300 
+100 
+30 
+19 
+52 
+68 
+80 
+0.0 
+0.0 
+13 
+47 
+00
+0.0 
+0.23 
+000
+0.0 
+R3 
+1000 
+300 
+100 
+30 
+24 
+58 
+*.** 
+*.** 
+0.0 
+5.4 
+20 
+48 
+00
+0.0 
+4.8 
+00
+0 
+0.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: *.** Seepage large, solution not convergent 
+“0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 35 February 2000 
+Table 7a. Seepage Percentage as a Function of kFC and 1/a for s = 1.66 and Qp = 213 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+60 
+78 
+86 
+91 
+0.0 
+17 
+50 
+73 
+00
+0.0 
+13 
+00
+0 
+0.0 
+R2 
+1000 
+300 
+100 
+30 
+53 
+73 
+82 
+*.** 
+0.0 
+15 
+44 
+66 
+0
+0 
+0.0 
+14 
+0
+00
+0.0 
+R3 
+1000 
+300 
+100 
+30 
+63 
+79 
+87 
+*.** 
+0.0 
+19 
+47 
+71 
+0
+0 
+0.0 
+15 
+0
+000.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: *.** Seepage large, solution not convergent 
+“0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. 
+Table 7b. Seepage Percentage as a Function of kFC and 1/a for s = 1.93 and Qp = 213 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+59 
+78 
+86 
+*.** 
+0.0 
+17 
+50 
+73 
+00
+0.0 
+15 
+0.0 
+0.0 
+0.0 
+0.0 
+R2 
+1000 
+300 
+100 
+30 
+53 
+73 
+83 
+*.** 
+0.0 
+14 
+51 
+64 
+00
+0.0 
+14 
+00
+0.0 
+0.0 
+R3 
+1000 
+300 
+100 
+30 
+63 
+80 
+*.** 
+90 
+1.6 
+19 
+47 
+72 
+00
+0.0 
+16 
+000
+0.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: *.** Seepage large, solution not convergent 
+“0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 36 February 2000 
+Table 7c. Seepage Percentage as a Function of kFC and 1/a for s = 2.5 and Qp = 213 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+56 
+76 
+*.** 
+*.** 
+0.0 
+16 
+50* 
+73 
+0 
+0.0 
+0.48 
+18 
+000
+0.0 
+R2 
+1000 
+300 
+100 
+30 
+53 
+73 
+83 
+90 
+0.0 
+14 
+46 
+66 
+00
+0.0 
+15 
+000
+0.0 
+R3 
+1000 
+300 
+100 
+30 
+*.** 
+*.** 
+*.** 
+91 
+5.1 
+20 
+46 
+*.** 
+0 
+0.0 
+3.7 
+18 
+000
+0.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: * Steady-state not quite reached (flow out/flow in = 95%) 
+*.** Seepage large, solution not convergent 
+“0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. 
+Table 8a. Seepage Percentage as a Function of kFC and 1/a for s = 1.66 and Qp = 500 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+78 
+*.** 
+92 
+*.** 
+9.6 
+46 
+69 
+82* 
+0 
+0.0 
+4.5 
+42 
+000
+0.0 
+R2 
+1000 
+300 
+100 
+30 
+73 
+85 
+*.** 
+91 
+8.2 
+41 
+62 
+77* 
+0 
+0.0 
+4.5 
+35 
+00
+0 
+0.0 
+R3 
+1000 
+300 
+100 
+30 
+*.** 
+*.** 
+*.** 
+92 
+14 
+45 
+69 
+82 
+0 
+0.0 
+6.9 
+36 
+00
+0 
+0.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: * Steady-state not quite reached (flow out/flow in = 95%) 
+*.** Seepage large, solution not convergent 
+“0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 37 February 2000 
+Table 8b. Seepage Percentage as a Function of kFC and 1/a for s = 1.93 and Qp = 500 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+*.** 
+87 
+*.** 
+*.** 
+9.5 
+46 
+69 
+82 
+0 
+0.0 
+6.2 
+38 
+0.0 
+0.0 
+0.0 
+0.0 
+R2 
+1000 
+300 
+100 
+30 
+74 
+86 
+*.** 
+*.** 
+7.9 
+42 
+62 
+76 
+0 
+0.0 
+5.1 
+38 
+00
+0.0 
+0.0 
+R3 
+1000 
+300 
+100 
+30 
+*.** 
+90 
+*.** 
+*.** 
+14 
+45 
+68 
+81 
+0 
+0.0 
+9.0 
+35 
+00
+0.0 
+0.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: *.** Seepage large, solution not convergent 
+“0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. 
+Table 8c. Seepage Percentage as a Function of kFC and 1/a for s = 2.5 and Qp = 500 mm/yr. 
+kFC (m2) 
+Realizations 1/a (Pa) 0.9 × 10–14 0.9 × 10–13 0.9 × 10–12 0.9 × 10–11 
+R1 
+1000 
+300 
+100 
+30 
+77 
+*.** 
+*.** 
+*.** 
+11 
+46 
+69 
+*.** 
+0 
+0.0 
+8.4 
+44 
+00
+0.0 
+0.02 
+R2 
+1000 
+300 
+100 
+30 
+72 * 
+*.** 
+*.** 
+*.** 
+8.2 
+43 
+62 
+*.** 
+0 
+0.0 
+6.9 
+39 
+00
+0 
+0.0 
+R3 
+1000 
+300 
+100 
+30 
+*.** 
+*.** 
+*.** 
+94 * 
+15 
+45* 
+*.** 
+81 
+0.0 
+2.4 
+12 
+35 
+0
+0 
+0.0 
+0.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002 
+NOTE: * Steady-state not quite reached (flow out/flow in = 95%) 
+*.** Seepage large, solution not convergent. 
+“0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. 
+In these tables, results indicated by " 0 " without decimal point imply zero seepage as inferred 
+from calculated zero-seepage cases with smaller 1/a and smaller kFC. Results indicated by " * " 
+are the large seepage cases where steady-state is reached within 95% due to numerical
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 38 February 2000 
+convergence problems. For these cases, we expect the calculated values to be within 5% of the 
+steady-state results. For cases, indicated by " *.** ", the seepage percentages are large and the 
+solutions are not convergent, but we can safely consider them to be larger than the neighboring 
+values in the tables. 
+At Qp 
+= 5 mm/yr, seepage is essentially zero, except for cases with the very low permeability 
+value of 0.9 × 10-14 m2. Generally, seepage is larger for lower permeability and lower 1/a values. 
+Seepage is also larger for larger s values as one would expect (Birkholzer et al. 1999, pp. 371, 
+375; Figures 14, 17). Though the extensive required computations prevent us from obtaining the 
+full geostatistical distribution of seepage, results of three realizations are given for each case, 
+giving an indication of the spread of the results. Note also that the results are all for . = 0.5 m 
+and, as shown in the next section, they are smaller than the corresponding results for larger . 
+values. 
+6.6.2 Seepage for Alternative . Values 
+Table 9 gives results for Parameter Set A defined in Section 6.3.5 (see also Figure 1). For the 
+four Qp values from 14.6 to 500 mm/yr, seepage percentages are given for three realizations of 
+the . = 1 m case and for five realizations of the . = 4 m case. Seepage was not calculated for 
+Qp = 5 mm/yr because, from Table 9, the results are expected to be zero. Appropriate results for 
+. = 0.5 m from Tables 5 through 8 are included for comparison. Table 10 gives the results for 
+Set B. It is interesting to note that seepage increases with ., with the geostatistical spread of 
+predictions also increasing with .. While the results in Tables 9 and 10 provide an understanding 
+of the trends, the best data we have so far (CRWMS M&O 2000a, Section 6.3.2) indicate no 
+spatial correlation, so that . = 0.5 m, equal to grid size, may be the most appropriate value to use. 
+Table 9. Seepage Percentage as a Function of Qp for Alternative . Values for Set A 
+(kFC =.0.9 × 10-13 m, 1/a = 1000 Pa, s = 1.93) 
+Qp (mm/yr) 
+. 14.6 73.2 213 500 
+Random 
+(. = 0.5 m) 
+R1 
+R2 
+R3 
+0.0 
+00 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+1.6 
+9.5 
+7.9 
+14 
+. = 1 m R1a 
+R2a 
+R3a 
+0.0 
+0.0 
+0.0 
+0.11 
+0.0 
+0.0 
+4.5 
+0.0 
+0.27 
+12 
+7.1 
+7.0 
+. = 4 m R1b 
+R2b 
+R3b 
+R4b 
+R5b 
+0.0 
+0.0 
+0.0 
+0.0 
+2.1 
+6.7 
+8.3 
+0.58 
+0.0 
+3.9 
+14 
+19 
+2.3 
+0.0 
+8.4 
+21 
+27 
+15 
+7.1 
+36 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. Three realizations are calculated for each of the . = 0.5 m and . = 1 m cases 
+and five realizations re calculated for the . = 4 m case.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 39 February 2000 
+Table 10. Seepage Percentage as a Function of Qp for Alternative . Values for Set B 
+(kFC =.0.9 × 10-12 m2, 1/a = 100 Pa, s = 1.66) 
+Qp (mm/yr) 
+. 14.6 73.2 213 500 
+Random 
+(. = 0.5 m) 
+R1 
+R2 
+R3 
+0
+00 
+0
+00 
+0.0 
+0.0 
+0.0 
+4.5 
+4.5 
+6.9 
+. = 1 m R1c 
+R2c 
+R3c 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+1.8 
+0.04 
+0.12 
+7.4 
+4.3 
+3.6 
+. = 4 m R1d 
+R2d 
+R3d 
+R4d 
+R5d 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+1.6 
+0.0 
+0.0 
+0.01 
+0.0 
+7.7 
+0.0 
+0.0 
+3.3 
+2.2 
+14 
+1.3 
+6.4 
+10 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: “0.0” is a calculated value and "0" indicates seepage is inferred to be zero from results of 
+neighboring cases. Three realizations are calculated for each of the . = 0.5 m and . = 1 m cases 
+and five realizations are calculated for the . = 4 m case. 
+6.6.3 Sensitivity to n value 
+As discussed in Section 6.3.4, we have used van Genuchten n = 2.7 in all the calculations. To 
+study the impact of using n = 2.55, we calculate two cases with parameter Sets A and B, 
+respectively, for Qp = 500 mm/yr and realization R1. The results are shown in Table 11, which 
+indicates that the impact can be neglected. 
+Table 11. Sensitivity to n Value. Seepage is given as percentage for Qp = 500 mm/yr and 
+realization R1 
+Parameter Set A (but varying 1/a) 
+1/a (Pa) 1000 300 100 30 
+n = 2.7 9.5 46 69 82 
+n = 2.55 10 47 69 82 
+Parameter Set B (but varying 1/a) 
+1/a (Pa) 1000 300 100 30 
+n = 2.7 0.0 0.0 4.5 42 
+n = 2.55 0.0 0.0 4.8 42 
+Based on data submitted with this AMR under DTN: LB991101233129.002.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 40 February 2000 
+6.6.4 Sensitivity to correlated a parameter. 
+The simulations presented thus far used a constant value for van Genuchten a parameter over the 
+permeability heterogeneous field for each simulation. To study the alternative approach based on 
+Leverett scaling law (Leverett 1941, p. 159), we performed calculations by setting a to be 
+proportional to the square root of kFC, with the reference values corresponding to parameter Sets 
+A and B respectively (see Section 6.3.5). Figure 3 shows the seepage percentage versus the 
+percolation rate for realizations R1 and R3, and parameter Set A (lower two curves in the 
+figures). They also show results for additional cases where all parameters are the same except the 
+reference a value is changed. Similarly Figure 4 shows the results for parameter Set B with 
+variants as indicated in the figures. 
+It is interesting to note that the correlated a condition yields higher seepage by 0–10%. We 
+propose that these figures can be used to provide adjustments to seepage predictions when one 
+wants to use the correlated a condition. 
+6.6.5 Effects of Drift Degradation 
+Table 12 presents the seepage percentages for the three realizations (R1, R2 and R3) with drift 
+degradation modes as defined in Section 6.4 (Figure 2) and compares them with the nodegradation 
+case. Only the Qp = 500 mm/yr cases are shown. Additional calculations were made 
+for Qp = 73.2 mm/yr and the results for all cases in the Table are zero. 
+Table 12. Seepage Percentage (%) for Alternative Drift Degradation Scenarios, for 
+Qp = 500 mm/yr and Parameter Set B. 
+Seepage Percentage 
+Condition 
+R1 R2 R3 
+No-degradation case (Set B) 4.5 4.5 6.9 
+1-m rock fall from crown of drift 4.5 4.7 7.0 
+1-m rock fall from springline of drift 4.5 4.5 7.4 
+3-m rock failure in drift roof 5.8 8.6 10 
+3–m rock failure case: calc. from Set B non-degraded case 5.8 5.9 9.0 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+The results show that the effect of a single rock fall is not significant for seepage. A deeper rock 
+failure in the drift roof increases seepage. Now we propose an approach to calculate drift 
+degradation effects from no-degradation results from Tables 4–8. The approach is based on the 
+fact that . (0.5 m) is much smaller than the drift diameter and that seepage is due to flow 
+channeling and local ponding from medium heterogeneity, and not due to Philip's model of 
+homogeneous flow exclusion by the drift (Philip et al. 1989, pp. 17–20). The latter model would
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 41 February 2000 
+101 102 103 
+Qp(mm/yr) 
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+90 
+100 
+Seepage-Percentage(%) 
+Set A 
+101 102 103 
+Qp(mm/yr) 
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+90 
+100 
+Seepage-Percentage(%) 
+Set A 
+Constant a, 1/a 30 (Pa) 
+Constant a, 1/a 100 
+Constant a, 1/a 300 
+Constant a, 1/a 1000 
+Correlated a-k, 1/a 30 
+Correlated a-k, 1/a 100 
+Correlated a-k, 1/a 300 
+Correlated a-k, 1/a 1000 
+(a) R1 (b) R3 
+Constant a, 1/a 30 (Pa) 
+Constant a, 1/a 100 
+Constant a, 1/a 300 
+Constant a, 1/a 1000 
+Correlated a-k, 1/a 30 
+Correlated a-k, 1/a 100 
+Correlated a-k, 1/a 300 
+Correlated a-k, 1/a 1000 
+Figure 3. Seepage Percentage as a Function of Percolation Flux for Uncorrelated and Correlated 
+a-kFC Cases. Parameter Set A is used (lower two curves). Variant cases were obtained 
+by varying the mean or reference 1/a values while keeping all other parameters the 
+same. Realizations R1 and R3 are used in (a) and (b), respectively. 
+101 102 103 
+Qp(mm/yr) 
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+90 
+100 
+Seepage-Percentage(%) 
+101 102 103 
+Qp(mm/yr) 
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+90 
+100 
+Seepage-Percentage(%) 
+(a) R1 (b) R3 
+Constant a, 1/a 30 (Pa) 
+Constant a, 1/a 100 
+Constant a, 1/a 300 
+Constant a, 1/a 1000 
+Correlated a-k, 1/a 30 
+Correlated a-k, 1/a 100 
+Correlated a-k, 1/a 300 
+Correlated a-k, 1/a 1000 
+Constant a, 1/a 30 (Pa) 
+Constant a, 1/a 100 
+Constant a, 1/a 300 
+Constant a, 1/a 1000 
+Correlated a-k, 1/a 30 
+Correlated a-k, 1/a 100 
+Correlated a-k, 1/a 300 
+Correlated a-k, 1/a 1000 
+Set B Set B 
+Figure 4. Seepage Percentage as a Function of Percolation Flux for Uncorrelated and Correlated 
+a-kFC Cases. Parameter Set B is used (lower two curves). Variant cases were obtained 
+by varying the mean or reference 1/a values while keeping all other parameters the 
+same. Realizations R1 and R3 are used in (a) and (b), respectively
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 42 February 2000 
+imply that a drift shape like the deep failure case (Figure 2, lower right) with a sharper ceiling 
+will allow an easier flow around the drift and hence less seepage (Philip 1989, pp. 1531–1533), 
+contrary to the results in Table 12. Heterogeneity causes flow channeling and local ponding, and 
+the ponding probability is shown to be correlated to seepage by Birkholzer et al. (1999, p. 371, 
+Figure 14). For a given realization the ponding probability for the medium is the same and 
+seepage is proportional to the up-stream area of drift wall which may encounter these channels 
+and local ponding locations. 
+For the case of 3–m rock failure, the area of the original non-degraded drift wall is 
+p(5.5)·(5.23)/2 m2 = 45.2 m2, where 5.5 and 5.23 are the drift diameter and drift length in meters, 
+respectively, and the division by 2 indicates that we only take the upper half surface of the drift 
+wall. Now with the 3–m rock failure, the added rock surface area is estimated to be 
+(3.5)×1+(9×0.5)×1+(11×0.25)×2 m2 = 13.5 m2, where the thickness (along drift axis) of the rock 
+failure is 1 m. The estimation can be understood by examining the bottom right part of Figure 2 
+(YMP-LBNL-CFT-2, pp. 107–108). The additional surface area on the left side of the cavity 
+formed by rock failure in the drift ceiling is 3.5 m high and 1 m thick along the axis of the drift. 
+The second term 9 × 0.5 × 1 m2 represents the extra area due to the step structure on the right 
+side of the cavity. The third term represents the areas of the cavity in the two planes normal to 
+the drift axis (see Figure 2: the area of the step-structure cavity above the broken line), except for 
+the part closest to the original curved surface of the drift. The latter would compensate for the 
+curved drift area no longer present because of the cavity. 
+Now if we scale the seepage value for the no-degradation case (B) by the factor (1+13.5/45.2), 
+we obtain 5.85, 5.85 and 8.97 for the three realizations. These are indicated in Table 12 and 
+compare with the numerical results very well for the first and third realizations. This approach 
+may provide an easy way to estimate the impact of drift degradation, once the degraded shape is 
+found from mechanical modeling. It deserves further consideration. 
+6.6.6 Drainage Below the Drift 
+The drift provides a barrier to downward percolation flux. Water moves around the drift or seeps 
+into it. For the case that the water seeped into the drift is gone, then directly below the drift is a 
+shadow of dryer zone. This dryer zone will decrease in width with depth below the drift. The 
+vertical extent of the shadow zone depends on both kFC and 1/a values (Philip et al. 1989, pp. 16- 
+28). Figures 5 and 6 illustrate the saturation profiles one drift diameter below the drift for 
+parameter Sets A and B, with Qp=500 mm/yr. The figures clearly show the shadow effect. Philip 
+et al. (1989, pp. 21–23) also provide an approximate analytic solution to define the shadow zone 
+that may be useful for practical applications.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 43 February 2000 
+0
+5
+10 
+15 
+20
+Z 
+0 
+2 
+4 
+X 
+0 
+5 
+10 
+15 
+Y 
+Sliq 
+0.95 
+0.8 
+0.6 
+0.5 
+0.4 
+0.2 
+0.05 
+Based on data submitted with this AMR under DTN: LB991101233129.001. 
+Figure 5. Saturation Profiles Around a Drift with Parameter Set A. 
+0
+5
+10 
+15 
+20
+Z 
+0 
+2 
+4 
+X 
+0 
+5 
+10 
+15 
+Y 
+Sliq 
+0.95 
+0.8 
+0.6 
+0.5 
+0.4 
+0.2 
+0.05 
+Based on data submitted with this AMR under DTN: LB991101233129.001 
+Figure 6. Saturation Profiles Around a Drift with Parameter Set B.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 44 February 2000 
+6.6.7 Effects of Episodic Percolation 
+Episodic percolation is simulated for a drift without degradation. Table 13 shows the seepage 
+results if, every year, the percolation flux over the year is concentrated in the first 2 months 
+representing a wet period and then zero flux occurs for the remaining 10 months. These results 
+are compared with the case where the flux is constant over the whole year. In both alternatives, 
+the average flux over the year is 73.2 mm/yr. The seepage percentage at the end of the wet period 
+(after the first 2 months) for the episodic scenario stabilizes very quickly after the first year. 
+Calculations were performed for Parameter Sets A and B and also for an additional parameter set 
+with Set A properties, except that 1/a is reduced to 100 Pa to ensure some seepage even in the 
+constant flux case. In all cases, the seepage percentages for episodic scenarios are higher than 
+those of the constant seepage scenario. Note that the percolation flux in the two wet months is 
+6×73.2 mm/yr, or 439.2 mm/yr. In Tables 7 and 8, calculated seepage percentages for Qp = 213 
+and 500 mm/yr can be found, and, if we interpolate between these cases to obtain the seepage 
+percentages for 439.2 mm/yr, they are found to be approximately equal to the seepage percentage 
+for the episodic scenario. It appears that for our sets of parameters, the memory effect between 
+percolation pulses separated by 10 months is small and each pulse can be treated independently 
+at the high percolation rate of the wet period. The seepage rate over this period increases with 
+time and its peak value at the end of the two wet months may be roughly estimated by 
+interpolation from Tables 4–8 or calculated directly. 
+Table 13. Effects of Episodic Percolation. Qp = 73.2 mm/yr 
+Parameters Seepage % at end of 
+wet period* 
+Seepage % if flux is 
+constant over the year 
+Parameter Set A 6.3 0 
+Parameter Set B 2.5 0 
+Parameter Set A, but 
+with 1/a = 100 Pa 
+67 14 
+Based on data submitted with this AMR under DTN: LB991101233129.002. 
+NOTE: *This value is the seepage rate at the end of the wet period divided 
+by the percolation flux of the wet period, which is 6 times the 
+average flux rate. For each year, the total percolation is all in the first 
+2 months and no flux in the remaining 10 months. Results are the 
+same every year after the first year. Heterogeneous field used is 
+Realization R1. 
+The results show the importance of the appropriate episodic percolation flux profile at the 
+repository level, with all the possible flow dissipation and diversion in the lithostratigraphic units 
+above. 
+6.7 ALTERNATIVE CONCEPTUAL MODELS AND SENSITIVITY ANALYSIS 
+Sensitivity analyses are part of the scope of this AMR and are presented in the above subsections 
+(6.6.2 through 6.6.7). The main alternative conceptual model is the discrete fracture-network 
+model (DFNM). This is thoroughly discussed by Finsterle and Trautz (CRWMS M&O 2000a, p. 
+68) and will not be repeated here. Note further that the rock in the ESF is highly fractured and 
+the fractures are well connected, so that the fracture continuum model is a reasonable one. This is
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 45 February 2000 
+shown in Figure 7, in which fracture data from the ESF main drift from Station 27+20 to 37+80 
+(see Table 2 for DTNs) were plotted as the average fracture spacing (calculated using the 
+software routine frac_calc V1.1) against the minimum fracture length for groups of fractures that 
+contain all fractures longer or equal to the minimum length selected (YMP-LBNL-DSM-MC-1, 
+pp. 40–42). The figure shows that the spacing is consistently less than fracture lengths for all 
+classes of fracture grouping. Further, Kicker in CRWMS M&O (2000b, p. 26, Fig. 5) shows that 
+the major fracture sets in Tptpmn unit are in three almost orthogonal planes with strike/dip 
+angles given by 131/84, 209/83, and 329/09. The result is thus a well-connected fracture network 
+that can be represented by a fracture continuum. Note, however, that the fracture continuum is 
+very heterogeneous (see Section 6.3.3), so that flow through the fracture continuum is highly 
+channelized (Birkholzer and Tsang 1997, pp. 2229–2231). 
+As explained in Birkholzer et al. (1999, pp. 358–384), seepage into drift under conditions 
+discussed in the AMR is controlled by heterogeneity-induced channeling and local ponding. It 
+occurs much earlier than results of the conceptual model of a drift in homogeneous constantproperty 
+medium (Philip et al. 1989, pp. 17–21). In other words, Philip et al. would predict 
+seepage to occur at a threshold that is orders of magnitude larger. In this sense, Philip's approach 
+is not relevant. Thus, Philip's boundary layer flow regime near the drift crown (Philip et al. 1989, 
+p. 21, Figure 1) should not be used to define the required grid size. Rather the grid size should be 
+chosen based on the heterogeneity spatial correlation scale ., which controls the flow channel 
+width and the scale of local ponding. The use of grid size of 0.5 m equal to . is probably 
+sufficient to study the relevant physics in our problem. The sensitivity of seepage results on grid 
+size was calculated for grid sizes 0.5 m and 0.25 m (YMP-LBNL-CFT-GL-1, pp. 86–89). The 
+change due to the grid size is of the same order as changes due to the different realizations, with 
+an increase of 0-3% for the finer mesh for the case calculated. 
+0 
+0.5
+1 
+1.5
+2 
+2.5
+0 1 2 3 
+Minimum fracture length (m) 
+Fracture spacing (m) 
+Based on data from DTN: GS971108314224.025, GS960708314224.008 and GS960808314224.011 
+NOTE: Straight line indicates a 1:1 correspondence 
+Figure 7. Average Fracture Spacing for Topopah Spring Middle Nonlithophysal Hydrogeologic Unit in the 
+ESF from Stations 27+20 to 37+80.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 46 February 2000 
+The drift seepage problem involves the accumulation of unsaturated flow at the location near the 
+drift wall, until the local saturation is large, and capillary suction is small. Then seepage into drift 
+occurs. This problem is intrinsically a 3D problem, because flow accumulation at a location in 
+2D could easily disappear if it is allowed to flow away in the third dimension. Hence 2D models 
+would overestimate seepage. 
+The present AMR considers alternative spatial correlation lengths, using a spherical correlation 
+structure and a gaussian field. There have been suggestions to use alternative geostatistical 
+methods, such as nonparametric representation of the heterogeneity field and multiple-scale 
+correlation structure. However for a specific problem with a particular scale of a drift, such 
+complications are not needed so long as the parameters used are appropriate to this scale. The 
+reason is that structures much smaller than the drift diameter can be approximated by an average 
+property parameter, except near the drift wall (see below for the "surface needle" effect). 
+Structures with correlation lengths much larger than the drift diameter should be handled 
+deterministically for each case of occurrence, and can probably not be handled statistically. 
+What is of more interest and importance is the question of the appropriate parameter values to be 
+used in the seepage-prediction model. This depends on an interplay between seepage-model 
+grid-element scale, calibration-model grid-element scale, and field data support scale. We have 
+shown in this AMR that the air (fracture) permeability without excavation effects seems to have 
+quite consistent values when the data support scale ranges from 0.3 to ~20 m. However we have 
+no similar information on 1/a and other parameters. Further study of the interplay among the 
+three scales for the purpose of deriving appropriate parameter values for predictive modeling 
+would be very useful to enhance confidence in these values. However, one would expect they 
+will still be in the ranges shown in Figure 1. 
+One issue of great concern that may have significant negative impact on seepage is the “surface 
+needle” effect. This refers to the possibility that there are 1D pathways from within the rock 
+above the drift to the drift ceiling, from which there are no effective lateral intersecting fractures 
+to divert water away. Then these 1D pathways or needles will act as special conduits through 
+which seepage can occur. The increase in seepage due to their presence could be very significant 
+and needs to be carefully evaluated. One example of such “needles” is the rock bolts used to 
+stabilize the drift roof. Whether rock bolts would form such special seepage pathways depends 
+on the leakage around the bolts and how it develops as the bolt cement degrades and the bolt 
+corrodes with time. This is an important issue. A very preliminary estimate has been made on 
+the needles effect (YMP-LBNL-CFT-GL-1, pp. 71-72). For parameter Set A, but with .=2m, 
+seepage increases are calculated as a function of needle length and the number of needles in the 
+section. With the needle length, the seepage increase stabilizes to a constant value after the 
+length exceeds 0.15-0.25 m. For a 16.5-m section of the drift (approximately three waste package 
+lengths), the seepage increase is found to be about 3% when there are three needles present in the 
+drift ceiling; about 40% when there are 33 needles, and 70% when there are 330 needles.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 47 February 2000 
+7. CONCLUSIONS 
+The present AMR is based on the Seepage Calibration Model AMR (CRWMS M&O 2000a) and 
+Birkholzer et al. (1999). By reviewing available information (Section 6.3 and 6.4), we selected a 
+range of parameters and possible scenarios (Figure 1) on which seepage calculations were 
+conducted. Results are tabulated (Tables 4–13) that show the impact of various factors on 
+seepage and provide data for PA to develop probability distributions 
+(DTN: LB991101233129.002). Generally, seepage is calculated to be larger for smaller kFC, 
+smaller 1/a and larger Qp values (Tables 4–8). It is insensitive to n parameter (Table 11). To 
+allow local a values to be correlated with local kFC (proportional to the square root of kFC) 
+increases seepage by 0–10% as compared with a constant a case. Results in this AMR are based 
+on a review of available in-situ field results appropriate to the Tptpmn geological unit. As more 
+data from this unit and from neighboring units (where the potential repository resides) are 
+obtained in field measurements, parameter values with their uncertainties and probability 
+weightings should be developed and then seepage predictions from tables in this AMR can be 
+used in PA to obtain the best estimates (with uncertainty ranges) for Yucca Mountain. 
+Uncertainty associated with geostatistics is evaluated with calculations of three realizations for 
+each case (five for a case of large spatial correlation length) and results are in Tables 4 through 8 
+and Table 10. In general, to establish geostatistical probability requires many more realizations 
+than three, but the extensive amount of simulations in this AMR prevents us from doing more 
+realizations. Nevertheless the spread of results from the three should give an indication of 
+geostatistical distribution. In general, the spread is expected to be larger for large . and more 
+limited if . is much smaller than drift diameter. Use of the multi-realization results requires care 
+based on this discussion. 
+The present effort demonstrated that the impact of mechanical effects can be evaluated (Sections 
+6.4 and 6.6.5). This is based on the recent AMR by Kicker (CRWMS M&O 2000b) and the 
+Brekke et al.’s Panel Report (Brekke et al. 1999), which includes Hart and Kaiser’s scoping 
+analyses. These reports also considered thermal and seismic effects on drift degradation in a 
+schematic way. As further mechanical studies are made on drift degradation, seepage 
+calculations should follow to update the assessment of their impact. A possible approach is 
+proposed in this AMR to calculate seepage for degraded drift case from that of no-degradation 
+case. The preliminary results show promise so that the approach deserves further development. 
+As mentioned in Section 1, no analysis on the impact of coupled thermal-hydrological-chemical 
+effects on seepage has yet been made, since such modeling results are not formally available at 
+the time of this AMR and hence not citable. 
+In summary, the present AMR identifies the following significant issues: 
+1. Drift degradation – disturbed zone scenario and extended failure scenario (Section 
+6.6.5) 
+2. Episodic percolation flux (Section 6.6.7).
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 48 February 2000 
+3. "Surface Needles" effect; in particular, impact of rock bolts in the long time frame 
+(Section 6.7) 
+4. Effects of property change on seepage due to coupled thermal-hydrologicalchemical 
+processes. 
+These issues need to be addressed in performance assessment. 
+This AMR may be affected by technical product input information that requires confirmation. 
+Any changes to the document that may occur as a result of completing the confirmation activities 
+will be reflected in subsequent revisions. The status of the input information quality may be 
+confirmed by review of the DIRS database. 
+Among the input data relied upon, the only essential data value used is the drift diameter of 
+5.5 m. The results of this AMR should not change if the verification of this value results in a 
+change in diameter of less than 10%. In general, smaller diameter cases would result in less 
+seepage or less conservative results. The only other relied upon data are the permeability data 
+that are used to establish a range of values for the simulations. These permeability data could 
+change by an order of magnitude and still be in the selected range and not affect the results of 
+this AMR. In general, the verification and confirmation of these permeability data should not 
+affect the results of this AMR.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 49 February 2000 
+8. INPUTS AND REFERENCES 
+8.1 DOCUMENTS CITED 
+Ahlers, C.F.; Finsterle, S. and Bodvarsson, G.S. 1999. “Characterization and Prediction of 
+Subsurface Pneumatic Response at Yucca Mountain, Nevada.” Journal of Contaminant 
+Hydrology, 38 (1–3), 47–68. Amsterdam, The Netherlands: Elsevier Science Publishers. TIC: 
+244160. 
+Bandurraga, T.M. and Bodvarsson, G.S. 1999. “Calibrating Hydrogeologic Parameters for the 3- 
+D Site-Scale Unsaturated Zone Model of Yucca Mountain, Nevada.” Journal of Contaminant 
+Hydrology, 38 (1–3), 25–46. Amsterdam, The Netherlands: Elsevier Science Publishers. TIC: 
+244160. 
+Birkholzer, J.; Li, G.; Tsang, C.F.; and Tsang, Y. 1999. “Modeling Studies and Analysis of 
+Seepage into Drifts at Yucca Mountain.” Journal of Contaminant Hydrology, 38 (1–3), 349– 
+384. Amsterdam, The Netherlands: Elsevier Science Publishers. TIC: 244160. 
+Birkholzer, J. and Tsang, C.F. 1997. “Solute Channeling in Unsaturated Heterogeneous Porous 
+Media.” Water Resources Research, 33 (10), 2221–2238. Washington, D.C.: American 
+Geophysical Union. TIC: 235675. 
+Brekke, T.L.; Cording, E.J.; Daemen, J.; Hart, R.D.; Hudson, J.A.; Kaiser, P.K.; and Pelizza, S. 
+1999. “Panel Report on the Drift Stability Workshop.” Drift Stability Workshop, Las Vegas, 
+Nevada, December 9–11, 1998. Las Vegas, Nevada: Yucca Mountain Site Characterization 
+Project. ACC: MOL.19990331.0102. 
+CRWMS M&O (Civilian Radioactive Waste Management System Management & Operating 
+Contractor) 1999a. Analysis and Modeling Report Development Plan (DP) for U0075 “Seepage 
+Models for PA Including Drift Collapse and Drainage, Rev. 00.” TDP-NBS-HS-000009. Las 
+Vegas, Nevada: CRWMS M&O. ACC: MOL.19990830.0384. 
+CRWMS M&O 1999b. M&O Site Investigations. Activity Evaluation. Las Vegas, Nevada: 
+CRWMS M&O. ACC: MOL.19990317.0330. 
+CRWMS M&O 1999c. M&O Site Investigations. Activity Evaluation. Las Vegas, Nevada: 
+CRWMS M&O. ACC: MOL. 19990928.0224. 
+CRWMS M&O 2000a. Seepage Calibration Model and Seepage Testing Data. MDL-NBS-HS- 
+000004, Rev. 00. Las Vegas, Nevada: CRWMS M&O. ACC: MOL.19990721.0521. 
+CRWMS M&O 2000b. Drift Degradation Analysis. ANL-EBS-MD-000027, Rev. 00. Las 
+Vegas, Nevada: CRWMS M&O. ACC: MOL.20000107.0328. 
+Dyer, J.R. 1999. “Revised Interim Guidance Pending Issuance of New U.S. Nuclear Regulatory 
+Commission (NRC) Regulations (Revision 01, July 22, 1999), for Yucca Mountain, Nevada.” 
+Letter from J.R. Dyer (DOE) to D.R. Wilkins (CRWMS M&O), September 9, 1999,
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 50 February 2000 
+OL&RC:SB-1714, with enclosure, “Interim Guidance Pending Issuance of New U.S. Nuclear 
+Regulatory Commission (NRC) Regulations (Revision 01).” ACC: MOL.19990910.0079. 
+Finsterle, S. 1997. ITOUGH2 Command Reference, Version 3.1. LBNL-40041. Berkeley, 
+California: Lawrence Berkeley National Laboratory. ACC: MOL.19981008.0015. 
+LeCain, G.D. 1997. Air-Injection Testing in Vertical Boreholes in Welded and Nonwelded Tuff, 
+Yucca Mountain, Nevada. Water-Resources Investigations Report 96-4262. Denver, Colorado: 
+U.S. Geological Survey. TIC: 233455. 
+Leverett, M.C. 1941. “Capillary Behavior in Porous Solids.” AIME Transactions, Tulsa 
+Meeting, October 1940, 142, 152–169. New York, New York: American Institute of Mining, 
+Metallurgical, and Petroleum Engineers. TIC: 240680. 
+Luckner, L.; van Genuchten, M.T.; and Nielsen, D.R. 1989. “A Consistent Set of Parametric 
+Models for the Two-Phase Flow of Immiscible Fluids in the Subsurface.” Water Resources 
+Research, 25 (10), 2187–2193. Washington, D.C.: American Geophysical Union. TIC: 
+224845. 
+Philip, J.R. 1989. “Asymptotic Solutions for the Seepage Exclusion Problem for Elliptic- 
+Cylindrical, Spheroidal, and Strip-and Disc-Shaped Cavities.” Water Resources Research, 25 
+(7), 1531–540. Washington, D.C.: American Geophysical Union. TIC: 239858. 
+Philip, J.R.; Knight, J.H. and Waechter, R.T. 1989. “Unsaturated Seepage and Subterranean 
+Holes: Conspectus, and Exclusion Problem for Cylindrical Cavities.” Water Resources 
+Research, 25 (1), 16–28. Washington, D.C.: American Geophysical Union. TIC: 239117. 
+Richards, L.H. 1931. “Capillary Conduction of Liquids through Porous Mediums.” Physics, 1, 
+318–333. Washington, D.C.: American Physical Society. TIC: 225383. 
+Ritcey, A.C. and Wu, Y.S. 1999. “Evaluation of the Effect of Future Climate Change on the 
+Distribution and Movement of Moisture.” Journal of Contaminant Hydrology, 38 (1–3), 257– 
+280. Amsterdam, The Netherlands: Elsevier Science Publishers. TIC: 244160. 
+Tsang, Y.W. and Birkholzer, J.T. 1999. “Predictions and Observations of the Thermal- 
+Hydrological Conditions in the Single Heater Test.” Journal of Contaminant Hydrology, 38 (1– 
+3), 385–425. Amsterdam, The Netherlands: Elsevier Science Publishers. TIC: 244160. 
+van Genuchten, M. 1980. “A Closed-Form Equation for Predicting the Hydraulic Conductivity 
+of Unsaturated Soils.” Soil Science Society of America Journal, 44 (5), 892–898. Madison, 
+Wisconsin: Soil Science Society of America. TIC: 217327. 
+Wang, J.S.Y.; Trautz, R.C.; Cook, P.J.; Finsterle, S.; James, A.L.; and Birkholzer, J. 1999. 
+“Field Tests and Model Analysis of Seepage into Drift.” Journal of Contaminant Hydrology, 38 
+(1-3), 323–348. Amsterdam, The Netherlands: Elsevier Science Publishers. TIC: 244160. 
+Wemheuer, R.F. 1999. “First Issue of FY00 NEPO QAP-2-0 Activity Evaluations.” Interoffice 
+correspondence from R.F. Wemheuer (CRWMS M&O) to R.A. Morgan (CRWMS M&O),
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 51 February 2000 
+October 1, 1999, LV.NEPO.RTPS.TAG.10/99-155, with attachments, Activity Evaluation for 
+Work Package #1401213UM1. ACC: MOL.19991028.0162. 
+Wu, Y.S.; Haukwa, C.; and Bodvarsson, G.S. 1999. “A Site-Scale Model for Fluid and Heat 
+Flow in the Unsaturated Zone of Yucca Mountain, Nevada.” Journal of Contaminant 
+Hydrology, 38 (1–3), 185–216. Amsterdam, The Netherlands: Elsevier Science Publishers. 
+TIC: 244160. 
+Software Cited 
+Software Code: AMESH V1.0. STN: 10045-1.0-00. 
+Software Code: GSLIB V2.0 Module SISIM V2.0. STN: 10098-2.0MSISIMV2.0-00. 
+Software Code: ITOUGH2 V3.2_drift. STN: 10055-3.2_DRIFT-00. 
+Macro/Routine: Frac_calc V1.1. ACC: MOL.19990903.0032. 
+Macro/Routine: Read_TDB V1.0. ACC: MOL.19990903.0031. 
+Macro/Routine: Meshbd.f V1.0. ACC: MOL.20000217.0297. 
+Macro/Routine: mininipresf.f V1.0. ACC: MOL.20000217.0298. 
+Macro/Routine: mddf.f V1.0. ACC: MOL.20000217.0299. 
+Macro/Routine: mk_gener.f V1.0. ACC: MOL.20000217.0300. 
+Macro/Routine: mk_scale_k.f V1.0. ACC: MOL.20000217.0301. 
+Macro/Routine: mininipresf_ir.f V1.0. ACC: MOL.20000217.0302. 
+Macro/Routine: mddf_CC8.f V1.0. ACC: MOL.20000217.0303. 
+Macro/Routine: mddf_CS8.f V1.0. ACC: MOL.20000217.0304. 
+Macro/Routine: mddf_cc.f V1.0. ACC: MOL.20000217.0305. 
+Macro/Routine: minrefine3df.f V1.0. ACC: MOL.20000217.0306. 
+8.2 CODES, STANDARDS, REGULATIONS, AND PROCEDURES 
+AP-3.10Q, Rev. 1, ICN 1. Analyses and Models. Washington, D.C.: U.S. Department of 
+Energy, Office of Civilian Radioactive Waste Management. ACC: MOL.19991019.0467. 
+AP-3.17Q, Rev. 0, ICN 0. Impact Reviews. Washington, D.C.: U.S. Department of Energy, 
+Office of Civilian Radioactive Waste Management. ACC: MOL.19990702.0306.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 52 February 2000 
+AP-SI.1Q, Rev. 1, ICN 0. Software Management. Washington, D.C.: U.S. Department of 
+Energy, Office of Civilian Radioactive Waste Management. ACC: MOL.19990630.0395. 
+AP-SI.1Q, Rev. 2, ICN 1. Software Management. Washington, D.C.: U.S. Department of 
+Energy, Office of Civilian Radioactive Waste Management. ACC: MOL.19991101.0212. 
+DOE (U.S. Department of Energy) 1998. Quality Assurance Requirements and Description. 
+DOE/RW-0333P, REV 8. Washington D.C.: DOE OCRWM. ACC: MOL.19980601.0022. 
+QAP-2-0, Rev. 5. Conduct of Activities. Las Vegas, Nevada: CRWMS M&O. ACC: 
+MOL.19980826.0209. 
+8.3 SOURCE DATA, LISTED BY DATA TRACKING NUMBER 
+GS960708314224.008. Provisional Results: Geotechnical Data for Station 30+00 to Station 
+35+00, Main Drift of the ESF. Submittal date: 08/05/1996. 
+GS960808314224.011. Provisional Results: Geotechnical Data for Station 35+00 to Station 
+40+00, Main Drift of the ESF. Submittal date: 08/29/1996. 
+GS971108314224.025. Revision 1 of Detailed Line Survey Data, Station 26+00 to Station 
+30+00, North Ramp and Main Drift, Exploratory Studies Facility. Submittal date: 12/03/1997. 
+LB960500834244.001. Hydrological Characterization of the Single Heater Test Area in ESF. 
+Submittal date: 08/23/1996. 
+LB970600123142.001. Ambient Characterization of The ESF Drift Scale Test Area by Field Air 
+Permeability Measurements. Submittal date: 06/13/1997 
+LB980001233124.002. Air Permeability Testing in Niches 3566 and 3650. Submittal date: 
+04/23/1998. 
+LB990861233129.001. Drift Scale Calibrated 1-D Property Set, FY99. Submittal date: 
+08/06/1999. 
+LB997141233129.001. Calibrated Basecase Infiltration 1-D Parameter Set for the UZ Flow and 
+Transport Model, FY99. Submittal date: 07/21/1999. 
+SN9908T0872799.004. Tabulated In-Drift Geometric and Thermal Properties Used in Drift- 
+Scale Models for TSPA-SR (Total System Performance Assessment-Site Recommendation). 
+Submittal date: 08/30/1999. 
+8.4 OUTPUT DATA, LISTED BY DATA TRACKING NUMBER 
+LB991101233129.001. Model Input and Output Files, Supporting Revision 00 of AMR U0075 
+Seepage Model for PA. Submittal date: 11/30/1999. 
+LB991101233129.002. Percent seepage predictions from revision 00 of AMR U0075 Seepage 
+Model for PA. Submittal date: 11/30/99.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 53 February 2000 
+8.5 SUPPORTING BIBLIOGRAPHY 
+Birkholzer, J.; Li, G.; Tsang, C.F.; and Tsang, Y. 1998. Drift Scale Modeling: Studies of 
+Seepage into a Drift. Milestone Report SP4CKLM4. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19980825.0204. 
+Birkholzer, J.; Li, G.; Tsang, C.F.; Tsang, Y; Trautz, R.C.; and Wang, J. 1998. Drift Scale 
+Modeling: Studies of Seepage into a Drift. Milestone Report SP3CKLM4. Berkeley, California: 
+Lawrence Berkeley National Laboratory. ACC: MOL.19980908.0282. 
+Birkholzer, J.T.; Tsang, C.F.; Tsang, Y.W.; and Wang, J.S.Y. 1996. “Drift Scale Modeling, 
+FY96 Project Report.” Chapter 4 of Multi-Scale Modeling to Evaluate Scaling Issues, 
+Percolation Flux and Other Processes for PA Recommendations. Altman S.J. et al., eds. 
+Milestone Report T6540. Albuquerque, New Mexico: Sandia National Laboratories. ACC: 
+MOL.19970320.0116. 
+Cook, P.J.; Trautz, R.C.; and Wang, J.S.Y. 1998. “Compilation of Borehole Permeability Values 
+from the Pre- and Post-Excavation Air Injection Tests.” Chapter 3 of Drift Seepage and Niche 
+Moisture Study: Phase 1 Report on Flux Threshold Determination, Air Permeability 
+Distribution, and Water Potential Measurement, Version 1.0. Wang, J.S.Y. et al. Milestone 
+Report SPC315M4. Berkeley, California: Lawrence Berkeley National Laboratory. ACC: 
+MOL.19980806.0713. 
+Cook, P.J.; Trautz, R.C.; and Wang, J.S.Y. 1997. “Cross-hole Pneumatic Tests of Fracture Flow 
+Paths.” Chapter 2 of Field Testing and Observation of Flow Paths in Niches, Phase 1 Status 
+Report of the Drift Seepage Test and Niche Moisture Study. Wang, J.S.Y et al. Milestone 
+Report SPC314M4. Berkeley, California: Lawrence Berkeley National Laboratory. ACC: 
+MOL.19980121.0078. 
+Li, G.; Tsang, C.F.; and Birkholzer, J. 1998. Calculation of Drift Seepage for Alternative 
+Emplacement Designs. BB0000000-01717-0200-00011. Berkeley, California: Lawrence 
+Berkeley National Laboratory. ACC: MOL.19990323.0138 
+Philip, J.R. 1989. “The Seepage Exclusion Problem for Sloping Cylindrical Cavities.” Water 
+Resources Research, 25 (6), 1447–1448. Washington, D.C.: American Geophysical Union. 
+TIC: 239729. 
+Philip, J.R. 1989. “Asymptotic Solutions for the Seepage Exclusion Problem for Elliptic- 
+Cylindrical, Spheroidal, and Strip- and Disc-Shaped Cavities.” Water Resources Research, 25 
+(7), 1531–1540. Washington, D.C.: American Geophysical Union. TIC: 239858. 
+Philip, J.R.; Knight, J.H; and Waechter, R.T. 1989. “The Seepage Exclusion Problem for 
+Parabolic and Paraboloidal Cavities.” Water Resources Research, 25 (4), 605–618. Washington, 
+D.C.: American Geophysical Union. TIC: 239116. 
+Tsang, C.F.; Li, G.; Birkholzer, J.T.; and Tsang, Y.W. 1998 . Abstraction Modeling of Drift 
+Seepage for TSPA/VA. Milestone Report SLX01LB4. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19980730.0607.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 54 February 2000 
+Tsang, C.F. 1997. Drift-Scale Heterogeneous Permeability Field Conditioned to Field Data. 
+Milestone Report SP331BM4. Berkeley, California: Lawrence Berkeley National Laboratory. 
+ACC: MOL.19971125.0915. 
+Tsang, C.F.; Birkholzer, J.T.; and Li, G. 1997. Drift Scale Modeling: Progress in Studies of 
+Seepage into a Drift. Milestone Report SP331CM4. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19971204.0420. 
+Tsang, C.F.; Birkholzer, J.T.; Li, G; and Tsang, Y.W. 1997. Drift Scale Modeling: Studies of 
+Seepage into a Drift. Milestone Report SP331DM4. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19971208.0369. 
+Tsang, C.F.; Li, G.; Birkholzer, J.T.; and Tsang, Y.S. l997. Drift Scale Abstraction: Evaluation 
+of Seepage into Drifts. Milestone Report NWD98-1. Berkeley, California: Lawrence Berkeley 
+National Laboratory. ACC: MOL.19980423.0388. 
+Tsang, C.F.; Li, G.; Birkholzer, J.; and Tsang, Y. S 1997. Drift Scale Abstraction: Additional 
+Results on Seepage into Drifts and Model Testing against Niche Liquid Release Test. Milestone 
+Report NWD98-2. Berkeley, California: Lawrence Berkeley National Laboratory. ACC: 
+MOL.19980506.0008. 
+Tsang Y.W.; Wang, J.; Freifeld, B.; Cook, P.; Suarez-Rivera, R.; and Tokunaga, T. 1996. Letter 
+Report on Hydrological Characterization of the Single Heater Test Area in the ESF. Milestone 
+Report OS327322D1. Berkeley, California: Lawrence Berkeley National Laboratory. ACC: 
+MOL.19971119.0549. 
+Tsang, Y.W. and Cook, P. 1997. Ambient Characterization of the ESF Drift Scale Test Area by 
+Field Air Permeability Measurements. Milestone Report SP9512M4. Berkeley National 
+Laboratory. ACC: MOL.19971201.0829. 
+Wang, J.S.Y. and Elsworth, D. 1999. “Permeability Changes Induced by Excavation in 
+Fractured Tuff.” Rock Mechanics for Industry, Proceedings of the 37th U.S. Rock Mechanics 
+Symposium, Vail, Colorado, June 6-9, 1999, 2, 751–757. Alexandria, Virginia: The American 
+Rock Mechanics Association. TIC: 245246. 
+Wang, J.S.Y.; Trautz, R.C.; Salve, R.; Oldenburg, C.M.; Ahlers, C.F.; Finsterle, S.; Cook, P.J.; 
+Doughty, C.; Fairley, J.P.; James, A. Hu, M.Q.; Guell, M.A.; and Freifeld, B. 1998. Progress 
+Report on Fracture Flow, Drift Seepage, and Matrix Imbibition Tests in the Exploratory Studies 
+Facility. Milestone Report SP33PBM4. Berkeley, California: Lawrence Berkeley National 
+Laboratory. 
+Wang, J.S.Y.; Trautz, R.C.; Cook, P.J.; Finsterle, S.; James, A.L.; Birkholzer J.; and Ahlers, C.F. 
+1998. Testing and Modeling of Seepage into Drift: Input of Exploratory Study of Facility 
+Seepage Test Results to Unsaturated Zone Model. Milestone Report SP33PLM4. Berkeley, 
+California: Lawrence Berkeley National Laboratory. ACC: MOL.19980508.0004. 
+Wang, J.S.Y.; Trautz, R.C.; Cook, P.J.; and Salve, R. 1998. Drift Seepage Test and Niche 
+Moisture Study: Phase 1 Report on Flux Threshold Determination, Air Permeability
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 55 February 2000 
+Distribution, and Water Potential Measurement. Milestone Report SPC315M4. Berkeley, 
+California: Lawrence Berkeley National Laboratory. ACC: MOL.19980806.0713. 
+Wang, J.S.Y, Cook, P.; Trautz, R.; James, A.; Finsterle, S. Sonnenthal, E.; Salve, R.; Hesler, G.; 
+and Flint, A. 1997. Drift Seepage Test and Niche Moisture Study: Phase 1 Progress Report on 
+Data Interpretation and Model Prediction. Milestone Report SPC31DM4. Berkeley, California: 
+Lawrence Berkeley National Laboratory. ACC: MOL.19980501.0484. 
+Wang, J.S.Y., Cook, P.J.; Trautz, R.C.; Salve, R.; James, A.L.; Finsterle, S.; Tokunaga, T.K.; 
+Solbau, R.; Clyde, J.; Flint, A.L.; and Flint, L.E. 1997. Field Testing and Observation of Flow 
+Paths in Niches, Phase 1 Status Report of the Drift Seepage Test and Niche Moisture Study. 
+Milestone Report SPC314M4. Berkeley, California: Lawrence Berkeley National Laboratory. 
+ACC: MOL.19980121.0078.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 56 February 2000 
+INTENTIONALLY LEFT BLANK
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 57 February 2000 
+9. ATTACHMENTS 
+Attachment I - Document Input Reference System 
+Attachment II - Model Input and Output Files 
+Attachment III – Software Routine Code Listing
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 58 February 2000 
+INTENTIONALLY LEFT BLANK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment II-1 February 2000 
+ATTACHMENT II–MODEL INPUT AND OUTPUT FILES 
+Below are the descriptions of the directory paths and the input and output files submitted under 
+DTN: LB991101233129.001 for this AMR. 
+Tables 4-8 
+Directories 
+/ad5k#@_r&/ (includes subpaths and data files) 
+‘ad5’ indicates that the correlation length is 0.5 meter. 
+# 11,12,13 and 14 corresponding to the mean permeability at 0.9×10-11, 0.9×10-12, 
+0.9×10-13 m2, and 0.9×10-14 m2. 
+@ standard deviation: ‘s’ means the value of standard deviation is 1.66; ‘l’ means the 
+value is 2.50; otherwise the value is 1.93. 
+& realization number. 
+For example, /ad5k13s_r1/ identifies the root directory for simulations where the 
+correlation length is 0.5 meter and the mean permeability of realization 1 is 0.9×10-13 
+m2 with a standard deviation of 1.66. 
+Mesh filename 
+MESHSF input file of mesh generation for a 5.5 m diameter drift. 
+Initial Condition Filenames 
+INCON@&_% 
+@ standard deviation: ‘s’ means the value of standard deviation is 1.66; ‘l’ means the 
+value is 2.50; ‘o’ means the value is 1.93. 
+& realization number. If the realization number is missing the file is generated for 
+the realization number of the directory given above. 
+% value of 1/a. 
+For example, INCONs1_100 identifies the initial condition file for realization 1 with 
+standard deviation of 1.66 and 1/a of 100 Pa. /ad5k13s_r1/INCONo_100 is generated for 
+realization 1. 
+Subdirectories 
+/*_a%/
+* is the percolation flux (mm/yr). 
+% is the value of 1/a. 
+For example, /500_a100/ is a subdirectory containing the files for a simulation with a 
+percolation flux of 500 mm/yr and 1/a of 100 Pa. 
+ITOUGH2 Input files
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment II-2 February 2000 
+*_a^ 
+* is the percolation flux. 
+^ value of 1/a: 1k = 1000, 3h = 300 and 1h = 100, or 30. 
+For example, 500_a1h is a input file for a flux of 500 mm/yr and 1/a of 100 Pa. 
+Output files 
+*_a^.out output file for ITOUGH2. 
+*_a^.sav ITOUGH2 .sav file with output conditions 
+outq file containing seepage results 
+t2.msg ITOUGH2 message file providing simulation status 
+Steps to rerun an example case corresponding to Tables 4 through 8 
+In table 4C, realization 3 and 1/a 30Pa with the mean permeability of 0.9×10-14 m2 ( the 
+seepage percentage is 35). 
+Step 1: go to directory ad5k14l_r3, where the correlation length is 0.5 meter (‘ad5’), 
+s = 2.5, the realization is 3 and the mean permeability is 0.9×10-14 m2; 
+Step 2: go to directory 5_a30, where the percolation flux is 5 mm/yr and the 1/a is 30 
+Pa; 
+Step 3: Type “rund” and enter to run ITOUGH2v3.2_drift with the input file 5_a30; 
+Step 4: Calculate the seepage percentage from the output file outq. 
+Tables 9-10 
+Root directory 
+/a!_?/ includes subdirectories and data files. 
+! 1 or 4 is the value of the correlation length. 
+? ‘stefan’ means Parameter Set B and ‘old’ means Set A. 
+For example, /a1_stefan/ indicates that the correlation length is 1 meter with Parameter 
+Set B. 
+Mesh filename 
+MESHSF input file of mesh for a 5.5 m diameter drift. 
+Initial Condition Filenames 
+INCON@a!_&_% 
+@ standard deviation: ‘s’ means the value of standard deviation is 1.66; ‘l’ means the 
+value is 2.50; ‘o’ means the value is 1.93.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment II-3 February 2000 
+! 1 or 4 is the value of the correlation length. 
+& realization number. 
+% value of 1/a. 
+For example, INCONsa1_1_100 indicates that it is for realization 1 with a standard 
+deviation of 1.66, correlation length of 1 meter and 1/a of 100 Pa. 
+Subdirectories 
+/*_a%_a!_&/ 
+subpaths under /a!_? /. 
+* is the percolation flux (mm/yr). 
+% is the value of 1/a. 
+! 1 or 4 is the value of the correlation length. 
+& realization number (1 through 5 for correlation length 4). 
+For example, /500_a100_a1_1/ indicates that the correlation length of realization 1 is 1 meter, 
+1/a is 100 Pa and the percolation flux is 500 mm/yr. 
+ITOUGH2 Input files 
+*_a^ 
+* is the percolation flux. 
+^ value of 1/a: 1k = 1000, 3h = 300 and 1h = 100, or 30. 
+For example, 213_a30 is a input file for a flux of 213 mm/yr and 1/a of 30 Pa. 
+Output files 
+*_a^.out output file for ITOUGH2. 
+*_a^.sav ITOUGH2 .sav file with output conditions 
+outq file containing seepage results 
+t2.msg ITOUGH2 message file providing simulation status 
+Steps to rerun an example case corresponding to the tables 9-10 
+In table 10, use Parameter Set B, alternative . value of 4, realization 2, flux 213 mm/yr (the 
+seepage percentage is 7.7). 
+Step 1: go to directory a4_stefan, where the correlation length is 4 meter (‘a4’); 
+Step 2: go to directory 213_a100_a4_2, where the percolation flux is 213 mm/yr, 1/a is 
+100 Pa, correlation length 4, realization 2; 
+Step 3: type “rund” and enter to run ITOUGH2v3.2_drift with the input file 213_a1h; 
+Step 4: calculate the seepage percentage from the output file outq.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment II-4 February 2000 
+Table 11 
+Root directory 
+/ad5k#@_r1_nn/ includes subdirectories and data files. 
+‘ad5’ indicates that the correlation length is 0.5 meter. 
+# 12,13 corresponding to the mean permeability at 0.9×10-12or 0.9×10-13 m2 
+@ standard deviation: ‘s’ means the value of standard deviation is 1.66; ‘l’ means the 
+value is 2.50; otherwise the value is 1.93. 
+‘nn’ means the van Genuchten parameter n is 2.55 
+For example, /ad5k13s_r1_nn/ indicates that the correlation length is 0.5 meter, van 
+Genuchten n is 2.55 and the mean permeability of realization 1 is 0.9×10-13 m2 with the 
+standard deviation of 1.66. 
+Mesh filename 
+MESHSF input file of mesh generation for a 5.5 m diameter drift. 
+Initial Condition Filenames 
+INCON@&_% 
+@ standard deviation: ‘s’ means the value of standard deviation is 1.66; ‘l’ means the 
+value is 2.50; ‘o’ means the value is 1.93. 
+& realization number. 
+% value of 1/a. 
+For example, INCONl1_1000 identifies the initial condition file for realization 1 with 
+standard deviation of 2.50 and 1/a of 1000 Pa. 
+Subdirectories 
+/*_a%/ subpaths under /ad5k#@_r&_nn/ 
+* is the percolation flux (mm/yr). 
+% is the value of 1/a. 
+For example, /500_a100/ a subdirectory containing the files for a simulation with a 
+percolation flux of 500 mm/yr and 1/a of 100 Pa. 
+ITOUGH2 Input files 
+*_a^ 
+* is the percolation flux. 
+^ value of 1/a: 1k = 1000, 3h = 300 and 1h = 100, or 30. 
+For example, 500_a1h is a input file for a flux of 500 mm/yr and 1/a of 100 Pa.
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment II-5 February 2000 
+Output files 
+*_a^.out output file for ITOUGH2. 
+*_a^.sav ITOUGH2 .sav file with output conditions 
+outq file containing seepage results 
+t2.msg ITOUGH2 message file providing simulation status 
+Steps to rerun an example case corresponding to the table 11 
+In Table 11, use the file with a van Genuchten n of 2.55, and 1/a 300 Pa, and Parameter Set A 
+(the seepage percentage is 47). 
+Step 1: go to directory ad5k13_r1_nn, where the correlation length is 0.5 meter (‘ad5’), s 
+= 1.93, realization 1 and the mean permeability is 0.9×10-13 m2; 
+Step 2: go to directory 500_a300, where the percolation flux is 500 mm/yr and the 1/a is 
+300 Pa; 
+Step 3: type “rund” and enter to run ITOUGH2v3.2_drift with the input file 500_a3h; 
+Step 4: calculate the seepage percentage from the output file outq. 
+Figures 3 and 4 with correlated a-k simulations 
+Root directory 
+/ad5k#@_r&_k+/ includes subpaths and data files. 
+‘ad5’ indicates that the correlation length is 0.5 meter. 
+# 12 or 13 corresponding to the mean k of 0.9×10-12or 0.9×10-13 m2 
+@ standard deviation: ‘s’ means the value of standard deviation is 1.66; ‘l’ means the 
+value is 2.50; ‘o’ means the value is 1.93. 
+& the realization number. 
+‘+’ ‘o’ for Parameter Set A; ‘s’ for Set B. 
+For example, /ad5k13s_r1_ko/ indicates that it is for parameter Set A with correlated a-k. 
+Mesh filename 
+MESHSF input file of mesh generation for a 5.5 m diameter drift. 
+Initial Condition Filenames 
+INCONo_% 
+% value of 1/a. 
+For example, INCONo_100 indicates that it is for 1/a of 100 Pa. 
+Subdirectories
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment II-6 February 2000 
+/*_a%/ subpaths under /ad5k#@_r&_k+/ 
+* is the percolation flux (mm/yr). 
+% is the value of 1/a. 
+For example, /500_a100/ a subdirectory containing the files for a simulation with a 
+percolation flux of 500 mm/yr and 1/a of 100 Pa. 
+ITOUGH2 Input files 
+*_a^ 
+* is the percolation flux. 
+^ value of 1/a: 1k = 1000, 3h = 300 and 1h = 100, or 30. 
+For example, 500_a1h is a input file for a flux of 500 mm/yr and 1/a of 100 Pa. 
+Output files 
+*_a^.out output file for ITOUGH2. 
+*_a^.sav ITOUGH2 .sav file with output conditions 
+outq file containing seepage results 
+t2.msg ITOUGH2 message file providing simulation status 
+Steps to rerun a case corresponding to Figures 3 and 4 
+In Figure 3(a), 1/a is 30Pa with the correlated a-k ( the seepage percentage is about15). 
+Step 1: go to directory ad5k13_r1_ko, where the correlation length is 0.5 meter (‘ad5’), s 
+= 1.93, the realization is 1 and the mean permeability is 0.9×10-13 m2 (Parameter Set A). 
+Step 2: go to directory 500_a30, where the percolation flux is 500 mm/yr and the 1/a is 
+30 Pa; 
+Step 3: type “rund” and enter to run ITOUGH2v3.2_drift with the input file 500_a30; 
+Step 4: calculate the seepage percentage from the output file outq. 
+Table 12 
+Root directory 
+/drift_geo/ includes subpaths and files for drift collapse models 
+Subdirectories 
+/drift_cc/drift_cc_r&/ files for the model cut out 3m depth and 2m width at the drift roof. 
+/drift_cc8/drift_cc8_r&/ files for the model cut out 1 m3 rock-fall from the drift crown. 
+/drift_cs8/drift_cs8_r&/ files for the model cut out 1 m3 rock-fall from the drift springline
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment II-7 February 2000 
+/drift_kzone/drift_kz_r&/ files for the model with disturbed zone around the drift 
+Mesh names MESHSF_cc; MESHSF_cc8; MESHSF_cs8; MESHSF 
+Initial Condition Filenames 
+INCONcc_a1h_r& 
+INCONcc8_a1h_r& 
+INCONcs8_a1h_r& 
+INCONkz_r& 
+& is the realization number. 
+Subdirectories 
+/*_a%/
+* is the percolation flux (mm/yr). 
+% is the value of 1/a. 
+For example, /500_a100/ a subdirectory containing the files for a simulation with a 
+percolation flux of 500 mm/yr and 1/a of 100 Pa. 
+ITOUGH2 Input files 
+*_a^ 
+* is the percolation flux. 
+^ value of 1/a: 1k = 1000, 3h = 300 and 1h = 100, or 30. 
+For example, 500_a1h is a input file for a flux of 500 mm/yr and 1/a of 100 Pa. 
+Output files 
+*_a^.out output file for ITOUGH2. 
+*_a^.sav ITOUGH2 .sav file with output conditions 
+outq file containing seepage results 
+t2.msg ITOUGH2 message file providing simulation status 
+Steps to rerun a example case corresponding to table 12 
+In Table 12, 3_m rock failure in drift roof and realization 2 with Parameter Set B ( the 
+seepage percentage is 8.6). 
+Step 1: go to directory drift_geo/drift_cc/drift_cc_r2/, where the correlation length is 0.5 
+meter, s = 1.66, the realization is 2 and the mean permeability is 0.9×10-12 m2; 
+Step 2: go to directory 500_a100, where the percolation flux is 500 mm/yr and the 1/a is 
+100 Pa; 
+Step 3: type “rund” and enter to run ITOUGH2v3.2_drift with the input file 500_a100;
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment II-8 February 2000 
+Step 4: calculate the seepage percentage from the output file outq. 
+Table 13 
+Root Directory 
+/multi_p/ includes subpaths and data files for episodic percolation simulations 
+Mesh Filename 
+MESHSF input file mesh for a 5.5 m diameter drift. 
+Subdirectory 
+/multi_73+_2-10/ 
++ ‘s’ means Set A, ‘a1k’ means Set B. If + is missing this indicates Set A but with 
+1/a = 100 Pa. 
+For example, file multi_73_2-10 indicates a flux of 73 mm/yr, Parameter Set A but with 
+1/a =100 Pa, with flux occurring in the first two months of each year. 
+Initial Conditions Filename INCON 
+Input files 
+*_^m+?y 
+* is the percolation flux during the first two months of the year in mm/yr. 
+^ shows the number of months for the run. 
+? is the year number of the run. The sequence starts with 0 . 
+For example, 439_2m+1y is a input file for a simulation over the two wet months with 
+the percolation flux of 439 mm/yr in the second year. 439_10m+1y is the file for the 
+simulation of the following 10 months. 
+Output files 
+*_^m+?y.out ITOUGH2 output 
+*_^m+?y.sav ITOUGH2 .sav file with final simulation conditions 
+*_^m+?y.tec ITTOUGH2 .tec file for plotting 
+outq_^m+?y output file from ITOUGH2 for seepage rates. 
+For example, outq_2m+1y is a output file for the percolation flux of 439 mm/yr over the 
+second wet period (second year). 
+Steps to rerun an example case corresponding to table 13 
+In Table 13, use Parameter Set B at the end of wet period ( the seepage percentage is 2.5). 
+Step 1: go to directory /multi_p/multi_73s_2-10/;
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment II-9 February 2000 
+Step 2: copy 0_10m+2y.sav to INCON as initial condition of the forth wet period. After 
+three years episodic percolation the seepage is near steady state; 
+Step 3: type “rund” and enter to run ITOUGH2v3.2_drift with the input file 439_2m+3y; 
+Step 4: calculate the seepage percentage from the output file outq_2m+3y.
+
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-2 February 2000 
+c---------------------------------------------------------------------- 
+c Commented out variables no longer used MAC 7/98 
+c integer ni1,ni2 
+integer i,k,ni,n,nn,nm1,nfr,nf,ns1,ns2 
+parameter (nf = 50000) 
+parameter (pi=3.1415926536d0) 
+parameter (ni = 199) 
+c Added MAC 4/13/98 
+character*32 fname 
+c Commented out variables no longer used MAC 7/98 
+c character*8 outfile, header2, fstat 
+c character*200 header 
+c integer dist1 
+c double precision height(nf),dist2 
+integer nfrint(ni),ns 
+double precision blksiz,kf,sdsq,stkrad,diprad,proptf 
+double precision fmin,fmax 
+double precision kfrc(nf),aper(nf) 
+double precision ktens(9) 
+double precision kxx,kxy,kxz,kyx,kyy,kyz,kzx,kzy,kzz 
+double precision endp1,endp2,totaltr,totalht,adip,bdip 
+double precision dist(nf),nfrc(nf) 
+double precision strike(nf),dip(nf),alen(nf),blen(nf) 
+double precision atrace(nf),btrace(nf),trace(nf) 
+double precision trlen,fmesf,frint,fgrp1,fgrp2,fsiz 
+double precision trcmax,dipmin,dipmax,aperture 
+double precision avgsp,frcint,varsp,sdspac 
+double precision freq,sdfreq,frcvol,frcrad,frcpor,blkht,blkdp 
+double precision sdlen,varlen,avglen,frarea,frcp2d 
+character*1 ans1,ans2 
+c MAC V1.1 
+double precision intarea, gmlen 
+c
+c-------------------------------------------------------------------------- 
+c Below added by MAC 4/98 - 5/98 
+c Data statements added to identify subunits and later combine 
+c subunits for each model layer. 
+c Moved to include MAC 6/98 so that various combinations could be 
+c used by simply using a different file for include 
+c Note that alcove stations are entered with Alcove # in the 
+c ten thousandth location. 
+c Assignment for model layers based on CRWSM M&O, 1998. 
+c For most recent assignment see 
+c Scientific Notebook YMP-LBNL-GSB-MC-1.1 pages 36-39. 
+c
+c Include file 'datablk.f' includes data statements for 
+c unitname, modlayer, unitsta, unitend, and logairk 
+c MAC V1.1 
+include 'datablk11.f' 
+c
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-3 February 2000 
+c For testing, instead of 'datablk.f', include file 'uzmodel97.f' 
+c for comparison with calculations performed for the July 97 
+c milestone (Chapter 7, Sonnethal et. al, 1997) or include 
+c 'sweetkind.f' for comparison with calculations in 
+c Sweetkind et. al (1997). Use the data files ericdls.dat and 
+c sweetdls.dat, respectively. 
+c include 'uzmodel97.f' 
+c include 'sweetkind.f' 
+c MAC 7/98 For the more detailed PTn model layers use 
+c include 'ptnblk.f' 
+c-------------------------------------------------------------------------- 
+c Below added MAC 4/98 - 6/98 
+c ntotal is the total number of UZ model layers 
+c nlayers is the total number of segments along the ESF 
+c Both are used for the data statements and are defined in the 
+c file 'datablk.f' 
+c npar is the number of parameters saved for calculating properties 
+c for entire model layer 
+c variables with 'int' are for calculating fracture properties for 
+c intervals 
+c variables for data statements [integer modlayer(ntotal); 
+c double precision logairk(nlayers),unitsta(nlayers), 
+c unitend(nlayers)] are in file 'datablk.f' 
+integer layer,first,last,npar 
+c MAC V1.1 changed npar from 16 to 18 
+parameter(npar=18) 
+double precision spac,frcp1d,trcmin, combine,kzzkxx,kyykxx,kzzkyy, 
++ alpha,loga,logf,sdalpha 
+dimension combine(nlayers,npar) 
+character*5 outfile 
+integer intn,intmax,intnfr,intlayer 
+parameter(intmax=10000) 
+double precision intfreq,intspace, intlength, inttrace 
+dimension intfreq(intmax),intspace(intmax),intnfr(intmax), 
++ inttrace(intmax) 
+c...Input file name 
+2 print *, 'Enter fracture data filename: ' 
+read (*,*) fname 
+open(unit=12,file=fname,status='old',err=5) 
+go to 7 
+5 write(*,*)'File not found' 
+go to 2 
+7 continue 
+c Removed call to station file -- all in one file MAC 4/13/98 
+c revised MAC 4/13/98 - starting and end points for model layers 
+c now determined internally 
+c revised MAC 4/17/98 - changed input process 
+dipmin = 0.d0 
+dipmax = 90.d0
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-4 February 2000 
+ans1 = 'n' 
+ans2 = 'y' 
+write(*,*)'Enter minimum and maximum fracture length to use' 
+read(*,*)fmin,fmax 
+c Added MAC 7/8/98 - query user for interval length 
+write(*,*)'Enter interval length (in meters)' 
+read(*,*)intlength 
+c-------------------- 
+c... Read station file - Removed MAC 4/13/98 
+c MAC 4/98 open output files 
+open(13,file='all1.par',status='unknown') 
+open(14,file='all2.par',status='unknown') 
+write(13,441) 
+write(14,442) 
+open(18,file='interval.par',status='unknown') 
+write(18,1999) 
+open(20,file='tmp.par') 
+c
+c... Read fracture data file 
+c Rev MAC 4/13/98 
+read (12,*) 
+i = 0 
+10 i = i + 1 
+c rev MAC 6/29/98 - Don't read in height 
+c read(12,*,end=99)dist(i),strike(i),dip(i),atrace(i), 
+c & btrace(i),height(i) 
+read(12,*,end=99)dist(i),strike(i),dip(i),atrace(i), 
+& btrace(i) 
+go to 10 
+99 ns = i - 1 
+dist(ns+1)=99999.9 
+close(12) 
+c
+c Added MAC 6/25/98 
+c initialize combine 
+do j=1,npar 
+do i=1,nlayers 
+combine(i,j) = 0d0 
+end do 
+end do 
+c---------------- 
+c Added MAC 4/17/98 
+c Loop through model layers, assiging station ranges 
+c Define endp1, endp2, ns1, ns2 
+c 
+DO layer = 1,nlayers 
+endp1 = unitsta(layer) 
+endp2 = unitend(layer) 
+write(*,*)unitname(layer),endp1,endp2 
+ns1 = 0 
+ns2 = 0 
+do i = 1,ns+1 
+if (((dist(i).ge.endp1).and.(dist(i-1).lt.endp1))
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-5 February 2000 
+& .or.((dist(i).ge.endp1).and.(i.eq.1))) 
+& ns1 = i 
+if ((dist(i).gt.endp2).and.(dist(i-1).le.endp2)) 
+& ns2 = i - 1 
+end do 
+c MAC V1.1 - changed 0.0 to 0 
+if ((ns2-ns1).le.0) go to 999 
+write(*,*)' ',dist(ns1),dist(ns2) 
+c outfile = unitname(layer) 
+outfile = 'dummy' 
+c if ((layer.eq.48).or.(layer.eq.27)) then 
+c outfile = unitname(layer) 
+c write(*,*)'Tecplot file for',unitname(layer), 
+c + unitsta(layer),unitend(layer) 
+c end if 
+c... Find size distribution for all fractures 
+if(ans2.eq.'y')then 
+fmesf = 0.3d0 
+frint = 0.2d0 
+do i = ns1,ns2 
+trlen = atrace(i) + btrace(i) 
+do k = 1, ni 
+fgrp1 = fmesf + dble(k-1)*frint 
+fgrp2 = fmesf + dble(k)*frint 
+if(trlen.ge.fgrp1.and.trlen.lt.fgrp2) 
+& nfrint(k)=nfrint(k)+1 
+enddo 
+enddo 
+endif 
+c
+c Added MAC 4/98 find minimum trace length before excluding 
+trcmin = fmax 
+do i = ns1,ns2 
+trcmin = min((atrace(i)+btrace(i)),trcmin) 
+enddo 
+c... Find fractures that are within range if given 
+n = 0 
+nfr = 0 
+do i = ns1,ns2 
+if(dip(i).ge.dipmin.and.dip(i).le.dipmax.and.atrace(i)+ 
++ btrace(i).ge.fmin.and.atrace(i)+btrace(i).le.fmax) 
++ then 
+n = n + 1 
+nfrc(n) = i 
+nfr = n 
+endif 
+enddo 
+if (nfr.le.1) go to 999 
+c
+c... Calculate proportion of total fractures 
+proptf = dble(nfr)/(dble(ns2-ns1+1)) 
+c
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-6 February 2000 
+c... Find total trace length 
+do n = 1, nfr 
+nn = nfrc(n) 
+trace(n) = atrace(nn) + btrace(nn) 
+enddo 
+c
+c... Find maximum trace length 
+trcmax = -1.d5 
+do n = 1, nfr 
+trcmax = max(trace(n),trcmax) 
+enddo 
+c
+c... Length of fracture segment for plotting is 0.15 inch/meter 
+do n = 1, nfr 
+nn = nfrc(n) 
+alen(n) = atrace(nn)*0.15d0 
+blen(n) = btrace(nn)*0.15d0 
+enddo 
+c
+c... Calculate blocksize (interval length) 
+blksiz = endp2 - endp1 
+blkht = 6.d0 
+blkdp = 6.d0 
+c
+c Rev MAC 4/17/98 - moved perm, frac volume, porisity to after 
+c parameters 
+c Rev MAC 4/98 - zero sum parameters 
+totalht = 0d0 
+totaltr = 0d0 
+ssqht = 0d0 
+ssqtr = 0d0 
+sspac = 0d0 
+ssqsp = 0d0 
+ssqlsp =0d0 
+slgsp = 0d0 
+c MAC V1.1 
+gmlen = 0d0 
+intarea = 0d0 
+c Added MAC 5/98 
+do n = 1, intmax 
+intspace(n) = 0d0 
+intfreq(n) = 0d0 
+intnfr(n) = 0 
+inttrace(n) = 0d0 
+end do 
+intn = 0 
+intlayer = 0 
+c
+c... Calculate fracture parameters - loop through fractures 
+do n = 1, nfr 
+nn = nfrc(n) 
+totaltr = trace(n) + totaltr 
+ssqtr = trace(n)**2 + ssqtr
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-7 February 2000 
+c MAC V1.1 
+gmlen = gmlen + dlog10(trace(n)) 
+if(n.gt.1)then 
+nm1 = nfrc(n-1) 
+c rev MAC 4/13/98 - put in if 
+spac = dabs(dist(nn)-dist(nm1)) 
+if (spac.eq.0.0) then 
+write(*,*)'station overlap',dist(nn),nn,nm1 
+end if 
+2099 format(1x,a5,3(1x,f9.2)) 
+sspac = spac + sspac 
+c correction MAC 4/13/98 
+c put in '+ slgsp' in place of '+ sspac' 
+c put in dlog10 and if-then 
+if (spac.ne.0.0) then 
+slgsp = dlog10(spac) + slgsp 
+c correction MAC 4/98 
+c put in '+ ssqlsp' in place of '+ ssqsp' 
+c put in dlog10 
+ssqlsp = (dlog10(spac))**2 + ssqlsp 
+else 
+c rev MAC 4/98 for zero spacing use 0.005 m which is 1/2 
+c of the measurement precision 
+slgsp = dlog10(5d-3) + slgsp 
+ssqlsp = (dlog10(5d-3))**2 + ssqlsp 
+end if 
+ssqsp = spac**2 + ssqsp 
+c added MAC 5/98 - for determining frequency and intensity over interval 
+c added MAC 7/98 - if-then statment to prevent from 
+c overextending interval boundary 
+intn = INT((dist(nn)-endp1)/intlength)+1 
+if ( (endp1+(intn*intlength)).le.endp2 ) then 
+if (intn.gt.intmax) then 
+write(*,*)'Max number of intervals exceeded -', 
++ ' program stopped' 
+write(*,*)'Resize intmax - 
+intmax,intn',intmax,intn 
+stop 
+end if 
+intspace(intn) = intspace(intn) + spac 
+intnfr(intn) = intnfr(intn) + 1 
+inttrace(intn) = inttrace(intn) + trace(n) 
+intlayer = intn 
+end if 
+endif 
+300 continue 
+enddo
+avgsp = sspac/dble(nfr-1) 
+freq = 1.d0/avgsp
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-8 February 2000 
+c added MAC 5/98 - for determining frequency and intensity over interval 
+do intn = 1,intlayer 
+if (intnfr(intn).gt.1) then 
+intspace(intn) = intspace(intn)/dble(intnfr(intn)-1) 
+intfreq(intn) = 1d0/intspace(intn) 
+else 
+intfreq(intn) = 1d0/intlength 
+end if 
+inttrace(intn) = inttrace(intn)/intlength/blkht 
+end do 
+c MAC 5/98 added if-then for small # of fractures 
+if (nfr.gt.2) then 
+c nfr-1 is the number of pairs used to calculate spacing 
+varsp = (ssqsp - ((sspac**2)/dble(nfr-1)))/(dble(nfr-2)) 
+if (varsp.gt.0.0) then 
+sdspac = sqrt(varsp) 
+c added comment and put in varsp rather than sdspac**2 by MAC 5/98 
+c V[f]= V[s]*(-E[s]**-2)**2 
+sdfreq = sqrt((((-avgsp)**(-2))**2)*varsp) 
+else 
+sdspac = 0d0 
+sdfreq = 0d0 
+end if 
+else 
+varsp = 0d0 
+sdspac = 0d0 
+sdfreq = 0d0 
+end if 
+frcint = totaltr/blksiz/blkht 
+avglen = totaltr/dble(nfr) 
+varlen = (ssqtr - ((totaltr**2)/dble(nfr)))/dble(nfr-1) 
+if (varlen.gt.0.0) then 
+sdlen = sqrt(varlen) 
+else 
+sdlen = 0d0 
+end if 
+c Rev MAC 4/17/98 - calculate b (in um) from airk 
+aperture = 1d6*(12d0*(10**logairk(layer))/freq)**(1.0/3.0) 
+c... Calculate permeability of each fracture and pass to ktensor 
+do n = 1, nfr 
+aper(n) = aperture*1.d-6 
+kfrc(n) = (aper(n)**3)/12.d0 
+enddo 
+c Rev MAC 4/98 - zero sum parameters 
+frcvol = 0d0 
+frarea = 0d0 
+do i = 1,9 
+ktens(i) = 0d0 
+end do 
+c... Calculate fracture volume based on penny-shaped fractures 
+do n = 1, nfr
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-9 February 2000 
+frcrad = trace(n)*0.5d0 
+frcvol = pi*aper(n)*frcrad**2 + frcvol 
+frarea = aper(n)*frcrad*2.d0 + frarea 
+c MAC V1.1 - will divide by block volume after combining 
+intarea = pi*frcrad**2 + intarea 
+enddo 
+c... Calculate fracture porosity 
+frcpor = frcvol/(blksiz*blkht*blkdp) 
+frcp2d = frarea/(blksiz*blkht) 
+c Added MAC 4/22/98 - include 1-D porosity 
+frcp1d = freq*aperture*1d-6 
+c
+c... Calculate components associated with each fracture, then sum 
+radian = pi/180.d0 
+do n = 1, nfr 
+nn = nfrc(n) 
+if(strike(nn).le.90.d0)then 
+stkrad = strike(nn)*radian 
+diprad = dip(nn)*radian 
+elseif(strike(nn).gt.90.d0.and.strike(nn).le.180.d0)then 
+stkrad = strike(nn)*radian 
+diprad = (180.d0-dip(nn))*radian 
+elseif(strike(nn).gt.180.d0.and.strike(nn).le.270.d0)then 
+stkrad = strike(nn)*radian 
+diprad = (180.d0-dip(nn))*radian 
+else 
+stkrad = strike(nn)*radian 
+diprad = dip(nn)*radian 
+endif 
+sdsq = (dsin(diprad))**2 
+kxx = 1.d0 - ((dcos(stkrad))**2)*sdsq 
+kxy = 0.5d0*dsin(2.d0*stkrad)*sdsq 
+kxz = -0.5d0*dsin(2.d0*diprad)*dcos(stkrad) 
+kyx = kxy 
+kyy = 1.d0 - ((dsin(stkrad))**2)*sdsq 
+kyz = 0.5d0*dsin(2.d0*diprad)*dsin(stkrad) 
+kzx = kxz 
+kzy = kyz 
+kzz = sdsq 
+kf = kfrc(n)*freq 
+ktens(1) = kxx*kf + ktens(1) 
+ktens(2) = kxy*kf + ktens(2) 
+ktens(3) = kxz*kf + ktens(3) 
+ktens(4) = kyx*kf + ktens(4) 
+ktens(5) = kyy*kf + ktens(5) 
+ktens(6) = kyz*kf + ktens(6) 
+ktens(7) = kzx*kf + ktens(7) 
+ktens(8) = kzy*kf + ktens(8) 
+ktens(9) = kzz*kf + ktens(9) 
+enddo 
+c Added MAC 4/21/98 
+kzzkxx = ktens(9)/ktens(1) 
+kyykxx = ktens(5)/ktens(1) 
+kzzkyy = ktens(9)/ktens(5)
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-10 February 2000 
+c Added MAC 4/21/98 
+c Calculate alpha (see equation 7) 
+alpha = aperture*1d-6/2d0/72d-3 
+c
+c Commented out MAC 7/98 
+c... Open and write permeability components of fracture networks 
+c open(11,file=outfile//'.prm',status='unknown') 
+c write(11,*)'Permeability Tensor for: ',outfile 
+c write(11,450)'kxx','kxy','kxz','kyx','kyy','kyz','kzx', 
+c + 'kzy','kzz' 
+c write(11,460)ktens(1),ktens(2),ktens(3),ktens(4), 
+c + ktens(5),ktens(6),ktens(7),ktens(8),ktens(9) 
+c write(11,*)'kzz/kxx= ',ktens(9)/ktens(1) 
+c write(11,*)'kyy/kxx= ',ktens(5)/ktens(1) 
+c close(11) 
+c... Calculate orientations and open and write GMT plot file 
+open(11,file=outfile//'.plt',status='unknown') 
+do n = 1, nfr 
+nn = nfrc(n) 
+if(strike(nn).le.90.d0)then 
+adip = dip(nn) 
+bdip = dip(nn) + 180.d0 
+elseif(strike(nn).gt.90.d0.and.strike(nn).le.270.d0)then 
+adip = 180.d0 - dip(nn) 
+bdip = 360.d0 - dip(nn) 
+else 
+adip = dip(nn) 
+bdip = dip(nn) + 180.d0 
+endif 
+write(11,404)dist(nn),adip,alen(n),unitname(layer) 
+write(11,404)dist(nn),bdip,blen(n),unitname(layer) 
+enddo 
+close(11) 
+c----------------------------------------------------------------- 
+c Below by MAC 4/98 
+c Completely changed output file formatting 
+c now 'all1.par' and 'all2.par' which list data for each subunit 
+c Deleted E.S. output file writing 
+if (endp2.lt.9999.0) then 
+write(13,443)unitname(layer),endp1,endp2,trcmin,fmin, 
++ trcmax,nfr,avgsp,sdspac,freq,sdfreq,avglen,sdlen,frcint 
+write(14,444)unitname(layer),fmin,nfr,freq, 
++ aperture,frcpor,frcp2d,frcp1d,alpha,kzzkxx,kyykxx,kzzkyy 
+write(13,443)' ',dist(ns1),dist(ns2) 
+else 
+c alcove data & ECRB data 
+c ECRB is read in as if it is alcove 9 MAC 3-23-99 
+if (endp1.lt.90000.0) then 
+write(13,2443)unitname(layer),INT(endp1/10000.0),trcmin,fmin, 
++ trcmax,nfr,avgsp,sdspac,freq,sdfreq,avglen,sdlen,frcint 
+else 
+write(13,2445)unitname(layer),trcmin,fmin, 
++ trcmax,nfr,avgsp,sdspac,freq,sdfreq,avglen,sdlen,frcint 
+end if
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-11 February 2000 
+write(14,444)unitname(layer),fmin,nfr,freq, 
++ aperture,frcpor,frcp2d,frcp1d,alpha,kzzkxx,kyykxx,kzzkyy 
+write(13,2444)(dist(ns2)-dist(ns1)) 
+end if 
+441 format(1x,' Unit',1x,'<---Station--->',1x, 
++ ' Min-m',1x,'MinUse',1x,' Max-m',1x,' #Frac',1x, 
++ 'Spac-m',1x,'SDSpac',1x,'Fq-1/m', 
++ 1x,'SDFreq',1x,'Leng-m',1x,'SDLeng',1x,'Intens') 
+442 format(1x,' Unit',1x, 
++ 'MinUse',1x,' #Frac',1x,'Fq-1/m' 
++ ,1x,'Apr-um',1x,' Por-3D',1x,' Por-2D',1x,' Por-1D' 
++ ,1x,' alpha',1x,'kzz/kxx',1x,'kyy/kxx',1x,'kzz/kyy') 
+443 format(1x,a5,2(1x,f7.2),3(1x,f6.2),1x,i6,7(1x,f6.2)) 
+444 format(1x,a5,1x,f6.2,1x,i6,1x,f6.2,1x,f6.0,4(1x,es9.2), 
++ 3(1x,f7.2)) 
+2443 format(1x,a5,4x,'Alcove',i2,4x,3(1x,f6.2),1x,i6,7(1x,f6.2)) 
+2444 format(7x,f7.2,1x,'meters') 
+2445 format(1x,a5,4x,'ECRB ',2x,4x,3(1x,f6.2),1x,i6,7(1x,f6.2)) 
+c Save results for combined output 
+c added MAC 4/98 
+combine(layer,1)=endp1 
+combine(layer,2)=endp2 
+combine(layer,3)=trcmin 
+combine(layer,4)=trcmax 
+combine(layer,5)=dble(nfr) 
+combine(layer,6)=avgsp*dble(nfr-1) 
+combine(layer,7)=ssqsp 
+combine(layer,8)=avglen*dble(nfr) 
+combine(layer,9)=ssqtr 
+combine(layer,10)=frcpor*blksiz/(aperture*1d-6) 
+combine(layer,11)=frcp2d*blksiz/(aperture*1d-6) 
+combine(layer,12)=ktens(1)/freq 
+combine(layer,13)=ktens(5)/freq 
+combine(layer,14)=ktens(9)/freq 
+combine(layer,15)=slgsp 
+combine(layer,16)=ssqlsp 
+c MAC V1.1 
+combine(layer,17)=intarea 
+combine(layer,18)=gmlen 
+c Added MAC 5/98 - Output interval results to 'interval.par' 
+do intn=1,intlayer 
+write(18,2000)unitname(layer), 
++ (endp1+(intn-1)*intlength), 
++ (endp1+(intn)*intlength), 
++ intnfr(intn),intspace(intn),intfreq(intn), 
++ (dble(intnfr(intn))/intlength),inttrace(intn) 
+end do 
+1999 format(1x,' Unit',2(1x,' Station'),1x,' #Frac',4x, 
++ 'Spacing',2x,'Frequency',3x,'#/Length',2x,'Intensity') 
+2000 format(1x,a5,2(1x,f9.1),1x,i8,4(1x,f10.2)) 
+c--------------------------------------------------------------------- 
+c... Write fracture size distributions 
+if(ans2.eq.'y')then
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-12 February 2000 
+open(12,file=outfile//'.szd',status='unknown') 
+do k = 1, ni 
+fgrp1 = fmesf + dble(k-1)*frint 
+fsiz = fgrp1 + frint*0.5d0 
+c rev MAC 5/12/97 write(12,470)fsiz,dble(nfrint(k))/dble(ns) 
+write(12,475)fsiz,nfrint(k) 
+enddo 
+close(12) 
+fsum = 0.d0 
+c write cumulative size distributions 
+open(12,file=outfile//'.csd',status='unknown') 
+ftot = 1.d0 
+write(12,470)fmesf,ftot 
+do k = 1, ni 
+fgrp1 = fmesf + dble(k)*frint 
+fsum = dble(nfrint(k))/dble(ns) + fsum 
+write(12,470)fgrp1,1.d0 - fsum 
+enddo 
+close(12) 
+endif 
+c
+c Added MAC 4/17/98 
+999 continue 
+END DO 
+close(13) 
+close(14) 
+c---------------------------------------------------------------------------- 
+---------- 
+c Below is all new code added by MAC 4/98 
+c Combine results for single values for each model layer 
+c
+c Output to files 'comb1.par' & 'comb2.par' - combined results of 
+c all1.par & all2.par 
+c Output to file 'calibrate.par' - data to be used for inversion 
+c 
+open(13,file='comb1.par',status='unknown') 
+open(14,file='comb2.par',status='unknown') 
+open(15,file='calibrate.par',status='unknown') 
+write(13,1441) 
+write(14,442) 
+write(15,2501) 
+DO i = 1,ntotal 
+trcmin = 1d6 
+trcmax = 0d0 
+nfr = 0 
+avgsp = 0d0 
+sspac = 0d0 
+sdspace = 0d0 
+ssqsp = 0d0 
+avglen = 0d0 
+sdlen = 0d0 
+ssqtr = 0d0 
+frcpor = 0d0 
+frcp2d = 0d0
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-13 February 2000 
+blksiz = 0d0 
+kxx = 0d0 
+kyy = 0d0 
+kzz = 0d0 
+slgsp = 0d0 
+sslgsp = 0d0 
+c MAC V1.1 
+intarea = 0d0 
+gmlen = 0d0 
+first = modlayer(i) 
+if (i.ne.ntotal) then 
+last = modlayer(i+1) - 1 
+else 
+last = nlayers 
+end if 
+n = last - first + 1 
+DO layer = first,last 
+trcmin = min(trcmin,combine(layer,3)) 
+trcmax = max(trcmax,combine(layer,4)) 
+nfr = nfr + NINT(combine(layer,5)) 
+sspac = sspac + combine(layer,6) 
+ssqsp = ssqsp + combine(layer,7) 
+avglen = avglen + combine(layer,8) 
+ssqtr = ssqtr + combine(layer,9) 
+frcpor = frcpor + combine(layer,10) 
+frcp2d = frcp2d + combine(layer,11) 
+blksiz = blksiz + combine(layer,2) - combine(layer,1) 
+kxx = kxx + combine(layer,12) 
+kyy = kyy + combine(layer,13) 
+kzz = kzz + combine(layer,14) 
+c 
+slgsp = slgsp + combine(layer,15) 
+ssqlsp = ssqlsp + combine(layer,16) 
+c MAC V1.1 
+intarea = intarea + combine(layer,17) 
+gmlen = gmlen + combine(layer,18) 
+if ((layer.eq.last).and.(nfr.gt.(n+1))) then 
+avgsp = sspac/dble(nfr-n) 
+freq = 1.d0/avgsp 
+c nfr-n is the number of pairs used to calculate spacing 
+varsp = (ssqsp - ((sspac**2)/dble(nfr-n)))/(dble(nfr-n-1)) 
+if (varsp.gt.0.0) then 
+sdspac = dsqrt(varsp) 
+else 
+sdspac = 0d0 
+end if 
+varlen = (ssqtr - ((avglen**2)/dble(nfr-n))) / 
+> (dble(nfr-n-1)) 
+avglen = avglen/dble(nfr) 
+if (varlen.gt.0.0) then 
+sdlen = dsqrt(varlen) 
+else 
+sdlen = 0d0 
+end if 
+if (sdspac .gt. 0.0) then
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-14 February 2000 
+sdfreq = dsqrt(varsp/(avgsp**4)) 
+else 
+sdfreq = 0d0 
+end if 
+aperture = 1d6*(12d0*(10**logairk(layer))/freq) 
+& **(1.0/3.0) 
+alpha = aperture*1d-6/2d0/72d-3 
+frcpor = frcpor*(aperture*1d-6)/blksiz 
+frcp2d = frcp2d*(aperture*1d-6)/blksiz 
+frcp1d = freq*aperture*1d-6 
+c calculate k ratios (note freq cancels) 
+kzzkxx = kzz/kxx 
+kyykxx = kyy/kxx 
+kzzkyy = kzz/kyy 
+c calulate fracture intensity 
+frcint = avglen*dble(nfr)/blksiz/6e0 
+c MAC V1.1 
+gmlen = 10**(gmlen/dble(nfr)) 
+intarea = intarea/blksiz/(gmlen**2) 
+write(13,1443)unitname(layer),trcmin,fmin, 
++ trcmax,nfr,avgsp,sdspac,freq,sdfreq,avglen,sdlen,frcint 
+write(14,444)unitname(layer),fmin,nfr,freq, 
++ aperture,frcpor,frcp2d,frcp1d,alpha,kzzkxx,kyykxx,kzzkyy 
+c 
+ssqlsp = (ssqlsp - slgsp**2/dble(nfr-n) )/ dble(nfr-n-1) 
+slgsp = slgsp / dble(nfr-n) 
+logf = - slgsp 
+loga = (1d0/3d0)*(dlog10(12d0)+logairk(layer)-logf) 
+> - dlog10(2d0*72d-3) 
+sdalpha = sdfreq*dsqrt(1d0/72d-3) * 
+> ( (10**logairk(layer)) /18d0/(freq**4) )**(1.0/3.0) 
+if (ssqlsp.le.0.0) then 
+write(*,2500)unitname(layer),slgsp,ssqlsp 
+ssqlsp = 0.0 
+end if 
+c MAC V1.1 add new parameters gmlen (gemetric mean length) and 
+c intarea (fracture area/block volume where block volume is 
+c block length * gmlen^2). Also changed output for calibrate.par 
+write(15,2500)unitname(layer),fmin,frcp2d,(aperture*1d-6),freq, 
++ intarea,gmlen,alpha,sdalpha,loga,dsqrt(ssqlsp/9d0) 
+2500 format(1x,a5,5x,f9.2,2(3x,es9.2),3x,f9.2,2(3x,f9.3), 
++ 2(3x,es9.2),2(3x,f9.2)) 
+2501 format(1x,' Unit',1x,'Min-Fr-Length',1x,'Fr-Porosity',4x, 
++ 'Aperture',3x,'Frequency',2x,'Inter-Area',3x,'Gm-length', 
++ 4x,'Fr-Alpha',4x,'SD-Alpha',4x,'LogAlpha',1x,'SD-LogAlpha') 
+c2500 format(1x,a5,2(1x,f7.2),2(1x,es9.2),3(1x,f7.2),1x,f7.3,1x,f7.2, 
+c + 1x,i5,2(1x,f7.2)) 
+c2501 format(1x,' Unit',4x,'Freq',2x,'SDFreq',5x,'alpha',3x,'sdalpha', 
+c + 4x,'loga',2x,'logsda',2x,'<loga>', 
+c + 1x,'s<loga>',2x,'gmFreq',1x,'#Frac',3x,'Block',3x,'#Freq') 
+c added else statement - MAC 6/25/98 
+else
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-15 February 2000 
+if (layer.eq.last) then 
+write(13,2500)unitname(layer) 
+write(14,2500)unitname(layer) 
+write(15,2500)unitname(layer) 
+end if 
+end if 
+END DO 
+END DO 
+1441 format(1x,' Unit',1x, 
++ ' Min-m',1x,'MinUse',1x,' Max-m',1x,' #Frac',1x, 
++ 'Spac-m',1x,'SDSpac',1x,'Fq-1/m', 
++ 1x,'SDFreq',1x,'Leng-m',1x,'SDLeng',1x,'Intense') 
+1443 format(1x,a5,3(1x,f6.2),1x,i6,7(1x,f6.2)) 
+close(13) 
+close(14) 
+stop 
+400 format(a200) 
+404 format(f13.2,1x,f8.4,1x,f9.5,1x,a5) 
+408 format(a10) 
+410 format(i2,1x,f5.2) 
+415 format(a21,2(1x,f7.2)) 
+420 format(a48,2(1x,f7.3),1x,i5,1x,f5.3) 
+425 format(a78) 
+430 format(f8.4,5(2x,f8.4),2(2x,e10.4)) 
+440 format(a40) 
+450 format(9(4x,a4,3x)) 
+460 format(9(1x,e10.3)) 
+470 format(f10.3,1x,f8.4) 
+475 format(f10.3,1x,i8) 
+c 
+stop 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-16 February 2000 
+Source code for Software Routine Read_TDB, Version 1.0 
+program Read_TDB 
+c This program reads the data files from the 
+c Technical Database. Output are written 
+c unformatted to selected output file. All messages are 
+c recorded to the screen and file 'index.txt' 
+c Mark Cushey 4/98 
+c Output is limited to 10 numerical datatypes 
+c It is assumed that the maximum line length is less than 250 
+real anum,bnum,value(10),limvalue(10,2),loctype 
+character*4 first 
+character*25 filename 
+character*250 all 
+character*250 datastring 
+character*8 astat,bstat,avalue,limtext(10) 
+character*1 onestring(250),onedata(8),plus(8),ans 
+character*8 dataname(10),limitname(10) 
+integer row,iname,istring,idata,icolumn(10),i,loc,rowused, 
++ im,limnum,limtxt 
+c ---------------------------------------- 
+c open output files 
+write(*,*)'Enter name of output file:' 
+read(*,1000)filename 
+open(unit=20,file=filename) 
+open(unit=21,file='index.txt') 
+write(*,*)'Details on data retrieval are in index.txt' 
+c ---------------------------------------- 
+c query for different data types to be stored 
+c 
+write(*,*)'List names of data types to be retrieved - up to 10' 
+write(*,*)' Enter only the first 8 letters for each' 
+write(*,*)' Enter the word end for last entry' 
+i = 0 
+40 i = i + 1 
+read(*,1010)dataname(i) 
+if ((dataname(i).ne.'end').and. 
+& (dataname(i).ne.'END')) go to 40 
+iname = i - 1 
+write(*,1040)iname 
+write(21,1040)iname 
+write(20,1041)(dataname(i),i=1,iname) 
+write(*,*)'Should header be printed in output file - Y or N' 
+read(*,1011)ans 
+if ((ans.eq.'Y').or.(ans.eq.'y')) 
+& write(21,1041)(dataname(i),i=1,iname) 
+1010 format(a8) 
+1011 format(a1) 
+1040 format(1x,i7,' datatypes selected') 
+1041 format(10(2x,a8)) 
+c ----------------------------------------
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-17 February 2000 
+c query for limits on outputting data 
+limnum = iname 
+limtxt = iname 
+write(*,*)'Are there limits for the output - Y or N ?' 
+read(*,1011)ans 
+if ((ans.eq.'Y').or.(ans.eq.'y')) then 
+i = iname 
+c write(*,*)'Enter the parameter names for numerical limits' 
+c write(*,*)' Enter only the first 8 letters for each' 
+c write(*,*)' Enter the word end for last entry' 
+c45 i = i + 1 
+c read(*,1010)dataname(i) 
+c if ((dataname(i).eq.'end').or. 
+c & (dataname(i).eq.'END')) go to 46 
+c write(*,*)'Enter upper and lower value for limit' 
+c read(*,*)limvalue(i,1),limvalue(i,2) 
+c write(*,*)'Enter next limit or end' 
+c go to 45 
+c46 i = i - 1 
+c limnum = i 
+write(*,*)'Enter the parameter names for text-defined limits' 
+write(*,*)' Enter only the first 8 letters for each' 
+write(*,*)' Enter the word end for last entry' 
+47 i = i + 1 
+read(*,1010)dataname(i) 
+if ((dataname(i).eq.'end').or. 
+& (dataname(i).eq.'END')) go to 49 
+write(*,*)'Enter text to exclude - up to 8 characters' 
+read(*,1010)limtext(i) 
+write(*,*)'Enter next limit or end' 
+go to 47 
+49 limtxt = i - 1 
+do i=(iname+1),limtxt 
+if (i.le.limnum) then 
+write(*,1045)dataname(i),limvalue(i,1),limvalue(i,2) 
+write(21,1045)dataname(i),limvalue(i,1),limvalue(i,2) 
+else 
+write(*,1046)dataname(i),limtext(i) 
+write(21,1046)dataname(i),limtext(i) 
+end if 
+end do 
+end if 
+1045 format(1x,'Limits on',a8,1x,f9.3,1x,f9.3) 
+1046 format(1x,'Limits on',a8,1x,'exclude',1x,a8) 
+c ------------------------------------------ 
+c query for input filename and open 
+50 write(*,*)'Enter next data filename (use MS-DOS filename) or quit' 
+read(*,1000)filename 
+if ((filename.eq.'quit').or.(filename.eq.'QUIT'))go to 990 
+open(unit=10,file=filename,action='READ', 
+& form='FORMATTED',status='old',err=75) 
+write(*,*)filename 
+write(21,*)'------------------' 
+write(21,*)filename
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-18 February 2000 
+write(21,*)'------------------' 
+1000 format(a25) 
+go to 80 
+75 write(*,*)'File does not exist' 
+go to 50 
+c ---------------------------------------- 
+c If one of the parameters is LOCATION, determine type. 
+c If LOCATION is station number along DLS, loctype =0 
+C If LOCATION is along alcove, loctype = alcove # (can be #.1, #.2) 
+c If other, then loctype = -1. 
+80 loctype = -1.0 
+Do i = 1,iname 
+if (dataname(i).eq.'LOCATION') then 
+write(*,*)'Is LOCATION a station number along the', 
++' DLS, alcove, or other - d, a, or o' 
+read(*,*)ans 
+if ((ans.eq.'d').or.(ans.eq.'D')) then 
+loctype = 0.0 
+else 
+if ((ans.eq.'a').or.(ans.eq.'A')) then 
+write(*,*)'Which alcove #' 
+read(*,*)loctype 
+else 
+loctype = -1.0 
+end if 
+end if 
+end if 
+End Do 
+c ---------------------------------------- 
+c find header line (between rows of asteriks) 
+82 read(10,1001)first 
+if (first.ne.'****') go to 82 
+1001 format(a4) 
+c ---------------------------------------- 
+c find location where different data starts (use header) 
+do i=1,limtxt 
+icolumn(i)=0 
+end do 
+read(10,1020)datastring 
+read(datastring,1021)(onestring(istring),istring=1,250) 
+do i = 1,limtxt 
+read(dataname(i),1022)(onedata(idata),idata=1,8) 
+do istring = 1,250 
+do idata = 1,8 
+if( (onestring(istring+idata-1).ne.onedata(idata)) ) 
+& go to 98 
+end do 
+98 if (idata.eq.9) go to 99 
+end do 
+99 if (istring.ne.251) then 
+icolumn(i)=istring
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-19 February 2000 
+else 
+write(*,1023)dataname(i) 
+pause 
+stop 
+end if 
+end do 
+write(*,1003)(icolumn(i),i=1,iname) 
+write(21,1003)(icolumn(i),i=1,iname) 
+1003 format(1x,'Column headers at',10(1x,i5)) 
+1020 format(a250) 
+1021 format(250(a1)) 
+1022 format(8(a1)) 
+1023 format(1x,a8,' not found in file -- stopped') 
+c -------------------------------------- 
+c move forward to first data row 
+105 read(10,1001)first 
+if (first.ne.'****') go to 105 
+c skip blank line 
+read(10,1002)all 
+1002 format(a72) 
+c ---------------------------------------- 
+c read data lines from file and get values 
+rowused = 0 
+row = 0 
+200 read(10,2001,err=900,end=900)datastring 
+if (datastring.eq.'End of Report') go to 900 
+if (datastring.eq.' ') go to 200 
+row = row + 1 
+write(*,*)row 
+c first see if data is within text-defined limits 
+do ii=(limnum+1),limtxt 
+loc = icolumn(ii) 
+read(datastring,1999)all 
+if (all.eq.limtext(ii)) then 
+write(*,2025)row,dataname(ii),limtext(ii) 
+write(*,2026)datastring 
+write(21,2025)row,dataname(ii),limtext(ii) 
+write(21,2026)datastring 
+go to 200 
+end if 
+end do 
+do i=1,iname 
+loc = icolumn(i) 
+read(datastring,1999)avalue 
+c first check to see if any are not recorded (NR) or 
+c special (*) -- exclude NR and use * 
+read(avalue,2002)(onedata(idata),idata=1,8) 
+do idata=1,8
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-20 February 2000 
+if ((onedata(idata)).eq.'N') then 
+c the entire line is excluded 
+write(*,2020)row,onedata(idata),onedata(idata+1), 
+& dataname(i) 
+write(21,2020)row,onedata(idata),onedata(idata+1), 
+& dataname(i) 
+go to 200 
+end if 
+if (onedata(idata).eq.'*') then 
+write(*,2021)row 
+write(21,2021)row 
+read(avalue,2024)avalue 
+end if 
+end do 
+c check if entry is a station number -- if loctype = 0 
+c LOCATION is station number along DLS, if loctype = +# 
+c LOCATION is along alcove (number loctype) 
+If ((loctype.ge.0.0).and.(dataname(i).eq.'LOCATION')) then 
+c get station number 
+read(avalue,2005)(plus(ip),ip=1,8) 
+do ip=1,8 
+if (plus(ip).eq.'+') go to 215 
+end do 
+215 read(avalue,2010)astat,all,bstat 
+read(astat,*)anum 
+read(bstat,2005)(plus(im),im=1,(8-ip)) 
+do im = 1, (8-ip) 
+if (plus(im).eq.'-') go to 216 
+end do 
+216 read(bstat,2011)astat 
+read(astat,*)bnum 
+if (loctype.eq.0.0) then 
+value(i) = anum*100 + bnum 
+else 
+value(i) = loctype*10000 + anum*100 + bnum 
+end if 
+else 
+read(avalue,*)value(i) 
+end if 
+end do 
+2001 format(a250) 
+c change a8 to larger value if number is more than 8 digits 
+1999 format(<loc-1>x,a8) 
+2002 format(8(a1)) 
+2005 format(8(a1)) 
+2010 format(a<ip-1>,a1,a8) 
+2011 format(a<im-1>) 
+2020 format(1x,'Row',i5,' has a ',a1,a1,' for ',a8, 
+& ' - this data row is not used') 
+2021 format(1x,'Row',i5,' has a * - printed value will be used') 
+2024 format(a<idata-1>)
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-21 February 2000 
+2025 format(1x,'Row',i5,' excluded ',a8,' is ',a8) 
+2026 format(5x,a40) 
+c write data to output file and read next line 
+write(20,3000)(value(i),i=1,iname) 
+3000 format(10(f10.3)) 
+rowused = rowused + 1 
+go to 200 
+900 close(10) 
+write(*,*)row,' rows read and',rowused,' used' 
+write(21,*)row,' rows read and',rowused,' used' 
+c ask for next file 
+go to 50 
+990 close(20) 
+close(21) 
+pause 
+stop 
+999 write(*,*)'Error in file formatting -- stopped' 
+write(*,*)'Error in file formatting -- stopped' 
+close(20) 
+close(21) 
+close(10) 
+pause 
+stop 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-22 February 2000 
+Source code for Software Routine Meshbd.f, Version 1.0 
+program Meshbd 
+c
+c change mesh order 
+c change z direction from "-" to "+" 
+c change interface at top boundary 
+c 
+implicit double precision (a-h,o-z) 
+integer nc,ne 
+integer me,mc,nh 
+parameter (me = 88500) 
+parameter (mc =310000) 
+parameter (nh = 1000) 
+double precision voll(mc),aa(mc) 
+character*5 dddd,ccc,cccc 
+character*5 texte 
+character*1 text 
+character*5 wrd,wrd2 
+nx=12 
+ny=30 
+nz=42 
+c 
+open(unit=2,file='MESH',status='unknown') 
+rewind(2) 
+texte='ELEME' 
+write(2,'(a)')texte 
+c 
+open(unit=1,file='meshm.mes',status='old') 
+rewind(1) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'eleme' .and. wrd .ne. 'ELEME') then 
+stop 'no eleme in MESH' 
+endif 
+c 
+ne = 0 
+nesum = 0 
+locat = 1 
+do i=1,nx 
+do j=1,ny 
+do k=1,nz 
+ne=ne+1 
+read(1,'(a,10x,a,2e10.4,10x,3e10.4)',end=40) 
+& dddd,texte,voll(ne),v1,x1,y1,z1 
+nesum = nesum + 1 
+if(k.eq.nz)then 
+texte='BUNOF' 
+elseif(k.eq.1)then 
+texte='DRAIN' 
+voll(ne)=1.0e+50 
+else 
+texte='SOILF' 
+endif 
+write(2,'(a,10x,a,2e10.4,10x,3e10.4)') 
+& dddd,texte,voll(ne),v1,x1,y1,-z1 
+enddo
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-23 February 2000 
+enddo 
+enddo 
+c 
+read(1,*) 
+read(1,'(a)')cccc 
+write(2,*) 
+cccc='CONNE' 
+write(2,'(a)')cccc 
+nc=0 
+locat =1 
+30 read(1,'(2a,19x,a,4e10.4)',end=40)wrd,wrd2,text,v1,v2,aa(nc+1),v3 
+if(wrd.ne. ' ' .and.wrd.ne.'+++ ')then 
+if(wrd(1:2).eq.'B7'.and.wrd2(1:2).eq.'B7')aa(nc+1)=100.0 
+write(2,'(2a,19x,a,4e10.4)')wrd,wrd2,text,v1,v2,aa(nc+1),v3 
+nc=nc+1 
+goto 30 
+endif 
+c 
+texte=' ' 
+write(2,'(a)')texte 
+close(1) 
+close(2) 
+stop 
+40 stop'Premature End of File' 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-24 February 2000 
+Source code for Software Routine mininipresf.f, Version 1.0 
+program mininipresf 
+c for 12x30x42 mesh (5.23x15x20 m) 
+c make incon block from 
+c MESH 
+c 
+implicit double precision(a-h,o-z) 
+character name*5,head*80 
+dimension xfield(100,100,100,20),class(100) 
+c read mod.in 
+nz=42 
+ny=30 
+nx=12 
+ndual=1 
+do i=1,nx 
+do j=1,ny 
+do k=1,nz 
+do kk=1,ndual 
+xfield(i,j,k,kk)=4.e-18 
+enddo 
+enddo 
+enddo 
+enddo 
+c read kfield 
+open(unit=1,file='permcut.dat',status='old') 
+rewind(1) 
+read(1,*) 
+do k=1,nz 
+do j=1,ny 
+do i=1,nx 
+read(1,*)xfield(i,j,k,1) 
+enddo 
+enddo 
+enddo 
+close(1) 
+c check input field 
+do k=1,100 
+class(k)=0.0d0 
+enddo 
+write(*,*)' number of classes' 
+read(*,*)inums 
+xmins=1.0e+30 
+xmaxs=-1.0e+30 
+do k=2,nz-1 
+do j=1,ny 
+do i=1,nx 
+if(xfield(i,j,k,1).lt.xmins)xmins=xfield(i,j,k,1) 
+if(xfield(i,j,k,1).gt.xmaxs)xmaxs=xfield(i,j,k,1) 
+enddo 
+enddo 
+enddo 
+write(*,*)'min= ',xmins 
+write(*,*)'max= ',xmaxs 
+xmeans=0.0d0 
+sss=0.0d0
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-25 February 2000 
+dxs=(xmaxs-xmins)/dble(inums) 
+iouts=0 
+do kk=2,nz-1 
+do j=1,ny 
+do i=1,nx 
+do k=1,inums 
+x1=xmins+(k-1)*dxs 
+x2=xmins+k*dxs 
+if(xfield(i,j,kk,1).ge.x1.and.xfield(i,j,kk,1).le.x2)then 
+class(k)=class(k)+1.0d0 
+goto 12 
+endif 
+enddo 
+enddo 
+iouts=iouts+1 
+12 enddo 
+enddo 
+do k=2,nz-1 
+do j=1,ny 
+do i=1,nx 
+xmeans=xmeans + xfield(i,j,k,1) 
+enddo 
+enddo 
+enddo 
+xmeans=xmeans/dble(12*30*40) 
+do k=2,nz-1 
+do j=1,ny 
+do i=1,nx 
+sss=sss+(xfield(i,j,k,1)-xmeans)*(xfield(i,j,k,1)-xmeans) 
+enddo 
+enddo 
+enddo 
+sss=sss/dble(12*30*40) 
+sssd=sqrt(sss) 
+do i=1,inums 
+class(i)=class(i)/dble(12*30*40) 
+enddo 
+open(unit=3,file='perm.tec',status='unknown') 
+rewind(3) 
+write(3,*)'MEAN IN Log10 ',xmeans 
+write(3,*)'STANTARD DIVIATION IN Log10 and Ln ',sssd,2.3026*sssd 
+write(3,*)'TITLE="FREQUENCY OF PERMEABILITY"' 
+write(3,*)'VARIABLES = "LOG10 PERM", "FREQUENCY"' 
+write(3,*)'ZONE, I = ',2*inums 
+do k=1,inums 
+write(3,'(2e15.6)')xmins+(k-1)*dxs,class(k)/dxs 
+write(3,'(2e15.6)')xmins+k*dxs,class(k)/dxs 
+enddo 
+close(3) 
+c read and write incon 
+open(unit=1,file='MESH',status='old')
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-26 February 2000 
+rewind(1) 
+open(unit=2,file='inconsf.out',status='unknown') 
+rewind(2) 
+c 
+read(1,'(a)')dddd 
+write(2,*)'INCON -- INITIAL CONDITIONS FOR DUAL PERMBILITY ' 
+do i=1,nx 
+do j=1,ny 
+do k=1,nz 
+do kk=1,ndual 
+read(1,'(a,14x,a,2e10.4,10x,3e12.6)')name 
+c sat=sini 
+if(k.eq.1)then 
+c permeability of top element equal next element 
+if(kk.eq.1)then 
+xkf=(10.0**xfield(i,j,2,kk)) 
+porm=0.000124 
+sat=0.011 
+alfa0=0. 
+else 
+xkf=xfield(i,j,1,kk) 
+porm=0.089 
+sat=0.92 
+alfa0=1562500. 
+endif 
+goto 99 
+endif 
+if(k.eq.nz)then 
+c permeability of top element equal next element 
+if(kk.eq.1)then 
+xkf=(10.0**xfield(i,j,nz-1,kk)) 
+porm=0.000124 
+sat=0.011 
+alfa0=0. 
+else 
+xkf=xfield(i,j,nz,kk) 
+porm=0.089 
+sat=0.92 
+alfa0=1562500 
+endif 
+goto 99 
+endif 
+if(kk.eq.1)then 
+xkf=(10.0**xfield(i,j,k,kk)) 
+porm=0.000124 
+sat=0.011 
+alfa0=0. 
+else 
+xkf=xfield(i,j,k-1,kk) 
+porm=0.089 
+sat=0.92 
+alfa0=1562500. 
+endif
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-27 February 2000 
+99 continue 
+c 
+por=porm 
+write(2,'(a5,2i5,e15.9,5e10.4)')name,idum,idum,porm,xkf,alfa0 
+write(2,'(2e20.14)')sat 
+enddo 
+enddo 
+enddo 
+enddo 
+texte=' ' 
+write(2,'(a)')texte 
+write(2,*) 
+close(1) 
+close(2) 
+stop 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-28 February 2000 
+Source code for Software Routine mddf.f, Version 1.0 
+program mddf 
+c cut round tunnel with radius R in 3D FD mesh 
+c truncate elements and connections within R 
+c cut for refined mesh 
+c write connectivity list for tunnel bound elements to tunnel element 
+c file: 'drift3d.con' 
+c write list with coordinates of tunnel bound elements in 
+c file: 'drift3d.coor' 
+implicit none 
+integer ne,ixyz 
+integer me,mc,nh 
+parameter (me =160000) 
+parameter (mc =700000) 
+parameter (nh = 128) 
+character*5 ,id(me) 
+double precision x(3,me) 
+double precision a(mc),rdrift,dx,dz 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc) 
+integer hsh(nh) 
+integer ind(me) 
+double precision vol 
+double precision x1, y1, z1 
+double precision xhi, yhi, zhi 
+double precision xlo, ylo, zlo 
+character*5 wrd, wrd2 
+integer i 
+integer ihash 
+integer locat 
+integer nc 
+integer ne1 
+integer ne1 
+integer ne2 
+integer nu1 
+integer nu2 
+write(*,*)'radius tunnel' 
+read(*,*)rdrift 
+call rmesh(rdrift,ne,id,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz) 
+stop 
+end 
+c 
+subroutine rmesh(rdrift,ne,id,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz) 
+implicit none 
+integer ne,ixyz 
+integer me,mc,nh 
+character*5 id(me) 
+character*5 irock 
+character*1 text 
+double precision x(3,me) 
+double precision a(mc),rdrift,rr,v1,v2,v3,dy,dz 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc) 
+integer hsh(nh)
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-29 February 2000 
+integer ind(me) 
+double precision vol 
+double precision x1, y1, z1 
+double precision xhi, yhi, zhi 
+double precision xlo, ylo, zlo 
+character*5 wrd, wrd2 
+integer i 
+integer ihash 
+integer locat 
+integer nc,neall,nz 
+integer ne1 
+integer ne2 
+integer nu1 
+integer nu2 
+open(unit=1,file='MESH',status='old') 
+rewind(1) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'eleme' .and. wrd .ne. 'ELEME') then 
+stop 'no eleme in MESH' 
+endif 
+open(unit=10,file='MESHsf.new',status='unknown') 
+rewind(10) 
+write(10,'(a)') wrd 
+open(unit=3,file='driftff.con',status='unknown') 
+rewind(3) 
+open(unit=9,file='driftff.coor',status='unknown') 
+rewind(9) 
+open(unit=7,file='driftff.tec',status='unknown') 
+rewind(7) 
+write(3,*)'CONNE' 
+write(9,*)'COOR' 
+ne = 0 
+neall=0 
+nz=42 
+locat = 1 
+10 read(1,'(a,10x,a,2e10.4,10x,3e10.4)',end=40) 
+& id(ne + 1),irock,vol,v1,x1,y1,z1 
+neall=neall+1 
+x(1,ne+1) = x1 
+x(2,ne+1) = y1 
+x(3,ne+1) = z1 
+if(id(ne+1) .ne. ' ') then 
+if(vol .eq. 0.) goto 10 
+c 
+dy=dabs(y1-7.5) 
+c dy=idint(dy/0.5)*0.5+0.25 
+dz=dabs(z1- 7.75) 
+c dz=idint(dz/0.5)*0.5+0.25 
+c
+c check radius 
+rr=sqrt(dy*dy+dz*dz) 
+if(rr.lt.rdrift) goto 10 
+write(10,'(a,10x,a,2e10.4,10x,3e10.4)') 
+& id(ne + 1),irock,vol,v1,x1,y1,z1 
+ne = ne + 1 
+ind(ne) = ne
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-30 February 2000 
+if(x1 .ne. 0.0 .or. y1 .ne. 0.0 .or. z1 .ne. 0.0) locat = 0 
+goto 10 
+endif 
+call hash(id,ind,hsh,ne,nh,ec) 
+if(locat .ne. 0) then 
+do i = 1, ne 
+x(2,i) = -999.d0 
+x(3,i) = -999.d0 
+enddo 
+open(unit=2,file='locat',status='old') 
+read(2,'(a)',end=50) wrd 
+if(wrd .ne. 'locat' .and. wrd .ne. 'LOCAT') then 
+stop 'no locat in locat' 
+endif 
+20 read(2,'(a5,5x,2f20.0)',end=50) wrd, y1, z1 
+if(wrd .ne. ' ') then 
+nu1 = ihash(wrd, id,ind,hsh,ne,nh) 
+if(nu1 .eq. 0) then 
+goto 20 
+endif 
+x(2,nu1) = y1 
+x(3,nu1) = z1 
+goto 20 
+endif 
+write(10,*) 
+endif 
+if(ne .ge. me) then 
+stop 'Exceeded maximum number of elements' 
+endif 
+ixyz=3 
+ne1 = 0 
+ne2 = ne 
+do while(ne1 .lt. ne2) 
+x1 = x(1,ne1+1) 
+y1 = x(2,ne1+1) 
+z1 = x(3,ne1+1) 
+if(y1 .ne. -999.d0 .or. z1 .ne. -999.d0) then 
+if(ne1 .eq. 0) then 
+xhi = x1 
+xlo = x1 
+yhi = y1 
+ylo = y1 
+zhi = z1 
+zlo = z1 
+else 
+xhi = max(xhi,x1) 
+xlo = min(xlo,x1) 
+yhi = max(yhi,y1) 
+ylo = min(ylo,y1) 
+zhi = max(zhi,z1) 
+zlo = min(zlo,z1) 
+endif 
+ne1 = ne1 + 1 
+else if(x(2,ne2) .eq. -999.d0 .and. x(3,ne2) .eq. -999.d0) then 
+ne2 = ne2 - 1 
+else 
+wrd = id(ne1+1)
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-31 February 2000 
+x(1,ne1+1) = x(1,ne2) 
+x(2,ne1+1) = x(2,ne2) 
+x(3,ne1+1) = x(3,ne2) 
+id(ne1+1) = id(ne2) 
+x(1,ne2) = x1 
+x(2,ne2) = y1 
+x(3,ne2) = z1 
+id(ne2) = wrd 
+endif 
+enddo 
+if(ixyz .eq. 0) then 
+xhi = xhi - xlo 
+yhi = yhi - ylo 
+zhi = zhi - zlo 
+if(zhi .le. min(xhi,yhi)) then 
+ixyz = 3 
+else if (yhi .le. min(xhi,zhi)) then 
+ixyz = 2 
+else 
+ixyz = 1 
+endif 
+endif 
+if(ixyz .eq. 2) then 
+do i = 1, ne1 
+x(2,i) = x(3,i) 
+enddo 
+elseif(ixyz .eq. 1) then 
+do i = 1, ne1 
+x(1,i) = x(2,i) 
+x(2,i) = x(3,i) 
+enddo 
+endif 
+call hash(id,ind,hsh,ne,nh,ec) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'conne' .and. wrd .ne. 'CONNE') then 
+stop 'no conne in MESH' 
+endif 
+write(10,*) 
+write(10,'(a)')wrd 
+nc = 0 
+do i = 1, ne 
+ec(i) = 0 
+enddo 
+30 read(1,'(2a,19x,a,4e10.4)',end=40) wrd,wrd2,text,v1,v2,a(nc+1),v3 
+if(wrd .ne. ' ' .and. wrd .ne. '+++ ') then 
+nu1 = ihash(wrd, id,ind,hsh,ne,nh) 
+nu2 = ihash(wrd2,id,ind,hsh,ne,nh) 
+if(nu1 .eq. 0) then 
+c write(6,60) wrd,nc+1 
+if(nu2 .ne. 0)then 
+wrd='DRI 1' 
+text='3' 
+c no gravity 
+write(3,'(2a,19x,a,4e10.4)') 
+& wrd2,wrd,text,v2,1.0e-08,a(nc+1),0.0!v3 
+write(9,'(a,5x,4e12.6)')wrd2,x(1,nu2),x(2,nu2), 
+& x(3,nu2),v3
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-32 February 2000 
+endif 
+goto 30 
+else if(nu2 .eq. 0) then 
+c write(6,60) wrd2,nc+1 
+if(nu1 .ne. 0)then 
+wrd2='DRI 1' 
+text='3' 
+write(3,'(2a,19x,a,4e10.4)') 
+& wrd,wrd2,text,v1,1.0e-08,a(nc+1),0.0!v3 
+write(9,'(a,5x,4e12.6)')wrd,x(1,nu1),x(2,nu1), 
+& x(3,nu1),v3 
+endif 
+goto 30 
+endif 
+write(10,'(2a,19x,a,4e10.4)') wrd,wrd2,text,v1,v2,a(nc+1),v3 
+nc=nc+1 
+e(1,nc) = nu1 
+e(2,nc) = nu2 
+if(nu1 .gt. ne1 .or. nu2 .gt. ne1) goto 30 
+cc(1,nc) = ec(nu1) 
+cc(2,nc) = ec(nu2) 
+ec(nu1) = nc 
+ec(nu2) = nc 
+goto 30 
+endif 
+if(nc .ge. mc) then 
+stop 'Exceeded maximum number of connections' 
+endif 
+close(unit=1) 
+close(unit=10) 
+close(unit=3) 
+close(unit=9) 
+ne = ne1 
+return 
+40 stop 'Premature EOF on MESH' 
+50 stop 'Premature EOF on locat' 
+60 format(' Unknown element "',a,'" at connection',i8) 
+end 
+subroutine hash(id,ind,hsh,ne,nh,h) 
+implicit none 
+integer ne, nh 
+character*5 id(ne) 
+integer ind(ne) 
+integer h(ne) 
+integer hsh(nh) 
+character*5 w1 
+integer i,i1,i2,j,k,n 
+do j = 1, ne 
+w1 = id(j) 
+if(w1(4:4) .eq. '0') w1(4:4) = ' ' 
+n = 0 
+do i = 1, 5 
+n = n + i * ichar(w1(i:i)) 
+enddo 
+h(j) = mod(n,nh) + 1 
+enddo 
+i1 = 1
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-33 February 2000 
+do i = 1, nh 
+i2 = i1 
+do j = i2, ne 
+k = ind(j) 
+if(h(k) .eq. i) then 
+h(k) = 0 
+ind(j) = ind(i1) 
+ind(i1) = k 
+i1 = i1 + 1 
+endif 
+enddo 
+hsh(i) = i1 
+enddo 
+return 
+end 
+integer function ihash(wrd,id,ind,hsh,ne,nh) 
+implicit none 
+integer ne, nh 
+character*5 id(ne) 
+integer ind(ne) 
+integer hsh(nh) 
+character*5 wrd, w1, w2 
+integer i,i1,i2,n 
+w1 = wrd 
+if(w1(4:4) .eq. '0') w1(4:4) = ' ' 
+n = 0 
+do i = 1, 5 
+n = n + i * ichar(w1(i:i)) 
+enddo 
+n = mod(n,nh) + 1 
+i1 = 1 
+if(n .gt. 1) i1 = hsh(n - 1) 
+i2 = hsh(n) - 1 
+do i = i1, i2 
+ihash = ind(i) 
+w2 = id(ihash) 
+if(w2(4:4) .eq. '0') w2(4:4) = ' ' 
+if(w1 .eq. w2) then 
+if(ihash .gt. ne) ihash = 0 
+return 
+endif 
+enddo 
+ihash = 0 
+return 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-34 February 2000 
+Source code for Software Routine mk_gener.f, Version 1.0 
+program mk_gener 
+c makes gener block for heater in drift and wing heaters 
+implicit double precision (a-h,o-z) 
+integer ne,ixyz 
+integer me,mc,nh 
+parameter (me =160000) 
+parameter (mc =700000) 
+parameter (nh = 2500) 
+character*5 id(me) 
+character*5 tfeld(me) 
+double precision x(3,me) 
+double precision a(mc),voll(me) 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc) 
+integer hsh(nh) 
+integer ind(me) 
+call rmesh 
+&(rdrift,ne,id,tfeld,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz,voll) 
+stop 
+end 
+c 
+subroutine rmesh 
+&(rdrift,ne,id,tfeld,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz,voll) 
+implicit double precision (a-h,o-z) 
+character*5 id(me) 
+character*5 texte 
+character*5 tfeld(me) 
+double precision x(3,me) 
+double precision a(mc) 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc) 
+integer hsh(nh) 
+integer ind(me) 
+double precision voll(me) 
+character*5 wrd 
+c 
+write(*,*)'Infiltration Rate in mm/a' 
+read(*,*)rinf 
+c 
+open(unit=2,file='GENERsf',status='unknown') 
+rewind(2) 
+texte='GENER' 
+write(2,'(a)')texte 
+iw1=0 
+iw2=0 
+c 
+open(unit=1,file='MESHSF',status='old') 
+rewind(1) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'eleme' .and. wrd .ne. 'ELEME') then 
+stop 'no eleme in MESH' 
+endif 
+c
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-35 February 2000 
+ne = 0 
+nesum = 0 
+locat = 1 
+10 read(1,'(a,10x,a,2e10.4,10x,3e10.4)',end=40) 
+& id(ne + 1),texte,voll(ne+1),v1,x1,y1,z1 
+nesum = nesum + 1 
+if(id(ne+1) .ne. ' ') then 
+c if(vol .eq. 0.) goto 10 
+if(texte.eq.'BUNOF')ne = ne + 1 
+goto 10 
+endif 
+c 
+volsum=0.0 
+do i=1,ne 
+volsum=volsum+voll(i) 
+enddo 
+c 
+do i=1,ne 
+fakt=voll(i)/volsum 
+write(2,'(2a,i4,25x,a,e10.4)') 
+&id(i),'I',i,'WATE ',fakt*rinf*78.45*3.171e-08 
+enddo 
+c 
+close(1) 
+close(2) 
+stop 
+40 stop'Premature End of File' 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-36 February 2000 
+Source code for Software Routine mk_scale_k.f, Version 1.0 
+program mk_scale_k 
+c for 12x30x42 mesh (5.23x15x20 m) 
+c 
+implicit double precision(a-h,o-z) 
+character name*5,head*80 
+dimension xfield(100,100,100,20),class(100) 
+c read mod.in 
+nz=42 
+ny=30 
+nx=12 
+ndual=1 
+c read kfield 
+open(unit=1,file='permd5_r3.dat',status='old') 
+rewind(1) 
+read(1,*) 
+do k=1,nz 
+do j=1,ny 
+do i=1,nx 
+read(1,*)xfield(i,j,k,1) 
+enddo 
+enddo 
+enddo 
+close(1) 
+do k=1,nz 
+do j=1,ny 
+do i=1,nx 
+xmeans=xmeans + xfield(i,j,k,1) 
+enddo 
+enddo 
+enddo 
+xmeans=xmeans/dble(12*30*42) 
+do k=1,nz 
+do j=1,ny 
+do i=1,nx 
+sss=sss+(xfield(i,j,k,1)-xmeans)*(xfield(i,j,k,1)-xmeans) 
+enddo 
+enddo 
+enddo 
+sss=sss/dble(12*30*42) 
+sssd=sqrt(sss) 
+open(unit=3,file='perm.new',status='unknown') 
+rewind(3) 
+write(3,*)'MEAN IN Log10 ',xmeans 
+do k=1,nz 
+do j=1,ny 
+do i=1,nx 
+scalek=(xfield(i,j,k,1)-xmeans)*0.860+xmeans 
+write(3,*)scalek
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-37 February 2000 
+enddo 
+enddo 
+enddo 
+close(1) 
+close(3) 
+stop 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-38 February 2000 
+Source code for Software Routine mininipresf_ir.f, Version 1.0 
+program mininipresf_ir 
+c for 12x30x42 mesh (5.23x15x20 m, with rock fall) 
+c make incon block from 
+c MESH 
+c 
+implicit double precision(a-h,o-z) 
+character name*5,head*80 
+dimension xfield(100,100,100,20),class(100) 
+c read mod.in 
+nz=42 
+ny=30 
+nx=12 
+ndual=1 
+do i=1,nx 
+do j=1,ny 
+do k=1,nz 
+do kk=1,ndual 
+xfield(i,j,k,kk)=4.e-18 
+enddo 
+enddo 
+enddo 
+enddo 
+c read kfield 
+open(unit=1,file='permcut.dat',status='old') 
+rewind(1) 
+read(1,*) 
+do k=1,nz 
+do j=1,ny 
+do i=1,nx 
+read(1,*)xfield(i,j,k,1) 
+enddo 
+enddo 
+enddo 
+close(1) 
+c check input field 
+do k=1,100 
+class(k)=0.0d0 
+enddo 
+write(*,*)' number of classes' 
+read(*,*)inums 
+xmins=1.0e+30 
+xmaxs=-1.0e+30 
+do k=2,nz-1 
+do j=1,ny 
+do i=1,nx 
+if(xfield(i,j,k,1).lt.xmins)xmins=xfield(i,j,k,1) 
+if(xfield(i,j,k,1).gt.xmaxs)xmaxs=xfield(i,j,k,1) 
+enddo 
+enddo 
+enddo 
+write(*,*)'min= ',xmins 
+write(*,*)'max= ',xmaxs 
+xmeans=0.0d0 
+sss=0.0d0
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-39 February 2000 
+dxs=(xmaxs-xmins)/dble(inums) 
+iouts=0 
+do kk=2,nz-1 
+do j=1,ny 
+do i=1,nx 
+do k=1,inums 
+x1=xmins+(k-1)*dxs 
+x2=xmins+k*dxs 
+if(xfield(i,j,kk,1).ge.x1.and.xfield(i,j,kk,1).le.x2)then 
+class(k)=class(k)+1.0d0 
+goto 12 
+endif 
+enddo 
+enddo 
+iouts=iouts+1 
+12 enddo 
+enddo 
+do k=2,nz-1 
+do j=1,ny 
+do i=1,nx 
+xmeans=xmeans + xfield(i,j,k,1) 
+enddo 
+enddo 
+enddo 
+xmeans=xmeans/dble(12*30*40) 
+do k=2,nz-1 
+do j=1,ny 
+do i=1,nx 
+sss=sss+(xfield(i,j,k,1)-xmeans)*(xfield(i,j,k,1)-xmeans) 
+enddo 
+enddo 
+enddo 
+sss=sss/dble(12*30*40) 
+sssd=sqrt(sss) 
+do i=1,inums 
+class(i)=class(i)/dble(12*30*40) 
+enddo 
+open(unit=3,file='perm.tec',status='unknown') 
+rewind(3) 
+write(3,*)'MEAN IN Log10 ',xmeans 
+write(3,*)'STANTARD DIVIATION IN Log10 and Ln ',sssd,2.3026*sssd 
+write(3,*)'TITLE="FREQUENCY OF PERMEABILITY"' 
+write(3,*)'VARIABLES = "LOG10 PERM", "FREQUENCY"' 
+write(3,*)'ZONE, I = ',2*inums 
+do k=1,inums 
+write(3,'(2e15.6)')xmins+(k-1)*dxs,class(k)/dxs 
+write(3,'(2e15.6)')xmins+k*dxs,class(k)/dxs 
+enddo 
+close(3) 
+c read and write incon 
+open(unit=1,file='MESH',status='old')
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-40 February 2000 
+rewind(1) 
+open(unit=2,file='inconsf.out',status='unknown') 
+rewind(2) 
+c 
+read(1,'(a)')dddd 
+write(2,*)'INCON -- INITIAL CONDITIONS FOR DUAL PERMBILITY ' 
+do i=1,nx 
+do j=1,ny 
+do k=1,nz 
+do kk=1,ndual 
+read(1,'(a,14x,a,2e10.4,10x,3e12.6)')name 
+c sat=sini 
+if(k.eq.1)then 
+c permeability of top element equal next element 
+if(kk.eq.1)then 
+xkf=(10.0**xfield(i,j,2,kk)) 
+porm=0.000124 
+sat=0.011 
+alfa0=1000. 
+else 
+xkf=xfield(i,j,1,kk) 
+porm=0.089 
+sat=0.92 
+alfa0=1562500. 
+endif 
+goto 99 
+endif 
+if(k.eq.nz)then 
+c permeability of top element equal next element 
+if(kk.eq.1)then 
+xkf=(10.0**xfield(i,j,nz-1,kk)) 
+porm=0.000124 
+sat=0.011 
+alfa0=1000. 
+else 
+xkf=xfield(i,j,nz,kk) 
+porm=0.089 
+sat=0.92 
+alfa0=1562500 
+endif 
+goto 99 
+endif 
+yyy=(j-1)*0.5+0.25 
+zzz=(k-2)*0.5+0.25 
+if(kk.eq.1)then 
+if((yyy.gt.3.0.and.yyy.lt.11.5).and. 
+j (zzz.gt.3.5.and.zzz.lt.12.0))then 
+xkf=10.0*(10.0**((xfield(i,j,k,kk)+13.05)*0.860-13.05)) 
+alfa0=100. 
+else 
+xkf=(10.0**xfield(i,j,k,kk)) 
+alfa0=1000. 
+end if
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-41 February 2000 
+porm=0.000124 
+sat=0.011 
+else 
+xkf=xfield(i,j,k-1,kk) 
+porm=0.089 
+sat=0.92 
+alfa0=1562500. 
+endif 
+99 continue 
+c 
+por=porm 
+write(2,'(a5,2i5,e15.9,5e10.4)')name,idum,idum,porm,xkf,alfa0 
+write(2,'(2e20.14)')sat 
+enddo 
+enddo 
+enddo 
+enddo 
+texte=' ' 
+write(2,'(a)')texte 
+write(2,*) 
+close(1) 
+close(2) 
+stop 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-42 February 2000 
+Source code for Software Routine mddf_CC8.f, Version 1.0 
+program mddf_cc8 
+c cut round tunnel with radius R in 3D FD mesh and rock fall from the crown 
+c truncate elements and connections within R 
+c cut for refined mesh 
+c write connectivity list for tunnel bound elements to tunnel element 
+c file: 'drift3d.con' 
+c write list with coordinates of tunnel bound elements in 
+c file: 'drift3d.coor' 
+implicit none 
+integer ne,ixyz 
+integer me,mc,nh 
+parameter (me =160000) 
+parameter (mc =700000) 
+parameter (nh = 128) 
+character*5 ,id(me) 
+double precision x(3,me) 
+double precision a(mc),rdrift,dx,dz 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc) 
+integer hsh(nh) 
+integer ind(me) 
+double precision vol 
+double precision x1, y1, z1 
+double precision xhi, yhi, zhi 
+double precision xlo, ylo, zlo 
+character*5 wrd, wrd2 
+integer i 
+integer ihash 
+integer locat 
+integer nc 
+integer ne1 
+integer ne1 
+integer ne2 
+integer nu1 
+integer nu2 
+write(*,*)'radius tunnel' 
+read(*,*)rdrift 
+call rmesh(rdrift,ne,id,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz) 
+stop 
+end 
+c 
+subroutine rmesh(rdrift,ne,id,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz) 
+implicit none 
+integer ne,ixyz 
+integer me,mc,nh 
+character*5 id(me) 
+character*5 irock 
+character*1 text 
+double precision x(3,me) 
+double precision a(mc),rdrift,rr,v1,v2,v3,dy,dz 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc) 
+integer hsh(nh)
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-43 February 2000 
+integer ind(me) 
+double precision vol 
+double precision x1, y1, z1 
+double precision xhi, yhi, zhi 
+double precision xlo, ylo, zlo 
+character*5 wrd, wrd2 
+integer i 
+integer ihash 
+integer locat 
+integer nc,neall,nz 
+integer ne1 
+integer ne2 
+integer nu1 
+integer nu2 
+open(unit=1,file='MESH',status='old') 
+rewind(1) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'eleme' .and. wrd .ne. 'ELEME') then 
+stop 'no eleme in MESH' 
+endif 
+open(unit=10,file='MESHsf.new',status='unknown') 
+rewind(10) 
+write(10,'(a)') wrd 
+open(unit=3,file='driftff.con',status='unknown') 
+rewind(3) 
+open(unit=9,file='driftff.coor',status='unknown') 
+rewind(9) 
+open(unit=7,file='driftff.tec',status='unknown') 
+rewind(7) 
+write(3,*)'CONNE' 
+write(9,*)'COOR' 
+ne = 0 
+neall=0 
+nz=42 
+locat = 1 
+10 read(1,'(a,10x,a,2e10.4,10x,3e10.4)',end=40) 
+& id(ne + 1),irock,vol,v1,x1,y1,z1 
+neall=neall+1 
+x(1,ne+1) = x1 
+x(2,ne+1) = y1 
+x(3,ne+1) = z1 
+if(id(ne+1) .ne. ' ') then 
+if(vol .eq. 0.) goto 10 
+c 
+dy=dabs(y1-7.5) 
+c dy=idint(dy/0.5)*0.5+0.25 
+dz=dabs(z1- 7.75) 
+c dz=idint(dz/0.5)*0.5+0.25 
+c
+c check radius 
+rr=sqrt(dy*dy+dz*dz) 
+if(rr.lt.rdrift) goto 10 
+if(x1.gt.2.2.and.x1.lt.3.0)then 
+if(y1.gt.7.1.and.y1.lt.7.9)then 
+if(z1.gt.10.20.and.z1.lt.11.30)then
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-44 February 2000 
+go to 10 
+end if 
+end if 
+end if 
+write(10,'(a,10x,a,2e10.4,10x,3e10.4)') 
+& id(ne + 1),irock,vol,v1,x1,y1,z1 
+ne = ne + 1 
+ind(ne) = ne 
+if(x1 .ne. 0.0 .or. y1 .ne. 0.0 .or. z1 .ne. 0.0) locat = 0 
+goto 10 
+endif 
+call hash(id,ind,hsh,ne,nh,ec) 
+if(locat .ne. 0) then 
+do i = 1, ne 
+x(2,i) = -999.d0 
+x(3,i) = -999.d0 
+enddo 
+open(unit=2,file='locat',status='old') 
+read(2,'(a)',end=50) wrd 
+if(wrd .ne. 'locat' .and. wrd .ne. 'LOCAT') then 
+stop 'no locat in locat' 
+endif 
+20 read(2,'(a5,5x,2f20.0)',end=50) wrd, y1, z1 
+if(wrd .ne. ' ') then 
+nu1 = ihash(wrd, id,ind,hsh,ne,nh) 
+if(nu1 .eq. 0) then 
+goto 20 
+endif 
+x(2,nu1) = y1 
+x(3,nu1) = z1 
+goto 20 
+endif 
+write(10,*) 
+endif 
+if(ne .ge. me) then 
+stop 'Exceeded maximum number of elements' 
+endif 
+ixyz=3 
+ne1 = 0 
+ne2 = ne 
+do while(ne1 .lt. ne2) 
+x1 = x(1,ne1+1) 
+y1 = x(2,ne1+1) 
+z1 = x(3,ne1+1) 
+if(y1 .ne. -999.d0 .or. z1 .ne. -999.d0) then 
+if(ne1 .eq. 0) then 
+xhi = x1 
+xlo = x1 
+yhi = y1 
+ylo = y1 
+zhi = z1 
+zlo = z1 
+else
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-45 February 2000 
+xhi = max(xhi,x1) 
+xlo = min(xlo,x1) 
+yhi = max(yhi,y1) 
+ylo = min(ylo,y1) 
+zhi = max(zhi,z1) 
+zlo = min(zlo,z1) 
+endif 
+ne1 = ne1 + 1 
+else if(x(2,ne2) .eq. -999.d0 .and. x(3,ne2) .eq. -999.d0) then 
+ne2 = ne2 - 1 
+else 
+wrd = id(ne1+1) 
+x(1,ne1+1) = x(1,ne2) 
+x(2,ne1+1) = x(2,ne2) 
+x(3,ne1+1) = x(3,ne2) 
+id(ne1+1) = id(ne2) 
+x(1,ne2) = x1 
+x(2,ne2) = y1 
+x(3,ne2) = z1 
+id(ne2) = wrd 
+endif 
+enddo 
+if(ixyz .eq. 0) then 
+xhi = xhi - xlo 
+yhi = yhi - ylo 
+zhi = zhi - zlo 
+if(zhi .le. min(xhi,yhi)) then 
+ixyz = 3 
+else if (yhi .le. min(xhi,zhi)) then 
+ixyz = 2 
+else 
+ixyz = 1 
+endif 
+endif 
+if(ixyz .eq. 2) then 
+do i = 1, ne1 
+x(2,i) = x(3,i) 
+enddo 
+elseif(ixyz .eq. 1) then 
+do i = 1, ne1 
+x(1,i) = x(2,i) 
+x(2,i) = x(3,i) 
+enddo 
+endif 
+call hash(id,ind,hsh,ne,nh,ec) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'conne' .and. wrd .ne. 'CONNE') then 
+stop 'no conne in MESH' 
+endif 
+write(10,*) 
+write(10,'(a)')wrd 
+nc = 0 
+do i = 1, ne 
+ec(i) = 0 
+enddo 
+30 read(1,'(2a,19x,a,4e10.4)',end=40) wrd,wrd2,text,v1,v2,a(nc+1),v3 
+if(wrd .ne. ' ' .and. wrd .ne. '+++ ') then
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-46 February 2000 
+nu1 = ihash(wrd, id,ind,hsh,ne,nh) 
+nu2 = ihash(wrd2,id,ind,hsh,ne,nh) 
+if(nu1 .eq. 0) then 
+c write(6,60) wrd,nc+1 
+if(nu2 .ne. 0)then 
+wrd='DRI 1' 
+text='3' 
+c no gravity 
+write(3,'(2a,19x,a,4e10.4)') 
+& wrd2,wrd,text,v2,1.0e-08,a(nc+1),0.0!v3 
+write(9,'(a,5x,4e12.6)')wrd2,x(1,nu2),x(2,nu2), 
+& x(3,nu2),v3 
+endif 
+goto 30 
+else if(nu2 .eq. 0) then 
+c write(6,60) wrd2,nc+1 
+if(nu1 .ne. 0)then 
+wrd2='DRI 1' 
+text='3' 
+write(3,'(2a,19x,a,4e10.4)') 
+& wrd,wrd2,text,v1,1.0e-08,a(nc+1),0.0!v3 
+write(9,'(a,5x,4e12.6)')wrd,x(1,nu1),x(2,nu1), 
+& x(3,nu1),v3 
+endif 
+goto 30 
+endif 
+write(10,'(2a,19x,a,4e10.4)') wrd,wrd2,text,v1,v2,a(nc+1),v3 
+nc=nc+1 
+e(1,nc) = nu1 
+e(2,nc) = nu2 
+if(nu1 .gt. ne1 .or. nu2 .gt. ne1) goto 30 
+cc(1,nc) = ec(nu1) 
+cc(2,nc) = ec(nu2) 
+ec(nu1) = nc 
+ec(nu2) = nc 
+goto 30 
+endif 
+if(nc .ge. mc) then 
+stop 'Exceeded maximum number of connections' 
+endif 
+close(unit=1) 
+close(unit=10) 
+close(unit=3) 
+close(unit=9) 
+ne = ne1 
+return 
+40 stop 'Premature EOF on MESH' 
+50 stop 'Premature EOF on locat' 
+60 format(' Unknown element "',a,'" at connection',i8) 
+end 
+subroutine hash(id,ind,hsh,ne,nh,h) 
+implicit none 
+integer ne, nh 
+character*5 id(ne) 
+integer ind(ne) 
+integer h(ne) 
+integer hsh(nh)
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-47 February 2000 
+character*5 w1 
+integer i,i1,i2,j,k,n 
+do j = 1, ne 
+w1 = id(j) 
+if(w1(4:4) .eq. '0') w1(4:4) = ' ' 
+n = 0 
+do i = 1, 5 
+n = n + i * ichar(w1(i:i)) 
+enddo 
+h(j) = mod(n,nh) + 1 
+enddo 
+i1 = 1 
+do i = 1, nh 
+i2 = i1 
+do j = i2, ne 
+k = ind(j) 
+if(h(k) .eq. i) then 
+h(k) = 0 
+ind(j) = ind(i1) 
+ind(i1) = k 
+i1 = i1 + 1 
+endif 
+enddo 
+hsh(i) = i1 
+enddo 
+return 
+end 
+integer function ihash(wrd,id,ind,hsh,ne,nh) 
+implicit none 
+integer ne, nh 
+character*5 id(ne) 
+integer ind(ne) 
+integer hsh(nh) 
+character*5 wrd, w1, w2 
+integer i,i1,i2,n 
+w1 = wrd 
+if(w1(4:4) .eq. '0') w1(4:4) = ' ' 
+n = 0 
+do i = 1, 5 
+n = n + i * ichar(w1(i:i)) 
+enddo 
+n = mod(n,nh) + 1 
+i1 = 1 
+if(n .gt. 1) i1 = hsh(n - 1) 
+i2 = hsh(n) - 1 
+do i = i1, i2 
+ihash = ind(i) 
+w2 = id(ihash) 
+if(w2(4:4) .eq. '0') w2(4:4) = ' ' 
+if(w1 .eq. w2) then 
+if(ihash .gt. ne) ihash = 0 
+return 
+endif 
+enddo 
+ihash = 0 
+return 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-48 February 2000 
+Source code for Software Routine mddf_CS8.f, Version 1.0 
+program mddf_cs8 
+c cut round tunnel with radius R in 3D FD mesh with rock fall around the spring 
+line 
+c truncate elements and connections within R 
+c cut for refined mesh 
+c write connectivity list for tunnel bound elements to tunnel element 
+c file: 'drift3d.con' 
+c write list with coordinates of tunnel bound elements in 
+c file: 'drift3d.coor' 
+implicit none 
+integer ne,ixyz 
+integer me,mc,nh 
+parameter (me =160000) 
+parameter (mc =700000) 
+parameter (nh = 128) 
+character*5 ,id(me) 
+double precision x(3,me) 
+double precision a(mc),rdrift,dx,dz 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc) 
+integer hsh(nh) 
+integer ind(me) 
+double precision vol 
+double precision x1, y1, z1 
+double precision xhi, yhi, zhi 
+double precision xlo, ylo, zlo 
+character*5 wrd, wrd2 
+integer i 
+integer ihash 
+integer locat 
+integer nc 
+integer ne1 
+integer ne1 
+integer ne2 
+integer nu1 
+integer nu2 
+write(*,*)'radius tunnel' 
+read(*,*)rdrift 
+call rmesh(rdrift,ne,id,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz) 
+stop 
+end 
+c 
+subroutine rmesh(rdrift,ne,id,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz) 
+implicit none 
+integer ne,ixyz 
+integer me,mc,nh 
+character*5 id(me) 
+character*5 irock 
+character*1 text 
+double precision x(3,me) 
+double precision a(mc),rdrift,rr,v1,v2,v3,dy,dz 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc)
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-49 February 2000 
+integer hsh(nh) 
+integer ind(me) 
+double precision vol 
+double precision x1, y1, z1 
+double precision xhi, yhi, zhi 
+double precision xlo, ylo, zlo 
+character*5 wrd, wrd2 
+integer i 
+integer ihash 
+integer locat 
+integer nc,neall,nz 
+integer ne1 
+integer ne2 
+integer nu1 
+integer nu2 
+open(unit=1,file='MESH',status='old') 
+rewind(1) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'eleme' .and. wrd .ne. 'ELEME') then 
+stop 'no eleme in MESH' 
+endif 
+open(unit=10,file='MESHsf.new',status='unknown') 
+rewind(10) 
+write(10,'(a)') wrd 
+open(unit=3,file='driftff.con',status='unknown') 
+rewind(3) 
+open(unit=9,file='driftff.coor',status='unknown') 
+rewind(9) 
+open(unit=7,file='driftff.tec',status='unknown') 
+rewind(7) 
+write(3,*)'CONNE' 
+write(9,*)'COOR' 
+ne = 0 
+neall=0 
+nz=42 
+locat = 1 
+10 read(1,'(a,10x,a,2e10.4,10x,3e10.4)',end=40) 
+& id(ne + 1),irock,vol,v1,x1,y1,z1 
+neall=neall+1 
+x(1,ne+1) = x1 
+x(2,ne+1) = y1 
+x(3,ne+1) = z1 
+if(id(ne+1) .ne. ' ') then 
+if(vol .eq. 0.) goto 10 
+c 
+dy=dabs(y1-7.5) 
+c dy=idint(dy/0.5)*0.5+0.25 
+dz=dabs(z1- 7.75) 
+c dz=idint(dz/0.5)*0.5+0.25 
+c
+c check radius 
+rr=sqrt(dy*dy+dz*dz) 
+if(rr.lt.rdrift) goto 10 
+if(x1.gt.2.2.and.x1.lt.3.0)then 
+if(y1.gt.3.9.and.y1.lt.4.9)then
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-50 February 2000 
+if(z1.gt.7.5.and.z1.lt.8.5)then 
+go to 10 
+end if 
+end if 
+end if 
+write(10,'(a,10x,a,2e10.4,10x,3e10.4)') 
+& id(ne + 1),irock,vol,v1,x1,y1,z1 
+ne = ne + 1 
+ind(ne) = ne 
+if(x1 .ne. 0.0 .or. y1 .ne. 0.0 .or. z1 .ne. 0.0) locat = 0 
+goto 10 
+endif 
+call hash(id,ind,hsh,ne,nh,ec) 
+if(locat .ne. 0) then 
+do i = 1, ne 
+x(2,i) = -999.d0 
+x(3,i) = -999.d0 
+enddo 
+open(unit=2,file='locat',status='old') 
+read(2,'(a)',end=50) wrd 
+if(wrd .ne. 'locat' .and. wrd .ne. 'LOCAT') then 
+stop 'no locat in locat' 
+endif 
+20 read(2,'(a5,5x,2f20.0)',end=50) wrd, y1, z1 
+if(wrd .ne. ' ') then 
+nu1 = ihash(wrd, id,ind,hsh,ne,nh) 
+if(nu1 .eq. 0) then 
+goto 20 
+endif 
+x(2,nu1) = y1 
+x(3,nu1) = z1 
+goto 20 
+endif 
+write(10,*) 
+endif 
+if(ne .ge. me) then 
+stop 'Exceeded maximum number of elements' 
+endif 
+ixyz=3 
+ne1 = 0 
+ne2 = ne 
+do while(ne1 .lt. ne2) 
+x1 = x(1,ne1+1) 
+y1 = x(2,ne1+1) 
+z1 = x(3,ne1+1) 
+if(y1 .ne. -999.d0 .or. z1 .ne. -999.d0) then 
+if(ne1 .eq. 0) then 
+xhi = x1 
+xlo = x1 
+yhi = y1 
+ylo = y1 
+zhi = z1 
+zlo = z1
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-51 February 2000 
+else 
+xhi = max(xhi,x1) 
+xlo = min(xlo,x1) 
+yhi = max(yhi,y1) 
+ylo = min(ylo,y1) 
+zhi = max(zhi,z1) 
+zlo = min(zlo,z1) 
+endif 
+ne1 = ne1 + 1 
+else if(x(2,ne2) .eq. -999.d0 .and. x(3,ne2) .eq. -999.d0) then 
+ne2 = ne2 - 1 
+else 
+wrd = id(ne1+1) 
+x(1,ne1+1) = x(1,ne2) 
+x(2,ne1+1) = x(2,ne2) 
+x(3,ne1+1) = x(3,ne2) 
+id(ne1+1) = id(ne2) 
+x(1,ne2) = x1 
+x(2,ne2) = y1 
+x(3,ne2) = z1 
+id(ne2) = wrd 
+endif 
+enddo 
+if(ixyz .eq. 0) then 
+xhi = xhi - xlo 
+yhi = yhi - ylo 
+zhi = zhi - zlo 
+if(zhi .le. min(xhi,yhi)) then 
+ixyz = 3 
+else if (yhi .le. min(xhi,zhi)) then 
+ixyz = 2 
+else 
+ixyz = 1 
+endif 
+endif 
+if(ixyz .eq. 2) then 
+do i = 1, ne1 
+x(2,i) = x(3,i) 
+enddo 
+elseif(ixyz .eq. 1) then 
+do i = 1, ne1 
+x(1,i) = x(2,i) 
+x(2,i) = x(3,i) 
+enddo 
+endif 
+call hash(id,ind,hsh,ne,nh,ec) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'conne' .and. wrd .ne. 'CONNE') then 
+stop 'no conne in MESH' 
+endif 
+write(10,*) 
+write(10,'(a)')wrd 
+nc = 0 
+do i = 1, ne 
+ec(i) = 0 
+enddo 
+30 read(1,'(2a,19x,a,4e10.4)',end=40) wrd,wrd2,text,v1,v2,a(nc+1),v3
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-52 February 2000 
+if(wrd .ne. ' ' .and. wrd .ne. '+++ ') then 
+nu1 = ihash(wrd, id,ind,hsh,ne,nh) 
+nu2 = ihash(wrd2,id,ind,hsh,ne,nh) 
+if(nu1 .eq. 0) then 
+c write(6,60) wrd,nc+1 
+if(nu2 .ne. 0)then 
+wrd='DRI 1' 
+text='3' 
+c no gravity 
+write(3,'(2a,19x,a,4e10.4)') 
+& wrd2,wrd,text,v2,1.0e-08,a(nc+1),0.0!v3 
+write(9,'(a,5x,4e12.6)')wrd2,x(1,nu2),x(2,nu2), 
+& x(3,nu2),v3 
+endif 
+goto 30 
+else if(nu2 .eq. 0) then 
+c write(6,60) wrd2,nc+1 
+if(nu1 .ne. 0)then 
+wrd2='DRI 1' 
+text='3' 
+write(3,'(2a,19x,a,4e10.4)') 
+& wrd,wrd2,text,v1,1.0e-08,a(nc+1),0.0!v3 
+write(9,'(a,5x,4e12.6)')wrd,x(1,nu1),x(2,nu1), 
+& x(3,nu1),v3 
+endif 
+goto 30 
+endif 
+write(10,'(2a,19x,a,4e10.4)') wrd,wrd2,text,v1,v2,a(nc+1),v3 
+nc=nc+1 
+e(1,nc) = nu1 
+e(2,nc) = nu2 
+if(nu1 .gt. ne1 .or. nu2 .gt. ne1) goto 30 
+cc(1,nc) = ec(nu1) 
+cc(2,nc) = ec(nu2) 
+ec(nu1) = nc 
+ec(nu2) = nc 
+goto 30 
+endif 
+if(nc .ge. mc) then 
+stop 'Exceeded maximum number of connections' 
+endif 
+close(unit=1) 
+close(unit=10) 
+close(unit=3) 
+close(unit=9) 
+ne = ne1 
+return 
+40 stop 'Premature EOF on MESH' 
+50 stop 'Premature EOF on locat' 
+60 format(' Unknown element "',a,'" at connection',i8) 
+end 
+subroutine hash(id,ind,hsh,ne,nh,h) 
+implicit none 
+integer ne, nh 
+character*5 id(ne) 
+integer ind(ne) 
+integer h(ne)
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-53 February 2000 
+integer hsh(nh) 
+character*5 w1 
+integer i,i1,i2,j,k,n 
+do j = 1, ne 
+w1 = id(j) 
+if(w1(4:4) .eq. '0') w1(4:4) = ' ' 
+n = 0 
+do i = 1, 5 
+n = n + i * ichar(w1(i:i)) 
+enddo 
+h(j) = mod(n,nh) + 1 
+enddo 
+i1 = 1 
+do i = 1, nh 
+i2 = i1 
+do j = i2, ne 
+k = ind(j) 
+if(h(k) .eq. i) then 
+h(k) = 0 
+ind(j) = ind(i1) 
+ind(i1) = k 
+i1 = i1 + 1 
+endif 
+enddo 
+hsh(i) = i1 
+enddo 
+return 
+end 
+integer function ihash(wrd,id,ind,hsh,ne,nh) 
+implicit none 
+integer ne, nh 
+character*5 id(ne) 
+integer ind(ne) 
+integer hsh(nh) 
+character*5 wrd, w1, w2 
+integer i,i1,i2,n 
+w1 = wrd 
+if(w1(4:4) .eq. '0') w1(4:4) = ' ' 
+n = 0 
+do i = 1, 5 
+n = n + i * ichar(w1(i:i)) 
+enddo 
+n = mod(n,nh) + 1 
+i1 = 1 
+if(n .gt. 1) i1 = hsh(n - 1) 
+i2 = hsh(n) - 1 
+do i = i1, i2 
+ihash = ind(i) 
+w2 = id(ihash) 
+if(w2(4:4) .eq. '0') w2(4:4) = ' ' 
+if(w1 .eq. w2) then 
+if(ihash .gt. ne) ihash = 0 
+return 
+endif 
+enddo 
+ihash = 0 
+return
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-54 February 2000 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-55 February 2000 
+Source code for Software Routine mddf_cc.f, Version 1.0 
+program mddf_cc 
+c cut round tunnel with radius R in 3D FD mesh with 3-m rock failure in the roof 
+c truncate elements and connections within R 
+c cut for refined mesh 
+c write connectivity list for tunnel bound elements to tunnel element 
+c file: 'drift3d.con' 
+c write list with coordinates of tunnel bound elements in 
+c file: 'drift3d.coor' 
+implicit none 
+integer ne,ixyz 
+integer me,mc,nh 
+parameter (me =160000) 
+parameter (mc =700000) 
+parameter (nh = 128) 
+character*5 ,id(me) 
+double precision x(3,me) 
+double precision a(mc),rdrift,dx,dz 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc) 
+integer hsh(nh) 
+integer ind(me) 
+double precision vol 
+double precision x1, y1, z1 
+double precision xhi, yhi, zhi 
+double precision xlo, ylo, zlo 
+character*5 wrd, wrd2 
+integer i 
+integer ihash 
+integer locat 
+integer nc 
+integer ne1 
+integer ne1 
+integer ne2 
+integer nu1 
+integer nu2 
+write(*,*)'radius tunnel' 
+read(*,*)rdrift 
+call rmesh(rdrift,ne,id,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz) 
+stop 
+end 
+c 
+subroutine rmesh(rdrift,ne,id,x,ec,e,a,cc,hsh,ind,me,mc,nh,ixyz) 
+implicit none 
+integer ne,ixyz 
+integer me,mc,nh 
+character*5 id(me) 
+character*5 irock 
+character*1 text 
+double precision x(3,me) 
+double precision a(mc),rdrift,rr,v1,v2,v3,dy,dz 
+integer ec(me) 
+integer e(2,mc) 
+integer cc(2,mc) 
+integer hsh(nh)
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-56 February 2000 
+integer ind(me) 
+double precision vol 
+double precision x1, y1, z1 
+double precision xhi, yhi, zhi 
+double precision xlo, ylo, zlo 
+character*5 wrd, wrd2 
+integer i 
+integer ihash 
+integer locat 
+integer nc,neall,nz 
+integer ne1 
+integer ne2 
+integer nu1 
+integer nu2 
+open(unit=1,file='MESH',status='old') 
+rewind(1) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'eleme' .and. wrd .ne. 'ELEME') then 
+stop 'no eleme in MESH' 
+endif 
+open(unit=10,file='MESHsf.new',status='unknown') 
+rewind(10) 
+write(10,'(a)') wrd 
+open(unit=3,file='driftff.con',status='unknown') 
+rewind(3) 
+open(unit=9,file='driftff.coor',status='unknown') 
+rewind(9) 
+open(unit=7,file='driftff.tec',status='unknown') 
+rewind(7) 
+write(3,*)'CONNE' 
+write(9,*)'COOR' 
+ne = 0 
+neall=0 
+nz=42 
+locat = 1 
+10 read(1,'(a,10x,a,2e10.4,10x,3e10.4)',end=40) 
+& id(ne + 1),irock,vol,v1,x1,y1,z1 
+neall=neall+1 
+x(1,ne+1) = x1 
+x(2,ne+1) = y1 
+x(3,ne+1) = z1 
+if(id(ne+1) .ne. ' ') then 
+if(vol .eq. 0.) goto 10 
+c 
+dy=dabs(y1-7.5) 
+c dy=idint(dy/0.5)*0.5+0.25 
+dz=dabs(z1- 7.75) 
+c dz=idint(dz/0.5)*0.5+0.25 
+c
+c check radius 
+rr=sqrt(dy*dy+dz*dz) 
+if(rr.lt.rdrift) goto 10 
+if(x1.gt.2.2.and.x1.lt.3.0)then 
+if((y1.gt.7.0.and.y1.lt.7.5).and.(z1.gt.8.0.and.z1.lt.11.0))then
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-57 February 2000 
+go to 10 
+elseif((y1.gt.6.5.and.y1.lt.7.0).and.(z1.gt.8.0.and.z1.lt.11.5))then 
+go to 10 
+elseif((y1.gt.6.0.and.y1.lt.6.5).and.(z1.gt.8.0.and.z1.lt.12.0))then 
+go to 10 
+elseif((y1.gt.5.5.and.y1.lt.6.0).and.(z1.gt.8.0.and.z1.lt.13.0))then 
+go to 10 
+end if 
+end if 
+write(10,'(a,10x,a,2e10.4,10x,3e10.4)') 
+& id(ne + 1),irock,vol,v1,x1,y1,z1 
+ne = ne + 1 
+ind(ne) = ne 
+if(x1 .ne. 0.0 .or. y1 .ne. 0.0 .or. z1 .ne. 0.0) locat = 0 
+goto 10 
+endif 
+call hash(id,ind,hsh,ne,nh,ec) 
+if(locat .ne. 0) then 
+do i = 1, ne 
+x(2,i) = -999.d0 
+x(3,i) = -999.d0 
+enddo 
+open(unit=2,file='locat',status='old') 
+read(2,'(a)',end=50) wrd 
+if(wrd .ne. 'locat' .and. wrd .ne. 'LOCAT') then 
+stop 'no locat in locat' 
+endif 
+20 read(2,'(a5,5x,2f20.0)',end=50) wrd, y1, z1 
+if(wrd .ne. ' ') then 
+nu1 = ihash(wrd, id,ind,hsh,ne,nh) 
+if(nu1 .eq. 0) then 
+goto 20 
+endif 
+x(2,nu1) = y1 
+x(3,nu1) = z1 
+goto 20 
+endif 
+write(10,*) 
+endif 
+if(ne .ge. me) then 
+stop 'Exceeded maximum number of elements' 
+endif 
+ixyz=3 
+ne1 = 0 
+ne2 = ne 
+do while(ne1 .lt. ne2) 
+x1 = x(1,ne1+1) 
+y1 = x(2,ne1+1) 
+z1 = x(3,ne1+1) 
+if(y1 .ne. -999.d0 .or. z1 .ne. -999.d0) then 
+if(ne1 .eq. 0) then 
+xhi = x1 
+xlo = x1 
+yhi = y1
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-58 February 2000 
+ylo = y1 
+zhi = z1 
+zlo = z1 
+else 
+xhi = max(xhi,x1) 
+xlo = min(xlo,x1) 
+yhi = max(yhi,y1) 
+ylo = min(ylo,y1) 
+zhi = max(zhi,z1) 
+zlo = min(zlo,z1) 
+endif 
+ne1 = ne1 + 1 
+else if(x(2,ne2) .eq. -999.d0 .and. x(3,ne2) .eq. -999.d0) then 
+ne2 = ne2 - 1 
+else 
+wrd = id(ne1+1) 
+x(1,ne1+1) = x(1,ne2) 
+x(2,ne1+1) = x(2,ne2) 
+x(3,ne1+1) = x(3,ne2) 
+id(ne1+1) = id(ne2) 
+x(1,ne2) = x1 
+x(2,ne2) = y1 
+x(3,ne2) = z1 
+id(ne2) = wrd 
+endif 
+enddo 
+if(ixyz .eq. 0) then 
+xhi = xhi - xlo 
+yhi = yhi - ylo 
+zhi = zhi - zlo 
+if(zhi .le. min(xhi,yhi)) then 
+ixyz = 3 
+else if (yhi .le. min(xhi,zhi)) then 
+ixyz = 2 
+else 
+ixyz = 1 
+endif 
+endif 
+if(ixyz .eq. 2) then 
+do i = 1, ne1 
+x(2,i) = x(3,i) 
+enddo 
+elseif(ixyz .eq. 1) then 
+do i = 1, ne1 
+x(1,i) = x(2,i) 
+x(2,i) = x(3,i) 
+enddo 
+endif 
+call hash(id,ind,hsh,ne,nh,ec) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'conne' .and. wrd .ne. 'CONNE') then 
+stop 'no conne in MESH' 
+endif 
+write(10,*) 
+write(10,'(a)')wrd 
+nc = 0 
+do i = 1, ne
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-59 February 2000 
+ec(i) = 0 
+enddo 
+30 read(1,'(2a,19x,a,4e10.4)',end=40) wrd,wrd2,text,v1,v2,a(nc+1),v3 
+if(wrd .ne. ' ' .and. wrd .ne. '+++ ') then 
+nu1 = ihash(wrd, id,ind,hsh,ne,nh) 
+nu2 = ihash(wrd2,id,ind,hsh,ne,nh) 
+if(nu1 .eq. 0) then 
+c write(6,60) wrd,nc+1 
+if(nu2 .ne. 0)then 
+wrd='DRI 1' 
+text='3' 
+c no gravity 
+write(3,'(2a,19x,a,4e10.4)') 
+& wrd2,wrd,text,v2,1.0e-08,a(nc+1),0.0!v3 
+write(9,'(a,5x,4e12.6)')wrd2,x(1,nu2),x(2,nu2), 
+& x(3,nu2),v3 
+endif 
+goto 30 
+else if(nu2 .eq. 0) then 
+c write(6,60) wrd2,nc+1 
+if(nu1 .ne. 0)then 
+wrd2='DRI 1' 
+text='3' 
+write(3,'(2a,19x,a,4e10.4)') 
+& wrd,wrd2,text,v1,1.0e-08,a(nc+1),0.0!v3 
+write(9,'(a,5x,4e12.6)')wrd,x(1,nu1),x(2,nu1), 
+& x(3,nu1),v3 
+endif 
+goto 30 
+endif 
+write(10,'(2a,19x,a,4e10.4)') wrd,wrd2,text,v1,v2,a(nc+1),v3 
+nc=nc+1 
+e(1,nc) = nu1 
+e(2,nc) = nu2 
+if(nu1 .gt. ne1 .or. nu2 .gt. ne1) goto 30 
+cc(1,nc) = ec(nu1) 
+cc(2,nc) = ec(nu2) 
+ec(nu1) = nc 
+ec(nu2) = nc 
+goto 30 
+endif 
+if(nc .ge. mc) then 
+stop 'Exceeded maximum number of connections' 
+endif 
+close(unit=1) 
+close(unit=10) 
+close(unit=3) 
+close(unit=9) 
+ne = ne1 
+return 
+40 stop 'Premature EOF on MESH' 
+50 stop 'Premature EOF on locat' 
+60 format(' Unknown element "',a,'" at connection',i8) 
+end 
+subroutine hash(id,ind,hsh,ne,nh,h) 
+implicit none 
+integer ne, nh
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-60 February 2000 
+character*5 id(ne) 
+integer ind(ne) 
+integer h(ne) 
+integer hsh(nh) 
+character*5 w1 
+integer i,i1,i2,j,k,n 
+do j = 1, ne 
+w1 = id(j) 
+if(w1(4:4) .eq. '0') w1(4:4) = ' ' 
+n = 0 
+do i = 1, 5 
+n = n + i * ichar(w1(i:i)) 
+enddo 
+h(j) = mod(n,nh) + 1 
+enddo 
+i1 = 1 
+do i = 1, nh 
+i2 = i1 
+do j = i2, ne 
+k = ind(j) 
+if(h(k) .eq. i) then 
+h(k) = 0 
+ind(j) = ind(i1) 
+ind(i1) = k 
+i1 = i1 + 1 
+endif 
+enddo 
+hsh(i) = i1 
+enddo 
+return 
+end 
+integer function ihash(wrd,id,ind,hsh,ne,nh) 
+implicit none 
+integer ne, nh 
+character*5 id(ne) 
+integer ind(ne) 
+integer hsh(nh) 
+character*5 wrd, w1, w2 
+integer i,i1,i2,n 
+w1 = wrd 
+if(w1(4:4) .eq. '0') w1(4:4) = ' ' 
+n = 0 
+do i = 1, 5 
+n = n + i * ichar(w1(i:i)) 
+enddo 
+n = mod(n,nh) + 1 
+i1 = 1 
+if(n .gt. 1) i1 = hsh(n - 1) 
+i2 = hsh(n) - 1 
+do i = i1, i2 
+ihash = ind(i) 
+w2 = id(ihash) 
+if(w2(4:4) .eq. '0') w2(4:4) = ' ' 
+if(w1 .eq. w2) then 
+if(ihash .gt. ne) ihash = 0 
+return 
+endif
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-61 February 2000 
+enddo 
+ihash = 0 
+return 
+end
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-62 February 2000 
+Source code for Software Routine minrefine3df.f, Version 1.0 
+program minrefine3df 
+c make incon block from inconsf.out 
+c and MESH (refined new mesh) 
+c
+c 
+implicit double precision(a-h,o-z) 
+character*5 name,wrd 
+character head*60 
+character*1 text 
+character*5 irock 
+dimension x(160000),y(160000),z(160000) 
+dimension por(70,45,55,5),xperm(70,45,55,5), 
+j xalfa(70,45,55,5) 
+dimension xsat(70,45,55,5) 
+character*5 id(160000) 
+character*5 iinc(70,45,55,5) 
+c
+c read refined mesh 
+ndual=1 
+open(unit=1,file='MESHsf.new',status='old') 
+rewind(1) 
+read(1,'(a)',end=40) wrd 
+if(wrd .ne. 'eleme' .and. wrd .ne. 'ELEME') then 
+stop 'no eleme in MESH' 
+endif 
+ne = 0 
+10 read(1,'(a,10x,a,2e10.4,10x,3e10.4)',end=40) 
+& id(ne + 1),irock,vol,v1,x1,y1,z1 
+if(id(ne+1) .eq. ' ') goto 100 
+ne = ne + 1 
+x(ne) = x1 
+y(ne) = y1 
+z(ne) = z1 
+goto 10 
+100 close(1) 
+c
+c read incon (not refined) 
+nx=12 
+ny=30 
+nz=42 
+c 
+open(unit=1,file='inconsf.out',status='old') 
+rewind(1) 
+read(1,'(a60)')head 
+do i=1,nx 
+do j=1,ny 
+do k=1,nz 
+do kk=1,ndual 
+read(1,'(a5,2i5,e15.9,2e10.4)') 
+&iinc(i,j,k,kk),idum,idum,por(i,j,k,kk),xperm(i,j,k,kk), 
+j xalfa(i,j,k,kk) 
+read(1,'(e20.14)')xsat(i,j,k,kk) 
+enddo
+
+Title: Seepage Model for PA Including Drift Collapse U0075 
+MDL-NBS-HS-000002 REV00 Attachment III-63 February 2000 
+enddo 
+enddo 
+enddo 
+c 
+open(unit=2,file='INCONsf',status='unknown') 
+rewind(2) 
+write(2,'(a60)')head 
+do i=1,nx 
+do j=1,ny 
+do k=1,nz 
+do kk=1,ndual 
+do nn=1,ne 
+if(id(nn).eq.iinc(i,j,k,kk))then 
+write(2,'(a5,2i5,e15.9,2e10.4)') 
+& id(nn),idum,idum,por(i,j,k,kk),10.0*xperm(i,j,k,kk), 
+& xalfa(i,j,k,kk) 
+write(2,'(e20.14)')xsat(i,j,k,kk) 
+endif 
+enddo 
+enddo 
+enddo 
+enddo 
+enddo 
+c 
+write(2,*) 
+close(1) 
+close(2) 
+stop 
+40 stop 'Premature EOF on MESH' 
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

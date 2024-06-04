@@ -1,0 +1,1255 @@
+  ********************************************************    
+                                         NOTICE
+    ********************************************************
+                                
+                This document was converted from
+           WordPerfect or Word to ASCII Text format.
+                                
+   Content from the original version of the document such as
+headers, footers, footnotes, endnotes, graphics, and page numbers
+             will not show up in this text version.
+                                
+All text attributes such as bold, italic, underlining, etc. from the
+    original document will not show up in this text version.
+                                
+        Features of the original document layout such as
+columns, tables, line and letter spacing, pagination, and margins
+           will not be preserved in the text version.
+                                
+        If you need the complete document, download the
+  WordPerfect version or Adobe Acrobat version, if available.
+                                
+*****************************************************************
+                                                           Before the
+               FEDERAL COMMUNICATIONS COMMISSION
+                     Washington, D.C. 20554
+
+
+In the Matter of                        )
+                                   )
+2000 Biennial Regulatory Review of Part 68 of          )    CC Docket No. 99-216
+the Commission's Rules and Regulations       )
+                                   
+                                
+                                
+                                
+                 NOTICE OF PROPOSED RULEMAKING 
+
+
+Adopted:  May 15, 2000             Released:   May 22, 2000
+
+
+Comment date:  June 23, 2000
+Reply comment date: July 7, 2000
+
+By the Commission:
+
+
+                       TABLE OF CONTENTS
+
+     
+     I.                                                     INTRODUCTION. . . . . . 2
+     II.                                                    BACKGROUND. . . . . . . 4
+     III.                                                   PROPOSALS FOR PART 68 . . . . . . 7
+       A.                                                   Regulatory Paradigm for Establishing Technical Criteria . . . . . . .7
+         1.                                                 Need for Technical Criteria to Protect the Network. . . . . . . 8
+         2.                                                 Relative Roles of Government and Industry in Establishing Technical Criteria. . . . . . .9
+         3.                                                 Option A   "Gatekeeper" SDO . . . . . 14
+         4.                                                 Option B   Multiple Standards Organizations . . . . .19
+         5.                                                 Option C - Incorporate Specific Standards by Reference. . . . . . . 22
+         6.                                                 Clarification of Terminology in Part 68 . . . . . . .23
+       B.                                                   Regulatory Paradigm for Equipment Approval. . . . . .23
+         1.                                                 Telecommunications Certification Bodies . . . . . . .24
+         2.                                                 Supplier's Declaration of Conformity and Verification . . . . .26
+         3.                                                 Database of Approved or Certified Equipment . . . . .28
+         4.                                                 Anti-Drug Abuse Act . . . . . . .29
+         5.                                                 Registration Numbering and Labeling . . . . . . 29
+         6.                                                 Compliance With Consumer Protection and Part 68 HAC/VC Rules. . . . . . .30
+       C.                                                   Commission Enforcement of the Streamlined Part 68 . . . . . . .31
+       D.                                                   Conclusion. . . . . . .33
+     IV.                                                    PROCEDURAL MATTERS. . . . . 33
+       A.                                                   Ex Parte Presentations. . . . . .33
+       B.                                                   Initial Paperwork Reduction Act Analysis. . . . . . .33
+       C.                                                   Comment Filing Procedures . . . . . . 34
+       D.                                                   Further Information . . . . . . .35
+     V.                                                     ORDERING CLAUSES. . . . . . 35
+
+APPENDIX A   List of Commenters and Fora Participants
+
+APPENDIX B   Initial Regulatory Flexibility Act Analysis
+
+                      I.INTRODUCTION
+                                
+1.   In this Notice of Proposed Rulemaking (Notice), we propose to streamline most elements of the
+process by which technical criteria are established for customer premises equipment (CPE or terminal equipment)
+that, once approved, local exchange carriers must allow to be connected to the public switched telephone network
+(PSTN).  We also propose to minimize Commission assessment of product compliance with technical criteria for
+such equipment.  Our goal is to make these processes faster and more responsive to technical innovation, with a
+diminished role for the government, while preserving our core goals of preventing harm to the PSTN and ensuring
+access for persons with disabilities.  
+2.   CPE currently is regulated by Part 68 of our rules, which establishes technical criteria designed to
+ensure that the CPE does not harm the PSTN or telephone company personnel and a registration process to verify
+which CPE complies with these criteria.  Part 68 requires local exchange carriers to allow CPE that is registered
+as Part 68 compliant to be connected to their networks.  As part of our overall mandate to reduce regulation
+wherever possible, consistent with the public interest,  we propose in this Notice largely to privatize two of Part
+68's functions -- first, the establishment of technical criteria for CPE to ensure it will not harm the PSTN and,
+second, the registration process used to determine whether a particular model of equipment meets those standards. 
+The reduction of governmental involvement in the setting of technical criteria and registration of CPE will, we
+believe, have a beneficial impact upon the pace of new or competitive CPE deployment, and therefore increase the
+choices available to consumers. 
+3.   Our proposals in this Notice are based on positions that emerged from a series of industry fora we held
+in July 1999 to explore the extent to which regulations in Part 68, other than our hearing aid compatibility and
+volume control (HAC/VC) rules, may no longer be necessary.  We also include proposals patterned after the
+Commission's rules establishing interconnection rules for cable television devices.  In this Notice, we propose to
+retain in our rules proscriptions against certain harms to the PSTN that can be caused by offending CPE.  We also
+propose that our rules continue to require that local exchange carriers (LECs) allow CPE that meets technical
+criteria for network protection to be connected freely to their networks. However, rather than continuing to set such
+technical criteria ourselves, we propose in this Notice to use one of several potential industry standards-setting
+processes.  The only technical criteria that we propose to retain in our rules are those that ensure access to
+telecommunications and services by persons with disabilities and those that deal with network demarcation and
+inside wire.  To ensure that the public interest is adequately protected, we propose to provide for de novo
+Commission review and enforcement, where necessary, of the industry-established technical criteria in the event of
+an appeal regarding the criteria.  We expect, however, that such Commission involvement would be extremely
+limited.
+4.   We also propose to assign to private industry the process of verifying that specific CPE meets the
+established technical criteria.  We have already established a procedure whereby CPE manufacturers may submit
+their products to private Telecommunications Certifications Bodies (TCBs), rather than the Commission, for Part
+68 registration.  In this Notice, we propose to replace Commission registration entirely with either expanded use
+of the TCBs for certification, or self-certification or verification.
+                       V.BACKGROUND
+                                
+6.   Before the Commission established its rules in Part 68, CPE was manufactured almost exclusively by
+Western Electric, which was part of the Bell System of companies that included the monopoly local exchange and
+long distance providers in most parts of the country.  This ensured that no harmful CPE was connected to the
+PSTN, but also created a monopoly in the development and manufacture of CPE.  The Part 68 rules are premised
+on a compromise whereby LECs are required to allow CPE manufactured by anyone to be connected to their
+networks, provided that the CPE has been shown to meet the technical criteria for preventing network harm that are
+established in the Part 68 rules.  Thus, although our Part 68 rules appear to establish elaborate requirements for
+CPE manufacturers, the fundamental obligation that the rules impose is on the LECs -- they must allow Part 68-
+compliant CPE to be connected freely to their networks.  CPE manufacturers are not required to comply with Part
+68, but equipment that is not Part 68-registered is not freely connectable to the PSTN and thus has limited
+marketability.  Our rules have facilitated a vibrant, competitive market for CPE, reducing prices and resulting in a
+proliferation of new equipment and capabilities available to consumers.
+7.   At the time the Commission established its Part 68 rules, the LECs controlled the CPE market as well
+as the PSTN itself.  Few entities outside of the LECs had extensive knowledge about the interaction of CPE and the
+PSTN, and there appeared to be no private standard-setting bodies or testing laboratories with expertise in CPE. 
+Given this market condition, the Commission took upon itself the obligations of both establishing technical criteria
+to ensure that CPE would not harm the network and verifying that specific CPE complied with the technical
+criteria.  The rules identified four types of harm against which the network was to be protected:
+          (1)  electrical hazards to telephone company personnel, 
+          (2)  damage to telephone company equipment, 
+          (3)  malfunction of telephone company billing equipment, and
+                                   (4)  degradation of service to persons other than the user of the subject terminal equipment, his
+calling or called party.
+8.   Taking account of the LECs' near monopoly on technical expertise in the 1970s, the Commission
+included in its Part 68 rules detailed technical information, including drawings and schematics of CPE circuitry and
+interconnection devices.  The initial Part 68 rules were based, in large measure, on the existing internal carrier
+technical standards at that time.  Although they contain detailed technical criteria, the Part 68 rules do not generally
+seek to ensure the quality, performance, or interoperability of interconnected networks.
+9.   In the years since the Part 68 rules were promulgated, the marketplaces for both CPE and local
+exchange service have changed dramatically, as has this Commission's approach to regulation.  As noted above,
+vibrant competition has emerged in the CPE marketplace.  Basic voice telephones (virtually the only consumer CPE
+that was available from the LECs at the time Part 68 rules were established) are now available from an array of
+suppliers in a myriad of styles with varied options for extremely low prices.  New types of CPE, including
+advanced telephones, computer modems, and equipment for individuals with disabilities, have become available. 
+Private standards-setting bodies and testing laboratories for telecommunications equipment have also been
+established, and the CPE-manufacturing industry has matured and plays a strong and active role in them.  The
+PSTN itself is also becoming more competitive.  Competition in the long distance market became a reality with the
+divestiture of the Bell System in 1984.  With Congress's passage, and the Commission's implementation, of the
+1996 Act, competition is now emerging in the local exchange market as well, with new companies often using their
+own networks, in whole or in part, to serve local customers.  
+10.  The Commission has revised Part 68 many times since it was initially promulgated, often to reflect
+technological innovation in the network and CPE.  In addition, we have established rights to supply, buy, and use
+inside wiring.  Despite frequent revisions, the time and resources required to change federal regulations in
+accordance with the Administrative Procedure Act (APA) have prevented, in some cases, the Part 68 rules from
+keeping pace with technological innovations.  As a result, we have established a policy of granting waivers of
+certain of the technical criteria in Part 68 on an ad hoc basis to accommodate technological innovations that, while
+not compliant with Part 68, nevertheless serve the public interest.  We generally have granted such waivers in
+anticipation of later rulemaking proceedings that would effect a change in our rules to accommodate the innovations
+on a permanent basis.  Nevertheless, the waiver process may hinder the pace at which such innovations can be
+deployed in the marketplace and enjoyed by the public.
+11.  The Part 68 rules also affect foreign manufacturers of CPE.  Currently, the U.S. Customs Service
+prevents the importation into the United States of terminal equipment that is not Part 68-registered.  Because the
+Commission currently processes Part 68 registrations, foreign manufacturers must apply to the Commission for
+registration prior to exporting their products to the United States.  In part to make it easier to export terminal
+equipment into the United States, we recently have enacted rules that allow manufacturers to have their equipment
+certified as compliant not only by the Commission, but, as an alternative, by any of a multitude of TCBs as well. 
+TCBs need not be based in the U.S.; TCBs may be based in any country with which the U.S. has a Mutual
+Recognition Agreement (MRA).  TCBs must meet certain qualifications that ensure their knowledge, expertise,
+and integrity.   We have also adopted uniform, or "harmonized," technical criteria for protection of the wireline
+network consistent with the protections used in Canada.  The existence of the TCB program will benefit not only
+foreign manufacturers but also domestic manufacturers, who may apply to TCBs for equipment registration in lieu
+of the Commission.  Nevertheless, our current rules envision the TCBs as an alternative to the primary role of the
+Commission in registering CPE.
+12.  Against the backdrop of these highly developed and competitive market conditions and the opportunity
+for a new regulatory paradigm, we began an inquiry in 1999 into whether the Commission could begin to take a
+less active role in regulating the interconnection of CPE to the PSTN.  In July 1999, the Common Carrier Bureau
+held a series of public fora on this question. Industry commenters in the fora included representatives of incumbent
+local exchange carriers (ILECs), competitive local exchange carriers (CLECs), manufacturers, industry
+associations, terminal equipment testing laboratories, and one state consumer counsel. The views of commenters
+and fora participants were that: (1) carriers' networks must be protected; (2) one uniform set of national technical
+standards is necessary; (3) there are few, if any, unnecessary technical requirements in Part 68 at present; (4) the
+Commission should retain the authority to ensure that the PSTN is protected; and (5) the functions of technical
+criteria development, laboratory qualification, and registration of equipment, currently performed by the
+Commission, largely can be privatized.  The ideas developed in the fora have shaped some of the proposals
+discussed in this Notice.  In addition, in a 1998 Report and Order on interconnection devices for cable television
+systems we adopted a set of rules to accomplish set-top box interconnection functions that were far simpler than
+the Part 68 framework for CPE interconnection.  Our proposals for Part 68 privatization also are based in part
+upon this precedent. 
+                XIII.PROPOSALS FOR PART 68
+                                
+14.  In this Notice, we propose alternative approaches to reducing the Commission's role in regulating the
+interconnection of CPE to the PSTN by relying to a greater extent on industry standards-setting bodies.  We first
+discuss ways to allow industry standards-setting organizations to take over the establishment of the Commission's
+technical criteria for CPE currently set forth in Commission's rules.  We then discuss alternatives for removing the
+Commission from the role of verifying CPE's compliance with the relevant technical criteria, which occurs
+currently through the Part 68 registration process.
+ A.Regulatory Paradigm for Establishing Technical Criteria
+                                
+15.  As noted above, Part 68's guarantee that compliant CPE can be connected to the PSTN has
+fundamentally altered the market for CPE and the balance of power between the LECs and equipment
+manufacturers.  Because we believe that the industry has developed a high degree of competitiveness, information
+dissemination, and balanced participation of entities other than incumbent LECs in developing policies applicable
+to network protection, we initiate in this Notice a rulemaking proceeding to rely more heavily on industry standards-
+setting bodies for establishing technical criteria for CPE.  In this section, we consider how to implement these
+changes.  We face two basic questions with respect to technical criteria for CPE.  First, we must determine whether
+there is a continued need for technical criteria of any kind in order to protect the PSTN from harm.  Second, if there
+is a continued need for technical criteria, we must consider whether it is necessary for the Commission to continue
+to establish and maintain such criteria as opposed to having industry establish the criteria.
+          1.   Need for Technical Criteria to Protect the Network
+                                
+16.  We must begin this inquiry with the question of whether technical criteria are still required at all to
+protect the PSTN from harm.  Such criteria would no longer be necessary if, for example, we were to determine
+that the CPE-manufacturing industry has reached such a level of maturity that it is now inconceivable that harmful
+CPE would ever be brought to market, or that any LEC allegations of CPE's potential to cause harm had been
+exaggerated.  These are questions that the Common Carrier Bureau explored in the 1999 public fora on Part 68
+deregulation.  
+17.  In general, it appears that all segments of the industry, including equipment manufacturers, agree that
+improperly designed or constructed CPE may still present a threat to the PSTN.  The Common Carrier Bureau
+began the July 1999 fora with the premise that industry might welcome complete elimination or reduction of Part
+68 regulation.  We learned that that is not entirely the case.  Commenters from all facets of the CPE industry were
+unanimous in their view that the technical requirements designed to protect the network from harm are beneficial
+to owners of the network, to consumers, and to both domestic and foreign manufacturers.   In fact, all parties at
+the fora argued that all four types of protections listed in section 68.3 are still needed.  SBC, for example,
+discussed at length the technical faults that can cause injury to maintenance personnel, the network physical
+plant, and to other users of the network.  Ameritech and Lucent argued that new technology increases, rather
+than diminishes, the need for protection of the network from harm and interference to third parties.  Thomson
+pointed out that responsible manufacturers are eager to learn and comply with the technical criteria that will protect
+the network from harm; other manufacturers attending the fora generally agreed that rules are necessary to this
+end. It appears that LEC billing apparatus still requires protection from potential abuse by CPE.  TIA,
+USTA, and ITI, trade associations representing a broad spectrum of the telecommunications industry, all argued
+that the network must be protected from damage that still can be caused by improperly designed CPE or untested
+new technologies.  Commenters also pointed out that, in the Harmonization Order, the technical criteria were
+carefully reviewed so that the applicability of the current technical rules has been recently examined by industry
+standards groups.  
+18.  We therefore tentatively conclude that it remains necessary to maintain technical criteria for CPE to
+protect the PSTN from harm.  We also tentatively conclude that the four types of network harm currently embodied
+in the Part 68 rules continue to represent a valid enunciation of the types of harm against which the PSTN still must
+be protected.  We seek comment on these tentative conclusions.
+          1.   Relative Roles of Government and Industry in Establishing Technical Criteria 
+                                
+19.   Currently, the technical criteria for freely connectable CPE are contained in Part 68 of our rules; they
+are thus promulgated by a government agency pursuant to the rulemaking process.  Based on the information
+received in the fora, we tentatively conclude that consumers and the industry would be better served if the technical
+criteria were established by an industry standards-setting process rather than by the Commission.  We reach this
+tentative conclusion for three reasons. 
+20.  First, the record developed to date shows that all components of the CPE industry, i.e., industry
+associations, terminal equipment manufacturers, local exchange carriers, standards organizations, and retailers,
+depend upon the safety of the telephone network for their economic survival.  As a result, they are logically in the
+best position to know what is necessary to protect the network. 
+21.  Second, we believe that, because the industry substantially benefits from protecting the PSTN, it
+rightly should have the responsibility, in the first instance, of establishing these criteria rather than relying on the
+government to do so.  This places the initial responsibility of protecting the PSTN from harm on those who have
+a strong financial interest in ensuring this protection. 
+22.  Third, the extensive participation in technical standards-development by these diverse segments of the
+industry is a testament that appropriate parity exists among these parties.  Competing interests (e.g., the LECs that
+own the networks, the manufacturers of CPE, and existing testing laboratories) will share responsibility for
+establishing the technical criteria.  Thus, it does not appear that one segment of the industry will dominate the
+development of technical criteria to the detriment of another segment of the industry.  We seek comment on these
+tentative conclusions.  
+23.  We next consider whether it is necessary to extend the force of law to technical criteria established by
+private bodies, or whether the industry is capable of ensuring compliance with technical criteria for CPE without
+the force of law behind those requirements.  In connection with the Common Carrier Bureau's fora, telephone
+company representatives argued that it is essential to have the authority of the government to uphold provisions for
+network protection in order to facilitate their efforts to seek disconnection of harmful CPE from the PSTN. 
+Without the authority of the government behind technical criteria, they argue, their own efforts to protect their
+networks would be difficult, if not impossible. Comments indicate that consumers also benefit from government
+regulations protecting the network from harm.  According to the Texas Office of Public Utility Counsel (TOPUC),
+there are potential market failures and externalities from harmful CPE interconnection.   Damage to the network
+adversely affects all network users and causes them to incur costs, not just the party that interconnected the
+offending CPE.  Thus, the manufacturer or importer does not have full economic incentive to avoid offering
+harmful CPE, and the result is a market failure.  Commission rules would thus be required to protect consumers
+from these externalities.
+24.  Based on the foregoing, we tentatively conclude that it is necessary for the government to continue to
+provide the force of law to technical criteria designed to protect the network from harm.  We seek comment on this
+tentative conclusion and the premises supporting it.
+25.  We must next determine how best to pursue our twin goals of, on the one hand, privatizing the
+establishment of technical criteria and, on the other hand, retaining a public (i.e., Commission) mechanism for
+reviewing and enforcing those criteria.  These two functions are interrelated in the sense that our method of
+reviewing and enforcing the technical criteria may depend in large part on the method by which the criteria are
+adopted. In the remainder of this section, we discuss concrete proposals to effectuate the policy goals we have
+discussed above.  We propose three options for relying on private development of technical criteria to ensure that
+CPE connected to the PSTN does not cause harm.  The three proposals include: (a) Commission identification of
+a "gatekeeper" Standards Development Organization (SDO) that will establish and publish binding technical
+criteria for CPE developed pursuant to American National Standards Institute (ANSI) procedures for consensus
+bodies; (b) adoption of a presumption that CPE that complies with technical specifications established by any
+national standards-setting organization will not cause harm and that local exchange carriers must permit its
+connection to the PSTN; or (c) incorporation into this Commission's rules by reference, through the rulemaking
+process, of specific standards developed by national standards organizations.  We refer to these three proposals as
+Options A, B, and C, respectively. We do not, at this stage of our proceeding, express a preference for any of the
+options.  We request that interested parties provide analyses of these options and suggest further alternatives if
+appropriate. Comments we receive in response to this Notice will provide the basis for our choice of any options or
+alternatives.
+26.  Next, we must consider how, from a legal perspective, we can give privately developed technical
+criteria the force of law.  Historically, we have generally done so by referencing such standards by specific title,
+number and year in our rules.  Accordingly one alternative is a deregulatory paradigm that involves referencing
+industry standards specifically in our Part 68 rules.  Such specific references, however, must be updated through
+a rulemaking proceeding to reflect a newer version of any given standard.  For example, in sections 68.3,
+68.215(d)(4) and 68.317(a) of our current rules, we reference specific industry standards rather than including the
+entire technical description in our rules. Commenters indicate that this procedure, while removing technical criteria
+from our rules, nevertheless creates a "bottleneck" as the referenced standards may become obsolete and the
+reference must be updated in a rulemaking proceeding.  The delay caused by the need to hold a rulemaking
+proceeding is one of the elements of the current system that we seek to eliminate in this proceeding.  Therefore, we
+tentatively conclude that it is preferable to pursue a deregulatory paradigm that allows us to give the force of law
+to private technical criteria without specifically referencing them in our rules.  We tentatively conclude that such a
+procedure will allow vendors to market CPE more expeditiously and bring greater benefits to consumers.  We seek
+comment on these tentative conclusions.
+27.  In light of these tentative conclusions, we propose certain deregulatory options in this Notice
+(specifically, those identified below as Options A and B) that would give presumptive validity and the force of law
+to privately established technical criteria for CPE without referencing those criteria specifically in our rules.  We
+believe that options A and B are supported by the past regulatory framework for Part 68.  The Part 68 First Report
+and Order stressed that the Commission's guiding objective for competitive CPE registration is that it would remain
+"simple and easy to administer as is reasonably possible with a minimum of government intervention."  The
+Commission's goal was to minimize expense to both the government and private industry, to the benefit of the
+ultimate consumer, while protecting the PSTN from harms that could be caused by faulty CPE.  Now, in view of
+the market changes discussed above, we tentatively conclude that the key objectives that led to the original adoption
+of the Part 68 program may be served better through a different mix of government and private industry
+involvement.  Although the privately established technical criteria would have the force of law, the private
+standards-setting organization would not be performing a Commission policymaking function.  The authorized
+standards development organizations would assist us in the implementation of our objectives to permit connection
+of competitive CPE to the PSTN without causing harm.  Although we would expect any disputes over the technical
+criteria to be resolved through established industry processes, any disputes ultimately could be brought to the
+Commission for de novo review or enforcement, if necessary, giving the Commission the final say in the
+establishment of technical criteria.  We request comment on this analysis and the foregoing tentative conclusions. 
+28.  We tentatively conclude that the Commission possesses the statutory authority to adopt any of the
+proposals discussed in this Notice.  For example, the proposed changes are entirely in furtherance of our statutory
+mission "to make available . . . a rapid, efficient, Nation-wide, and world-wide wire and radio communications
+service with adequate facilities . . . ."  Further, the proposed changes are justified, at least in part, on the basis of
+the same statutory authority which was relied upon in 1975 when the Part 68 program was originally
+implemented.   Finally, as noted previously, the proposed changes, if adopted, will further the competitive goals
+of the 1996 Act.  We also seek comment, however, on whether the proposed standards options, particularly the
+Commission's role relative to standards organizations under each of the proposed options, are subject to, and
+consistent with, Section 256 of the Act.
+29.  We also believe that the notice and comment requirements of the APA would not be applicable to the
+development of technical criteria by a non-governmental entity as proposed in options A and B.  This is so because
+when an industry body adopts and applies technical criteria, it will not be adopting a rule. Rather, it will be making
+a private interpretation of a Commission rule prohibiting harm caused by CPE to the PSTN.  Any final
+interpretation with respect to compliance would remain with the Commission through a de novo review and
+enforcement procedure.  We ask for comment on this analysis. We are particularly interested in constructive
+comments on the likely impact of these proposals on small entities. For example, will it be easier or more difficult
+for small businesses to participate in industry procedures than it is for them to participate in FCC rulemaking
+proceedings under the APA? 
+30.  We note that there are a number of other statutory provisions that govern the procedural and
+administrative aspects of agency action, including the Regulatory Flexibility Act (RFA), the Paperwork Reduction
+Act (PRA), and the Congressional review procedures enacted in the Contract with America Advancement Act
+(CWAAA).  For the same reasons that we believe the APA does not apply to privatized development of technical
+criteria, we do not believe these statutory provisions are applicable.  We seek comment on this tentative conclusion.
+31.  Certain factors are common to all three of our options.  First, these proposals affect technical criteria
+in Part 68, Subparts B, C, D, and F.  These proposals also affect the technical definitions contained in Section
+68.3.  We propose, however, to retain in Part 68 definitions of other terms that embody important public policies
+or have some other aspect that is important to our regulatory design outside of CPE interconnection.  Accordingly,
+we propose to keep in Part 68 the present definitions of: (a) "demarcation point" and the related terms "single-unit
+installations" and "multiunit installations," (b) "essential telephones," (c) "harm," (d) "hearing aid compatible," (e)
+"Private Radio Services," (f) "Public Mobile Services," and (g) "secure telephones."  In addition, we will maintain
+our direct oversight of, and rules concerning, hearing aid compatibility (HAC), volume control, consumer
+protection, and inside wiring. We request comment on these proposals and tentative conclusions and request
+suggestions for any other rules which should be retained, or added to, Part 68.
+32.  We tentatively conclude that the explicit goals of Part 68 -- in effect, the requirements that would
+remain in our rules to guide and govern industry development of technical criteria under either option A or B --
+should be the following:
+  �  to develop technical criteria to protect the wireline telephone network from harm, as defined in our rules;  
+
+  �  to allow the expeditious approval of terminal equipment for connection to the wireline telephone network; 
+
+  �  to ensure that technical criteria for CPE are responsive to the needs of new suppliers, new technology, and
+  innovative terminal equipment and services; 
+
+  �  to rely, in developing specific technical criteria to carry out these goals, on nationally recognized standards for
+  the relevant technical aspects of CPE; and
+
+  �  to minimize the duration and expense of  any related activities, especially concerning the introduction of new
+  technology, e.g. testing and product approval.
+
+6.   We ask for comment on the foregoing tentative conclusions and these requirements.  Are any of the
+requirements unnecessary or inappropriate?  Further, are there other requirements that are important enough to be
+stated along with those above?  We request parties to propose other requirements that would be appropriate for our
+rules.
+7.   As a corollary to the foregoing, we propose to consider, review and/or enforce privately-established
+CPE technical criteria only to the extent they concern network harm as defined in our rules.  As discussed above,
+this is the proper province of Part 68.  We tentatively conclude that we would not grant presumptive validity to any
+standards addressing network service quality, performance, and interoperability issues.  We seek comment on this
+tentative conclusion.
+8.   Finally, with regard to all three options, we seek comment on whether the entities involved in technical
+criteria development should be treated as FACs under the Federal Advisory Committee Act (FACA). 
+          1.   Option A   "Gatekeeper" SDO
+
+9.   In this option, we propose that the Commission would choose a "gatekeeper" SDO that will establish
+and publish technical criteria for CPE developed pursuant to American National Standards Institute (ANSI)
+procedures for consensus bodies.  Thus, we propose that LECs must permit connection to the PSTN of any CPE
+that meets the technical criteria endorsed by the "gatekeeper" SDO.  We do not propose to require any specific
+structure for the gatekeeper SDO.  The SDO may simply act as a central committee and endorse technical criteria
+developed by other organizations, or it may be an active SDO in its own right that directly establishes technical
+criteria.  Moreover, it is not our intention to modify the existing industry standards setting process and the excellent
+cooperation that today exists among standards groups.  Ideally, commenters that prefer this option would agree on
+what entity we should designate as the "gatekeeper" SDO.  It is clear from the comments received during the fora
+that there are a number of industry standards organizations that could serve as the gatekeeper SDO.  We request
+comment on which entity, or combination of entities, would best be able to carry out the functions we propose for
+the SDO herein.  We believe that Option A would reduce Commission involvement, and give responsibility to the
+industry for establishment of technical criteria.  This option would ensure that technical criteria remains uniform
+and mandatory.  Thus, we believe that this option addresses all of the concerns raised by fora commenters while
+minimizing the Commission's involvement in establishment of technical criteria.
+10.  The proposal for a single SDO to serve as the industry body responsible for the establishment of
+technical criteria is not without precedent.  In the recent Advanced Services Third Report and Order, we
+determined that a single ANSI-accredited standards development group, T1E1.4, is the best forum for developing
+spectrum compatibility standards pertaining to the network side of the demarcation point.  We determined that
+because T1E1.4 has broad-based industry representation and years of experience developing these standards, the
+Commission would rely on that organization to be the one body responsible for development of spectrum
+compatibility standards and for fair and open practices in the deployment of advanced services technology.  We
+concluded that relying on a single standards setting body would ensure that all carriers know which technologies
+can be deployed and can design their networks and business strategies accordingly.  In addition, in an effort to
+ensure that the Commission played a role in fostering timely, fair, and open development of standards, we chose the
+Network Reliability and Interoperability Council (NRIC), an existing Federal Advisory Committee (FAC), to
+advise the Commission on the standards developed by T1E1.4.  We would view the chosen SDO's determinations
+regarding technical criteria for CPE to be presumptively valid.  Moreover, as described herein, the Commission
+would retain a role in the process by providing necessary oversight and enforcement through continued network
+harm rules and a de novo review and enforcement process.
+11.  We propose that the gatekeeper SDO conduct its deliberations pursuant to the American National
+Standards Institute (ANSI) procedures for consensus bodies.  We believe that this requirement would result in few,
+if any, appeals to this Commission as a result of disputes over technical criteria.  We expect that all industry
+parties, including the manufacturers and LECs, will accept the SDO's published criteria, because they will have
+been developed pursuant to consensus procedures.  We request comment on this proposal.
+12.  Under this option, we also propose to continue the present level of Commission monitoring of the
+development of technical criteria by attending certain deliberative meetings of the SDO.  Commission staff
+attendance at the meetings of one SDO would not stretch the Commission's resources beyond the current level
+dedicated to this monitoring function, and may possibly reduce them.  Commenters argue that this Commission's
+continued involvement in monitoring the development of technical criteria is essential, stating, for example, that the
+"FCC has a way of bringing in various complaints that may have come to the Commission from consumers around
+the country and making sure that that voice is heard," and that without Commission involvement, there is a
+possibility for industry negotiators to base their desire for particular standards on their market share of a particular
+technology or even on a patent for which they would receive a royalty.  Commission staff currently attends some
+industry standards meetings as observers, and this participation has been sufficient to achieve the benefits noted by
+fora commenters.  We tentatively conclude that this level of participation in a "gatekeeper" SDO is essentially a
+continuation of current levels of monitoring, and as such is sufficient to provide public interest input to the SDO at
+the current level offered to Part 68 industry standards groups.  We request comment on this analysis and tentative
+conclusion.
+13.  We propose that our rules containing Part 68 technical criteria would remain applicable until the
+designated SDO publishes its criteria.  The SDO's initial technical criteria would be identical to our existing
+technical criteria.  At the same time, our new rules would go into effect that would not include the detailed technical
+criteria.  Our rules would, instead, identify the SDO's technical criteria as presumptively valid and, if complied
+with, would trigger LEC responsibility to permit CPE connection to the PSTN.  Thus, there would be no lapse of
+coverage of the technical criteria.  Our new rules would provide that the SDO would thereafter have the
+responsibility to maintain, change or even eliminate the criteria, subject to a few guiding principles and requirements
+we propose to establish in our rules.  Clearly, we do not propose to usurp the role of industry in the standards-
+setting process.  We seek comment, therefore, on whether this proposal allows for sufficient autonomy in the
+industry standards-setting process.  We emphasize that we will set out a procedure that will allow parties to petition
+the Commission for de novo review or enforcement of the SDO's technical criteria determinations.  Thus, the new
+rules will provide a procedure for reviewing the SDO's activities that is no more cumbersome than the current
+procedure for changing the Commission's technical criteria in the first instance.  Absent the need for Commission
+intervention, however, the new procedure will allow the SDO to update the CPE interconnection technical criteria
+in response to changes in technology much more expeditiously than the current rulemaking processes allows.  More
+importantly, however, the process will be in the hands of the industry itself, largely privatizing the criteria-setting
+process so that the Commission may assume a more appropriate oversight role through the rules proposed herein.
+14.  In summary, we propose that technical criteria established by the gatekeeper SDO would be
+considered presumptively valid, and directly supported with necessary Commission oversight and enforcement
+pursuant to guidelines and requirements established in our rules.  Whatever the SDO's published technical criteria
+are, a manufacturer that complies with the criteria must be permitted by any LEC to be approved for connection to
+the PSTN.  We believe that this approach has the advantage of maximizing the role of the industry in establishing
+its own CPE technical criteria.  This approach would also achieve our goals of largely privatizing the process of
+establishing technical criteria while retaining our ultimate authority over the policies underlying the technical
+criteria.  We expect that the CPE industry would normally comply with the SDO's technical criteria without
+seeking Commission review.  Fora commenters concurred with this deregulatory solution, and we believe that fora
+participants and the CPE industry in general are motivated to work with a unified source for establishment of
+technical criteria.
+15.  We do recognize, however, that the "gatekeeper SDO" option may have some disadvantages. While
+we believe that conducting deliberations pursuant to ANSI procedures assures a high degree of fairness to
+participants, a gatekeeper SDO could end up with a significant amount of authority over the standards-setting
+process.  We see two possible problems resulting from this authority.  First, we seek comment on whether
+designating a gatekeeper SDO may inhibit a more dynamic process that multiple SDOs might better achieve if, as
+we propose in Option B, they do not have the requirement to seek ratification by another SDO as gatekeeper. 
+Second, because of the need to facilitate the rapid growth and pace of introduction of new technologies, we also
+seek comment on whether a gatekeeper SDO consensus process, as opposed to other processes, such as those
+proposed in Options B and C, would be able to keep pace with the introduction of new and innovative CPE
+technologies and services.
+         a)Identity of the Proposed SDO
+
+16.  Under the gatekeeper SDO option, we propose to choose the gatekeeper SDO to serve subject to
+Commission oversight.  We emphasize that we request industry input on the best structure and composition for the
+gatekeeper SDO.  Ideally, commenters would offer a consensus suggestion for the identity and structure of this
+organization. 
+17.  In this proceeding commenters have both suggested specific entities and proposed quality standards for
+the gatekeeper SDO.  Communications Certification Laboratory (CCL) envisions that the SDO would provide an
+open forum, following due process guidelines outlined in ANSI procedures, to produce and maintain a "privatized
+ANSI Part 68."  CCL recommends that we use an SDO such as the Telecommunications Industry Association
+(TIA), ANSI C63, or the Alliance for Telecommunications Industry Solutions (ATIS).  Sprint observes that two
+groups could serve as the SDO: the Telecommunications Industry Association, which sponsors the Committee TR-
+41.9, or the ATIS Committee T1.  Sprint recommends the latter group because it includes central office switch
+engineers from equipment manufacturers and because it says the group has a greater participation by incumbent
+and new local exchange carriers.  Lucent suggests that the Commission delegate to a single SDO or council of
+SDOs the responsibility of developing national technical rules, noting that any SDO chosen for this capacity must
+represent industry as a whole and permit open participation by all parties.  ITI proposes an open industry forum
+to develop the technical requirements based on the international standards of the International Electrotechnical
+Commission (IEC).  USTA and TIA suggest an ANSI-accredited SDO.  TIA, the only one of the suggested
+SDOs to participate in this proceeding to date, states that its Committee TR-41, "User Premises Telephone
+Equipment Requirements Engineering Committee," is prepared to take on the task of an SDO for this Commission
+and that it has experience in the process from both a Part 68 perspective and as an ANSI-accredited SDO.  We
+welcome comment on these aforementioned bodies serving as the gatekeeper SDO, as well as other nominations. 
+We request comment on any potential conflict of interest considerations that pertain to any entity proposed for the
+role of gatekeeper SDO. 
+18.  We tentatively conclude that the designated SDO: (a) must be ANSI-accredited, as discussed in the
+next section; (b) must be professionally and administratively prepared to take responsibility for administration of
+technical criteria; (c) should be experienced with technical criteria development; and (d) must follow, and be
+capable of following, any Commission rules and guidelines for SDO operations.  We request comment on these
+qualification requirements and seek further input from parties on these and any additional requirements.
+19.  Part 68 fora participants did not extensively discuss the concept of term limits.  We request comment
+on whether a term limit for the SDO is necessary.  On the one hand, by not establishing a term limit, we may be
+permitting the SDO to be a more stable entity, and thus it may better serve the industry and the public interest by
+bringing certainty to the process of administration of technical criteria and by attracting participants with a deep
+commitment.  Any entity with standing would, of course, be able to petition this Commission for relief at any time
+if it believed that the SDO was not adhering to our rules or otherwise not serving the public interest.  On the other
+hand, by establishing a term limit, we would be requiring a regular review of the SDO's performance.  The SDO
+would have an ongoing incentive to remain responsive, efficient, and effective.  We request comment on this issue
+and on what the length of the SDO's term should be, if any.
+         a)Guidelines for SDO Operations
+
+20.   We tentatively conclude that most aspects of the gatekeeper SDO operations should be governed by
+the terms of accreditation under ANSI, including consensus proceedings.  We believe it is essential to require ANSI
+accreditation for the gatekeeper SDO because the ANSI procedures are a benchmark for consensus decisionmaking,
+and include auditing procedures.  For example, under ANSI procedures, any person with a direct and material
+interest has a right to participate, and to do so without any undue financial burden.  Each such person has the right
+to express a position, to have it considered, and to appeal an adverse decision.  Under ANSI procedures, each such
+person who is known to the SDO receives timely and adequate advance notice of proposed technical criteria setting
+activities, and the notice meaningfully and clearly describes the proposed activities and states where more
+information may be obtained.  The ANSI standards-development process maintains a balance of interests. 
+Furthermore, the methods used for developing technical criteria are in writing and available to any interested
+person.  We request comment on whether requiring the SDO to be ANSI-accredited is sufficient to ensure fairness
+in the establishment of technical criteria.  If parties believe that this is insufficient, we request comment on whether
+we should develop any additional requirements for the gatekeeper SDO, and if so, what they should be.
+21.   Because we propose that the SDO meet ANSI accreditation requirements, we tentatively conclude
+that it is not necessary to establish any further requirements regarding the SDO's operations.  We believe that
+following the ANSI requirements will ensure that the SDO will provide the opportunity to all entities, including
+small businesses and individuals, to remain involved and informed of the SDO's actions. Thus, we do not propose
+to establish any separate requirements for such matters as the number or location of meetings, the reporting of
+meetings or other information pertaining to agendas, the availability of meeting transcripts, the establishment of
+working groups, or any other aspect of the SDO's operations.  
+22.  We are, however, aware that ANSI procedural criteria include the requirement that "participation shall
+be open to all persons who are directly and materially affected by the activity in question." We intend for the
+gatekeeper SDO to make its consensus processes open to all interested parties.  We request comment on whether
+participation in the standards-setting process of a gatekeeper SDO would be as open to such entities as consumer
+groups, government agencies, or small businesses, as in a Commission rulemaking process. We seek comment on
+whether it is necessary for us to impose additional requirements on the SDO other than the normal ANSI
+requirements to ensure these goals. 
+23.   Likewise, we tentatively conclude that it is not necessary for us to make any specific proposals with
+regard to the SDO's financing.  We believe that following the ANSI requirements will ensure that the SDO will be
+capable of determining its own financing arrangements, and that it will successfully take responsibility for ensuring
+that small businesses and individuals are able to participate in the standards-setting and standards-purchasing
+processes.  We request comment on this tentative conclusion.  
+a)Exceptions to the SDO's Criteria and Interpretation of Criteria
+
+24.   Historically, most of the Part 68 waiver requests that have been filed with the Commission are due to
+the lack of updated technical criteria in our rules for newer equipment, e.g., stutter dialtone devices and xDSL
+modems.  We expect that an SDO would operate relatively quickly to update the technical criteria, and that few
+exceptions to any technical criteria administered by the SDO would be necessary.  To the extent exceptions, or
+interim standards, are requested by manufacturers or importers whose equipment does not meet the technical
+criteria administered by the SDO, however, we propose to require the SDO to establish an expedited interim
+standard process.  This process would require resolution of the requested exception within 60 days.  If the exception
+is denied, a party could file an appeal with the Commission.  We request comment on this proposed procedure.  We
+further request comment on whether the provisions of Section 64.1703 of our rules, which establish a system of
+alternative dispute resolution ("ADR") for the use by entities aggrieved by non-accredited SDOs, should be adapted
+for use by the accredited gatekeeper SDO as the guideline for the interim standards process within the SDO.  One
+difference that we propose for adapting Section 64.1703 to Part 68 would be that participation in an ADR process
+would not be limited to entities that fund the gatekeeper SDO. 
+25.   Likewise, numerous questions received by the Commission staff regarding applicability of the
+technical criteria in particular cases may also be a result of the need to more frequently update the technical criteria.
+With the privatization of development and maintenance of technical criteria, we believe that there would be fewer
+such questions.  To the extent that manufacturers and the general public require information concerning
+applicability of technical criteria, we propose that the SDO establish procedures to respond to such questions
+directly.  We request comment on these proposals.
+
+          1.   Option B   Multiple Standards Organizations
+
+26.  As an alternative to designating a gatekeeper SDO, we propose a second option: relying directly on
+consensus positions achieved under standards development processes and organizations.  This is essentially the
+same policy we have adopted for television "set top boxes" used in cable television and similar systems.  We seek
+comment on all aspects of this alternative option, discussed below.  Under this option, the Commission's rules
+would establish general requirements that networks are to be protected from harms that could be caused when
+terminal equipment is connected and that customers have a right to connect terminal equipment that will not harm
+networks.  The Commission's rules also would provide that terminal equipment that complies with technical
+specifications that are designed to protect networks from harm and that are consensus positions recommended by
+any national standards-setting organization would be presumed to comply with the Commission's general
+requirements on networks and customers' rights.  Although under this option the Commission's rules would not
+specify any particular industry standard or standards-setting organization, the rules would clearly require that only
+terminal equipment that complies with a standard to prevent network harm that is a consensus position of any
+national standards-setting organization could be connected to the PSTN.  Under this approach, customers could be
+allowed to connect to any network any terminal equipment that complies with any applicable standard. 
+Alternatively, carriers could disclose which applicable terminal equipment standard conforms to their network
+design, if more than one standard exists for a given service and equipment.  The Commission would observe but not
+actively participate in the industry technical criteria establishment activity on an ongoing basis.  The Commission
+would allow for de novo review and enforcement in the same manner as proposed for Option A, and it may
+undertake to communicate with industry standards groups that were developing standards that went beyond
+prevention of harm to the PSTN.
+27.  We believe that there are numerous benefits to adopting this option for terminal equipment. Foremost,
+the Commission would increase its reliance on existing private sector standards-setting processes and organizations,
+consistent with existing federal government policies and Commission precedents.  Since the inception of Part 68,
+standards-setting in this area has continued to develop and is now an integral part of existing standards
+organizations.  Indeed, many of the more recent technical rules adopted in Part 68 were initiated by petitions from
+standards organizations or others involved in private sector consensus processes.  Organizations such as TIA and
+ATIS have cooperated well over the years in developing standards for new technologies and services on both the
+customer-side and network-side of the point of demarcation.  Although we were reluctant in the past to adopt
+requests to rely directly on the private sector standards-setting processes for terminal equipment, we believe that
+the success of these groups over time in addressing network harm issues for terminal equipment allows us to
+consider recognizing their work as proposed herein without increasing the risk of network harm.
+28.  We also believe that this option would not impose any additional burdens on standards-setting
+organizations, carriers or manufacturers.  Rather, these groups would continue to work cooperatively on issues of
+mutual concern.  Today, the pace of technological change is ever increasing.  It is not uncommon for ad hoc groups
+to organize to address specific issues and then disband or fold their work into more traditional organizations. 
+Traditional standards-setting organizations may respond to technological changes by developing interim standards,
+clarifying the application of existing standards, or modifying existing standards.  Often, different organizations
+work together to share their expertise and reach consensus positions.  We request comment on any benefits this
+option may have in that it would not interfere with multiple approaches used for achieving consensus positions, and
+whether it may thus be less of an impediment to the introduction of new technologies and services.  Under this
+option, the Commission would not set up any procedure for centralized establishment of interim technical criteria,
+but, rather, would rely on industry groups to clarify or interpret their own existing technical criteria, modify their
+technical criteria, or develop new interim technical criteria.  Under the Commission's general rules on preventing
+harm, described above, equipment complying with these ad hoc solutions would be presumed to not cause harm to
+networks.  
+29.  We recognize that this option may have possible disadvantages.  For example, membership in
+traditional standards-setting organizations may not be open to everyone, and not all eligible members may
+participate.  Participation may not be possible for consumer groups, government agencies, or small manufacturers,
+carriers, or testing laboratories.  Would such constraints result in consensus positions that are not truly
+representative of carriers' and customers' needs?  If not, how would the Commission overcome any shortcomings
+in those consensus positions in order to protect carriers and customers rights?  Should we recognize only consensus
+positions endorsed by ANSI-accredited standards organizations, since ANSI procedures provide some assurance of
+open participation and dialogue in the consensus process? 
+30.  This option would allow consensus positions from any national standards organizations to be
+recognized, and thus uniform nationwide standards may not always result under this option.  It may be possible for
+entities who disagree with the position of an existing standards body to set up their own standards organization. 
+The risk also exists that interested parties may not reach consensus positions on all issues.  In the past, we have
+justified our decisions to adopt specific technical requirements in Part 68 as the sole means for the Commission to
+use its authority to resolve impasses on technical criteria and thus ensure that customers could continue to enjoy the
+benefits of interconnection. We also have expressed concerns that multiple standards might increase costs to
+manufacturers and consumers if manufacturers had to provide alternative devices in the market.   We seek
+comment on whether these concerns are still valid in this competitive market.  If so, how could these concerns be
+ameliorated under this proposal?  We believe that the standards-setting processes for terminal equipment have
+developed significantly over time and interested parties should be able to resolve their differences in a consensus
+process.  We seek comment on whether the Commission should consider some oversight procedures to address
+these concerns.
+31.  Finally, we recognize that many of the specific technical requirements now in Part 68 did not arise
+through a standards-setting process.  If we were to adopt this option, we seek comment on whether we should
+provide a transition period (e.g., twelve months) before sunsetting the technical rules in Part 68 so that standards-
+setting organizations would have time to determine which requirements they would continue to support and
+implement procedures to do so.  We recognize that the Commission may have to continue to grant waivers during
+this transition period so that new technologies could be registered and thus connected to the PSTN.  Therefore, we
+seek comment on a reasonable effective date for implementing this option.
+32.  We seek comment on all aspects of this option, discussed above, as well as comment on other issues
+relevant to implementing this approach.
+
+          1.   Option C - Incorporate Specific Standards by Reference
+
+33.  In this option we propose that interconnection standards be developed by national standards
+organizations and that specific standards be incorporated by reference into our rules.  Incorporating specific
+standards by reference is a long practice at the Commission and other regulatory agencies and doing so in
+accordance with the above procedures is one way of giving the referenced standards the full force of law.
+34.  This option would avoid any necessity to designate a gatekeeper SDO for interconnection standards,
+but would rely on input from traditional standards development organizations.  At present both TIA's and ATIS's
+T1 committees are active in this area and coordinate their activities.  Under this option, these groups and others, as
+appropriate, would develop specific standards and petition the Commission to incorporate by reference these
+standards in our rules.  We recognize that there was discussion in the comments and fora regarding the burden of
+the rulemaking process.  We seek comment on the extent to which this option would either expedite or delay the
+development of technical criteria for Part 68.
+35.  While this option would continue to require an APA rulemaking procedure, and thus may require more
+time to establish technical requirements than options A and B, we believe that requirements may be more clear,
+uniform and consistent.  Although two groups could petition for conflicting standards which would have to be
+resolved in a rulemaking, in the past this type of conflict has been rare because interested parties have usually
+resolved conflicts in the standards development process and we anticipate they would continue to do so.  We seek
+comment on this alternative and its implications.
+          1.   Clarification of Terminology in Part 68
+
+36.  Part 68 currently uses the term "telephone company" rather than the term "local exchange carrier." 
+We tentatively conclude that Part 68 should be amended throughout to change this terminology, including the rule
+sections that we propose to be turned over for any private industry technical criteria establishment.  The use of the
+discontinued term "telephone company" has resulted in some confusion as to whether Part 68 applies to competitive
+LECs as well as incumbent LECs.  In practice, we have required all LECs to permit connection of compliant CPE. 
+This proposed change would reflect our current practice.  We request comment on this proposal.
+     A.   Regulatory Paradigm for Equipment Approval
+
+37.  From the inception of Part 68, the Commission has been responsible for registering specific models of
+CPE that comply with the technical standards for interconnection set out in Part 68.  The current procedure is that
+terminal equipment manufacturers are required to submit information to the Commission showing that the
+equipment meets the requirements of Part 68.  An application for registration must be submitted on FCC Form 730.
+Once the Commission grants an application for registration, the Commission assigns an FCC registration number
+which denotes compliance with Part 68.  
+38.  We tentatively conclude that some type of equipment approval process continues to be necessary for
+terminal equipment in order to assure carriers and customers that terminal equipment can be connected to the PSTN
+while avoiding risks of network harms and to meet our objectives of access to the PSTN by persons with
+disabilities.  Moreover, consistent with our efforts to privatize much of the Part 68 process, we tentatively conclude
+that the Commission no longer needs to perform the function of direct registration of CPE.  This tentative
+conclusion is supported by fora commenters who argued unanimously that the primary shortcoming in the operation
+of Part 68 today is the time it takes to get equipment registered.  For example, Thomson estimates that in this era
+of intense CPE competition, the cost to consumers and manufacturers of the weeks-long registration process can
+amount to millions of dollars a year industry-wide.  We agree with Thomson and other commenters that relieving
+the industry and consumers of this delay will further enhance the competitive robustness of the CPE market. 
+39.  Accordingly, we discuss three methods of requiring proof of equipment compliance with technical
+criteria, each of which would reduce or eliminate the Commission's role in the equipment approval and registration
+process.  These proposals include relying on TCBs for equipment approval, allowing manufacturers to use the
+declaration of conformity process, and allowing manufacturers to use the verification process.  We request
+comment on which of these approval processes we should implement.  If parties believe we should implement more
+than one process, we request comment on whether we should leave the choice of approval processes up to the
+equipment manufacturer or importer, or whether we should implement regulatory requirements specifying the
+specific types of equipment that shall be subject to a specific approval process.  Commenters should address how
+these different approaches for implementing more than one approval process may affect the integrity of an
+equipment approval program and compliance with other obligations, such as mutual recognition agreements and the
+Anti-Drug Abuse Act, discussed infra in sections B1 and B4, respectively.
+40.  We also propose to combine the registration marks and equipment numbering systems for Part 15 and
+Part 68 equipment.  Manufacturers have requested that we reduce the amount of space taken up on their equipment
+by the registration marks, noting that as equipment becomes smaller, it becomes more difficult to find room to place
+the marks.
+          1.   Telecommunications Certification Bodies
+
+41.   Although under the current regulatory regime, the Commission registers terminal equipment pursuant
+to the rules in Part 68, in 1998 we approved rules for new procedures whereby TCBs could also perform Part 68
+equipment authorization functions.  The TCB program was designed in connection with an agreement with the
+European Union ("EU") to facilitate the international sale of devices and equipment requiring testing and/or
+certification.  There is a mutual recognition agreement (MRA) between the U.S. and the EU that allows the U.S.
+to designate entities that can approve equipment to satisfy both domestic and EU requirements, and allows EU
+entities to approve equipment to both U.S. and EU requirements.  In the U.S., these entities are known as TCBs. 
+The TCBs in this country were originally intended to provide an alternative to direct Commission registration, and
+to further international trade.  Indeed, the Commission contemplated that TCBs would eventually take on all of the
+necessary registration processes.  The TCB program requires the Commission to designate private domestic
+entities as TCBs to certify or register equipment as complying with the Commission requirements in lieu of the
+Commission continuing its current Part 68 registration process. 
+42.  We propose the TCB program as one option to replace Commission registration of CPE, thus
+furthering our goal of privatizing or streamlining Commission processes that are no longer necessary.  In the MRA
+Order, we contemplated that TCBs would eventually take over our registration processes, but that initially,
+manufacturers could choose either Commission or TCB registration.  Our proposal herein would accelerate the use
+of TCB registration to replace Commission registration of Part 68 CPE.  We agree with several commenters who
+argued that the TCBs would be in a position to perform the Commission's CPE registration functions for both
+domestic and international purposes within a short time after they are designated by the Commission. As we
+noted when we adopted the TCB program, we expect that the TCB program will provide an alternative to the
+current registration process and perhaps quicker means to introduce new products in the market.  We believe this
+proposal has several advantages.  First, domestic TCBs are close to starting equipment approval under the
+Commission's oversight.  Several entities have applied to be certified as TCBs for the Part 68 equipment approval
+programs, and manufacturers and importers will be able to apply to TCBs for approvals under Part 68, so that
+TCBs could promptly replace the Commission's registration process.  Second, TCBs must be accredited by the
+National Institute of Standards and Technology (NIST); this will ensure their competence to perform these
+equipment approval functions.  Third, the carrier community appears comfortable with the TCBs' ability to register
+equipment in a manner that will provide their networks with necessary protection from harm.   Indeed, carriers
+have been significant participants in the industry consensus process leading up to development of TCBs.  Fourth,
+the manufacturing community has also been involved in the industry consensus proceedings and appears very eager
+to have this option for more rapid equipment registration. We request comment on this proposal.
+          1.   Supplier's Declaration of Conformity and Verification
+
+43.  Declaration of Conformity.  A second alternative to direct Commission registration is the declaration
+of conformity process (DoC) that is currently available for certain types of equipment subject to Part 15 regulation,
+and is defined in Part 2 of our Rules.  DoC is a procedure under which the party responsible for the equipment's
+compliance with specific technical parameters, the manufacturer, importer, or assembler, causes measurements to
+be made of equipment performance with regard to those parameters. The party performing such measurements
+must be accredited for doing so by an authorized accreditation body based on the International Organization for
+Standardization and International Electrotechnical Commission ("ISO/IEC") Guide 25.  This DoC procedure is
+covered by the MRAs that the U.S. has with the EU and Asian Pacific Economic Community (APEC). 
+44.  Under this option, CPE manufacturers would seek the services of a testing laboratory that is accredited
+to test Part 68 equipment by an accreditation body pursuant to ISO/IEC Guide 25.  The manufacturer itself may
+be so accredited, and may perform in-house testing.  TIA believes that a DoC process would benefit consumers and
+relieve competing manufacturers of the delay caused by governmental registration.  It points out that authorization
+procedures for safety, electromagnetic compatibility, and terminal attachment requirements, similar to the DoC and
+verification processes, have been successfully adopted in many different countries.  Some MRA signatories such as
+the EU, or potential signatories such as Australia, and Singapore, have moved to a "supplier's declaration of
+conformity" process for equipment authorization.  TIA argues that the U.S. should follow suit because
+manufacturers have earned confidence in their conformity assessment capabilities.  Moreover, it argues, the
+surveillance that our rules require TCBs to perform, and penalties for non-compliance, will support compliance.
+45.  We seek comment on the extent to which this procedure would reduce the burden on the manufacturer
+or importer, allow new products to enter the market more quickly than would the TCB approval option, and the
+extent to which it may increase the risk of harm to the PSTN.  Commenters that support adoption of the DoC
+procedure rather than the verification procedure discussed in the following paragraphs should explain why the DoC
+procedure, to the exclusion of the verification procedure, better serves the public interest. 
+46.  Verification.  Currently, manufacturers and importers may also use the "verification" procedure for
+certain types of equipment subject to Part 15 regulation; verification is defined in Part 2 of our Rules.
+Verification is a procedure whereby a responsible party makes measurements of equipment performance with
+regard to specific technical parameters.  Unlike DoC, accreditation of the testing facility is not required for
+verification. 
+47.  ITI argues that verification should replace the current registration process.  ITI believes that
+mandatory laboratory accreditation is unnecessary and indeed undesirable because (1) manufacturers have every
+incentive to choose competent entities to perform testing, in view of the demands of the marketplace and the
+Commission's statutory penalties for non-compliance with our rules; (2) many competent laboratories with years
+of experience in Part 68 testing would be subject to the expense and delay of obtaining accreditation; and (3)
+companies with global manufacturing operations would have to perform redundant testing.  ITI adds that although
+this redundancy can be overcome by MRAs, doing so takes a significant amount of time.  ITI argues that its
+proposal would bring the Commission's procedures in line with international norms for the supplier's declaration of
+conformity, as defined by the ISO/IEC Guide 2.  ITI provided detailed rules in support of its proposal.  We invite
+comments on those rules.
+48.   We seek comment on the extent to which this procedure would reduce the burden on the manufacturer
+or importer, allow new products to enter the market more quickly than would the TCB or DoC approval option,
+and the extent to which it may increase the risk of harm to the PSTN.  Commenters that support adoption of the
+verification procedure rather than the DoC procedure discussed supra should explain why the verification
+procedure, to the exclusion of the DoC procedure, better serves the public interest.  As parties have pointed out,
+numerous other countries are moving towards use of these procedures. Even the EU, with which we have a mutual
+recognition agreement, has developed procedures that would obviate the need for TCBs in many situations.
+49.  Creation of a Hierarchy-Based Approval Process.  There was some suggestion in the fora that
+different equipment might be subject to different approval procedures depending upon technological complexity and
+other factors.  Because of our deregulatory goals in this proceeding, we prefer to avoid adding a new regulatory
+layer with additional rules that do not exist in Part 68 now.  Accordingly, we prefer to choose just one of the
+equipment approval options discussed above.  There may be public interest factors, however, that would lead us to
+conclude that some aspects of the equipment registration process require closer scrutiny than others.  For example,
+should we require TCB registration or DoC for all terminal equipment subject to the HAC/VC provisions of
+sections 68.316 and 68.317, while permitting DoC or verification for other equipment such as modems? 
+Alternatively, should we require the TCB registration or DoC procedure only insofar as it ascertains compliance
+with certain technical requirements (e.g., the HAC/VC provisions) and allow a manufacturer to rely on DoC or
+verification for demonstrating compliance with other technical requirements?
+50.  Accordingly, we request comment on whether it is necessary for us to establish a hierarchy for the
+approval method for CPE, i.e., should we establish rules specifying which approval procedure may be used for
+particular types of equipment?  If so, on what factors should the Commission base such a hierarchy? 
+Commenters arguing that the Commission should establish a hierarchy should explain why this additional
+regulatory procedure is in the public interest.  In addition, commenters should address how we should determine
+with which approval process manufacturers and importers must comply for equipment that combines technologies
+that are subject to different equipment approval procedures.  
+          1.   Database of Approved or Certified Equipment
+
+51.  Currently, the Commission maintains a data base of terminal equipment registered pursuant to Part 68. 
+Consistent with our proposal in this Notice to privatize many of the Commission's current Part 68 functions, we
+propose that a private entity be responsible for sponsoring and maintaining a similar database.  We propose that
+entities obtaining equipment approval from TCBs and entities using either DoC or verification be required to submit
+pertinent information regarding their identity and approved equipment to a database administrator.  The only
+standards we propose for the database of approved CPE are that it be accurate and that it be readily available at a
+reasonable cost to users.  We believe that these requirements would ensure that information is available in a timely
+manner to the public and to governmental enforcement agencies without imposing unnecessary burdens on TCBs
+or entities using either DoC or verification.  We recognize that information on certain radio equipment approved
+under DoC or verification is not required to be maintained in a database.  We tentatively conclude, however, that
+a data base of all CPE should be maintained, regardless of whether the equipment is approved by a TCB, or by the
+DoC or verification procedures.  A nationwide data base ameliorates concerns regarding the potentially adverse
+impact of non-compliant CPE on the PSTN.  We seek comment on this tentative conclusion.  We also seek
+comment on whether the costs of maintaining a national database outweigh the benefits of continuing this
+information collection requirement for CPE.  We further seek comment on what information we should require to
+be submitted into a national data base by parties using DoC or verification procedures, and how that information
+would be submitted.  Finally, would the entity or entities maintaining the database be an acceptable source for a
+number signifying equipment approval, and if so, what requirements should be imposed for assignment of an
+equipment approval number to CPE?
+52.  In the MRA Report and Order and under our current rules, TCBs are required to use Form 730 to
+submit information to the Commission on approved equipment.  We now propose with regard to Part 68, however,
+that once this Commission is no longer engaged directly in registering CPE, that we cease our direct involvement
+in this area and no longer require TCBs to use Form 730 or to submit any information directly to this Commission. 
+We believe that TCBs and industry consensus groups should be able to develop their own requirements for
+providing CPE information to a national database.  We seek comment on whether the Commission needs to have
+any continuing role in data submission requirements to this data base.  Finally, we request comment on whether we
+should require the entity or entities maintaining the database to develop a format for submitting information, i.e.,
+should manufacturers and vendors submit information electronically, via the Internet, or on paper? 
+          1.   Anti-Drug Abuse Act
+
+53.   The Anti-Drug Abuse Act (ADAA) requires an entity receiving a "federal benefit" to certify
+compliance with ADAA requirements.  In our decision implementing the ADAA, we applied the definition of
+"license" found in the APA to determine the scope of the term "license" as used in 47 U.S.C. section 5301 and thus
+to define the scope of federal benefits.  The APA defines "license" as including "the whole or part of an agency
+permit, certificate, approval, registration, charter, membership, statutory exemption or other form of permission." 
+Pursuant to this definition, we found that Commission Part 68 registration of equipment to be connected to the
+telephone network is included within the scope of the ADAA.
+ We seek comment on whether the proposed DoC or verification procedures require ADAA certification.  In
+addition, we request comment on whether any conflict would exist between use of the TCB procedure on the one
+hand, which currently requires certification under the ADAA, and the use of DoC and/or verification procedures on
+the other hand, which potentially might not be subject to ADAA requirements.  We request comment on whether
+any ADAA certification continues to be required if we adopt the privatization/streamlining proposals discussed
+herein. 
+54.  In addition, we seek comment and recommendations on the most efficient and accurate way to collect
+any information required by the Anti-Drug Abuse Act, and on whether the information must be retained by this
+Commission or whether it may be held in a privately-maintained registration database.
+          1.   Registration Numbering and Labeling
+
+55.  As stated previously, when the Commission determines that a piece of terminal equipment meets the
+technical requirements for that equipment, the Commission assigns a unique registration number to that piece of
+equipment. We tentatively conclude that although the Commission will no longer be responsible for CPE
+registration, some form of unique identifying label must be applied to all terminal equipment. This identifying label
+is necessary to adequately identify CPE as an approved piece of terminal equipment that customers are entitled to
+connect to the PSTN, whether the manufacturer uses the TCB process, a DoC process, or a verification process. 
+We note, however, that we are prepared to be persuaded otherwise if a substantial record can be developed showing
+that registration numbers are no longer necessary.  
+56.   We seek comment on the best method, under our streamlined Part 68, to assign registration numbers
+to equipment.  Currently, we assign registration numbers when we approve Part 68 equipment applications.  In the
+event this Commission is no longer involved in reviewing applications for CPE approval, registration numbers must
+be assigned by a private entity or entities.  We are now working with TCBs to establish a method for them to assign
+registration numbers to CPE they approve.  We seek comment on how these numbers should be assigned to CPE
+approved through a DoC or verification procedure.
+57.  At present, Part 68 registration numbers, including three character applicant codes, are assigned by the
+Commission.  For Part 15, three character grantee codes are also assigned by the Commission. Applicants combine
+their three character Part 15 applicant code with three to eleven characters of their choice to create a six to fourteen
+character Part 15 equipment authorization number.  We agree with TIA that the Part 15 numbering system may
+work for Part 68 as well.  We propose to combine the requirement for an FCC Registration Number under Part 68
+with the FCC Identifier requirement of section 2.926 of our rules that is used for radio equipment approved by the
+Commission. We propose to use the Part 15 coding scheme for terminal equipment under Part 68 and seek
+comment on how that scheme can be applied reasonably to Part 68 equipment. Under this proposal, a given
+equipment model will have only one FCC number associated with it that is used to document its status. We believe
+that this approach would avoid unnecessary duplication of identifying marks for equipment that must comply with
+both Part 68 and Part 15 requirements, and also will clearly establish one type of identifier to signify that the CPE
+satisfies all Part 15 and Part 68 technical requirements for connection to the PSTN.  We request comment on this
+proposal. 
+58.  As an alternative approach, TIA suggests that a three-character grantee code, which is already
+assigned to existing manufacturers under the CCB certification process, would eliminate the requirement for
+individual product registration numbers.  How would the lack of equipment-specific registration numbers affect
+those who rely on those numbers to identify registered equipment?  In particular, would this impact our
+responsibility to give the Customs Service sufficient information to conduct their interdiction functions? 
+59.  We also propose a harmonized label for equipment subject to either or both Part 15 and Part 68. The
+single label would show compliance with all relevant Commission rules and identify which rules are relevant for the
+model.  For example, the label may state that "This unit complies with all relevant FCC Part 15 and 68
+requirements" in the case of models subject to those parts.  We believe that the label should be as small as possible,
+consistent with clarity.  We note that the Department of Energy and Environmental Protection Agency's Energy
+Star program has a simple labeling scheme to show compliance with voluntary standards.  This program uses a
+simple, attractive logo that has been very effective in identifying compliant products.  We seek comment on the
+exact format of labeling that would be used under the amended rules for both Part 15 and Part 68-compliant
+equipment, and we welcome specific design suggestions.
+          1.   Compliance With Consumer Protection and Part 68 HAC/VC Rules.
+
+60.   We are committed to ensuring that persons with disabilities and other consumers continue to receive
+the full level of enforcement that they currently receive from us.  As noted above, we intend to maintain the Part 68
+HAC/VC rules that we have promulgated in response to statutory directives, rather than using a privatized industry
+process to establish or maintain the technical criteria ensuring hearing aid compatibility and volume control.  There
+was some discussion in the fora regarding the effect of changing the registration process to DoC or verification on
+compliance with rules intended to protect access by persons with disabilities.  We request comment on whether
+changes in the registration process proposed in this Notice may unintentionally affect compliance with consumer
+protection and HAC/VC provisions of Part 68.  We seek comment on whether any of the changes to Part 68
+proposed in this Notice will have an adverse impact on consumer protection or Part 68 HAC/VC rules.  If so, what
+can be done to prevent or mitigate that impact? 
+61.  In addition, any complaints regarding compliance with the technical criteria relating to Part 68
+HAC/VC and consumer protection in Part 68 would come directly to the Commission, as they do now.  We seek
+comment, however, as discussed in the next section, on whether the present Part 68 complaint procedures regarding
+our HAC/VC rules should be replaced or augmented with the procedures we developed pursuant to Section 255 of
+the Communications Act, Parts 6 and 7 of our Rules.  We seek comment and proposals on these issues.
+     A.    Commission Enforcement of the Streamlined Part 68
+
+62.   Although we propose in this Notice to privatize much of the Commission's current functions under
+Part 68, there are numerous aspects of Part 68 regulations that we now enforce and intend to continue enforcing. 
+First, as discussed above, Part 68 would continue to require that local exchange carriers permit connection of
+compliant CPE to their networks.  Second, we propose no change in Section 68.108, which permits carriers to
+discontinue service to subscribers that connect harmful equipment.  Third, we shall continue to enforce the rules
+that will remain in Part 68, such as the technical rules for HAC/VC.  Fourth, we do not intend any of the proposals
+we consider herein to interfere with ongoing U.S. Customs Service enforcement of imported CPE.  We tentatively
+conclude that the proposals will not affect the ability of the U.S. Customs Service to enforce the provisions of 19
+U.S.C. section 3109 dealing with the importation of equipment not compliant with Part 68.  We seek comment
+on this tentative conclusion.
+63.  If we choose the option of TCB registration, the TCBs are required by our rules to conduct an ongoing
+surveillance program.  In addition, oour rules allow parties to report to the Commission any deficiencies
+discovered in connection with the surveillance program.  We propose no change in this basic procedure, and indeed
+we believe it to be an advantage in using the TCB program for Part 68 registration. Finally, we provided in the
+MRA Order that a TCB may revoke its own certification for a period of 30 days after the date of action for an
+administrative error only, but that any other certification revocation must be addressed by the Commission.   We
+do not propose to change these rules at this time, although we may revisit them at a later date with an eye to
+reducing our involvement in this program.
+64.  Parties generally agree, and we so propose, that the Commission should retain ultimate responsibility
+to enforce compliance with our rules, which would include industry-developed technical criteria that we may, upon
+appeal, review and enforce through a de novo review process.  Moreover, we propose these enforcement policies
+notwithstanding which option for establishment of technical criteria we choose, and which equipment approval
+option we choose.  There are two general categories of complaints that parties could bring before the Commission
+requesting enforcement.  First, there may be complaints by end-users or manufacturers that a telephone company
+would not permit connection of compliant equipment. Second, there is the possibility of complaints from consumers
+or others who believe that certain CPE is not compliant, not approved, or that it has caused harm as defined in Part
+68. 
+65.  Part 68 has existing complaint procedures.  We request comment on how these provisions have
+operated to date to uphold the technical criteria in Part 68. In addition, we request comment on whether it would be
+appropriate for the Commission to revise our Part 68 complaint rules, solely for complaints arising from our
+HAC/VC rules, to incorporate procedures recently adopted pursuant to Section 255 and 225 of the Act.   In these
+proceedings, we made it easier for consumers to file complaints and for subject entities to move quickly to resolve
+them.  Accordingly, we request comment on whether a similar approach would be beneficial for enforcement of
+Part 68 HAC/VC rules. 
+66.  In addition, we propose, solely for complaints arising from compliance with the technical criteria
+intended to prevent harm to the PSTN, that prior to filing a complaint with this Commission a party must follow
+an alternative dispute resolution process designed to minimize the number of complaints needing Commission de
+novo review.  We propose requiring this alternative dispute resolution process only for disputes arising from the
+technical criteria we propose to be administered by an industry standards body or bodies.  This provision requires
+the complainant to certify that it has made a good faith effort to discuss the possibility of settlement with each entity
+against which it is filing a complaint, and/or with the local exchange carrier.  We believe that such a requirement
+in this instance would narrow the need for the Commission to review complaints of parties who are acting in good
+faith to comply with the technical criteria.  We request comment on an alternative step: for equipment registered by
+a TCB, would it be appropriate to refer the complaint to the TCB that issued the registration?  Finally, if these
+alternative dispute resolution procedures do not resolve the complaint, the complainant may then petition the
+Commission under the applicable complaint procedures.  We request comments on these proposals.
+     A.   Conclusion
+
+67.  In this Notice we propose several options to privatize and streamline two of Part 68's functions -- first,
+the establishment of technical criteria for CPE that will not harm the PSTN and, second, the process used to
+determine whether a particular model of equipment meets those standards (presently called "registration").  These
+proposals are consistent with our overall mandate to reduce regulation wherever possible, consistent with the public
+interest. We seek a new regulatory regime that reduces direct governmental involvement while still protecting the
+PSTN from harm, maintaining a competitive CPE marketplace, and facilitating expeditious deployment of new
+technology.  We believe that this new regulatory regime will have a beneficial impact upon the pace of new or
+competitive CPE deployment, and therefore increase the choices available to consumers.
+68.  We ask commenters who favor proposals other than those we make above to discuss and compare
+their regulatory paradigm in detail with our proposals. 
+                  LXIX.PROCEDURAL MATTERS
+
+     A.   Ex Parte Presentations
+
+70.  The matter in CC Docket No. 99-216, initiated by this NPRM, shall be treated as a
+"permit-but-disclose" proceeding in accordance with the Commission's ex parte rules.  Persons making oral ex
+parte presentations are reminded that memoranda summarizing the presentations must contain summaries of the
+substance of the presentations and not merely a listing of the subjects discussed.  More than a one or two sentence
+description of the views and arguments presented is generally required.  Other rules pertaining to oral and written
+presentations are set forth in our rules as well.
+     A.   Initial Paperwork Reduction Act Analysis
+
+71.  This NPRM contains a proposal to reduce and/or change existing information collections.  As part of
+our continuing effort to reduce paperwork burdens, we invite the general public and the Office of Management and
+Budget (OMB) to take this opportunity to comment on the information collections obtained in this Notice, as
+required by the Paperwork Reduction Act of 1995, Public Law No. 104-13.  Public and agency comments are due
+at the same time as other comments on this Notice; OMB comments are due 60 days from date of publication of
+this Notice in the Federal Register.  Comments should address:  (a) whether the proposed collection of information
+is necessary for the proper performance of the functions of the Commission, including whether the information shall
+have practical utility; (b) the accuracy of the Commission's burden estimates; (c) ways to enhance the quality,
+utility, and clarity of the information collected; and (d) ways to minimize the burden of the collection of information
+on the respondents, including the use of automated collection techniques or other forms of information technology.
+     A.   Comment Filing Procedures
+
+72.  This proceeding is titled "In the Matter of Biennial Review of Part 68 of the Commission's Rules and
+Regulations, CC Docket No. 99-216."  Pursuant to Sections 1.415 and 1.419 of the Commission's rules, 47 C.F.R.
+ 1.415, 1.419, interested parties may file comments on or before June 23, 2000 and reply comments on or before
+July 7, 2000.  All filings should refer only to "In the Matter of Biennial Review of Part 68 of the Commission's
+Rules and Regulations, CC Docket No. 99-216."  Comments may be filed using the Commission's Electronic
+Comment Filing System (ECFS) or by filing paper copies.  See Electronic Filing of Documents in Rulemaking
+Proceedings, 63 Fed. Reg. 24,121 (1998).  Comments filed through the ECFS can be sent as an electronic file via
+the Internet to <http://www.fcc.gov/e-file/ecfs.html>.  Generally, only one copy of an electronic submission must
+be filed.  In completing the transmittal screen, commenters should include their full name, Postal Service mailing
+address, and the applicable docket or rulemaking number, which in this instance is CC Docket No. 99-216.  Parties
+may also submit an electronic comment by Internet e-mail.  To get filing instructions for e-mail comments,
+commenters should send an e-mail to ecfs@fcc.gov, and should include the following words in the body of the
+message, "get form <your e-mail address>."  A sample form and directions will be sent in reply.
+73.  Parties who choose to file by paper must file an original and four copies of each filing.  All filings
+must be sent to the Commission's Secretary, Magalie Roman Salas, Office of the Secretary, Federal
+Communications Commission, 445 12th Street, SW, Room TW-B204F, Washington, D.C. 20554.
+74.  Parties who choose to file by paper should also submit their comments on diskette.  These diskettes
+should be submitted to Al McCloud, Common Carrier Bureau, Network Services  Division, 445 12th Street, SW,
+Room 6 A-270, Washington, D.C. 20554.  Such a submission should be on a 3.5-inch diskette formatted in an
+IBM compatible format using Microsoft Word97 or compatible software.  The diskette should be accompanied by
+a cover letter and should be submitted in "read only" mode.  The diskette should be clearly labeled with the
+commenter's name, proceeding (including the docket number, in this case, CC Docket No. 99-216), type of pleading
+(comment or reply comment), date of submission, and the name of the electronic file on the diskette.  The label
+should also include the following phrase "Disk Copy - Not an Original." Each diskette should contain only one
+party's pleadings, preferably in a single electronic file. In addition, commenters must send diskette copies to the
+Commission's copy contractor, International Transcription Service, Inc., 1231 20th Street, N.W., Washington, D.C.
+20036.
+75.  Regardless of whether parties choose to file electronically or by paper, parties should also file one
+copy of any documents filed in this docket with the Commission's copy contractor, International Transcription
+Services, Inc., 1231 20th Street, N.W., Washington, D.C. 20036.  Comments and reply comments will be available
+for public inspection during regular business hours in the FCC Reference Center, Room CY A-257, 445 12th
+Street, SW, Washington, D.C. 20554; and with Al McCloud, Network Services Division, Common Carrier
+Bureau, Room 6 A-207, 445 12th Street, SW, Washington, D.C. 20554. 
+76.  Comments and reply comments must include a short and concise summary of the substantive
+arguments raised in the pleading.  Comments and reply comments must also comply with section 1.49 and all other
+applicable sections of the Commission's Rules.  We also direct all interested parties to include the name of the
+filing party and the date of the filing on each page of their comments and reply comments. All parties are
+encouraged to provide a table of contents, regardless of the length of their submission.  We also strongly encourage
+that parties track the organization set forth in this NPRM in order to facilitate our internal review process.
+77.  Written comments by the public on the proposed and/or modified information collections are due on
+or before 60 days from publication in the Federal Register and reply comments are due on or before 15 days
+from the comment date.  Written comments must be submitted by the OMB on the proposed and/or modified
+information collections on or before 60 days after date of publication in the Federal Register. In addition to filing
+comments with the Secretary, a copy of any comments on the information collections contained herein should be
+submitted to Judy Boley, Federal Communications Commission, Room 1-C804, 445 12th Street, SW, Washington,
+DC  20554, or via the Internet to jboley@fcc.gov, and to Edward C. Springer, OMB Desk Officer, Room 10236
+NEOB, 725 17th Street, N.W., Washington, DC  20503 or via the Internet to edward.springer@omb.eop.gov.
+     A.   Further Information
+
+78.  For further information regarding this proceeding, contact Susan E. Magnotti, Senior Attorney,
+Network Services Division, at 418-0871 or smagnott@fcc.gov.  Further information may also be obtained by
+calling the Common Carrier Bureau's TTY number: 202-418-0484.
+                  LXXIX.ORDERING CLAUSES
+
+80.  Accordingly, IT IS ORDERED that, pursuant to sections 1-4, 201-205 and 303(r) of the
+Communications Act of 1934, as amended, 47 U.S.C.  151-154, 201-205 and 303(r), the NOTICE OF
+PROPOSED RULEMAKING is hereby ADOPTED.
+81.  IT IS FURTHER ORDERED that the Commission's Consumer Information Bureau, Reference
+Information Center, SHALL SEND a copy of this NOTICE OF PROPOSED RULEMAKING, including the
+Initial Regulatory Flexibility Certification, to the Chief Counsel for Advocacy of the Small Business
+Administration, in accordance with the Regulatory Flexibility Act, see 5 U.S.C.  605(b).
+
+                              FEDERAL COMMUNICATIONS COMMISSION
+
+
+
+
+                              Magalie Roman Salas
+                              Secretary
+                           Appendix A
+            List of Commenters and Fora Participants
+
+
+
+ACIL (formerly the American Council of Independent Laboratories)
+
+Ameritech
+
+Cisco Systems, Inc.
+
+Communications Certification Laboratory
+
+Information Technology Industry Council 
+
+Intertek Testing Services, NA Inc.
+
+Lucent Technologies, Inc.
+
+Mobile Engineering
+
+Nortel Networks
+
+SBC Communications, Inc.
+
+Sprint Corporation
+
+Tandy Corporation
+
+Telecommunications Industry Association (User Premises Equipment Division) 
+
+Texas Office of Public Utility Counsel
+
+Thomson Consumer Electronics
+
+United States Telephone Association
+
+van der Heim, Peter
+
+
+
+
+
+
+
+                           Appendix B
+            Initial Regulatory Flexibility Analysis
+
+82.  As required by the Regulatory Flexibility Act (RFA), the Commission has prepared this present
+Initial Regulatory Flexibility Analysis (IRFA) of the possible significant economic impact on small entities by the
+policies and rules proposed in this Notice of Proposed Rulemaking.  Written public comments are requested on this
+IRFA.  Comments must be identified as responses to the IRFA and must be filed by the deadlines for comments on
+the Notice of Proposed Rulemaking provided above in Section IV, Subpart C.  The Commission will send a copy
+of the Notice of Proposed Rulemaking, including this IRFA, to the Chief Counsel for Advocacy of the Small
+Business Administration.  See 5 U.S.C.  603(a).  In addition, the Notice of Proposed Rulemaking and IRFA (or
+summaries thereof) will be published in the Federal Register.  See id.
+  LXXXIII.Need for, and Objectives of, the Proposed Rules
+
+84.  In this Notice of Proposed Rulemaking, we take a significant step forward in our initiative to largely
+privatize the process by which technical criteria are established for customer premises equipment (CPE or
+terminal equipment) that may be sold for connection to the public switched telephone network (PSTN), and for the
+registration of such equipment.  Our proposals in this Notice largely are based on the consensus positions of the
+participants in a series of industry forums we held in July 1999 to explore the extent to which regulations in Part
+68, other than our HAC/VC rules, may no longer be necessary.  The majority of commenters and forum
+participants generally argued that: (a) carriers' networks must be protected; (b) one uniform set of national technical
+standards is necessary; (c) there are few, if any, unnecessary technical requirements in Part 68 at present; (d) the
+Commission should retain the authority to ensure that the telephone network is protected; and (e) the functions of
+technical criteria development, laboratory qualification, and registration of equipment, currently performed by the
+Commission, largely can be privatized.
+85.  In this Notice, we propose that the new Part 68 would contain no detailed technical criteria for
+protection of the network, no descriptions and schematics of connectors, and none of the existing rules that pertain
+to application by manufacturers and importers directly to the Commission for equipment registration.  We propose,
+in place of these rules, that local exchange carriers must permit connection to the PSTN of any CPE that meets the
+technical criteria set by an industry standards body or bodies.  This Notice proposes alternative ways that the
+determination might be made whether a piece of CPE meets the industry's criteria, including certification by a
+telecommunications certification body (TCB) and self-certification by the manufacturer.  Both the industry's
+technical criteria and the certification of individual CPE would be subject to a Commission de novo review or
+enforcement process.  While the industry would make its determinations regarding technical criteria under the
+guidance of our policies and regulations, its technical criteria would not be binding on the Commission in the event
+of de novo review or enforcement.  The industry's administration activity would assist us in the implementation of
+our objectives to permit connection of CPE to the PSTN without causing harm, but the industry standards body or
+bodies would not determine the final outcome of technical criteria matters.  Therefore, as administrator of its
+technical criteria program governing the prevention of harm to the PSTN, the industry standards body or bodies
+would not be performing a Commission policy function.  Although our proposals, to transfer the responsibility for
+the development and maintenance of CPE technical criteria from this Commission to an industry body subject to de
+novo review or enforcement, represent a new paradigm for Part 68 regulation, this procedure is in fact a logical
+progression of our historic regulation of CPE and is similar to other deregulatory initiatives we have used.
+86.  In addition, we propose to largely privatize equipment registration by devolving this function, currently
+performed solely by this Commission, to Telecommunications Certification Bodies (TCBs), which we have
+previously established to streamline and privatize some of our regulatory processes.  TCBs would use the
+technical criteria developed by industry to determine whether equipment meets the requirements for registration. 
+We also propose to establish new procedures for manufacturer self-declaration of conformity or verification
+pursuant to the technical criteria, and we request comment on the details pertaining to these options.  Thus, under
+the proposed new rules for Part 68, if CPE meets the technical criteria, and if it is registered pursuant to our new
+privatized registration rules, then wireline telephone companies must permit the equipment to be connected to the
+PSTN.
+                    LXXXVII.Legal Basis
+
+88.  In this Notice of Proposed Rulemaking, we tentatively conclude that the Commission has the necessary
+statutory authority to adjust the Part 68 program as proposed herein.  For example, the proposed changes are
+entirely in furtherance of our statutory mission "to make available . . . a rapid, efficient, Nation-wide, and world-
+wide wire and radio communications service with adequate facilities . . . ."  Further, the proposed changes are
+justified, at least in part, on the basis of the same statutory authority which was relied upon in 1975 when the Part
+68 program was originally implemented, e.g., Sections 4(i), 4(j), and 201-205. Finally, as noted previously, the
+proposed changes, if adopted, will further the competitive goals of the 1996 Act.
+89.  Our proposal herein is further supported by the past regulatory framework for Part 68.  The Part 68
+First Report and Order stressed that the Commission's guiding objective for competitive CPE registration is that
+it would remain "simple and easy to administer as is reasonably possible with a minimum of government
+intervention."  The Commission's goals were to produce an absolute minimum of expense to both the government
+and private industry, to the benefit of the ultimate consumer, while at the same time protecting the PSTN from
+harms that could be caused by the connection of faulty terminal equipment.  Accordingly, we tentatively conclude
+in this Notice of Proposed Rulemaking that, in view of the changes in the industry and the market for CPE over the
+past twenty-five years, the key objectives that led to the original adoption of the Part 68 program can better be
+served through a different mix of government and private industry involvement.  
+XC.Description and Estimate of the Number of Small Entities To Which the Proposed Rules Will
+                           Apply
+     
+91.  The RFA directs agencies to provide a description of, and, where feasible, an estimate of the number
+of small entities that may be affected by the proposed rules, if adopted.  The Regulatory Flexibility Act defines
+the term "small entity" as having the same meaning as the terms "small business," "small organization," and "small
+business concern" under section 3 of the Small Business Act.  A small business concern is one which: (1) is
+independently owned and operated; (2) is not dominant in its field of operation; and (3) satisfies any additional
+criteria established by the SBA.
+92.  RFA analyses and certifications need only address the impact of rules on small entities directly
+regulated by those rules, Mid-Tex Electric Cooperative, Inc. v. FERC, 773 F.2d 327, 342-43 (D.C. Cir. 1985). 
+The Commission's equipment authorization rules directly regulate only manufacturers of equipment, which must
+satisfy the Commission's product approval requirements.  Small test laboratories are not directly regulated by the
+proposed Commission rules.  Thus, to the extent that any testing laboratories would be affected by these proposed
+rules, such entities are not addressed in this IRFA.
+93.  The Commission has not developed a definition of small manufacturers of telephone terminal
+equipment.  The closest applicable definitions under SBA rules is for manufacturers of telephone and telegraph
+apparatus (SIC 3661), which defines a small manufacturer as one having 1,000 or fewer employees.  According
+to 1992 Census Bureau data, there were 479 such manufacturers, and of those, 436 had 999 or fewer employees,
+and seven had between 1,000 and 1,499 employees.  We estimate that there are fewer than 443 small
+manufacturers of terminal equipment that may be affected by the proposed rules. 
+XCIV.Description of Projected Reporting, Recordkeeping, and Other Compliance Requirements
+
+95.  We are proposing to remove the requirement that applicants for equipment authorization apply to the
+Commission, and instead propose that they apply to designated Telecommunications Certification Bodies.  We are
+proposing that instead of submitting Part 68 application information to the Commission, the TCBs would be
+required to submit the data to a nationwide database instead, which shall be administered by a private entity.  We
+are also proposing to offer responsible parties the option to use either a Self-Declaration of Conformity or a
+verification process for equipment authorization.  Such parties would have to submit data concerning their
+equipment to a nationwide database.
+96.   Further, we are proposing to privatize development and maintenance of technical criteria for terminal
+equipment, other than those technical criteria required for compliance with our HAC/VC and consumer protection
+rules, which the Commission proposes to retain.  Small entities with an interest in the development, interpretation,
+and waiver of such technical criteria would be required to seek the ruling of the standard development organization
+responsible for the standard at issue in the first instance.  The Commission, however, proposes to retain full de
+novo review procedures for any industry decision.  
+97.   The Commission also proposes to require that certain information regarding the equipment authorized
+under Part 68 would be placed into a publicly available database.  This information would be available for review
+of technical parameters of specific equipment, including parameters required for compliance with hearing aid
+compatibility, volume control, and other HAC/VC requirements.  This requirement would not be a new information
+requirement since application data is currently required and kept in a Commission database.
+98.    Finally, the Commission proposes to unify the numbering system and the logo that must be imprinted
+on customer premises equipment.  Currently, Part 15 and Part 68 have different labeling and different registration
+numbering systems.  
+XCIX.Steps Taken to Minimize Significant Economic Impact on Small Entities, and Significant           
+                   Alternatives Considered
+
+100. The RFA requires an agency to describe any significant alternatives that it has considered in
+reaching its proposed approach, which may include the following four alternatives: (1) the establishment of differing
+compliance or reporting requirements or timetables that take into account the resources available to small entities;
+(2) the clarification, consolidation, or simplification of compliance or reporting requirements under the rule for
+small entities; (3) the use of performance, rather than design, standards; and (4) an exemption from coverage of the
+rule, or any part thereof, for small entities.
+101. The proposals in this Notice are designed to reduce the length of time for new technology to reach
+the market. This may benefit small entities especially because the proposals would cut any manufacturer's cost to
+bring an equipment design to market.  Alternatives for making these reductions are included in the form of options
+for different methods of 1) industry development and maintenance of technical standards and 2) equipment
+registration.  We request comment on these options.
+102. We request comment on whether small entities would be adversely affected by the proposals
+herein, particularly whether the proposed enforcement procedures or any of the proposed options for establishing
+technical criteria would have a significant economic impact.  We believe that our proposals would have either no
+impact, or would reduce, any economic burdens on small entities. 
+
+CIII.Federal Rules that May Duplicate, Overlap, or Conflict With the Proposed Rules
+
+None.
+

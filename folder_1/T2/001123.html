@@ -1,0 +1,418 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+	
+			
+			
+			
+
+
+
+	
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<title>NIBIB - Picture Gallery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="verify-v1" content="dIlKIQm+/XgkFMhipJdkG6cicyVg7qB/3SMv1ivWSWY=" />
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+function SubmitForm()
+{
+  document.frmTranslate.submit();
+}
+function openWin( windowURL, windowName, windowFeatures )
+{ 
+	return window.open( windowURL, windowName, windowFeatures ) ; 
+}
+
+//-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 8;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// the version of javascript supported
+var jsVersion = 1.0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+<script language="VBScript" type="text/vbscript">
+<!-- // Visual basic helper required to detect Flash Player ActiveX control version information
+Function VBGetSwfVer(i)
+  on error resume next
+  Dim swControl, swVersion
+  swVersion = 0
+  
+  set swControl = CreateObject("ShockwaveFlash.ShockwaveFlash." + CStr(i))
+  if (IsObject(swControl)) then
+    swVersion = swControl.GetVariable("$version")
+  end if
+  VBGetSwfVer = swVersion
+End Function
+// -->
+</script>
+<script language="JavaScript1.1" type="text/javascript">
+<!-- // Detect Client Browser type
+var isIE  = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;
+var isWin = (navigator.appVersion.toLowerCase().indexOf("win") != -1) ? true : false;
+var isOpera = (navigator.userAgent.indexOf("Opera") != -1) ? true : false;
+jsVersion = 1.1;
+// JavaScript helper required to detect Flash Player PlugIn version information
+function JSGetSwfVer(i){
+	// NS/Opera version >= 3 check for Flash plugin in plugin array
+	if (navigator.plugins != null && navigator.plugins.length > 0) {
+		if (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]) {
+			var swVer2 = navigator.plugins["Shockwave Flash 2.0"] ? " 2.0" : "";
+      		var flashDescription = navigator.plugins["Shockwave Flash" + swVer2].description;
+			descArray = flashDescription.split(" ");
+			tempArrayMajor = descArray[2].split(".");
+			versionMajor = tempArrayMajor[0];
+			versionMinor = tempArrayMajor[1];
+			if ( descArray[3] != "" ) {
+				tempArrayMinor = descArray[3].split("r");
+			} else {
+				tempArrayMinor = descArray[4].split("r");
+			}
+      		versionRevision = tempArrayMinor[1] > 0 ? tempArrayMinor[1] : 0;
+            flashVer = versionMajor + "." + versionMinor + "." + versionRevision;
+      	} else {
+			flashVer = -1;
+		}
+	}
+	// MSN/WebTV 2.6 supports Flash 4
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.6") != -1) flashVer = 4;
+	// WebTV 2.5 supports Flash 3
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.5") != -1) flashVer = 3;
+	// older WebTV supports Flash 2
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 2;
+	// Can't detect in all other cases
+	else {
+		
+		flashVer = -1;
+	}
+	return flashVer;
+} 
+// When called with reqMajorVer, reqMinorVer, reqRevision returns true if that version or greater is available
+function DetectFlashVer(reqMajorVer, reqMinorVer, reqRevision) 
+{
+ 	reqVer = parseFloat(reqMajorVer + "." + reqRevision);
+   	// loop backwards through the versions until we find the newest version	
+	for (i=25;i>0;i--) {	
+		if (isIE && isWin && !isOpera) {
+			versionStr = VBGetSwfVer(i);
+		} else {
+			versionStr = JSGetSwfVer(i);		
+		}
+		if (versionStr == -1 ) { 
+			return false;
+		} else if (versionStr != 0) {
+			if(isIE && isWin && !isOpera) {
+				tempArray         = versionStr.split(" ");
+				tempString        = tempArray[1];
+				versionArray      = tempString .split(",");				
+			} else {
+				versionArray      = versionStr.split(".");
+			}
+			versionMajor      = versionArray[0];
+			versionMinor      = versionArray[1];
+			versionRevision   = versionArray[2];
+			
+			versionString     = versionMajor + "." + versionRevision;   // 7.0r24 == 7.24
+			versionNum        = parseFloat(versionString);
+        	// is the major.revision >= requested major.revision AND the minor version >= requested minor
+			if ( (versionMajor > reqMajorVer) && (versionNum >= reqVer) ) {
+				return true;
+			} else {
+				return ((versionNum >= reqVer && versionMinor >= reqMinorVer) ? true : false );	
+			}
+		}
+	}	
+}
+// -->
+</script>
+
+
+
+<link href="http://www.nibib.nih.gov/common/nibibstyle.css" rel="stylesheet" type="text/css">
+<link rel="P3Pv1" href="/w3c/p3p.xml">
+</head>
+<body>
+<table class="main" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+	<tr>
+		<td rowspan="2" class="subNavigation" scope="col"><ul>
+			<img src="http://www.nibib.nih.gov/images/sublogo.gif" width="170" height="130" border="0" usemap="#home" alt="NIBIB - National Institute of Biomedical Imaging and Bioengineering" /><br>
+			
+    <li>&nbsp;</li>
+	<li><a href="http://www.nibib.nih.gov/HomePage">Home</a></li>
+	
+		<li><a href="http://www.nibib.nih.gov/Research">Research</a></li>
+	
+	
+		<li><a href="http://www.nibib.nih.gov/FundingMain">Funding</a></li>
+	
+	
+		<li><a href="http://www.nibib.nih.gov/Training">Training</a></li>
+	
+	
+		<li><a href="http://www.nibib.nih.gov/HealthEdu">Health &amp; Education</a></li>
+	
+	
+		<li><a href="http://www.nibib.nih.gov/NewsEvents">News &amp; Events</a></li>
+	
+	
+		<li><a href="http://www.nibib.nih.gov/About">About NIBIB</a></li>
+	
+	
+		<li lang="es"><a href="http://www.nibib.nih.gov/EnEspanol">Informaci&oacute;n en Espa&ntilde;ol</a></li>
+	
+
+			<div id="sideGraphics"><!--<a href="http://www.nibib.nih.gov/EnEspanol" title="Información en Español"><img src="http://www.nibib.nih.gov/images/button_enespanol_new.gif" alt="Información en Español" border="0"/></a><br />-->
+				<a href="http://www.nibib.nih.gov/PictureGallery" title="Picture Gallery"><img src="http://www.nibib.nih.gov/images/button_picturegallery.gif" alt="Picture Gallery" border="0"/></a><br />
+				<a href="http://www.nibib.nih.gov/VideoGallery" title="Video Gallery"><img src="http://www.nibib.nih.gov/images/button_videogallery.gif" alt="Video Gallery" border="0"/></a></div>
+			</ul></td>
+		<td valign="top" class="subContent" scope="col">			
+			<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+            	
+				<tr><td scope="col">&nbsp;</td></tr>
+				<tr><td>&nbsp;</td></tr>
+            	
+            	<tr>
+            		<td class="subC2" scope="row" id="content"><p>
+
+<a href="http://www.nibib.nih.gov/HomePage">Home</a> 
+</p>
+           			
+						
+		
+
+	
+	
+	
+	
+
+		
+		
+		
+
+<style type="text/css">
+<!--
+.Pagination {
+	background: #ebebeb;
+	border: 1px solid #cecece;
+	color: #e84301;
+	font-weight: bold;
+	padding: 8px 11px;
+	width: 100%;
+}
+
+	.Pagination	.PageOf {
+		width: 25%;
+	}
+	.Pagination .PageList {
+		text-align: center;
+		width: 50%;
+	}
+	.Pagination .PageNext {
+		text-align: right;
+		width: 25%;
+	}
+
+#Picture {
+	background: #bfe2fe;
+	border: 1px solid #b8bbc0;
+	margin: 5px;
+	padding: 3px;
+}
+
+	#Inner_Picture {
+		background: #fff URL('video/images/vid_bg_09.gif') bottom left repeat-x;
+		border: 1px solid #b8bbc0;
+		margin-bottom: 10px;
+		padding: 4px;
+	}
+	
+	#Previous a, #Next a {
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 130%;
+		font-weight: bold;
+		margin: 0px 5px;
+		text-decoration: none;
+	}
+	
+	#Next {
+		text-align: right;
+	}
+//-->
+</style>
+
+
+
+<p><img width="553" height="59" src="/nibib/Image/h_picture_gallery.gif" alt="Picture Gallery"/></p>
+
+<table class="Pagination">
+	<tr valign="top">
+		<td class="PageOf">&nbsp;</td>
+		<td class="PageList"><a href="/publicPage.cfm?section=gallery&action=view&page=5">Return to Gallery</a></td>
+		<td class="PageNext">&nbsp;</td>
+	</tr>
+</table>
+
+
+
+<table class="Pagination">
+	<tr valign="top">
+		<td class="PageOf">&nbsp;</td>
+		<td class="PageList"><a href="/publicPage.cfm?section=gallery&action=view&page=5">Return to Gallery</a></td>
+		<td class="PageNext">&nbsp;</td>
+	</tr>
+</table>
+
+
+	
+						
+					</td>
+           		</tr>
+   	 </table>			
+			<p>&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td class="footerShell"><p class="footer1">Last reviewed on: cfLastModified2ecfm2009698324$funcLASTMODIFIED@7c3b99</p>
+		    <div id="Layer1" style="position:absolute; width:760px; height:22px; z-index:1; left: 0; top: 0;">
+			<table width="760"  border="0" cellspacing="0" cellpadding="0">
+  <tr class="topHeader">
+    <td scope="col"><div align="right">&nbsp;</div></td>
+    <td width="40%" nowrap scope="col"><div id="searchbox" align="right">
+	<form method="get" action="http://search2.google.cit.nih.gov/search" name="search">
+      	<input type="hidden" name="site" value="NIBIB"/>
+        <input type="hidden" name="client" value="NIBIB_frontend"/>
+        <input type="hidden" name="proxystylesheet" value="NIBIB_frontend"/>
+        <input type="hidden" name="output" value="xml_no_dtd"/>
+        <input type="hidden" name="filter" value="0"/>
+        <input type="hidden" name="getfields" value="*"/>
+      <a href="http://www.nibib.nih.gov/Help">Help</a> | <a href="http://www.nibib.nih.gov/SiteMap">Site Index </a>| <a href="http://www.nibib.nih.gov/About/Directories">Staff Directories&nbsp;&nbsp;&nbsp;&nbsp;</a>      		<label for="btnSearch">Search NIBIB</label>: <input name="q" id="btnSearch" type="text" class="searchfield" value="" size="20" maxlength="100">
+	  <input name="Submit" type="image" class="btn" value="Search" src="http://www.nibib.nih.gov/images/searchbutton.gif" align="absmiddle" source="http://www.nibib.nih.gov/images/searchbutton.gif" alt="Go" title="Submit Search" /></form>
+    </div></td>
+  </tr>
+</table></div>
+		     <p class="footer2"><a href="mailto:info@nibib.nih.gov">Contact Us</a> | <a href="http://www.nibib.nih.gov/PrivacyPolicy">Privacy Policy</a> | <a href="http://www.nibib.nih.gov/Disclaimer">Disclaimer</a> | <a href="http://www.nibib.nih.gov/Accessibility">Accessibility</a> | <a href="http://www.nibib.nih.gov/publicPage.cfm?Section=ListServ&action=Form" target="_blank">NIBIB E-mail Update</a> | <a href="http://www.nibib.nih.gov/RSSFeeds">RSS Feeds</a></p>	</td>
+	</tr>
+	<tr>
+		<td class="subNavigation" scope="col">&nbsp;
+			
+		</td>
+		<td class="footer3">
+			<table border="0" cellpadding="0" cellspacing="2" align="center">
+				<tr>
+					<td><a href="http://www.firstgov.gov" target="_blank" title="First Gov Web site"><img src="http://www.nibib.nih.gov/images/firstgov_sm.gif" border="0" alt="FirstGov Logo" style="padding-left: 0px;"/></a></td>
+					<td><a href="http://www.hhs.gov" target="_blank" title="D H H S Web site"><img src="http://www.nibib.nih.gov/images/dhhs_sm.gif" border="0" alt="Department of Health and Human Services Logo"/></a></td>
+					<td><a href="http://www.hhs.gov" target="_blank">Department of Health<br/>and Human Services</a></td>
+					<td><a href="http://www.nih.gov" target="_blank" title="N I H Web site"><img src="http://www.nibib.nih.gov/images/nih_sm.gif" border="0" alt="National Institutes of Health Logo"/></a></td>
+					<td><a href="http://www.nih.gov" target="_blank">National Institutes<br/>of Health</a></td>
+					<td><a href="http://www.nibib.nih.gov/HomePage" title="N I B I B Web site"><img src="http://www.nibib.nih.gov/images/nibib_sm.gif" border="0" alt="National Institute of Biomedical Imaging and Bioengineering Logo"/></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<map name="home">
+	<area shape="rect" coords="0,0,1,1" href="#content" alt="Skip Navigation" title="Skip Navigation">
+	<area shape="rect" coords="2,2,170,130" href="http://www.nibib.nih.gov/HomePage" alt="N I B I B Home Page" title="NIBIB Home Page">
+</map>
+	<!-- OPENTRACKER HTML START -->
+	<script defer="" src="http://server1.opentracker.net/?site=www.nibib.nih.gov"></script>
+	<noscript>
+		<a href="http://www.opentracker.net" target="_blank">
+			<img src="http://img.opentracker.net/?cmd=nojs&site=www.nibib.nih.gov" alt="web statistics" border="0">
+		</a>
+	</noscript>
+	<!-- OPENTRACKER HTML END -->
+
+</body>
+</html>
+
+		
+

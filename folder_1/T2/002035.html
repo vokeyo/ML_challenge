@@ -1,0 +1,278 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 2.0 Mac">
+  <TITLE>NASA's Fortieth Anniversary: Pioneering The Future</TITLE>
+  <SCRIPT language="javascript">
+<!--	// hiding
+		// the following script can be freely reused as long as you
+		// keep these comments
+		// The Basics 1.1
+		// (c) 1997,1998 MetaCreations Corporation
+		
+var theClient = false;
+var badUnix = false;
+var version = parseInt(navigator.appVersion.substring(0,1));
+   
+// called only if browser is Netscape (table bg problems with their UNIX builds prior to v4)
+function badUnixTest() {
+	if ((navigator.appVersion.indexOf("X11") != -1) && 
+			(version < 4)) {
+		badUnix = true;
+		}
+	}
+
+if (navigator.appName == "Microsoft Internet Explorer") {
+	var	isIE4 = false;
+	var isIE3 = false;
+
+	if (version == 3) {
+        isIE3 = true;
+        }
+	else if (version >= 4) {
+        isIE3 = true;
+        isIE4 = true;
+        }
+	if (isIE3 | isIE4) {
+        theClient = true;
+           }
+   }
+
+if (navigator.appName == "Netscape") {
+	var	isNS4 = false;
+	var	isNS3 = false;
+	
+	badUnixTest();
+
+	if (version == 3) {
+        isNS3 = true;
+        }
+	else if (version >= 4) {
+        isNS3 = true;
+        isNS4 = true;
+        }
+	if (isNS3 | isNS4) {
+        theClient = true;
+           }
+   }
+
+if (theClient) {
+		
+    var rollSprite = new Array();
+
+    rollSprite[0] = new Image(53,21);
+    rollSprite[0].src = "pub_off.gif";
+    rollSprite[1] = new Image(53,21);
+    rollSprite[1].src = "pub_on.gif";
+
+    rollSprite[2] = new Image(59,21);
+    rollSprite[2].src = "photo_off.gif";
+    rollSprite[3] = new Image(59,21);
+    rollSprite[3].src = "photo_on.gif";
+
+    rollSprite[4] = new Image(52,21);
+    rollSprite[4].src = "video_off.gif";
+    rollSprite[5] = new Image(52,21);
+    rollSprite[5].src = "video_on.gif";
+
+    rollSprite[6] = new Image(67,21);
+    rollSprite[6].src = "resource_off.gif";
+    rollSprite[7] = new Image(67,21);
+    rollSprite[7].src = "resource_on.gif";
+
+    rollSprite[8] = new Image(62,21);
+    rollSprite[8].src = "bio_off.gif";
+    rollSprite[9] = new Image(62,21);
+    rollSprite[9].src = "bio_on.gif";
+
+    rollSprite[10] = new Image(149,123);
+    rollSprite[10].src = "nasa_off.gif";
+    rollSprite[11] = new Image(149,123);
+    rollSprite[11].src = "nasa_off.gif";
+
+    rollSprite[12] = new Image(171,123);
+    rollSprite[12].src = "nasa_off.gif";
+    rollSprite[13] = new Image(171,123);
+    rollSprite[13].src = "nasa_off.gif"; 
+
+    rollSprite[14] = new Image(90,25);
+    rollSprite[14].src = "doc_off.gif";
+    rollSprite[15] = new Image(90,25);
+    rollSprite[15].src = "doc_on.gif"; 
+
+    rollSprite[16] = new Image(90,25);
+    rollSprite[16].src = "ol_off.gif";
+    rollSprite[17] = new Image(90,25);
+    rollSprite[17].src = "ol_on.gif"; 
+
+    rollSprite[18] = new Image(90,25);
+    rollSprite[18].src = "home_ui/store_off.gif";
+    rollSprite[19] = new Image(90,25);
+    rollSprite[19].src = "home_ui/store_on.gif"; 
+
+    rollSprite[20] = new Image(90,25);
+    rollSprite[20].src = "home_ui/jobs_off.gif";
+    rollSprite[21] = new Image(90,25);
+    rollSprite[21].src = "home_ui/jobs_on.gif"; 
+
+    rollSprite[22] = new Image(90,25);
+    rollSprite[22].src = "home_ui/calendar_off.gif";
+    rollSprite[23] = new Image(90,25);
+    rollSprite[23].src = "home_ui/calendar_on.gif"; 
+
+    rollSprite[24] = new Image(90,25);
+    rollSprite[24].src = "home_ui/investor_off.gif";
+    rollSprite[25] = new Image(90,25);
+    rollSprite[25].src = "home_ui/investor_on.gif"; 
+}
+
+function hiLite(which, mouseOver)
+{
+    if (theClient == true)
+    {
+        if (which == 0) {
+            document.img0.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Key documents in nasa history" : "";
+        return true;
+        } else if (which == 1) {
+            document.img1.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Photographs" : "";
+        return true;
+        } else if (which == 2) {
+            document.img2.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Videos" : "";
+        return true;
+        } else if (which == 3) {
+            document.img3.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Resources" : "";
+        return true;
+        } else if (which == 4) {
+            document.img4.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Biographies" : "";
+        return true;
+        } else if (which == 5) {
+            document.img5.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Welcome to the NASA History Division's 40th anniversary page" : "";
+        return true;
+        } else if (which == 6) {
+            document.img6.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Feature" : "";
+        return true;
+        } else if (which == 7) {
+            document.img7.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Documents" : "";
+        return true;
+        } else if (which == 8) {
+            document.img8.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Events and Other Links" : "";
+        return true;
+        } else if (which == 9) {
+            document.img9.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Online Store" : "";
+        return true;
+        } else if (which == 10) {
+            document.img10.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Employment" : "";
+        return true;
+        } else if (which == 11) {
+            document.img11.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Event Calendar" : "";
+        return true;
+        } else if (which == 12) {
+            document.img12.src = rollSprite[2 * which + mouseOver].src;
+            window.status = mouseOver ? "Investor Relations" : "";
+        return true;
+        }
+    }
+    
+    return false;
+}
+
+// end mask -->
+</SCRIPT>
+</HEAD><BODY BGCOLOR="#ffffff" MARGINHEIGHT="0" MARGINWIDTH="0" leftmargin="0"><CENTER><IMG SRC="http://www.hq.nasa.gov/office/pao/images/NASAlogo.gif" WIDTH=75 HEIGHT=65 ALIGN=middle CENECASCALEIMAGE=0 ALT="NASA Logo"></CENTER>
+
+<CENTER>National Aeronautics and Space Administration <br>NASA History Division</CENTER>
+<br><hr>
+
+
+
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+    <TD><IMG SRC="banner.gif" WIDTH="640" HEIGHT="153" NATURALSIZEFLAG="3" ALIGN=
+"BOTTOM" alt="NASA 40th Anniversary Banner 1958-1998"></TD>
+  </TR>
+<TR>
+<TD><IMG SRC="line.gif" alt="" WIDTH="640" HEIGHT="3" NATURALSIZEFLAG="3" ALIGN="BOTTOM">
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+
+
+<TD><A HREF="pubs.htm" onMouseOver="if (hiLite(0, 1)) return true;" onMouseOut="if (hiLite(0, 0)) return true;"><IMG SRC=
+"pub_off.gif" NAME="img0" ALT="Publications" BORDER="0" WIDTH="148" HEIGHT=
+"21" NATURALSIZEFLAG="3" ALIGN="BOTTOM"></A></TD>
+
+<TD><A HREF="photos.htm" onMouseOver="if (hiLite(1, 1)) return true;" onMouseOut="if (hiLite(1, 0)) return true;"><IMG SRC=
+"photo_off.gif" NAME="img1" BORDER="0" ALT="Photographs" WIDTH="144" HEIGHT=
+"21" NATURALSIZEFLAG="3" ALIGN="BOTTOM"></A></TD>
+
+<TD><A HREF="videos.htm" onMouseOver="if (hiLite(2, 1)) return true;" onMouseOut="if (hiLite(2, 0)) return true;"><IMG SRC=
+"video_off.gif" NAME="img2" ALT="Videos" BORDER="0" WIDTH="92" HEIGHT="21"
+NATURALSIZEFLAG="3" ALIGN="BOTTOM"></A></TD>
+
+<TD><A HREF="bios.htm" onMouseOver="if (hiLite(4, 1)) return true;" onMouseOut="if (hiLite(4, 0)) return true;"><IMG SRC=
+"bio_off.gif" NAME="img4" BORDER="0" ALT="Biographies" WIDTH="127" HEIGHT=
+"21" NATURALSIZEFLAG="3" ALIGN="BOTTOM"></A></TD></TR>
+</TABLE>
+</TD></TR>
+<TR>
+<TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+<TD></TD></TR>
+</TABLE>
+</TD></TR>
+<TR>
+<TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+<TD></TD></TR>
+</TABLE></TD></TR>
+<TR>
+<TD><P ALIGN=CENTER><A HREF="docs.htm" onMouseOver="if (hiLite(7, 1)) return true;"
+onMouseOut="if (hiLite(7, 0)) return true;"><IMG SRC="doc_off.gif" NAME=
+"img7" BORDER="o" ALT="Documents" WIDTH="115" HEIGHT="20" NATURALSIZEFLAG=
+"3" ALIGN="BOTTOM"></A> <A HREF="links.htm" onMouseOver="if (hiLite(8, 1)) return true;"
+onMouseOut="if (hiLite(8, 0)) return true;"><IMG SRC="ol_off.gif" NAME=
+"img8" BORDER="o" ALT="Events and Other Links" WIDTH="150" HEIGHT="21" NATURALSIZEFLAG=
+"3" ALIGN="BOTTOM"></A></TD></TR>
+</TABLE>
+<tr><td><TABLE BORDER="0" CELLSPACING="0" CELLPADDING=
+"0">
+<TR>
+<TD></TD></TR>
+</TABLE>
+
+<P>The National Aeronautics and Space Administration (NASA) emerged in some measure because of the pressures of national defense during the cold war with the Soviet Union, a broad contest over the ideologies and allegiances of the nonaligned nations of the world in which space exploration emerged as a major area of contest. From the latter 1940s, the Department of Defense pursued research and rocketry and upper atmospheric sciences as a means of assuring American leadership in technology. A major step forward came when President Dwight D. Eisenhower approved a plan to orbit a scientific satellite as part of the International Geophysical Year (IGY) for the period, 1 July 1957 to 31 December 1958, a cooperative effort to gather scientific data about the Earth. The Soviet Union quickly followed suit, announcing plans to orbit its own satellite.<P>
+A full-scale political crisis broke out on 4 October 1957 when the Soviets launched Sputnik 1, the world's first artificial satellite as its IGY entry. This had a "Pearl Harbor" effect on American public opinion, creating an illusion of a technological gap. <P>
+As a direct result of this crisis, NASA began operations on 1 October 1958, absorbing into it the earlier National Advisory Committee for Aeronautics intact; its 8,000 employees, an annual budget of $100 million, three major research laboratories—Langley Aeronautical Laboratory, Ames Aeronautical Laboratory, and Lewis Flight Propulsion Laboratory—and two smaller test facilities. It quickly incorporated other organizations into the new agency, notably the space science group of the Naval Research Laboratory in Maryland, the Jet Propulsion Laboratory managed by the California Institute of Technology for the Army, and the Army Ballistic Missile Agency in Huntsville, Alabama, where Wernher von Braun’s team of engineers were engaged in the development of large rockets. Eventually NASA created other Centers and today it has ten located around the country.<P>
+NASA began to conduct space missions within months of its creation, and in its 40 years has made historic achievements in many areas of aeronautics and space research.  Most well-known of its efforts are the human space flight initiatives.  These began with Projects Mercury and Gemini in the 1960s, hit a major highlight with the lunar landings of Project Apollo, continued on in the 1970s with Skylab and the Apollo-Soyuz Test Project, and then carried on to the Space Shuttle program in the 1980s and 1990s.  Space science programs have included missions to our Moon and all the planets in our solar system except Pluto.  In Earth science, remote-sensing satellites such as Landsat and meteorological spacecraft have helped scientists understand the complex interactions between ecological systems on Earth.  NASA’s aeronautics research has helped to enhance air transport safety, reliability, efficiency, and speed through such programs as the X-15, lifting bodies, and general aviation.  <P>
+Since its inception in 1958, NASA has accomplished many great scientific and technological feats.  NASA technology has been adapted for many non-aerospace uses by the private sector.  At its 40th anniversary, NASA remains a leading force in scientific research and in stimulating public interest in aerospace exploration, as well as science and technology in general.  Perhaps more importantly, our exploration of space has taught us to view the Earth, ourselves, and the universe in a new way.  While the tremendous technical and scientific accomplishments of NASA demonstrate vividly that humans can achieve previously inconceivable feats, we also are humbled by the realization that Earth is just a tiny "blue marble" in the cosmos.<P>
+<hr>
+<P><TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><td width="34%"><p align=center><img src="40-1.gif" WIDTH="126" HEIGHT="74" ALIGN="middle" NATURALSIZEFLAG="3" alt="NASA 40th Anniversary Logo"></TD>
+        <TD WIDTH="33%"> 
+          <P ALIGN=CENTER><a href="http://www.hq.nasa.gov/office/pao/History/history.html"><img src="http://www.hq.nasa.gov/office/pao/History/histhome.gif" width=
+"89" height="89" align="MIDDLE" naturalsizeflag="3" alt="NASA History Homepage"></a>
+        </TD>
+<TD WIDTH="33%"><P ALIGN=CENTER><A HREF="http://www.hq.nasa.gov/office/pao/History/search.html"><IMG SRC=
+"http://www.hq.nasa.gov/office/pao/History/Hsearch.gif" WIDTH="89" HEIGHT="89" ALIGN="BOTTOM" NATURALSIZEFLAG="3" alt="Search NASA History"></A></TD></TR>
+</TABLE>
+<p></P><CENTER><P>
+Steven J. Dick, NASA Chief Historian<br>
+Steve Garber, NASA History Web Curator<BR>
+For further information E-mail  
+<A HREF="mailto:histinfo@hq.nasa.gov">histinfo@hq.nasa.gov</A><br>
+Updated February 8, 2005<BR></CENTER>
+</BODY>
+<!--ADA TEAM 2001-->
+</html>
+
+

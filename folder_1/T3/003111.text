@@ -1,0 +1,385 @@
+Metadata:
+  Identification_Information:
+    Citation:
+      Citation_Information:
+        Originator: Sherman P. Marsh
+        Originator: Donald H. Richter
+        Originator: Steve Ludington
+        Originator: Eduardo Soria-Escalante
+        Originator: Angel Escobar-Diaz
+        Publication_Date: 1995
+        Title: Digital Geologic Map of the Altiplano and Cordillera Occidental, Bolivia
+        Geospatial_Data_Presentation_Form: map
+        Series_Information:
+          Series_Name: U.S. Geological Survey Open-File Report
+          Issue_Identification: 95-0494
+        Online_Linkage: http://pubs.usgs.gov/of/1995/ofr-95-0494/
+    Spatial_Domain:
+      Bounding_Coordinates:
+        West_Bounding_Coordinate: -69.72
+        East_Bounding_Coordinate: -65.98
+        North_Bounding_Coordinate: -16.34
+        South_Bounding_Coordinate: -22.90
+    Keywords:
+      Theme:
+        Theme_Keyword_Thesaurus: National Geologic Map Database Catalog themes, augmented
+        Theme_Keyword: 3100 - Vector
+        Theme_Keyword: 3110 - ESRI
+        Theme_Keyword: 3112 - export
+        Theme_Keyword: 1100 - Geology
+        Theme_Keyword: 1101 - General
+      Theme:
+        Theme_Keyword_Thesaurus: ISO 19115 Topic Categories
+        Theme_Keyword: geoscientificInformation
+      Place:
+        Place_Keyword_Thesaurus: Augmented FIPS 10-4 and FIPS 6-4, version 1.0
+        Place_Keyword: BL = Bolivia
+    Description:
+      Abstract:
+        The geologic map of the Altiplano/Cordillera Occidental was produced
+        digitally from fifteen, 1:250,000 scale, field compilation maps.
+        These paper maps were made by Servicio Geol¢gico de Bolivia (GEOBOL)
+        geologists over the last decade.
+      Purpose:
+        To provide to the public a digital geologic map database of the
+        Altiplano and Cordillera Occidental, Bolivia
+    Time_Period_of_Content:
+      Time_Period_Information:
+        Single_Date/Time:
+          Calendar_Date: 1995
+      Currentness_Reference: publication date
+    Status:
+      Progress: Complete
+      Maintenance_and_Update_Frequency: None planned
+    Access_Constraints: None
+    Use_Constraints: None
+    Point_of_Contact:
+      Contact_Information:
+        Contact_Person_Primary:
+          Contact_Person: Richter, Donald H
+          Contact_Organization: USGS-GEO-WRG-MRS
+        Contact_Address:
+          Address_Type: mailing and physical address
+          Address: 4200 University Drive
+          City: Anchorage
+          State_or_Province: AK
+          Postal_Code: 99508
+          Country: US
+        Contact_Voice_Telephone: 907-786-7409
+        Contact_Electronic_Mail_Address: drichter@usgs.gov
+    Browse_Graphic:
+      Browse_Graphic_File_Name: http://geo-nsdi.er.usgs.gov/metadata/open-file/95-494/browse.png
+      Browse_Graphic_File_Description: Reduced-size image of the geologic units and structural lines, 536x887 pixels, 56k bytes.
+      Browse_Graphic_File_Type: PNG
+  Data_Quality_Information:
+    Logical_Consistency_Report:
+      The geologic map of the Altiplano/Cordillera Occidental was produced
+      digitally from fifteen, 1:250,000 scale, field compilation maps.
+      These paper maps were made by Servicio Geol¢gico de Bolivia (GEOBOL)
+      geologists over the last decade.
+    Completeness_Report:
+      The 137 geologic units on the fifteen, 1:250,000-scale geologic maps
+      were simplified to 15 geologic units.  This simplification was based
+      on geologic environments favorable for mineralization, on combining
+      similar geologic terrain for plotting at the publication scale of
+      1:500,000, and on grouping Paleozoic sedimentary units that were
+      mapped mostly outside the study area.
+    Lineage:
+      Source_Information:
+        Source_Citation:
+          Citation_Information:
+            Originator: Sherman P. Marsh
+            Originator: Domald H. Richter
+            Originator: Steve Ludington
+            Originator: Eduardo Soria-Escalante
+            Originator: Angel Escobar-Diaz
+            Publication_Date: 1992
+            Title: Geologic map of the Altiplano and Cordillera Occidental, Bolivia
+            Geospatial_Data_Presentation_Form: map
+            Series_Information:
+              Series_Name: U.S. Geological Survey Bulletin
+              Issue_Identification: 1975
+            Publication_Information:
+              Publication_Place: Denver, CO
+              Publisher: U.S. Geological Survey
+            Other_Citation_Details: Plate 1 is the map referred to here
+            Larger_Work_Citation:
+              Citation_Information:
+                Originator: U.S. Geological Survey
+                Originator: Servicio Geologico de Bolivia
+                Publication_Date: 1992
+                Title: Geology and Mineral Resources of the Altiplano and Cordillera Occidental, Bolivia
+                Geospatial_Data_Presentation_Form: map
+                Series_Information:
+                  Series_Name: U.S. Geological Survey Bulletin
+                  Issue_Identification: 1975
+                Publication_Information:
+                  Publication_Place: Denver, CO
+                  Publisher: U.S. Geological Survey
+        Source_Scale_Denominator: 500000
+        Type_of_Source_Media: paper
+        Source_Time_Period_of_Content:
+          Time_Period_Information:
+            Single_Date/Time:
+              Calendar_Date: 1992
+          Source_Currentness_Reference: publication date
+        Source_Citation_Abbreviation: Bulletin 1975, plate 1
+        Source_Contribution: These data were printed as plate 1 of this publication.
+      Process_Step:
+        Process_Description:
+          The geologic map of the Altiplano/Cordillera Occidental was
+          produced digitally from fifteen, 1:250,000 scale, field
+          compilation maps.  These paper maps were made by Servicio
+          Geol¢gico de Bolivia (GEOBOL) geologists over the last decade.
+          After examination of the field maps it was determined that the
+          best method for capturing the geologic data digitally was by means
+          of an optic scanner.  Because of the condition of the maps and the
+          fact that they had been hand colored the geology was transferred
+          to mylar stable-base overlays at 1:250,000 scale using a fine (.35
+          mm) ink pen prior to scanning.  The overlays were then scanned
+          into ARC/INFO using a Tectronics 4991 digital drum scanner.  The
+          15 scanned images were converted into ARC/INFO coverages and
+          edited in ARCEDIT using all 137 geologic units derived from the
+          original field compilation maps.  The resulting 15 digital maps at
+          1:250,000 scale were plotted in color on an electrostatic plotter
+          and then reviewed and edited by USGS and GEOBOL geologists using
+          new geologic information from field studies conducted during the
+          spring and fall of 1990.
+        Process_Date: 1990 - 1995
+        Source_Produced_Citation_Abbreviation: Bulletin 1975, plate 1
+      Process_Step:
+        Process_Description:
+          Data files opened and inspected; projection was implicit (parameters
+          shown in this record were given in an aml script and appear to be
+          appropriate) and unit symbol numbers were not associated with the
+          map symbols or unit descriptions.  These associations were adduced
+          by inspection of the printed map and the data; spatial reference
+          and attribute information were added to this record.
+        Process_Date: 20020426
+        Process_Contact:
+          Contact_Information:
+            Contact_Person_Primary:
+              Contact_Person: Peter N Schweitzer
+              Contact_Organization: U.S. Geological Survey, ER
+            Contact_Position: Geologist
+            Contact_Address:
+              Address_Type: mailing address
+              Address:
+                Mail Stop 954
+                12201 Sunrise Valley Drive
+              City: Reston
+              State_or_Province: VA
+              Postal_Code: 20192
+              Country: USA
+            Contact_Voice_Telephone: 703-648-6533
+            Contact_Facsimile_Telephone: 703-648-6252
+            Contact_Electronic_Mail_Address: pschweitzer@usgs.gov
+  Spatial_Data_Organization_Information:
+    Direct_Spatial_Reference_Method: vector
+    Point_and_Vector_Object_Information:
+      SDTS_Terms_Description:
+        SDTS_Point_and_Vector_Object_Type: GT-Polygon composed of chains
+        Point_and_Vector_Object_Count: 2000
+  Spatial_Reference_Information:
+    Horizontal_Coordinate_System_Definition:
+      Planar:
+        Map_Projection:
+          Map_Projection_Name: Lambert Conformal Conic
+          Lambert_Conformal_Conic:
+            Standard_Parallel: -17.333333
+            Standard_Parallel: -22.666667
+            Longitude_of_Central_Meridian: -67.5
+            Latitude_of_Projection_Origin: -24
+            False_Easting: 0
+            False_Northing: 0
+      Geodetic_Model:
+        Horizontal_Datum_Name: D_International_1924
+        Ellipsoid_Name: International_1924
+        Semi-major_Axis: 6378388.0
+        Denominator_of_Flattening_Ratio: 297.0
+  Entity_and_Attribute_Information:
+    Detailed_Description:
+      Entity_Type:
+        Entity_Type_Label: ALTIDIS.PAT
+        Entity_Type_Definition: Geologic map unit
+      Attribute:
+        Attribute_Label: GEO1
+        Attribute_Definition: Numerical value corresponding to geologic map units
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 10
+            Enumerated_Domain_Value_Definition:
+              Qsu: Surficial deposits, undifferentiated (Holocene and Pleistocene)
+
+              Includes unconsolidated alluvial, eolian, colluvial, and glacial deposits.  Locally may include lacustrine and salt deposits that are not shown separately.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 20
+            Enumerated_Domain_Value_Definition:
+              QTev: Stratovolcano deposits (Holocene to Miocene)
+
+              Lava flows, flow breccias, lahars, and minor pyroclastic deposits chiefly of andesitic to dacitic composition.  May include domes and shallow intrusive bodies mostly in vent complexes.  Includes deposits mapped as Cerkhe Formation, Estratovolcano Formation, and Huaricunca Formation.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 30
+            Enumerated_Domain_Value_Definition:
+              Ql: Lacustrine deposits (Holocene and Pleistocene)
+
+              Chiefly calcareous tufa in ancient lake shorelines and lacustrine mud and silt deposits.  Includes deposits mapped as Minchin Limestone.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 50
+            Enumerated_Domain_Value_Definition:
+              Qs: Salt deposits (Holocene and Pleistocene)
+
+              Playa-lake evaporites.  May include interbedded fine-grained lacustrine deposits.  Locally may be seasonally covered with water.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 60
+            Enumerated_Domain_Value_Definition:
+              QTig: Ignimbrite (Pleistocene to Miocene)
+
+              Welded and nonwelded ash-flow tuffs, chiefly in extensive outflow sheets.  Mostly of dacitic composition.  Sources probably large caldera complexes, only a few of which are identified.  Locally, may include basinal lacustrine sediments.  Includes deposits mapped as Ignimbrite Formation and Perez Tuff.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 70
+            Enumerated_Domain_Value_Definition:
+              QTs: Sedimentary rocks (Pleistocene and Pliocene)
+
+              Nonmarine sandstone, conglomerate, and shale.  May include minor interlayered volcanic rocks.  Includes deposits mapped as Aroma Formation, Charaña Formation, La Paz Formation, Pomata Formation, Remedios Formation, Topohoco Formation, Taracollo Formation, Ulloma Formation, and Umala Formation.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 100
+            Enumerated_Domain_Value_Definition:
+              Ti: Intrusive rocks (Pliocene to Oligocene)
+
+              Chiefly subvolcanic stocks, plugs, and dikes of dacitic composition in vent complex of eroded volcanic eruptive centers.  Not all intrusive rocks mapped; many are included in unit of undifferentiated volcanic rocks (Tvnd).  Important host rock for Bolivian polymetallic vein deposits.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 110
+            Enumerated_Domain_Value_Definition:
+              Tvnd: Volcanic rocks, undifferentiated (Miocene and Oligocene)
+
+              Chiefly lava flows, but includes extensive pyroclastic deposits and intrusive rocks in some areas where not mapped separately as units Tig and Ti, and locally may include interbedded nonmarine sedimenatry rocks.  Mostly of andesitic and dacitic composition; sources are poorly defined volcanic eruptive centers, now deeply eroded.  Includes deposits mapped as Abaroa Formation, Bonete lavas, Camargo volcanic rocks, Carangas volcanic rocks, Cuzco volcanic rocks, Julaca lavas, Mauri Formation, Murmuntani Formation, Negrillos volcanic rocks, Pulacayo volcanic rocks, Rondal lavas, Tagua Formation, and Ubina volcanic rocks.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 120
+            Enumerated_Domain_Value_Definition:
+              Tig: Pyroclastic rocks (Miocene and Oligocene)
+
+              Chiefly welded to nonwelded ash-flow tuffs, but includes air-fall tuffs and thin, volcaniclastic beds.  Mostly dacitic in composition.  Source same as undifferentiated volcanic rocks (Tvnd) but generally occur more distant from eruptive center.  Includes deposits mapped as Upper Quehua Formation.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 130
+            Enumerated_Domain_Value_Definition:
+              Ts2: Sedimentary rocks (Pliocene to Oligocene)
+
+              Nonmarine sandstone, conglomerate, shale, marl, and evaporites.  Includes deposits mapped as Azurita Formation, Ballivian Formation, Coniri Formation, Cosuño Formation, Crucero Formation, Huayllamarca Formation, Huayllapucara Formation, Kasira Formation, Lower Quehua Formation, Mondragon Formation, Pizaqueri Formation, San Vicente Formation, Tambillo Formation, Totora Formation, and Turco Formation.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 140
+            Enumerated_Domain_Value_Definition:
+              Ts1: Sedimentary rocks (Oligocene to Paleocene)
+
+              Nonmarine, mostly reddish colored conglomerate, sandstone, shale, and mudstone.  Primary host for sedimentary-hosted copper deposits.  Includes deposits mapped as Berenguela Formation, Nazareno Formation, Potoco Formation, Santa Lucia Formation, San Andres Formation, and Tihuanacu Formation.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 150
+            Enumerated_Domain_Value_Definition:
+              Tmf: Los Frailes and Morococala Ignimbrites (Miocene)
+
+              Ash-flow tuffs of dacitic composition in extensive ignimbrite field exposed primarily east of map area.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 160
+            Enumerated_Domain_Value_Definition: Ks?  Three polygons with this attribute value occur in the data.  One is a sliver polygon, and the other two are symbolized as Ks on the printed map.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 200
+            Enumerated_Domain_Value_Definition:
+              Ks: Sedimentary rocks (Cretaceous)
+
+              Marine and nonmarine sandstone, shale, marl, and limestone.  Includes deposits mapped as Aroifilla Formation, El Molino Formation, La Puerta Formation, Miraflores Formation, and Tarapaya Formation.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 300
+            Enumerated_Domain_Value_Definition:
+              Pzs: Sedimentary rocks (Paleozoic)
+
+              Chiefly marine sandstone and shale of Devonian to Ordovician age.  Rocks are generally highly folded and locally penetratively deformed.  Includes deposits mapped as Amatura Formation, Cancañiri Formation, Catavi Formation, Colpachuco Formation, Copacabana Formation, Cumana Formation, Huanuni Formation, Khasa Formation, Llallagua Formation, Sica Sica Formation, Uncia Formation, and Vila Vila Formation.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 400
+            Enumerated_Domain_Value_Definition:
+              Tdp: Gypsum diapirs (Miocene to Eocene?)
+
+              May include halite and other evaporite minerals.  Includes deposits mapped as Chuquichambi Formation and Jalluma Formation.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: 1001
+            Enumerated_Domain_Value_Definition: Bodies of water
+  Distribution_Information:
+    Distributor:
+      Contact_Information:
+        Contact_Organization_Primary:
+          Contact_Organization: USGS Information Services
+        Contact_Address:
+          Address_Type: mailing
+          Address: Box 25286, Denver Federal Center
+          City: Denver
+          State_or_Province: Colorado
+          Postal_Code: 80255-0046
+          Country: USA
+        Contact_Voice_Telephone: 1-888-ASK-USGS
+        Contact_Facsimile_Telephone: 1-303-202-4695
+        Contact_Electronic_Mail_Address: infoservices@usgs.gov
+    Resource_Description: US Geological Survey Open File Report 95-0494
+    Distribution_Liability:
+      The database has been approved for release and publication by the
+      Director of the USGS.  Although this database has been subjected to
+      rigorous review and is substantially complete, the USGS reserves the
+      right to revise the data pursuant to further analysis and review.
+      Furthermore, it is released on condition that neither the USGS nor the
+      United States Government may be held liable for any damages resulting
+      from its authorized or unauthorized use.
+    Standard_Order_Process:
+      Digital_Form:
+        Digital_Transfer_Information:
+          Format_Name: ARC/INFO export format
+          Format_Information_Content:
+            >ARC/INFO export format  Description of coverage
+            >
+            >altidis.new.e00         ARC/INFO export file of the geologic map
+            >labels.e00              ARC/INFO export file of labels for geologic map
+            >struct.all.e00          ARC/INFO export file of the structural geology map
+            >volmajor.e00            ARC/INFO export file of major volcanoes
+            >volminor.e00            ARC/INFO export file of minor volcanoes
+          File_Decompression_Technique: No compression applied
+        Digital_Transfer_Option:
+          Online_Option:
+            Computer_Contact_Information:
+              Network_Address:
+                Network_Resource_Name: http://pubs.usgs.gov/of/1995/ofr-95-0494/altidis.new.e00
+      Fees: none
+  Metadata_Reference_Information:
+    Metadata_Date: 20070803
+    Metadata_Contact:
+      Contact_Information:
+        Contact_Person_Primary:
+          Contact_Person: Peter N Schweitzer
+          Contact_Organization: U.S. Geological Survey, ER
+        Contact_Position: Geologist
+        Contact_Address:
+          Address_Type: mailing address
+          Address:
+            Mail Stop 954
+            12201 Sunrise Valley Drive
+          City: Reston
+          State_or_Province: VA
+          Postal_Code: 20192
+          Country: USA
+        Contact_Voice_Telephone: 703-648-6533
+        Contact_Facsimile_Telephone: 703-648-6252
+        Contact_Electronic_Mail_Address: pschweitzer@usgs.gov
+    Metadata_Standard_Name: Content for Digital Geospatial Metadata
+    Metadata_Standard_Version: FGDC-STD-001-1998

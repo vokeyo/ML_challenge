@@ -1,0 +1,233 @@
+<html>
+
+<head>
+
+<TITLE>Existing Features Typical Section</TITLE> <link rel="stylesheet" href="http://www.wfl.fhwa.dot.gov/design/cadd/idiotxm/style.css" type="text/css">   
+
+<style type="text/css">
+<!--
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style2 {color: #0000FF}
+-->
+</style></head>
+<body bgcolor="white">
+<A HREF="idiotxm.htm">Back to The Complete Knuckleheads Guide</A>
+<br>
+
+
+<H1 ALIGN="CENTER"><font color="BLUE">&quot;Existing Features&quot; Typical Section</font></H1>
+
+
+
+<P>In order to use any of the &quot;Typical Sections&quot;, you must first <a href="proj_man.htm">Setup 
+  Project Manager</a>:</P>
+
+
+
+<p>This typical section will search for MicroStation elements previously drawn 
+  in a 2D Plan file that represent the horizontal alignment of existing features. 
+  This 2D plan file is usually obtained from the Survey branch and usually has 
+  a file extension of .plm or has &quot;plm&quot; within the file name, i.e.... <strong>wf1581plm1.dgn</strong>.</p>
+<p>Once finished searching the 2D plan file, the corresponding text for each existing 
+  feature will be drawn in the cross section file at the exact same offsets as 
+  found in the 2D plan file. In some cases, lines will also be drawn representing 
+  existing thicknesses, (such as topsoil or pavement). These lines can be used 
+  later to calculate end areas and volumes representing &quot;in place&quot; removals.</p>
+<p>The complete list of &quot;<b>Existing Features</b>&quot; currently available 
+  are shown below:</p>
+ <ul> 
+<li><b>Existing Water Edge</b>
+<li><b>Existing Lake Edge</b>
+<li><b>Existing Gas Line</b>
+<li><b>Existing Telephone Line</b>
+<li><b>Existing Electric Line</b>
+<li><b>Existing Wetlands</b>
+<li><b>Existing Treeline</b>
+<li><b>Existing Pavement (Removal)</b>
+<li><b>Existing Shoulders </b>
+<li><b>Existing Archaeological</b>
+<li><b>Existing Thermal Wetlands</b>
+<li><b>Existing Fence Line</b>
+<li><b>Existing Topsoil</b><br>
+</ul>
+<hr>
+<p><font size="5"><b>Setup the Proposed Cross Section Run:</b></font></p>
+<p>Open your Cross Section DGN file that contains your existing ground elements. 
+  Invoke Project Manager, as explained under <a href="proj_man.htm">Setup Project 
+  Manager</a>. Put a <b>check mark</b> in the white box for <b>Working Alignment 
+  Influence Runs</b> as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea1.gif"></p>
+</blockquote>
+<p>Click on the <b>Proposed Cross Sections</b> button as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea2.gif"></p>
+</blockquote>
+<p>The <b>Select Run</b> dialog appears. Create a &quot;Run&quot; by using the 
+  pulldowns <b>Run</b> &gt; <b>New</b>.</p>
+<p><b><font color="#FF0000">NOTE: The &quot;Run&quot; will serve the same purpose 
+  as the old Proposed Cross Section Input File. Multiple &quot;Runs&quot; can 
+  be created the same as multiple proposed cross section input file could be created 
+  in the past.</font></b></p>
+<blockquote>
+  <p><img src="ex_fea3.gif"></p>
+</blockquote>
+<p>The <b>New Run Name</b> dialog appears. Key in the name of the run. An optional 
+  <b>Description</b> can also be filled in. Click on <b>OK</b> as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea4.gif"></p>
+</blockquote>
+<p>The <b>Select Run</b> dialog appears. <b>Highlight</b> the Run and click on 
+  <b>OK</b> as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea5.gif"></p>
+</blockquote>
+<p>The <b>Proposed Cross Sections</b> dialog appears. Notice that the name of 
+  the Run (in this case <b>Run_1</b>) also appears at the top of the dialog as 
+  shown below:</p>
+<blockquote>
+  <p><img src="ex_fea6.gif"></p>
+</blockquote>
+<p>Click on <b>XS DGN File</b> and browse to the cross section DGN file. Adjust 
+  the <b>Tolerance</b> setting as described below:</p>
+<p><font color="#FF0000"><b>NOTE: The &quot;Tolerance&quot; setting is very important. 
+  For Metric projects, set this to 0.003. For US Customary projects, set the tolerance 
+  to 0.01.</b></font></p>
+<blockquote>
+  <p><img src="ex_fea7.gif"></p>
+</blockquote>
+<p>Click on <b>Pattern</b> and put a <b>check</b> in the white box for <b>Use 
+  Working Alignment</b>. Since your pattern lines have been previously defined 
+  in your working alignment &quot;<b>one</b>&quot;, there is no need to identify 
+  them again.</p>
+<blockquote>
+  <p><img src="ex_fea8.gif"></p>
+</blockquote>
+<p>Click on <b>Existing Ground</b> and put a <b>check</b> in the white box for 
+  <b>Use Working Alignment</b>. Since your Existing Ground has been previously 
+  defined in your working alignment &quot;<b>one</b>&quot;, there is no need to 
+  identify it again.</p>
+<blockquote>
+  <p><img src="ex_fea9.gif"></p>
+</blockquote>
+<p>Click on <b>Shapes</b>. This Typical Section does not require superelevation 
+  shapes, set the option toggle to <b>Shapeless</b>.</p>
+<blockquote>
+  <p><span class="style1">NOTE: If this is accidentally set to something other than Shapeless, the criteria will still draw the &quot;&lt;---Existing Edge of Pavement&quot; label, but will not draw the layers illustrating pavement or topsoil removal.</span></p>
+  <p><img src="ex_fea10.gif"></p>
+</blockquote>
+<p>Click on <b>Shape Clusters</b>. Initially the dialog appears as shown below, 
+  basically blank with many of the option buttons ghosted out:</p>
+<blockquote>
+  <p><img src="ex_fea11.gif"></p>
+</blockquote>
+<p>Click on the <b>drop down arrow </b>  and select the <b>Chain</b> as shown below.</p>
+<blockquote> 
+  <p><img src="ex_fea12.gif"></p>
+</blockquote>
+<p>Click on the <b>drop down arrow </b> and select the <b>Profile</b> as shown below.</p>
+<blockquote>
+  <p><img src="ex_fea13.gif"></p>
+</blockquote>
+<p>Click on the <b>Add</b> button as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea14.gif"></p>
+</blockquote>
+<p>When the <b>Add</b> button is pressed the shape cluster information gets added 
+  to the collection window. <b>Highlight</b> the information in the collection 
+  window. The <b>Typical</b> button becomes unghosted. Click on the <b>Typical</b> 
+  button as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea15.gif"></p>
+</blockquote>
+<p>The <b>Typical Sections</b> dialog appears as shown below. Select the desired 
+  Typical Section. Note the <b>Description</b> button located on the right side 
+  of the dialog. When pressed, this invokes an on-line help file that provides 
+  detailed information on how the typical works including detailed drawings.</p>
+<blockquote>
+  <p class="style1">NOTE: For an explanation of both methods for accessing Help for Typical sections, click <a href="prxs_help.htm">here</a>. </p>
+</blockquote>
+<p>For this example we are using <b>Existing Features</b>, so select <b>EXFEAT</b>.</p>
+<p>You may apply this Typical Section to the <b>Whole Chain</b> or a <b>Station 
+  Range</b>. When <b>Apply to Station Range</b> is selected, be sure to include 
+  the region numbers, as shown below (<b>r 1</b>).</p>
+<p>Do <b>not</b> check the white &quot;<b>On</b>&quot; Chain box. Chances are 
+  you will never use this option.</p>
+<blockquote>
+  <p><img src="ex_fea16.gif"></p>
+</blockquote>
+<p>When all options are selected and complete, click on <b>Apply</b> at the bottom 
+  of the dialog.</p>
+<p>Each Typical Section is associated with different combinations of criteria 
+  files. When <b>Apply</b> is pressed, the user is basically instructing the software 
+  what criteria files to use (and where) and populates the Proposed Cross Sections 
+  dialog as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea17.gif"></p>
+</blockquote>
+<p>Click on <b>Define DGN Variables</b>. You can ignore this portion of the <b>Proposed 
+  Cross Sections</b> dialog as it <b>only applies to the Automated Cross Section 
+  Labeling Typical</b>.</p>
+<p>When using the <b>.x21 criteria files</b>, this dialog is now blank<b>, since 
+  there is nothing to populate these fields, with this Typical.</b></p>
+<blockquote>
+  <p><img src="ex_fea18.gif"></p>
+</blockquote>
+<p>Click on <b>Define Variables</b>. This portion of the dialog is where you specify 
+  &quot;Global&quot; variables such as the name of your mapping file where all 
+  the existing features are drawn (existing fence, existing edge of pavement.......). 
+  You must also specify the names of all other DGN files where the software is 
+  supposed to look for plan view elements, such as proposed widening lines, or 
+  proposed guardrail.</p>
+<p><font size="4">To change/modify a default value:</font></p>
+<ul>
+  <li><b>Highlight</b> the Variable, (such as <b>Existing TOPO DGN</b>), by clicking 
+    in the white area.</li>
+  <li>Once highlighted, the default value will populate the <b>Value</b> field.</li>
+  <li>Key-in the Value (or use the newly added &quot;<strong>Select a DGN file</strong>&quot; icon) and press <b>Modify</b>.</li>
+</ul>
+<blockquote> 
+  <p><img src="ex_fea19.gif"></p>
+</blockquote>
+<p>Click on <b>Redefinable Variables</b>. This portion of the dialog is where 
+  the user can set <b>project specific values</b> for their design.</p>
+<p> In the example below, the <b>Existing Pavement Thickness</b> variable (_d_ExistPavtThick) 
+  needed to be modified. The Variable was <b>highlighted</b> and the <b>Edit</b> 
+  button was pressed. When <b>Edit</b> was pressed the <b>Redefinable Variables 
+  Editor</b> dialog was invoked. The default value was changed to <b>0.3</b>. 
+  The <b>Save</b> button would now be pressed to save the value. </p>
+<blockquote>
+<p><img src="ex_fea20.gif"></p>
+</blockquote>
+<p>Click on <b>Plot Parameters</b>. Uncheck all Plot options as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea21.gif"></p>
+</blockquote>
+<p><b>Drainage</b> is not used in Western Federal Lands.</p>
+<hr>
+<p><font size="5"><b>Execute the Proposed Cross Section Run:</b></font></p>
+<p>When all modifications are completed, save the Run settings using the pulldown 
+  <b>File</b> &gt; <b>Save Settings</b> as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea22.gif"></p>
+</blockquote>
+<p>To execute the Proposed Cross Section Run, use the pulldown <b>File</b> &gt; 
+  <b>Run</b> as shown below:</p>
+<blockquote>
+  <p><img src="ex_fea23.gif"></p>
+</blockquote>
+<p>The dialog below will appear.</p>
+<p> Set the dialog to <b>To Screen</b> or to create a .log file by selecting <b>To 
+  Log File</b>. Check <b>Pause On Each Section</b> or the newly added option that speeds up the processing by not actually showing you each of the cross sections as they process, <strong><span class="style2">Disable View Updat</span>e</strong>, and press <b>Apply</b>.</p>
+<blockquote>
+  <p><img src="ex_fea24.gif"></p>
+</blockquote>
+<p>If <b>Pause On Each Section</b> was checked, and after the first cross section is plotted and inspected, you may <b>uncheck</b> the <b>Pause 
+  on Each Section</b> toggle and press <b>Apply</b> again to complete the run.</p>
+<p><br>
+  <A HREF="idiotxm.htm">Back to The Complete Knuckleheads Guide</A> </p>
+</BODY>
+</html>

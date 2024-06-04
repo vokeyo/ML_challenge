@@ -1,0 +1,139 @@
+TITLE:   GCN CIRCULAR
+NUMBER:  6592
+SUBJECT: GRB 070626: IPN localization and Konus spectrum of a bright long burst
+DATE:    07/07/03 16:07:58 GMT
+FROM:    Valentin Pal'shin at Ioffe Inst  <val@mail.ioffe.ru>
+
+S. Golenetskii, R. Aptekar, E. Mazets, V. Pal'shin, D. Frederiks,
+and T. Cline on behalf of the Konus-Wind team,
+
+K. Hurley, J. Goldsten, D. M. Smith, R. P. Lin, J. McTiernan, R. 
+Schwartz, C. Wigger, W. Hajdas, and A. Zehnder, on behalf of the 
+MESSENGER and RHESSI GRB teams,
+
+K. Yamaoka, M. Ohno, Y. Fukazawa, T. Takahashi, M. Tashiro, Y. Terada,
+T. Murakami, and K. Makishima, on behalf of the Suzaku WAM GRB team, report:
+
+A very long, bright GRB triggered Konus-Wind at 2007-06-26
+T0=14850.883 s UT (04:07:30.883). It was also observed by Suzaku-WAM, 
+RHESSI and the MESSENGER neutron spectrometer, which also serves as a 
+GRB detector.
+
+The burst started at T-T0 ~-120 s and ended at T-T0 ~210 sec.
+The Earth-crossing time of the onset was 14733 s UT (04:05:33).
+The burst light curve shows several multipeaked pulses.
+
+We have triangulated it to a 3 sigma error box whose coordinates are:
+
+-----------------------------------------------
+    RA(2000)                    Dec(2000)
+-----------------------------------------------
+Center:
+  141.355 (09h 25m 25s)   -39.865 (-39d 51' 54")
+Corners:
+  139.529 (09h 18m 07s)   -39.872 (-39d 52' 20")
+  142.903 (09h 31m 37s)   -40.020 (-40d 01' 11")
+  143.210 (09h 32m 50s)   -39.805 (-39d 48' 17")
+  139.838 (09h 19m 21s)   -39.673 (-39d 40' 24")
+-------------------------------------------------
+
+The error box area is 2047 square arcminutes.
+The box may be improved.
+
+Preliminary analysis of the Konus-Wind data yields
+a burst fluence of ~4x10^-4 erg/cm2 (in the 20 keV - 4 MeV range),
+the spectrum of the main part of the burst (from T0 to T0+190 s)
+can be fitted (in the 20 keV - 4 MeV range)
+by GRBM (Band) model for which:
+the low-energy photon index is alpha = -1.5,
+the high energy photon index beta = -2.3,
+the peak energy Ep = 240 keV.
+
+The Konus-Wind light curve of this GRB is available
+at http://www.ioffe.rssi.ru/LEA/GRBs/GRB070626_T14850/
+
+Detailed spectral parameters will be reported later.
+
+////////////////////////////////////////////////////////////////////////////
+TITLE:   GCN CIRCULAR
+NUMBER:  6593
+SUBJECT: GRB 070626: Suzaku/WAM observation of the prompt emission
+DATE:    07/07/04 13:48:52 GMT
+FROM:    Kazutaka Yamaoka at Aoyama Gakuin U  <yamaoka@phys.aoyama.ac.jp>
+
+Y. Terada, T. Tamagawa (RIKEN), M. Ohno, T. Uehara, T. Takahashi, 
+Y. Fukazawa, C. Kira (Hiroshima U.), K. Yamaoka, Y. E. Nakagawa, 
+S. Sugita (Aoyama Gakuin U.), K. Morigami, N. Kodaka, K. Onda, 
+M. Tashiro, M. Suzuki, Y. Urata, A. Endo (Saitama U.), T. Enoto, 
+R. Miyawaki, K. Nakazawa, K. Makishima (Univ. of Tokyo), E. Sonoda, 
+M. Yamauchi, S. Maeno, H. Tanaka, R. Hara (Univ. of Miyazaki), 
+M. Kokubun, M. Suzuki, T. Takahashi (ISAS/JAXA), S. Hong (Nihon U.), 
+on behalf of the Suzaku WAM team, report:
+
+The long burst, GRB 070626 (S. Golenetskii et al. GCN 6592) was
+detected at 2007-06-26 04:07:30 UT (= T0) with the Suzaku Wide-band All-sky
+Monitor (WAM), which covers an energy range of 50 keV - 5 MeV. The burst
+continues from T= T0-120 sec to T0+210 sec, as already reported on GCN
+6592. The object position reported by GCN 6592 corresponds to the
+incident angle of (theta, phi) = (103 deg, 169 deg) to the HXD WAM,
+where the energy response is well calibrated. 
+The fluence in the 100 -- 1000 keV energy band was 2.25(+- 0.01) x
+10^-4 erg/cm2, and the 1-sec peak flux was 19.5 +/- 0.2 photons/cm^2/sec 
+in the same energy range.
+
+According to preliminary analyses, the time averaged spectrum from T0
+to T0+190 sec in the 120 keV to 2.0 MeV energy band can be reproduced by 
+the Band function (Band et al. 1993, ApJ 413, p281) with the following 
+parameters;
+  alpha = -1.55 +/- 0.05, 
+  beta  = -2.15 +/- 0.05, and
+  Epeak =   600 +/- 50 keV.
+
+All the quoted errors are at the 90% confidence level, while systematic 
+errors are not included. Since the on-board trigger system was disabled 
+at the time of T0, no BST mode data with a time resolution of 15.625
+msec is available, and the spectral analyses were performed by the 
+continuous monitoring (TRN) data with the 1 sec resolution.
+
+The light curve data with 1 sec resolution will be appeared at the web site 
+ http://www.astro.isas.ac.jp/suzaku/HXD-WAM/WAM-GRB/grb/untrig/grb_table.html
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+TITLE:   GCN CIRCULAR
+NUMBER:  6599
+SUBJECT: Konus-Wind observation of GRB 070626
+DATE:    07/07/05 16:38:28 GMT
+FROM:    Valentin Pal'shin at Ioffe Inst  <val@mail.ioffe.ru>
+
+S. Golenetskii, R.Aptekar, E. Mazets, V. Pal'shin, D. Frederiks,
+and T. Cline on behalf of the Konus-Wind team:
+
+We report further analysis of the bright long GRB 070626
+localized by IPN (Golenetskii  et al., GCN 6592).
+
+As observed by Konus-Wind the burst
+had a fluence of 3.91(-0.13, +0.16)x10^-4 erg/cm2,
+and a 64-ms peak flux measured from T0+73.216 s
+1.94(-0.16, +0.20)x10^-5 erg/cm2/s
+(both in the 20 keV - 4 MeV energy range).
+
+The time-integrated spectrum of the burst
+(from T0 to T0+187.905 s: this interval comprises ~93%
+of the burst total counts) can be fitted
+(in the 20 keV - 4 MeV range)
+by GRBM (Band) model for which:
+the low-energy photon index is alpha = -1.45 (-0.03, +0.04),
+the high energy photon index beta = -2.28 (-0.12, +0.08),
+the peak energy Ep = 226 (-17, +19) keV (chi2 = 79/68 dof).
+
+The spectrum of the burst maximum
+(accumulated from T0+72.192 s to T0+74.752 s)
+is well fitted (in the 20 keV - 4 MeV range)
+by GRBM (Band) model for which:
+the low-energy photon index is alpha = -1.27 (-0.07, +0.08),
+the high energy photon index beta = -2.51 (-0.88, +0.27),
+the peak energy Ep = 355 (-62, +69) keV (chi2 = 77/69 dof).
+
+All the quoted errors are at the 90% confidence level.
+

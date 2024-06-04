@@ -1,0 +1,506 @@
+<html><!-- InstanceBegin template="/Templates/main-template.dwt.asp" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>blob morphological parameters</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<table width="100%" border="0">
+  <tr>
+    <td><div align="left"><a href="../contents.htm"> Contents</a> || <a href="../index.htm">Index</a> 
+      </div></td>
+    <td><div align="right">
+        <!-- #BeginDate format:Am3 -->05/20/2008<!-- #EndDate -->
+      </div></td>
+  </tr>
+</table>
+<!-- InstanceBeginEditable name="EditRegion-main" --> 
+<div class=Section1> 
+  <p align="center" class=MsoPlainText>&nbsp;</p>
+</div>
+<ul>
+  <li><a href="../fractal/fractal-dimension.htm">Fractal Dimension</a></li>
+  <li> 
+    <div class=MsoPlainText><a href="stats-button.htm">Blob <strong>Stats</strong> 
+      Button</a></div>
+  </li>
+  <li><a href="blob-tool-new.htm">Blob Tool</a></li>
+  <li><a href="form-factors.htm">Form Factors</a></li>
+  <li><a href="perimeter.htm">Perimeter</a></li>
+  <li><a href="blob-batch-button.htm">Batch Button</a></li>
+</ul>
+<p align="center"><span style='"MS Mincho"'><strong><font size="+2">Blob Measurements 
+  or Statistics </font></strong> </span></p>
+<div class=Section1> 
+  <p align="center" class=MsoPlainText><span style='"MS Mincho"'>Blob statistics 
+    are selected in groups by category.</span></p>
+  <table width="614" border="1" align="center" cellspacing="1">
+    <tr> 
+      <td width="308"><span style='"MS Mincho"'><img src="im/blob-stat-categories.gif" width="307" height="233"></span></td>
+      <td width="293"><ul>
+          <li><a href="#area">Area</a></li>
+          <li><a href="#perimeter">Perimeter</a></li>
+          <li><a href="#calipdiam">Caliper diameters</a></li>
+          <li><a href="#convexhull">Convex Hull</a></li>
+          <li><a href="#inscribcir">Inscribed Circle</a></li>
+          <li><a href="#intensrel">Intensity</a></li>
+          <li><a href="#boundingrect">Bounding Rectangle</a></li>
+          <li><a href="#bdryfracdim">Boundary Fractal Dimension</a></li>
+          <li><a href="#surffracdim">Surface Fractal Dimension</a></li>
+        </ul></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p align="center" class=MsoPlainText>These measurements are used alone, or combined 
+    into form factors to describe blob size and shape.</p>
+  <div align="center"></div>
+  <hr>
+  <p align="center" class=MsoPlainText>&nbsp;</p>
+  <div class=MsoPlainText></div>
+</div>
+<div class=Section1> 
+  <h2 align="center" class=MsoPlainText><span style='"MS Mincho"'><strong>Blob 
+    statistics.</strong></span></h2>
+  <p align="center" class=MsoPlainText>Each blob statistic has a long descriptive 
+    name, and a short nickname.&nbsp; Lispix gives the nickname in most tabular 
+    output. </p>
+  <p align="center" class=MsoPlainText><strong><font size="+1"><a name="area"></a>Area</font></strong></p>
+  <p align="left" class=MsoPlainText>The area of a blob is the pixel count inside 
+    the boundary.&nbsp; Lispix stores the boundary between pixes, and displays 
+    it this way when the zoom is large enough.&nbsp; Blobs do not have <a href="blob-hole.htm">holes</a> 
+    - the outline of a blob is single and simply connected.&nbsp; Any holes in 
+    the object, which would appear as non-red areas inside an object, are filled 
+    in by the blobber before reporting blob statistics.&nbsp; Holes are not counted 
+    in the area when initially blobbing objects - the number of pixels in the 
+    blob less holes must be equal to or greater than the <a href="top-buttons.htm">Min 
+    Area.</a></p>
+  <h3 align="center" class=MsoPlainText><a name="perimeter"></a>Perimeter </h3>
+  <p align="left" class=MsoPlainText>The perimeter is the <a href="perimeter.htm">length</a> 
+    of the between-pixel outline, in pixel units.&nbsp; A pixel has an edge length 
+    of 1, and an area of 1 (pixel).&nbsp; This measurement may be greater than 
+    the perimeter value you might expect on visual examination, depending on the 
+    wigglyness of the outline.&nbsp; The variation of this wigglyness with smoothing 
+    is the basis of the boundary fractal dimension statistics.&nbsp; In general, 
+    the perimeter depends strongly on the resolution of the image, whereas the 
+    area, or maximum caliper diameter, for example, do not.&nbsp; (Note - that 
+    the perimeter of Mathematical fractals is infinite.)</p>
+  <ul>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'><strong>perimeter                     
+                prim</strong>      Length of the outline.  </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'><strong>perimeter 
+        percentage edge points      p%e </strong>      Fraction of perimeter points 
+        (pixels) on edge of image </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'><strong>perimeter 
+        edge count                pe-cnt</strong>      Number of perimeter points 
+        on edge of image</span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'><strong>perimeter 
+        centroid x                p-cent x</strong>    Centroid calculated from 
+        perimeter</span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'><strong>perimeter 
+        centroid y                p-cent y</strong>         </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'><strong>perimeter 
+        average 20 steps          prm av20</strong>    Length of smoothed perimeter 
+        - 20 adjacent perimeter points. averaged together.&nbsp; All of the perimeter 
+        points averaged together collapse into the centroid above.</span></font></div>
+    </li>
+  </ul>
+  <h3 align="center" class=MsoPlainText><strong><a name="calipdiam"></a>Caliper 
+    Diameter</strong></h3>
+  <p align="left" class=MsoPlainText>Caliper (or Feret) diameters are good, intuitive, 
+    orientation independent linear measures of size, which are affected very little 
+    by image resolution.&nbsp; If one imagines rotating the object between the 
+    jaws of an imaginary caliper while keeping the both jaws in contact with the 
+    object, then we naturally have these four values</p>
+</div>
+<ul>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'><strong><a href="../particle-form/morph-param.htm#maxcaldiameter">maximum 
+      caliper diameter </a>           mxcl d</strong>   &nbsp;&nbsp; Maximum distance 
+      between caliper jaws.&nbsp; Measure of Length.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'><strong>maximum 
+      caliper diameter angle      mxcl ang</strong>    Angle at which this occurs 
+      - orientation of the diameter itself, clockwise from the X-axis (horizontal, 
+      or East). </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'><strong><a href="../particle-form/morph-param.htm#mincaldiameter">minimum 
+      caliper diameter</a>            mncl d</strong>   &nbsp;&nbsp; Minimum distance 
+      between caliper jaws.&nbsp; Measure of Width.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><strong><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>minimum 
+      caliper diameter angle      mncl ang  </span></font></strong></div>
+  </li>
+</ul>
+<p>Lispix calculates the caliper diameters from the convex hull, using a fast 
+  an exact <a href="../references/convex-hull-refs.htm">method.</a>&nbsp; Another 
+  common method involves rotation of coordinate axes to find the maximum and minimum 
+  calpers (<a href="../references/fractal-dimension-refs.htm#russ1995">Russ 1995</a>, 
+  p. 514), but for long, thin objects, the rotation increment must be small even 
+  for a good approximate measurement.</p>
+<h3 align="center"><a name="convexhull"></a>Convex Hull</h3>
+<p align="left">The <a href="../particle-form/morph-param.htm#convexhull">convex 
+  hull</a>, or &quot;taught band outline&quot; is useful for characterizing shape 
+  because it is not sensitive to image noise or resolution as is the perimeter, 
+  and it ignores concavities in the outline.&nbsp; For example, the perimeter 
+  (length of the outline) and convex hull perimeter are the same for a sphere 
+  or rectangle, but very different for a star or banana shape.</p>
+<ul>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>convex 
+      hull area                    CH area     area of convex hull or taut band 
+      outline.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>convex 
+      hull perimeter               CH prim     this perimeter is not sensitive 
+      to image noise or resolution.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>convex 
+      hull num points              CH n p      Number of sides in the convex hull.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>convex 
+      hull max edge                CH mx e     Length of maximum edge of the convex 
+      hull.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>convex 
+      hull num short edges         CH shrt     Number of edges shorter than 2*perimeter/n-sides.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>convex 
+      hull centroid x              CH cnt x  </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>convex 
+      hull centroid y              CH cnt y</span></font></div>
+  </li>
+</ul>
+<div class=MsoPlainText> 
+  <div align="center"> 
+    <h3><span style='"MS Mincho"'> <a name="inscribcir"></a> Inscribed Circle</span></h3>
+    <p align="left">The diameter of the <a href="../particle-form/morph-param.htm#convexhull">maximum 
+      inscribed circle</a> is a good width measurment of width.&nbsp; It may be 
+      smaller than the minimum caliper diameter.&nbsp; Its center is the best 
+      place to aim an electron beam for elemental analysis because it is the point 
+      in the object that is furthest from any point of the boundary.</p>
+  </div>
+</div>
+<ul>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>inscribed 
+      circle radius             i cir r     a realistic width parameter.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>inscribed 
+      circle x                  i cir x   </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>inscribed 
+      circle y                  i cir y   </span></font></div>
+  </li>
+</ul>
+<h3 align="center"><a name="intensrel"></a>Intensity Related Parameters</h3>
+<p align="left">The intensity related parameters are different in kind from all 
+  of the other parameters that Lispix measures except for the Surface Fractal 
+  Dimensions.&nbsp; The intensities of the pixels within the object are averaged 
+  or measured in some way.&nbsp; All pixels within the boundary are counted, including 
+  any &quot;holes&quot;.</p>
+<ul>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>mean 
+      intensity                      int    &nbsp;&nbsp;&nbsp; Average intensity 
+      withn the boundary.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>intensity 
+      range                     int rng   </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>integrated 
+      intensity                sum-int   </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>centroid 
+      x                          centr x    This centroid is almost the same as 
+      p-cent</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>centroid 
+      y                          centr y   </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>weighted 
+      centroid x                 Wctr x     Intensity weighted centroid.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>weighted 
+      centroid y                 Wctr y </span></font></div>
+  </li>
+</ul>
+<div class=MsoPlainText> 
+  <div align="center"> 
+    <h3><span style='"MS Mincho"'><a name="boundingrect"></a>Bounding Rectangle</span></h3>
+    <p align="left">The bounding rectangle of an object is the rectangle you would 
+      make by dragging the mouse, that just touches the object on all four sides.&nbsp; 
+      It is the smallest rectangle to enclose the object, for that specific orientation.&nbsp; 
+      Except for perfectly round objects, the bounding rectangle is orientation 
+      dependent<span style='"MS Mincho"'> -- the only parameter that Lispix measures 
+      that is.   </span></p>
+  </div>
+</div>
+<ul>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>bdr-x1                        
+            bdr-x1     Coordinates - upper right &amp; lower left corners.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>bdr-y1                    
+                bdr-y1    </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>bdr-x2                        
+            bdr-x2    </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>bdr-y2                        
+            bdr-y2    </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>bdr 
+      width                           bdr width&nbsp; Width and height.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>bdr 
+      height                          bdr height</span></font></div>
+  </li>
+</ul>
+<h3 align="center"><a name="bdryfracdim"></a>Boundary Fractal Dimensions</h3>
+<p align="left">The boundary fractal dimension describes the roughness or tortuosity 
+  of the boundary.&nbsp; There are a number of ways to<a href="../references/fractal-dimension-refs.htm"> 
+  measure the fractal dimension</a>, and all of them give different results.&nbsp; 
+  The method Lispix uses here is by <a href="../references/fractal-dimension-refs.htm#adler">Adler</a> 
+  and reflects the change in measured boundary length vs. degree of averaging.&nbsp; 
+  This method seems the most reliable for this purpose.&nbsp; I have <a href="../TOOLS/fractal-boundary-measure.htm">checked</a> 
+  it extensively using <a href="../TOOLS/fractal-koch-tool.htm">computer generated 
+  fractals</a>.</p>
+<p align="left"> Boundary points are averaged using a worm of given length (number 
+  of points) that crawls around the perimeter.&nbsp; The averaged boundary point 
+  is the averaged coordinates for the worm.&nbsp; The smoothed boundary consists 
+  of all the averaged points.&nbsp; The more averaging, the more points in the 
+  worm, the greater the equivalent step size, the smoother the boundary, the smaller 
+  the measured perimeter.&nbsp; The boundaries of Mathematical fractals looks 
+  identical regardless of size scale or magnification.&nbsp; Of course this is 
+  not true for real objects, or for images displayed on the screen because there 
+  is no detail beyond some magnification.&nbsp; For fractals, then, on the one 
+  hand, the perimeter grows indefinately as the step size shrinks.&nbsp; Think 
+  of the step size as the span of calipers used to &quot;walk&quot; around the 
+  boundary.&nbsp; For real objects on the other hand, the behaviour of the boundary 
+  length (perimeter) with step size is in itself a function of the step size.&nbsp; 
+  This means that the fractal dimension, Db, that one measures by this method 
+  is not necessarily constant for changing step sizes.&nbsp; The more &quot;fractal 
+  like&quot; the object is, the less Db will change with step size.&nbsp; In any 
+  case, Lispix reports an averaged Db for <a href="../TOOLS/fractal-boundary-measure.htm#steplengths">seven 
+  lograrithmically spaced step sizes.</a>&nbsp; The Db values indicate fuzziness, 
+  tortuosity or &quot;legginess&quot; of an object, for small, medium and large 
+  step sizes respectively.&nbsp; (Adjacent step sizes tend to correlate, i.e. 
+  to not be independent.)</p>
+<p align="left">Lispix reports fractal statistics for <a href="../TOOLS/fractal-boundary-measure.htm#steplengths">seven 
+  step length ranges.</a>&nbsp; The number following the parameter name or nickname 
+  denotes the range, shown as &quot;x&quot; below.</p>
+<ul>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Boundary 
+      Frac D-X                   BF D X     Fractal dimenson of boundary, for 
+      step size range X (1 to 7)</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Boundary 
+      av StepLen X               BavSL X  &nbsp; Average step size for this range.</span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Boundary 
+      Count X                    BN X     &nbsp; Number of data points for this 
+      range (number of averaged slope measurements).</span></font></div>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+  <h3 align="center"><a name="surffracdim"></a>Surface Fractal Dimension </h3>
+</ul>
+<p align="left">The Surface Fractal Dimension measurement is based on a fractal 
+  measure of the intensity profile across an object.&nbsp; Alex Pentland, <a href="../references/fractal-dimension-refs.htm#apendland84">1984</a> 
+  and <a href="../references/fractal-dimension-refs.htm#aptneland86">1986</a> 
+  showed that the fractal dimension of a surface corresponds to the fractal dimension 
+  of the brightness of the image of the surface.&nbsp; This was for Lambertian 
+  illumination, which may not be the case exactly for electron micrographs.&nbsp; 
+  The surface brightness texture of particles is sometimes a better discriminator 
+  of shape than the the boundary, because the boundary, being an outline of projecting, 
+  rather than sectioning, hides cracks. </p>
+<p align="left">In any case, the fractal dimension of the brightness should be 
+  a useful descriptive parameter for scanning electron micrographs.&nbsp; Dubue, 
+  <a href="../references/fractal-dimension-refs.htm#dubuc89a">1989</a>, shows 
+  a method for determing the fractional dimension of an intensity profile.&nbsp; 
+  Lispix uses this method, averaging the results, for consecutive scan lines that 
+  are either perpendicular or parallel to the maximum caliper diameter of the 
+  object.&nbsp; These are called the &quot;Surface perpendicular Fractal Dimension&quot; 
+  or the &quot;Surface Parallel Fractal Dimension&quot;, ie. SrF D, and SlF D, 
+  respectively.&nbsp; The numbers after the names, ranging from 1 to 5, denote 
+  the <a href="../TOOLS/fractal-boundary-measure.htm#steplengths">step size ranges</a>, 
+  which are the same as used for <strong>Db</strong> (<a href="#bdryfracdim">boundary 
+  fractal dimension </a>measures) except for lack of the two largest step ranges 
+  which are not useful at this point because of limited image sizes.&nbsp; There 
+  can be far more points going around the perimeter of a &quot;rough&quot; object, 
+  than going across a diameter.</p>
+<p align="left">The surface fractal dimension for any step length range, is the 
+  average of a number of intensity profiles.&nbsp; The intensity profiles are 
+  all parallel to each other, 2 pixels apart, and run either parallel or perpendicular 
+  to the maximum caliper diameter.&nbsp; Intensity profiles that are too short 
+  because they occur near the edge of the particle, are ommitted.&nbsp; Most of 
+  the surface of the particle is covered twice in this way - by scan lines in 
+  two representative and perpendicular directions.&nbsp; Horizontal and vertical 
+  directions are not used here, because the results would be dependent on the 
+  orientation of the particle in the image.</p>
+<p align="left">Here are the Surface Fractal Dimension parameters, for <a href="../TOOLS/fractal-boundary-measure.htm#steplengths">step 
+  length ranges</a>, X, where X = 1, 2, 3, 4, and 5.</p>
+<ul>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+      perpendicular Frac D-X      SrF D X   </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+      perpendicular D Range X     SrD Rg X  </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+      perpendicular av StepLen X  SravSL X  </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+      perpendicular Count X     &nbsp; SrN X  </span></font><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>  
+      </span></font> </div>
+  </li>
+</ul>
+<ul>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+      parallel Frac D-X           SlF D X   </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+      parallel D Range X          SlD Rg X  </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+      parallel av StepLen X     &nbsp; SlavSL X  </span></font></div>
+  </li>
+  <li> 
+    <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+      parallel Count X            SlN X</span></font><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>  
+      </span></font></div>
+  </li>
+</ul>
+<div class=Section1> 
+  <hr>
+  <h3 align="center">&nbsp;</h3>
+  <h3 align="center">Boundary and Surface Fractal Dimension for &quot;Flat Regions&quot;</h3>
+  <p>Lispix also reports the flattest region of the derivitive or slope of the 
+    Richardson plot - the step size range for which the fractal dimension measurement 
+    is most constant.&nbsp; These parameters are less useful than the ones above, 
+    because the step size range for the &quot;flat region&quot; varies from particle 
+    to particle, making comparison difficult.&nbsp; Although it might be interesting 
+    from a theoretical point of view to know where the flat region of the Richardson 
+    Plot is, I am thinking of discontinuing these parameters.&nbsp; I suspect 
+    that the averaged fractal dimension measures over given step size ranges will 
+    be useful whether or not they represent a flat region.</p>
+  <ul>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Boundary 
+        flat step min              Bf s1   &nbsp; Minimum step size for the region.</span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Boundary 
+        flat step max              Bf s2     Maximum step size for the region.</span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Boundary 
+        flat D ave                 Bf Dav    Average Db for the &quot;flat&quot; 
+        region.</span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Boundary 
+        flat D range               Bf Drg    Range of Db for the region.</span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Boundary 
+        flat Num points            Bf Npt   </span></font></div>
+    </li>
+  </ul>
+  <ul>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        perpendicular flat step min Srf s1    </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        perpendicular flat step max Srf s2    </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        perpendicular flat D ave    Srf Dav   </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        perpendicular flat D range  Srf Drg   </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        perpendicular flat Num points     Srf Npt </span></font></div>
+    </li>
+  </ul>
+  <ul>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        parallel flat step min      Slf s1    </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        parallel flat step max      Slf s2    </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        parallel flat D ave         Slf Dav   </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        parallel flat D range       Slf Drg   </span></font></div>
+    </li>
+    <li> 
+      <div class=MsoPlainText><font size="-1" face="Courier New, Courier, mono"><span style='"MS Mincho"'>Surface 
+        parallel flat Num points    Slf Npt  </span></font></div>
+    </li>
+  </ul>
+</div>
+<!-- InstanceEndEditable --> 
+</body>
+<!-- InstanceEnd --></html>

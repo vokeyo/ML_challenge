@@ -1,0 +1,1468 @@
+
+No. 96-188
+
+IN THE SUPREME COURT OF THE UNITED STATES
+
+OCTOBER TERM, 1996
+
+GENERAL ELECTRIC CO., ET AL., PETITIONERS
+
+v.
+
+ROBERT K. JOINER AND KAREN P. JOINER
+
+ON WRIT OF CERTIORARI
+TO THE UNITED STATES COURT OF APPEALS
+FOR THE ELEVENTH CIRCUIT
+
+BRIEF FOR THE UNITED STATES
+AS AMICUS CURIAE SUPPORTING PETITIONERS
+
+WALTER DELLINGER
+Acting Solicitor General
+
+FRANK W. HUNGER
+Assistant Attorney General
+
+LAWRENCE G. WALLACE
+Deputy Solicitor General
+
+EDWARD C. DUMONT
+Assistant to the Solicitor
+General
+
+ROBERT S. GREENSPAN
+JOHN P. SCHNITKER
+Attorneys
+
+Department of Justice
+Washington, D.C. 20530-0001
+(202) 514-2217
+
+---------------------------------------- Page Break ----------------------------------------
+
+QUESTION PRESENTED
+
+     Whether the court of appeals applied an errone-
+ous standard of appellate review of a federal trial
+court's decision to admit or exclude expert scientific
+evidence.
+
+(I)
+
+---------------------------------------- Page Break ----------------------------------------
+
+TABLE OF CONTENTS
+
+Page
+
+Interest of the United States . . . . 1
+Statement . . . . 2
+Summary of argument . . . . 6
+Argument:
+I. A trial court's decision to admit or exclude
+  scientific evidence should be reviewed for
+  abuse of discretion . . . . 8
+II. An abuse-of-discretion standard allows for
+  appellate intervention in appropriate cases . . . . 17
+  A. Errors of factor law . . . . 17
+  B. Failure to exercise discretion . . . . 19
+  C. Categorical determinations . . . . . 19
+  D. Exceeding the permissible & limits of
+       discretion . . . . 22
+III. The district court did not abuse its discretion
+  in excluding the testimony of respondents'
+  experts . . . . 24
+Conclusion . . . . 31
+
+      TABLE OF AUTHORITIES
+
+Cases:
+
+Albemarle Paper Co. v. Moody, 422 U. S. 405
+(1975) . . . .
+Anderson v. City of Bessemer City, 470 U.S. 564
+(1985) . . . . 12, 14, 16, 22
+Barnett v. Equitable Trust Co., 34 F.2d 916(2d Cir.
+1929), aff 'd as modified, 283 U. S. 738(1931) . . . . 22
+Bose Corp. v. Consumers Union of United States,
+Inc., 466 U.S. 485 (1984) . . . . 13
+Cooter & Gell v. Hartmarx Corp., 496 U. S. 384
+(1990) . . . . 9, 11, 12, 16, 19, 20
+Daubert v. Merrell Dow Pharmaceuticals, Inc.,
+509 U.S.  579 (1993) . . . . passim
+
+(III)
+
+---------------------------------------- Page Break ----------------------------------------
+
+IV
+
+Cases-Continued:               Page
+
+Hurley v, Irish-American Gay, Lesbian & Bisexual
+Group of  Boston, 115 S. Ct: 2338 (l995) . . . . 13
+Koon V. United States, 116 S Ct. 2035 (1996) . . . . 11, 17, 19
+Miller v. Fenton,  474 U.S. 104( 1985) . . . . 11, 13
+Old Chief v. United States, 117S. Ct.,644 (1997) . . . . 10
+Ornelas v. United States, 116S. Ct. 1657(1996) . . . . 11, 13
+Paoli R.R. Yard PCB Litigation, In re
+35 F.3d 717 (3d Cir. 1994), cert. denied, 115 S. Ct.
+1253(1995) . . . . 14, 15, 28
+No. 95-2098 (3d Cir. May12, 1997) . . . . 16
+Pierce v. Underwood, 487 U.S.552 (1983) . . . . 9, 11, 12,
+                                                                              13, 15, 20, 22
+Rosen v. Ciba-Geigy Corp., 78 F.3d 316(7th Cir.),
+cert. denied, 117S. Ct. 73(1996) . . . . 30
+Salem v. United States Lines Co., 370 U.S. 31
+(1962) . . . . 9
+Salve Regina College v. Russell, 499 U.S. 225
+(1991) . . . . 11, 12, 16, 17, 23
+Spring Co. v. Edgar, 99 U.S. 645 (1878) . . . . 10
+Turpin v. Merrell Dow Pharmaceuticals, Inc.,
+959 F.2d 1349 (6th Cir.), cert. denied, 506 U.S.
+826 (1992) . . . . 26
+United States v. Abel, 469 U. S. 45(1984) . . . . 9, 10
+United States v. Burr, 25 F. Cas. 30(C.C. Va. 1807)
+(No. 14. 692d) . . . . 17
+United States v. Dockery, 955 F.2d 50(D.C. Cir.
+1992) . . . . 22
+United States v. Jones, 107 F.3d 1147(6th Cir.
+1997) . . . . 19
+United States v. Mendoza, 464 U.S.154 (1984) . . . . 1
+Wainwright  v. Sykes, 433 U. S. 72(1977) . . . . 16
+Wilson v. City of Chicago, 6 F.3d 1233(7th Cir.
+1993), cert. denied, 511 U. S. 1088(1994) . . . . 8
+
+---------------------------------------- Page Break ----------------------------------------
+
+V
+
+Constitution, statutes, regulations and rules:      Page
+
+U. S. Const. Amend. I . . . . 13
+15 U. S. C. 2605(e)(2)(A) . . . . 2
+21 U. S. C. 348(C)(3)(A) . . . . 18
+28 U. S. C. 2412(d)(l)(A) . . . . 9
+42 U. S. C. 6973(a) . . . . 18
+42 U.S.C. 7475(a)(4) . . . . 18
+42 U. S.C. 7479(3) . . . . 18
+42 U. S. C 7501(3) . . . . 18
+42 U. S. C. 9606(a) . . . . 18
+40 C.F.R. Pt .761 . . . . 2
+Section 761.3 . . . . 2
+Fed. R. Civ. P. 11 . . . . 12, 16
+Fed. R. Evid.:
+Rule 104(a) . . . . 8, 9
+Rule 401 . . . . 10
+Rule 403 . . . . 10, 30
+Rule 702 . . . . passim
+Rule 706 . . . . 11
+
+Miscellaneous:
+
+Friendly, Indiscretion About Discretion, 31 Emory
+L.J. 747(1982) . . . . 21
+Weinstein,  Rule 702 of   the Federal Rules of Evidence
+Is Sound; It Should Not Be Amended, 138 F.R.D.
+631(1991) . . . . 10
+
+---------------------------------------- Page Break ----------------------------------------
+
+In the Supreme Court of the United States
+
+OCTOBER TERM, 1996
+
+No. 96-188
+
+GENERAL ELECTRIC Co., ET AL., PETITIONERS
+
+v.
+
+ROBERT K. JOINER AND KAREN P. JOINER
+
+ON WRIT OF CERTIORARI
+TO THE UNITED STATES COURT OF APPEALS
+FOR THE ELEVENTH CIRCUIT
+
+BRIEF FOR THE UNITED STATES
+AS AMICUS CURIAE SUPPORTING PETITIONERS
+
+INTEREST OF THE UNITED STATES
+
+    As we explained in our brief as amicus curiae in
+Daubert v. Merrell Dow Pharmaceuticals, Inc., 509
+U.S. 579 (1993), the United States is a party to a far
+greater number of civil cases nationwide than "even
+the most litigious private entity." United States v.
+Mendoza, 464 U.S. 154, 159 (1984).  The government is
+also solely responsible for the enforcement of federal
+criminal laws.  Because of the great diversity of its
+civil and criminal litigation, the government finds
+itself supporting the admissibility of scientific evi-
+dence at trial in some cases and opposing it in others.
+Moreover, the existence of clear standards for appel-
+late review of particular issues materially assists the
+Solicitor General in determining whether to author-
+ize appeals from adverse decisions in government
+
+(1)
+
+---------------------------------------- Page Break ----------------------------------------
+
+2
+
+cases. See id. at 160-161.  The United States there-
+fore has a significant interest in the articulation of a
+clear, principled, and nationally applicable standard
+for appellate review of decisions to admit or exclude
+scientific evidence at trial in federal court.
+
+STATEMENT
+
+     1. At 37, respondent Robert Joiner developed a
+small-cell cancer of the lung Pet. App. 38a. Respon-
+dents sued petitioners on the theory that early onset
+of the disease was caused by exposure to polychlori-
+nated biphenyls (PCBs) and to PCB-derived poly-
+chlorinated dibenzofurans (furans) and polychlori-
+nated dibenzodioxins (dioxins) contained in -products
+manufactured by petitioners (id. at 35a-36a, 39a).
+From 1973 until the time of  trial, respondent work-
+ed as an electrician for the City of Thomasville, Geor-
+gia. Pet. App. 35a.  Although the technology used in
+the city's electrical transformers should have made
+them free of PCBs throughout his employment, test-
+ing conducted between 1983 and 1993 revealed that
+approximately  20% contained PCBs at a level recog-
+nized as contaminating by the Environmental Protec-
+tion Agency.  1 Id. at 36a-37a, Respondent alleged that
+he was exposed to PCBs or their derivatives while
+maintaining the city's transformers, through contact
+with the fluid used to cool and insulate them or with
+fumes released when transformer cores were "baked
+off" under high heat. Id. at 37a.
+     2. The district court granted summary judgment
+for petitioners. Pet, App. 34a-69a.  The court recog-
+nized a factual dispute over. whether respondent was
+           
+___________________(footnotes)
+
+     1 See 40 C.F.R. 761.3 (s.v, "PCB-Contaminated Electrical
+Equipment). Since 1978, the "manufacture, scale, and use of
+PCBs has been severely restricted and subject to regulation by
+the EPA. See 15 U.S.C. 2605(e)(2)(A); 40 C.F.R. Pt. 761.
+
+---------------------------------------- Page Break ----------------------------------------
+
+3
+
+exposed to PCBs (id. at 44a), but held that there was
+insufficient evidence to raise a genuine issue of fact
+concerning exposure to furans or dioxins (id. at 49a,
+51a). The court found no evidence that furans were
+created in the "bake off" process or through trans-
+former fires, because respondent had not shown that
+either situation produced the necessary tempera-
+tures. Id. at 49a.  The court also found respondents'
+evidence insufficient to raise a factual issue con-
+cerning whether dioxins were present in the trans-
+former fluids with which respondent had worked. Id.
+at 49a-51a.
+    The court held (Pet. App. 51a-68a) that expert
+testimony proffered by respondents to establish that
+PCB exposure caused the onset of Robert Joiner's
+lung cancer was inadmissible under Federal Rule of
+Evidence 702, as construed by this Court in Daubert
+v. Merrell Dow Pharmaceuticals, Inc., 509 U.S. 579
+(1993). The court concluded that the testimony did
+not "fit" the facts of this case, because the experts'
+opinions concerning causation were "inextricably
+bound up with [their] assumption that [respondent]
+was exposed to furans and dioxins" (id. at 53a)-an
+assumption the court had held lacked evidentiary
+support.  Id. at 57a.
+    The court further held that the proffered opinions
+would be inadmissible even without that assumption,
+because they were not sufficiently reliable under
+Daubert. Pet. App. 58a-67a.  The court rejected the
+experts' reliance on two animal studies because re-
+spondents did not demonstrate the applicability of
+those studies to human beings or to PCB exposure at
+the level relevant to respondents' case.  Id. at 58a-62a.
+After considering the epidemiological studies cited by
+respondents (id. at 62a-67a), the court concluded that
+they were "equivocal or not helpful to [respondents]"
+
+---------------------------------------- Page Break ----------------------------------------
+
+4
+
+(id. at 63a). In sum, the court was "not persuaded by
+a  preponderance of proof that the studies [cited by
+respondents] support  the knowledge' the experts pur-
+port to have, i.e., that  PCBs, to a reasonable-degree of
+medical certainty, promote small cell lung cancer in
+humans." Id. at 67a (citation and internal quotation
+marks omitted). Because "[t]he analytical gap be-
+tween the evidence presented and the inferences to
+be drawn cm the ultimate issue" of causation was
+"too wide," the court concluded that the proffered
+expert opinions did not "rise above- subjective belief
+or unsupported speculation," and were not admissible.
+Ibid.
+    Because, in the absence- of expert opinions, respon-
+dents had submitted no tenable evidence of causa-
+tion, the district court granted petitioners' motion for
+summary judgment. Pet. App. 68a.2
+    3. The court of appeals reversed Pet. App. 1a-16a.
+With regard to the district court's evidentiary ruling,
+the court first noted that "[a] district court's ruling
+on the admissibility of evidence is reviewed for abuse
+of discretion," but it then held that, "[b]ecause the
+Federal Rules of Evidence governing expert testi-
+mony display a preference for admissibility,"  it would
+"apply a particularly stringent standard of review to
+the trial judge's exclusion of expert testimony." Id.
+at 4a.
+    The court did not `separate its discussion of sum-
+mary judgment and admissibility issues. Considering
+
+___________________(footnotes)
+                         
+    2 The court further noted its belief that "no reasonable juror
+could find that PCBs caused [Robert] Joiner's lung cancer
+given the flawed natural of [respondents'] experts' opinions," so
+that "[s]ummary judgment for [petitioners] would be in order
+even if " the expert testimony were admissible. Pet. App. 67a
+n.29.
+
+---------------------------------------- Page Break ----------------------------------------
+
+5
+
+first the question of "reliability" under Daubert, the
+court recited the qualifications of respondents' ex-
+perts, described their general methodology, and noted
+that each had "asserted the general acceptance of the
+procedures [he] employed." Pet. App. 8a-11a. The
+court acknowledged that "[t]he assessment of reliabil-
+ity also involves reviewing the basis for an expert's
+opinion" (id. at 11a), but it criticized the district
+court for rejecting the experts' reliance on the cited
+animal studies (id. at 11a-12a), for limiting its
+consideration to the studies discussed in the district
+court's opinion (id. at 12a-13a), and for "accepting]
+[petitioners'] criticisms of the conclusions reached in
+those studies" (id. at 13a). In the court of appeals'
+view, the district court exceeded proper bounds by
+ruling on the "correctness" of the proffered expert
+opinions. Ibid.
+    With respect to "relevance" under Daubert, the
+court held that the opinions of respondents' experts
+did not depend on exposure to furans or dioxins
+and that, based on its review of the record, there
+"appear[ed] to be a genuine factual dispute as to
+whether PCBs alone can cause cancer." Pet. App.
+14a.  The court also held that a genuine dispute did
+exist over "whether furans and dioxins could have
+been present" in the fluids to which respondent was
+exposed (id. at 14a-15a), because one of respondents'
+experts had stated that the "baking off" process
+might reach a temperature of 700-800 degrees centi-
+grade.  The court concluded that "the testimony of
+[respondents'] experts was erroneously excluded and
+summary judgment should not have been granted."
+Id. at 16a.
+    Judge Birch concurred "specially" (Pet. App. 16a-
+17a), on the ground that the court's opinion "properly
+emphasized] the role of the district court as `gate-
+
+---------------------------------------- Page Break ----------------------------------------
+
+6
+
+keeper' " with respect to proffered scientific testi-
+mony. Judge Smith dissented  (id.  at  17a-30a), con-
+cluding that the  "trial court  properly applied Daubert
+and did not abuse its discretion in ruling certain ex-
+pert testimony inadmissible."  Id at 29a-30a.
+    
+ SUMMARY OF ARGUMENT
+
+    The question in this case is what standard an
+appellate court should use in reviewing a district
+court's decision to `admit or exclude expert scientific
+testimony.  No statute or rule directly answers that
+question, but several considerations suggest that
+such a decision should be reviewed only for abuse of
+discretion.  First, the text of Rule 702 of the Federal
+Rules of Evidence suggests that result.  Second, trial
+courts are generally accorded wide discretion in
+determining the admissibility of evidence, and there
+is no justification for a basically different rule here.
+Third, institutional factors counsel in favor of def-
+erential review.  The preliminary assessment of prof-
+fered scientific evidence required by Rule 702 will
+often require a detailed and fact-specific analysis,
+made in the context of a particular case and at a
+particular point in the proceedings.  The district
+court is better positioned to undertake that analysis.
+Moreover, there is no reason `to believe that appellate
+judges will be systematically better able to evaluate
+the relevance or reliability of scientific testimony in
+close cases.  Thus, the incremental accuracy that
+might be achieved through review under a standard
+more stringent than abuse of discretion would not
+likely be worth the costs that such review would
+entail.
+    Discretionary decisions, however, are not left to a
+district court's inclination, but to its judgment, and
+the courts of appeals have an important role to play in
+
+---------------------------------------- Page Break ----------------------------------------
+
+7
+
+ensuring that that judgment is appropriately exer-
+cised. Appellate courts may always correct material
+errors of law or clear errors of fact, because basing a
+decision on either type of error will always be an
+abuse of discretion. In other cases, the district court
+may have failed to exercise its discretion, in which
+case some appellate remedy will generally be appro-
+priate.  Sometimes, it will be appropriate for a court
+of appeals to review an accumulated body of knowl-
+edge and experience and to rule that a particular type
+of evidence is generally either acceptable or unaccept-
+able as a categorical matter.  Finally, the court of
+appeals must ensure that the district court's dis-
+cretionary determinations in any case stay within the
+limits of permissible judgment.  Those limits defy
+concise definition.  Bearing in mind the institutional
+considerations we have mentioned, however, the court
+of appeals should be reluctant to undertake an ex-
+tensive independent examination of the issues or
+record involved, and wary of concluding that it is in a
+better position than the district court to evaluate the
+reliability and relevance of proffered evidence in the
+context of a particular case.
+    Application of these principles to this case is
+complicated by the fact that the district court's grant
+of summary judgment was based only in part on
+its exclusion of respondents' experts' opinions con-
+cerning causation.  Even if we assume, however, that
+the court of appeals correctly held that the case
+presented a genuine factual issue with respect to
+exposure to furans and dioxins, the district court's
+judgment should have been affirmed.  That court did
+not base its decision with respect to causation on
+any clear error of fact, and it undertook the proper
+
+---------------------------------------- Page Break ----------------------------------------
+ 
+8                         
+                          
+inquiry with respect to respondents' scientific evi-
+dence.  Although the question will always be a close
+one in any case in which the standard of review is
+likely to make a difference, we think the district
+court's conclusion that the proffered evidence was not
+sufficiently relevant or reliable to be admitted to
+prove the ultimate issue of causation was permis-
+sible one.  The court of appeals therefore should not
+have disturbed it on appeal.
+
+ARGUMENT
+
+I. A TRIAL COURT'S DECISION TO ADMIT OR
+   EXCLUDE SCIENTIFIC EVIDENCE SHOULD
+   BE REVIEWED-FOR ABUSE OF DISCRETION
+
+    As this Court explained in Daubert v. Merrel Dow
+Pharmaceuticals, Inc., 509 U.S. 579, 597 (1993), the
+Federal Rules of Evidence "assign to the trial judge
+the task of  ensuring that an expert's testimony both
+rests on a reliable foundation and is relevant to the
+task at hand." In other words, they give the judge
+"the responsibility for keeping `junk science' out of
+the courtroom." Wilson v. City of Chicago, 6 F.3d
+1233, 1238 (7th Ch; 1993), cert. denied, 511 U.S. 1088
+(1994), In discharging that "gatekeeping role" (Dau-
+bert, 509 U.S. at 597), a district court must (i) under-
+stand the requirements of  the Rules, as interpreted
+by this Court in Daubert; (ii) find any facts necessary
+to decide threshold issues relating to admissibility
+(see Fed. R. Evid. 104(a)); and (iii) make "a prelimi-
+nary assessment of whether the reasoning or meth-
+odology underlying the [proffered]. testimony is sci-
+entifically valid and of whether that reasoning or
+methodology properly can be applied to the facts in
+issue" (Daubert, 509 U.S. at 592-593].  The question
+ 
+---------------------------------------- Page Break ----------------------------------------
+
+9
+
+presented in this case is how an appellate court
+should review the district court's determinations. 3
+    No statute or rule directly answers that question.
+Several considerations suggest, however, that an ap-
+pellate court should not substitute its judgment for
+that of the district court on these issues, but should
+instead determine whether, under governing legal
+principles, the trial court has abused its discretion.
+    1. The Federal Rules of Evidence are to be
+interpreted like any other statute.  Daubert, 509 U.S.
+at 587. Rule 104(a) provides that "[preliminary ques-
+tions concerning * * * the admissibility of evidence
+shall be determined by the court."  See id. at 592 &
+n, 10.  This Court has observed elsewhere that, when
+Congress explicitly commits an issue to decision by
+"the court," rather than simply providing a rule of
+decision, the statutory formulation "emphasizes the
+fact that the determination is for the district court to
+make, and thus suggests some deference to the dis-
+trict court on appeal." Pierce  v. Underwood, 487 U.S.
+552, 559 (1988) (construing 28 U.S.C. 2412(d)(l)(A)).
+The same is true here.
+    2. As a general matter, "[a] district court is ac-
+corded a wide discretion in determining the admis-
+sibility of evidence under the Federal Rules." United
+States v. Abel, 469 U.S. 45, 54 (1984),' This Court has
+
+___________________(footnotes)
+
+    3 It is possible to articulate a standard of review for each
+part of the overall inquiry. See, e.g., Pet. App. 18a (Smith, J.,
+dissenting). It is simpler, however, to treat errors of law or
+fact as aspects of abuse of discretion, as this Court has done in
+other contexts. See pages 17-19, infra; Cooter & Gell v. Hart-
+marx Corp., 496 U.S. 384, 399-405 (1990).
+    4 Before the adoption of the Rules, this Court had indicated
+that deferential review was appropriate for rulings concerning
+the admissibility of expert testimony. Salem v. United States
+Lines Co., 370 U.S. 31, 35 (1962) (dictum) ("[T]he trial judge
+
+---------------------------------------- Page Break ----------------------------------------
+
+10
+
+applied that principle specifically y to rulings deter-
+mining relevance (Rule 401) and balancing probative
+value against the risk of unfair prejudice (Rule 403).
+Id. at 54-55; Old Chief v. United States, 117 S. Ct. 644,
+647 n.1, 651 n.7 (1997). "Relevance" is a central part of
+the inquiry concerning the admissibility of scientific
+evidence under Section 702.  Daubert, 509 U.S. at 587,
+591, 597.  Similarly, because of the powerful and po-
+tentially misleading nature of scientific evidence, a
+district court will typically "exercise[] more control
+over experts than over lay witnesses" under Rule
+403. Id. at 595 (quoting Weinstein, Rule 702 of the
+Federal Rules of Evidence Is Sound; It Should Not
+Be Amended, 138 F.R.D. 631, 632 (1991)).  In the case
+of scientific evidence, the court's determinations re-
+garding probative value and unfair prejudice under
+Rule 403 are likely to be-closely related to its de-
+terminations, under Rule 702, concerning reliability
+and relevance.  It would make little sense to apply a
+basically different standard of appellate review to one
+set of decisions than to the other.
+    For similar reasons, there is no force to the court
+of appeals' assertion. (Pet, App. 4a) that the Rules
+manifest a "preference for admissibility." While the
+Rules may have a "liberal thrust," manifested in
+this context by "relaxing the traditional barriers to
+`opinion' testimony" (Daubert, 509 U.S. at 588),
+Daubert itself demonstrates that  no general rule
+justifies the admission of scientific testimony that is
+not reliable or does not "fit" the case at hand.  More-
+over, whatever the rule at trial, a general "preference
+
+___________________(footnotes)
+                          
+has broad discretion in the matter of the admission or exclusion
+of expert evidence, and his action is to be sustained unless
+manifestly erroneous."); Spring Co. v. Edgar, 99 U.S. 645, 858
+(1878) (dictum) (same).
+
+---------------------------------------- Page Break ----------------------------------------
+
+11
+
+for admissibility" operative at the appellate level
+would preclude reviewing courts from ever deferring
+to rulings excluding evidence.  That has plainly never
+been the rule.
+    3. This Court has frequently recognized that the
+standard of appellate review appropriate to a particu-
+lar sort of decision may depend on "the respective
+institutional advantages of trial and appellate courts."
+Salve Regina College v. Russell, 499 U.S. 225, 233
+(1991); see also Koon v. United States, 116 S. Ct. 2035,
+2046-2048 (1996); Ornelas v. United States, 116 S. Ct.
+1657, 1662-1663 (1996); Cooter & Gell v. Hartmarx
+Corp., 496 U.S. 384,399-405 (1990); Pierce, 487 U.S. at
+559-561; Miller v. Fenton, 474 U.S. 104, 112-118 (1985).
+In our view, district courts are better positioned than
+appellate courts to make the preliminary assessment
+of scientific validity and factual relevance required by
+Daubert (see 509 U.S. at 592-593).
+    a. That assessment will frequently require a de-
+tailed analysis of the nature of the proffered evi-
+dence the scientific and factual premises on which it
+rests; whether those premises are well established,
+conjectural, or something in between and what logi-
+cal chain of reasoning connects general knowledge or
+principles to the facts and circumstances that a party
+proposes to establish in the particular case before the
+court.  See generally Daubert, 509 U.S. at 593-595.
+To inform its analysis, the district court may seek
+clarification or hear argument from the parties; and
+in close or complicated cases it may examine the
+proffered experts, or even seek the assistance of an
+independent expert of its own choosing.  See id. at
+595; Fed. R. Evid. 706.
+    Based on its inquiry, the court must decide
+whether proffered scientific evidence is or is not
+
+---------------------------------------- Page Break ----------------------------------------
+
+12
+
+"scientific * * * knowledge" for purposes of Rule
+702-that is, whether or not the proposed inferences
+or assertions are scientifically derived and "sup-
+ported by * * * `good grounds,' based on what is
+known." Daubert, 509 U.S. at 590.  That decision is
+essentially a factual one.  The court must also decide
+whether the evidence will "assist the trier of fact"
+(Fed. R. Evid. 702),  That question, which "goes pri-
+marily to relevance: is "one of `fit'" between the
+proffered evidence  aid the facts and issues of the case
+before the court.  Daubert, 509 U.S. at 591.
+    To the extent that the judicial assessment of
+reliability and relevance required under Daubert
+rests on an essentially factual inquiry, it is the pro-
+duct of a process in which district courts have "un-
+challenged superiority" over courts of appeals.  Salve
+Regina, 499 U.S. at 233; see Anderson v." City of
+Bessemer City, 470 U.S. 564, 574-575 (1985).  To the
+extent that the inquiry is "-intertwined with legal
+issues (as, for instance, in assessing relevance), the
+district judge, who is "[f]amiliar with the issues and
+litigants" (Cooter & Gell, 496 U.S. at 402), and who is
+intimately involved with the case at the time that the
+relevant assessment must be made, will generally be
+"better situated than the court of appeals to marshal
+the  pertinent  facts , and apply the fact-dependent legal
+standard" (ibid.).  See also id. at 403-404; Pierce, 487
+U.S. at 560-561; compare Daubert, 509 U.S. at 591
+(discussing evidentiary "fit") For these reasons, the
+question of admissibility of proffered scientific evi-
+dence seems to us more like the appropriateness of
+Rule 11 sanctions, at issue in Cooter & Gelt, or
+whether a legal position taken during litigation was
+"substantially justified," considered in Pierce, 487
+
+---------------------------------------- Page Break ----------------------------------------
+
+13
+
+U.S. at 561, than like the questions of controlling
+substantive law at issue in Salve Regina.5
+    b. A decision on expert testimony may itself have a
+significant impact on the length, nature, and cost of
+an action.  It may also shape other important deci-
+sions by the court and the parties.  Thus, it will often
+be an integral part of the district court's overall
+supervision and management of the litigation.  Such
+supervisory decisions, like factual or heavily fact-
+dependent determinations, have typically been left
+to the district court's sound discretion.  See Salve
+Regina, 499 U.S. at 233; Cooter & Gell, 496 U.S. at
+404; Pierce, 487 U.S. at 558 n.1.  Often, they may be
+disturbed on appeal only at significant cost, not only
+in terms of the immediate action (which will presuma-
+bly have to be tried or retried on remand), but in
+broader systemic terms as well.
+    As this Court has emphasized, when an appellate
+court reviews factual findings, [t]he rationale for deference to the original finder
+of fact is not limited to the superiority of the trial
+judge's position to make determinations of credi-
+bility [of witnesses].  The trial judge's major role
+is the determination of fact, and with experience in
+
+___________________(footnotes)
+
+    5 Plenary appellate review of certain factual or "mixed"
+questions may be appropriate when the issue involved is one of
+transcendent constitutional importance, or when a constitu-
+tional standard can "acquire content only through application."
+Ornelas, 116 S. Ct. at 1662 ("probable cause" and "reasonable
+suspicion"); Hurley v. Irish-American Gay, Lesbian & Bisexual
+Group of Boston, 115 S. Ct. 2338, 2344 (1995) (whether conduct
+is expressive for First Amendment purposes);  Miller  v. Fenton,
+474 U.S. at 112-118 (whether confession was "voluntary");  Bose
+Corp. v. Consumers Union of United States, Inc., 466 U.S. 485,
+502 (1984) ("actual malice").  Those concerns are not present in
+this context.
+
+---------------------------------------- Page Break ----------------------------------------
+
+14
+
+    fulfilling that role comes expertise. Duplication of
+    the trial judge's efforts in the court of appeals
+    would very likely contribute only negligibly to the
+    accuracy of fact determination at a huge cost in
+    diversion of judicial resources.
+
+Anderson v. City of Bessemer City, 470 U.S. at
+574-575.  The same will be true of most determina-
+tions with respect to admissibility under Rule 702.
+Threshold determinations of the admissibility of
+evidence of all kinds are an ordinary incident of the
+trial judge's role, and  "with experience * * * comes
+expertise."  The details of a particular scientific
+theory, study, or technique maybe unfamiliar to the
+district court, but the principles of relevance and
+reliability are not.  There is, moreover, no reason to
+think that the scientific details pertinent to a -particu-
+lar case will be any more familiar to the judges who
+sit on the courts of appeals.
+    This point must be emphasized, for it has been
+argued that "more stringent" review is appropriate in
+the context of  scientific  evidence  because "evaluating
+the reliability of scientific methodologies and data
+does not generally  involves assessing the truthfulness
+of the expert witnesses and- thus  is often not "signifi-
+cantly more difficult on a cold record." In re Paoli
+R.R Yard PCB Litigation, 35 F.3d 717, 749 (3d Cir.
+1994), cert. denied, 115 S. Ct. 1253 (1995); see Pet. App.
+4a-5a.  That argument underestimates the value of a
+district court's ability to evaluate the "credibility" of
+a witness, including an expert witness at a hearing on
+admissibility. 6  Even with respect to cases decided
+
+___________________(footnotes)                                
+           
+    6 In the case of expert witnesses, "credibility" involves con-
+siderably more than "truthfullness." Some experts are zeal-
+ous in pursuit of the truth, while others may be zealous pri-
+marily in pursuit of some personal, professional, or political
+
+---------------------------------------- Page Break ----------------------------------------
+                              
+15
+
+purely on a paper record, however, the argument
+slights the role of the district court in the overall
+judicial "project of reaching a quick, final, and bind-
+ing legal judgment" (Daubert, 509 U.S. at 597).  The
+pertinent point is not that appellate courts are less
+competent to evaluate scientific evidence than the
+district court, but that there is little reason to think
+they will be systematically any more competent to
+do so.
+    No judge may be presumed to have pre-existing
+familiarity with whatever principles, techniques, or
+other technical background material may be rele-
+vant to the scientific evidence offered in a particular
+case.  The district court must expend whatever re-
+sources are necessary to achieve sufficient familiar-
+ity to discharge its responsibilities under Rule 702.
+Similarly, the judges of the court of appeals must
+familiarize themselves with the relevant materials to
+the extent necessary to review a challenged ruling on
+admissibility.
+    At the appellate level, however, there will often be a
+significant difference between the effort required to
+conclude that the district court discharged its duty of
+inquiry and reached a permissible decision, and the
+effort required to subject the trial court's decision to
+a "hard look" (In re Paoli R.R. Yard, 35 F.3d at 749)
+or to "particularly stringent * * * review" (Pet.
+App. 4a).  See also Pierce, 487 U.S. at 560 ("[E]ven
+where the district judge's full knowledge of the
+factual setting can be acquired by the appellate court,
+that acquisition will often come at unusual ex-
+pense.").  Because the courts of appeals sit in panels,
+
+___________________(footnotes)
+
+agenda.  Some may lack perceptible zeal.  Such qualities tend
+to emerge in live testimony.  They are often harder to perceive
+or evaluate on a "cold record."
+
+---------------------------------------- Page Break ----------------------------------------
+
+16
+
+that incremental cost must be multiplied by three.
+Finally, because an abuse-of-discretion standard will
+already, by hypothesis, result in the correction of evi-
+dentiary errors that are both serious and prejudicial,
+the benefits to be derived from "particularly strin-
+gent" review are only those  that may arise from
+changing permissible decisions to preferable ones.
+Thus, the "[duplication of the trial judge's efforts
+in the court of appeals [will] very likely contribute
+only negligibly to the accuracy" of rulings under
+Rule 702, "at a huge cost in diversion of judicial re-
+sources." Anderson, 470 U.S at 574-575; compare
+Salve  Regina,  499   U.S. at  231-233  (independent  appel-
+late review on controlling questions of substantive
+law). 
+    Deference to the trial court's evidentiary rulings,
+like deference to its rulings under Rule 11, will tend
+to enhance the ability of "courts on the front lines of
+litigation * * * to control the litigants before them,"
+and will "discourage litigants from pursuing mar-
+ginal appeals, thus reducing the amount of satellite
+litigation." (Cooter & Gell, 496 U.S. at 404. "Strin-
+gent" or "hard look" review (Pet. App. 4a), on the
+other hand, risks turning the district `court's consid-
+eration of scientific evidentiary issues into "a 'try-
+out on the road, '" with appellate briefing and argu-
+ment "the `main event.'" Anderson, 470 US. at
+575 (quoting Wainright v. Sykes, 433 U.S. 72, 90
+(1977)).7 Appellate courts have an important role to
+                        
+___________________(footnotes)
+
+    7 See the 67-page opinion in In re Paoli Railroad Yard
+PCB Litigation, which originated the "more stringent review"
+standard adopted by the court of appeals in this case (Pet. App.
+4a-5a). Compare the recent decision by the same court in In
+re Paoli Railroad Yard PCB Litigation, No. 95-2098 (3d Cir.
+May 12, 1997), slip op. 19 (according "particular deference" to
+
+---------------------------------------- Page Break ----------------------------------------
+
+17
+
+play in policing the boundaries of discretion under
+Rule 702 and Daubert, as we discuss below. That role
+is not, however, to afford disappointed parties an
+opportunity to relitigate at the appellate level close
+evidentiary questions appropriately considered and
+resolved by the district court.
+
+II. AN ABUSE-OF-DISCRETION STANDARD AL-
+     LOWS FOR APPELLATE INTERVENTION IN
+     APPROPRIATE CASES
+
+    Review for abuse of the district court's discretion
+is "not * * * an empty exercise." Koon v. United
+States, 116 S. Ct. at 2046. "[Discretionary choices
+are not left to a court's `inclination, but to its judg-
+ment, and its judgment is to be guided by sound legal
+principles.'" Albemarle Paper Co. v. Moody, 422
+U.S. 405, 416 (1975) (quoting United States v. Burr,
+25 F. Cas. 30, 35 (C.C. Va. 1807) (No. 14,692d) (Mar-
+shall, C.J.)). There are several situations in which it
+will be appropriate for an appellate court to intervene
+to provide the necessary legal guidance. Although
+general categories can only be suggestive, and will
+frequently overlap, they may be usefully summarized
+as follows.
+
+A.  Errors Of Fact Or Law
+
+    Appellate courts are, preeminently, expositors of
+the law. See, e.g., Salve Regina, 499 U.S. at 231-
+233.  If a district court has failed to perform the
+sort of relevance and reliability analysis required
+by Daubert, thereby failing to discharge its "gate-
+keeper" role under Rule 702, then the appellate court
+may properly vacate the decision below and remand
+district court's decision to exclude certain expert testimony
+under Rule 403); see page 10, supra.
+
+---------------------------------------- Page Break ----------------------------------------
+
+18 
+
+the case with instructions to the district court to
+exercise its discretion under, the proper legal stan-
+dards. Similarly, if a trial court's decision to exclude
+scientific evidence can be shown to have been based on
+a misunderstanding  of  the applicable substantive law,
+an appellate court will be well positioned to correct
+the underlying legal error, and accordingly reverse
+or vacate the associated evidentiary ruling. 8  The
+
+___________________(footnotes)
+                           
+     8 This might be the case if the district court did not appreci-
+ate the relevance of proffered evidence under the governing
+law, or if it misunderstood the degree of scientific certainty re-
+quired to satisfy an applicable legal standard.  For example,
+the proof of causation that the plaintiff must offer in a tort
+action such as this one is significantly different from the dem-
+onstration of risk that often permits or requires government
+action in the environmental or public health context.  Thus,
+important environmental statutes require government action
+upon a showing that a condition creates a "danger" or "risk" of
+specified consequences.  See e.g., 42 U.S.C. 6973(a) imminent
+and substantial endangerment to health or the environment "),
+9606(a) ("substantial endangerment to the public, health or wel
+fare or the environment") Other statutes provide that facts
+may be established pursuant to a specified standard, even
+where the scientific community has not reached a uniform
+conclusion under that standard or where the standard itself
+calls for cutting-edge science or technology.   See 42  "U.S.C"
+7475(a)(4) (requiring installation under the- Clean Air Act
+of the "best available control technology"), 7479(3) (defining
+"best available control technology"), 7501(3) (defining "lowest
+achievable emission rate"); 21 U.S.A. 348(c)(3)(A) ("no. [food]
+additive shall be deemed to be safe if it is found to. induce
+cancer when ingested by man or animal").  In such circum-
+tances, expert testimony showing that the scientific commu-
+nity is significantly divided would be sufficiently reliable to
+be admitted to establish the existence of a risk meeting the
+statutory standard.  While the standard of appellate review in
+such a case would be the same, the substantive legal standard
+against which to assess the district court's decision would be
+significantly different. 
+
+---------------------------------------- Page Break ----------------------------------------
+
+19
+
+same applies to clear factual errors that can be shown
+to have affected an evidentiary ruling (for example,
+a finding that a particular theory has never been
+subject to peer review, when the record contains
+three published articles on the subject in peer-
+reviewed journals), In such cases, the district court's
+error of  fact or law would amount to an abuse of
+discretion, and would plainly be subject to correction
+by the court of appeals.  See, e.g., Koon, 116 S. Ct. at
+2047-2048; Cooter & Gell, 496 U.S. at 401-402, 405 see
+also United States v. Jones, 107 F.3d 1147, 1150-1156
+(6th Cir. 1997).
+
+B.  Failure To Exercise Discretion
+
+    An appellate court cannot review for abuse of
+discretion if the district judge did not exercise dis-
+cretion in the first place.  In a few cases the district
+court may so misapprehend its role, undertake so
+inadequate an inquiry, or offer so inadequate an
+explanation for its ruling on admissibility that the
+court of appeals will find itself unable to discern the
+grounds for that ruling or how they relate to the
+factors that the trial court was required to take into
+account under Rule 702 and Daubert.  Some remedy
+will generally be appropriate in such cases, ranging
+from de novo determination of the issue (if, for
+example, the relevant materials are in the record,
+the issues are clear, and there is no other reason
+to remand the case) to a remand with instructions to
+undertake the appropriate evidentiary inquiry.
+
+C. Categorical Determinations
+
+    One argument in favor of active appellate review of
+issues involving the admissibility of scientific evi-
+dence is that such review will promote a desirable
+uniformity in the law.  That argument is not persua-
+
+---------------------------------------- Page Break ----------------------------------------
+
+20
+
+sive as a general matter, because many or most of the
+issues that generate significant `controversy in actual
+cases are likely to involve unsettled- scientific princi-
+ples, questions of methodology or competence relat-
+ing to studies or tests performed especially for a
+particular litigation, or the questionable application
+of known principles to "a particular" set of events
+in the past," Daubert, 509 U.S. at 597. 9  They will
+therefore tend to involve the sort of multifarious and
+novel question, little susceptible, for the time being
+at least, of useful generalization, "which is best left
+largely to the sound discretion of the district court.
+Pierce, 487 U.S. at 562; see  Cooter &  (Tell, 496  U.S. at
+404-405.                                 
+    There are, however,  limited circumstances under
+which it will be appropriate for an appellate court to
+settle, for proceedings within its jurisdiction, a re-
+current issue involving the admission of scientific
+evidence.  As Judge Friendly observed, the scope of
+permissible discretion with respect to specific issues
+may appropriately narrow over time: 
+
+    The rulemakers gave the district courts discre-
+    tion but after enough of them had decided always
+    to exercise it the same way, a way that the court
+    of appeals deemed appropriate, the channel of
+    discretion had narrowed, and a court of appeals
+
+___________________(footnotes)    
+                    
+    9 The evidentiary controversy in this case, for example,
+involved both whether exposure to PCBs, per se, had been
+linked to the development of cancer in human beings (a matter
+of unsettled scientific principle), and whether presumably valid
+studies showing that PCBs, furans and/or dioxins caused cer-
+tain cancers in high-dose animal studies were sufficiently rele-
+vant to Robert Joiner's individual experience to be admissible
+to show the cause of his cancer. 
+
+---------------------------------------- Page Break ----------------------------------------
+
+21
+
+    should keep a judge from steering outside it rather
+    than allow disparate results on the same facts.
+
+Friendly, Indiscretion About Discretion, 31 Emory
+L.J. 747, 772 (1982).  That principle will apply, in
+certain circumstances, to questions concerning the
+scientific reliability y of particular theories, tests,
+studies, or other types of expert evidence potentially
+admissible under Rule 702.
+    Although "[s]cientific conclusions are subject to
+perpetual revision" (Daubert, 509 U.S. at 597), it is
+also true that "theories that are so firmly established
+as to have attained the status of scientific law, such
+as the laws of thermodynamics, properly are subject
+to judicial notice" (id. at 592 n.11).  In the progression
+from novel idea to scientific "law," a particular theory
+or technique will undergo a process of scientific and
+judicial testing. In the early stages, disparate results
+are predictable; and, in the judicial context, there is
+no reason to think that appellate consideration of the
+first case in which admission of evidence based on a
+new theory is sought should control the matter for
+the future.
+    After some period of time, however, with increasing
+experience (both scientific and judicial), there will
+often come a point when the balance of efficiency tips,
+and an appellate court may usefully review the avail-
+able evidence and conclude that a given technique, in
+a definable set of circumstances, is either so thor-
+oughly established or so thoroughly discredited that
+further case-by-case consideration of the issue would
+not be a productive use of judicial resources.  That
+result is consistent both with Daubert and with the
+general use of an abuse-of-discretion standard."
+
+___________________(footnotes)
+
+    10 Of course, in any given ease, the trial judge will still have
+to consider challenges to the way that an expert uses an
+
+---------------------------------------- Page Break ----------------------------------------
+
+22
+
+D. Exceeding The Permissible Limits Of Discretion
+
+    The foregoing bases  for review are relatively easily
+described, and not likely to be controversial.  There
+remains, however, the case of the district court that
+has understood its role, reviewed seriously the mate-
+rials provided to it by the parties, analyzed without
+obvious legal or factual error the proffered evidence's
+scientific reliability and its relevance to the pending
+case, and reached a conclusion concerning  admissibil-
+ity  that  is seriously challenged on appeal, and that the
+court of appeals finds at least  superficially  troubling.
+    It is not Self-evident what it means to say that a
+court of appeals should review such a decision for
+"abuse of discretion." At a minimum, that phrase
+means    that   the   lower court  has a range of  permissible
+choices, and that its decision should not be disturbed
+so long as it stays within that range.  E.g., United
+States v. Dockery, 955 F.2d 50, 54 (D.C. Cir. 1992);
+Barnett v. Equitable Trust Co., 34 F.2d 916, 920 (2d
+Cir. 1929) (L. Hand, J.), aff'd as modified, 283 U.S. 738
+(1931); compare Anderson, 470 U.S. at 574 ("Where
+there are two permissible views of the evidence, the
+fact finder's choice between them cannot be clearly
+erroneous").  Put differently, the appellate court
+should not reverse a discretionary decision unless it
+can say that its review of the matter "commands"
+the opposite conclusion.  Pierce, 487 U.S. at 570.  In
+the end, however, such phrases can do little more
+than restate the question of how much discretion the
+reviewing court is prepared to accord the court
+reviewed.
+
+___________________(footnotes)
+
+accepted technique or theory, or to whether evidence based on
+unexceptionable science is sufficiently relevant to the facts of
+the matter at hand.
+
+---------------------------------------- Page Break ----------------------------------------
+
+23
+
+    In the present context, we think that question is
+best addressed in light of the considerations of com-
+parative institutional advantage and judicial effi-
+ciency discussed above. As this Court emphasized in
+Daubert, 509 U.S. at 597, the object of the overall
+judicial enterprise is not an "exhaustive search for
+cosmic understanding,"  but  appropriate  delivery of "a
+quick, final, and binding legal judgment." Naturally,
+it is also important to strive for "decisional accu-
+racy"; and appellate review on almost any issue will
+tend to promote that goal, Salve Regina, 499 U.S. at
+232.  But it will promote it only at considerable cost.
+Courts of appeals should be wary of deciding that they
+are in a better position than trial courts to evaluate
+the reliability and relevance of proffered scientific
+evidence in most cases; and they should be reluctant
+to undertake an extensive independent review of the
+issues or record involved.
+    Moreover, it is appropriate to place considerable
+responsibility on the parties in this regard. A party
+proffering (or challenging) scientific evidence in the
+district court should take care to provide that court
+with a clear and adequate submission, including cop-
+ies of relevant materials, that specifically delineates
+how the evidence meets (or does not meet) the reli-
+ability y and relevance criteria articulated in Daubert.
+Similarly, on appeal, a party challenging an admis-
+sibility decision ordinarily should be able to point
+specifically and succinctly to a particular analytical
+error that so fundamentally taints the court's deci-
+sion as to require reversal.  We suspect that parties
+that have adequately presented their case to the
+district court will seldom be able to point to such an
+error on appeal.  Parties that have failed to present
+their case adequately below will not ordinarily merit
+rescue by the court of appeals.
+
+---------------------------------------- Page Break ----------------------------------------
+
+24
+
+    III. THE DISTRICT COURT DID NOT ABUSE ITS
+          DISCRETION IN EXCLUDING THE TESTI-
+          MONY OF RESPONDENTS' EXPERTS
+
+    Application of these principles in this case is com-
+licated by the fact that the district court's grant of
+summary judgment was based only in part on the
+inadmissibility of expert testimony. An order grant-
+ing summary judgment is reviewed de novo, resolving
+all factual questions in favor of the  non-moving  party.
+See Pet. App. 4a. Yet, what facts are at issue may
+materially affect the district court's analysis of prof-
+fered scientific evidence,
+    In this case, the district court ruled that there was
+a genuine issue concerning Robert Joiner's exposure
+to PCBs, but no issue with respect-to his exposure to
+furans or dioxins. Pet. App. 44a, 49a, 51a. With re-
+spect to furans and dioxins, the court considered the
+testimony of respondents' experts, but held that it did
+not suffice to create an issue for trial, Id. at 47a-48a,
+50a-51a. Thus, the court of appeals' reliance on the
+experts' testimony in reversing on that issue (id. at
+14a-16a) did not depend on rejecting any evidentiary
+ruling made by the district court. Because this Court
+granted review to consider  only  the evidentiary ques-
+tion (Pet. i), we assume here that respondents have
+adequately raised a factual issue concerning Robert
+Joiner's exposure to  furans and  dioxins. 11
+            
+___________________(footnotes)
+
+    11  For  the  same  reason do not suggest that the Court rest
+its decision on the district court's passing observation (see note
+2, supra) that it would have granted summary judgment for
+petitioners even if it had not excluded the scientific evidence
+proffered by respondents.  To the extent that. observation
+amounted to an alternative ground for the. district court's
+decision, it presents a materially different issue concerning the
+standard of appellate review than does the court's admissibility
+ruling.
+
+---------------------------------------- Page Break ----------------------------------------
+
+25
+
+    The question presented is therefore whether, if we
+assume Joiner's exposure to PCBs, furans or dioxins,
+the district court abused its discretion in concluding
+that the expert opinions proffered by respondents to
+prove that it is more likely than not that one or more
+of those substances contributed, to a "reasonable
+degree of medical certainty," to the early onset of
+Joiner's small-cell lung cancer were not sufficiently
+reliable or relevant to be submitted to a jury.  See
+Pet. App. 51a. Respondents proffered two expert opin-
+ions on causation, based in each case on the experts'
+general background and experience and on specific
+animal and epidemiological studies.  See id. at 8a-10a,
+53a-68a.  Taking into account the considerations out-
+lined above, we conclude that the court of appeals
+should not have disturbed the district court's conclu-
+sions in this case.
+    1. First, the court of appeals was entitled to review
+for clear errors of fact or law affecting the district
+court's ruling.  Because it reversed the trial court's
+holding that there was no genuine issue of fact con-
+cerning respondent's exposure to furans or dioxins,
+the court of appeals could properly conclude that it
+should also reverse the admissibility ruling to the
+extent that it relied on the observation that the
+proffered opinions were "inextricably bound up with
+the experts' assumption that Joiner was exposed to
+furans and dioxins." Pet. App. 53a; see id. at 53a-57a.
+The ruling that the proffered testimony "manifestly
+does not fit the facts of this case" (id. at 57a) was
+based on a view of the facts that was clearly incorrect
+in light of the appellate court's independent ruling on
+summary judgment, and it therefore cannot remain a
+permissible ground for exclusion under Rule 702.
+    The court of appeals implied (Pet. App. 11a-13a) that
+its reversal of the district court's "reliability"  deter-
+
+---------------------------------------- Page Break ----------------------------------------
+
+26
+
+minations was similarly based on a clear error of
+law, because the district court misunderstood its role
+under Daubert and improperly focused on the prof-
+fered experts' "conclusions" rather than on their
+"principles and methodology." Id. at 13a (quoting
+Daubert, 509 U.S. at 595). That sort of legal error
+would be a proper ground for reversal under an abuse-
+of-discretion standard.  We disagree, however, with
+the court of appeals' view that the district court mis-
+understood its role in this case.
+    The district court properly recited the basic stan-
+dards set out in Daubert. See Pet. App. 53a, 67a.
+After thoroughly reviewing the materials cited to it
+by petitioners and respondents (see id. at 53a-67a), the
+court determined, not that the conclusions urged by
+respondents' experts were incorrect or inherently
+implausible (cf. id. at 63a  n.26), but that the "analyti-
+cal gap" between those-conclusions and the scientific
+materials on which they purportedly relied was sim-
+ply "too wide" (id. at 67a, quoting Turpin v. Merrell
+Dow Pharmaceuticals, Inc., 959 F.2d 1349, 1360 (6th
+Cir.), cert. denied, 506, U.S. 826 (1992)), so that they
+amounted to no more than "subjective belief or
+unsupported speculation" (ibid.). That is precisely
+the inquiry not only authorized, but mandated, by
+Daubert. See 509 U.S. at 589-590 & n.9 (Rule 702
+imposes standard of "evidentiary reliability" and
+"trustworthiness"; court should not admit expert
+testimony unless it is "supported by appropriate  vali-
+dation-i.e.,  `good  grounds,'  based on what is known").
+If the district court abused its discretion, it did so
+by reaching the wrong conclusion in its analysis, not
+by misunderstanding or stepping outside the "gate-
+keeping" role assigned to it by Daubert,
+2. For the same reason, this is not a case in which
+the district court failed to exercise its discretion.
+
+---------------------------------------- Page Break ----------------------------------------
+
+27
+
+Nor is it a case in which it would have been appropri-
+ate for the court of appeals to pronounce categorically
+on a particular scientific evidentiary issue, and the
+court did not purport to do so. Thus, of the criteria
+for appellate decision that we have identified, there
+remains only the question whether the district court
+abused its discretion by concluding that the proffered
+testimony of respondents' experts as to causation was
+not sufficiently reliable to be admitted and considered
+by the jury.
+    We think the trial court's conclusion was a per-
+missible one. With respect to studies showing the
+development of cancer in mice exposed to PCBs, the
+court noted (Pet. App. 59a, 61a) that the two cited
+studies were "preliminary" in nature, and showed
+only that "massive doses" of PCBs, injected directly
+into the peritoneum or stomach of suckling mice that
+had been previously dosed with a known initiating
+carcinogen, could promote the development of dose-
+dependent tumors of a type different from the small-
+cell carcinoma found in respondent Joiner's lungs. In
+attempting to answer these concerns, respondents
+"addresse[d] the question of reliance on animal stud-
+ies in general, not the deficiencies that [petitioners]
+ * * highlighted in the experts' reliance on the
+animal studies at issue here." Id. at 62a. In the
+absence of an adequate supplementary showing (com-
+pare id. at 62a n.25) demonstrating, at a minimum, (i)
+that human beings behave similarly to the tested
+animals when exposed to a potential carcinogen and
+(ii) that there was some basis for extrapolating from
+the high dosage tested in the animal studies to the
+much lower exposure levels that might actually have
+been shown by the evidence in this case, the district
+court could reasonably hold that causation opinions
+based primarily on these studies were not sufficiently
+
+---------------------------------------- Page Break ----------------------------------------
+
+28
+
+reliable to be admitted. See In re Paoli R.R. Yard, 35
+F.3d at 743 ("there must be good grounds to extrapo-
+late from animals to humans").
+    Similarly, after carefully reviewing (Pet. App. 63a-
+67a) the epidemiological evidence provided to it by
+respondents in opposing petitioners' motion for sum-
+mary judgment (see id. at 62a-63a), the court con-
+cluded (id. at 67a) that the cited materials could not
+support the opinions proffered by respondents' ex-
+perts on the ultimate issue of causation in this case.
+The district court questioned the support provided
+by a study on cancer mortality among capacitor
+workers, for example, because the study itself found
+"no grounds for associating lung cancer deaths * * *
+and  exposure  in the plant. cautioned that "[t]he nur
+hers were small, [and] the value- of the risk estimate
+was not statistically significant: and suggested only
+"the plausibility of a carcinogenic action." Id. at
+63a & n.26.  Another study showed no statistically
+significant effect on mortality from lung cancer (id.
+at 64a), while a third showed an increase in lung-
+cancer deaths but had nothing to do with PCB ex-
+posure (id. at 64a-65a).  The remaining study cited by
+respondents evidently did not control for cigarette
+smoking or other relevant variables, involved PCB,
+furan and dioxin contamination of  rice oil used to cook
+food in Japan, and was characterized by one of re-
+spondents' own experts as "suggestive" but "not very
+convincing." Id. at  65a-66a.
+    The court of appeals criticized the district court's
+ruling on the grounds that the lower court (i) men-
+tioned the low number of animal studies, (ii) "f [ound]
+research unreliable solely because it use[d] animal
+subjects," (iii) specifically discussed only a limited
+number of studies cited by respondents' experts, and
+(iv) impermissible "excluded the testimony because
+
+---------------------------------------- Page Break ----------------------------------------
+
+29
+
+[the court] drew different conclusions from the re-
+search than did each of the experts," who were well
+qualified, and each of whom maintained that he had
+used "scientifically reliable methods" in reaching his
+proffered opinion on causation. Pet. App. 10a-13a.
+The district court's opinion makes clear, however,
+that it neither placed undue weight on the mere
+number of a particular type of study (see id. at 58a,
+61a) nor thought all animal research unreliable (id. at
+60a-62a).  The court discussed the studies specifically
+cited to it by respondents in opposing summary judg-
+ment (see id. at 62a), and the court of appeals did not
+identify any other study providing more substantial
+support for respondents' position. 12
+    Finally, in our view, the district court did not re-
+ject the proffered evidence because it drew a "differ-
+ent" conclusion from the evidence than did respon-
+dents' experts, but because it concluded that the
+experts' conclusion was one that could not properly be
+drawn for purposes of determining the evidentiary
+issue in this case. See Pet. App, 67a ("[T]he court is
+not persuaded * * * that the studies support the
+`knowledge' the experts purport to have, i.e., that
+PCBs, `to a "reasonable degree of medical certainty;"
+* * * promote small cell lung cancer in humans.").
+That is a permissible conclusion under Daubert.  The
+court of appeals, on the other hand, appears to have
+focused, rather uncritically, on the qualifications of
+respondents' experts and their own assertions that
+
+___________________(footnotes)
+
+    12 The court of appeals impliedly criticized the district court
+for deciding the admissibility issue without having before it
+actual copies of most of the studies it discussed. Pet. App. 13a
+n.9. As the district court noted (id. at 59a n.23, 63a n.27),
+however, it had before it what the parties chose to provide.
+While the court certainly had the authority to seek more infor-
+mation, it had no obligation to do so.
+
+---------------------------------------- Page Break ----------------------------------------
+
+30
+
+their methods and opinions were reliable. See. id. at
+8a-10a  &  n.8,  11a.                          
+    A district court should not base admissibility of
+expert testimony on whether it-thinks that the testi-
+mony is probably right or probably wrong. It must,
+however, exclude such testimony if it concludes that
+the basis for the expert's opinion is so unclear or
+inadequate that it is mere opinion-however well
+informed-rather than testimony concerning scien-
+tific Knowledge"  that will be "helpful" rather than
+misleading, to the jury under Rule 702.  Compare Fed.
+R. Evid. 403 (balancing probative value and undue
+prejudice); Daubert, 509 U.S. tit 589-.590, 595.13 For
+the reasons we have discussed, we think the district
+court acted within the appropriate bounds of its "gate-
+keeping" role under Daubert, 509 U.S, at 597, in
+determining that the "analytical gap" (Pet. App. 67a)
+between the materials cited by respondents and the
+expert opinion they proposed to offer the jury on the
+issue of causation was too large to be bridged by the
+ipse dixit of their experts, no matter how qualified
+those experts were. Even if reasonable minds might
+differ on that issue, the district court would not have
+abused its discretion in reaching one of two permis-
+sible conclusions.  Its decision. therefore should not
+have been disturbed on  appeal.
+
+___________________(footnotes)
+
+    13 As Chief Judge Posner has put it, the district judge must
+determine whether the evidence proffered is "genuinely scien-
+tific, as distinct from being unscientific speculation offered by a
+genuine scientist." Rosen v. Ciba-Geigy  Corp., 78 F.3d 316, 318
+(7th Cir.), cert. denied, 117 S. Ct. 73 (1996).
+
+---------------------------------------- Page Break ----------------------------------------
+
+31
+
+CONCLUSION
+
+    The judgment of the court of appeals should be
+reversed.
+Respectfully submitted.
+
+WALTER DELLINGER
+Acting Solicitor General
+
+FRANK W. HUNGER
+Assistant Attorney General
+
+LAWRENCE G. WALLACE
+Deputy Solicitor General
+
+EDWARD C. DUMONT
+Assistant to the Solicitor
+General
+
+ROBERT S. GREENSPAN
+JOHN P. SCHNITKER
+Attorneys
+
+MAY 1997
+
+
+
+

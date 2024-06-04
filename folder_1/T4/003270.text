@@ -1,0 +1,315 @@
+Digital Geospatial Metadata                                    
+Report Date: 29-Sep-1997                                       
+                                                               
+Data Set Name:                                                 1989 Upper Mississippi River Land Cover/Use
+                                                               
+1 Identification Information                                   
+1.1 Citation Information:                                      
+        8.1 Originator:                                        Environmental Management Technical Center
+        8.2 Publication Date:                                  19950829
+        8.4 Title:
+            1989 Land Cover/Land Use on the Upper Mississippi River System
+        8.6 Data Presentation Form:                            Map
+        8.8.1 Publication Place:
+            Environmental Management Technical Center
+        8.8.2 Publisher:
+            Environmental Management Technical Center (EMTC)
+        8.9 Other Citation Details:
+            White, B. M. and T. W. Owens.  1991.  Geographic Information System Pilot Project For The Upper Mississippi River System.  U.S. Fish and Wildlife Service, National Ecology Research Center, Fort Collins, Colorado, June 1991.  LTRMP  91-05.  48 pp. + Appendix.
+        8.10 Online Linkage:                                   www.emtc.nbs.gov
+1.2 Description                                                
+    1.2.1 Abstract:
+            Land cover/use databases were developed from 1989 color infrared aerial photography for pools within the Upper Mississippi River System.  Photos were interpreted, and line work was transferred to mylar overlays registered to USGS 7.5' quadrangle enlargements at a scale of 1:15,000 before being manually digitized.  The Upper Mississippi River System  includes the Mississippi  River from Cairo, Illinois to Minneapolis, Minnesota and the Illinois River for a total of 1300 river miles.
+    1.2.3 Supplemental Information:
+            Aerial photography was collected for the entire Upper Mississippi River in 1989 and several pools have been similarily mapped with a goal of creating a systemic database of land cover/use.
+1.3 Time Period Of Content                                     
+        9.1 Single Date/Time                                   
+        9.1.1 Calendar Date:                                   19890915
+        9.3 Range of Date/Times                                
+        9.3.1 Beginning Date:                                  19890830
+        9.3.3 Ending Date:                                     19891010
+    1.3.1 Currentness Reference:                               Ground Condition
+1.4 Status                                                     
+    1.4.1 Progress:                                            In Work
+    1.4.2 Maintenance and Update Frequency:                    As Needed
+    1.5.2.1 West Bounding Coordinate:                          -93.144
+    1.5.2.2 East Bounding Coordinate:                          -87.3112
+    1.5.2.3 North Bounding Coordinate:                         45.061
+    1.5.2.4 South Bounding Coordinate:                         36.858
+1.6 Keywords                                                   
+    1.6.1.1 Theme Keyword Thesaurus:                           None
+        1.6.1.2 Theme Keyword:                                 Land cover
+        1.6.1.2 Theme Keyword:                                 Land use
+        1.6.1.2 Theme Keyword:                                 Vegetation
+        1.6.1.2 Theme Keyword:                                 Wetlands
+    1.6.2.1 Place Keyword Thesaurus:                           None
+        1.6.2.2 Place Keyword:                                 Minnesota
+        1.6.2.2 Place Keyword:                                 Wisconsin
+    1.6.4.1 Temporal Keyword Thesaurus:                        None
+        1.6.4.2 Temporal Keyword:                              late summer
+1.7 Taxonomy                                                   
+        1.7.1 Taxonomic Keywords:                              Genus
+    1.7.2 Taxonomic Coverage                                   
+        1.7.2.1 Specific Taxonomic Information                 
+        1.7.2.1.1 Kingdom:                                     Plant
+1.8 Access Constraints:
+            None
+1.9 Use Constraints:
+            None
+1.10 Point of Contact                                          
+        10.1 Contact Person Primary                            
+        10.1.1 Contact Person:                                 Mel Bower
+        10.1.2 Contact Organization:                           USGS/BRD, Environmental Management Technical Center
+        10.4 Contact Address                                   
+            10.4.1 Address Type:                               Mailing and Physical Address
+                10.4.2 Address:                                575 Lester Avenue
+            10.4.3 City:                                       Onalaska
+            10.4.4 State or Province:                          Wisconsin
+            10.4.5 Postal Code:                                54650-8552
+            10.4.6 Country:                                    USA
+        10.5 Contact Voice Telephone:                          (608) 783-7550
+        10.6 Contact TDD/TTY Telephone:                        Unavailable
+        10.7 Contact Facsimile Telephone:                      (608) 783-8058
+        10.8 Contact Electronic Mail:                          metadata_coordinator@emtc.nbs.gov
+        10.8 Contact Electronic Mail:                          gis_coordinator@emtc.nbs.gov
+        10.9 Hours of Service:                                 8:00 A.M. TO 4:00 P.M MONDAY THRU FRIDAY
+        10.10 Contact Instructions:                            NONE
+1.14 Native Data Set Environment:                              UNIX-ARC/INFO
+                                                               
+2 Data Quality Information                                     
+2.1 Attribute Accuracy                                         
+    2.1.1 Attribute Accuracy Report:
+            The attribute accuracy for this data set is tested by manually comparing hard copy plots to the original base map or mylar overlay.  Some comparison may be done on-screen if areas on the test plot are unclear.  The attributes are also checked against an all inclusive list of possible attributes for the data set. If needed the attributes are also verified to the photo  interpretation for the data set.
+2.2 Logical Consistency Report:
+            All polygon features are checked for topology using the ARC/INFO software.  Each polygon begins and ends at the same point with the node feature.  All nodes are checked for error so that there are no dangling features.  There are no duplicate lines or polygons.  All nodes will snap together and close polygons based on a specified tolerance.  If the node is not with the tolerance it is adjusted manually.  The tests for logical consistency are performed in ARC/INFO using certain commands.
+2.3 Completeness Report:
+            All data that can be photo-interpreted is also digitized.  This includes submergent classes, emergents, grasses, trees and also linear features such as streams and  banks.
+2.4 Positional Accuracy                                        
+    2.4.1 Horizontal Positional Accuracy                       
+    2.4.1.1 Horizontal Positional Accuracy Report:
+            The horizontal positional accuracy is tested by visual comparison of the data with hard copy maps and on-screen with existing data sets that cover the same area.
+2.5.2 Source Information                                       
+    2.5.2.1 Source Citation:                                   
+        8.1 Originator:                                        U.S. Geological Survey (USGS)
+        8.2 Publication Date:                                  Unknown
+        8.4 Title:
+            Various Quadrangles
+        8.6 Data Presentation Form:                            Map
+        8.7.1 Series Name:                                     USGS Standard Series of 7.5-minute Topographic Quadrangles
+        8.7.2 Issue Identification:                            [State] Catalog of Topographic and Other Published Maps
+        8.8.1 Publication Place:
+            Reston, Virginia
+        8.8.2 Publisher:
+            U.S. Geological Survey (USGS)
+    2.5.2.2 Source Scale Denominator:                          24000
+    2.5.2.3 Type Of Source Media:                              Paper
+    2.5.2.4 Source Time Period Of Content:                     
+        9.3 Range of Date/Times                                
+        9.3.1 Beginning Date:                                  1948
+        9.3.3 Ending Date:                                     1991
+    2.5.2.4.1 Source Currentness Reference:                    Publication Date
+    2.5.2.5 Source Citation Abbreviation:
+            USGS Quadrangles
+    2.5.2.6 Source Contribution:
+            The 1:24,000-scale USGS quadrangles provided the source data for the creation of 1:15,000-scale enlargements
+2.5.2 Source Information                                       
+    2.5.2.1 Source Citation:                                   
+        8.1 Originator:                                        USGS Quadrangles
+        8.2 Publication Date:                                  Unpublished Material
+        8.4 Title:
+            1:15,000-scale enlargements of 1:24,000-scale USGS quadrangles
+        8.6 Data Presentation Form:                            Map
+        8.8.1 Publication Place:
+            2600 Canton Ct. Suite E, Fort Collins, CO 80525; 4708 South College Ave., Fort Collins, CO 80525; 4710 South College Ave., Fort Collins CO  80525
+        8.8.2 Publisher:
+            Reprographics Inc.; Aero-Metrics Engineering Inc.; Ken Rushing Photographic Services (KRPS)
+        8.9 Other Citation Details:
+            Source Quadrangles were provided by either the EMTC or the Midwest Ecological Science Center.  Selection of source was depondant upon in-hand stocks, and quadrangle publication date.
+        8.11 Larger Work Citation:                             
+            8.1 Originator:                                    Environmental Management Technical Center
+            8.2 Publication Date:                              19950829
+            8.4 Title:
+            1989 Land Cover/Land Use on the Upper Mississippi River System
+            8.6 Data Presentation Form:                        Map
+            8.8.1 Publication Place:
+            Environmental Management Technical Center
+            8.8.2 Publisher:
+            Environmental Management Technical Center (EMTC)
+            8.9 Other Citation Details:
+            White, B. M. and T. W. Owens.  1991.  Geographic Information System Pilot Project For The Upper Mississippi River System.  U.S. Fish and Wildlife Service, National Ecology Research Center, Fort Collins, Colorado, June 1991.  LTRMP  91-05.  48 pp. + Appendix.
+            8.10 Online Linkage:                               www.emtc.nbs.gov
+    2.5.2.2 Source Scale Denominator:                          24000
+    2.5.2.3 Type Of Source Media:                              USGS Quadrangles
+    2.5.2.4 Source Time Period Of Content:                     
+        9.3 Range of Date/Times                                
+        9.3.1 Beginning Date:                                  1948
+        9.3.3 Ending Date:                                     1991
+    2.5.2.4.1 Source Currentness Reference:                    Publication Date
+    2.5.2.5 Source Citation Abbreviation:
+            Quad enlargements
+    2.5.2.6 Source Contribution:
+            Provided basemap to which mylar overlays of 1989 aerial photography was registered
+2.5.2 Source Information                                       
+    2.5.2.1 Source Citation:                                   
+        8.1 Originator:                                        Environmental Management Technical Center
+        8.2 Publication Date:                                  Unpublished Material
+        8.4 Title:
+            1989 Aerial Photography - Upper Mississippi River System
+    2.5.2.2 Source Scale Denominator:                          15000
+    2.5.2.3 Type Of Source Media:                              9x9" Color Infrared Transparency
+    2.5.2.4 Source Time Period Of Content:                     
+    2.5.2.4.1 Source Currentness Reference:                    Ground Condition
+    2.5.2.5 Source Citation Abbreviation:
+            1989 Aerial Photographs
+    2.5.2.6 Source Contribution:
+            Provided base data from which land cover/use data was interpreted
+2.5.2 Source Information                                       
+    2.5.2.1 Source Citation:                                   
+        8.1 Originator:                                        Environmental Management Technical Center, Onalaska, WI
+        8.1 Originator:                                        Midwest Ecological Science Center, Fort Collins, CO
+        8.2 Publication Date:                                  Unpublished Material
+        8.4 Title:
+            1989 Interpreted Photo Overlays - Upper Mississippi River System
+        8.8.1 Publication Place:
+            Environmental Management Technical Center, Onalaska, WI; Midwest Ecological Science Center, Fort Collins, CO
+        8.8.2 Publisher:
+            Environmental Management Technical Center, and Midwest Ecological Science Center
+        8.9 Other Citation Details:
+            UMRS Pools 4, 5, 5a, 6, 8, 13, 19, 25, the Open River study reach, and the La Grange Pool of the Illinois river were photo interpreted by MESC.  The rest of the system has been (or is being) interpreted by the EMTC.
+        8.11 Larger Work Citation:                             
+            8.1 Originator:                                    Environmental Management Technical Center
+            8.2 Publication Date:                              19950829
+            8.4 Title:
+            1989 Land Cover/Land Use on the Upper Mississippi River System
+            8.6 Data Presentation Form:                        Map
+            8.8.1 Publication Place:
+            Environmental Management Technical Center
+            8.8.2 Publisher:
+            Environmental Management Technical Center (EMTC)
+            8.9 Other Citation Details:
+            White, B. M. and T. W. Owens.  1991.  Geographic Information System Pilot Project For The Upper Mississippi River System.  U.S. Fish and Wildlife Service, National Ecology Research Center, Fort Collins, Colorado, June 1991.  LTRMP  91-05.  48 pp. + Appendix.
+            8.10 Online Linkage:                               www.emtc.nbs.gov
+    2.5.2.2 Source Scale Denominator:                          15000
+    2.5.2.3 Type Of Source Media:                              Stable-Base Material
+    2.5.2.4 Source Time Period Of Content:                     
+    2.5.2.4.1 Source Currentness Reference:                    Ground Condition
+    2.5.2.5 Source Citation Abbreviation:
+            Mylar Overlays
+    2.5.2.6 Source Contribution:
+            The mylar overlays are the product of the interpretation of the 1989 aerial photographs.  The overlays were used by EMTC photo interpretors to check one another's work, ground truth the data, and transfer the data to the quad enlargements.
+    2.5.3 Process Step                                         
+    2.5.3.1 Process Description:
+            Scale of photography was 1:15,000.  Photo interpretation was performed with a Bausch and Lomb 240 zoom stereoscope at 6X magnification using 4x0 drafting pens on clear acetate overlays registered to photo transparencies.  The minimum mapping unit was the smallest area that could be delineated (approximately 80 m²).  Extensive ground truthing was performed along with the interpretation.  Data were transferred from photo overlays to mylar overlays registered to USGS 7.5'  quadrangle enlargements at a scale of 1:15,000, using a Bausch & Lomb zoom transfer scope.  All data were transferred and were digitized into ARC/INFO on Altek digitizing tables (absolute accuracy 0.001 inch up to +/- 0.003 inch).  No data reduction or generalization in transferring or digitizing took place.
+    2.5.3.6 Process Contact:                                   
+        10.1 Contact Person Primary                            
+        10.1.1 Contact Person:                                 Mel Bower
+        10.1.2 Contact Organization:                           USGS/BRD, Environmental Management Technical Center
+        10.4 Contact Address                                   
+            10.4.1 Address Type:                               Mailing and Physical Address
+                10.4.2 Address:                                575 Lester Avenue
+            10.4.3 City:                                       Onalaska
+            10.4.4 State or Province:                          Wisconsin
+            10.4.5 Postal Code:                                54650-8552
+            10.4.6 Country:                                    USA
+        10.5 Contact Voice Telephone:                          (608) 783-7550
+        10.6 Contact TDD/TTY Telephone:                        Unavailable
+        10.7 Contact Facsimile Telephone:                      (608) 783-8058
+        10.8 Contact Electronic Mail:                          metadata_coordinator@emtc.nbs.gov
+        10.8 Contact Electronic Mail:                          gis_coordinator@emtc.nbs.gov
+        10.9 Hours of Service:                                 8:00 A.M. TO 4:00 P.M MONDAY THRU FRIDAY
+        10.10 Contact Instructions:                            NONE
+2.7 Taxonomic System                                           
+    2.7.1 Classification System Citation                       
+    2.7.1.1 Classification System Authority:                   
+        8.1 Originator:                                        Environmental Management Technical Center
+        8.2 Publication Date:                                  19950829
+        8.4 Title:
+            1989 Land Cover/Land Use on the Upper Mississippi River System
+        8.6 Data Presentation Form:                            Map
+        8.8.1 Publication Place:
+            Environmental Management Technical Center
+        8.8.2 Publisher:
+            Environmental Management Technical Center (EMTC)
+        8.9 Other Citation Details:
+            White, B. M. and T. W. Owens.  1991.  Geographic Information System Pilot Project For The Upper Mississippi River System.  U.S. Fish and Wildlife Service, National Ecology Research Center, Fort Collins, Colorado, June 1991.  LTRMP  91-05.  48 pp. + Appendix.
+        8.10 Online Linkage:                                   www.emtc.nbs.gov
+                                                               
+3 Spatial Data Organization Information                        
+3.2 Direct Spatial Reference Method:                           Vector
+3.3 Point and Vector Object Information                        
+    3.3.1.1 SDTS Point and Vector Object Type:                 Label Point
+                                                               
+4 Spatial Reference Information                                
+4.1 Horizontal Coordinate System Definition                    
+4.1.2 Planar                                                   
+    4.1.2.2.1 Grid Coordinate System Name:                     Universal Transverse Mercator(UTM)
+    4.1.2.2.2.1 UTM Zone Number:                               15
+    4.1.2.1.2.2 Long Of Central Meridian:                      -93
+    4.1.2.1.2.3 Latitude Of Projection Origin:                 0
+    4.1.2.1.2.4 False Easting:                                 0
+    4.1.2.1.2.5 False Northing:                                0
+    4.1.2.1.2.17 Scale Factor Central Meridian:                .9996
+    4.1.4.1 Horizontal Datum Name:                             North American Datum of 1927
+    4.1.4.2 Ellipsoid Name:                                    Clarke 1866
+    4.1.4.3 Semi-Major Axis:                                   6378206.4
+    4.1.4.4 Denominator of Flattening Ratio:                   294.98
+                                                               
+5 Entity and Attribute Information                             
+5.2 Overview Description                                       
+    5.2.1 Entity and Attribute Overview:
+            The database contains many different attributes.  The different attributes represent the data in a generalized and specific manner.  The most specific attributes describe the vegetation to the genus level of classification.  The specific genus levels have also been categorized into 13 general vegetation classes.  The attributes contain numerical codes and descriptors.  Modifiers also exist representing percent of vegetation cover and tree height.  The classification system used for attributing this data set is the LTRMP VEGETATION CLASSIFICATION.  Contact Tom Owens at the Environmental Management Technical Center for more information on the classification system.
+    5.2.2 Entity and Attribute Detail Citation:
+            White, B. M., and T. W. Owens. 1991. Geographic information system pilot project for the Upper Mississippi River System. Report by the U.S. Fish and Wildlife Service, National Ecology Research Center, and TGS Technology, Inc., Fort Collins, Colorado, for the U.S. Fish and Wildlife Service, Environmental Management Technical Center, Onalaska, Wisconsin, June 1991. EMTC 91-05. 48pp. (NTIS # PB91-218172)
+                                                               
+6 Distribution Information                                     
+6.1 Distributor                                                
+        10.1 Contact Person Primary                            
+        10.1.1 Contact Person:                                 Mel Bower
+        10.1.2 Contact Organization:                           USGS/BRD, Environmental Management Technical Center
+        10.4 Contact Address                                   
+            10.4.1 Address Type:                               Mailing and Physical Address
+                10.4.2 Address:                                575 Lester Avenue
+            10.4.3 City:                                       Onalaska
+            10.4.4 State or Province:                          Wisconsin
+            10.4.5 Postal Code:                                54650-8552
+            10.4.6 Country:                                    USA
+        10.5 Contact Voice Telephone:                          (608) 783-7550
+        10.6 Contact TDD/TTY Telephone:                        Unavailable
+        10.7 Contact Facsimile Telephone:                      (608) 783-8058
+        10.8 Contact Electronic Mail:                          metadata_coordinator@emtc.nbs.gov
+        10.8 Contact Electronic Mail:                          gis_coordinator@emtc.nbs.gov
+        10.9 Hours of Service:                                 8:00 A.M. TO 4:00 P.M MONDAY THRU FRIDAY
+        10.10 Contact Instructions:                            NONE
+6.3 Distribution Liability:
+            Although these data have been processed successfully on a computer system at the Biological Resources Division, no warranty expressed or implied is made regarding the accuracy or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.  It is strongly recommended that these data are directly acquired from a Biological Resources Division server, and not indirectly through other sources which may have changed the data in some way.  It is also strongly recommended that careful attention be paid to the contents of the metadata file associated with these data.  The Biological Resources Division shall not be held liable for improper or incorrect use of the data described and/or contained herein.
+6.4 Standard Order Process                                     
+    6.4.1 Non-Digital Form:                                    maps
+            6.4.3 Fees:                                        none
+6.4 Standard Order Process                                     
+    6.4.2 Digital Form                                         
+    6.4.2.2 Digital Transfer Option                            
+            6.4.4 Ordering Instructions:                       Contact EMTC directly to order hard copy maps
+            6.4.5 Turnaround Time:                             Approximately 2 weeks
+                                                               
+7 Metadata Reference Information                               
+7.1 Metadata Date:                                             19960501
+7.4 Metadata Contact:                                          
+        10.1 Contact Person Primary                            
+        10.1.1 Contact Person:                                 Mel Bower
+        10.1.2 Contact Organization:                           USGS/BRD, Environmental Management Technical Center
+        10.4 Contact Address                                   
+            10.4.1 Address Type:                               Mailing and Physical Address
+                10.4.2 Address:                                575 Lester Avenue
+            10.4.3 City:                                       Onalaska
+            10.4.4 State or Province:                          Wisconsin
+            10.4.5 Postal Code:                                54650-8552
+            10.4.6 Country:                                    USA
+        10.5 Contact Voice Telephone:                          (608) 783-7550
+        10.6 Contact TDD/TTY Telephone:                        Unavailable
+        10.7 Contact Facsimile Telephone:                      (608) 783-8058
+        10.8 Contact Electronic Mail:                          metadata_coordinator@emtc.nbs.gov
+        10.8 Contact Electronic Mail:                          gis_coordinator@emtc.nbs.gov
+        10.9 Hours of Service:                                 8:00 A.M. TO 4:00 P.M MONDAY THRU FRIDAY
+        10.10 Contact Instructions:                            NONE
+7.5 Metadata Standard Name:                                    FGDC Content Standards For Digital Geospatial Metadata
+7.6 Metadata Standard Version:                                 June 8, 1994

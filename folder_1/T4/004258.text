@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl">
+  <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl">
+  <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl">
+  <!ENTITY plant "http://sweet.jpl.nasa.gov/2.0/biolPlant.owl">
+  <!ENTITY ecos "http://sweet.jpl.nasa.gov/2.0/biolEcosciSystem.owl">
+  <!ENTITY body "http://sweet.jpl.nasa.gov/2.0/hydroBodyOfWater.owl">
+  <!ENTITY land "http://sweet.jpl.nasa.gov/2.0/geogLandform.owl">
+  <!ENTITY coast "http://sweet.jpl.nasa.gov/2.0/geogCoast.owl">
+  <!ENTITY ocean "http://sweet.jpl.nasa.gov/2.0/ocean.owl">
+  <!ENTITY dyn "http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl">
+  <!ENTITY geomor "http://sweet.jpl.nasa.gov/2.0/geogGeomorphology.owl">
+  <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl">
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF xml:base="&coast;"
+         xmlns:owl="&owl;"
+         xmlns:dyn="&dyn;"
+         xmlns:phys="&phys;"
+         xmlns:land="&land;"
+         xmlns:coast="&coast;"
+         xmlns:ecos="&ecos;"
+         xmlns:body="&body;"
+         xmlns:plant="&plant;"
+         xmlns:chem="&chem;"
+         xmlns:space="&space;"
+         xmlns:ocean="&ocean;"
+         xmlns:geomor="&geomor;"
+         xmlns:planet="&planet;"
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+ 	 xmlns:xsd="&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about="" owl:versionInfo="2.0">
+     <owl:imports rdf:resource="&phys;"/>
+     <owl:imports rdf:resource="&chem;"/>
+     <owl:imports rdf:resource="&body;"/>
+     <owl:imports rdf:resource="&land;"/>
+     <owl:imports rdf:resource="&ecos;"/>
+     <owl:imports rdf:resource="&space;"/>
+     <owl:imports rdf:resource="&ocean;"/>
+     <owl:imports rdf:resource="&plant;"/>
+     <owl:imports rdf:resource="&dyn;"/>
+     <owl:imports rdf:resource="&planet;"/>
+     <owl:imports rdf:resource="&geomor;"/>
+  </owl:Ontology>
+
+<!-- Classes -->
+
+  <owl:Class rdf:about="#Beach">
+    <rdfs:subClassOf rdf:resource="&land;#Landform"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&space;#isAdjacentTo" />
+        <owl:allValuesFrom rdf:resource="&body;#BodyOfWater" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A beach, or strand, is a geological landform consisting of loose rock particles - such as sand, gravel, shingle, pebbles, cobble - or even shell fragments, along the shoreline of a body of water. Beaches occur along coastal areas, where wave or current action deposits and reworks sediments, or at the margin of land along a lake or river subject to erosion caused by rainfall. Beaches are not necessarily found in conjunction with salt water, such as the ocean, in all instances. A seashore beach is merely one type of beach but it is the most commonly associated with the perception of the word beach.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Shore">
+    <rdfs:subClassOf rdf:resource="&land;#Land"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="&body;#BodyOfWater" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  <rdfs:comment xml:lang="en">A shore or shoreline is the fringe of land at the edge of a large body of water, such as an ocean, sea, or lake.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Shoreline">
+    <owl:equivalentClass rdf:resource="#Shore"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#IntertidalZone">
+    <rdfs:subClassOf rdf:resource="&ecos;#MarineEcosystem"/>
+    <rdfs:subClassOf rdf:resource="&space;#Zone"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&planet;#hasPlanetaryPhenomena" />
+        <owl:allValuesFrom rdf:resource="&dyn;#Tide" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The intertidal zone, also known as the littoral zone, in marine aquatic environments is the area of the foreshore and seabed that is exposed to the air at low tide and submerged at high tide, for example, the area between tide marks. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LittoralZone">
+    <owl:equivalentClass rdf:resource="#IntertidalZone"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#CoastalRegion">
+   <rdfs:subClassOf>
+     <owl:Restriction>
+       <owl:onProperty rdf:resource="&space;#hasCommon2DBorderWith"/>
+       <owl:someValuesFrom rdf:resource="&ocean;#OceanRegion"/>
+     </owl:Restriction>
+   </rdfs:subClassOf>
+   <rdfs:subClassOf>
+     <owl:Restriction>
+       <owl:onProperty rdf:resource="&space;#hasCommon2DBorderWith"/>
+       <owl:someValuesFrom rdf:resource="&planet;#Land"/>
+     </owl:Restriction>
+   </rdfs:subClassOf>
+ </owl:Class>
+
+  <owl:Class rdf:about="#RiparianZone">
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+    <rdfs:comment xml:lang="en">A riparian zone is the interface between land and a flowing surface water body. Plant communities along the river margins are called riparian vegetation, characterized by hydrophilic plants. Riparian zones are significant in ecology, environmental management, and civil engineering due to their role in soil conservation, their biodiversity, and the influence they have on aquatic ecosystems. Riparian zones occur in many forms including grassland, woodland, wetland or even non-vegetative. In some regions the terms riparian woodland, riparian forest, riparian buffer zone or riparian strip are used to characterize a riparian zone. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Sand">
+    <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#TerrigenousSediment">
+    <rdfs:subClassOf rdf:resource="&geomor;#Sediment"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&phys;#hasPhysicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="&geomor;#Erosion" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="&ecos;#TerrestrialEcosystem" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">In oceanography, terrigenous sediments are those derived from the erosion of rocks on land; that is, that are derived from terrestrial environments. Consisting of sand, mud, and silt carried to sea by rivers, their composition is usually related to their source rocks; deposition of these sediments is largely limited to the continental shelf.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LittoralDrift">
+    <owl:equivalentClass rdf:resource="#LongshoreDrift"/>
+  </owl:Class>
+  <owl:Class rdf:about="#LongshoreDrift"/>
+
+  <owl:Class rdf:about="#LongshoreCurrent">
+    <rdfs:subClassOf rdf:resource="&dyn;#OceanCurrent"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#CoastalRegion"/>
+        <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">(Also called littoral current.) The resultant current produced by waves being deflected at an angle by the shore. In this case the current runs roughly parallel to the shoreline. The longshore current is capable of carrying a certain amount of material as long as its velocity remains fairly constant; however, any obstruction, such as a submarine rock ridge or a land point cutting across the path of the current, will cause loss of velocity and consequent loss of carrying power.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#SurfBeat">
+    <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#CoastalRegion"/>
+        <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#StormSurge">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#CoastalRegion"/>
+        <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+</rdf:RDF>

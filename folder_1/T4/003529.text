@@ -1,0 +1,272 @@
+;+
+;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+;
+;  pfss_get_chfootprint - This procedure determines the "footprint" of coronal
+;                         hole boundaries from an input field model at the
+;                         input radius.  By "footprint" is meant the
+;                         contiguous regions on a radial shell through which
+;                         open fieldlines pass.
+;
+;  usage:  pfss_get_chfootprint,opfield,spacing=spacing,rad=rad,/sinlat,
+;            /dilate,/close,/usecurrent,/keepnew,/quiet
+;          where opfield = on output, a trinary array of open field locations
+;                          at the same resolution as the input magnetic field
+;                          data.  The array contains a -1 or 1 in all pixels
+;                          that have open field, with sign indicating
+;                          polarity.  All other pixels are 0.
+;                rad = on input, the radial shell on which to perform this
+;                      analysis (default = 1.0 = photosphere)
+;                spacing = on input, the density of fieldline starting
+;                          points that gets passed to
+;                          pfss_field_start_coord with fieldtype=5
+;                          (default=50)
+;                sinlat = if set, the output opfield array will be on a
+;                         sin(latitude)-longitude grid, rather than the
+;                         Legendre grid used throughout the pfss package, with
+;                         the same number of latitudinal gridpoints
+;                dilate = if set, will dilate the output array commensurate
+;                         with the gridpoint spacing (works only if spacing>1)
+;                close = if set, will perform a morphological close (a dilate
+;                        followed by an erode) on the openfield array having a
+;                        radius commensurate with the specified gridpoint
+;                        spacing (only works if spacing>1).  This
+;                        removes small holes in the CH maps that did
+;                        not happen to get hit by an open fieldline.
+;                        Also, see note #4 below.
+;                usecurrent = if set, this routine computes the coronal hole
+;                             footprint from the existing set of field lines
+;                             already contained in the common block, otherwise
+;                             a new set of field lines is traced
+;                keepnew = if set, the field lines that are traced for this
+;                          routine remain in the common block, otherwise, they
+;                          are discarded, overridden if usecurrent is set
+;                quiet = set to disable screen output
+;          and in the common block we have:
+;                (br,bth,bph) = on input, (r,theta,phi) components of field
+;                (str,stth,stph) = on input, contains an n-vector (where 
+;                                  n=number of field lines) of starting
+;                                  coordinates for each field line
+;                (ptr,ptth,ptph) = on output, contains a (n,stepmax)-array of
+;                                  field line coordinates
+;                nstep = on output, an n-vector containing the number of 
+;                        points comprising each field line
+;
+;  Notes:  -Holes and narrow isthmi can be removed (if desired) by using
+;           morphological operators on the open field array in 
+;           post-processing: for example,
+;             opfield=[opfield(nlon-3:nlon-1,*),opfield,opfield(0:2,*)]
+;             opp=float(morph_close(opfield gt 0,[[0,1,0],[1,1,1],[0,1,0]]))
+;             opm=float(morph_close(opfield lt 0,[[0,1,0],[1,1,1],[0,1,0]]))
+;             opfield=opfield(2:nlon+3,*)
+;          -Sometimes returns open polar cap holes that are too sparsely
+;           filled, resulting in a "patchy" appearance
+;          -If both a positive and negative polarity open field line intersect
+;           the same latitude/longitude coordinate in the open field grid
+;           (opfield), then the open field grid is coded with the polarity of
+;           the last field line traced.
+;          -If using /usecurrent, remember to specify the gridpoint spacing
+;           you used when tracing the current set of fieldlines, otherwise the
+;           routine uses the default.
+;          -The /close option does not work with /sinlat for some reason.
+;
+;  M.DeRosa - 21 Apr 2004 - created, adapted from chbounds.pro
+;             27 Apr 2004 - added usecurrent and keepnew flags
+;             11 May 2004 - added rad keyword
+;             14 Dec 2005 - added spacing,dilate,close,sinlat keywords
+;             14 Aug 2007 - fixed "problem with line crossings" problem
+;
+;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+;-
+
+pro pfss_get_chfootprint,opfield,rad=rad,spacing=spacing,sinlat=sinlat, $
+  dilate=dilate,close=close,usecurrent=usecurrent,keepnew=keepnew,quiet=quiet
+
+;  include common block
+@pfss_data_block
+
+;  get radius
+if keyword_set(rad) then radius=min(rix)>rad(0)<max(rix) else radius=min(rix)
+
+;  get spacing
+if keyword_set(spacing) then spacing=round(spacing(0)) else spacing=50
+
+;  trace field lines
+if not keyword_set(usecurrent) then begin
+
+  ;  save current field line data
+  if not keyword_set(keepnew) then begin
+    if n_elements(str) gt 0 then str2=str
+    if n_elements(stth) gt 0 then stth2=stth
+    if n_elements(stph) gt 0 then stph2=stph
+    if n_elements(ptr) gt 0 then ptr2=ptr
+    if n_elements(ptth) gt 0 then ptth2=ptth
+    if n_elements(ptph) gt 0 then ptph2=ptph
+    if n_elements(nstep) gt 0 then nstep2=nstep
+  endif
+    
+  ;  get coordinates of field line starting points: from source surface inward
+  pfss_field_start_coord,5,spacing,radstart=max(rix)
+
+  ;  get coordinates of field line starting points: from photosphere outward
+  pfss_field_start_coord,5,spacing,radstart=rix(1),/add
+
+  ;  trace field
+  pfss_trace_field,kind,stbr,quiet=quiet,/oneway
+
+endif 
+
+;  get lat/lon coordinates at which each field line intersects photosphere
+pfss_rad_field_crossing,radius,sldata,interpindex=interpindex
+
+;  create logical open field grid
+if keyword_set(sinlat) then begin
+
+  nlines=n_elements(nstep)
+  open=bytarr(nlines)
+  for j=0,nlines-1 do open(j)=max(ptr(0:nstep(j)-1,j)) ge max(rix)
+  opfield=fltarr(nlon,nlat)
+  dslat=2./nlat
+  opx=lon
+  opy=findgen(nlat)*dslat+dslat/2-1
+
+  for j=0l,nlines-1 do begin
+    if open(j) then begin
+      wh=where(round(sldata(0,*)) eq j,nwh)
+      case 1 of
+        (nwh eq 0):  ;  do nothing
+        (nwh eq 1): begin
+          thci=get_interpolation_index(opy,sin(sldata(1,wh)*!dtor))
+          phci=get_interpolation_index(lon,sldata(2,wh))
+          if n_elements(stbr) eq 0 then begin
+            thcix=get_interpolation_index(lat,90-stth(j)*!radeg)
+            phcix=get_interpolation_index(phi,stph(j))
+            signbr=sign_mld(interpolate(br,phcix,thcix,nr-1))
+          endif else signbr=sign_mld(stbr(j))
+          opfield(round(phci),round(thci))=signbr
+          end
+        (nwh gt 1): begin  ;  choose point closest to open endpoint
+          stop,'  THE FOLLOWING PART IS THOUGHT TO BE CORRECT, BUT ISNT TESTED'
+          temp=min(abs(ptr(0:nstep(j)-1,j)-max(rix)),indexopen)
+          indexslice=interpindex(wh)
+          temp=min(abs(indexslice-indexopen),whindex)
+          thci=get_interpolation_index(opy,sin(sldata(1,wh(whindex))*!dtor))
+          phci=get_interpolation_index(lon,sldata(2,wh(whindex)))
+          if n_elements(stbr) eq 0 then begin
+            thcix=get_interpolation_index(lat,90-stth(j)*!radeg)
+            phcix=get_interpolation_index(phi,stph(j))
+            signbr=sign_mld(interpolate(br,phcix,thcix,nr-1))
+          endif else signbr=sign_mld(stbr(j))
+          opfield(round(phci),round(thci))=signbr
+          end
+        else: stop,'  problem with sldata'  ;  shouldn't be able to get here
+      endcase
+    endif
+  endfor
+
+endif else begin
+
+  nlines=n_elements(nstep)
+  open=bytarr(nlines)
+  for j=0,nlines-1 do open(j)=max(ptr(0:nstep(j)-1,j)) ge max(rix)
+  opfield=fltarr(nlon,nlat)
+  opx=lon
+  opy=lat
+
+  for j=0l,nlines-1 do begin
+    if open(j) then begin
+      wh=where(round(sldata(0,*)) eq j,nwh)
+      case 1 of
+        (nwh eq 0):  ;  do nothing
+        (nwh eq 1): begin
+          thci=get_interpolation_index(lat,sldata(1,wh))
+          phci=get_interpolation_index(lon,sldata(2,wh))
+          if n_elements(stbr) eq 0 then begin
+            signbr=sign_mld(interpolate(br,phci,thci,nr-1))
+          endif else signbr=sign_mld(stbr(j))
+          opfield(round(phci),round(thci))=signbr
+          end
+        (nwh gt 1): begin  ;  choose point closest to open endpoint
+          temp=min(abs(ptr(0:nstep(j)-1,j)-max(rix)),indexopen)
+          indexslice=interpindex(wh)
+          temp=min(abs(indexslice-indexopen),whindex)
+          thci=get_interpolation_index(lat,sldata(1,wh(whindex)))
+          phci=get_interpolation_index(lon,sldata(2,wh(whindex)))
+          if n_elements(stbr) eq 0 then begin
+            signbr=sign_mld(interpolate(br,phci,thci,nr-1))
+          endif else signbr=sign_mld(stbr(j))
+          opfield(round(phci),round(thci))=signbr
+          end
+        else: stop,'  problem with sldata'  ;  shouldn't be able to get here
+      endcase
+    endif
+  endfor
+
+endelse
+
+;  dilate, only makes sense if spacing>1
+if (keyword_set(close) or keyword_set(dilate)) and (spacing gt 1) then begin
+
+  ;  need to use spherical_image_dilate, so create structure for +1
+  sph_image1={spherical_image_data}
+  sph_image1.image=ptr_new(opfield gt 0)
+  sph_image1.lon=ptr_new(opx)
+  sph_image1.lat=ptr_new(opy)
+  sph_image1.nlon=nlon
+  sph_image1.nlat=nlat
+  sph_image1.theta=ptr_new((90-opy)*!dpi/180)
+  sph_image1.phi=ptr_new(phi)
+
+  ;  need to use spherical_image_dilate, so create structure for -1
+  sph_image2={spherical_image_data}
+  sph_image2.image=ptr_new(opfield lt 0)
+  sph_image2.lon=ptr_new(opx)
+  sph_image2.lat=ptr_new(opy)
+  sph_image2.nlon=nlon
+  sph_image2.nlat=nlat
+  sph_image2.theta=ptr_new((90-opy)*!dpi/180)
+  sph_image2.phi=ptr_new(phi)
+
+  ;  do the dilations
+  sph_dilated1=spherical_image_dilate(sph_image1,360.*spacing/nlon/2)
+  sph_dilated2=spherical_image_dilate(sph_image2,360.*spacing/nlon/2)
+
+  ;  put dilated image into opfield
+  opfield=float(*sph_dilated1.image)-float(*sph_dilated2.image)
+
+  if keyword_set(close) then begin
+
+    ;  do the erosions
+    sph_closed1=spherical_image_erode(sph_dilated1,360.*spacing/nlon/2)
+    sph_closed2=spherical_image_erode(sph_dilated2,360.*spacing/nlon/2)
+
+    ;  put closed image into opfield
+    opfield=float(*sph_closed1.image)-float(*sph_closed2.image)
+
+    ;  some cleanup
+    heap_free,sph_closed1
+    heap_free,sph_closed2
+
+  endif
+
+  ;  some cleanup
+  heap_free,sph_image1
+  heap_free,sph_image2
+  heap_free,sph_dilated1
+  heap_free,sph_dilated2
+
+endif
+
+;  restore field line data in common block
+if not keyword_set(usecurrent) then begin
+  if not keyword_set(keepnew) then begin
+    if n_elements(str2) gt 0 then str=str2
+    if n_elements(stth2) gt 0 then stth=stth2
+    if n_elements(stph2) gt 0 then stph=stph2
+    if n_elements(ptr2) gt 0 then ptr=ptr2
+    if n_elements(ptth2) gt 0 then ptth=ptth2
+    if n_elements(ptph2) gt 0 then ptph=ptph2
+    if n_elements(nstep2) gt 0 then nstep=nstep2
+  endif
+endif
+
+end

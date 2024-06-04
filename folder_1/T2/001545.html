@@ -1,0 +1,529 @@
+<HTML>
+
+<HEAD>
+
+<TITLE> December 2000 FSL Forum </TITLE>
+
+</HEAD>
+
+<BODY bgcolor = "#ffffff" text="#000000" link="#191970"
+
+vlink="#dd0055">
+
+<center>
+
+
+
+<br clear = all>
+
+
+
+
+
+
+
+<table align = center width = 654 border = 0 bgcolor = "#ffffff" CELLSPACING="0" CELLPADDING="0">
+
+
+
+<tr align = left>
+
+<td width = 10 bgcolor = "#28246c">
+
+<img src = "spacer2.gif" width = 10 height= 1>
+
+</td>
+
+
+
+<td ALIGN = center VALIGN = top width = 150 bgcolor = "#EAFE52">
+
+
+
+<img src = "f1200mastx.jpg" width = 150 height = 160 alt = "FSL in Review">
+
+
+
+<img src = "noaa.gif">
+
+
+
+<br>
+
+<p>
+
+<p>
+
+<b>
+
+<font size = "3">
+
+<p>
+
+<a href = "index.html"> IFPS </a>
+
+<p>
+
+<a href = "f1200b.html"> Scalable Modeling System </a>
+
+<p>
+
+<a href = "f1200c.html"> GFESuite </a>
+
+<p>
+
+<a href = "f1200d.html"> Software Approaches </a>
+
+<p>
+
+<a href = "f1200e.html"> Smart Tools </a>
+
+<p>
+
+<a href = "f1200f.html"> GFESuite Software </a>
+
+<p>
+
+<a href = "f1200g.html"> Designing Digital </a>
+
+<p>
+
+<a href = "f1200h.html"> Deriving Sensible Weather Elements </a>
+
+<p>
+
+<a href = "f1200i.html"> Rapid Prototype Project </a>
+
+<p>
+
+<a href = "f1200j.html"> Forecast Methodology </a>
+
+<p>
+
+<a href = "f1200k.html"> Mt. Washington </a>
+
+<p>
+
+<a href = "f1200l.html"> Etcetera </a>
+
+<p>
+
+<a href = "f1200m.html"> Recent Publications </a>
+
+</font>
+
+<p>
+
+</b>
+
+
+
+<p>
+
+<img src = "round.gif">
+
+<p>
+
+<font size = 2>
+
+<a href = "mailto:fullerton@fsl.noaa.gov"> Contact The Editor </a>
+
+<p>
+
+<i>
+
+Design: <br>
+
+<a href = "http://www.fsl.noaa.gov/~vondaust/"> Wilfred von Dauster </a>
+
+
+
+</i>
+
+</font>
+
+
+
+
+
+<td align = center>
+
+<img src = "whitesp2.gif" width = 20 height = 2>
+
+</td>
+
+
+
+
+
+<TD ALIGN = left VALIGN = top width = 495>
+
+
+
+<img src = "f1200header3.jpg" width = 494 height = 218 alt = "GFESuite">
+
+
+
+<b> 
+
+<i>
+
+By Mark Mathewson
+
+</i>
+
+
+
+<p>
+
+Introduction
+
+</b>
+
+<p>
+
+The Graphical Forecast Editor Suite (GFESuite) is a series of programs that provide an end-to-end interactive forecast preparation capability.  The GFESuite components derive surface sensible weather elements from model data, manage the forecast data and metadata in a database, provide viewing and editing capability of the forecast data, and generate output products in a variety of formats (Figure 1).   The GFESuite software was incorporated into the AWIPS build 5.0 as part of the Interactive Forecast Preparation System (IFPS) and is scheduled for release to the field early 2001.  
+
+<p>
+
+<img src = "f1200figc1.jpg" width = 432 height = 246 alt = "Figure 1">
+
+<p>
+
+<center>
+
+<i>
+
+
+
+</i>
+
+</center>
+
+<p>
+
+<b>
+
+Derivation of Surface Elements
+
+</b>
+
+<p>
+
+Without the capability to derive surface weather elements from numerical models, meteorologists would not be able to take advantage of the high-resolution numerical models that exist on AWIPS and would have to create each forecast grid from scratch.  The GFESuite derivation component provides the following capabilities:
+
+<ul>
+
+<li> Derivation of surface weather elements that are not provided by the numerical model, but are needed in generating digital forecasts
+
+<li> Enhancement of model resolution in time and space to provide more detailed forecasts 
+
+<li> Introduction of terrain datasets to improve the accuracy of surface weather element generation.
+
+</ul>
+
+Most of today’s models do not generate surface weather elements, such as surface temperature, sky or cloud condition, and precipitation type.  These are the elements, however, that make up virtually every type of forecast available for the general public, aviator, fire weather manager, and mariner. In the past, meteorologists would rely on training and experience to interpret the model in determining the surface weather elements, and then would express these surface weather elements in text form, with little spatial and temporal resolution. Using the GFESuite, model data can be interpreted and the required surface weather elements can be derived while preserving model resolution and features.
+
+<p>
+
+Model resolutions are typically 30 to 40 kilometers with 6 hourly time steps, which are not sufficient for high-resolution forecasts.  The gridded forecasts from the GFESuite are nominally 10-kilometer resolution and available hourly.  The derivation component of the GFESuite uses interpolation in both time and space to effectively bring the model resolution down to that required for generating detailed gridded forecasts.  
+
+<p>
+
+The introduction of high-resolution terrain datasets is essential in the successful derivation of certain weather elements, such as surface temperature. The model terrain (Figure 2) is usually quite smooth due to its spatial resolution and may not be sufficient to represent the actual terrain (Figure 3).  Hence, the model's surface temperature field can be incorrect simply because of the difference between the model and the actual terrain (Figures 2 and 3).  In areas of flat terrain, this is not generally an issue; however, in areas of mountainous terrain, the difference in terrain can be as great as 1,000 meters, resulting in errors of several degrees.  (A later article provides more detail about the derivation of sensible weather elements from models.)
+
+<p>
+
+<img src = "f1200figc2.jpg" width = 432 height = 437 alt = "Figure 2">
+
+<p>
+
+<center>
+
+<i>
+
+Figure 2.  Screen showing model terrain grid at 30–40 km resolution.  Compare to GFESuite 1-km topography grid in Figure 3.
+
+</i>
+
+</center>
+
+<p>
+
+<p>
+
+<img src = "f1200figc3.jpg" width = 432 height = 435 alt = "Figure 3">
+
+<p>
+
+<center>
+
+<i>
+
+Figure 3.  GFESuite 1-km topography grid showing same terrain area as in Figure 2.
+
+</i>
+
+</center>
+
+<p>
+
+<b>
+
+Architecture and Database Server
+
+</b>
+
+<p>
+
+The GFESuite architecture uses the same database server as the central repository of all data.  In other words, the GFE is not configured for a particular grid domain and set of weather elements; instead it connects to the database server and determines that information through a series of queries and replies.  This architecture design ensures that all components of the GFESuite are working harmoniously with the same set of information and eliminates the possibility of redundant configurations that can get out of synchronization.  The result is a system that is easy to configure and maintain, and provides storage of gridded forecast and derived fields, map backgrounds, topography data, and metadata.  Clients can access AWIPS model data and are notified when data change.  The database features a locking mechanism to prevent simultaneous editing on the same grid.  The GFESuite network client/server provides access to the database via the Remote Procedure Call (RPC). Figure 4 shows data stored with RPC clients connected to the GFESuite.
+
+<p>
+
+<img src = "f1200figc4.jpg" width = 432 height = 295 alt = "Figure 4">
+
+<p>
+
+<center>
+
+<i>
+
+Figure 4.  GFESuite database includes gridded forecast and derived fields, map backgrounds, and metadata, accessible to clients via the Remote Procedure Call.
+
+</i>
+
+</center>
+
+<p>
+
+The GFESuite database is used primarily for the storage and retrieval of gridded fields. A grid consists of a series of scalar, vector, or discrete parameters that represent the weather over a geographic area for a given time.  For instance, a particular sky condition grid might depict the percent of cloud cover over Colorado for early afternoon.
+
+<p>
+
+Multiple grids depicting the sky condition would comprise a weather element and represent one element of the forecast over many time periods.  Collections of weather elements make up a database source, such as FCST, which holds the work copy of the gridded forecast, or OFFICIAL, which holds the officially released digital forecast, or ETA, which holds the weather elements derived from the Eta numerical model.  Typically the database contains a set of weather elements for public forecasting that include surface temperature, dewpoint temperature, sky condition, freezing level, surface wind, maximum temperature, minimum temperature, quantitative precipitation forecast, probability of precipitation, snow accumulation, and weather coverage, type, and intensity. Additional weather elements exist for aviation, fire weather, and marine forecasting.
+
+<p>
+
+The underlying structure of the gridded fields is in an indexed netCDF data format designed to economize disk space.  The format is hidden from users, who cannot directly access the data files.  A hierarchy of data sources, weather elements, and gridded fields in the database is enforced (see diagram in Figure 5).
+
+<p>
+
+<img src = "f1200figc5.jpg" width = 432 height = 321 alt = "Figure 5">
+
+<p>
+
+<center>
+
+<i>
+
+Figure 5.  GFESuite database hierarchy of data sources, weather elements, and gridded fields.
+
+</i>
+
+</center>
+
+<p>
+
+The GFESuite database server contains many other types of information used by other GFESuite components.  Detailed 1-kilometer terrain information for the entire world is available and used for display on the GFE as well as in the derivation of surface weather elements.
+
+<p>
+
+Geopolitical, river, highway, and other map backgrounds are provided to the GFE and product generation programs.  The map backgrounds are stored in shapefile format, thus allowing users to customize and install additional maps.  Specific configuration information and other metadata are also stored in the server for use in the GFE.
+
+<p>
+
+The GFESuite has been designed for forecast offices where more than one forecaster will be simultaneously editing grids, which is usually the case at most NWS forecast offices.  The database server prevents simultaneous editing of the same forecast grids and lockout of grids while editing.  It also provides notification of data changes, and when forecasters save their edited gridded forecast, all other GFEs connected to the same database server will see the changes immediately.  
+
+<p>
+
+Of course AWIPS model data are important for the GFESuite, not only in the derivation of sensible weather elements but also for display and editing decisions in the GFE.  AWIPS model data are available through the interface provided by the GFESuite database server.  Since model data typically cover a much larger domain at lower resolution than the gridded forecast fields, these data are interpolated and mapped to the higher resolution of the forecast fields on retrieval.
+
+<p>
+
+The GFESuite database server architecture uses RPCs (see Figure 4) and Transmission Control Protocol/Internet Protocol (TCP/IP) to communicate with clients. It does not rely on file systems mounted through the Network File System (NFS), resulting in straightforward installation and configuration and enhanced flexibility.  Since RPCs are used, the networking capability of the GFESuite is intrinsically part of the system.  Generally in the NWS environment, all components of the GFESuite run in the same network domain.  However, a very useful feature of the GFESuite is that its various components can communicate with any database server anywhere in the world, provided the network connectivity is present.  The networking capability allows for access to forecasts at other sites and intersite coordination and forecast boundary reconciliation. 
+
+<p>
+
+Users can easily configure the database to customize components to meet their specific needs.  That is, the list of data sources, weather elements and their attributes, resolution, and domain of the grids can be varied using a single configuration file. 
+
+<p>
+
+<b>
+
+Graphical Forecast Editor
+
+</b>
+
+<p>
+
+The Graphical Forecast Editor (GFE) presents gridded forecast fields to meteorologists for editing, and they can select the weather elements, sources, and grids to view, and  use a variety of tools to edit the data.  The capabilities of the GFE include views of the data with three editors – grid inventory, spatial, and temporal, as well as spatial interpolation and basic and advanced editing tools (Figure 6).
+
+<p>
+
+In providing an inventory view of weather elements, the Grid Manager shows the valid time of each grid for each weather element.  Using the editing capabilities in the Grid Manager, meteorologists can copy derived model data into the forecast, adjust the valid time of grids, and interpolate data from one grid to another. 
+
+<p>The Spatial Editor displays one or more grids with underlying map backgrounds.  Meteorologists can control the appearance of the display by varying the color enhancement curves, set of displayed weather elements, and contour intervals.  In addition, zoom/pan, overlay, and animation capabilities are provided.  
+
+<p>
+
+The Temporal Editor provides a view of weather elements in a time-series representation that allows forecasters to quickly view and edit how a weather element changes over time.  It also shows the value of multiple weather elements over a point or geographical area depicted on the Spatial Editor (shown in Figure 6).
+
+<p>
+
+<img src = "f1200figc6.jpg" width = 432 height = 358 alt = "Figure 6">
+
+<p>
+
+<center>
+
+<i>
+
+Figure 6.  The GFE includes views of data using three editors: Grid Manager (an inventory of weather elements), Spatial Editor (grids in plan view), and Temporal Editor (a time-series representation of weather elements).
+
+</i>
+
+</center>
+
+<p>
+
+Before a forecast can be completed, it must be defined for all times in the forecast period.  The Spatial Interpolation capabilities of the GFE allow the forecaster to "fill-in" and interpolate data from one grid to another.  For example, if the forecaster defines a wind grid at 1200 UTC and another at 2000 UTC, the system can provide hourly interpolation for all periods between 1200 and 2000 UTC.
+
+<p><i>
+
+Basic and Advanced Tools </i>– Forecasts are edited through a series of basic and advanced editing tools that allow users to define an area on the Spatial Editor and then apply an editing action to that area.  Basic tools are used to assign specific values to that area, slightly adjust existing values up or down, and smooth out gradients.  The defined areas on the Spatial Editor need not be drawn by hand, but can be calculated based on other grids.  For instance, forecasters may direct the system to select an area where temperatures are below freezing, and if the precipitation type is shown as rain, they can change it to snow.
+
+<p> 
+
+Advanced tools known as "Smart Tools" add meteorological concepts into the system and have full access to all model and terrain data.  Forecasters can enhance the Quantitative Precipitation Forecast (QPF) based on vertical motion.  The Smart Tools can be used to calculate the vertical motion from the high-resolution terrain and surface winds, and then apply a correction factor to the QPF.  Meteorologists can use these tools to compare a particular forecast field to others and define their relationship.  "Smart Scripts" can be used to chain the Smart Tools together for more efficient use.
+
+<p>
+
+As mentioned before, configurability is the most important function of Smart Tools.  It is impossible to write a fixed set of tools that will work for everyone everywhere.  Instead, we have written a basic set of tools and provided a framework in which forecasters can write their own version of Smart Tools in a powerful language called Python.  (See a later article on the development of Smart Tools.)
+
+<p>
+
+A contour-editing tool is also provided to make small corrections to existing grids by redrawing portions of contours, or to generate a completely new grid from scratch by drawing a series of contours.
+
+<p>
+
+<b>
+
+Product Generation
+
+</b>
+
+<p>
+
+Another very needed feature of the GFESuite technology is automatic product generation, the last of the three steps of the IFPS process.  To reiterate, the first step in forecast preparation is initialization of the digital database, usually with objective forecasts derived from at least one numerical model.  Since the forecast is defined in far greater detail than was possible in the traditional system, comprehensive monitoring and verification systems now alert forecasters of any meteorological inconsistencies, or if the forecast deviates from the observations.  In the second step, forecasters interactively modify weather elements from which many products can be automatically composed and formatted.  Once the set of gridded forecast elements is defined, products can be generated with little or no forecaster intervention. 
+
+<p>
+
+<b> 
+
+Product Suite
+
+</b>
+
+<p>
+
+The IFPS/GFESuite product suite is tiered in order to accommodate various user levels: high-end users, "modern" users, and low-end users (Figure 7). High-end users could receive gridded products (such as raw forecast numbers) that would be used to generate additional products or serve as input to numerical models. Modern users could access the Web to display imagery and graphics that represent the forecast.  Some of these products could be interactive: a click on a map would bring up a forecast tailored to that exact location.  Low-end users could only access the digital forecast in the form of simplified text products.  
+
+<p>
+
+The flexible and tailorable product generation capabilities of the GFESuite provide three types of output products: grids, graphics, and text (Figure 7).  
+
+<p>
+
+<img src = "f1200figc7.jpg" width = 432 height = 278 alt = "Figure 7">
+
+<p>
+
+<center>
+
+<i>
+
+Figure 7.  IFPS tiered product suite to accommodate different levels of users.  
+
+</i>
+
+</center>
+
+<p>
+
+
+
+The very detailed gridded datasets can be best viewed in graphical form, which can accurately represent the detail. Graphical products can be customized to provide imagery, contour analysis, time series, domains, and a combination of some or all of these attributes. The graphical output from GFESuite is available as Portable Network Graphics (PNG) imagery, which is compatible with all popular Web browsers. The text capability provides full access to the forecast grids using data sampling techniques.  Formatted table-type products that depict weather elements, areas, and times can be constructed with minimal effort.  Free-flowing text products can also be generated, and a text language translator will translate the forecasts from English to French and Spanish.  Interactive products, available through a Web interface, allow users to query the grids for specific information; for example, users can click on a specific location for a customized worded or graphical forecast.
+
+<p>
+
+<b>
+
+Summary
+
+</b>
+
+<p>
+
+All of the GFESuite features outdate the past time-consuming process of completely typing out the text-only, "incomplete" forecast.  The success of the GFESuite and its parent IFPS will be measured according to how much it helps forecasters issue timely forecasts with no degradation of high quality data. 
+
+<p>
+
+The GFESuite allows the end-to-end gridded forecast to become a reality.  Derivation programs calculate surface forecast elements directly from the model.
+
+<p>
+
+The GFE and its Smart Tools concept provide easy manipulation of these forecast fields.  The product generation software provides different tiers of formats for low-end to sophisticated users of meteorological forecasts.  The configurability aspect of GFESuite can be used in many different meteorological environments.  (A separate article in this issue covers the GFESuite software in greater detail.)
+
+<p>
+
+During the next two years, additional capability will be added, tested, and then deployed as part of the AWIPS baseline.  Also planned for future releases are enhancements to the Smart Tools framework, intersite coordination, and improved derivations of sensible weather elements from models.
+
+
+
+<p>
+
+<p>
+
+<hr>
+
+<p>
+
+<i>
+
+<b>
+
+<a href = "http://www.fsl.noaa.gov/docs/orgn/fsl_staff.html"> FSL Staff </a>
+
+</B></i>
+
+
+
+<p>
+
+<hr>
+
+</td>
+
+
+
+
+
+<td align = center>
+
+<img src = "whitesp.gif" width = 10 height = 2>
+
+</td>
+
+
+
+</tr>
+
+</table>
+
+</center>
+
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,209 @@
+Digital Geospatial Metadata                      
+Report Date: 13-Sep-1996                         
+                                                 
+Data Set Name:                                   1989 Upper Mississippi River
+                                                 Land Cover/Use
+                                                 
+1 Identification Information                     
+                                                 
+1.1 Citation Information:                        
+8.1 Orginator:                                   State GIS Service Center
+8.2 Publication Date:                            Unknown
+8.4 Title:
+      Public Land Survey 100K
+1.2.1 Abstract:
+      Land cover/use databases were developed from 1989 color  infrared aerial
+      photography for pools within the Upper Mississippi River System.  Photos
+      were interpreted, and line work was transferred to mylar overlays
+      registered to USGS 7.5' quadrangle enlargements at a scale of 1:15,000
+      before being manually digitized.  The Upper Mississippi River System 
+      includes the Mississippi  River from Cairo, Illinois to Minneapolis,
+      Minnesota and the Illinois River for a total of 1300 river miles.
+1.2.2 Purpose:
+      To produce a detailed map of terresterial and aquatic land cover and
+      land use of the Upper Mississippi River floodplain for trend analysis.
+1.2.3 Supplemental Information:
+      Aerial photography was collected for the entire Upper Mississippi River
+      in 1989 and several pools have been similarily mapped with a goal of
+      creating a systemic database of land cover/use.
+1.3 Time Period Information                      
+9.1.1 Single Calendar Date:                      19890915
+1.3.1 Currentness Reference:                     Ground Condition
+1.4.1 Progress:                                  In Work
+1.4.2 Maintenance and Update Frequency:          As Needed
+1.5.1.1 West Bounding Coordinate:                -93.144
+1.5.1.2 East Bounding Coordinate:                -87.3112
+1.5.1.3 North Bounding Coordinate:               45.061
+1.5.1.4 South Bounding Coordinate:               36.858
+1.6.1.1 Theme Keyword Thesaurus:                 None
+1.6.1.2 Theme Keywords:                          Land cover
+1.6.1.2 Theme Keywords:                          Land use
+1.6.1.2 Theme Keywords:                          Vegetation
+1.6.1.2 Theme Keywords:                          Wetlands
+1.6.2.1 Place Keyword Thesaurus:                 None
+1.6.2.2 Place Keywords:                          Minnesota
+1.6.2.2 Place Keywords:                          Wisconsin
+1.6.3.1 Stratum Keyword Thesaurus:               None
+1.6.4.1 Temporal Keyword Thesaurus:              None
+1.6.4.2 Temporal Keywords:                       late summer
+1.7 Access Constraints:
+      None
+1.8 Use Constraints:
+      None
+1.9 Point of Contact Information:                
+10.1.1 Contact Person:                           Marc Thomas
+10.1.2 Contact Organization:                     BLM, OR
+10.1.2 Contact Organization Primary:             BLM. OR
+10.3 Contact Position:                           Chief, GCDB Section
+10.4.1 Address Type:                             Mailing Address
+10.4.2 Address:                                  P.O. Box 2965
+10.4.3 City:                                     Portland
+10.4.4 State or Province:                        Oregon
+10.4.5 Postal Code:                              97208
+                                                 
+2 Data Quality Information                       
+                                                 
+2.1.1 Attribute Accuracy Report:
+      Attribute accuracy for this data set is tested by manually comparing
+      hard copy plots to the original base map or mylar overlay.  Some
+      comparison may be done on-screen if areas on the test plot are unclear. 
+      The attributes are also checked against an all inclusive list of
+      possible attributes for the data set. If needed the attributes are also
+      verified to the photo  interpretation for the data set.
+2.2 Logical Consistency Report:
+      All polygon features are checked for topology using the ARC/INFO
+      software.  Each polygon begins and ends at the same point with the node
+      feature.  All nodes are checked for error so that there are no dangling
+      features.  There are no duplicate lines or polygons.  All nodes will
+      snap together and close polygons based on a specified tolerance.  If the
+      node is not with the tolerance it is adjusted manually.  The tests for
+      logical consistency are performed in ARC/INFO using certain commands.
+2.3 Completeness Report:
+      All data that can be photo-interpreted is also digitized.  This includes
+      submergent classes, emergents, grasses, trees and also linear features
+      such as streams and  banks.
+2.4.1.1 Horitzonal Positional Report:
+      Horizontal positional accuracy is tested by visual comparison of the
+      data with hard copy maps and on-screen with existing data sets that
+      cover the same area.
+2.5.1.1 Source Citation:                         
+8.1 Orginator:                                   Environmental Management
+                                                 Technical Center
+8.2 Publication Date:                            19950829
+8.4 Title:
+      1989 Land Cover/Land Use on the Upper Mississippi River System
+8.6 Geospatial Data Presentation Form:           Map
+8.8.1 Publication Place:
+      Environmental Management Technical Center
+8.8.2 Publisher:
+      Environmental Management Technical Center (EMTC)
+8.9 Other Citation Details:
+      White, B. M. and T. W. Owens.  1991.  Geographic Information System
+      Pilot Project For The Upper Mississippi River System.  U.S. Fish and
+      Wildlife Service, National Ecology Research Center, Fort Collins,
+      Colorado, June 1991.  LTRMP  91-05.  48 pp. + Appendix.
+8.10 Online Linkage:                             www.emtc.nbs.gov
+2.5.1.3 Type Of Source Media:                    Stable-Base Material
+2.5.1.4 Source Time Period Of Content:           
+9.1.1 Single Calendar Date:                      19890915
+2.5.1.4.1 Source Currentness Reference:          Ground Condition
+2.5.2.1 Process Description:
+      Scale of photography was 1:15,000. Photo interpretation was performed
+      with a Bausch and Lomb 240 zoom stereoscope at 6X magnification using
+      4x0 drafting pens on clear acetate overlays registered to photo
+      transparencies.  The minimum mapping unit was the smallest area that
+      could be delineated (approximately 80 m²).  Extensive ground truthing
+      was performed along with the interpretation.  Data were transferred from
+      photo overlays to mylar overlays registered to USGS 7.5'  quadrangle
+      enlargements at a scale of 1:15,000, using a Bausch & Lomb zoom transfer
+      scope.  All data were transferred and were digitized into ARC/INFO on
+      Altek digitizing tables (absolute accuracy 0.001 inch up to +/- 0.003
+      inch).  No data reduction or generalization in transferring or
+      digitizing took place.
+2.5.2.6 Process Contact:                         
+                                                 
+3 Spatial Data Organization Information          
+                                                 
+3.2 Direct Spatial Reference Method:             Vector
+3.3.1.1 SDTS Point & Vector Object Type:         Label Point
+                                                 
+4 Spatial Reference Information                  
+                                                 
+4.1.2.2.1 Grid Coordinate System Name:           Universal Transverse
+                                                 Mercator(UTM)
+4.1.2.2.2.1 UTM Zone Number:                     15
+4.1.4.1 Horizontal Datum Name:                   North American Datum of 1927
+4.1.4.2 Ellipsoid Name:                          Clarke 1866
+                                                 
+5 Entity and Attribute Information               
+                                                 
+5.2.1 Entity/Attribute Overview:
+      The database contains many different attributes.  The different
+      attributes represent the data in a generalized and specific manner.  The
+      most specific attributes describe the vegetation to the genus level of
+      classification.  The specific genus levels have also been categorized
+      into 13 general vegetation classes.  The attributes contain numerical
+      codes and descriptors.  Modifiers also exist representing percent of
+      vegetation cover and tree height.  The classification system used for
+      attributing this data set is the LTRMP VEGETATION CLASSIFICATION. 
+      Contact Tom Owens at the Environmental Management Technical Center for
+      more information on the classification system.
+                                                 
+6 Distribution Information                       
+                                                 
+6.1 Distributor:                                 
+10.1.1 Contact Person:                           Lisa Blackburn
+10.1.2 Contact Organization:                     BLM OR/WA
+10.3 Contact Position:                           Records Administrator
+10.4.1 Address Type:                             Mailing Address
+10.4.2 Address:                                  P.O. Box 2965
+10.4.3 City:                                     Portland
+10.4.4 State or Province:                        Oregon
+10.4.5 Postal Code:                              97208
+10.4.6 Country:                                  USA
+10.5 Contact Voice Phone:                        503/952-6276
+6.3 Distribution Liability Disclaimer Statement:
+      Although these data have been processed successfully on a computer
+      system at the National Biological Service, no warranty expressed or
+      implied is made regarding the accuracy or utility of the data on any
+      other system or for general or scientific purposes, nor shall the act of
+      distribution constitute any such warranty. This disclaimer applies both
+      to individual use of the data and aggregate use with other data.  It is
+      strongly recommended that these data are directly acquired from a
+      National Biological Service server, and not indirectly through other
+      sources which may have changed the data in some way.  It is also
+      strongly recommended that careful attention be paid to the contents of
+      the metadata file associated with these data.  The National Biological
+      Service shall not be held liable for improper or incorrect use of the
+      data described and/or contained herein.
+6.4.1 Non-Digital Form:                          maps
+6.4.3 Fees:                                      pending
+6.4.4 Ordering Instructions :                    Contact EMTC directly to
+                                                 order hard copy maps
+6.4.5 Turnaround Time:                           Approximately 2 weeks
+                                                 
+7 Metadata Reference Information                 
+                                                 
+7.1 Metadata Date:                               19960501
+7.4 Metadata Contact:                            
+10.1.2 Contact Organization:                     National Biological Service,
+                                                 Environmental Management
+                                                 Technical Center
+10.1.1 Contact Person Primary:                   Lynne Arndt
+10.3 Contact Position:                           GIS Project Coordinator
+10.4.1 Address Type:                             Mailing and Physical Address
+10.4.2 Address:                                  575 Lester Avenue
+10.4.3 City:                                     Onalaska
+10.4.4 State or Province:                        Wisconsin
+10.4.5 Postal Code:                              54650-8552
+10.4.6 Country:                                  USA
+10.5 Contact Voice Phone:                        (608) 783-7550
+10.6 Contact TDD/TTY Phone:                      Unavailable
+10.7 Facsimile Phone:                            (608) 783-8058
+10.8 Contact Electronic Mail:                    Lynne_Arndt@nbs.gov
+10.9 Hours of Service:                           8:00 A.M. TO 4:00 P.M MONDAY
+                                                 THRU FRIDAY
+10.10 Contact Instructions:                      NONE
+7.5 Metadata Standard Name:                      FGDC Content Standards For
+                                                 Digital Geospatial Metadata
+7.6 Metadata Standard Version:                   June 8, 1994

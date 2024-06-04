@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+<head> 
+<title>Census Bureau Criteria on Urbanized Areas - FHWA</title> 
+<link rel="stylesheet" type="text/css" href="../fhwadoc.css">
+<link rel="stylesheet" type="text/css" href="../hep/hep.css"></head>
+
+<body>
+<table width="100%" cellpadding="4" cellspacing="0" border="0">
+<tr valign="middle"> 
+<td bgcolor="#000066"><img src="../dotfhwa.gif" width="210" height="31" border="0" alt="United States Department of Transportation - Federal Highway Administration"></td>
+<td bgcolor="#000066" align="right"><a href="../index.html"><img src="../fhwahome.gif" width="79" height="18" border="0" alt="FHWA Home"></a><a href="../feedback.html"><img src="../feedback.gif" width="76" height="18" border="0" alt="Feedback"></a></td>
+</tr>
+</table>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+<tr valign="middle">
+<td bgcolor="#800080" class="white">Planning</td>
+<td bgcolor="#800080" align="right">
+<div class="cgrumb">
+<a href="../index.html" class="cgrumb">FHWA</a> &gt;
+<a href="../hep/index.htm" class="cgrumb">HEP</a> &gt;
+<a href="index.htm" class="cgrumb">Planning</a></div>    </td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="4">
+<tr>
+<td>
+<h1 align="left"><b>How you can evaluate 
+what the proposed Census Bureau criteria on Urbanized Areas means for your area.</b></h1>
+<p>This paper explains how 
+to construct urban clusters and estimate urbanized areas using the proposed 
+definition of the Census Bureau (posted at <a href="http://wwwcf.fhwa.dot.gov/exit.cfm?link=http://www.census.gov/geo/www/ua/ua_2k.html">www.census.gov/geo/www/ua/ua_2k.html</a>) 
+For explanation purposes, we used Danville, IL as an example. </p>
+<p>First, please read the 
+Federal Register notice.&#160; Second, you will need a GIS to read in TIGER/Line 
+files and Census 2000 population counts using the PL-94-171 data for the areas 
+you are interested in examining. For guidance on how to obtain these files, 
+please read a note posted at <a href="http://wwwcf.fhwa.dot.gov/exit.cfm?link=http://www.mcs.net/%7Eberwyned/census/products/pl2gis.html">http://www.mcs.net/~berwyned/census/products/pl2gis.html</a>.</p>
+<p>In our example, we used 
+Arcview 3.2 as our tool.&#160; You will need to know how to use your GIS to 
+complete this process.&#160; </p>
+<p>Population density by block 
+group (BG) and block is the key factor in the selection of areas to be included 
+in the Urbanized area.&#160; Place (or city) boundaries are not used.&#160; 
+A summary of the process is shown on page 2.&#160; </p>
+<p><b>I. Add Data to GIS:</b></p>
+<p>We created four layers 
+of information:</p>
+<p>1. A layer containing 2000 
+population counts by block.&#160; The attribute table for the layer contained 
+the following attributes derived from the redistricting (PL-94-171) files:</p>
+<ol start="1" type="a">
+<li>Land area of the block 
+as identified in the &quot;Arealand&quot; field of the geography file from PL-94-171. 
+The &quot;Arealand&quot; field contains land area of the block group in square meters. 
+Land Area was converted to square miles using the conversion factor 0.3861 
+x 10<sup>-6 </sup>square meters = 1 square mile.</li>
+<li>Tract, Block group, 
+and block fields from the geographic header file.</li>
+<li>Total population counts 
+from the data files.</li>
+<li>Population density of 
+the block (Total population divided by land area in square miles)</li>
+</ol>
+<p>2. Transportation (roads) 
+layer from TIGER/Line 2000, and </p>
+<p>3. A polygon layer containing 
+the water polygons from TIGER/Line 2000.</p>
+<p>4. A polygon layer containing 
+National Parks, Monuments, and Military installations.</p>
+<p><b>II.&#160; Create Block 
+Group Layer</b> </p>
+<p>The final step in the data 
+set creation process is to aggregate the block data into block group data.&#160; 
+Using the block data (in layer 1 above), we created a layer aggregating information 
+from blocks to block groups.&#160; The attribute table for the BG layer contained 
+total population, area in square miles, and population density (total population 
+/ area in sqmiles) of the block group.<br>
+<br>
+<b>III.&#160; Evaluation and Selection process</b> </p>
+<table border="1" cellspacing="0" cellpadding="3" width="100%">
+<tr> 
+<td width="11%" valign="top">&nbsp; </td>
+<td width="44%" valign="top"> 
+ <p><b>Find potential 
+geographic units. </b></p>          </td>
+<td width="44%" valign="top"> 
+ <p><b>Then, determine 
+which to add to qualifying&#160; urbanized area</b></p>          </td>
+</tr>
+<tr> 
+<td width="11%" valign="top"> 
+ <p><b>Step 1</b></p>          </td>
+<td width="44%" valign="top"> 
+ <p>Find all Block Groups 
+(BGs) that have an area &lt; 2 square miles, and contain a population 
+density &gt; &#160;1000 people per square mile (ppsm).&#160; If no BGs 
+of 1000 ppsm density are available, use blocks of 1000 ppsm to create 
+the cores.</p>          </td>
+<td width="44%" valign="top"> 
+ <p>Select all contiguous 
+BGs to form the core.&#160; Note that many cores can be simultaneously 
+formed. (See page 3 for details)</p>          </td>
+</tr>
+<tr> 
+<td width="11%" valign="top"> 
+ <p><b>Step 2</b></p>          </td>
+<td width="44%" valign="top"> 
+ <p>Find All BGs with 
+area &lt; 2 square miles, population density &gt; &#160;500 ppsm and &lt; 
+1000 ppsm</p>          </td>
+<td width="44%" valign="top"> 
+ <p>Of these BGs, select 
+those immediately adjacent to the cores identified in step 1 (See page 
+4).</p>          </td>
+</tr>
+<tr> 
+<td width="11%" valign="top"> 
+ <p><b>Step 3</b></p>          </td>
+<td width="44%" valign="top"> 
+ <p>Find all blocks with 
+population density &gt; &#160;&#160;500 ppsm.</p>          </td>
+<td width="44%" valign="top"> 
+ <p>Select:</p>
+ <p><b>A</b>. Those blocks 
+that connect to the core.</p>
+ <p><b>B</b>.&#160; Select 
+all blocks that are adjacent to those blocks selected in Step A.</p>
+ <p><b>C</b>. Continue 
+this process until all possible blocks are selected.</p>
+ <p>See page 5 for more 
+details.</p>          </td>
+</tr>
+<tr> 
+<td width="100%" colspan="3" valign="top"> 
+ <p><b>Complete steps 
+1 to 3 for all densely populated areas in your region before proceeding 
+to step 4.&#160; </b></p>          </td>
+</tr>
+<tr> 
+<td width="11%" valign="top"> 
+ <p><b>Step 4</b></p>          </td>
+<td width="44%" valign="top"> 
+ <p>&#160;&quot;Hop&quot; Criteria: 
+Find all blocks or other &quot;cores&quot; that are within 0.5 miles of the &quot;core&quot; 
+area identified after step 3.</p>          </td>
+<td width="44%" valign="top"> 
+ <p><b>A. </b>Select 
+all the blocks based on two additional criteria explained on pages 6 and 
+7.</p>
+ <p><b>B. </b>Find the 
+next set of blocks or &quot;core&quot; within 0.5 miles of the &quot;core&quot; area identified 
+after step A.&#160; </p>
+ <p><b>C. </b>Continue 
+this process until all possible hops in all the densely populated areas 
+are completed.</p>          </td>
+</tr>
+<tr> 
+<td width="11%" valign="top"> 
+ <p><b>Step 5</b></p>          </td>
+<td width="44%" valign="top"> 
+<p><b>A.&nbsp;&nbsp;&nbsp;&nbsp; </b>Examine all donut holes, and </p>
+ <p><b>B.&nbsp;&nbsp;&nbsp;&nbsp; </b>Examine all indentations in the &quot;core&quot; area obtained after step 5A.</p>          </td>
+<td width="44%" valign="top"> 
+ <p><b>A. </b>Select 
+all donut hole areas &lt; &#160;5 sq miles and add them to the &quot;core&quot;. </p>
+ <p><b>B.</b> Select 
+all indentations where the gap is less than a mile, and the length of 
+the indentation is more than three times the gap.</p>
+ <p>See page 8 for more 
+details.</p>          </td>
+</tr>
+<tr> 
+<td width="11%" valign="top"> 
+ <p><b>Step 6</b></p>          </td>
+<td width="44%" valign="top"> 
+ <p>&quot;Jump&quot; Criteria: 
+Find all high-density blocks or &quot;other cores&quot; that are within 2.5 miles 
+of the &quot;core&quot; area&#160; (with the largest population) obtained after 
+step 5.&#160; </p>
+ <p><b>Exception:</b> The distance can be 5 miles if you have military installations, National 
+monuments, or National parks along your &quot;jump&quot;</p>          </td>
+<td width="44%" valign="top"> 
+ <p>Select all the blocks 
+or other densely populated cores based on two additional criteria explained 
+for the &quot;hop criteria&quot; on pages 6 and 7.</p>
+ <p>See page 9, and 10 
+for more details, and examples.</p>          </td>
+</tr>
+<tr> 
+<td width="11%" valign="top"> 
+ <p><b>Step 7</b></p>          </td>
+<td width="44%" valign="top"> 
+ <p>Find the population 
+of your Urban cluster/Urbanized area</p>          </td>
+<td width="44%" valign="top"> 
+ <p>Add up the population 
+in the selected areas.</p>          </td>
+</tr>
+</table>
+<p><b>Step 1: Examine high-density 
+block groups</b></p>
+<p>From the Block Group layer, 
+find all the Block Groups (BGs) that have an area &lt; 2 square miles, and contain 
+a population density &gt; &#160;1000 people per square mile (ppsm).&#160; One 
+or more of these BGs constitute a &quot;core&quot; of densely populated area that will 
+be further built upon in the later steps.&#160; If there is no BG core in your 
+area, you can use blocks with population density &gt; &#160;1000 people per 
+square mile (ppsm) as the starting point.</p>
+<p>Figure 1 illustrates these 
+BGs for Danville, Ill</p>
+<p align="center"><img border="0" width="600" height="431" src="census1.gif" alt="Figure 1: Block Groups, Danville, Illinois."></p>
+<p align="center">Figure 1: 
+Eligible BGs (&gt; 1000 ppsm) in the Danville area.&#160; The numbers in the 
+boxes indicate population density.&#160; The numbers in italics represent population 
+in the block group.<b> </b> </p>
+<p><b>Step 2:</b></p>
+<p>Find all BGs with area 
+&lt; 2 square miles, population density is between 500 ppsm and 1000 ppsm.&#160; 
+Figure 2 illustrates these BGs for Danville, Ill.&#160; There are 4 eligible 
+BGs for the Danville area.&#160; These are numbered 1 through 4 in the figure.&#160; 
+However, only BGs 1,2, and 3 are immediately adjacent to the &quot;core&quot; selected 
+in Step 1.&#160; BG 4 is not adjacent to the densely populated area.&#160; Thus, 
+using criteria I.A.3, only 1,2, and 3 can be combined to the area obtained from 
+step 1.&#160; <br>
+<br>
+</p>
+<p> </p>
+<div align="center"><img border="0" width="598" height="453" src="census2.gif" alt="Figure 2: Block Groups, Danville, Illinois."></div>
+<p> </p>
+<p></p>
+<p align="center">Figure 2: 
+BGs 1,2,and 3 are BGs contiguous to the core. BG 4 is not contiguous to the 
+&quot;core&quot; obtained from Step 1.</p>
+<p><b>Step 3</b>:&#160; Find 
+all blocks with population density &gt; &#160;&#160;500 ppsm. The eligible blocks 
+are shown in figure 3, along with the &quot;core&quot; obtained in step 2.</p>
+<p align="center"><img border="0" width="600" height="431" src="census3.gif" alt="Figure 3: Block Groups with less than 500 people per square mile"></p>
+<p align="center">Figure 3: 
+All eligible blocks, and BGs. Blocks are in dark blue if density &gt; 1000 ppsm, 
+and violet if density &gt; 500 ppsm and density &lt; 1000 ppsm </p>
+<p>Select only those eligible 
+blocks that are connected to the core either directly or via other blocks, and 
+include them in the &quot;core&quot;.&#160; </p>
+<p><b>Step 4: Using the &quot;hop&quot; 
+criteria.</b></p>
+<p>Find all the blocks/densely 
+populated areas within 0.5 miles of the &quot;core&quot; obtained in step 4.&#160; Distance 
+should be measured along the shortest road connection.</p>
+<p>There are two conditions 
+where you can &quot;hop&quot; and connect to eligible block(s) or other unconnected densely 
+populated areas (BG cores + blocks) not contiguous to the &quot;core&quot;.</p>
+<p><b>Case A:</b> When the 
+unconnected densely populated area has more than 1000 people</p>
+<p>In this case add the area 
+to the core, along with other &quot;connecting&quot; blocks such that the density is the 
+greatest along the shortest road path (See figure 4).</p>
+<div align="center"><ins><img border="0" width="525" height="359" src="census4.gif" alt="Figure 4: Illustration for Case A"> </ins></div>
+<ins></ins><ins> 
+<p align="center"></p>
+<p align="center">Figure 4: 
+Illustration for case A.</p>
+<p>In Figure 4, Area A is 
+an unconnected densely populated area with a population of 2400.&#160; In this 
+case, select the blocks with the highest density along the shortest path to 
+connect area A to the core.</p>
+<p><b>Case B:</b> When the 
+unconnected densely populated area has less than 1000 people</p>
+<p>In this case, connecting 
+blocks are selected along the shortest possible road connection such that the 
+combined density of the unconnected area and the connecting blocks is greater 
+than 500 ppsm (See figure 5)</p>
+<p align="center"><img border="0" width="535" height="357" src="census5.gif" alt="Figure 5: Illustration for Case B"> </p>
+<p align="center"></p>
+<p align="center">Figure 5: 
+Illustration for case B.</p>
+<p>In Figure 5, Case B, Area 
+B is an unconnected densely populated area with population of 653 people.&#160; 
+In this case, calculate the overall density of the area B and the blocks i,ii, 
+and iii.&#160; If the density of Area B plus blocks i,ii, and iii &gt; 500 ppsm, 
+then they can be added to the core.</p>
+<p>Once an area becomes part 
+of the core, additional &quot;hops&quot; from that area can be performed using the same 
+rules.</p>
+<p>At the end of step 4, all 
+connections using &quot;hops&quot; between dense areas must be completed.</p>
+<p><b>Step 5: Step A: Closing 
+areas enclosed by the &quot;core&quot;</b></p>
+<p>The next step is to close 
+donuts in the area obtained in step 4.&#160;&#160;&#160; Figure 6 illustrates 
+the conditions for closing donuts for a portion of Danville.</p>
+</ins><ins> </ins><ins></ins> 
+<div align="center"><ins> </ins></div>
+<ins> 
+<p align="center"><img border="0" width="550" height="413" src="census6.gif" alt="Figure 6: Closing indentations and donuts"> </p>
+<p align="center"></p>
+<p align="center">Figure 6: 
+Closing indentations and donuts.</p>
+<p align="left"><b>Step B: 
+Closing indentations.</b></p>
+<p align="left">Figure 7 illustrates 
+closing indentations or enclaves for a portion of Danville.</p>
+<p align="center"><img border="0" width="575" height="413" src="census7.gif" alt="Figure 7: Closing indentations"> </p>
+<p align="center"></p>
+<p align="center">Figure 7: 
+Closing indentations.</p>
+<p align="left">At the end 
+of step 5, all possible indentations and donuts must be included to the &quot;core&quot;.</p>
+<p align="left"><b>Step 6: 
+Using the &quot;Jump&quot; Criteria.</b></p>
+<p align="left">The &quot;jump&quot; 
+criteria are the same as the hop criteria, except that the distance between 
+the core and the other densely populated area can be 2.5 miles.&#160; </p>
+<p align="left">Figure 8 illustrates 
+two possible jumps for the Danville area.</p>
+<p align="center"><img border="0" width="514" height="365" src="census8.gif" alt="Figure 8:  Jump criteria illustrated for the Danville area."> </p>
+<p align="center"></p>
+<p align="center">Figure 8: 
+&quot;Jump&quot; criteria illustrated for the Danville area.</p>
+<p align="left">For the Danville 
+area, Satellite cores 1 and 2 qualify to be added to the &quot;main core&quot; 
+because their distances from the core is less than 2.5 miles, and their populations 
+exceed 1000 people.&#160; However satellite core 3 does not qualify, because 
+only one &quot;Jump&quot; is allowed.&#160; The method used to select connecting 
+blocks to the core is the same as that for the hop criteria as explained in 
+Step 4.</p>
+<p align="left">&#160;&quot;Jumps&quot; 
+of up to 5 miles are allowed in special cases, when there is a water body, National 
+Monument, National Park, or Military installation; which creates a gap between 
+the densely populated areas.&#160; </p>
+<p align="left">Wetlands and 
+other land areas that may be uninhabitable cannot be used for the 5 mile jump 
+criteria because TIGER/Line file does not distinguish these areas from developable 
+land.</p>
+<p align="left">One of the 
+examples we found is Brunswick, GA.&#160; Examining the Brunswick, GA area using 
+2000 data, it appears that the distance between the Brunswick core and the densely 
+populated St. Simons Island area is 3.15 miles (3.8 miles - .65 miles of water). 
+Thus, under the proposed criteria the two areas would not be joined for the 
+urbanized area.&#160; This is illustrated in figure 9.</p>
+<div align="center"><img border="0" width="600" height="436" src="census9.gif" alt="Figure 9: The blue areas represent water polygons"> </div>
+<p align="center">Figure 9: 
+The blue areas represent water polygons</p>
+<p align="left">For additional 
+assistance on &quot;jump&quot; criteria, please contact the Census Bureau Geography 
+Division at 301-457-1099,&#160; <a href="mailto:ua@geo.census.gov">ua@geo.census.gov</a>&#160; </p>
+</ins></td>
+</tr>
+</table>
+<ins>
+<hr>
+<center>
+<a href="../index.html">FHWA 
+Home</a> | <a href="../environment/index.htm">HEP Home</a> | <a href="../feedback.html">Feedback</a> 
+</center>
+<img src="../fhwatag.gif" width="76" height="18" alt="FHWA"> 
+<center>United States Department of Transportation -<b> Federal Highway Administration</b> 
+</center>
+</ins> 
+</body>
+</html>

@@ -1,0 +1,1211 @@
+[Federal Register: May 2, 1996 (Volume 61, Number 86)]
+[Proposed Rules]
+[Page 19696-19705]
+From the Federal Register Online via GPO Access [wais.access.gpo.gov]
+
+[[Page 19696]]
+
+FEDERAL RESERVE SYSTEM
+
+12 CFR Part 205
+
+[Regulation E; Docket No. R-0919]
+
+
+Electronic Fund Transfers
+
+AGENCY: Board of Governors of the Federal Reserve System.
+
+ACTION: Proposed rule.
+
+-----------------------------------------------------------------------
+
+SUMMARY: The Board is publishing for comment proposed amendments to
+Regulation E, which implements the Electronic Fund Transfer Act. The
+proposed amendments relate to: the use of electronic communication in
+home-banking services for providing disclosures and other
+documentation; error resolution requirements for new accounts; and the
+treatment of stored-value cards (imposing modified Regulation E
+requirements on stored-value products in systems that track individual
+transactions, cards, or consumers; providing an exemption for cards on
+which a maximum value of $100 can be stored; and providing that other
+stored-value cards are not covered by Regulation E).
+
+DATES: Comments must be received on or before August 1, 1996.
+
+ADDRESSES: Comments should refer to Docket No. R-0919 and be mailed to
+William W. Wiles, Secretary, Board of Governors of the Federal Reserve
+System, Washington, DC 20551. They may also be delivered to the guard
+station in the Eccles Building Courtyard on 20th Street, NW (between
+Constitution Avenue and C Street) between 8:45 a.m. and 5:15 p.m.
+weekdays. Except as provided in the Board's rules regarding the
+availability of information (12 CFR 261.8), comments will be available
+for inspection and copying by members of the public in the Freedom of
+Information Office, Room MP-500 of the Martin Building, between 9:00
+a.m. and 5:00 p.m. weekdays.
+
+FOR FURTHER INFORMATION CONTACT: Regarding the proposed amendments on
+electronic communication, Michael Hentrel, Staff Attorney, and
+regarding the other proposed amendments, Jane Gell, Natalie Taylor, or
+Kyung Cho-Miller, Staff Attorneys, Division of Consumer and Community
+Affairs, at (202) 452-2412 or (202) 452-3667. For the hearing impaired
+only, Telecommunications Device for the Deaf (TDD), Dorothea Thompson,
+at (202) 452-3544.
+
+SUPPLEMENTARY INFORMATION:
+
+I. Background
+
+    The Electronic Fund Transfer Act (EFTA) (15 U.S.C. 1693), enacted
+in 1978, provides a basic framework establishing the rights,
+liabilities, and responsibilities of participants in electronic fund
+transfer (EFT) systems. The Federal Reserve Board was given rulewriting
+authority to issue implementing regulations. Types of transfers covered
+by the act and regulation include transfers initiated through an
+automated teller machine (ATM), point-of-sale (POS) terminal, automated
+clearinghouse, telephone bill-payment system, or home banking program.
+The act and Regulation E (12 CFR Part 205) provide rules that govern
+these and other EFTs. The rules prescribe restrictions on the
+unsolicited issuance of ATM cards and other access devices; disclosure
+of terms and conditions of an EFT service; documentation of EFTs by
+means of terminal receipts and periodic statements; limitations on
+consumer liability for unauthorized transfers; procedures for error
+resolution; and certain rights related to preauthorized EFTs.
+    In 1994 the Board issued for public comment a proposed revision of
+Regulation E under the Board's Regulatory Planning and Review program.
+(The Board has taken final action on the proposal; a revised regulation
+and revised staff commentary are published in today's Federal
+Register.) As part of that process, and based in part on the public
+comments received, the Board identified areas that offer an opportunity
+for further burden reduction without undercutting consumer protection.
+One such area involves the use of electronic communication between
+consumers and financial institutions--for example, by personal computer
+and modem--in place of paper documents. The proposed revision published
+in 1994 included a provision that allowed electronic communication in
+place of paper for authorization of recurring electronic debits. The
+Board now proposes to permit electronic text messages to substitute for
+paper under Regulation E generally. The proposed revision also
+solicited comment generally on coverage of prepaid cards and other
+stored-value products under Regulation E. To resolve issues raised
+during and following the public comment period, the Board undertook an
+analysis of stored-value products and their treatment under Regulation
+E. The Board now proposes amendments under which many stored-value
+products would be exempt, and others would be covered under limited
+requirements.
+
+II. Proposed Regulatory Revisions
+
+    The following discussion covers the proposed amendments to
+Regulation E in the order of the sections of the regulation that would
+be affected--first addressing electronic communication, then error
+resolution for new accounts, and finally stored-value products.
+
+Electronic Communication--Section 205.4(c)
+
+    Financial institutions offer a wide variety of ``home banking''
+services ranging from account inquiries, verifications, and fund
+transfers between accounts, to bill payment and full account
+management; and they are using various forms of electronic
+communication to deliver these services. Telephones and personal
+computers are the most common means of access to home banking services.
+Telephones with digital screens (``screen phones''), equipped with bar
+code or magnetic stripe readers, allow consumers to enter transactions
+off-line, then send the information to the financial institution on-
+line. Financial institutions may offer consumers specialized software
+that allows the user to access bank information via personal computer;
+oftentimes this software is integrated with other on-line services.
+These EFT services use electronic communication as a fast, convenient,
+and sometimes less costly means of communication with the consumer.
+Electronic communication, for purposes of this discussion, means an
+electronically transmitted text message between a financial institution
+and a consumer's home computer or other electronic device possessed by
+the consumer.
+    Under Regulation E, certain disclosures (such as initial
+disclosures and periodic statements) must be provided to consumers (1)
+in writing, (2) in a clear and readily understandable form, and (3) in
+a form that the consumer may keep. In the context of home banking and
+similar services, financial institutions have asked whether they may
+satisfy these requirements by providing the information electronically,
+for example, through a consumer's personal computer.
+Are Electronic Communications ``Writings''
+    Many Regulation E disclosures must be provided to consumers in
+writing. A writing, up to the present, has typically been presumed to
+mean a paper document. Information that is produced,
+
+[[Page 19697]]
+
+stored, or communicated by computer too is generally considered to be a
+writing, at least where text is involved. Indeed, in many office
+environments in the United States today, documents are produced,
+edited, revised, and communicated to others within the organization by
+the use of computers and electronic mail, and these documents are
+considered written documents when kept in electronic form as well as
+when printed on paper. Similarly, under other laws that call for
+information to be in writing, information in electronic form is
+considered to be ``written.''
+    Communications by telephone (including voicemail systems) are
+typically characterized as oral communication as they do not have the
+feature generally associated with a writing--visual text. Therefore,
+pursuant to its authority under section 904(c) of the EFTA, the Board
+proposes to permit financial institutions to use an electronic
+communication where the regulation calls for information to be provided
+in writing, but to limit the scope of the term ``electronic
+communication'' to a communication in a form that can be displayed as
+visual text. An example would be an electronic message that the
+receiver could display on a screen (including a computer monitor or a
+screen phone).
+Clear and Readily Understandable Form
+    Regulation E requires financial institutions to provide required
+information in a clear and readily understandable form. Some means of
+displaying an electronic communication appear to meet this standard;
+for example, a personal computer monitor should allow the consumer to
+read the text of a disclosure. Others may not have this capability; a
+screen phone, for example, may display only a few lines of text at a
+time, making it difficult for a consumer to review initial disclosures
+or a periodic statement, where it may be necessary to move back and
+forth between various parts of the document. The Board believes that
+the requirement for clear and readily understandable disclosures
+applies fully to electronic communications. The Board requests specific
+comments on the likelihood and extent of compliance problems that could
+be caused by this requirement, as well as suggestions for resolving
+such problems.
+Retainability
+    The act and regulation establish a retainability requirement. In
+general, if information must be provided in writing, Regulation E
+requires that the information must be in a form that the consumer may
+retain.
+    Consumers with home banking systems will most likely have the
+ability to download information, print it out, and store it on a
+computer disk for later retrieval. The responsibility to provide EFTA
+information in a retainable form belongs to the financial institution.
+Still, the Board recognizes that to satisfy the retainability
+requirement for electronic communications, financial institutions will
+have to rely on the consumer's having the capability to download data.
+The Board believes that where a consumer has agreed to receive
+information electronically, the financial institution should be deemed
+to satisfy the retention requirement by making information available
+for downloading, provided some consumer safeguards are established. In
+the event of printer malfunctions and other unforeseen computer
+problems, for instance, the consumer may be precluded from effectively
+retaining an electronic message received from a financial institution.
+    The Board proposes to amend Regulation E to provide that if a
+financial institution uses electronic communication to send information
+that is required to be in writing, the consumer may request a paper
+copy of the information within one year after receipt of the electronic
+communication. Commenters are asked to address whether this is an
+appropriate time period, and if not, to offer suggestions for an
+alternative.
+    The Board also solicits comment on possible alternatives to
+providing a paper copy upon request to consumers. One such means might
+be for a financial institution to maintain the information in data
+storage and re-send the information electronically to a consumer whose
+computer facilities were temporarily inoperable.
+    Some electronic messages from a consumer to an institution trigger
+the need for a response from the institution. For example, an oral or
+written notice of error from a consumer requires the institution to
+investigate and resolve the error within a specified period. Some
+financial institutions have indicated that in accepting electronic
+communications from consumers, they may want to require paper
+verifications, for their own and the consumer's protection. For
+example, Regulation E provides that a consumer may stop payment of a
+preauthorized electronic fund transfer by notifying the institution
+orally or in writing, and that the institution may require written
+confirmation of an oral stop-payment order. If an institution accepts
+an electronic stop-payment order, the institution might want to require
+confirmation of the order in paper form, to make sure that a
+preauthorized payment is not dishonored by mistake.
+    The Board believes that (as in the case of an oral communication)
+if the consumer sends an electronic communication to the institution,
+the institution could require a confirmation from the consumer in paper
+form. Comment is requested, however, on whether and how the regulation
+should address this point.
+    Electronic communication between financial institutions and
+consumers could also be used in contexts other than home banking. For
+example, a consumer who possesses a modem-equipped personal computer
+may wish to send and receive information required by Regulation E about
+an EFT service used by the consumer, such as debit card access to the
+consumer's account. The proposal covers this situation. The Board
+solicits comment on whether the regulation should, as proposed, permit
+electronic communication to substitute for paper disclosures and other
+required paper messages for EFT services other than home banking, or
+should limit electronic communication to home-banking services.
+
+Error Resolution for New Accounts--Section 205.11
+
+    Regulation E requires a financial institution to investigate and
+resolve a consumer's claim of error within specified time limits. An
+institution generally is expected to resolve the alleged error within
+ten business days after receiving a notice of error. If the institution
+needs more time, it must provisionally credit the consumer's account
+and resolve the error no later than 45 calendar days after receiving
+the notice.
+    In the course of commenting on the Board's 1994 proposal to revise
+Regulation E, some institutions requested that the Board use its
+exception authority under the statute either (1) to exempt new accounts
+from the requirement to provisionally credit the account by the tenth
+business day or (2) to extend the time period for resolving errors.
+    Commenters expressed concern about individuals who open a new
+account with the intent to defraud. Such individuals may open an
+account, immediately withdraw all or a large amount of the funds
+through ATMs, and file a claim with the financial institution disputing
+the ATM transactions. Often they receive provisional credit because of
+the financial institution's inability to
+
+[[Page 19698]]
+
+research the claim (such as by obtaining photographic evidence from ATM
+cameras) within ten business days. At that point, the individual
+immediately withdraws the funds that were provisionally credited and
+abandons the account. Commenters believe that having more time to
+investigate errors involving new accounts would enable institutions to
+limit their losses and control this type of fraud.
+    Some commenters pointed to the Board's exception for new accounts
+under Regulation CC, which implements the Expedited Funds Availability
+Act. There, the regulation extends the time within which an institution
+is required to make funds available to a customer for new accounts.
+Regulation CC defines a new account as an account during the first 30
+calendar days after the first deposit to the account is made.
+    The Board proposes to amend Regulation E, pursuant to its section
+904(c) authority to provide for adjustments and exceptions in the
+regulation, to extend the time periods for resolving errors that
+involve new accounts. The proposal would allow 20 business days for
+resolving an error before an institution is required to provisionally
+credit, and an outside limit of 90 calendar days for resolving the
+claim. Comment is solicited on the proposed extensions of time, on the
+30-day definition for new accounts, and on whether consumer protections
+relating to error resolution would be adversely affected.
+
+Stored-Value Systems--Section 205.16
+
+    Over the past few years the financial services industry has shown
+increasing interest in providing ``stored-value cards'' (also referred
+to as prepaid or value-added cards) to consumers. These cards maintain,
+typically in a computer chip or magnetic stripe, a ``stored value'' of
+funds available to the consumer for access primarily at retail
+locations. The balance recorded on the card is debited at a merchant's
+POS terminal when the consumer makes a purchase.
+    Products that could be characterized broadly as ``stored-value''
+cover a wide range. In their simplest form, stored-value systems are
+targeted at low-value uses (public transit, pay telephones, or
+photocopiers, for example); the amount that can be stored on the card
+is limited; and the card is disposed of once its value has been used
+up. These cards typically have a single type of use, and only one card
+issuer and one entity (likely to be the same as the issuer) that
+accepts the card as payment for goods or services.
+    More sophisticated systems can involve large transactions and
+permit consumers to store value in the hundreds of dollars on a card.
+The cards may have multiple uses, and there may be multiple card
+issuers and multiple card-accepting merchants. The cards may allow the
+consumer to obtain cash from ATMs instead of, or in addition to, making
+purchases. At least one system (now in the pilot stage) would enable
+the consumer to transfer stored-value balances to another person's
+card. Some systems would provide access to funds in foreign currencies.
+Cards tend to be reloadable, allowing the consumer to load value onto
+the card, for example, by withdrawing funds from an account at a
+depository institution through a teller, via an ATM, or, potentially,
+via a specially-equipped telephone. Some systems are designed as stand-
+alone products. In other cases, stored-value features may be added to
+debit or credit cards. Some of these more sophisticated stored-value
+systems are in operation as pilot programs or are under development by
+financial institutions or associations of institutions.
+    Colleges and universities are increasingly adding a stored-value
+feature to student identification cards, so that students can make
+purchases at campus locations such as cafeterias, bookstores, and
+vending machines. In some cases, the educational institution is both
+the issuer and the only card-accepting entity; in others, the card is
+also accepted by off-campus merchants. In addition to the stored-value
+features that some student card systems may have, these systems may
+operate with student asset accounts maintained by the university or by
+a depository institution on behalf of the university; these accounts
+are covered by Regulation E.
+    There are significant differences among proposed systems in the
+manner that they handle balances and transaction data. Some systems
+operate off-line, with transaction approval and data retention
+occurring only at the merchant level. The balance of available funds
+may be stored only on the card itself as transactions occur, and
+transactions neither require nor receive authorization from a central
+database. The data for a given transaction are kept at the merchant
+location, and are not forwarded to the central data facility. Only the
+aggregate amount for a batch of transactions is transmitted by the
+merchant (usually daily) so that the merchant can receive appropriate
+credit from a financial institution. In other off-line systems, the
+dollar value remaining on the card is stored both on the card and in a
+central data facility. Data for individual transactions are transmitted
+to the central data facility, typically at the end of each business
+day, and maintained there. Still other systems operate on-line, and
+transactions are authorized by communication between a terminal and a
+central database.
+Status of Stored-Value Cards Under the EFTA
+    In 1994, the Board issued proposed revisions to Regulation E under
+the Board's Regulatory Planning and Review program. At that time, the
+Board generally requested comment on whether, and the extent to which,
+the regulation should apply to stored-value cards. The Board made clear
+that a transaction involving such cards is covered by Regulation E when
+the transaction accesses a consumer's account (such as when value is
+``loaded'' onto the card from the consumer's deposit account via an
+ATM). Among the commenters that addressed this issue, many asked the
+Board to provide an exemption from Regulation E for stored-value cards
+and other stored-value products so as not to hinder their development
+or, alternatively, to modify the requirements applicable to them.
+    Legislation introduced and still pending in the Congress would
+exempt stored-value cards and other stored-value products from the EFTA
+and Regulation E. (H.R. 2520, 104th Cong., 1st Sess., Sec. 443; S. 650,
+104th Cong., 1st Sess., Sec. 601 (1995).) The Board has suggested in
+congressional testimony that, while certain provisions of Regulation E
+should not apply, it would be appropriate to first examine basic issues
+raised by these new payments systems before legislating a blanket
+exemption from the EFTA. The Board mentioned terminal receipts and
+periodic statements as examples of requirements that should not apply,
+but suggested that consumers might benefit from receiving initial
+disclosures (such as disclosure of a consumer's risk for unauthorized
+transactions), a requirement that would likely entail minimal added
+expense for card issuers.
+Coverage Issue
+    Coverage of stored-value systems under the EFTA and Regulation E
+depends on whether a stored-value transaction involves an EFT from a
+consumer's asset account. The act defines an ``electronic fund
+transfer'' as a transfer of funds initiated through electronic means
+(such as an electronic terminal or a computer) that results in a debit
+or credit to an account. Stored-value transactions involve a transfer
+of funds and are carried out through
+
+[[Page 19699]]
+
+electronic means--namely, terminals in retail locations that read the
+magnetic strip or chip embedded in the card.
+    The act defines ``account'' as a demand deposit, savings, or other
+``asset account''--as described in regulations of the Board--that is
+established primarily for personal, family, or household purposes.
+Asset accounts are not limited to traditional checking and other
+deposit accounts. For example, the term includes a consumer's money
+market mutual fund or other securities account held by a broker-dealer.
+The Board also interprets the term ``account'' to include accounts
+established by government agencies under electronic benefit transfer
+(EBT) programs (59 FR 10678, March 7, 1994).
+    The legislative history of the act provides guidance as to the
+Board's regulatory authority under the EFTA for determining issues of
+coverage. Senate Banking Committee reports noted that the ``definitions
+of `financial institution' and `account' are deliberately broad so as
+to assure that all persons who offer equivalent EFT services involving
+any type of asset account are subject to the same standards and
+consumers owning such accounts are assured of uniform protection.'' (S.
+Rep. No. 915, 95th Cong., 2d Sess. 9 (1978).) This concept is captured
+in section 904(d) of the EFTA, which provides that if EFT services
+``are made available to consumers by a person other than a financial
+institution holding a consumer's account, the Board shall by regulation
+assure that the disclosures, protections, responsibilities, and
+remedies created by this title are made applicable to such persons and
+services.''
+    Further, section 904(c) provides that the rules issued by the Board
+``may contain such classifications, differentiations, or other
+provisions * * * as in the judgment of the Board are necessary or
+proper to effectuate the purposes of this title, [or] to prevent
+circumvention or evasion thereof. * * *'' Senate Banking Committee
+reports on two separate bills, in discussing section 904(c), stated
+that ``since no one can foresee EFT developments in the future,
+regulations would keep pace with new services and assure that the act's
+basic protections continue to apply.'' (S. Rep. No. 915, 95th Cong., 2d
+Sess. 10 (1978).)
+Types of Stored-Value Systems
+    In some stored-value systems, the balance of funds available is
+recorded on the card, but is also maintained at a central data facility
+at a bank or elsewhere. The systems operate off-line; there is no
+authorization of transactions by communication with a database at a
+financial institution or elsewhere. Transaction data are periodically
+transmitted to and maintained by a data facility. As in the case of the
+traditional consumer deposit account accessed by a debit card, in these
+stored-value card systems a consumer has the right to draw upon funds
+held by an institution. The maintenance of a record of value and of
+transactions for a given card apart from the card itself--so that
+transactions are traceable to the individual card--strongly parallels
+the functioning of a deposit account. The Board believes that the facts
+support a finding that such systems involve an account for purposes of
+the EFTA. These systems are referred to below as ``off-line accountable
+stored-value systems.''
+    In another type of stored-value system that also operates off-line,
+the record of value is maintained only on the card itself, and not in a
+central database. Transaction data for debits to the card's ``stored
+value'' are recorded on the card and captured at merchant terminals
+(where they are maintained for a limited period of time). Only the
+aggregate amount of transactions for a given period is transmitted by
+the merchant to a financial institution or other entity so that the
+merchant can receive credit. Given the lack of a centrally maintained,
+ongoing record of individual card balances or of transaction data in
+these systems, it is more difficult to conclude that an ``account''
+exists for purposes of Regulation E. These systems will be referred to
+below as ``off-line unaccountable stored-value systems.''
+    A third type of stored-value system operates in a manner that is
+the functional equivalent of using a debit card to access a traditional
+deposit account. Notably, this type of system involves on-line access
+to a database for purposes of transaction authorization and data
+capture. That is, when the card is used at an ATM or a POS terminal,
+the transaction is authorized by means of on-line communication with
+the data facility, where the transaction data are stored (including
+information such as merchant identification, amount, date, and card
+number). The balance of funds available to the consumer is not recorded
+on the card itself, as in off-line stored-value systems; instead, the
+balance information is maintained in the data facility. Two
+distinctions between these systems and traditional deposit accounts
+accessed by debit card are (1) the value associated with a card is
+limited to the amount that the cardholder has chosen to make accessible
+through the card (as opposed to a deposit account accessed by debit
+card, where the entire account is accessible and funds available may
+fluctuate); and (2) the value associated with the card is accessible
+only through use of the card itself (in contrast to deposit accounts
+accessible by debit card, which typically may be accessed through
+various means, including check, withdrawal slip, ACH, or telephone bill
+payment).
+    The Board believes these systems--which are referred to as ``on-
+line stored-value systems''--meet the definition of a consumer asset
+account, and thus are covered by Regulation E, based on their on-line
+operation and extensive data capture and retention. As discussed below,
+however, the Board also believes it is appropriate to propose modifying
+the rules applicable to these systems.
+Modifications and Exceptions for Various Types of Stored-Value Systems
+    The discussion that follows is organized to address separately each
+of the three types of systems described above--off-line accountable
+stored-value systems, off-line unaccountable stored-value systems, and
+on-line stored-value systems. The Board notes that, in all three types
+of systems, a transaction in which a stored-value card is used to
+access a consumer's deposit account, such as ``reloading'' the card by
+drawing on the consumer's checking account at an ATM, is covered by
+Regulation E and subject to all Regulation E requirements. The
+discussion below, therefore, relates to transactions in which value
+stored on a card is drawn down to obtain cash or purchase goods or
+services.
+A. Off-line ``Accountable'' Stored-Value Systems
+    To the extent that off-line accountable stored-value systems are
+similar to systems involving debit cards and traditional deposit
+accounts, parallel consumer protections under Regulation E may be
+appropriate. If these stored-value systems were to be covered by all
+requirements of Regulation E, however, their further development could
+be seriously slowed or even halted in some cases. The following
+discussion presents an analysis of the major provisions of Regulation
+E, including the compliance burdens to financial institutions and the
+benefits to consumers associated with each.
+    1. Restrictions on unsolicited issuance of access devices.
+Generally Regulation E prohibits issuing a debit card, personal
+identification number (PIN), or other ``access device'' to a consumer
+(for example, by mail) unless the consumer has requested the device,
+orally or in writing. The purpose is to avoid making
+
+[[Page 19700]]
+
+consumers' accounts accessible by a means that consumers may not want
+and that may subject them to added risk, and to reduce the likelihood
+of unauthorized transactions from interception of cards. There is a
+qualified exception, for an access device that is not ``validated''
+(meaning usable) at the time of issuance and that the issuer will
+validate only upon request by the consumer and verification of the
+consumer's identity.
+    As a practical matter, most providers of stored-value products will
+likely issue stored-value cards only to consumers who request them.
+Some may choose to promote their product by targeting populations and
+sending unsolicited cards with small amounts of ``free money'' on the
+card. Such a practice would not appear to harm consumers, since there
+would be no access to the consumer's own deposit-account funds.
+    Application of the unsolicited issuance rules to off-line
+accountable stored-value cards (aside from those that could access a
+consumer's existing deposit account, where the rules already apply)
+appears unnecessary for consumer protection. The Board proposes to
+exclude off-line accountable stored-value cards from the Regulation E
+rules on unsolicited issuance, but solicits specific comment on whether
+there is any practical need for the rules to apply.
+    2. Initial disclosures. Regulation E requires that at the time a
+financial institution and a consumer enter into an agreement for an EFT
+service, the institution must disclose certain terms and conditions.
+Items to be disclosed include a summary of the consumer's liability for
+unauthorized transfers, error-resolution procedures, any limits on the
+frequency or dollar amount of transfers, and any fees or charges for
+individual transfers or for the service.
+    Without the disclosure of terms and conditions, consumers might
+regard off-line accountable stored-value products as comparable to
+debit or credit cards, and thus might expect similar rights and
+remedies to apply. This could be particularly likely if the stored-
+value feature were made part of the consumer's debit or credit card, or
+if a consumer could use the card for transactions in the same locations
+where debit or credit card transactions take place.
+    Financial institutions that provide stored-value products may
+disclose certain information voluntarily; however, the disclosures that
+they opt to give could vary considerably. Requiring disclosures under
+Regulation E would ensure that uniform information is given to
+consumers. Such disclosures would be useful in alerting consumers to
+important features of these new services, such as transaction charges
+and risk of loss for lost or stolen cards.
+    Providing initial disclosures would probably not impose significant
+compliance costs. The disclosures can be given along with the card or
+other account-opening material in a preprinted format; they need not be
+individually customized for each account. Accordingly, the Board
+proposes to amend Regulation E to require initial disclosures for off-
+line accountable stored-value systems.
+    The proposed amendment would not include all the items generally
+required to be disclosed under Regulation E, but only those that appear
+relevant to off-line accountable stored-value systems. These include
+the disclosures of consumer liability for unauthorized transactions;
+the types of transfers available; transaction charges, if any; and
+error resolution procedures available to the consumer, if any. The
+disclosure of consumer liability for unauthorized transactions would
+expressly state that the consumer bears the full risk of loss (if such
+is the case), or would state any limits on liability that might be
+adopted by agreement with the consumer.
+    3. Change-in-terms notices. Under Regulation E, if terms or
+conditions required to be disclosed (such as limits on transfers, or
+transaction fees) were to change from those initially in effect, the
+institution must generally notify the consumer at least 21 days before
+the effective date of the change.
+    Whether change-in-terms notices are relevant for off-line
+accountable stored-value products depends on whether contract terms
+applicable to the card are likely to change. If there are increases in
+transaction charges, for instance, it is reasonable for consumers to be
+informed of the increase before it takes effect. (It appears that,
+currently at least, charges are not imposed on stored-value
+transactions.) But issuers of some of these products may not expect to
+have an ongoing relationship with the consumer, and thus may not
+typically obtain an address at the time the consumer purchases the
+card. In some cases, stored-value cards are freely transferrable; even
+if the card issuer has the address of the original cardholder, the
+issuer may not have the address of a subsequent holder. If the value
+stored on the card is likely to be used within a short period, it is
+also probable that new transaction charges would not be imposed or
+charges increased during its lifetime.
+    The Board believes that the potential costs of having to comply
+with the change-in-terms notice requirement outweighs the consumer
+protections that would be afforded by such notices and proposes to
+exempt off-line accountable stored-value systems from this requirement.
+The Board specifically solicits comment on whether there might be
+circumstances in which the notice requirement should apply.
+    4. Transaction receipts and periodic statements. For an EFT
+initiated at an ATM or a POS terminal, Regulation E requires that a
+transaction receipt be made available to a consumer. The receipt must
+show the date, amount, type of transaction and account, card or account
+number, terminal location, and name of any third party (such as a
+merchant) involved in the transfer. The regulation also requires
+periodic account statements, generally monthly, that detail largely the
+same information as on terminal receipts and provide other information
+such as opening and closing account balances and fees or charges
+assessed during the statement period. These receipts and periodic
+statements allow consumers to verify account activity and to detect
+unauthorized transactions and errors, so that they can be reported and
+resolved.
+    For off-line accountable stored-value products, documentation
+requirements could present compliance difficulties and considerable
+costs, while providing only limited benefits to consumers. In some
+cases, receipts may be given whether or not required by Regulation E. A
+retailer that accepts debit cards must provide receipts under
+Regulation E for debit card transactions, and therefore might provide
+receipts for stored-value card transactions as well. But if the card
+can be used at places not equipped with printers (such as vending
+machines), to require receipts would necessitate a retrofitting of
+terminals and would impose ongoing compliance costs. Moreover, for
+small or commonly-made transactions, many consumers may not want or
+need a receipt.
+    The requirement for periodic statements too may present compliance
+problems for some off-line accountable stored-value systems. In some of
+these systems, transaction data are collected in centralized data
+facilities, not by the card-issuing financial institutions. Given that
+lack of data, providing periodic statements would be costly and could
+impede the development of stored-value products. Moreover, as in the
+case of receipts, for small or commonly-made transactions on these
+cards, consumers may not need or want documentation on a periodic
+statement.
+
+[[Page 19701]]
+
+    The Board believes that the consumer benefits of terminal receipts
+and periodic statements--in the context of stored-value transactions--
+may be somewhat limited and be outweighed by the compliance costs.
+Consequently, the Board proposes to exempt off-line accountable stored-
+value systems from these requirements.
+    5. Limitations on consumer liability for unauthorized transfers.
+Regulation E generally limits a consumer's losses for unauthorized EFT
+debits to a maximum of $50. If the consumer fails to notify the
+financial institution of the loss or theft of a debit card or other
+``access device'' within two business days of learning of the loss or
+theft, the consumer's potential liability rises to $500. If the
+consumer fails to notify the institution of unauthorized transfers
+appearing on a periodic statement within 60 days after the institution
+sent the statement, the consumer's liability for any further
+unauthorized transfers is unlimited.
+    Absent Regulation E's limits on liability, stored-value cardholders
+bear the entire risk unless the issuer opts to assume some part of it
+(or offers insurance to consumers against losses). If the regulatory
+liability limits applied, the risk would be imposed on the issuer,
+because these systems operate off-line and will not typically require
+PIN-protection or any other means of identifying the consumer. Without
+PIN-protection there is an almost certain likelihood that lost or
+stolen cards could and would be used.
+    Some off-line accountable systems could conceivably store negative
+files at merchant POS terminals for blocking unauthorized transactions.
+Thus, they might be able to prevent unauthorized use, assuming a
+consumer promptly reported loss or theft of the card. But many systems
+do not have this capability. In addition, even for those that could,
+the cost of transmitting negative files to terminals frequently enough
+to effectively block unauthorized transactions could be prohibitive.
+    Arguably, the lack of PIN-protection in these systems may lead
+consumers to be more careful in handling the cards. Consumers might act
+more prudently if initial disclosures were provided, explaining the
+risk. In addition, if loss does occur, the amount stored on the card
+may be substantially less than would typically be at risk with the loss
+or theft of a traditional debit card, where the deposit account may
+serve several purposes (as a repository for savings or for paying
+bills, for instance), and thus may tend to have a larger account
+balance.
+    In light of these factors, the Board proposes to exempt off-line
+accountable stored-value cards from the liability provisions. Under the
+proposal, the initial disclosures given to consumers would summarize
+the full extent of their risk.
+    6. Error resolution procedures. Regulation E requires financial
+institutions to investigate and resolve claims of error made by
+consumers within specified times--generally, no later than ten business
+days after receiving the consumer's notice of error; or 45 days after
+the notice if the institution provisionally credits the consumer's
+account, in the amount of the claimed error, within ten business days.
+A summary of these procedures is given to consumers with the initial
+disclosures, and consumers also receive an annual notice as a reminder.
+``Error'' includes an unauthorized electronic debit, a transaction in
+an incorrect amount, and failure to provide required identification of
+transactions.
+    Prompt resolution of errors is an important consumer protection,
+but the detailed procedures prescribed by the act and regulation pose a
+potentially difficult compliance problem for off-line accountable
+stored-value systems. Investigation and resolution of errors in
+accordance with Regulation E would be complicated and costly.
+    After weighing the potential costs against the consumer's need for
+these protections, the Board proposes to exempt off-line accountable
+stored-value systems from application of the error resolution
+procedures and also from the related requirement to mail an annual
+notice describing them. Initial disclosures would inform consumers that
+they bear the full risk of loss in case of lost or stolen cards, if
+that is the case, and would summarize any error resolution procedures
+available.
+    The Board requests specific comment on whether, alternatively, some
+minimal error resolution procedures should be required. For example, an
+error within the financial institution's control, such as one resulting
+from a malfunctioning card, may not be unduly difficult to correct.
+Commenters are also asked to address whether, if no error resolution
+requirements are imposed, the initial disclosures should include a
+statement that there are no error resolution procedures available to
+the consumer.
+    7. De minimis exclusion. In addition to the modifications presented
+above, the Board proposes a de minimis exclusion for off-line
+accountable stored-value systems based on the maximum balance that can
+be stored on the card or other device. For a stored-value product
+limited to a relatively small amount of funds, the amount at risk would
+be sufficiently minimal that application of even modified Regulation E
+protections appears unnecessary. This provision would apply to off-line
+accountable devices that are limited to a maximum of $100 at a given
+time; such devices would be completely exempt from Regulation E.
+B. Off-line ``Unaccountable'' Stored-Value Systems
+    As described above, off-line unaccountable stored-value systems are
+those in which the card balances and transaction data are maintained
+only on the card itself. Transaction data may be maintained for a
+limited time at merchant terminals, but are not captured or maintained
+by the issuer or a central database. Photocopier cards and farecards
+for the mass transit systems in some cities are examples of such cards.
+Under the proposed amendments, off-line unaccountable stored-value
+systems would not be covered by Regulation E. The proposed amendments
+do not provide an explicit exemption; instead, the definitions of
+systems that would be covered under the proposal do not capture off-
+line unaccountable systems.
+    Most off-line unaccountable systems currently involve small dollar
+amounts and a single use, such as paying transit fares. Other proposed
+systems, however, could involve substantially larger transaction
+amounts and maximum card values, and could have multiple uses. These
+features may make such a system more comparable to traditional debit
+cards than the small-value cards, in terms of potential uses by
+consumers. This being the case, the Board could consider whether to
+exercise its authority under the EFTA (to provide uniform protections
+for all equivalent consumer EFT services) by proposing to bring off-
+line unaccountable systems within the coverage of the act. If the
+requirements applicable to off-line unaccountable stored-value systems
+were the same as those that the Board is proposing with regard to off-
+line accountable systems--initial disclosures, with an exemption for
+card values of $100 or less--compliance would not be particularly
+costly or difficult. Since the concern about consumer protection would
+exist primarily for systems that store substantial amounts on a card,
+any proposal could be framed in terms of covering only those cards with
+a maximum value of more than a certain amount.
+    Although some off-line stored-value systems that permit larger
+maximum card values may fall within the
+
+[[Page 19702]]
+
+unaccountable category, it is not clear that such systems would operate
+in this manner at all times and with respect to all transactions. As
+systems are further developed, they could evolve into systems that
+capture and maintain some transactions in a location other than on
+cards and at merchant terminals. If so, the Board believes such systems
+could be characterized as off-line accountable, rather than off-line
+unaccountable, systems, and thus would be subject to the same set of
+rules.
+    There is some risk that the application of Regulation E to off-line
+accountable stored-value systems, but not to off-line unaccountable
+systems, could act as an incentive for developers of stored-value
+systems to structure systems as unaccountable in order to avoid being
+covered under the regulation. It is not desirable to have system design
+be guided by regulatory rather than economic considerations. However,
+the requirements applicable to off-line accountable systems--initial
+disclosures--are so minimal when compared to other factors that could
+affect system design (for example, the transaction data collected in
+accountable systems may be useful for various purposes including fraud
+detection and marketing) that it seems unlikely the potential for
+coverage by Regulation E would have much impact.
+    On balance, the Board believes that it is preferable to state that
+off-line unaccountable cards are not covered by Regulation E. The Board
+solicits specific comment, however, on whether the distinction between
+off-line accountable and off-line unaccountable systems (especially
+high-value ones) reaches the right result, in light of the
+considerations discussed above, and accordingly on whether the Board
+should consider coverage of off-line unaccountable systems, under very
+limited requirements such as initial disclosures. The Board also
+solicits comment on whether, if Regulation E coverage were extended to
+off-line unaccountable systems, it would be preferable in defining the
+scope of coverage to focus on the value capable of being stored, on
+whether the system has multiple uses, or on both of these features.
+C. ``On-line'' Stored-Value Systems
+    The third type of stored-value system in some respects resembles
+off-line accountable stored-value systems, and in others resembles
+traditional deposit accounts accessed by debit cards. As in off-line
+accountable stored-value systems, data about individual card balances
+and transactions (including merchant identification, amount, date, and
+card number) are collected and maintained at centralized locations; and
+the value associated with a card is limited to an amount that the
+consumer chooses, not a fluctuating balance in the consumer's checking
+or savings account.
+    As in traditional deposit accounts accessed by debit cards, these
+stored-value systems operate on-line. When a card is used at an ATM or
+a POS terminal, the transaction is authorized by means of on-line
+communication with a financial institution or central data facility.
+The balance of funds available to the consumer is not recorded on the
+card itself, as in off-line stored-value systems; instead, the balance
+information is maintained only at the data facility. In this respect
+too, an on-line stored-value system is the functional equivalent of a
+deposit account accessed by a debit card, and thus can be viewed as
+representing a consumer asset account for Regulation E purposes,
+subject to coverage by the regulation.
+    In general, compliance with Regulation E requirements does not
+appear to be a significant problem. For example, because these systems
+operate on-line, they are designed to block unauthorized access, and
+compliance with the limitations on consumer liability for unauthorized
+transactions should not be more burdensome than for a traditional
+deposit account accessed by debit card. However, a few exceptions from
+particular provisions of Regulation E may be appropriate, as presented
+below.
+    1. Exceptions for periodic statements and annual error resolution
+notices. Regulation E requires statements that detail account activity.
+In some on-line stored-value systems, cards are not reloadable, but
+instead are meant to be discarded after the funds associated with the
+card are drawn down to zero. For example, a consumer may purchase a
+card for use on a trip of a few weeks, and draw down all value tied to
+the card within that time. In such cases, the potentially short-term
+nature of the product and the lack of an ongoing account relationship
+may make periodic statements unnecessary.
+    As an alternative to the periodic statement requirement, an issuer
+could provide account balances and account histories upon request, for
+the preceding one or two months. This treatment would parallel the
+exception adopted by the Board under the rules applicable to EBT
+systems. (See 59 FR 10678, March 7, 1994, codified at 12 CFR
+Sec. 205.15.) This alternative documentation would not appear to be
+unduly burdensome, because cardholders who have used up the value
+associated with the card will presumably not request an account
+history. For similar reasons, the Board believes that it would be
+appropriate to propose exempting these systems from the requirement to
+send annual notices summarizing error resolution procedures. Again, if
+the card is used and discarded within a year, this annual notice would
+serve little purpose.
+    It may also be appropriate to propose an exemption from the
+periodic statement requirement for on-line stored-value systems
+involving cards that are reloadable. Since the stored value is
+accessible only through use of the card itself (not, for example, by
+check), then periodic statements may be unnecessary. If a consumer
+receives a receipt for each transaction, periodic statements may not be
+needed even if the relationship between the consumer and the issuer is
+ongoing. If the consumer needed to check on recent account
+transactions, the consumer could request the issuer to provide an
+account history.
+    There may be less reason to exempt reloadable on-line cards from
+the annual error resolution notice requirement. If a card issuer has an
+ongoing relationship with the consumer, sending the annual notice does
+not seem burdensome. However, extending the exemption to both
+requirements--periodic statements and the annual error notice--
+regardless of whether a card is reloadable, would avoid making the
+proposed rule overly complex.
+    Accordingly, the Board proposes to provide that on-line stored-
+value systems are not subject to (1) the periodic statement
+requirement, but may instead provide the account balance and
+transaction history to the cardholder upon request; or (2) the
+requirement for an annual reminder of error resolution procedures. The
+Board solicits comment on whether the proposed modifications should be
+different for on-line stored-value cards that are reloadable.
+    2. Change-in-terms notices. Under Regulation E, if terms or
+conditions required to be disclosed (such as limits on transfers, or
+transaction fees) were to change from those initially in effect, the
+institution must generally notify the consumer at least 21 days before
+the effective date of the change.
+    For the reasons discussed in connection with off-line accountable
+stored-value products, the Board believes that the change-in-terms
+notice requirements need not apply to on-line accountable stored-value
+products and, accordingly, proposes to exempt them from this
+requirement. Specific comment is solicited on whether there
+
+[[Page 19703]]
+
+might be circumstances in which the notice requirement should apply.
+    3. De minimis exclusion. Some on-line stored-value systems may make
+relatively small amounts accessible through use of the card. For
+example, a number of prepaid telephone card systems apparently operate
+on-line. As in the case of off-line accountable stored-value systems,
+if the amount associated with a consumer's card is limited to a
+relatively small amount, application of Regulation E protections such
+as the limitation on the consumer's liability for unauthorized
+transactions seems less important. And if transaction amounts are on
+average quite small (as is likely to be true if the maximum amount on a
+card is low), the cost impact of Regulation E compliance would be
+proportionately greater than for systems involving large transactions.
+For these reasons, the Board proposes to exempt on-line stored-value
+systems completely from coverage under Regulation E if the maximum
+amount that can be associated with a card is limited to $100.
+Computer Network Payment Products
+    Parallel to the development of stored-value card products, there
+has been an increasing interest in other products that might adopt
+stored-value concepts. Systems are being proposed, for example, for
+making payments over computer networks, such as the Internet. In these
+cases, a balance of funds could be accessed via a consumer's personal
+computer, and transferred or used in purchases via a computer network.
+As in the case of card-based products, there is a range of network
+payment products in operation or under development.
+    Some of these network payment products involve on-line access to a
+consumer account in a financial institution, and thus are fully subject
+to Regulation E. Other products may involve various procedures for
+authorizing and carrying out transactions, and may or may not be
+subject to the regulation. The Board requests specific comment on the
+extent to which the Board should consider proposing that Regulation E
+apply to various types of network payment products. In general, the
+Board believes that the same principles should apply to network payment
+products as to stored-value card products in analyzing coverage under
+Regulation E. For example, the Board might consider applying a de
+minimis exemption to network payment products in the same way the Board
+is proposing for stored-value card products.
+Summary of Proposed Amendments for Stored-Value Systems
+    To summarize, with respect to stored-value systems, the Board
+proposes to amend Regulation E to:
+    (1) Exempt completely from Regulation E off-line unaccountable
+stored-value systems;
+    (2) Exempt completely from Regulation E both off-line accountable
+stored-value systems and on-line stored-value systems if the maximum
+amount that can be stored on or associated with a card at any given
+time is $100 or less;
+    (3) Establish modified requirements for coverage of off-line
+accountable stored-value systems, applying only the requirements
+relating to initial disclosures; and
+    (4) Modify the requirements applicable to on-line stored-value
+systems, under which such systems would not be subject to (a) the
+periodic statement requirement, if an account balance and a summary of
+recent transactions is provided upon request; (b) the annual error
+resolution notice requirement; or (c) change-in-terms notices.
+
+III. Form of Comment Letters
+
+    Comment letters should refer to Docket No. R-0919. The Board
+requests that, when possible, comments be prepared using a standard
+courier typeface with a type size of 10 or 12 characters per inch. This
+will enable the Board to convert the text into machine-readable form
+through electronic scanning, and will facilitate automated retrieval of
+comments for review. Comments may also be submitted on computer
+diskettes, using either the 3.5'' or 5.25'' size, in any DOS-compatible
+format. Comments on computer diskettes must be accompanied by a paper
+version.
+
+IV. Regulatory Flexibility Analysis
+
+    In accordance with section 603 of the Regulatory Flexibility Act
+and section 904(a)(2) of the EFTA, the Board's Division of Research and
+Statistics has prepared an economic impact statement on the proposed
+regulation. A copy of the analysis may be requested from Publications
+Services, Board of Governors of the Federal Reserve System, Washington,
+DC 20551, or by telephone at (202) 452-3245.
+
+V. Paperwork Reduction Act
+
+    In accordance with section 3506 of the Paperwork Reduction Act of
+1995 (44 U.S.C. Ch. 35; 5 CFR 1320 Appendix A.1), the Board reviewed
+the proposed rule under the authority delegated to the Board by the
+Office of Management and Budget. Comments on the collection of
+information should be sent to the Office of Management and Budget,
+Paperwork Reduction Project (7100-0200), Washington, DC 20503, with
+copies of such comments to be sent to Mary M. McLaughlin, Federal
+Reserve Board Clearance Officer, Division of Research and Statistics,
+Mail Stop 97, Board of Governors of the Federal Reserve System,
+Washington, DC 20551.
+    The collection of information requirements in this proposed
+regulation are found in 12 CFR Part 205. This information would be
+mandatory (15 USC 1693 et seq.) to ensure adequate disclosure of basic
+terms, costs, and rights relating to electronic fund transfer (EFT)
+services affecting consumers using certain stored-value cards or home-
+banking services and consumers exercising their error resolution rights
+under Regulation E. The respondents/recordkeepers are for-profit
+financial institutions, including small businesses. Regulation E
+applies to all types of financial institutions, not just state member
+banks. However, under Paperwork Reduction Act regulations, the Federal
+Reserve accounts for the burden of the paperwork associated with the
+regulation only for state member banks. Other agencies account for the
+Regulation E paperwork burden on their respective constituencies.
+    The Federal Reserve has no data on which to estimate the burden the
+proposed requirements would impose on state member banks. With regard
+to stored-value cards, there are as yet no such systems in full
+operation in the United States, and only a few stored-value card pilot
+projects. It is difficult to predict how many state member banks will
+choose to offer these products and how many cards will be issued to
+consumers. However, because the proposed amendments include a number of
+exemptions for stored-value products from Regulation E requirements,
+the proposed amendments could have the effect of reducing paperwork
+burden, compared to what the burden would be without the amendments in
+place.
+    The proposed amendments on the use of electronic communication in
+home banking would likely reduce the paperwork burden of financial
+institutions. Institutions offering home banking programs would be able
+to use electronic communication to provide disclosures, periodic
+statements, and other information required by Regulation E rather than
+having to print and mail the information in paper form.
+    The proposed amendment relating to error resolution for new
+accounts may reduce paperwork burden, because institutions may be able
+to complete
+
+[[Page 19704]]
+
+error investigations within the longer time allowed under the proposal
+(20 business days), rather than have to provisionally credit consumer's
+accounts within ten business days and provide related notices to the
+consumer, as is required currently under Regulation E.
+    The Federal Reserve requests comments from issuers, especially
+state member banks, that will help to estimate the number and burden of
+the various disclosures that would be made in the first year this
+regulation is effective. Comments are invited on: (a) the cost of
+compliance; (b) ways to enhance the quality, utility, and clarity of
+the information to be disclosed; and (c) ways to minimize the burden of
+disclosure on respondents, including through the use of automated
+disclosure techniques or other forms of information technology.
+
+List of Subjects in 12 CFR Part 205
+
+    Consumer protection, Electronic fund transfers, Federal Reserve
+System, Reporting and recordkeeping requirements.
+
+Text of Proposed Revisions
+
+    Certain conventions have been used to highlight the proposed
+changes to Regulation E. New language is shown inside bold-faced
+arrows, while language that would be removed is set off with brackets.
+    Pursuant to the authority granted in sections 904 (a), (c), and (d)
+of the Electronic Fund Transfer Act, 15 U.S.C. 1693b (a), (c), and (d),
+and for the reasons set forth in the preamble, the Board proposes to
+amend 12 CFR Part 205 as set forth below:
+
+PART 205--ELECTRONIC FUND TRANSFERS (REGULATION E)
+
+    1. The authority citation for Part 205 would be revised to read as
+follows:
+
+    Authority: 15 U.S.C. 1693-1693r.
+
+    2. Section 205.4 would be amended by adding paragraph (c) to read
+as follows:
+
+Sec. 205.4  General disclosure requirements; jointly offered services.
+
+* * * * *
+    <rt-triang>(c) Electronic communication. (1) Definition. For
+purposes of this part, the term electronic communication means an
+electronically transmitted text message between a consumer and a
+financial institution; in the case of a communication to the consumer,
+the message shall allow text to be displayed on equipment in the
+consumer's possession such as a modem-equipped personal computer or
+screen telephone.
+    (2) Communication between financial institution and consumer. (i)
+By agreement between a financial institution and a consumer, either may
+send to the other by electronic communication any information required
+by this part to be provided orally or in writing. Information required
+by this part to be in writing and sent to a consumer by electronic
+communication shall be clear and readily understandable and shall be
+provided in a manner that would allow a consumer to retain the
+information.
+    (ii) If this part specifies that information be provided to the
+consumer in writing, the consumer may request a paper copy of the
+information up to one year after receiving the electronic
+communication.<lf-triang>
+* * * * *
+    3. Section 205.11 would be amended by revising paragraph (c)(3), to
+read as follows:
+
+Sec. 205.11  Procedures for resolving errors.
+
+* * * * *
+    (c) Time limits and extent of investigation. * * *
+* * * * *
+    (3) Extension of time periods. The applicable time periods in this
+paragraph (c)(3) are 20 business days in place of 10 business days, and
+90 days in place of 45 days, if a notice of error involves an
+electronic fund transfer that:
+    (i) Was not initiated within a state; [or]
+    (ii) Resulted from a point-of-sale debit card transaction;
+<rt-triang>or
+    (iii) Involves a new account during the first 30 calendar days
+after the first deposit to the account is made.<lf-triang>
+* * * * *
+    4. A new section 205.16 would be added, to read as follows:
+
+<rt-triang>Sec. 205.16  Certain stored-value services.
+
+    (a) General. The rules in this section apply to stored-value
+accounts as defined in paragraph (b) of this section.
+    (b) Definitions. For purposes of this section, the following
+definitions apply:
+    (1) Off-line stored-value account means a balance of funds recorded
+on a card that a consumer may use at electronic terminals to obtain
+cash or purchase goods or services, where the record of such balance is
+also maintained on a separate database, apart from the card, and where
+on-line authorization of transactions is not required to access the
+funds. Off-line stored-value accounts are subject to the requirements
+in paragraph (d) of this section.
+    (2) On-line stored-value account means a balance of funds that may
+be accessed only through the use of a card that a consumer may use at
+electronic terminals to obtain cash or purchase goods or services,
+where the record of such balance is maintained on a separate database,
+and not on the card, and where on-line authorization of transactions is
+required to access the funds. On-line stored-value accounts are subject
+to the requirements in paragraph (e) of this section.
+    (3) Financial institution includes any person that, directly or
+indirectly, holds an on-line or off-line stored-value account, or that
+issues a card to a consumer for use in obtaining cash or purchasing
+goods or services by accessing such an account.
+    (c) $100 exemption. A stored-value account, as defined in
+paragraphs (b) (1) and (2) of this section, is exempt from the
+requirements of this part if the maximum amount that may be in the
+account at any given time is $100 or less.
+    (d) Modified requirements for off-line stored-value accounts;
+initial disclosures. Stored-value accounts as defined in paragraph
+(b)(1) of this section are subject only to the following initial
+disclosure requirements of this part, as applicable:
+    (1) Liability of consumer. A summary of the consumer's liability,
+under state or other applicable law or agreement, for unauthorized
+transfers.
+    (2) Types of transfers; limitations. The type of electronic fund
+transfers that the consumer may make and any limitations on the
+frequency and the dollar amount of transfers.
+    (3) Fees. Any fees imposed by the financial institution for
+electronic fund transfers or for the right to make transfers.
+    (4) Error resolution. A summary of the financial institution's
+procedures for resolving errors concerning electronic fund transfers,
+including the telephone number and address of the person or office to
+be notified in the event of an error.
+    (e) Modified requirements for on-line stored-value accounts.
+Stored-value accounts as defined in paragraph (b)(2) of this section
+are subject to the requirements of this part, with the following
+modifications:
+    (1) Exceptions; change-in-terms notice; error resolution notice.
+The account is exempt from the requirements of Sec. 205.8.
+    (2) Alternative to periodic statement. A financial institution need
+not furnish the periodic statement required by Sec. 205.9(b) if the
+financial institution makes available to the consumer:
+
+[[Page 19705]]
+
+    (i) The consumer's account balance, through a readily available
+telephone line and at a terminal; and
+    (ii) A written history of the consumer's account transactions that
+is provided promptly in response to an oral or written request and that
+covers at least 60 days preceding the date of a request by the
+consumer.
+    (3) Additional modifications. A financial institution that does not
+furnish periodic statements, in accordance with paragraph (e)(2) of
+this section, shall comply with the following special rules:
+    (i) Initial disclosures. The financial institution shall modify the
+disclosures under Sec. 205.7 by disclosing:
+    (A) Account balance. The means by which the consumer may obtain
+information concerning the account balance, including a telephone
+number. This disclosure may be made by providing a notice substantially
+similar to the notice in paragraph A-6 of Appendix A of this part.
+    (B) Written account history. A summary of the consumer's right to
+receive a written account history upon request, in place of the
+periodic-statement disclosure required by section 205.7(b)(6), and the
+telephone number to call to request an account history. This disclosure
+may be made by providing a notice substantially similar to the notice
+in paragraph A-6 of Appendix A of this part.
+    (C) Error resolution. A notice concerning error resolution that is
+substantially similar to the notice contained in paragraph A-6 of
+Appendix A of this part.
+    (ii) Limitations on liability. For purposes of Sec. 205.6(b)(3),
+regarding a 60-day period for reporting any unauthorized transfer that
+appears on a periodic statement, the 60-day period shall begin with the
+transmittal of a written account history provided to the consumer under
+paragraph (e)(2) of this section.
+    (iii) Error resolution. The financial institution shall comply with
+the requirements of section 205.11 in response to an oral or written
+notice of an error from the consumer that is received no later than 60
+days after the consumer obtains the written account history, under
+paragraph (e)(2) of this section, in which the error is first
+reflected.<lf-triang>
+    5. Appendix A would be amended by adding an entry to the table of
+contents at the beginning of the appendix and by adding a new paragraph
+A-6, to read as follows:
+
+Appendix A to Part 205--Model Disclosure Clauses and Forms
+
+Table of Contents
+
+* * * * *
+<rt-triang>A-6--Model Forms for On-Line Stored-Value Card Services
+(Sec. 205.16(e)(3))<lf-triang>
+* * * * *
+<rt-triang>A-6--Model Forms for On-Line Stored-Value Card Services
+(Sec. 205.16(e)(3))
+    (1) Disclosure of information about obtaining account balances
+and account histories in on-line stored-value card service
+(Sec. 205.16(e)(3)(i) (A) and (B))
+
+    You may find out about the balance remaining on your card by
+calling [telephone number]. You can also learn your remaining
+balance [by making a balance inquiry at an ATM] [on the receipt you
+get when withdrawing cash from an ATM] [on the receipt you get when
+making a purchase].
+    You also have the right to get a written summary of transactions
+made with your card for the 60 days preceding your request by
+calling [telephone number].
+
+    (2) Disclosure of error resolution procedures in on-line stored-
+value card service (Sec. 205.16(e)(3)(i)(C))
+
+    In Case of Errors of Questions About Your Card Transactions
+Telephone us at [telephone number] or Write us at [address] as soon
+as you can, if you think an error has occurred involving a
+transaction made with your card. We must hear from you no later than
+60 days after you receive a written summary of transactions (which
+you can request from us), showing the error. You will need to tell
+us:
+    <bullet> Your name and card number.
+    <bullet> Why you believe there is an error, and the dollar
+amount involved.
+    <bullet> Approximately when the error took place.
+    If you tell us orally, we may require that you send us your
+complaint or question in writing within 10 business days. We will
+generally complete our investigation within 10 business days and
+correct any error promptly. In some cases, an investigation may take
+longer, but you will have the use of the funds in question after the
+10 business days. However, if we ask you to put your complaint or
+question in writing and we do not receive it within 10 business
+days, we may not credit the funds in question back to the card
+during the investigation.
+    If we decide that there was no error, we will send you a written
+explanation within three business days after we finish our
+investigation. You may ask for copies of the documents that we used
+in our investigation.
+    If you need more information about our error resolution
+procedures, call us at [telephone number] [the telephone number
+shown above]. <lf-triang>
+
+    By order of the Board of Governors of the Federal Reserve
+System, April 19, 1996.
+William W. Wiles,
+Secretary of the Board.
+[FR Doc. 96-10181 Filed 5-1-96; 8:45 a.m.]
+BILLING CODE 6210-01-P

@@ -1,0 +1,456 @@
+
+                    SPACEWARN Bulletin, SPX-565
+                  
+  A publication of NASA NSSDC/WDC for Satellite Information, and the 
+       World Warning Agency for Satellites, for COSPAR/ISES.
+
+    (All information in this publication was received between
+                1 November 2000 and 30 November 2000.)
+
+A.  List of New International Designations and Launch Dates (UT).
+    (USSPACECOM Catalog numbers are in parentheses.)
+        
+        COSPAR/WWAS USSPACECOM  SPACECRAFT           
+            INT.ID    CAT. #      NAME           LAUNCH DATE (2000)
+           -------------------------------------------------------
+            2000-077A (26626) SIRIUS 3                   30 Nov
+            2000-076A (26624) ANIK F1                    21 Nov
+            2000-075C (26621) MUNIN                      21 Nov
+            2000-075B (26620) SAC-C                      21 Nov
+            2000-075A (26619) EO 1                       21 Nov
+            2000-074A (26617) QUICKBIRD 1                20 Nov
+            2000-073A (26615) PROGRESS-M1 4              16 Nov
+            2000-072D (26611) STRV 1D                    16 Nov
+            2000-072C (26610) STRV 1C                    16 Nov 
+            2000-072B (26609) AMSAT P3D (AMSAT OSCAR 40) 16 Nov
+            2000-072A (26608) PAS 1R                     16 Nov
+            2000-071A (26605) NAVSTAR 49 (USA 154)       10 Nov
+
+B.  Text of Launch Information
+
+2000-077A  SIRIUS 3 (also known as SD-RADIO 3) is an American geosynchronous 
+           radio satellite that was launched by a Proton-K rocket from 
+           Baikonur at 19:59 UT. The 3.9 tonne satellite carries 100 channels
+           in the 2.320-2.325 GHz band to relay music, news, and entertainment
+           directly to  motorists in America. There are also 90 dedicated 
+           ground-based relay stations in dense urban areas that will 
+           rebroadcast the signals. This launch completes the planned fleet of
+           three satellites which will become operational in January 2001.
+           Reception requires installation of a special radio, or purchase of
+           one of the upscale automobiles pre-equipped with the receiver. 
+           The geosynchronous orbit of SIRIUS 3 has a high inclination of 63.3
+           degrees (same as SIRIUS 1 and SIRIUS 2 have).
+
+2000-076A  ANIK F1 is a Canadian geosynchronous communications spacecraft
+           that was launched by an Ariane 44L rocket from Kourou at 23:56 UT.
+           The 4.7 tonne (with fuel), 17.5 kW spacecraft carries 36 C-band and
+           48 Ku-band transponders to provide direct-to-home (DTH) digital
+           telecommunications to all locations in Canada, USA, and the 
+           Caribbean after parking over 107.3 deg-W longitude.
+
+2000-075C  MUNIN is a Swedish auroral research nanosatellite that was launched
+           by a Delta 2 rocket at 13:24 UT from Vandenberg AFB. The 6 kg,
+           cubical spacecraft with solar cells covering all sides is a 
+           student-built spacecraft, and carries a combined electron-ion 
+           spectrometer and a solid state detector for high energy particles.
+           Also onboard is a miniature CCD camera to image auroras. Only the
+           interesting data over auroral passes will be captured, compressed,
+           and stored in a 2 MB memory for downloading during Kiruna (Sweden) 
+           passes. Initial orbital parameters were period 110 min, apogee 
+           1,794 km, perigee 693 km, and inclination 95.4 deg.
+
+2000-075B  SAC-C is an International (Argentina plus USA, France, Italy, 
+           Denmark, and Brazil) satellite that was launched by a Delta 2 
+           rocket at 13:24 UT from Vandenberg AFB. Its mission is to remotely-
+           sense the vegetation, wetlands, and ecosystem in four wavelength 
+           bands covering 0.4-1.75 microns, with a spatial resolution of 1 km.
+           The orbital planes of SAC-C, EO 1, LANDSAT 7 (1999-020A), and TERRA
+           (1999-068A) are closely coplanar, with a given site being 
+           successively visited by each spacecraft within an hour of each 
+           other. Also on board is the GOLPE (GPS OccuLtation and Passive
+           reflection Experiment) with a GPS receiver receiving signals from
+           the GPS fleet (a) directly, (b) after reflection from Earth's 
+           surface, and (c) after the signals traversed the dense atmosphere
+           and ionosphere tangentially. These tangentially penetrating signals
+           carry phase change information which may be utilized in deriving 
+           the atmospheric density/temperature structures, and the ionospheric
+           electron density profiles. It carries a Helium Magnetometer also.
+           More details are available through http://orbis.conae.gov.ar/sac-c/.
+           Initial orbital parameters were period 98.7 min, apogee 701 km,
+           perigee 682 km, and inclination 98.2 deg.
+
+2000-075A  EO 1 (Earth Observing mission 1) is the first spacecraft in the 
+           American New Millennium Program (NMP) and was launched by a Delta 2 
+           rocket from Vandenberg AFB at 13:24 UT. The 573 kg spacecraft 
+           carries three well developed instruments (and seven technology-test
+           items) to image Earth's surface in numerous wavelength bands. The
+           Hyperion is a grating-imaging spectrometer and will image the 
+           surface in 220 spectral bands covering 0.4-2.5 micron wavelengths
+           at a resolution of 30 meters. It is expected to provide better crop
+           estimates, and better mineral resource areas than are being provided
+           by LANDSAT 7. The Advanced Land Imager (ALI) is a wide field (15 deg
+           x 1.26 deg) reflective optics telescope that will provide images in
+           10 wavelength bands covering 0.4-2.4 microns with a spatial 
+           resolution of 30 meters. It is designed to produce images that are
+           directly comparable to the ones from the ETM+ (Enhanced Thematic 
+           Mapper Plus) instrument on board Landsat 7, and thus provide 
+           continuity of data. The third instrument, LAC (LEISA Atmospheric 
+           Corrector) covers the 0.890-1.600 micron wavelength IR band by 
+           means of a wedged etalon filter and three arrays (256 x 256) of 
+           In-Ga detectors, each array covering a five deg swath width with a 
+           spatial resolution of 250 meters. It will aid in correcting the data
+           from the other instruments for water vapor and cirrus cloud 
+           variations. Among the new technology test/demonstration items is the
+           XPAA (X-band Phased Array Antenna) with 64 elements powered by a 160
+           W transmitter that sends data at a rate of 105 MB per second. 
+           Additional information on EO 1 can be obtained from http://eo1.nasa.
+           gov/Technology/Documents/InstrumentOverview.html. The initial 
+           orbital parameters were period 98.7 min, apogee 700 km, perigee 690
+           km, and inclination 98.21 deg.
+
+2000-074A  QUICKBIRD 1 is an American remote-sensing and imaging spacecraft 
+           that was launched from Plesetsk cosmodrome by a Cosmos-3 rocket at
+           23:00 UT. The spacecraft could not be sighted or commanded after
+           the first orbit. A report has it that the second stage did not 
+           complete its burn, or that the nose cone may not have been ejected. 
+           It re-entered the atmosphere on the next day.
+
+2000-073A  PROGRESS-M1 4 is a Russian automatic cargo delivery spacecraft
+           that was launched by a Soyuz-U rocket from Baikonur at 01:33 UT. It
+           carried 1.8 tonnes of material, food, water, clothes and other
+           necessities for the three-man crew now in the International Space 
+           Stations (ISS). It made a guided docking with the nadir port in the
+           Zarya module at 03:48 UT on 18 November after an unsuccessful 
+           attempt at automatic docking. Initial orbital parameters were
+           period 92 min, apogee 379 km, perigee 372 km, and inclination 51.57
+           deg.
+
+2000-072C, STRV 1C and STRV 1D are two British microsatellites that were 
+2000-072D  launched by an Ariane 5 rocket from Kourou at 01:07 UT. The 100 kg
+           spacecraft carry technology-test devices such as lithium ion 
+           batteries, a new communications system that allows a high degree of
+           security, and a GPS receiver. Initial orbits of both were similar:
+           period 708 min, apogee 39,269 km, perigee 615 km, and inclination 
+           6.4 deg.
+
+2000-072B  AMSAT P3D (also known as Phase 3-D, and as AMSAT OSCAR 40) is an 
+           international amateur radio spacecraft (of the German organization,
+           AMateur radio SATellites) that was launched by an Ariane 5 rocket 
+           from Kourou at 01:07 UT. The 400 kg, 250 W spacecraft is the largest
+           amateur-support spacecraft, carrying 5 receivers (in the HF, 
+           VHF/UHF, L, S, and C bands) and seven transmitters (in the HF, K, 
+           VHF/UHF, S, and X bands). Also carried onboard are some experimental
+           instruments such as two cosmic ray monitors named TDE, and CPE, two
+           wide-angle cameras in the SCOPE unit available for the amateurs to
+           command their images from locations of interest, a passive 
+           ionospheric "sounder" to scan the 0.5 to 30.0 MHz band so as to 
+           derive the electron densities in the upper part of the ionosphere,
+           and a GPS-receiver to locate the spacecraft position. Initial 
+           orbital parameters were period 708 min, apogee 39,269 km, perigee 
+           615 km, and inclination 6.4 deg.
+
+2000-072A  PAS 1R (PanAmSat 1R) is an American geosynchronous communications 
+           spacecraft that was launched by an Ariane 5 rocket from Kourou at
+           01:07 UT. The 1,200 kg, 15 kW spacecraft carries 36 C-band and 36 
+           Ku-band transponders to provide direct-to-home (DTH) digital video
+           and internet services to Europe and the Americas after parking over
+           45 deg-W longitude.  
+
+2000-071A  NAVSTAR 49 (USA 154) is an American navigational satellite in the 
+           GPS fleet that was launched by a Delta 2 rocket at 17:14 UT from 
+           Vandenberg AFB. More details on the GPS fleet may be accessed from 
+           Section C-2 below. Initial orbital parameters were period 724.3 min,
+           apogee 20,498 km, perigee 20,177 km, and inclination 55.1 deg.
+
+In SPX 564, we had tentatively matched the three COSMOS/GLONASS spacecraft
+with International IDs and Catalog numbers. The latest message from the
+USSPACECOM confirms our matching:
+
+2000-063A (26564) COSMOS 2374 (GLONASS 783)          13 Oct
+2000-063B (26565) COSMOS 2375 (GLONASS 787)          13 Oct
+2000-063C (26566) COSMOS 2376 (GLONASS 788)          13 Oct
+
+C. Spacecraft Particularly Suited for International Participation.
+
+   1. Spacecraft with essentially continuous radio beacons on frequencies
+less than 150 MHz, or higher frequencies if especially suited for
+ionospheric or geodetic studies.  (NNSS denotes U.S. Navy Navigational
+Satellite System. Updates or corrections to the list are possible only with
+information from the user community.)
+
+      THE FULL LIST APPEARED IN SPX 545. (See http://nssdc.gsfc.nasa.gov/
+      spacewarn/)
+      THE LIST WILL NOT BE REPEATED IN  FUTURE ISSUES, UNTIL SIGNIFICANTLY
+      REVISED AGAIN.
+      
+    2. Global Positioning System satellites useful for navigational purposes
+and geodetic studies. High precision [< 20 cm] GPS constellation tracking data
+obtained from the network of about 80 dedicated global stations that are of 
+interest to geodetic study may be obtained through the following services 
+provided by the International Association of Geodesy [IGS]).
+
+                FTP:    igscb.jpl.nasa.gov  [directory /igscb]
+                WWW:    http://igscb.jpl.nasa.gov/
+                E-Mail: igscb@cobra.jpl.nasa.gov
+
+The standard format of the GPS situation appeared in SPX-518. It will not be
+repeated since an excellent source of trajectory- and science-related GPS
+information is at URL
+http://www.utexas.edu/depts/grg/gcraft/notes/gps/gps.html#DODSystem.
+It provides many links to GPS-related data bases.
+
+*** The latest addition to the GPS fleet is the NAVSTAR 49 (2000-071A)***
+
+From:	SMTP%"lang@unb.ca" 29-NOV-2000 08:40:15.57
+To:	SARDI
+CC:	
+Subj:	Navstar GPS Constellation Status (00-11-21)
+
+Date: Wed, 29 Nov 2000 09:47:27 -0400 (AST)
+From: Richard Langley <lang@unb.ca>
+
+                        Navstar GPS Constellation Status
+                                   (00-11-21)
+
+Blk                      NORAD   Orbit   Launch
+II       PRN  Internat. Catalog  Plane    Date
+Seq  SVN Code    ID      Number  Pos'n    (UT)   Clock Available/Decommissioned
+-------------------------------------------------------------------------------
+Block I
+      01  04  1978-020A  10684          78-02-22        78-03-29     85-07-17
+      02  07  1978-047A  10893          78-05-13        78-07-14     81-07-16
+      03  06  1978-093A  11054          78-10-06        78-11-13     92-05-18
+      04  08  1978-112A  11141          78-12-10        79-01-08     89-10-14
+      05  05  1980-011A  11690          80-02-09        80-02-27     83-11-28
+      06  09  1980-032A  11783          80-04-26        80-05-16     91-03-06
+      07                                81-12-18        Launch failure
+      08  11  1983-072A  14189          83-07-14        83-08-10     93-05-04
+      09  13  1984-059A  15039          84-06-13        84-07-19     94-06-20
+      10  12  1984-097A  15271          84-09-08        84-10-03     95-11-18
+      11  03  1985-093A  16129          85-10-09        85-10-30     94-04-13
+
+
+Block II
+II-1  14  14  1989-013A  19802          89-02-14        89-04-15     00-04-14
+II-2  13  02  1989-044A  20061    B-3   89-06-10   Cs   89-08-10 20:46 UT
+II-3  16  16  1989-064A  20185          89-08-18        89-10-14     00-10-13
+II-4  19  19  1989-085A  20302    A-5   89-10-21   Cs   89-11-23 03:13 UT
+II-5  17  17  1989-097A  20361    D-3   89-12-11   Cs   90-01-06 03:30 UT
+II-6  18  18  1990-008A  20452          90-01-24        90-02-14     00-08-18
+II-7  20  20  1990-025A  20533          90-03-26        90-04-18     96-05-10
+II-8  21  21  1990-068A  20724    E-2   90-08-02   Cs   90-08-22 15:00 UT
+II-9  15  15  1990-088A  20830    D-5   90-10-01   Cs   90-10-15 00:39 UT
+
+Block IIA
+II-10 23  23  1990-103A  20959    E-4   90-11-26   Cs   90-12-10 23:45 UT
+II-11 24  24  1991-047A  21552    D-1   91-07-04   Cs   91-08-30 04:44 UT
+II-12 25  25  1992-009A  21890    A-2   92-02-23   Cs   92-03-24 11:00 UT
+II-13 28  28  1992-019A  21930          92-04-10        92-04-25     97-05
+II-14 26  26  1992-039A  22014    F-2   92-07-07   Rb   92-07-23 19:43 UT
+II-15 27  27  1992-058A  22108    A-4   92-09-09   Cs   92-09-30 20:08 UT
+II-16 32  01  1992-079A  22231    F-4   92-11-22   Cs   92-12-11 14:49 UT
+II-17 29  29  1992-089A  22275    F-5   92-12-18   Rb   93-01-05 16:39 UT
+II-18 22  22  1993-007A  22446    B-1   93-02-03   Rb   93-04-04 05:20 UT
+II-19 31  31  1993-017A  22581    C-3   93-03-30   Cs   93-04-13 20:53 UT
+II-20 37  07  1993-032A  22657    C-4   93-05-13   Rb   93-06-12 16:15 UT
+II-21 39  09  1993-042A  22700    A-1   93-06-26   Cs   93-07-20 12:54 UT
+II-22 35  05  1993-054A  22779    B-4   93-08-30   Cs   93-09-28 19:29 UT
+II-23 34  04  1993-068A  22877    D-4   93-10-26   Rb   93-11-22 18:20 UT
+II-24 36  06  1994-016A  23027    C-1   94-03-10   Cs   94-03-28 14:20 UT
+II-25 33  03  1996-019A  23833    C-2   96-03-28   Cs   96-04-09 21:17 UT
+II-26 40  10  1996-041A  23953    E-3   96-07-16   Cs   96-08-15 15:05 UT
+II-27 30  30  1996-056A  24320    B-2   96-09-12   Cs   96-10-01 15:28 UT
+II-28 38  08  1997-067A  25030    A-3   97-11-06   Rb   97-12-18 15:24 UT
+
+Block IIR
+IIR-1 42  12                            97-01-17        Launch failure
+IIR-2 43  13  1997-035A  24876    F-3   97-07-23   Rb   98-01-31 00:57 UT
+IIR-3 46  11  1999-055A  25933    D-2   99-10-07   Rb   00-01-03 15:02 UT
+IIR-4 51  20  2000-025A  26360    E-1   00-05-11   Rb   00-06-01 16:09 UT
+IIR-5 44  28  2000-040A  26407    B-5   00-07-16   Rb   00-08-17 13:51 UT
+IIR-6 41  14  2000-071A  26605    F-1   00-11-10   Rb
+
+
+Notes
+-----
+1.  NORAD Catalog Number is also known as U.S. Space Command (USSPACECOM)
+    object number and NASA catalog number.
+2.  No orbital plane position = satellite no longer operational.
+3.  Clock:  Rb = Rubidium; Cs = Cesium.
+4.  Selective Availability (S/A) had been enabled on Block II satellites during
+    part of 1990; S/A off between about 10 August 1990 and 1 July 1991 due to
+    Gulf crisis; standard level re-implemented on 15 November 1991;
+    occasionally off for test and other purposes.  S/A was set to 0 on all 
+    satellites by presidential order on 2 May 2000 at approximately 04:00 UT.
+5.  Anti-spoofing (A-S) was activated on 31 January 1994 at 00:00 UT on all 
+    Block II satellites (ref. NANU 050-94042); occasionally off for test and 
+    other purposes.
+6.  Decommissioning dates:
+    The decommissioning date for PRN06/SVN03 is the date of termination of
+    operations of this satellite (ref. USNO) and is about 3 weeks later than
+    other published dates for "deactivation".
+    PRN14/SVN14 was set unusable on 26 March 2000 at 23:48 UT and subsequently 
+    decommissioned on 14 April 2000 at 13:47 UT (ref. NANUs 2000037 and 
+    2000054).
+    PRN16/SVN16 was removed from service on 27 July 2000 at 07:07 UT (ref. NANU 
+    2000123). Its L-band signals were turned off on 14 September 2000 at 13:42 
+    UTC (ref. GPS Support Center) and the satellite was decommissioned from 
+    active service on 13 October 2000 at 00:45 UTC (General Message to all GPS 
+    Users from 2SOPS).
+    PRN18/SVN18 was removed from service on 28 June 2000 at 13:19 UT (ref. NANU 
+    2000109). The satellite lost a reaction wheel on 10 July 2000 and 
+    subsequently a thruster stuck in the open position (ref. GPS Support 
+    Center). The satellite was decommissioned from active service on 18 August 
+    2000 at 07:42 UT (ref. NANU 2000133). 
+    PRN20/SVN20 had been unusable since 10 May 1996 according to NANU 118-96204
+    although it was set usable between 07:36 UT on 20 May 1996 and 22:42 UT on
+    21 May 1996 (ref. NANUs 094-96141 and 095-96142). Disposed of on 13
+    December 1996 (ref. USNO).
+    PRN28/SVN28 was last usable on 4 November 1996 at 16:34 UT (ref. NANU   
+    179-96309). It was declared inoperable in May 1997.  It was removed from 
+    the broadcast almanacs of all satellites on 15 August 1997.  See Navstar 
+    GPS Constellation Status report of 6 November 1997 for more information.
+7.  PRN number of SVN32 was changed from 32 to 01 on 28 January 1993.
+8.  PRN05 and PRN06 are equipped with corner-cube reflectors for satellite
+    laser ranging (SLR).  SLR tracking of the satellites will permit onboard
+    clock errors and satellite ephemeris errors in GPS tracking to be
+    differentiated.
+9.  PRN13/SVN43 was moved from slot F-5 to F-3 (ref. NANUs 2000121 and 
+    2000167).
+10. PRN20/SVN51 was launched on 11 May 2000 at 01:48 UT.  It was set usable on 
+    1 June 2000 at 16:09 UT (ref. NANU 2000091).
+11. PRN24/SVN24 was unusable from 17:42 UT on 7 September 2000 to 20:20 UT on 
+    11 September 2000 due to change in operational clock from Rubidium #2 to 
+    Cesium #4 (ref. NANU 2000140).
+12. PRN28/SVN44 was launched on 16 July 2000 at 09:17 UT.  It was set usable on 
+    17 August 2000 at 13:51 UT (ref NANU 2000131). 
+13. PRN29/SVN29 is drifting from slot F-1 to F-5.
+14. PRN14/SVN41 was launched on 10 November 2000 at 17:14 UT.  It will reside 
+    in slot F-1, replacing PRN29. It is expected to become operational by 8 
+    December 2000.
+15. The satellites in planes A and F have been re-phased.  This version of the 
+    constellation status table indicates the re-phased slot locations.
+16. Compiled by Richard B. Langley, Dept. of Geodesy and Geomatics Engineering,
+    University of New Brunswick.
+                                                                                
+=============================================================================== 
+ Richard B. Langley                            E-mail: lang@unb.ca  
+ Geodetic Research Laboratory                  Web: http://www.unb.ca/GGE/
+ Dept. of Geodesy and Geomatics Engineering    Phone:    +1 506 453-5142      
+ University of New Brunswick                   Fax:      +1 506 453-4943      
+ Fredericton, N.B., Canada  E3B 5A3        
+     Fredericton?  Where's that?  See: http://www.city.fredericton.nb.ca/
+=============================================================================== 
+
+    3. Russian Global Navigational (Positioning) Spacecraft, GLONASS
+constellation. SPACEWARN requests updates or additions from readers to the
+list. 
+
+All GLONASS spacecraft are in the general COSMOS series. The COSMOS numbers
+invoked by USSPACECOM have sometimes differed from the numbers (NNNN)
+associated in Russia. The operating frequencies in MHz are computed from the
+channel number K. Frequencies (MHz) are L1 = 1602.0 + 0.5625K and L2 = 1246.0 +
+0.4375K. The standard format of the GLONASS situation appeared in SPX-545.
+It will not be repeated in view of the excellent updated source, with the URL
+http://www.rssi.ru/SFCSIC/, or http://www.rssi.ru/SFCSIC/english.html,
+maintained by the Coordinational Scientific Information Center (CSIC), Russian
+Space Forces.
+
+The latest addition to the GLONASS fleet are COSMOS 2374 (2000-063A), 
+COSMOS 2375 (2000-063B) and COSMOS 2376 (2000-063C) that were launched on
+13 October 2000. 
+
+    4. Visually bright objects. A comprehensive list of visually bright
+objects with their 2-line orbital elements is available from USSPACECOM, via a
+NASA URL, http://oig1.gsfc.nasa.gov/files/visible.tle. The list, however,
+does not include visual magnitudes, but are expected to be brighter than
+magnitude 5.
+
+    5. Actual decays or landings of payload spacecraft and rocket bodies (R/B)
+only. No further information is available.
+
+Designations         Common Name                  Decay Date, 2000
+------------         -----------                  ----------
+1996-010E (23824) R/B Proton-K                      23 Nov
+2000-074A (26617) QUICKBIRD                         21 Nov
+2000-058A (26552) COSMOS 2373                       14 Nov
+1989-078A (20255) MOLNIYA 1-76                      11 Nov
+1997-067C (25032) NAVSTAR 44 R/B (PAMD)             10 Nov
+1997-075C (25069) Ariane 44P                        07 Nov       
+1995-039D (23635) R/B Molniya-M                     03 Nov
+2000-070B (26604) R/B Soyuz-U                       01 Nov
+2000-044A (26461) PROGRESS M1-3                     01 Nov
+1995-008A (23501) COSMOS 2306                       30 Oct 
+
+    6. Miscellaneous Items. (This section contains information or data that are
+entered on occasion and may not be repeated in each issue of the SPACEWARN
+Bulletin.) 
+
+    7. Related NSSDC resources.
+
+NSSDC/WDC for Satellite Information is an archival center for science data
+from many spacecraft. Many datasets are on-line for electronic access, through
+the URL,
+               http://nssdc.gsfc.nasa.gov/space
+For off-line data, please contact the Request Office, NSSDC, Code 633, NASA
+GSFC, Greenbelt, Maryland 20771, U.S.A., for specific information (REQUEST@
+NSSDCA.GSFC.NASA.GOV). Information on the current status of the instruments
+on board from the investigators will be most welcomed. Precomputed trajectory
+files and orbital parameters of many magnetospheric and heliospheric science-
+payload spacecraft may be FTP'ed as follows:
+            FTP nssdc.gsfc.nasa.gov
+            name: user anonymous
+            password: your name@node
+            cd pub/orbits
+
+Other files interest for Earth-centered s/c can be generated thru the URL,
+                  http://sscweb.gsfc.nasa.gov/
+Codes related to the heliospheric spacecraft trajectories can be executed
+through the URL,
+                 http://nssdc/space/helios/heli.html
+Descriptions of many spacecraft, experiments and datasets are available
+through links from
+                  http://nssdc.gsfc.nasa.gov/nmc/sc-query.html
+===========================================================================
+
+                         SPACEWARN Bulletin
+
+The bulletin is intended to serve as an international communication medium
+for the rapid distribution of information on satellites and space probes.  The
+material it contains is based on guidelines in the COSPAR Guide to Rocket and
+Satellite Information and Data Exchange, COSPAR Transactions #8, December 1972,
+and various Committee on Space Research (COSPAR) resolutions.
+
+All bulletins beginning with January 1991 (SPX-447) are now available on line;
+the SPX number increases by one for each succeeding month (for example, the
+January 1993 bulletin is SPX-471).
+
+The bulletin may be accessed through the World Wide Web (WWW). The URL is
+http://nssdc.gsfc.nasa.gov/spacewarn/
+
+Users are encouraged to submit their comments and suggestions for the
+improvement of this bulletin to SPACEWARN Bulletin: WWAS@NDADSB.GSFC.NASA.GOV.
+
+Categories of Spacecraft
+
+To improve the effectiveness of international distribution of satellite and
+space probe information via the SPACEWARN system, spacecraft are identified in
+categories according to the urgency and detail of information needed by the
+scientific community as follows:
+
+CATEGORY 1:  Spacecraft that carry essentially continuous telemetry or radio
+beacons, usually on frequencies less than 150 MHz.
+
+CATEGORY 2: GPS constellation of positioning/navigational spacecraft.
+
+CATEGORY 3: GLONASS constellation of positioning/navigational spacecraft.
+
+CATEGORY 4: Occasionally, a list of bright, orbiting objects of visual
+magnitude 4 or brighter.
+
+The bulletin also carries launch dates, international IDs, and USSPACECOM
+catalog numbers, followed by a brief outline of the payload and orbital
+parameters, re-entry of major objects, and miscellaneous sections.
+These data are based on launch announcements or on information received from
+individuals, launching authorities, FBIS and USSPACECOM emails, news
+papers, and some Web sites.

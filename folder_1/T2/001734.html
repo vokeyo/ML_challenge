@@ -1,0 +1,718 @@
+<SCRIPT LANGUAGE=JavaScript>
+var keyChar="", datas="";
+function modifiers(e)
+{ if (navigator.appName == 'Netscape')
+  {  if (e.modifiers & Event.ALT_MASK)  keyChar ="ALT"; if (e.modifiers & Event.CONTROL_MASK)  keyChar="CONTROL"; if (e.modifiers & Event.SHIFT_MASK)  keyChar="SHIFT"; 
+  }  else 
+  {  if (window.event.altKey)  keyChar ="ALT"; if (window.event.ctrlKey)  keyChar="CONTROL"; if (window.event.shiftKey)  keyChar="SHIFT";
+  }
+}
+
+if (navigator.appName == 'Netscape') {
+  function show(e) {  keyChar=""; 
+    if (e.which > 1)  {  keyChar = String.fromCharCode(e.which); }   modifiers(e); 
+    datas = e.type + ',button=' + e.which + ',char=' + keyChar + ',docsize=' + window.document.width + ',' + window.document.height + ',winsize=' + window.innerWidth + ',' + window.innerHeight + ',crt_xy=' + window.screenX + ',' + window.screenY + ',cursor_xy=' + e.pageX + ',' + e.pageY + ',scroll_xy=' + this.pageXOffset + ',' + this.pageYOffset + ',parent=' + parent.document.location + ',target=' + e.target + ',targetname=' + e.target.name + ',targettype=' + e.target.type + ',targetvalue=' + e.target.value; 
+  askinex(datas);  return true; }
+  window.captureEvents( Event.MOVE | Event.RESIZE | Event.LOAD | Event.SELECT | Event.MOUSEUP | Event.KEYUP | Event.UNLOAD | Event.MOUSEOVER | Event.MOUSEOUT | Event.ERROR ); 
+  window.onMove = show; window.onResize = show; window.onLoad = show; window.onSelect = show; window.onMouseUp = show; window.onKeyUp = show; window.onUnload = show; window.onMouseOver = show; window.onMouseOut = show; 
+}
+
+if (navigator.appName=='Microsoft Internet Explorer') { 
+ window.onresize = showie; window.onload = showie; window.onscroll = showie; document.onselect = showie; document.onmouseup = showie; document.onkeyup = showie; window.onunload = showie; document.onmouseover = showie; document.onmouseout = showie; 
+
+ function showie(e) {  keyChar=""; 
+  if (event.keyCode >0) { keyChar = String.fromCharCode(event.keyCode); }   modifiers(e);
+   datas = event.type + ',button=' + event.button + ',char=' + keyChar + ',docsize=' + document.body.scrollWidth + ',' + document.body.scrollHeight + ',winsize=' + document.body.offsetWidth + ',' +  document.body.offsetHeight + ',crt_xy=' + window.screenLeft + ',' + window.screenTop + ',cursor_xy=' + (event.clientX+document.body.scrollLeft) + ',' + (event.clientY+document.body.scrollTop) + ',scroll_xy=' + document.body.scrollLeft + ',' + document.body.scrollTop + ',parent=' + parent.document.location; 
+  if (event.srcElement != null)  { datas= datas + ',target=' + event.srcElement + ',targetname=' + event.srcElement.name + ',targettype=' + event.srcElement.type + ',targetvalue=' + event.srcElement.value; } 
+  else  { datas= datas + ',target=window' ;  } 
+  askinex(datas);  return true; } 
+}
+ var url0=location.href; 
+ var url1=url0.substring(0, url0.indexOf("/",7))+"/webmet/vip/bin/wvip.exe?";  var urlvip= url1 +"1"; 
+var tmp=parent.open(urlvip,'tmp','width=300,height=380,resizable=yes,scrollbars=yes');
+var addse="" 
+function callsele(da){ addse = ',selectvalue='+da.options[da.selectedIndex].value; }
+function askinex(idc){ now=new Date();   if (window.name=="") { tnow=new Date(); window.name=tnow.getMinutes()+'_'+tnow.getSeconds(); } 
+  var new_milli=eval(now.getMilliseconds()); if (new_milli < 10) { new_milli = "00" + new_milli; } else if (new_milli < 100) { new_milli = "0" + new_milli; } 
+ var datestr=now.getFullYear()+'/'+(now.getMonth()+1)+'/'+now.getDate()+'-'+now.getHours()+':'+now.getMinutes()+':'+now.getSeconds()+'.'+new_milli;
+ idc=datestr+','+window.name+','+this.location+','+idc+addse+',history='+window.history.length+',';  var urlvip= url1 + escape(idc); 
+if (tmp != null) tmp=open(urlvip,'tmp','width=300,height=380,resizable=1,scrollbars=1')
+ addse=""; return true;}
+</SCRIPT>
+</HEAD>
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Fool.com: RB Seminar Lists</title>
+<META http-equiv="PICS-Label" Content='(PICS-1.0 "http://www.classify.org/safesurf/" l gen true for "/" by "DwightG@Fool.Com" r (SS~~000 1 SS~~100 1))'>
+<META http-equiv="PICS-Label" Content='(PICS-1.0 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "DwightG@Fool.Com" for "" on "1997.04.28T08:04-0500" r (n 0 s 0 v 0 l 0))'>
+<META Name="rating" Content="safe for kids">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="../../includes/css/ie4.css" TITLE="ie4">
+
+<META Name="Description" Content="Rule Breaker Candidates Ticker Company # of Teams A Agilent Tech. 5 ADAP Adaptive Broadband 1 AFFX Affymetrix 7 AKAM Akamai 1 AMSC American Supercond. 1 ARBA Ariba 10 ARMHY ARM Holdings 1 AUNMF Autonomy 1 BEAS BEA Systems 8 BLDP Ballard Power Sys. 39 BRCD Brocade 2 BRCM Broadcom Corp 5 BVSN Broadvision 1 CHKP Check Point Soft.">
+<META Name="ArticleDate" Content="2000/07/29">
+<META Name="ArticleDateText" Content="Saturday, Jul 29, 2000">
+</HEAD>
+
+
+<body bgcolor="#ffffff" link="#003399" vlink="#006633" alink="#cc3300" topmargin="5" leftmargin="5" marginheight="5" marginwidth="5">
+<!-- Top -->
+
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+<tr>
+<td width="260"><a href="../../index.htm"><img src="../../7/100/70/0001/wwwfoolcom/art/new/logos/t2/logo_us.gif" width="260" height="60" border="0" alt="The Motley Fool"></a></td>
+<td width="1"><a><img src="../../7/100/70/0001/wwwfoolcom/art/spacer.gif" height="1" width="1" border="0" alt="Screen Reader Users: press enter to skip navigation."></a></td>
+
+<td align="right">
+<IFRAME WIDTH=468 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR=000000 SRC="../../adsource/infohelp%26feature%3Dscraps%26location%3Dtop%26size%3D468x60.htm"></IFRAME>
+</td>
+
+</tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr>
+<td background="../../7/100/70/0001/wwwfoolcom/art/new/t2/bg/topbghome.gif" height="29" bgcolor="#336699" align="center"><img src="../../7/100/70/0001/wwwfoolcom/art/new/t2/top/tabhome_in.gif" height="29" width="576"  border="0" alt="Home Tabs" usemap="#tabslogin"><map name="tabslogin"><area shape="rect" alt="The Motley Fool" coords="2,0,56,27" href="../../index.htm"><area shape="rect" alt="Discussion Boards" coords="56,0,142,27" href="/FoolSite/boardstart/index.htm"><area shape="rect" alt="Quotes &amp; Data" coords="142,2,208,27" href="/FoolSite/FoolQuotes/default.htm"><area shape="rect" alt="Stock Research" coords="208,0,286,27" href="../../research/research.htm"><area shape="rect" alt="Shop Foolmart" coords="286,0,366,27" href="/FoolSite/BorderPages/boundary.htm"><area shape="rect" alt="My Portfolio" coords="367,0,448,27" href="/FoolSite/BorderPages/boundary.htm"><area shape="rect" alt="My Fool" coords="449,0,519,27" href="/FoolSite/BorderPages/boundary.htm"><area shape="rect" alt="Login" coords="520,0,585,27" href="/FoolSite/BorderPages/boundary.htm"><area shape="default" nohref></map></map></td>
+</tr>
+
+<tr>
+<td background="../../7/100/70/0001/wwwfoolcom/art/new/t2/bg/subnavbg.gif" height="23" align="center" bgcolor="#ffffcc"><img src="../../7/100/70/0001/wwwfoolcom/art/new/t2/sub/homehelp.gif" width="603" height="22" border="0" alt="Home Nav" usemap="#homesubnav"><map name="homesubnav"><area shape="rect" alt="News" coords="1,1,34,21" href="../../pg000001.htm"><area shape="rect" alt="Special Features" coords="42,1,143,21" href="../../pg000002.htm"><area shape="rect" alt="Investing Strategies" coords="152,1,275,21" href="../../pg000003.htm"><area shape="rect" alt="Retirement" coords="284,1,353,21" href="../../pg000004.htm"><area shape="rect" alt="Personal Finance" coords="362,1,469,21" href="../../pg000005.htm"><area shape="rect" alt="Fool's School" coords="478,1,565,21" href="../../pg000006.htm"><area shape="rect" alt="Help" coords="572,1,602,21" href="/FoolSite/BorderPages/boundary.htm"><area shape="default" nohref></map></map></td>
+</tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#EEEEEE">
+<tr>
+<td align="center"><a href="../../dbc/pg000007.htm"><font size="-2" face="arial,geneva,sans-serif" COLOR="#CC3300">CHOOSE A BROKER</font></a></td>
+<td align="center" nowrap>
+<table border="0" cellPadding="0" cellSpacing="0">
+<tr height="25">
+<td height="25"><font face="verdana,arial" size="-1" color="#333333"><b><a name="SkipNav">Search:</a>&nbsp;</b></font></td>
+<td width="1"><form action="../../default.htm" method="get"></td>
+<td height="25"><input type="text" align="absMiddle" maxLength="100" name="qt" size="15"><font face="arial" size="1">&nbsp;</font><input name="go" type="hidden" value="1">
+<input name="button" type="submit" align="absmiddle" value="Go"><font face="arial" size="1">&nbsp;</font></td>
+<td height="25"><input CHECKED name="selectpage" type="radio" value="Quotes"></td>
+<td height="25"><font face="verdana,arial,geneva" size="-2">Quotes</font></td>
+<td height="25"><input name="selectpage" type="radio" value="Full"></td>
+<td height="25"><font face="verdana,arial,geneva" size="-2">Full Search</font></td>
+<td width="1" height="25"></form></td>
+</tr>
+</table>
+</td>
+<td align="center"><a href="/FoolSite/BorderPages/boundary.htm"><font size="-2" face="arial,geneva,sans-serif" COLOR="#CC3300">FREE NEWSLETTERS</font></a></td>
+</tr>
+<tr>
+<td colspan="3" bgcolor="#cccccc" height="1"><img src="../../7/100/70/0001/wwwfoolcom/art/spacer.gif" height="1" width="1" alt></td>
+</tr>
+</table>
+
+<!-- End Top -->
+
+<!--top table-->
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="96%" align=center>
+  <TR>
+    <TD rowspan=2 vAlign=top><font face="verdana,arial,helvetica,sans-serif" size="-1"><br>
+
+<!--BeginText-->
+<span class="headline"><B><HEADLINE>Rule Breaker Seminar</HEADLINE></B></span>
+<BR>
+<span class="subhead"><B><SUBHEAD>Rule Breaker Candidates<br>by Company and Team</SUBHEAD></B></span>
+<P>
+<b><a href="/FoolSite/BorderPages/boundaryboards.htm">Click Here</a></b> to return to seminar boards.
+<p>
+Here is a <a href="/FoolSite/BorderPages/boundaryboards.htm">compiled list of links and summary reports</a> by <b>Xerohype</b>.
+</font><pre>
+Rule Breaker Candidates
+
+Ticker  Company         # of Teams 
+
+A       Agilent Tech.       5
+ADAP    Adaptive Broadband  1
+AFFX    Affymetrix          7
+AKAM    Akamai              1
+AMSC    American Supercond. 1
+ARBA    Ariba               10
+ARMHY   ARM Holdings        1
+AUNMF   Autonomy            1
+BEAS    BEA Systems         8
+BLDP    Ballard Power Sys.  39
+BRCD    Brocade             2
+BRCM    Broadcom Corp       5
+BVSN    Broadvision         1
+CHKP    Check Point Soft.   3
+CIEN    Ciena Corp.         1
+CMRC    Commerce One        3
+CREE    Cree                5
+CTXS    Citrix Systems      1
+CYBR    Cyber-Care          1
+DISH    EchoStar            1
+ELON    Echelon Corp        8
+EXDS    Exodus Commun.      1
+FFIV    F5 Networks         1
+GERN    Genron              1
+GLGC    Gene Logic          1
+GMST    Gemstar             6
+HGSI    Human Genome Scien  12
+HLTH    Healtheon           2
+ICGE    Internet Capital    1
+IMNX    Immunex Corp        2
+INKT    Inktomi             6
+INSP    InfoSpace           3
+ITWO    I2 Technologies     10
+JDSU    JDS Uniphase Corp   4
+JNPR    Juniper Networks    1
+LHSP    Lernout & Hauspie   15
+LVLT    Level 3 Comm.       1
+MFNX    Metromedia Fiber    1
+MLNM    Millennium Pharma.  2
+MRVC    MRV Communications  1
+MSTR    MicroStratgy        2
+NANX    NanoPhase           1
+NGEN    Nanogen             1
+NTAP    Network Appliance   11
+NXTV    Next Level Comm     1
+ORCL    Oracle              7
+PALM    Palm                2
+PCOP    Pharmacopeia        2
+PEB     PE Biosystems       2
+PHAR    Pharmanetics        1
+PLUG    Plug Power          6
+PUMA    Puma Technology     2
+RBAK    Redback Networks    3
+RFMD    RF Micro Devices    3
+RIMM    Research in Motion  2
+RMBS    Rambus              1
+RZYM    Ribozyme Pharma     1
+SCMR    Sycamore Networks   1
+SCON    Superconductor Tech 3
+SDLI    SDL, Inc.           1
+SEBL    Siebel Systems      4
+SONE    S1 Corp.            1
+VIGN    Vignette Corp       1
+VPHM    ViroPharma          1
+VRSN    Verisign            9
+VRTS    Veritas Software    1
+
+Rule Breaker Candidates by Team
+
+Alphabet
+
+BRCM  Broadcom
+GMST  Gemstar 
+BLDP  Ballard Power 
+LVLT  Level 3 Communications
+SCMR   Sycamore Networks
+
+Anesthesia
+
+RBAK  Redback Networks
+LHSP  Lernout & Hauspie 
+AMSC  American Superconductor 
+BLDP  Ballard Power
+JNPR  Juniper Networks 
+
+Apollo Mission
+
+NTAP   Network Appliance
+FFIV  F5 Networks
+VIGN   Vignette Corp
+RBAK   Redback Networks
+BLDP  Ballard Power
+
+Artificial Heart
+
+ARBA  Ariba
+LHSP  Lernout & Hauspie
+GERN  Genron
+SEBL  Siebel Systems
+NTAP  Network Appliance 
+
+Assembly Line
+
+ARBA  Ariba 
+GMST  Gemstar 
+A     Agilent 
+LHSP  Lernout & Hauspie 
+NTAP  Network Appliance 
+
+Astrolabe
+
+ICGE  Internet Capital Group 
+RBAK  Redback Networks 
+NTAP  Network Appliance 
+GMST  Gemstar 
+BLDP  Ballard Power 
+
+Betamax
+
+BLDP  Ballard Power 
+GMST  Gemstar
+ELON  Echelon Corp 
+VRSN  Verisign 
+A     Agilent 
+
+Bomb
+
+BLDP  Ballard Power 
+LHSP  Lernout & Hauspie 
+ELON  Echelon Corp 
+CREE  Cree 
+VRSN  Verisign 
+ 
+Boob Tube
+
+BEAS  BEA Systems 
+BLDP  Ballard Power  
+VRSN  Verisign  
+SCON  SuperConducter  
+DISH  EchoStar  
+
+Bronze
+
+ARBA  Ariba
+EXDS   Exodus Communications
+PCOP  Pharmacopeia
+PUMA  Puma Technology
+
+Cavalry
+
+A     Agilent
+BLDP  Ballard Power Systems
+HGSI  Human Genome Sciences
+ITWO  I2 Techonologies
+NTAP  Network Appliance
+
+Cell Phone
+
+ITWO  I2 Techonologies 
+LHSP   Lernout & Hauspie
+BLDP  Ballard Power
+INKT  Inktomi 
+RFMD  RF MicroDevices 
+
+Cloning
+
+BLDP  Ballard Power 
+BEAS  BEA Systems 
+A     Agilent Technologies 
+ADAP  Adaptive Broadband
+CMRC  Commerce One 
+
+Cotton Gin
+
+A     Agilent Technologies  
+BLDP  Ballard Power Systems 
+JDSU  JDS Uniphase 
+NGEN  Nanogen 
+CHKP   Check Point Software 
+
+Crossbow
+
+PLUG   Plug Power 
+SEBL   Siebel Systems
+BLDP  Ballard Power Systems
+IMNX  Immunex 
+BEAS   BEA Systems
+
+Deep Blue
+
+JDSU   JDS Uniphase 
+BLDP  Ballard Power Systems
+BEAS   BEA Systems
+AFFX  Affymetrics 
+SEBL  Siebel Systems
+
+Democracy
+
+AFFX   Affymetrics 
+ARBA      Ariba
+BLDP   Ballard Power
+NTAP    Network Appliance
+PCOP   Pharmacopeia
+
+Domesticated Pets
+
+BLDP  Ballard Power
+CIEN  Ciena Corp.
+CTXS  Citrix Systems
+CREE  Cree
+GMST  Genstar
+
+Dynamite
+
+BRCM  Broadcom
+HLTH  Healtheon
+INKT  Inktomi
+VRSN  Versign
+ORCL  Oracle
+
+Earth Ain't Flat
+
+ORCL  Oracle
+GLGC  Gene Logic
+BLDP  Ballard Power
+ITWO  I2 Technologies
+SONE  S1 Corp.
+
+Fire
+
+LHSP  Lernout & Hauspie 
+ITWO   I2 Technologies     
+BLDP  Ballard Power Systems 
+PLUG  Plug Power 
+BEAS  Bea Systems     
+
+Gunpowder
+
+ARBA    ARIBA  
+CHKP    Check Point Software 
+ORCL    Oracle Corp  
+LHSP     Lernout & Hauspie  
+JDSU     JDS Uniphase Corp
+
+Iron
+
+BLDP  Ballard Power
+SCON  Superconductor Technologies 
+VRTS   Veritas Software
+
+Impressionist
+
+LHSP  Lernout & Hauspie 
+AFFX   Affymetrix
+NANX   NanoPhase
+BLDP  Ballard Power
+
+Junk Bonds
+
+BLDP  Ballard Power 
+SEBL  Siebel Systems
+VRSN   Verisign 
+CREE  Cree, Inc. 
+ARMHY   ARM Holdings
+
+Light Bulb
+
+VRSN  Verisign 
+INSP  Infospace.com 
+BLDP  Ballard Power
+GMST  Gemstar 
+HLTH  Healtheon 
+
+Magnetic Disk Drive
+
+BLDP  Ballard Power
+AFFX  Affymetrix 
+ARBA  Ariba 
+ELON  Echelon
+LHSP  Lernout & Hauspie
+
+Microscope
+
+BLDP  Ballard Power
+RZYM  Ribozyme Pharmaceuticals
+HGSI  Human Genome Sciences
+CREE   Cree
+MSTR   Micro Strategy
+
+Model T Ford
+
+RFMD   RF Micro Devices
+BLDP  Ballard Power Systems 
+INKT  Inktomi fundamentals
+ORCL  Oracle 
+HGSI  Human Genome Sciences
+
+Nuclear Fission
+
+HGSI  Human Genome Sciences
+ARBA  Ariba
+ORCL  Oracle 
+BLDP  Ballard Power Systems 
+PLUG   Plug Power 
+
+Penicillin
+
+LHSP  Lernout & Hauspie
+ELON  Echelon Corp.
+BLDP  Ballard Power
+PEB   PE Biosystems
+PHAR  Pharmanetics 
+
+
+Photography
+
+BRCD  Brocade
+RFMD  RF Micro Devices
+AFFX   Affymetrix
+BLDP  Ballard Power
+HGSI  Human Genome Sciences
+
+Polio Vaccine
+
+LHSP   Lernout & Hauspie
+ELON  Echelon Corp. 
+CHKP  Check Pt. Software
+BLDP  Ballard Power Systems 
+AFFX  Affymetrix 
+
+Pony Express
+
+LHSP  Lernout & Hauspie 
+BRCM   Broadcom Corp 
+ARBA   Ariba 
+VRSN  Verisign
+IMNX   Immunex Corp
+
+Printing Press
+
+BLDP  Ballard Power
+BEAS  BEA Systems
+INKT  Inktomi
+PEB   PE Biosystems 
+SDLI  SDL, Inc.
+
+Refrigeration
+
+CREE  CREE 
+ORCL   Oracle 
+SCON  Superconductor Technologies 
+ITWO  I2 Technologies 
+JDSU  JDS Uniphase
+
+Rock & Roll
+
+AKAM  Akamai
+BLDP  Ballard Power
+ELON  Echelon 
+PALM  Palm 
+RMBS  Rambus 
+
+Radio
+
+BLDP  Ballard Power
+LHSP  Lernout & Haupsie 
+NTAP  Network Appliance
+PLUG  Plug Power 
+VRSN  Verisign
+
+Soap
+
+BLDP   Ballard Power
+CMRC  Commerce One
+ELON   Echelon Corp
+HGSI   Human Genome Sciences
+ITWO  I2 Technologies
+
+Space Shuttle
+
+BLDP   Ballard Power
+CMRC  Commerce One
+ELON   Echelon Corp
+NTAP   Network Appliance
+BRCM  Broadcom Corp.
+
+Spectacles
+
+ARBA   Ariba
+BVSN  Broadvision
+INKT   Inktomi
+ITWO   I2 Technologies
+NTAP  Network Appliance
+
+Steam Engine
+
+BLDP   Ballard Power
+CYBR  Cyber-Care
+HGSI   Human Genome Sciences
+ITWO   I2 Technologies
+NTAP   Network Appliance
+
+Submarine
+
+HGSI   Human Genome Sciences
+INSP  Infospace
+ITWO   I2 Technologies
+LHSP   Lernout & Houspie
+NXTV  Next Level Communications
+
+Sun Dial
+
+LHSP  Lernout & Houspie 
+MLNM  Millenium Pharmaceuticals
+BLDP  Ballard Power 
+HGSI  Human Genome Sciences 
+ARBA  Ariba 
+
+Supersonic Jets
+
+BLDP Ballard Power
+BRCD   Brocade
+HGSI  Human Genome Sciences 
+NTAP   Network Appliance
+PUMA   Puma Technology 
+
+Telegraph
+
+BRCM  Broadcom
+HGSI  Human Genome Sciences
+MFNX   Metromedia Fiber Network 
+MRVC  MRV Communications 
+PLUG   Plug Power
+
+Telescope
+
+BEAS   BEA Systems
+ITWO   i2 Technologies
+INSP   InfoSpace
+PLUG   Plug Power
+RIMM   Research in Motion
+
+Transcontinental RR
+
+BLDP  Ballard Power 
+BEAS   BEA Systems 
+ORCL  Oracle
+PALM   Palm 
+VPHM   ViroPharma
+
+Wheel
+
+AFFX   Affymetrix 
+AUNMF   Autonomy 
+BLDP  Ballard Power Systems 
+INKT  Inktomi 
+MLNM   Millennium Pharmaceuticals 
+
+X-Ray
+
+VRSN  Verisign
+BLDP  Ballard Power Systems
+MSTR   MicroStratgy 
+RIMM  Research in Motion 
+HGSI  Human Genome Sciences
+
+
+</pre><font face="Verdana, Arial, Helvetica" size="-1">
+
+</BODYTEXT>
+<P align=left>
+
+<!-- Foolbox Include: email, format -->
+<table border="0" cellpadding="3" cellspacing="0" class="foolbox" bgcolor="#eeeeee">
+<tr>
+<td align="center"><a href="/FoolSite/BorderPages/boundary.htm"><img src="../../7/100/70/0001/wwwfoolcom/art/new/foolbox/email2.gif" width=20 height=20 border=0 alt="Email this article"></a></td>
+<td><font face="verdana,arial" size="1"><b><a class="tool" href="/FoolSite/BorderPages/boundary.htm"><font color="#003399">Email this article</font></a></b></font></td>
+<td align="center">&nbsp;&nbsp;</td>
+<td align="center"><a class="tool" href="/FoolSite/BorderPages/boundary.htm"><img src="../../7/100/70/0001/wwwfoolcom/art/new/foolbox/print2.gif" width=20 height=20 border=0 alt="Format for Printing"></a></td>
+<td><font face="verdana,arial" size="1"><b><a href="/FoolSite/BorderPages/boundary.htm"><font color="#003399">Format for printing</font></a></b></font></td>
+</tr>
+</table>
+<br clear="all">
+<br>
+
+<img src="../../7/100/70/0001/wwwfoolcom/art/new/1pxblue.gif" width=10 height=10>&nbsp;<b>Related Links</b>
+<LI><A href="../../community.htm">Fool Community</a> 
+<LI><A href="../../community/register/register.htm">Register with the Fool</A>
+</font>
+<P>
+<p>
+
+<BR>&nbsp;<br>
+
+</TD><!--vert sp and r nav-->
+    <TD rowspan=2 bgColor=#ffffff width=50><IMG border=0 height=1 src="../../7/100/70/0001/wwwfoolcom/art/spacer.gif" width=2 hspace=24></TD>
+    <TD rowspan=2 bgColor=#dddddd width=1><IMG src="../../7/100/70/0001/wwwfoolcom/art/spacer.gif" width=1 height=1 hspace=0></TD>
+    <TD rowspan=2 width=10><IMG src="../../7/100/70/0001/wwwfoolcom/art/spacer.gif" width=10 height=1></TD>
+    <TD vAlign=top width=160 height="60%">
+<br>
+<!--cobrand-->
+
+<FONT face="arial,geneva" size="-1">
+<br>
+
+
+<table bgcolor="#eeeeee" border="0" cellpadding="3" cellspacing="0" width="100%" style="border:1px #666 solid;">
+<tr>
+<td>
+<form action="/FoolSite/BorderPages/boundaryquotes.htm" target=_parent>&nbsp;<b><font face="verdana,arial,geneva, sans-serif" size="-1">Enter Symbol(s):</font></b><br>
+<input type="hidden" name="fh" value="1">
+&nbsp;<input type="text" name="Symbols" size="10" maxlength="180">&nbsp;<input type="image" src="../../7/100/70/0001/wwwfoolcom/art/quotes/go2.gif" name="" value="" border="0" width="33" height="15">
+</td>
+</form>
+</tr>
+<tr>
+<td>&nbsp;<b><a href="../../dbc/dbc2.htm"><font face="verdana,arial,geneva, sans-serif" size="-1" color="#cc3300">Choose a Broker</font></a></b><br>
+&nbsp;<b><a href="../../community/register/myportfolio.htm"><font face="verdana,arial,geneva, sans-serif" size="-1">Create a Portfolio</font></a></b></td>
+</tr>
+<tr>
+<td><IMG src="../../7/100/70/0001/wwwfoolcom/art/spacer.gif" width="1" height="1" hspace="0" vspace="0"></td>
+</tr>
+<tr>
+<td align="center"><IFRAME WIDTH=120 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR=000000 SRC="../../adsource/quotebox%26feature%3Dscraps%26location%3Dright_1%26size%3D120x60.htm"></IFRAME></td>
+</tr>
+<tr>
+<td><IMG src="../../7/100/70/0001/wwwfoolcom/art/spacer.gif" width="1" height="1" hspace="0" vspace="0"></td>
+</tr>
+</table>
+
+<BR>
+<br>
+<TABLE bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0" width="100%">
+<TR>
+<TD bgcolor="#336699"><FONT face="verdana, arial, helvetica" size="-1" color="#ffffff"><b>&nbsp;Boards Help</b></font></TD>
+        </TR>
+<TR>
+<TD valign=top><FONT face="arial,geneva" size="-1">
+<a href="../../community/foolboards/ushelp.htm">Boards Help Home</a>
+<BR><a href="../../community/whatsnew/whatsnew.htm">Look at What's New</a>
+<BR><a href="../../community/foolboards/tutorial.htm">Beginner's Tutorial</a>
+<BR><a href="../../community/foolboards/faq.htm">Read the FAQ</a>
+<BR><a href="../../community/foolboards/bells.htm">Bells and Whistles</a>
+<BR><a href="/FoolSite/BorderPages/boundary.htm">Posting Rules</a><BR></FONT></TD>
+</TR>
+</TABLE>
+<img src="../../7/100/70/0001/wwwfoolcom/art/spacer.gif" height=1 width=160 vspace=0 hsspace=0>
+<TABLE HEIGHT=400 width=100% BORDER=0>
+<tr>
+<td HEIGHT="50%" align=center><IFRAME WIDTH=125 HEIGHT=125 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR=000000 SRC="../../adsource/school%26feature%3Dfribble%26location%3Dright_1%26size%3D125x125.htm"></IFRAME></TD>
+</TR>
+<tr>
+<td HEIGHT="50%" align=center><IFRAME WIDTH=125 HEIGHT=125 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR=000000 SRC="../../adsource/school%26feature%3Dfribble%26location%3Dright_1%26size%3D125x125.htm"></IFRAME></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign=bottom align=center><center><IFRAME WIDTH=120 HEIGHT=115 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR=000000 SRC="../../adsource/scraps%26feature%3Dscraps%26location%3Dright_1%26size%3D120x115.htm"></IFRAME>
+</center>
+<br><br></td>
+</tr>
+</TBODY>
+</TABLE>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr bgcolor="#003366">
+<td height="1"><img src="../../7/100/70/0001/wwwfoolcom/art/spacer.gif" height=1 width=1></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr bgcolor="#336699">
+<td colspan=2 width="100%" height=25 align="center" style="border-top:1px solid #69c;border-bottom:1px solid #036;"><font face="verdana,arial,geneva,sans-serif" size="-2" color="#f0f0df"><a class="t2botnav" href="../../index.htm"><font color="#f0f0df">Home</font></a> | <a class="t2botnav" href="/FoolSite/BorderPages/boundaryboards.htm"><font color="#f0f0df">Discussion Boards</font></a> | <a class="t2botnav" href="/FoolSite/BorderPages/boundaryquotes.htm"><font color="#f0f0df">Quotes &amp; Data</font></a> | <a class="t2botnav" href="../../research/research.htm"><font color="#f0f0df">Stock Research</font></a> | <a class="t2botnav" href="/FoolSite/BorderPages/boundary.htm"><font color="#f0f0df">FoolMart</font></a> | <a class="t2botnav" href="/FoolSite/BorderPages/boundaryquotes.htm"><font color="#f0f0df">My Portfolio</font></a> | <a class="t2botnav" href="/FoolSite/BorderPages/boundary.htm"><font color="#f0f0df">My Fool</font></a></font></td>
+</tr>
+<tr bgcolor="#ffffcc">
+<td colspan=2 width="100%" height=25 align="center" style="border-top:1px solid #fffffe;border-bottom:1px solid #cc9;"><font face="verdana,arial,geneva,sans-serif" size="-2"><a class="t2botnav" href="../../pg000094.htm">News</a> | <a class="t2botnav" href="../../pg000095.htm">Special Features</a> | <a class="t2botnav" href="../../pg000096.htm">Investing Strategies</a> | <a class="t2botnav" href="../../pg000097.htm">Retirement</a> | <a class="t2botnav" href="../../pg000098.htm">Personal Finance</a> | <a class="t2botnav" href="../../pg000099.htm">Fool's School</a> | <a class="t2botnav" href="/FoolSite/BorderPages/boundary.htm">Help</a></font></td>
+</tr>
+<tr bgcolor="#eeeeee">
+<td height=25 style="border-top:1px solid #fff;"><font face="verdana,arial,geneva,sans-serif" size="-2">&nbsp;<A href="/FoolSite/BorderPages/boundary.htm">Legal Information</A>. ©1995-2000 The Motley Fool. All rights reserved.<BR></font></td>
+<td align=right nowrap style="border-top:1px solid #fff;"><font face="verdana,arial,geneva,sans-serif" size="-2"><A href="/FoolSite/BorderPages/boundary.htm">Archives</A> · <A href="/FoolSite/BorderPages/boundary.htm">Contact Us</A> · <A href="/FoolSite/BorderPages/boundary.htm">Work at the Fool</A>&nbsp;</FONT></td>
+</tr>
+<tr bgcolor="#eeeeee">
+<td colspan=2 height=15 style="border-bottom:1px solid #ccc;"><!-- SERVER ID--><font face="verdana,sans-serif" size="-2" color="#fffffe">&nbsp; USVAWeb009</font></td>
+</tr>
+</table> 
+
+</body>
+</html>
+<!-- Created with XBuilder (2.5.3727.1), Copyright (c) 1997-1999 Berry International, Inc. All Rights Reserved -->
+<!-- Page: http://www.fool.com/community/rbseminar/lists.htm -->
+<!-- Date: 08/25/00 04:40 PM -->

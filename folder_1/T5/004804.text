@@ -1,0 +1,969 @@
+BOREAS Level-3s SPOT Imagery: Scaled At-sensor Radiance in LGSOWG Format
+
+Summary
+
+For BOREAS, the level-3s SPOT data, along with the other remotely sensed images, 
+were collected in order to provide spatially extensive information over the 
+primary study areas.  This information includes radiant energy, detailed land 
+cover, and biophysical parameter maps such as FPAR and LAI.  The SPOT images 
+acquired for the BOREAS project were selected primarily to fill temporal gaps in 
+the Landsat TM image data collection.  CCRS collected and supplied the level-3s 
+images to BORIS for use in the remote sensing research activities. Spatially, 
+the level-3s images cover 60-by 60-km portions of the BOREAS NSA and SSA.  
+Temporally, the images cover the period of 17-Apr-1994 to 30-Aug-1996.  The 
+images are available in binary image format files.
+
+Table of Contents
+
+   *   1 Data Set Overview
+   *   2 Investigator(s)
+   *   3 Theory of Measurements
+   *   4 Equipment
+   *   5 Data Acquisition Methods
+   *   6 Observations
+   *   7 Data Description
+   *   8 Data Organization
+   *   9 Data Manipulations
+   *  10 Errors
+   *  11 Notes
+   *  12 Application of the Data Set
+   *  13 Future Modifications and Plans
+   *  14 Software
+   *  15 Data Access
+   *  16 Output Products and Availability
+   *  17 References
+   *  18 Glossary of Terms
+   *  19 List of Acronyms
+   *  20 Document Information
+
+1. Data Set Overview
+
+1.1 Data Set Identification
+
+BOREAS Level-3s SPOT Imagery: Scaled At-sensor Radiance in LGSOWG Format
+
+1.2 Data Set Introduction
+
+The BOReal Ecosystem-Atmosphere Study (BOREAS) Staff Science effort covered 
+those activities that were BOREAS community-level activities or required uniform 
+data collection procedures across sites and time. These activities included the 
+acquisition of the relevant satellite data. Data from the High-Resolution 
+Visible (HRV) instruments on the Systeme Pour l'Observation de la Terre (SPOT) 
+satellites were acquired by the Canada Centre for Remote Sensing (CCRS) and 
+provided for use by BOREAS researchers.  BOREAS Information System (BORIS) and 
+CCRS personnel subsequently reviewed and inventoried the images described here.
+
+1.3 Objective/Purpose
+
+For BOREAS, the SPOT imagery, along with the other remotely sensed images, was 
+collected in order to provide spatially extensive information over the primary 
+study areas.   The SPOT images acquired for the BOREAS project were selected 
+primarily to fill temporal gaps in the Landsat Thematic Mapper (TM) image 
+collection.
+
+1.4 Summary of Parameters
+
+SPOT level-3s data in BORIS contain the following parameters:
+
+Original image header information, image coordinates, gains and offsets for each 
+band for at-sensor radiance derivations, image bands 1 to 3 processed with 
+systematic spatial corrections.
+
+1.5 Discussion
+
+Use and distribution of the level-3s SPOT images are subject to copyright 
+restrictions.  CCRS and Radarsat International (RSI) granted permission to 
+BOREAS to place a subset of the level-3a Landsat TM images on the BOREAS CD-ROM 
+series. However, none of the other Landsat TM or level-3s SPOT images are 
+included.  The level-3s SPOT images may not be available for public access.  
+Please see Sections 15 and 16 for further details.
+
+BORIS Staff processed the SPOT level-3s imagery by:
+1) Extracting pertinent header information from the level-3s image product and 
+placing it in an American Standard Code for Information Interchange (ASCII) file 
+on disk.
+2) Reading the information in the ASCII disk file and loading the online data 
+base with pertinent information.
+
+1.6 Related Data Sets
+
+BOREAS Level-3s Landsat TM Imagery: Scaled At-sensor Radiance in LGSOWG Format
+
+BOREAS Level-3a Landsat TM Imagery: Scaled At-sensor Radiance in BSQ Format
+
+BOREAS Level-3b Landsat TM Imagery: At-sensor Radiance in BSQ Format
+
+2. Investigator(s)
+
+2.1 Investigator(s) Name and Title
+
+BOREAS Staff Science
+
+2.2 Title of Investigation
+
+BOREAS Staff Science Satellite Data Acquisition Program
+
+2.3 Contact Information
+
+Contact 1
+----------
+Josef Cihlar                    
+Canada Centre for Remote Sensing
+Ottawa, Ontario                 
+Canada                  
+(613) 947-1265            
+(613) 947-1406  (fax)          
+cihlar@ccrs.emr.ca       
+
+Contact 2
+---------
+Jeffrey A. Newcomer
+Raytheon STX Corporation
+NASA/GSFC
+Greenbelt, MD 
+(301) 286-7858       
+(301) 286-0239 (fax)       
+Jeffrey.Newcomer@gsfc.nasa.gov
+
+3. Theory of Measurements
+
+The launch of France's SPOT satellite system on 22-Feb-1986 gave the remote 
+sensing community the capability of applying high-resolution multispectral 
+imagery to a range of land use and land cover analyses. The SPOT satellite 
+platforms are equipped with two HRV linear array (pushbroom) sensors capable of 
+operating in a panchromatic (PAN) mode with 10-m resolution, or a three-band 
+multispectral (XS) mode with 20-m resolution. The SPOT-1 satellite was retired 
+from active service on 31-Dec-1990 but was reactivated in Jan-1998. SPOT-2 was 
+launched on 22-Jan-1990.  SPOT-3 was launched on 25-Sep-1993 and suffered an 
+unrecoverable malfunction on 14-Nov-1997.  SPOT-4 was launched on 24-Mar-1998.  
+Currently, SPOT-1, SPOT-2, and SPOT-4 continue to fulfill the SPOT global 
+mission. 
+
+Thematic considerations have dictated, within technical constraints, the choice 
+of spectral band position and width in the multispectral mode. Three bands were 
+selected for the multispectral mode: 1) A green (500- to 590-nm) band centered 
+at the 550-nm maximum in the chlorophyll reflectance curve, which is on the long 
+wavelength side of the broad attenuation minimum of water, thus giving access to 
+turbidity assessment and bathymetric evaluation in the first 10 to 20 m of 
+surface water. 2) A red band (610 to 680 nm), similar to the Landsat TM channel 
+3, which provides much information on crop identification, bare soil, and rocky 
+surfaces. Atmospheric transmittance on a fine day is about 90 percent while 
+water penetration is about 2 m with surface reflectance of 4 percent 
+(attenuation coefficient: 5x10-1 m-1). This band corresponds to chlorophyll 
+absorption; i.e., low vegetation reflectance.  3) The near-infrared band (790 to 
+890), which penetrates best through the atmosphere (transmittance is about 95 
+percent for a clear atmosphere model) and light haze. Vegetation stands out 
+brightly and water surfaces appear very dark (1 percent reflectance with a high 
+attenuation coefficient: 10 to 50 m). Although silicon spectral sensitivity 
+extends out to 1,100 nm, the band was not extended beyond 900 nm in order to 
+avoid response modulation by atmospheric water vapor and to limit the smearing 
+effect of electron diffusion within the detectors. Vegetation biomass can be 
+evaluated with the red and near-infrared bands taken together. All three color 
+bands are coded linearly on 8 bits, with a choice of ground-controlled preset 
+gains.
+
+For the higher ground-resolution black-and-white, or panchromatic mode, a 
+broader spectral band was required. In order to retain the capability for 
+texture analysis in support of the color mode and a high information content 
+over vegetated areas, the interval 510 to 730 nm was chosen for the broad band. 
+The basic coding scheme is 6-bits linear with a choice of eight selectable 
+preset gains. Higher radiometric resolution can be selected by ground command of 
+a differential Pulse Code Modulation System, which compresses each 3-pixel 
+packet to 18 bits, while retaining an 8-bit equivalent radiometric resolution.
+
+4. Equipment
+
+4.1 Sensor/Instrument Description
+
+The HRV instruments form images without any moving mechanical part (e.g., 
+scanning mirrors, disc choppers, or mechanical modulators). The HRV telescope is 
+a pseudo-Schmidt design, since the corrector plate is a spherical doublet. In 
+this folded arrangement, sufficient room is available in the focal plane for a 
+dichroic prism separator followed by four multilinear array mounts. The spectral 
+regions and bandwidths of each channel are given in the table below:
+
+Channel  Wavelength (µm)
+-------  ----------------
+1        0.50 -  0.59
+2        0.61 -  0.68
+3        0.79 -  0.89
+
+4.1.1 Collection Environment
+
+The BOREAS SPOT level-3s imagery was acquired through the CCRS.  The SPOT 
+satellites orbit Earth at a mean altitude of 805 km.  Radiometric corrections 
+and systematic geometric corrections are applied to produce the images in a 
+path-oriented, systematically corrected spatial form.  A full level-3s SPOT 
+image contains 4,500 pixels in each of 3,000 lines.  Before any geometric 
+corrections, the ground resolution is 20 m for bands 1-3 at nadir. The pixel 
+values of the images can range from 0 to 255. This allows each pixel to be 
+stored in a single-byte field.  The level-3s images were processed through the 
+CCRS Geocoded Image Correction System (GICS); (Friedel, 1992).
+
+4.1.2 Source/Platform
+
+The BOREAS SPOT images were collected by the HRV instruments on the SPOT-2 and 
+SPOT-3 satellites.
+
+4.1.3 Source/Platform Mission Objectives
+
+The objectives of the SPOT mission are to 1) experiment on desirable 
+characteristics of (operational) remote sensing systems; 2) build up an archive 
+and make available a wide data base for cartographic and Earth exploration 
+purposes; 3) experiment on improving vegetative species discrimination and 
+producing forecasting by frequent access and off-nadir viewing; 4) build up a 
+stereo archive of areas of real interest for purposes of photo-interpretation, 
+planimetric cartography, and cartographic updating at scales of 1/100,000 and 
+1/50,000; and 5) qualify the multimission platform and solar array camera in 
+space.
+
+4.1.4 Key Variables
+
+Reflected radiation.
+
+4.1.5 Principles of Operation
+
+The SPOT system consists of an orbiting satellite with two HRV instruments as 
+well as ground facilities for image reception, preprocessing, distribution, 
+satellite monitoring, and preparation of imaging programs. The instruments are 
+pointable in the across-track direction in order to allow rapid access to any 
+point on the globe and acquisition of stereoscopic image pairs from different 
+satellite passes. Imaging is accomplished by the Charge-Coupled Device (CCD) 
+linear array using the "pushbroom" scanning principle. In a given spectral mode, 
+the HRV instrument images a single line of the landscape at a given moment: all 
+the points making up one line are analyzed simultaneously. The motion of the 
+orbiting satellite and the corresponding shift of the imaged line allow 
+acquisition of a complete image.
+
+Image acquisitions are commanded by the satellite's onboard computer. An imaging 
+sequence can comprise a succession of images acquired in panchromatic or 
+multispectral mode (note that the satellite cannot operate the HRV sensors in 
+both modes at the same time) and changes in the viewing direction of each of the
+two HRV instruments (rotation of the strip-selection mirror at the entrance of 
+each instrument). Data generated by the instruments are transmitted to the 
+ground over the payload-specific X-band telemetry link or stored by means of two 
+onboard recorders for later recovery by the Toulouse imagery receiving facility.
+
+4.1.6 Sensor/Instrument Measurement Geometry
+
+The HRV was designed to achieve a multispectral capability with a nominal nadir 
+ground sampling interval of 20 m x 20 m; a 10-m sampling interval in a 
+panchromatic mode. A ground resolution of 20 m over a 60-km swath is achieved 
+using an array of 3,000 detectors (CCD) per spectral band, sampled every 3 
+milliseconds, while a ground resolution of 10 m over the same swath width uses 
+6,000 detectors per line, sampled every 1.5 milliseconds.
+
+4.1.7 Manufacturer of Sensor/Instrument
+
+Centre National d'Etudes Spatiales (CNES)
+Centre Spatial de Toulouse
+31055 Toulouse, France
+
+4.2   Calibration
+
+The calibration unit is an auxiliary device designed to illuminate the detection 
+unit by providing light at the entrance to the HRV telescope (the strip 
+selection mirror having been previously moved to the calibration position). One 
+of two light sources may be selected: the calibration lamp or the fiber-optic 
+sunlight collector. The calibration lamp illuminates all 16 CCD linear arrays of 
+the HRV detection unit and is used for relative calibration (sometimes referred 
+to as "in-band calibration".The fiber-optic sunlight collector illuminates a 
+small number of detectors in each spectral band with sunlight gathered from 
+outside the HRV instrument at certain periods and is used for absolute, 
+interband, multidate calibration.
+
+4.2.1 Specifications
+
+Main Instrument Parameters
+
+____________________________________________________________________
+                                Color mode             B/W mode
+____________________________________________________________________
+Ground sampling step (m)               20                 10
+Array sampling period (m/s)             3                 1.5
+                              XS1  0.50-0.59
+Spectral bands (µm)           XS2  0.61-0.68        P  0.51-0.73
+                              XS3  0.79-0.89
+Grey levels                        256 (8 bits)          128 (6 bits)
+Image data bit rate (Mb/s)          25                    25
+Number of pixels per line          3000                 6000
+Swath width (km)                    60 (nadir)
+Nominal altitude (km)              832
+
+
+4.2.1.1 Tolerance
+
+Central viewing direction          +0.163 and -0.163 deg.
+Field steering direction           0+/-45 steps 0.6 deg. apart.
+Outermost observable direction     +/-29.23 deg.
+Corresponding distance to track    +/-475 km
+Location accuracy level-1B          650 m (max)
+Scale distortion                   0.07%
+Anisomorphism                      0.07%
+Multispectral band registration    0.15 pixels
+Multidate registration accuracy    2.5 m
+Relief plotting accuracy for
+viewing angles between 
+   0 to 27 deg.  7 m
+		      -27 to +27 deg.  3.5 m
+
+4.2.2 Frequency of Calibration
+
+CNES maintains an ongoing calibration monitoring effort.  Every 3 to 6 months, 
+analysis results of instrument calibration are released for use by data users.
+
+4.2.3 Other Calibration Information
+
+None given.
+
+5. Data Acquisition Methods
+
+The BOREAS SPOT level-3s imagery was acquired through CCRS.  Radiometric and 
+systematic geometric corrections are applied to produce the images in a path-
+oriented, systematically corrected spatial form.  A full level-3s SPOT image 
+contains 4,500 pixels in each of 3,000 lines.  Before any geometric corrections, 
+the ground resolution is 20 m for bands 1-3 at nadir. The pixel values of the 
+images can range from 0 to 255. This allows each pixel to be stored in a single-
+byte field.  The level-3s images were processed through the CCRS GICS.
+
+6. Observations
+
+6.1 Data Notes
+
+None.
+
+6.2 Field Notes
+
+Not applicable.
+
+7. Data Description
+
+7.1 Spatial Characteristics
+
+7.1.1 Spatial Coverage
+
+The BOREAS level-3s SPOT images cover portions of the Northern Study Area (NSA) 
+and the Southern Study Area (SSA) which are located in the northeast and 
+southwest portions of the overall region.  A full SPOT scene covers 
+approximately 3,600 square kilometers.
+
+The North American Datum of 1983 (NAD83) corner coordinates of the SSA are:
+
+             Latitude     Longitude
+             --------     ---------
+Northwest    54.321 N     106.228 W
+Northeast    54.225 N     104.237 W
+Southwest    53.515 N     106.321 W
+Southeast    53.420 N     104.368 W
+
+
+The NAD83 corner coordinates of the NSA are:
+
+             Latitude     Longitude
+             --------     ---------
+Northwest    56.249 N      98.825 W
+Northeast    56.083 N      97.234 W
+Southwest    55.542 N      99.045 W
+Southeast    55.379 N      97.489 W
+
+7.1.2 Spatial Coverage Map
+
+Not available.
+
+7.1.3 Spatial Resolution
+
+Before any geometric corrections, the spatial resolution is 20 m at nadir.  
+These values increase with scan angle away from the nadir path.  The level-3s 
+SPOT images have had geometric corrections applied so that the spatial 
+resolution for all pixels is 20 m in all bands.  These level-3s images have a 
+high level of internal spatial integrity, but the actual geographic coordinates 
+contained in the image header can be offset from their actual positions by as 
+much as 10 km (personal communication with CCRS personnel, 1994).
+
+7.1.4 Projection
+
+The level-3s SPOT images are placed in a Universal Transverse Mercator (UTM) 
+projection based on NAD83. Detailed projection parameter information for the 
+individual images is contained in the leader file(s).
+
+7.1.5 Grid Description
+
+The grid spacing for each pixel in the level-3s SPOT images is 20 m in the UTM 
+projection.  Detailed grid parameter information for the individual images is 
+contained in the leader file(s).
+
+7.2 Temporal Characteristics
+
+7.2.1 Temporal Coverage
+
+The images cover the period of 17-Apr-1994 to 30-Aug-1996.  The SPOT images 
+acquired for the BOREAS project were selected in order to fill temporal gaps in 
+the Landsat image collection.
+
+7.2.2 Temporal Coverage Map
+
+NSA	28-Apr-94
+NSA	09-May-94
+NSA	25-May-94
+NSA	06-Jun-94
+NSA	06-Jun-94
+NSA	26-Jun-94
+NSA	26-Jun-94
+NSA	12-Jul-94
+NSA	18-Jul-94
+NSA	23-Aug-94
+NSA	23-Aug-94
+NSA	08-Sep-94
+NSA	16-Sep-94
+NSA	17-Sep-94
+NSA	29-Jul-95
+NSA	26-Jul-96
+NSA	27-Jul-96
+NSA	30-Aug-96
+NSA	30-Aug-96
+	
+SSA	17-Apr-94
+SSA	21-Apr-94
+SSA	15-May-94
+SSA	06-Jun-94
+SSA	06-Jun-94
+SSA	21-Jul-94
+SSA	24-Jul-94
+SSA	21-Aug-94
+SSA	23-Aug-94
+SSA	13-Sep-94
+SSA	16-Sep-94
+SSA	16-Sep-94
+SSA	05-Aug-95
+SSA	05-Aug-95
+SSA	09-Jul-96
+SSA	09-Jul-96
+SSA	09-Jul-96
+SSA	30-Jul-96
+SSA	30-Jul-96
+
+7.2.3 Temporal Resolution
+
+The SPOT satellite revisit frequency is 26 days for each path/row.  During the 
+period of 17-Apr-1994 to 30-Aug-1996, 19 images were acquired over the NSA and 
+the SSA on 13 different dates.
+
+7.3 Data Characteristics
+
+The maximum range of digital numbers in each level-3s SPOT image band is limited 
+to the range 0 (zero) to 255 so that the values can be stored in a single 8-bit 
+(byte) field.
+
+The image inventory data characteristics are defined in the companion data 
+definition file (spot_3s.def).
+
+7.4 Sample Data Record
+
+Sample data records are defined in the companion data definition file 
+(spot_3s.def).
+
+8. Data Organization
+
+8.1 Data Granularity
+
+The smallest unit of data for level-3s SPOT imagery is a full SPOT scene.
+
+All the BOREAS Level-3s SPOT Imagery: Scaled At-sensor Radiance in LGSOWG Format
+Data characteristics are defined in the companion data definition file 
+(spot_3s.def).
+
+8.2 Data Format(s)
+
+The image inventory data file contains numerical and character fields of varying 
+length separated by commas. The character fields are enclosed with a single 
+apostrophe marks. There are no spaces between the fields.  Data record format is 
+defined in the companion data definition file(spot_3s.def).
+
+The level-3s SPOT imagery from CCRS is stored in either a band sequential (BSQ) 
+or a band interleaved by line (BIL) form.  General information on these two 
+formats is provided in the subsequent sections.  Detailed information on these 
+formats can be obtained from the CCRS document, Standard SPOT MLA/PLA Format, 
+referenced in Section 17.1.
+
+8.2.1 Band Sequential Format
+
+The files associated with a BSQ SPOT scene are as follows:
+
+File 1  volume directory
+File 2  leader file band 1
+File 3  SPOT band 1
+File 4  trailer file band 1
+File 5  leader file band 2
+File 6  SPOT band 2
+File 7  trailer file band 2
+File 8  leader file band 2
+File 9  SPOT band 3
+File 10  trailer file band 2
+File 11 null volume file
+
+If there are multiple scenes on a tape, the next scene would occupy files 12-22, 
+11 files exactly as above. Up to five SPOT scenes (55 files) are contained on 
+one 8-mm tape. There are multiple-volume directory files on one tape media 
+because the 8-mm tapes were generated by copying the original 9-track tapes, and 
+each of the 9-track tapes had its own volume directory.  Each image file in BSQ 
+format contains data for one spectral band.
+
+8.2.1.1 BSQ Leader Files
+
+File descriptor record	
+Scene header record
+Map projection (scene-related) ancillary record
+Type 1 radiometric transformation ancillary record
+Type 2 radiometric transformation ancillary record
+
+All leader files contain fixed-length records 6,120 bytes in length and contain 
+both ASCII and binary data.  For specific details, see the CCRS documentation 
+referenced in Section 17.1.
+
+8.2.1.2 BSQ Imagery File
+
+The BSQ image files have 3,001 records, with each record containing 4,500 bytes.  
+The first record in this file is a header record, followed by 3,000 image 
+records.
+
+The contents of the Scene Header record are specified by Landsat Ground Station 
+Operations Working Group (LGSOWG) Technical Working Group (LTWG) standards and 
+contain information relating to the mission, sensor parameters, processing 
+options, and geometric parameters for the sensor.
+
+Each image record contains 32 bytes of prefix data, 4,320 bytes of image data, 
+and 36 bytes of suffix data. Image data consist of digital numbers and 0’s as 
+fillers.  The record size is 4,500 bytes.  Although the width of the image is 
+nominally 3,000 pixels, the number of pixels in the image grows proportionally 
+with the view angle.  All 4,500 pixels were included because none of the 
+parameters in any of the header records seemed to be reliable for determining 
+how many nonzero pixels there were in a particular record. 
+
+Each image is oriented so that pixel 1, line 1 is in the upper left-hand corner 
+(i.e., northwest) of the screen display.  Pixels and lines progress left to 
+right and top to bottom so that pixel n, line n is in the lower right-hand 
+corner.
+
+8.2.1.3 BSQ Trailer File
+
+The trailer file contains information associated with the image data not always 
+available before writing the image data, such as data and recording quality and 
+data summaries.  Each trailer file contains a file descriptor record and trailer 
+records for all bands of imagery in the associated imagery file.  All trailer 
+files contain fixed-length records 4,320 bytes in length and contain both ASCII 
+and binary data.
+
+8.2.2 Band Interleaved by Line Format
+
+The files associated with a BIL SPOT scene are as follows:
+          
+File 1  volume directory
+File 2  leader file bands 1-3
+File 3  SPOT bands 1-3 
+File 4  trailer
+File 5  null volume file
+
+If there are multiple scenes on a tape, the next scene would occupy files 6-10, 
+five files exactly as above. Up to four TM scenes (20 files) are contained on 
+one 8-mm tape. There are multiple volume directory files on one tape media 
+because the 8-mm tapes were generated from copying the original 9-track tapes, 
+and each of the 9-track tapes had its own volume directory.  The image files in 
+BIL format contain image data for all three spectral bands.
+
+8.2.2.1 BIL Leader Files
+
+A detailed description may be found in the SPOT Standard CCT Format document 
+from SPOT Image Corporation.
+
+Record 1: 		Header File descriptor			3960 bytes.
+Record 2: 		Header					3960 bytes.
+Record 3: 		Ancillary Ephemeris/Attitude 		3960 bytes.
+Record 4-21: 	Ancillary Radiometric/Calibration   3960 bytes.
+Record 22-24: 	Ancillary Histogram			3960 bytes.
+Record 25: 		Ancillary Map projection		3960 bytes.
+Record 26: 		GCP/RCP					3960 bytes.
+Record 27: 		Annotation					3960 bytes.
+
+8.2.2.2 BIL Imagery File
+
+The BIL image files are contained in a single file of 9,000 5,400-byte records.
+
+Each image is oriented so that pixel 1, line 1 is in the upper left-hand corner 
+(i.e., northwest) of the screen display.  Pixels and lines progress left to 
+right and top to bottom so that pixel n, line n is in the lower right-hand 
+corner.
+
+8.2.2.3 BIL Trailer File
+
+The trailer file contains information associated with the image data not always 
+available before writing the image data, such as data and recording quality and 
+data summaries.  Each trailer file contains a file descriptor record and trailer 
+records for all bands of imagery in the associated imagery file.  All trailer 
+files contain fixed length records 4,320 bytes in length and contain both ASCII 
+and binary data.
+
+9. Data Manipulations
+
+9.1 Formulae
+
+9.1.1 Derivation Techniques and Algorithms
+
+Not applicable.
+
+9.2 Data Processing Sequence
+
+The SPOT data are included in BORIS only as a supplement to the Landsat TM data.  
+Therefore, the SPOT images were not processed beyond level-3s.
+
+9.2.1 Processing Steps
+
+BORIS Staff processes a level-3s SPOT image by:
+
+1) Extracting pertinent header information from the level-3s image product and
+   writing it to a disk file.
+2) Reading the information in the disk file and loading the data base with
+   needed information.
+
+9.2.2 Processing Changes
+
+None.
+
+9.3 Calculations
+
+9.3.1 Special Corrections/Adjustments
+
+None.
+
+9.3.2 Calculated Variables
+
+None.
+
+9.4 Graphs and Plots
+
+None.
+
+10. Errors
+
+10.1 Sources of Error
+
+Errors could arise in the acquired imagery from location inaccuracy, distortion 
+of lengths, anisomorphism, the instrument's local coherence, multispectral 
+registrability, and relief plotting inaccuracy. Other errors could arise from 
+inherent radiometric imperfections of the sensors.
+
+10.2 Quality Assessment
+
+10.2.1 Data Validation by Source
+
+Whatever the processing level, the geometric quality of the image depends on the 
+accuracy of the viewing geometry.
+
+Spectral errors could arise from image-wide signal-to-noise ratio, saturation, 
+cross-talk, spikes, response normalization caused by a change in gain.
+
+10.2.2 Confidence Level/Accuracy Judgment
+
+Assessment of accuracy of the absolute radiometric constants is difficult. The 
+uncertainties in prelaunch and postlaunch updates of the absolute calibration 
+constants are nominally specified to be less than 10%. A root mean square (rms) 
+summing of known errors in the prelaunch calibration suggests that this may be a 
+reasonable estimate of overall uncertainty in the prelaunch calibration.
+
+10.2.3 Measurement Error for Parameters
+
+Not available at this revision.
+
+10.2.4 Additional Quality Assessments
+
+Images are screened for level of cloud cover before BORIS processing.
+
+10.2.5 Data Verification by Data Center
+
+BORIS Staff used developed software to extract information for logging the data 
+into a relational data base.  The software also read through the records of the 
+files checking for proper record sizes.  A subset of the images was unpacked and 
+displayed for visual review.  None of the displayed images showed any notable 
+abnormalities.
+
+11. Notes
+
+11.1 Limitations of the Data
+
+None.
+
+11.2 Known Problems with the Data
+
+None.
+
+11.3 Usage Guidance
+
+None.
+
+11.4 Other Relevant Information
+
+None.
+
+12. Application of the Data Set
+
+The SPOT images should be useful for anyone interested in high spatial 
+resolution imagery over the entire NSA or SSA in between the Landsat TM 
+acquisitions.
+
+13. Future Modifications and Plans
+
+None.
+
+14. Software
+
+14.1 Software Description
+
+BORIS Staff developed software and command procedures to:
+
+1) Extract header information from level-3s SPOT images on tape and write to
+   ASCII files on disk.
+2) Read the ASCII disk file and log the level-3 SPOT image products into 
+   the Oracle data base tables.
+3) Convert coordinates in the leader file(s) between the geographic systems of
+   (latitude, longitude), UTM (northing, easting), and BOREAS (x,y) grid
+   locations.
+
+The software mentioned under items 1 and 2 is written in the C language and is 
+operational on VAX 6410 and MicroVAX 3100 systems at GSFC.  The primary 
+dependencies in the software are the tape input/output (I/O) library and the 
+Oracle data base utility routines.
+
+The geographic coordinate conversion utility (BOR_CORD) has been tested and used 
+on Macintosh, IBM PC, VAX, Silicon Graphics, and Sun workstations.
+
+14.2 Software Access
+
+All of the described software is available upon request.  BORIS staff would 
+appreciate knowing of any problems discovered with the software, but cannot 
+promise to fix them.
+
+15. Data Access
+
+15.1 Contact Information
+
+Ms. Beth Nelson
+NASA GSFC
+Greenbelt, MD  
+(301) 286-4005
+(301) 286-0239 (fax)
+beth@pop900.gsfc.nasa.gov
+
+15.2 Data Center Identification
+
+See Section 15.1.
+
+15.3 Procedures for Obtaining Data
+
+Users may place requests by telephone, electronic mail, or fax.
+
+15.4 Data Center Status/Plans
+
+The level-3s SPOT image data are available from the Earth Observing System Data 
+and Information System (EOSDIS) Oak Ridge National Laboratory (ORNL) Distributed 
+Active Archive Center (DAAC).  The BOREAS contact at ORNL is:
+
+ORNL DAAC User Services
+Oak Ridge National Laboratory
+(865) 241-3952
+ornldaac@ornl.gov
+ornl@eos.nasa.gov
+
+Although the BOREAS level-3s SPOT images are being held in a public archive, 
+copyright restrictions limit the distribution and use of the data.  The BOREAS 
+CD-ROM series is publicly available and contains some of the level-3a Landsat TM 
+images.  However, other Landsat TM and SPOT image products in the collection are 
+available only to official BOREAS project personnel.  Please contact the ORNL 
+DAAC User Services office to get the most recent information.
+
+16. Output Products and Availability
+
+16.1 Tape Products
+
+The SPOT level-3s data can be made available on 8-mm, Digital Archive Tape 
+(DAT), or 9-track tapes at 6250 or 1600 Bytes Per Inch (BPI).
+
+Although the BOREAS level-3s SPOT images are being held in a public archive, 
+copyright restrictions limit the distribution and use of the data.  The BOREAS 
+CD-ROM series is publicly available and contains some of the level-3a Landsat TM 
+images.  However, other Landsat TM and SPOT image products in the collection are 
+available only to official BOREAS project personnel.  Please contact the ORNL 
+DAAC User Services office (see Section 15.4) to get the most recent information.
+
+16.2 Film Products
+
+None.
+
+16.3 Other Products
+
+None.
+
+17. References
+
+17.1 Platform/Sensor/Instrument/Data Processing Documentation
+
+Standard SPOT MLA/PLA CCT Format. Technical Memorandum No. DMD-TM-85-428A, 1985. 
+Digital Methods Division Canada Centre for Remote Sensing Dept. of Energy, Mines 
+and Resources.
+
+The SPOT Standard CCT Format. 1989. Document: SI/AT/85.0113 Version: 1.1 
+Revision 4, SPOT Image Corporation. Reston, Virginia.
+
+17.2 Journal Articles and Study Reports
+
+Asrar, G., R. Murphy, F. Hall, and P. Sellers. 1991. Use of multitemporal
+SPOT data in First ISLSCP Field Experiment. Proc. 5th Intl.  Colloquium. 
+Courchevel, France, 14-18 January.
+
+Begni, G. 1982. Selection of the optimum spectral bands for the SPOT
+satellite. Photogr. Engr. and Rem. Sen. 48:1613-1620.
+
+Boissin, B. and J. Perbos. 1985. SPOT image quality and post launch
+assessment. Advanced Space Res. 5:51-60.
+
+Byrne, G.F., P.F. Crapper, and K.K. Mayo. 1980. Monitoring land-cover
+change by principal component analysis of multitemporal Landsat data.
+Remote Sens. Environ. 10:175-184.
+     
+Carper, J.W., T.M. Lillesand, and R.W. Kiefer. 1990. The use of
+intensity-hue-saturation transformations for merging SPOT panchromatic
+and multispectral image data. Photogr. Engr. and Rem. Sen. 56:459-467.
+
+Chavez, P.S., Jr., and J.A. Bowell. 1988. Comparison of the spectral
+information content of Landsat Thematic Mapper and SPOT for three
+different sites in the Phoenix, Arizona. Region. Photogr. Engr. and
+Rem. Sen. 54:1699-1708.
+
+Chavez, P.C., S.C. Guptill, and J.A. Bowell. 1984. Image processing
+techniques for Thematic Mapper data. Technical Papers. 50th Annual
+Meeting of the Amer. Soc. of Photogr. 2:728-743.
+
+Chevrel, M., M. Courtois, and G. Weill. 1981. The SPOT satellite remote
+sensing mission. Photogr. Engr. and Rem. Sens. 47:1163-1171.
+
+Cliche, G., F. Bonn, and P. Teillet. 1985. Integration of the SPOT
+panchromatic channel into its multispectral mode for image sharpness
+enhancement. Photogr. Engr. and Rem. Sen. 51:311-316.
+
+Dinguirard, M., R.D. Jackson, and P.N. Slater. 1986. Absolute calibration
+of the SPOT-1 HRV cameras. SPIE Proc. vol. 60.
+
+Friedel, J. 1992. System description of the Geocoded Image Correction 
+System. Report GC-MA-50-3915, MacDonald Detwiller Associates, Richmond, 
+B.C. 
+
+Rodriguez, V., P. Gigord, A.C. de Gaujac, and P. Munier. 1988. Evaluation
+of the stereoscopic accuracy of the SPOT satellite. Photogr. Engr. and
+Rem. Sen. 54:217-221.
+
+Sellers, P.and F. Hall. 1994. Boreal Ecosystem-Atmosphere Study: Experiment 
+Plan. Version 1994-3.0, NASA BOREAS Report (EXPLAN 94). 
+
+Sellers, P.and F. Hall. 1996. Boreal Ecosystem-Atmosphere Study: Experiment 
+Plan. Version 1996-2.0, NASA BOREAS Report (EXPLAN 96). 
+
+Sellers, P.and F. Hall. 1997. BOREAS Overview Paper. JGR Special Issue.
+
+Sellers, P., F. Hall, and K.F. Huemmrich. 1996. Boreal Ecosystem-Atmosphere 
+Study: 1994 Operations. NASA BOREAS Report (OPS DOC 94). 
+
+Sellers, P., F. Hall, and K.F. Huemmrich. 1997. Boreal Ecosystem-Atmosphere 
+Study: 1996 Operations. NASA BOREAS Report (OPS DOC 96). 
+
+Sellers, P., F. Hall, H. Margolis, B. Kelly, D. Baldocchi, G. den Hartog, J. 
+Cihlar, M.G. Ryan, B. Goodison, P. Crill, K.J. Ranson, D. Lettenmaier, and D.E. 
+Wickland. 1995. The boreal ecosystem-atmosphere study (BOREAS): an overview and 
+early results from the 1994 field year. Bulletin of the American Meteorological 
+Society. 76(9):1549-1577. 
+
+Welch, R. 1985. Cartographic products of SPOT image data. Photogr. Engr.
+and Rem. Sen. 51:1085-1091.
+
+Welch, R. and M. Ehlers. 1987. Merging multiresolution SPOT HRV and
+Landsat TM data. Photogr. Engr. and Rem. Sen. 53:301-305.
+
+17.3 Archive/DBMS Usage Documentation
+
+None.
+
+18. Glossary of Terms
+
+None.
+
+19. List of Acronyms
+
+    ASCII   - American Standard Code for Information Interchange
+    BIL     - Band Interleaved by Lines
+    BOREAS  - BOReal Ecosystem-Atmosphere Study
+    BORIS   - BOREAS Information System
+    BPI     - Bytes per inch
+    BSQ     - Band Sequential
+    CCD     - Charge-Coupled Device
+    CCRS    - Canada for Remote Sensing
+    CCT     - Computer Compatible Tape
+    CD-ROM  - Compact Disk-Read-Only Memory
+    CNES    - Centre National d'Etudes Spatiales
+    DAAC    - Distributed Active Archive Center
+    DAT     - Digital Archive Tape
+    EOS     - Earth Observing System
+    EOSDIS  - EOS Data and Information System
+    FPAA    - Fraction of Photosynthetically Active Radiation
+    GICS    - Geocoded Image Correction System
+    GMT     - Greenwich Mean Time
+    GSFC    - Goddard Space Flight Center
+    HRV     - High-Resolution Visible
+    IFOV    - Instantaneous Field-of-View
+    I/O     - Input/Output
+    LAI     - Leaf Area Index
+    LGSOWG  - Landsat Ground Station Operations Working Group
+    LTWG    - LGSOWG Technical Working Group
+    MSS     - Multispectral Scanner
+    NAD27   - North American Datum of 1927
+    NAD83   - North American Datum of 1983
+    NASA    - National Aeronautics and Space Administration
+    NSA     - Northern Study Area
+    ORNL    - Oak Ridge National Laboratory
+    PANP    - Prince Albert National Park
+    RMS     - Root-Mean-Square
+    RSI     - Radarsat International
+    SPOT    - Satellite Pour l’Observation de la Terre
+    SSA     - Southern Study Area
+    TIPS    - Thematic Mapper Image Processing System
+    TM      - Thematic Mapper
+    URL     - Uniform Resource Locator
+    UTM     - Universal Transverse Mercator
+
+20.  Document Information
+
+20.1 Document Revision Date
+
+     Written:         12-Apr-1995
+     Last Updated:    05-May-1998
+
+20.2 Document Review Dates
+
+     BORIS Review:    17-Mar-1998
+     Science Review:  10-Apr-1988
+
+20.3 Document ID
+
+20.4 Citation
+
+The SPOT level-3s images were acquired by CCRS and processed by RSI under an 
+agreement with CCRS.  
+
+20.5 Document Curator
+
+20.6 Document URL
+
+Keywords
+
+    SPOT
+    HRV
+    REFLECTED RADIATION
+
+SPOT_L3S.doc
+05/26/98

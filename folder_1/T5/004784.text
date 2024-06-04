@@ -1,0 +1,240 @@
+//##############################################################
+//
+// AtlfastStandardOptions file
+//
+//==============================================================
+#include "AtlfastDoNotTouch.txt"
+// Standard job options for Atlfast
+//
+// Options for modules which are not used are ignored.
+//
+// Uncomment lines to add an algorithm to ATLFAST sequence:
+//
+//Atlfast.members +={"Atlfast::TrackMaker/TrackMaker"};
+Atlfast.members +={"Atlfast::Monitor/Monitor"};
+//Atlfast.members +={"Atlfast::TrackNtupleMaker/TrackNtupleMaker"};
+Atlfast.members +={"Atlfast::StandardNtupleMaker/StandardNtupleMaker"};
+// Atlfast.members +={"Atlfast::ExampleAnalysis/ExampleAnalysis"};
+// Atlfast.members +={"Atlfast::AtlfastProtoJetMaker/AtlfastProtoJetMaker"};
+
+//--------------------------------------------------------------
+// Algorithm Parameters set to Default Values 
+//--------------------------------------------------------------
+// Default Reconstructed Particle Maker
+//-------------------------------------
+// options for electron maker
+ElectronMaker.ParticleType               = 11;
+ElectronMaker.mcMinimumPt                = 0.0;
+ElectronMaker.mcMaximumEta               = 100.0;
+ElectronMaker.MinimumPt                  = 5.0;
+ElectronMaker.MaximumEta                 = 2.5;
+ElectronMaker.DoSmearing		 = true;
+//
+// options for muon maker
+MuonMaker.ParticleType                   = 13;
+MuonMaker.mcMinimumPt                    = 0.5;
+MuonMaker.mcMaximumEta                   = 2.5;
+MuonMaker.MinimumPt                      = 6.0;
+MuonMaker.MaximumEta                     = 100.0;
+MuonMaker.DoSmearing                     = true;
+MuonMaker.MuonSmearKey			 = 3;
+//
+//options for photon maker
+PhotonMaker.ParticleType                 = 22;
+PhotonMaker.mcMinimumPt                  = 0.0;
+PhotonMaker.mcMaximumEta                 = 100.0;
+PhotonMaker.MinimumPt                    = 5.0;
+PhotonMaker.MaximumEta                   = 2.5;
+PhotonMaker.DoSmearing			 = true;
+//--------------------------------------------------------------
+// Cell Maker
+//-----------------------------------
+CellMaker.EtaCoverage        = 5.0;
+CellMaker.MinETCell          = 0.0;
+CellMaker.GranBarrelEta      = 0.1;
+CellMaker.GranBarrelPhi      = 0.1;
+CellMaker.GranForwardEta     = 0.2;
+CellMaker.GranForwardPhi     = 0.2;
+CellMaker.FastShower         = false;
+//--------------------------------------------------------------
+// Cluster Maker
+//-------------------------------------  
+ClusterMaker.ProcessCells       = true;
+ClusterMaker.ProcessTracks      = false;
+ClusterMaker.RConeBarrel        = 0.401;
+ClusterMaker.RConeForward       = 0.401;
+ClusterMaker.minInitiatorET     = 1.5;
+ClusterMaker.minClusterET       = 5.0;
+ClusterMaker.Strategy           = "Cone";
+
+//--------------------------------------------------------------
+// Jet Maker
+//-------------------------------------  
+JetMaker.MinimumPT        = 10.0;
+JetMaker.MaximumEta       = 5.0;
+JetMaker.DoSmearing       = true;
+JetMaker.RconeB           = 0.400;
+JetMaker.RconeF		  = 0.400;
+JetMaker.bPtMin		  = 5.0;  
+JetMaker.bMaxDeltaR       = 0.2;
+JetMaker.cPtMin		  = 5.0;
+JetMaker.cMaxDeltaR       = 0.2;
+JetMaker.tauPtMin         = 10.0;
+JetMaker.tauMaxDeltaR     = 0.3;
+JetMaker.etaTagMax        = 2.5;
+JetMaker.tauJetPtRatio    = 0.9;
+//--------------------------------------------------------------
+// AtlfastB (jet corrector)
+//-------------------------------------
+ AtlfastB.AtlfBjetSwitch   =true;
+AtlfastB.AtlfCalSwitch     =true;
+AtlfastB.AtlfTauSwitch     =true;
+AtlfastB.AtlfTauVetoSwitch =false;
+AtlfastB.AtlfTrigMuoSwitch =false;
+AtlfastB.JetCorrFile       ="./AtlfastBjet.dat";
+AtlfastB.CJetCorrFile      ="./AtlfastBcjet.dat";
+AtlfastB.AtlfBNSet         = 1; 
+AtlfastB.TauEff            = 0.05;
+AtlfastB.TauVetoOption     = 1;
+//--------------------------------------------------------------
+// Track Maker
+//------------------------------------- 
+TrackMaker.McPtMinimum	     = 0.5;
+TrackMaker.McEtaMaximum      = 2.5;
+TrackMaker.vtMaximum         = 3.0;
+TrackMaker.vlMaximum         = 40.0;
+TrackMaker.DoSmearing	      = true;
+TrackMaker.BField	      = 2.0;
+//--------------------------------------------------------------
+// Event Header Maker 
+//------------------------------------- 
+EventHeaderMaker.BeamEnergy               = 7000.0;
+EventHeaderMaker.TestMode		  = 0;
+//--------------------------------------------------------------
+// FinalStateParticleDumper 
+//------------------------------------
+// choose one of the following values for SelectorName
+//FinalStateParticleDumper.SelectorName	= "Z0selector";
+//FinalStateParticleDumper.SelectorName	= " ";
+//FinalStateParticleDumper.SelectorName	= "qselector";
+//FinalStateParticleDumper.SelectorName	= "bSelector";
+FinalStateParticleDumper.SelectorName	= "All";
+//-------------------------------------- 
+// GlobalEventData Maker 
+//------------------------------------- 
+//Luminosity option: 1=low, 2-high
+GlobalEventDataMaker.Luminosity		= 1;
+GlobalEventDataMaker.Invisibles		= {12,14,16}; 
+GlobalEventDataMaker.RandomSeed		= 12345;
+GlobalEventDataMaker.BFieldOn		= true;
+GlobalEventDataMaker.BarrelForwardEta	= 3.2;
+//
+//--------------------------------------------------------------
+// Algorithms Options
+//--------------------------------------------------------------
+//options for cell maker
+//CellMaker.OutputLevel                  = 2;
+//
+//options for cluster maker
+//CluserMaker.OutputLevel               = 2;
+
+//options for track maker
+//TrackMaker.OutputLevel                 = 2;
+
+//options for electron isolator
+//ElectronIsolator.OutputLevel           = 2;
+
+//options for photon isolator
+//PhotonIsolator.OutputLevel             = 2;
+
+//options for muon isolator
+//MuonIsolator.OutputLevel               = 2;
+
+//options for various histogram makers
+
+ElectronHistogramMaker.HistogramStart    = 1000;
+ElectronHistogramMaker.HistogramTitle    = "All Electrons";
+//ElectronHistogramMaker.OutputLevel     = 3;
+
+PhotonHistogramMaker.HistogramStart      = 2000;
+PhotonHistogramMaker.HistogramTitle      = "All Photons";
+//PhotonHistogramMaker.OutputLevel       = 2;
+
+MuonHistogramMaker.HistogramStart        = 3000;
+MuonHistogramMaker.HistogramTitle        = "All Muons";
+
+//SimpleTest1
+SimpleTest1.writeRef                     = true;
+SimpleTest1.outFile                      = "./outFile1.txt";
+SimpleTest1.refFile                      = "./simpleTest132_11.txt";
+SimpleTest1.cmpFile                      = "./cmpFile1.txt";
+
+//SimpleTest2
+SimpleTest2.writeRef                     = true;
+SimpleTest2.outFile                      = "./outFile2.txt";
+SimpleTest2.refFile                      = "./simpleTest132_07.txt";
+SimpleTest2.cmpFile                      = "./cmpFile2.txt";
+
+//Monitor
+//Monitor.Frequency                        = 100;
+//==============================================================
+//
+// End of job options file
+//
+//##############################################################
+
+// then override any you need specificially for this job
+//
+// for example, get ClusterMaker to print out DEBUG messages as well as INFO
+PythiaModule.OutputLevel = 4;
+//FinalStateParticleDumper.OutputLevel = 2;
+//PhotonMaker.OutputLevel              = 2;
+//MuonMaker.OutputLevel                = 2;
+//MuonMaker.OutputLevel                = 2;
+//JetMaker.OutputLevel                 = 2;
+//AtlfastB.OutputLevel                 = 2;
+//EventHeaderMaker.OutputLevel         = 2;
+//
+// Uncomment lines to add a debugging/test algorithm to ATLFAST sequence:
+//
+//
+// Atlfast.members += {"Atlfast::CellDumper/CellDumper"};
+//Atlfast.members += 
+//		{"Atlfast::FinalStateParticleDumper/FinalStateParticleDumper"};
+// Atlfast.members +=
+//       {"Atlfast::ReconstructedParticleDumper/ElectronDumper"};
+// Atlfast.members +=
+//             {"Atlfast::ReconstructedParticleDumper/IsolatedElectronDumper"};
+// Atlfast.members +=
+//	       {"Atlfast::ReconstructedParticleDumper/PhotonDumper"};
+// Atlfast.members +=
+//             {"Atlfast::ReconstructedParticleDumper/IsolatedPhotonDumper"};
+// Atlfast.members +=
+//             {"Atlfast::StandardHistogramMaker/StandardHistogramMaker"};
+//
+//   Histogram ReconstructedParticles
+// Atlfast.members +=
+//     {"Atlfast::ReconstructedParticleHistogramMaker/ElectronHistogramMaker"};
+// Atlfast.members +=
+//     {"Atlfast::ReconstructedParticleHistogramMaker/PhotonHistogramMaker"};
+// Atlfast.members +=
+//     {"Atlfast::ReconstructedParticleHistogramMaker/MuonHistogramMaker};
+// Atlfast.members +=
+//     {"Atlfast::SimpleTest/SimpleTest1"};
+// Atlfast.members +=
+//     {"Atlfast::SimpleTest/SimpleTest2"};
+// Atlfast.members +=
+//     {"Atlfast::SimpleDiff/SimpleDiff"};
+//
+
+
+  
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,397 @@
+        Using Two Event Handlers for Acquisition                            Page 1
+        Overview                                                  25 November 1992
+
+
+          1  Overview
+
+          A single Event Handler (EH) can directly control one or two crates  of
+          Camac equipment.  With the proper programming and hardware connections
+          one can connect a second EH (the "Slave") Handler to the first EH (the
+          "Master") and control three or four crates of Camac equipment.
+
+          Slot        Master               Second Crate              Slave 
+                 +---------------+      +---------------+       +---------------+ 
+          25     |               |      |               |       |               | 
+                 +  KS3989 CC    +      +  KS3989 CC    +       +  KS3989 CC    + 
+          24     |               |      |               |       |               | 
+                 +---------------+      +---------------+       +---------------+ 
+          23     | Cable Driver  |      |  Comm FIFO    |<--+   |               | 
+                 +---------------+      +------||-------+   |   +---------------+ 
+          22  +->| Master FIFO   |      |      ||       |   +--<| Slave FIFO    |<-+ 
+              |  +---------------+      +------||-------+       +---------------+  | 
+          21  |  |               |      |      ||       |       |               |  | 
+              |  +---------------+      +------VV-------+       +---------------+  | 
+          20  +--|               |<---->| Master's AUX  |       |               |--+ 
+                 +  Master EH    |      +---------------+       +   Slave EH    + 
+          19     |               |      |               |       |               | 
+                 +---------------+      +---------------+       +---------------+ 
+          18     |               |      |               |       |               | 
+                 +---------------+      +---------------+       +---------------+ 
+                 ...             ...    ...             ...     ...             ... 
+
+          Altogether, three Kinetic Systems 3841 FIFOs are required.
+
+           -  Master EH Output FIFO
+
+              The first FIFO is used in the conventional manner to buffer output
+              data between the Master EH and the EMUX.
+
+              The output FIFOs receive data when an EH executes one of a variety
+              of "OUT" instructions.
+
+           -  Comm FIFO (Comm FIFO)
+
+              The second FIFO is called the Comm FIFO to distinguish it from the
+              Output FIFOs which are adjacent to the Event Handlers.
+
+              The Comm FIFO is in a crate (either crate 1 or crate 2) which must
+              be accessible by the Master EH using Camac instructions.
+
+              The front panel input of the Comm FIFO is connected to  the  third
+              FIFO by a cable up to about 10 feet in length.  Data is put in the
+              third FIFO by the Slave EH and ripples through the third FIFO into
+              the  Comm  FIFO.  The Comm FIFO can then be read-out by the Master
+              EH program using Camac instructions.  The front  panel  output  of
+              the Comm FIFO is unconnected.
+        Using Two Event Handlers for Acquisition                            Page 2
+        Overview                                                  25 November 1992
+
+
+           -  Slave EH Output FIFO
+
+              The third FIFO is usually in slot 22, adjacent to  the  Slave  EH.
+              The  third  FIFO's  front panel input is connected to the Slave EH
+              using the conventional EH-to-FIFO cable.  The front  panel  output
+              of  the  third FIFO is connected to the Comm FIFO (rather than the
+              Cable Driver) using a cable up to about 10 feet in length.
+
+              Data is transferred from the Slave EH Output FIFO to the Comm FIFO
+              24 bits at a time.
+
+
+          The same methods can be used to control a third Event Handler, but who
+          would be crazy enough to do this ?
+        Using Two Event Handlers for Acquisition                            Page 3
+        Event Handler Programming                                 25 November 1992
+
+
+          2  Event Handler Programming
+
+          The coordination of the two Event Handlers is largely hidden from  the
+          user.   The  main  differences  from the typical experiment which uses
+          only a single EH are:
+
+
+           -  Master INCLUDE file
+
+              A     conventional     Event     Handler     program      INCLUDEs
+              "DAPEH:STANDARD.EHA".   A  Master  Event  Handler program INCLUDEs
+              "DAPEH:MASTER_CRATE_1.EHA" or "DAPEH:MASTER_CRATE_2.EHA" depending
+              on whether the Comm FIFO is in crate 1 or crate 2.
+
+           -  Slave INCLUDE file
+
+              A     conventional     Event     Handler     program      INCLUDEs
+              "DAPEH:STANDARD.EHA".   A  Slave  Event  Handler  program INCLUDEs
+              "DAPEH:SLAVE.EHA".
+
+           -  Symbol COMMFIFO
+
+              The Master Event Handler program needs to know the crate and  slot
+              occupied  by  the  Comm FIFO.  The crate is implied by whether one
+              uses  "DAPEH:MASTER_CRATE_1.EHA"  or   "DAPEH:MASTER_CRATE_2.EHA".
+              The  slot  must  be defined using the symbol "COMMFIFO".  Thus, if
+              the Comm FIFO is in slot 23 of crate 2 then  one  would  have  the
+              following definition near the beginning of the Master EH program:
+
+                          COMMFIFO=23  
+
+           -  Symbol T_RESET
+
+              The Slave EH program needs to know how long it will take  data  to
+              ripple  through  the  two  Kinetic  Systems  3841 FIFOs.  It takes
+              approximately 64 micro-seconds from the time a  data  word  enters
+              the  top  of  the first FIFO (controlled by the Slave EH) until it
+              reaches the bottom of the second FIFO (the Comm FIFO in one of the
+              crates controlled by the Master EH).
+
+              The time should be measured from the  last  word  written  to  the
+              Slave  FIFO  for  an  event.   Suppose the read-out of data in the
+              Slave EH is followed by 10 Camac  operations  in  order  to  reset
+              Camac  modules  and  ready  them  for  the  next event.  Ten Camac
+              operations would require about 15 micro-seconds.  One  could  then
+              subtract  15  micro-seconds  from the ripple time in computing the
+              time to wait for the last data word to reach  the  bottom  of  the
+              Comm FIFO from the end of the Event Handler MAIN routine.
+        Using Two Event Handlers for Acquisition                            Page 4
+        Event Handler Programming                                 25 November 1992
+
+
+              The symbol T_RESET is the time, in micro-seconds, of the Slave  EH
+              reset  routine.   For  the example described above, one's Slave EH
+              program should include the definition:
+
+                          T_RESET=15      ;time required for reset (micro-seconds)  
+
+              In estimating times can use the following rules of thumb:
+
+                              Instruction             Time   
+                                                 (micro-seconds)  
+                        
+                              CNAF                    1.5   
+                              CROUT                   2.0  
+                              DLAY n                  0.5+(n*0.1)  
+                              IF statement  
+                                branch taken          1.0  
+                                branch not taken      0.5  
+                        
+                              all other instructions  0.5  
+
+           -  Wait for Comm FIFO
+
+              One of the following statements is placed in the MAIN  routine  of
+              the  Master  EH  program  at  the point in the program where it is
+              appropriate to copy data produced by the Slave EH for the PREVIOUS
+              event  to  the Master's Output FIFO.  This MUST be done BEFORE any
+              data is output by the Master for the new event.
+
+               -  Crate 1 then use DAPEH:NOTIFY_CRATE_1.EHA
+               -  Crate 2 then use DAPEH:NOTIFY_CRATE_2.EHA
+
+
+              Why is Slave EH data from the PREVIOUS event sitting in  the  Comm
+              FIFO at the time of a new event ?
+
+              In order to cover up the the long ripple time of the FIFOs, the EH
+              postpones  reading data from the Slave for a given event until the
+              conversion time for the NEXT event has  elapsed.   For  many  ADCs
+              this  allows  as much as 80 micro-seconds for FIFO ripple:  a very
+              liberal allowance.
+
+              How does the Master know that the wait required for ripple in  the
+              Comm FIFO is complete ?  After the Slave finishes writing the last
+              word to the Comm FIFO it starts a timer.  When the  timer  expires
+              it  sets  a  flag  which the Master EH can sense through its front
+              panel inputs.
+
+              If the required ripple time programmed into the Slave EH  has  not
+              elapsed  by  the  time the Master EH executes the NOTIFY code then
+              the Master EH program will stall waiting for the  ripple  time  to
+              elapse.
+
+        Using Two Event Handlers for Acquisition                            Page 5
+        Event Handler Commands                                    25 November 1992
+
+
+          3  Event Handler Commands
+
+          The following Daphne programs perform  extra  actions  or  have  extra
+          qualifiers for use with a second EH.
+
+
+
+          3.1  $CDV/SECOND
+
+          This command tells Daphne the crate number  and  slot  number  of  the
+          Slave  EH.   The  crate number is the crate number associated with the
+          Kinetic Systems Crate Controller controlling the crate with the  Slave
+          EH.
+
+          An example:
+
+                          $ CDV/SECOND  /EH_CRATE=5  /EH_SLOT=19  
+
+
+           -  /EH_CRATE [Default is crate 4]
+
+           -  /EH_SLOT [Default is slot 20 - same as for standard EH]
+
+
+
+
+          3.2  $EHFIFO/SECOND
+
+          This reads the data from the Output FIFO (in slot 22) associated  with
+          the  Slave  EH.   It  is  otherwise  identical  to  the simple $EHFIFO
+          command.
+
+
+
+          3.3  $EHSEND/SECOND
+
+          This loads an EH program into the Slave EH and then restarts both  the
+          Master and Slave EH programs.
+
+                          $ EHSEND/SECOND BGO_SLAVE
+
+          Like EHGO, this  program  will  restart  both  the  Master  and  Slave
+          programs when loading either unit.
+
+
+
+          3.4  $EHGO
+
+          When there are both a Master and Slave EH this  command  will  restart
+          both programs.  Daphne does not provide a method for restarting one EH
+          without restarting the other.
+        Using Two Event Handlers for Acquisition                            Page 6
+        Physical Connections                                      25 November 1992
+
+
+          4  Physical Connections
+
+
+           -  Standard Connections for Event Handlers
+
+               -  Master NIM Output Register #1 to Master IN #8
+               -  Master EVENT from user electronics
+               -  Master BUSY to user electronics
+               -  Master AUX GRANT IN from Crate Controller GRANT OUT
+               -  Slave AUX GRANT IN from Crate Controller GRANT OUT
+               -  Master data out to adjacent Output FIFO (Special Cable)
+               -  Slave data out to adjacent Output FIFO (Special Cable)
+
+
+           -  Additional Special Connections
+
+               -  Master OUT #5 to Master IN #5
+
+                  +----------------------------+
+                  |   This is not a misprint   |
+                  +----------------------------+
+
+               -  Master OUT #1 to Slave IN #1
+               -  Master OUT #2 to Slave IN #2
+               -  Master IN #1 from Slave OUT #1
+               -  Master IN #2 from Slave OUT #2
+               -  Slave Output FIFO to Master's Comm FIFO
+                  (Special Cable about 10 feet long)
+
+
+           -  Connections NOT Present on the Slave Event Handler
+
+               -  No EVENT signal to Slave
+               -  No BUSY signal from Slave
+               -  No "Acquisition Start" (IN #8) to Slave
+
+
+        Using Two Event Handlers for Acquisition                            Page 7
+        Performance Implications                                  25 November 1992
+
+
+          5  Performance Implications
+
+          Using two EH rather than  just  one  introduces  additional  overhead.
+          Transfer of data from the Slave EH to the Master Output FIFO is slower
+          than if the Master EH were able  to  read  a  Camac  module  directly.
+          However a Master/Slave EH system can be faster than a single EH if the
+          EH programs require many  IF  statements  and  branches  in  order  to
+          determine  what  data  to  read-out.   This occurs when there are many
+          detectors which may fire and only those detectors which fired  are  to
+          be read-out.
+
+          It is assumed in the following discussion that the ripple time of  the
+          FIFOs  is  completely  hidden  by  the  time  between  events  and the
+          conversion time of ADCs and TDCs.
+
+
+
+          5.1  Overhead Per Event
+
+          If a conventional EH program were converted to  a  Master  EH  program
+          with  a  Slave EH program that did absolutely no work it would require
+          10 extra micro-seconds per event.
+
+
+
+          5.2  Overhead Per Data Word
+
+          For a single EH or a  Master  EH  it  requires  2.0  micro-seconds  to
+          transfer  a  word  from  a  Camac module to the Output FIFO.  The time
+          required of the Master EH to transfer a word (generated by  the  Slave
+          EH) from the Comm FIFO to the Master Output FIFO is 3.0 micro-seconds.
+          It takes longer because the status of the Comm FIFO  must  be  checked
+          after each transfer to determine if it is empty or not.
+        Using Two Event Handlers for Acquisition                            Page 8
+        Testing                                                   25 November 1992
+
+
+          6  Testing
+
+          The Master EH, its output FIFO,  and  all  connections  to  the  Event
+          Processors  can be tested using the same techniques as for a single EH
+          system (see the Experimenter's  Guide  to  Daphne  section  42.8  "The
+          FIFOTEST Program").
+
+          In the past, the Comm FIFO has been placed in crate 1 slot  11  or  in
+          crate  2 slot 23.  Very short (10 line) programs have been written for
+          the Master EH to aid in debugging the Comm FIFO and Slave EH for these
+          particular configurations:
+
+                          DAPEHDIAG:COMMFIFO_1_11.EHA 
+                          DAPEHDIAG:COMMFIFO_2_23.EHA 
+
+          If the Comm FIFO is placed in a different slot then the  program  will
+          have to be changed and recompiled.
+
+
+          +--------------------------------------------------------------------+ 
+          | Program DAPEHDIAG:COMMFIFO_2_23.EHA                                |
+          +--------------------------------------------------------------------+ 
+          |       commFIFO=23                     ;Slot number of Comm FIFO    | 
+          |       qbit=[9]                        ;Q response of Camac module  | 
+          |       fifobit=[11]                    ;0 => less than 3/4 full     | 
+          |                                                                    | 
+          |fwait  if (ex.any.fifobit) fwait                                    | 
+          |getmore cnaf   2,commfifo,0,0          ;read 1 word from comm FIFO  | 
+          |                                       ;  must be in crate 2        | 
+          |       if (ex.none.qbit) fwait         ;valid data                  | 
+          |       out     ca2                     ;yes                         | 
+          |       bru     fwait                                                | 
+          +--------------------------------------------------------------------+ 
+
+          For this example, I'll assume:
+
+
+           -  The Kinetics Systems crate controllers are at RS232 port TZB1:
+
+           -  The Master EH is in the Kinetics Systems 3989 crate 1
+
+           -  The Comm FIFO is in Kinetic Systems 3989 crate 2 slot 23
+
+           -  The Slave EH is in the Kinetic Systems 3989 crate 5
+
+           -  The scaler is in Kinetics 3989 crate 5 slot 10
+
+           -  The scaler is incremented by F=25 and reset by F=9
+
+                  (Kinetic Systems 3610 or 3615)
+                  (Lecroy 2550 or 2551)
+
+
+        Using Two Event Handlers for Acquisition                            Page 9
+        Testing                                                   25 November 1992
+
+
+          Load the Master EH diagnostics program into the Master EH:
+
+                          $ CDV TZB1: 
+                          $ EHSEND DAPEHDIAG:COMMFIFO_2_23 
+
+          Load the standard EH test program into the Slave EH:
+
+                          $ CDV/SECOND/EH_CRATE=5 
+                          $ EHSEND/SECOND DAPEHDIAG:TEST_1_10 
+
+          Please note that although the Slave EH is in KS3989 crate 5, it  still
+          addresses  its Camac modules as crate 1 and crate 2.  The "name space"
+          of an EH is totally independent of the "name space"  of  the  Kinetics
+          Systems  3989  crate  controllers.   This is because the KS 3989 crate
+          number selects a KS 3989 crate controller, while the EH crate  numbers
+          select one of the two EH AUX (auxiliary) controllers.
+
+          The program running in the Master EH simply transfers  every  word  it
+          finds  in  the Comm FIFO to its own output FIFO.  By checking the data
+          arriving in the Event Processors with the FIFOTEST program one  has  a
+          complete  test of the cables, FIFOs, Event Handlers, and EMUX from the
+          Slave EH all the way to the Event Processors.

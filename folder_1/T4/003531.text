@@ -1,0 +1,80 @@
+
+NCNR                        NG3-SANS Instrument Schedule
+B. Hammouda  Tel: (301)975-3961  Fax: (301)921-9847, E-mail: hammouda@nist.gov
+Instrument   Tel: (301)975-4163          Changeover time: 10:00 a.m.
+--------------------------------------------------------------------------------
+Start  Num                       UniqID
+Date   Days  Users               S-No    Experiments              Equip Contact
+-----  ----- ------------------  ------- ------------------------ ----- --------
+Jan 22   1   Instrument                  Instrument Calibration    7HB  Hammouda,BG
+             Scientists
+
+Jan 23   3   H. Wang (Mich Tech  3347    Polyethylene/polypropylen 7HB  Hammouda
+             U)+B. Hammouda      S15-74  e Blends
+             (NCNR)
+Jan 26   2   D. Ho +B. Hammouda  4421    PEO/d-Ethanol Solutions   10CB Ho
+             (NCNR)                      Gelation and Phase
+                                         Separation
+Jan 28   2   B. Hammouda (NCNR)+ 4713    Polyelectrolytes in       10CB Hammouda
+             F. Horkay (NIH)             various solvents
+
+Jan 30   3   W. Heller (Oak      3947    SANS Study of the Fully   10CB Kline,BG
+             Ridge)+ N. Finley+  S15-10  Phosphorylated Ternary
+             P. Rosevear (U.             Troponin Complex
+Feb 2    2   S. Krueger          4725    Structural Studies of     10CB Krueger,BG
+             (NCNR)+A. Rein+ S.          HIV-1 Gag Protein and
+             Datta(NIH)+ W.              Gag Complexes Related to
+Feb 4    2   R. Zhang+ P.        4162    Nanostructures of mixed   10CB Hammouda
+             Somasundaran        S15-27  surfactants
+             (Columbia U)
+Feb 6    3   A. Indrakanti (Penn 3052    Phase behavior in thin    7HB  Kline,BG
+             State)+ S. Kumar    SP13-08 polymer blend films with
+             (RPI)+ R. Briber            weak/strong
+Feb 9    2   S. Bhatia+ M.       4568    Interaction of Charged    10CB Hammouda,BG
+             Crichton (U Mass-   S16-30  and Nonionic Surfactants
+             Amherst)                    with Block
+Feb 11   2   P. Kilpatrick+ K.   4585    Determination of second   10CB Lin,BG
+             Gawrys (North       S16-36  virial coefficients for
+             Caroline SE)                solutions of
+Feb 13   2   R. Briber+ H. Feng  4005    Suppression of the        7HB  Ho,BG
+             (U. Maryland)+ H.   S15-26  Dewetting Transition in
+             Kim (IBM)                   Polymer Films by
+Feb 15   3   D. Ho (NCNR)+ Y.    4358    Alzheimer amyloid         10CB Ho
+             Shi (NY U)                  morphological variance
+                                         assessed by SANS
+Feb 18   2   J. DeSimone+ C.     4474    SANS Investigations of    SE   Kline,Hammouda
+             Johnson+ B. Xu (U   S16-05  the Self-assembly of
+             North Carolina)             Phosphate Surfactants in
+Feb 20   3   G. Warr+M. Araos    4105    Micelle Structure in a    10CB Kline,BG
+             (U. Sydney)         S15-63  Molten Salt
+
+Feb 23   3   P. Alexandridis+ M. 4185    Structure of surfactant   10CB Hammouda,BG
+             Tsianou+ Z. Gu (U.  SC15-05 micelles in the presence
+             Buffalo)                    of cyclodextrins
+Feb 26   3   W Zhou+ K Winey+ J. 4504    Morphological study of    10CB Ho,BG
+             Fischer (U.         S16-10  single wall carbon
+             Pennsylvania)               nanotube suspensions
+--------------------------------------------------------------------------------
+Equipment: 
+   9P: 9-Position ambient sample changer; 
+   10CB: 10-Position sample changer (-10 to 100 deg C); 
+   VF: Vacuum Furnace; 
+   7CB: 7-Position sample changer (-10 to 100 deg C);
+   7H: 7-Position Heating Block (up to 200 deg C); 
+   7HB: 7-Position Heating Block with BN (up to 300 deg C); 
+   HM1: Horizontal High-Field Electromagnet (2 Tesla); 
+   HM2: Horizontal Low-Field Electromagnet (1 Tesla); 
+   DI: Closed cycle, displex, refrigerator (10 K to 330 K); 
+   MSC: Minnesota Sliding Plate Shear Cell, 
+   BSC: Boulder Couette Flow Shear Cell; 
+   NPC: NIST Pressure Cell; 
+   SCMA:  Superconducting Magnet (9 Tesla); 
+   2H: 2-Position, high precision heating stage (up to 250 deg C); 
+   SE: Special Environment; 
+   VR: Vertical Rotation Stage;
+   OC: Orange Cryostat;
+
+Contacts:
+    Cedric Gagnon (x2020), John Barker (x6732), Paul Butler (x2028),  
+    Boualem Hammouda (x3961), Susan Krueger (x6734), Steve R. Kline (x6243)
+    Andrew Jackson (x3149), Lionel Porcar (x5049), Mark Laver (x4404), 

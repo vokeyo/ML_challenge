@@ -1,0 +1,990 @@
+From terrylr at blauedonau.com  Wed Mar  2 15:38:59 2005
+From: terrylr at blauedonau.com (terry l. ridder)
+Date: Wed Mar  2 14:29:23 2005
+Subject: [step-os] introduction and project
+Message-ID: <Pine.LNX.4.62.0503021355580.12543@johann.blauedonau.com>
+
+hello;
+
+i am new to the step-os so i figure a brief introduction would be
+appropriate. i am a disabled electronic engineer, b.s.e.e, from
+university of illinois, urbana-champaign, illinois. i have been involved
+with several opensource projects over the years. the enhanced machine
+controller, my own project on sourceforge.net, and now the brl-cad
+project.
+
+my project on sourceforge.net is at http://gnu-cad-cam.sourceforge.net
+and http://sourceforge.net/projects/gnu-cad-cam
+i have not updated the web site in several years and given recent events
+the project will probably become obsolete.
+
+brl-cad is located at http://sourceforge.net/projects/brlcad
+enhanced machine controller is located at
+http://sourceforge.net/projects/emc
+
+the current project:
+the current project is to merge parts of my project into both brl-cad
+and emc.
+
+to write the necessary interfaces for brl-cad and emc to communicate.
+
+the top requested feature to add to brl-cad is the import/export of
+part21 step files. this is the part of the project i am currently
+working on. ap203/ap214 are the most requested aps. so these will be
+support first. others will be added in the future.
+
+i have downloaded the nist scl3-2 code. while this is out-of-date i am
+working on updating the express parser. the current showstopper is the
+lack of having the 10303-11:2004 express language reference manual. i am
+working on obtaining copy.
+
+i am also working on converting the scl3-2 c++ code to straight c. the
+reason for doing this is to keep the source code in a common programming
+language.
+
+i have looked at the express-eng and the osexpress projects on
+sourceforge. the drawback of the express-eng is for the gui to function
+requires lispworks professional version. lispworks professional version
+is imho cost prohibitive. the drawback of osexpress is the use of 'ant'
+and 'antlr'. the goal is to keep the build process and source code as
+simple as possible. both have not been updated in a while. it is easier
+to find helpers who know c than finding helpers who know or want to learn
+lisp, antlr, or java.
+
+the brl-cad to emc interface is currently in the discussion phase. there
+are a few requests for a step-nc interface. i do not know enough about
+step-nc to know if that is feasiable.
+
+-- 
+terry l. ridder ><>
+From terrylr at blauedonau.com  Thu Mar  3 03:18:32 2005
+From: terrylr at blauedonau.com (terry l. ridder)
+Date: Thu Mar  3 02:08:52 2005
+Subject: [step-os] boolean_choose in ap203
+Message-ID: <Pine.LNX.4.62.0503030159550.15686@johann.blauedonau.com>
+
+hello;
+
+i have collected several ap203 express files. two however produce an
+input error when check with fedex, part of the nist express parser.
+
+the two ap203 express files have boolean_choose as:
+
+<begin quote>
+FUNCTION boolean_choose
+   (b: BOOLEAN;
+   choice1, choice2: GENERIC): GENERIC;
+   IF b THEN
+     RETURN(choice1);
+   ELSE
+     RETURN(choice2);
+   END_IF;
+END_FUNCTION; -- boolean_choose
+<end   quote>
+
+all other ap203 express files have boolean_choose as:
+
+<begin quote>
+FUNCTION boolean_choose
+   (b: BOOLEAN;
+   choice1, choice2: GENERIC:item): GENERIC:item;
+   IF b THEN
+     RETURN(choice1);
+   ELSE
+     RETURN(choice2);
+   END_IF;
+END_FUNCTION; -- boolean_choose
+<end   quote>
+
+in looking at the exp-engine/expresso/docs/iso-10303-11.bnf file for the
+express-engine project on sourceforge.net it would appear the two ap203
+files which cause nist express parser input errors, are correct.
+
+<begin quote>
+218 generic_type = GENERIC [ ':' type_label ] .
+<end   quote>
+
+i assume this is the bnf for 10303-11 edition 1.
+that rule indicates that the 'type_label' is optional.
+
+my question is basically which is correct?
+
+-- 
+terry l. ridder ><>
+From Phil.Spiby at Eurostep.com  Thu Mar  3 04:33:12 2005
+From: Phil.Spiby at Eurostep.com (Phil Spiby)
+Date: Thu Mar  3 03:23:32 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <Pine.LNX.4.62.0503030159550.15686@johann.blauedonau.com>
+Message-ID: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>
+
+Hi Terry,
+
+As you may be appreciating EXPRESS validity does not only require
+conformance to the syntax but to additional Rules and Restrictions defined
+in the text of the EXPRESS Language Reference Manual.
+
+In this case rule (b) under 9.5.3.2 applies:
+A generic data type may also be used as the result type of a function, or as
+the type
+of a local variable within a function or procedure. Type labels references
+are required for
+this usage and shall refer to type labels declared by the formal parameters
+(see 9.5.3.3).
+
+So the second of your examples is correct from my perspective.
+
+However you claim that fedex still reports an error, could you please
+provide us with the error message.
+
+As far as I know fedex hasn't been developed for a long time. You may get
+more accurate results looking using more up to date tools. Try
+exp-engine.sourceforge.net.
+
+Phil
+
+-----Original Message-----
+From: step-os-bounces@step.nasa.gov [mailto:step-os-bounces@step.nasa.gov]
+On Behalf Of terry l. ridder
+Sent: 03 March 2005 08:19
+To: step-os@step.nasa.gov
+Subject: [step-os] boolean_choose in ap203
+
+
+hello;
+
+i have collected several ap203 express files. two however produce an input
+error when check with fedex, part of the nist express parser.
+
+the two ap203 express files have boolean_choose as:
+
+<begin quote>
+FUNCTION boolean_choose
+   (b: BOOLEAN;
+   choice1, choice2: GENERIC): GENERIC;
+   IF b THEN
+     RETURN(choice1);
+   ELSE
+     RETURN(choice2);
+   END_IF;
+END_FUNCTION; -- boolean_choose
+<end   quote>
+
+all other ap203 express files have boolean_choose as:
+
+<begin quote>
+FUNCTION boolean_choose
+   (b: BOOLEAN;
+   choice1, choice2: GENERIC:item): GENERIC:item;
+   IF b THEN
+     RETURN(choice1);
+   ELSE
+     RETURN(choice2);
+   END_IF;
+END_FUNCTION; -- boolean_choose
+<end   quote>
+
+in looking at the exp-engine/expresso/docs/iso-10303-11.bnf file for the
+express-engine project on sourceforge.net it would appear the two ap203
+files which cause nist express parser input errors, are correct.
+
+<begin quote>
+218 generic_type = GENERIC [ ':' type_label ] .
+<end   quote>
+
+i assume this is the bnf for 10303-11 edition 1.
+that rule indicates that the 'type_label' is optional.
+
+my question is basically which is correct?
+
+-- 
+terry l. ridder ><> _______________________________________________
+step-os mailing list
+step-os@step.nasa.gov http://step.nasa.gov/mailman/listinfo/step-os
+
+
+From terrylr at blauedonau.com  Thu Mar  3 05:44:57 2005
+From: terrylr at blauedonau.com (terry l. ridder)
+Date: Thu Mar  3 04:35:29 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>
+References: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>
+Message-ID: <Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>
+
+hello phil;
+
+for some reason i did not receive a copy of your msg. step.nasa.gov is
+whitelisted in my mail servers.
+
+fyi, i run whitelisted mailservers, so if you reply directly to me and
+not the e-mail list, i will never see it.
+
+comments below.
+
+On Thu, 3 Mar 2005, Phil Spiby wrote:
+
+> Hi Terry,
+>
+> As you may be appreciating EXPRESS validity does not only require
+> conformance to the syntax but to additional Rules and Restrictions defined
+> in the text of the EXPRESS Language Reference Manual.
+>
+
+at the moment i have neither 10303-11:1994 or 10303-11:2004. express
+language reference manuals. i am working on obtaining at least
+10303-11:2004.
+
+>
+> In this case rule (b) under 9.5.3.2 applies:
+> A generic data type may also be used as the result type of a function, or as
+> the type
+> of a local variable within a function or procedure. Type labels references
+> are required for
+> this usage and shall refer to type labels declared by the formal parameters
+> (see 9.5.3.3).
+>
+
+is this true for both express language reference manual editon 1 and
+edition 2?
+
+>
+> So the second of your examples is correct from my perspective.
+>
+> However you claim that fedex still reports an error, could you please
+> provide us with the error message.
+>
+
+no the other ap203 express files do not cause an input error when run
+through fedex.
+
+>
+> As far as I know fedex hasn't been developed for a long time. You may get
+> more accurate results looking using more up to date tools. Try
+> exp-engine.sourceforge.net.
+>
+
+this is true. as stated in my intro msg, i am currently updating the
+express parser and other parts of the nist scl3-2 source code.
+
+concerning, exp-engine, again i stated in my intro msg as to why it was
+not a viable alternative.
+
+>
+> Phil
+>
+
+-- 
+terry l. ridder ><>
+From golux at comcast.net  Thu Mar  3 08:03:59 2005
+From: golux at comcast.net (Stephen Waterbury)
+Date: Thu Mar  3 06:54:23 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>
+References: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>
+	<Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>
+Message-ID: <42270B3F.5090707@comcast.net>
+
+terry l. ridder wrote:
+> concerning, exp-engine, again i stated in my intro msg as to why it was
+> not a viable alternative.
+
+Bear in mind that you don't need a Lisp compiler to *use*
+Express Engine; only if you want to modify it.  So while
+contributing to it or incorporating it into a production
+application may not be an alternative for you, you can still
+use it as a validation tool, and if you have questions or
+find bugs, you can contact its maintainers, Peter Denno and
+Craig Lanning.  (Peter was the original developer, and it
+was originally called "Expresso".)
+
+And it could be useful to compare its validation results
+with those of your improvements to Fedex.  Express Engine
+was often used by the developers of STEP Application
+Protocols as a validation tool, before the STEP modular
+architecture (which uses Express edition 2 -- Express
+Engine only supports Express edition 1).
+
+Since Phil didn't include a well-formed URL in his message,
+here is the link:
+
+<http://exp-engine.sourceforge.net/>
+
+Steve
+From lanning at scra.org  Thu Mar  3 08:53:32 2005
+From: lanning at scra.org (Craig Lanning)
+Date: Thu Mar  3 07:43:53 2005
+Subject: [step-os] introduction and project
+In-Reply-To: <Pine.LNX.4.62.0503021355580.12543@johann.blauedonau.com>
+References: <Pine.LNX.4.62.0503021355580.12543@johann.blauedonau.com>
+Message-ID: <1109858012.5240.17.camel@dhcp139.isg-scra.org>
+
+See below.
+
+On Wed, 2005-03-02 at 14:38 -0600, terry l. ridder wrote:
+> hello;
+> 
+> i am new to the step-os so i figure a brief introduction would be
+> appropriate. i am a disabled electronic engineer, b.s.e.e, from
+> university of illinois, urbana-champaign, illinois. i have been involved
+> with several opensource projects over the years. the enhanced machine
+> controller, my own project on sourceforge.net, and now the brl-cad
+> project.
+> 
+> my project on sourceforge.net is at http://gnu-cad-cam.sourceforge.net
+> and http://sourceforge.net/projects/gnu-cad-cam
+> i have not updated the web site in several years and given recent events
+> the project will probably become obsolete.
+> 
+> brl-cad is located at http://sourceforge.net/projects/brlcad
+> enhanced machine controller is located at
+> http://sourceforge.net/projects/emc
+
+So BRL-CAD has moved to SourceForge.  Cool!  I'll have to update my
+copy.
+
+> the current project:
+> the current project is to merge parts of my project into both brl-cad
+> and emc.
+> 
+> to write the necessary interfaces for brl-cad and emc to communicate.
+> 
+> the top requested feature to add to brl-cad is the import/export of
+> part21 step files. this is the part of the project i am currently
+> working on. ap203/ap214 are the most requested aps. so these will be
+> support first. others will be added in the future.
+
+Actually, if you implement a translator for AP203, you will then have
+most of what you need for the other AP's.  Personally, I would like to
+see BRL-CAD support the geometric portions of AP210 (this will require
+support for shape_aspect).
+
+> i have downloaded the nist scl3-2 code. while this is out-of-date i am
+> working on updating the express parser. the current showstopper is the
+> lack of having the 10303-11:2004 express language reference manual. i am
+> working on obtaining copy.
+>
+> i am also working on converting the scl3-2 c++ code to straight c. the
+> reason for doing this is to keep the source code in a common programming
+> language.
+> 
+> i have looked at the express-eng and the osexpress projects on
+> sourceforge. the drawback of the express-eng is for the gui to function
+> requires lispworks professional version.
+
+On Linux, Express Engine can be used from the command line.  The soon-
+to-be-released version 3.2 can be built and run on Linux via the command
+line using SBCL (http://sbcl.sf.net/).  Also, you only need LispWorks if
+you plan to recompile Express Engine.  We distribute binary packages for
+Windows and Fedora, Slackware, and (now) Debian (thanks Steve) Linux.
+
+>  lispworks professional version
+> is imho cost prohibitive.
+
+We're in the (very slow) process of moving the user interface to
+something that will run in SBCL or one of the other free Common Lisp
+environments.
+
+Craig Lanning (current Express Engine maintainer)
+
+>  the drawback of osexpress is the use of 'ant'
+> and 'antlr'. the goal is to keep the build process and source code as
+> simple as possible. both have not been updated in a while. it is easier
+> to find helpers who know c than finding helpers who know or want to learn
+> lisp, antlr, or java.
+> 
+> the brl-cad to emc interface is currently in the discussion phase. there
+> are a few requests for a step-nc interface. i do not know enough about
+> step-nc to know if that is feasiable.
+> 
+
+From terrylr at blauedonau.com  Thu Mar  3 11:13:56 2005
+From: terrylr at blauedonau.com (terry l. ridder)
+Date: Thu Mar  3 10:04:13 2005
+Subject: [step-os] introduction and project
+In-Reply-To: <200503031047.24003.peter.denno@nist.gov>
+References: <Pine.LNX.4.62.0503021355580.12543@johann.blauedonau.com>
+	<1109858012.5240.17.camel@dhcp139.isg-scra.org>
+	<200503031047.24003.peter.denno@nist.gov>
+Message-ID: <Pine.LNX.4.62.0503031007500.32599@johann.blauedonau.com>
+
+hello;
+
+comments below.
+
+On Thu, 3 Mar 2005, Peter Denno wrote:
+
+> Hey Craig,
+>
+>
+> BTW, cells-gtk is working quite nice for me. Snapshot attached.
+>
+> On Thursday 03 March 2005 08:53, Craig Lanning wrote:
+>>> ?lispworks professional version
+>>> is imho cost prohibitive.
+>
+> To Terry: I suppose you could use the free personal version of lispworks. I
+> haven't been following what you are trying to do though.
+>
+
+if you mean use lispworks-personal edition so that the express-engine
+gui will work, it will not. lispwork-personal edition has limitation
+that prevent that. been there done that does not work.
+
+>
+>> We're in the (very slow) process of moving the user interface to
+>> something that will run in SBCL or one of the other free Common Lisp
+>> environments.
+>
+>
+
+-- 
+terry l. ridder ><>
+From terrylr at blauedonau.com  Thu Mar  3 11:23:56 2005
+From: terrylr at blauedonau.com (terry l. ridder)
+Date: Thu Mar  3 10:14:14 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <42270B3F.5090707@comcast.net>
+References: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>
+	<Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>
+	<42270B3F.5090707@comcast.net>
+Message-ID: <Pine.LNX.4.62.0503031017260.32599@johann.blauedonau.com>
+
+hello;
+
+comments below.
+
+On Thu, 3 Mar 2005, Stephen Waterbury wrote:
+
+> terry l. ridder wrote:
+>> concerning, exp-engine, again i stated in my intro msg as to why it was
+>> not a viable alternative.
+>
+> Bear in mind that you don't need a Lisp compiler to *use*
+>
+
+yes, i know this.
+
+>
+> Express Engine; only if you want to modify it.  So while
+> contributing to it or incorporating it into a production
+> application may not be an alternative for you, you can still
+> use it as a validation tool, and if you have questions or
+> find bugs, you can contact its maintainers, Peter Denno and
+> Craig Lanning.  (Peter was the original developer, and it
+> was originally called "Expresso".)
+>
+
+i attempted to get exp-engine to run under debian sarge and
+after two days i gave up. i tried lispwork-personal, steel bank, and
+clisp.
+
+>
+> And it could be useful to compare its validation results
+> with those of your improvements to Fedex.  Express Engine
+> was often used by the developers of STEP Application
+> Protocols as a validation tool, before the STEP modular
+> architecture (which uses Express edition 2 -- Express
+> Engine only supports Express edition 1).
+>
+>
+> Steve
+>
+
+-- 
+terry l. ridder ><>
+From edbark at nist.gov  Thu Mar  3 11:26:52 2005
+From: edbark at nist.gov (Ed Barkmeyer)
+Date: Thu Mar  3 10:16:44 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>
+References: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>
+	<Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>
+Message-ID: <42273ACC.7000408@nist.gov>
+
+Terry,
+
+you wrote:
+
+> at the moment i have neither 10303-11:1994 or 10303-11:2004. express
+> language reference manuals. i am working on obtaining at least
+> 10303-11:2004.
+
+I have a copy of the PDF file for ISO 10303-11:2004.
+If we can justify your project as an ISO 10303 support activity, we can 
+send it to you.  (Otherwise, you can go to www.iso.org, put it in your 
+shopping cart, and have your credit card ready.)
+
+OTOH, I will certainly NOT send the 1.4MB ISO standard to the list, and 
+I can't get it past your whitelist filter anyway.
+
+I would like to add to what Phil said.  The grammar for EXPRESS 2004 
+contains several productions that apparently permit things that are 
+explicitly forbidden in the text.  The reason for this is twofold:
+  1) Some constructs are really context-sensitive:  x [y] means
+some instances of x can be followed by a y, not necessarily all, and it 
+may be difficult to describe the relationship syntactically.  That is 
+why the text has "Rules".
+  2) Because the grammar is already large and complex, there are a few 
+cases in which a production uses a non-terminal that has a possible 
+expansion that is never valid for that production.  (Usually this is 
+because the exception is several expansions deep and would require 
+refactoring a large chunk of the grammar.)  These cases are explicitly 
+identified by Rules in the text.
+
+So you really need the text to interpret the grammar properly.
+
+>> In this case rule (b) under 9.5.3.2 applies:
+>> A generic data type may also be used as the result type of a function, 
+>> or as
+>> the type
+>> of a local variable within a function or procedure. Type labels 
+>> references
+>> are required for
+>> this usage and shall refer to type labels declared by the formal 
+>> parameters
+>> (see 9.5.3.3).
+> 
+> is this true for both express language reference manual editon 1 and
+> edition 2?
+
+Yes, both.  The result type of a function must (ultimately) be a 
+specific instantiable type.  When the result type is syntactically a 
+generalized_type, the actual result type must be determinable at the 
+point of each invocation.  So what is required on a generalized result 
+type is a type-tag that indicates which of the actual parameter types 
+the result of that invocation instantiates.
+
+This is an instance of case(2) above.  We didn't want to create a 
+separate grammar for generalized_result_type (although there might have 
+been a better factorization).
+
+-Ed
+
+-- 
+Edward J. Barkmeyer                        Email: edbark@nist.gov
+National Institute of Standards & Technology
+Manufacturing Systems Integration Division
+100 Bureau Drive, Stop 8264                Tel: +1 301-975-3528
+Gaithersburg, MD 20899-8264                FAX: +1 301-975-4694
+
+"The opinions expressed above do not reflect consensus of NIST,
+  and have not been reviewed by any Government authority."
+
+From peter.denno at nist.gov  Thu Mar  3 11:31:00 2005
+From: peter.denno at nist.gov (Peter Denno)
+Date: Thu Mar  3 10:21:20 2005
+Subject: [step-os] introduction and project
+In-Reply-To: <Pine.LNX.4.62.0503031007500.32599@johann.blauedonau.com>
+References: <Pine.LNX.4.62.0503021355580.12543@johann.blauedonau.com>
+	<200503031047.24003.peter.denno@nist.gov>
+	<Pine.LNX.4.62.0503031007500.32599@johann.blauedonau.com>
+Message-ID: <200503031131.00799.peter.denno@nist.gov>
+
+On Thursday 03 March 2005 11:13, terry l. ridder wrote:
+> hello;
+>
+
+> >
+> > To Terry: I suppose you could use the free personal version of lispworks.
+> > I haven't been following what you are trying to do though.
+>
+> if you mean use lispworks-personal edition so that the express-engine
+> gui will work, it will not. lispwork-personal edition has limitation
+> that prevent that. been there done that does not work.
+
+Interesting, can you tell me what doesn't work? 
+
+Of course, as Steve W. pointed out, if you are only intending to use the 
+program, you don't need a lisp environment.
+
+
+-- 
+Best Regards,
+ - Peter
+From golux at comcast.net  Thu Mar  3 11:50:56 2005
+From: golux at comcast.net (Stephen Waterbury)
+Date: Thu Mar  3 10:37:16 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <Pine.LNX.4.62.0503031017260.32599@johann.blauedonau.com>
+References: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>	<Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>	<42270B3F.5090707@comcast.net>
+	<Pine.LNX.4.62.0503031017260.32599@johann.blauedonau.com>
+Message-ID: <42274070.5050706@comcast.net>
+
+terry l. ridder wrote:
+> i attempted to get exp-engine to run under debian sarge and
+> after two days i gave up. i tried lispwork-personal, steel bank, and
+> clisp.
+
+I am running it under Debian sid (unstable), but it should work on
+sarge also.  Try downloading the rpm's for EE 3.1 and patch 3.1.4
+from
+
+<http://exp-engine.sourceforge.net/>
+
+... then run 'alien --to-deb' on them to create the debian
+packages, and install.
+
+If you still have problems, please let us know.
+
+Steve
+From terrylr at blauedonau.com  Thu Mar  3 11:54:41 2005
+From: terrylr at blauedonau.com (terry l. ridder)
+Date: Thu Mar  3 10:44:58 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <42273ACC.7000408@nist.gov>
+References: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>
+	<Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>
+	<42273ACC.7000408@nist.gov>
+Message-ID: <Pine.LNX.4.62.0503031040410.32599@johann.blauedonau.com>
+
+hello;
+
+comments below.
+
+On Thu, 3 Mar 2005, Ed Barkmeyer wrote:
+
+> Terry,
+>
+> you wrote:
+>
+>> at the moment i have neither 10303-11:1994 or 10303-11:2004. express
+>> language reference manuals. i am working on obtaining at least
+>> 10303-11:2004.
+>
+> I have a copy of the PDF file for ISO 10303-11:2004.
+> If we can justify your project as an ISO 10303 support activity, we can send 
+> it to you.  (Otherwise, you can go to www.iso.org, put it in your shopping 
+> cart, and have your credit card ready.)
+>
+
+i do not have any credit cards. i have been disabled since a work
+accident on 26 nov 1996. i am involved in an 8+yr legal nightmare
+over that work accident. the next court date is 9 mar 2005. long story
+of fraud, corporate abuse, money laundrying, etc. i do not receive
+any disability payments. i receive absoletely nothing. my total personal
+income per month is from a service connected disability from the v.a.
+
+i am attempting to find a sponsor who would purchase the 10303-11:2004
+manual.
+
+anyway, i have been homebound since the accident. being 52yo and having
+multiple physical challenges i am viewed as obsolete. in an attempt to
+keep my skills up i work on opensource projects.
+
+>
+> OTOH, I will certainly NOT send the 1.4MB ISO standard to the list, and I 
+> can't get it past your whitelist filter anyway.
+>
+
+i have nist.gov whitelist since i exchange e-mail with the nist folk
+that are/were involved with the enhanced machine controller.
+
+>
+> I would like to add to what Phil said.  The grammar for EXPRESS 2004 contains 
+> several productions that apparently permit things that are explicitly 
+> forbidden in the text.  The reason for this is twofold:
+> 1) Some constructs are really context-sensitive:  x [y] means
+> some instances of x can be followed by a y, not necessarily all, and it may 
+> be difficult to describe the relationship syntactically.  That is why the 
+> text has "Rules".
+> 2) Because the grammar is already large and complex, there are a few cases 
+> in which a production uses a non-terminal that has a possible expansion that 
+> is never valid for that production.  (Usually this is because the exception 
+> is several expansions deep and would require refactoring a large chunk of the 
+> grammar.)  These cases are explicitly identified by Rules in the text.
+>
+> So you really need the text to interpret the grammar properly.
+>
+
+snip
+
+>
+> -Ed
+>
+>
+
+-- 
+terry l. ridder ><>
+From golux at comcast.net  Thu Mar  3 12:11:09 2005
+From: golux at comcast.net (Stephen Waterbury)
+Date: Thu Mar  3 10:57:25 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <42273ACC.7000408@nist.gov>
+References: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>	<Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>
+	<42273ACC.7000408@nist.gov>
+Message-ID: <4227452D.1010305@comcast.net>
+
+Ed Barkmeyer wrote:
+> If we can justify your project as an ISO 10303 support activity, we can 
+> send it to you.
+
+I'm hereby declaring all activities of subscribers to this list
+to be ISO 10303 support activities.  :)
+
+Therefore, I am making available courtesy copies of
+ISO 10303-11:2004 and ISO 10303-11 ed. 2
+at "unpublished" links on step.nasa.gov:
+
+http://step.nasa.gov/doc/10303-11-2004.pdf
+http://step.nasa.gov/doc/10303-11ed2.pdf
+
+(Hope this wasn't too late for you, Terry. ;)
+
+Cheers,
+Steve
+From gregory.l.smith at boeing.com  Thu Mar  3 12:14:39 2005
+From: gregory.l.smith at boeing.com (Smith, Gregory L)
+Date: Thu Mar  3 11:05:07 2005
+Subject: [step-os] boolean_choose in ap203
+Message-ID: <3BFEACE361F5BF429DD1DA593E3A7C090667237C@xch-nw-28.nw.nos.boeing.com>
+
+If we could just get you to work as hard and fast on Em Pilot stuff! :')
+
+(good work!)
+
+Gregory L. Smith
+Office 253-773-5947/Cell 206-679-2974
+
+
+
+-----Original Message-----
+From: Stephen Waterbury [mailto:golux@comcast.net] 
+Sent: Thursday, March 03, 2005 9:11 AM
+To: STEP Open-Source
+Subject: Re: [step-os] boolean_choose in ap203
+
+
+Ed Barkmeyer wrote:
+> If we can justify your project as an ISO 10303 support activity, we 
+> can
+> send it to you.
+
+I'm hereby declaring all activities of subscribers to this list to be
+ISO 10303 support activities.  :)
+
+Therefore, I am making available courtesy copies of
+ISO 10303-11:2004 and ISO 10303-11 ed. 2
+at "unpublished" links on step.nasa.gov:
+
+http://step.nasa.gov/doc/10303-11-2004.pdf
+http://step.nasa.gov/doc/10303-11ed2.pdf
+
+(Hope this wasn't too late for you, Terry. ;)
+
+Cheers,
+Steve
+_______________________________________________
+step-os mailing list
+step-os@step.nasa.gov http://step.nasa.gov/mailman/listinfo/step-os
+
+From golux at comcast.net  Thu Mar  3 12:26:15 2005
+From: golux at comcast.net (Stephen Waterbury)
+Date: Thu Mar  3 11:12:30 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <3BFEACE361F5BF429DD1DA593E3A7C090667237C@xch-nw-28.nw.nos.boeing.com>
+References: <3BFEACE361F5BF429DD1DA593E3A7C090667237C@xch-nw-28.nw.nos.boeing.com>
+Message-ID: <422748B7.7000903@comcast.net>
+
+Smith, Gregory L wrote:
+> If we could just get you to work as hard and fast on Em Pilot stuff! :')
+
+Hey, you're off-topic!  (Besides, it wasn't that hard.  ;)
+
+Steve
+From lanning at scra.org  Thu Mar  3 13:13:28 2005
+From: lanning at scra.org (Craig Lanning)
+Date: Thu Mar  3 12:03:49 2005
+Subject: [step-os] boolean_choose in ap203
+In-Reply-To: <42274070.5050706@comcast.net>
+References: <000c01c51fd4$04dc4740$1966a8c0@esukpc25>
+	<Pine.LNX.4.62.0503030431580.27607@johann.blauedonau.com>
+	<42270B3F.5090707@comcast.net>
+	<Pine.LNX.4.62.0503031017260.32599@johann.blauedonau.com>
+	<42274070.5050706@comcast.net>
+Message-ID: <1109873609.5240.19.camel@dhcp139.isg-scra.org>
+
+Steve,
+
+I uploaded your converted .deb's for 3.1.0 and 3.1.4.  He should
+probably try those.
+
+Craig
+
+On Thu, 2005-03-03 at 11:50 -0500, Stephen Waterbury wrote:
+> terry l. ridder wrote:
+> > i attempted to get exp-engine to run under debian sarge and
+> > after two days i gave up. i tried lispwork-personal, steel bank, and
+> > clisp.
+> 
+> I am running it under Debian sid (unstable), but it should work on
+> sarge also.  Try downloading the rpm's for EE 3.1 and patch 3.1.4
+> from
+> 
+> <http://exp-engine.sourceforge.net/>
+> 
+> ... then run 'alien --to-deb' on them to create the debian
+> packages, and install.
+> 
+> If you still have problems, please let us know.
+> 
+> Steve
+> _______________________________________________
+> step-os mailing list
+> step-os@step.nasa.gov
+> http://step.nasa.gov/mailman/listinfo/step-os
+
+From terrylr at blauedonau.com  Fri Mar  4 04:20:03 2005
+From: terrylr at blauedonau.com (terry l. ridder)
+Date: Fri Mar  4 03:10:16 2005
+Subject: [step-os] exp-engine debian package fails to install
+Message-ID: <Pine.LNX.4.62.0503040317480.15317@johann.blauedonau.com>
+
+hello;
+
+i downloaded the exp-engine debian packages from sourceforge.net.
+i attempted to install. below is the error i am receiving.
+
+dpkg --install expresso_3.1.0-2_i386.deb
+(Reading database ... 87018 files and directories currently installed.)
+Unpacking expresso (from expresso_3.1.0-2_i386.deb) ...
+dpkg-deb: subprocess paste killed by signal (Broken pipe)
+dpkg: error processing expresso_3.1.0-2_i386.deb (--install):
+  short read in buffer_copy (backend dpkg-deb during
+`./usr/bin/expresso')
+Errors were encountered while processing:
+  expresso_3.1.0-2_i386.deb
+
+
+i am running debian sarge.
+
+-- 
+terry l. ridder ><>
+From lanning at scra.org  Fri Mar  4 08:10:17 2005
+From: lanning at scra.org (Craig Lanning)
+Date: Fri Mar  4 07:00:35 2005
+Subject: [step-os] exp-engine debian package fails to install
+In-Reply-To: <Pine.LNX.4.62.0503040317480.15317@johann.blauedonau.com>
+References: <Pine.LNX.4.62.0503040317480.15317@johann.blauedonau.com>
+Message-ID: <1109941818.5286.6.camel@dhcp139.isg-scra.org>
+
+[I believe that, technically, this discussion is off topic on step-os
+and really should be conducted on exp-engine-devel@lists.sf.net or 
+exp-engine-users@lists.sf.net so I'm CC'ng both of them.]
+
+Steve, did you install from the .deb packages you created?  Since I
+don't know anything about Debian (I use Fedora Core 3), do you have any
+idea what might be going on?
+
+Craig
+
+On Fri, 2005-03-04 at 03:20 -0600, terry l. ridder wrote:
+> hello;
+> 
+> i downloaded the exp-engine debian packages from sourceforge.net.
+> i attempted to install. below is the error i am receiving.
+> 
+> dpkg --install expresso_3.1.0-2_i386.deb
+> (Reading database ... 87018 files and directories currently installed.)
+> Unpacking expresso (from expresso_3.1.0-2_i386.deb) ...
+> dpkg-deb: subprocess paste killed by signal (Broken pipe)
+> dpkg: error processing expresso_3.1.0-2_i386.deb (--install):
+>   short read in buffer_copy (backend dpkg-deb during
+> `./usr/bin/expresso')
+> Errors were encountered while processing:
+>   expresso_3.1.0-2_i386.deb
+> 
+> 
+> i am running debian sarge.
+> 
+
+From golux at comcast.net  Fri Mar  4 10:40:01 2005
+From: golux at comcast.net (Stephen Waterbury)
+Date: Fri Mar  4 09:30:45 2005
+Subject: [step-os] exp-engine debian package fails to install
+In-Reply-To: <Pine.LNX.4.62.0503040317480.15317@johann.blauedonau.com>
+References: <Pine.LNX.4.62.0503040317480.15317@johann.blauedonau.com>
+Message-ID: <42288151.2000603@comcast.net>
+
+terry l. ridder wrote:
+> hello;
+> 
+> i downloaded the exp-engine debian packages from sourceforge.net.
+> i attempted to install. below is the error i am receiving.
+
+I'm not familiar with those errors.  Since the packages that
+Craig put on his site were built on my machine (debian sid),
+perhaps they were not suitable for sarge.
+
+I'd suggest downloading the rpm's and running
+
+'alien --to-deb'
+
+on them, then try installing the resulting debian packages.
+At least they will have been converted on your machine, so may
+stand a better chance of working.  I don't know what voodoo
+is invoked by 'alien', but I suppose it might be library-
+sensitive.  I have no idea what a "sub-process paste" is,
+but it sounds funky.
+
+If alien chokes, you can run it with '--verbose' or
+'--veryverbose' for more info.
+
+- Steve
+From golux at comcast.net  Fri Mar  4 10:56:06 2005
+From: golux at comcast.net (Stephen Waterbury)
+Date: Fri Mar  4 09:46:23 2005
+Subject: [step-os] exp-engine debian package fails to install
+In-Reply-To: <42288151.2000603@comcast.net>
+References: <Pine.LNX.4.62.0503040317480.15317@johann.blauedonau.com>
+	<42288151.2000603@comcast.net>
+Message-ID: <42288516.70304@comcast.net>
+
+Terry,
+
+Craig has a good point; not everyone on step-os might want to
+follow all the gory details of an Express Engine installation
+problem, so let's move this thread over to exp-engine-users
+( <exp-engine-users@lists.sf.net> ).  If anyone here wants to
+continue to follow it, go to
+
+<https://lists.sourceforge.net/lists/listinfo/exp-engine-users>
+
+and subscribe.  :)
+
+- Steve
+From Harold.P.Frisch at nasa.gov  Fri Mar  4 11:08:22 2005
+From: Harold.P.Frisch at nasa.gov (Harold P. Frisch)
+Date: Fri Mar  4 09:58:31 2005
+Subject: [step-os] exp-engine debian package fails to install
+In-Reply-To: <42288516.70304@comcast.net>
+References: <Pine.LNX.4.62.0503040317480.15317@johann.blauedonau.com>
+	<42288151.2000603@comcast.net> <42288516.70304@comcast.net>
+Message-ID: <1109952505.422887f61117f@webpop.gsfc.nasa.gov>
+
+
+
+Thanks
+
+Quoting Stephen Waterbury <golux@comcast.net>:
+
+> Terry,
+>
+> Craig has a good point; not everyone on step-os might want to
+> follow all the gory details of an Express Engine installation
+> problem, so let's move this thread over to exp-engine-users
+> ( <exp-engine-users@lists.sf.net> ).  If anyone here wants to
+> continue to follow it, go to
+>
+> <https://lists.sourceforge.net/lists/listinfo/exp-engine-users>
+>
+> and subscribe.  :)
+>
+> - Steve
+> _______________________________________________
+> step-os mailing list
+> step-os@step.nasa.gov
+> http://step.nasa.gov/mailman/listinfo/step-os
+>
+
+
+Harry

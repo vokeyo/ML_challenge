@@ -1,0 +1,1015 @@
+                  GLBA Metadata Information File
+As of:  7/14/95 3:26:11 PM
+
+----------------------- Project Information --------------------------------
+Project: Halibut Diet
+Owner  : Philip N. Hooge
+Created: 8/30/91 2:19:52 PM
+Summary:  
+     Represented here are results of studies on the diet, 
+     size/age frequency, age, sex and reproductive status of  
+     Pacific halibut.  These studies were begun as part of an 
+     effort to quantify the ecosystem level effects of the 
+     commercial harvest of halibut as part of a 10 year study to 
+     evaluate the commercial harvest of halibut in Glacier Bay 
+     National Park.   The studies represented here were 
+     initiated to understand the ecological consequences of 
+     halibut diet and to elucidate patterns of morphological, 
+     size/age frequency, and reproductive parameters which could 
+     provide needed data to  model the effects of commercial 
+     fishing on halibut.
+GLBA Path: k:\projects
+
+----------------------- GLBA File Information --------------------------------
+GLBA File Name: k:\projects\halibut\diet\data\foodhabi.dbf
+GLBA Last Update By: Philip N. Hooge
+GLBA Last Update On:7/14/95 12:01:13 PM
+------------------------------------------------------------------------------
+
+Identification Information
+     Originator (7.1.1): 
+       Philip N. Hooge
+     Publication Date (7.1.2): 
+       Not Available
+
+  Citation Information:
+     Title(1.1): 
+       Data on Halibut examined for stomach, morphological and 
+       reproductive values
+     Abstract(1.2.1): 
+       This dataset contains information on Pacific halibut 
+       (Hippoglossus stenolepis) processed for stomach contents, 
+       morphological characteristics,  age and reproductive 
+       condition which were captured in Glacier Bay National Park. 
+       The primary emphasis was on the sport catch due to the 
+       wider range of size frequency classes but some data from 
+       the commercial harvest is included.
+     Purpose(1.2.2): 
+       These data were collected as part of an effort to quantify 
+       the ecosystem level effects of the commercial harvest of 
+       halibut as part of a 10 year study to evaluate the 
+       commercial harvest of halibut in Glacier Bay National Park. 
+       Knowledge of the diet, age/size frequency classes, 
+       reproductive condition, and sex were lacking for halibut 
+       and was determined to be necessary to evaluate what effects 
+       the commercial harvest has on Glacier Bay.
+     Time Period of Content(1.3): 
+       8/01/91-8/30/94
+
+Status
+     Progress(1.4.1): 
+       In Work
+     Maintenance and Update Frequency(1.4.2): 
+       As Needed
+
+Spatial Domain
+     Description of Geographic Extent(1.5.0): 
+       All of Glacier Bay but the primary focus was on the sport 
+       catch from Ripple Cove, Point Carolus, Strawberry Island 
+       Area, Bartett Cove and Francis Island area.
+
+  Bounding Coordinates:
+     West Bounding Coordinate(1.5.1.1): 
+       13710.00
+     East Bounding Coordinate(1.5.1.2): 
+       13546.00
+     North Bounding Coordinate(1.5.1.3): 
+       5940.00
+     South Bounding Coordinate(1.5.1.4): 
+       5820.00
+
+Keywords
+     Theme Keyword Thesaurus(1.6.1.1): 
+       None
+     Theme Keyword(1.6.1.2):
+     Access Constraints(1.7): 
+       Some Glacier Bay Ecosystem Project data sets may contain 
+       data with access constraints.  Such areas include sensitive 
+       information on the locations of endangered species or 
+       cultural artifacts and data which contain private or 
+       confidential information. Data sets which are not complete 
+       may have access constraints until completion. Please 
+       contact the Information Management Systems Administrator at 
+       the Glacier Bay Field Station for details on any access 
+       constraints.
+     Use Constraints(1.8): 
+       Some Glacier Bay Ecosystem Project data sets may contain 
+       data with use constraints.  Such areas include sensitive 
+       information on the locations of endangered species or 
+       cultural artifacts and data which contain private or 
+       confidential information. In addition some data sets are 
+       collaborative efforts with outside researchers and 
+       represent unpublished work for which we request respect for 
+       intellectual property rights.  Some data sets are not 
+       complete and if access is given the use may be restricted 
+       until completion. Please contact the Information Management 
+       Systems Administrator at the Glacier Bay Field Station for 
+       details on any use constraints.
+
+Data Quality Information
+
+  Attribute Accuracy:
+     Completeness Report(2.3): 
+       Data is not complete, estimated completion date is 12/5/95 
+
+Lineage
+
+  Process Step:
+     Process Description(2.5.2.1): 
+       Data on capture were obtained from sport or commercial 
+       fisherman.  Morphological measurements were made on halibut 
+       which were then processed to obtain the stomach contents, 
+       sex, otolith for aging and reproductive condition.
+
+Spatial Data Organization Information
+     Universal Transverse Mercator (UTM)(4.1.2.2.2): 
+       UTM
+     UTM Zone Number(4.1.2.2.2.1): 
+       8
+     Planar Coordinate Encoding Method(4.1.2.4.1): 
+       Coordinate Pair
+     Abscissa Resolution(4.1.2.4.2.1): 
+       500
+     Ordinate Resolution(4.1.2.4.2.2): 
+       500
+     Planar Distance Units(4.1.2.4.4): 
+       Meters
+     Horizontal Datum Name(4.1.4.1): 
+       NAD27
+     Depth Datum Name(4.2.2.1): 
+       Sea Level
+     Depth Resolution(4.2.2.2): 
+       1
+     Depth Distance Units(4.2.2.3): 
+       Fathoms
+
+Entity and Attribute Information
+
+  Entity Type:
+     Entity Type Label(5.1.1.1): 
+       Halibut
+     Entity Type Definition(5.1.1.2): 
+       A halibut and associated morphological, diet, age, capture 
+       and reproductive data.
+
+  Attribute:
+
+     Attribute Label (5.1.2.1): 
+       FISHNMBR
+     Attribute Definition (5.1.2.2):
+       The number of the halibut
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer value 
+
+     Attribute Label (5.1.2.1): 
+       DATE
+     Attribute Definition (5.1.2.2):
+       The date the halibut was captured 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A date in the format MM/DD/YY 
+
+     Attribute Label (5.1.2.1): 
+       SEX
+     Attribute Definition (5.1.2.2):
+       The sex of the halibut 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Enumerated
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            U
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            Unknown 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            M
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            Male 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            F
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            Female 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+
+     Attribute Label (5.1.2.1): 
+       BOAT
+     Attribute Definition (5.1.2.2):
+       The name of the boat that captured the fish 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A character string 
+
+     Attribute Label (5.1.2.1): 
+       LOCATION
+     Attribute Definition (5.1.2.2):
+       The name of the location the fish was captured at 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+             A character string
+
+     Attribute Label (5.1.2.1): 
+       STOM_TA
+     Attribute Definition (5.1.2.2):
+       Whether or not stomach contents were taken 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Enumerated
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            T
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            A stomach was taken 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            F
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            A stomach was not taken
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+
+     Attribute Label (5.1.2.1): 
+       STOMACHCOO
+     Attribute Definition (5.1.2.2):
+       A description of the stomach contents 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A character string 
+
+     Attribute Label (5.1.2.1): 
+       OTOLITH_TA
+     Attribute Definition (5.1.2.2):
+       Whether or not an otolith was taken for aging 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Enumerated
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            T
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            A otolith was taken 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            F
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            A otolith was not taken 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+
+     Attribute Label (5.1.2.1): 
+       AGE
+     Attribute Definition (5.1.2.2):
+       The age of the halibut determined from the otolith 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       Years
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer value 
+
+     Attribute Label (5.1.2.1): 
+       X
+     Attribute Definition (5.1.2.2):
+       The UTM easting value for the location captured in zone 8
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Range
+          Range Domain Minimum (5.1.2.4.2.1): 
+            400000
+          Range Domain Maximum (5.1.2.4.2.2): 
+            480000 
+
+
+     Attribute Label (5.1.2.1): 
+       Y
+     Attribute Definition (5.1.2.2):
+       The UTM northing value for the location captured in zone 8
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Range
+          Range Domain Minimum (5.1.2.4.2.1): 
+            6460000
+          Range Domain Maximum (5.1.2.4.2.2): 
+            6560000 
+
+
+     Attribute Label (5.1.2.1): 
+       POS_ERR
+     Attribute Definition (5.1.2.2):
+       The positional error estimate 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       kilometers
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer value 
+
+     Attribute Label (5.1.2.1): 
+       DEPTH_FEET
+     Attribute Definition (5.1.2.2):
+       The depth in feet that the halibut was captured
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       Feet
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer value 
+
+     Attribute Label (5.1.2.1): 
+       DEPTH_FATH
+     Attribute Definition (5.1.2.2):
+       The depth the halibut was capture in fathoms 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       Fathoms
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer
+
+     Attribute Label (5.1.2.1): 
+       DEPTH_M
+     Attribute Definition (5.1.2.2):
+       The depth in meters that the halibut was captured
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       Meters
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer value 
+
+     Attribute Label (5.1.2.1): 
+       TIP_FORK
+     Attribute Definition (5.1.2.2):
+       The total length of the halibut 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       Centimeters
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with one decimal place 
+
+     Attribute Label (5.1.2.1): 
+       TIP_OPERC
+     Attribute Definition (5.1.2.2):
+       The head length (tip to operculum) of the halibut 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       Centimeters
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with one decimal place 
+
+     Attribute Label (5.1.2.1): 
+       INTRAOCC
+     Attribute Definition (5.1.2.2):
+       The distance between the eyes of the halibut (Interoccular 
+       distance)
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       Millimeters
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with one decimal place 
+
+     Attribute Label (5.1.2.1): 
+       WEIGHT_LBS
+     Attribute Definition (5.1.2.2):
+       The weight of the halibut in pounds 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       pounds 
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with one decimal place 
+
+     Attribute Label (5.1.2.1): 
+       SCRATCHES
+     Attribute Definition (5.1.2.2):
+       Whether or not the halibut had scratches on its white side.
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Enumerated
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            T
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            The halibut had scratches 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            F
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            The halibut did not have scratches 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+
+     Attribute Label (5.1.2.1): 
+       EXT_PAR_NM
+     Attribute Definition (5.1.2.2):
+       The number of parasite species found on external portion of 
+       the halibut
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer 
+
+     Attribute Label (5.1.2.1): 
+       EXT_PAR_DE
+     Attribute Definition (5.1.2.2):
+       A description of the external parasites 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A character string 
+
+     Attribute Label (5.1.2.1): 
+       INT_PAR_NM
+     Attribute Definition (5.1.2.2):
+       The number of parasite species found internally 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer value 
+
+     Attribute Label (5.1.2.1): 
+       INT_PAR_DE
+     Attribute Definition (5.1.2.2):
+       A description of the internal parasites 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A character string 
+
+     Attribute Label (5.1.2.1): 
+       OTOLITH_WE
+     Attribute Definition (5.1.2.2):
+       The weight of the otolith if taken 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       grams
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with three decimal places 
+
+     Attribute Label (5.1.2.1): 
+       OVARY_TA
+     Attribute Definition (5.1.2.2):
+       Whether or not an ovary was taken
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Enumerated
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            T
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            A ovary was taken 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            F
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            A ovary was not taken 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+
+     Attribute Label (5.1.2.1): 
+       OVARY_WE
+     Attribute Definition (5.1.2.2):
+       The weight of the ovary if taken
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       grams
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with one decimal place 
+
+     Attribute Label (5.1.2.1): 
+       EGG_PER_GM
+     Attribute Definition (5.1.2.2):
+       The number of eggs in one representative gram of the ovary
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer value 
+
+     Attribute Label (5.1.2.1): 
+       STAGE_DEV
+     Attribute Definition (5.1.2.2):
+       The developmental stage of the eggs
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Enumerated
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            Immature
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            Immature eggs 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            Ripening
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            Eggs in the process of becoming ripe 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            Ripe
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            Fully mature eggs ready to spawn 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+
+     Attribute Label (5.1.2.1): 
+       STOMFULNES
+     Attribute Definition (5.1.2.2):
+       The degree to which the stomach was full 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with three decimal places 
+
+     Attribute Label (5.1.2.1): 
+       TOTSTOMWGT
+     Attribute Definition (5.1.2.2):
+       The total weight of the stomach
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       grams
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with 3 decimal places 
+
+     Attribute Label (5.1.2.1): 
+       COMMENTS
+     Attribute Definition (5.1.2.2):
+       Comments about the halibut 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A character string 
+
+Distribution Information
+     Distributor(6.1): 
+       Information Management System Administrator ,National 
+       Biological Service, Box 140, Glacier Bay Field 
+       Station, Gustavus, AK 99826, (907-697-2230)
+     Distribution Liability(6.3): 
+       Although these data have been processed successfully on a 
+       computer system at the National Biological Service, no 
+       warranty expressed or implied is made regarding the 
+       accuracy or utility of the data on any other system or for 
+       general or scientific purposes, nor shall the act of 
+       distribution constitute any such warranty. This disclaimer 
+       applies both to individual use of the data and aggregate 
+       use with other data.  It is strongly recommended that these 
+       data are directly acquired from a National Biological 
+       Service server, and not indirectly through other sources 
+       which may have changed the data in some way.  It is also 
+       strongly recommended that careful attention be paid to the 
+       contents of the metadata file associated with these data.  
+       The National Biological Service shall not be held liable 
+       for improper or incorrect use of the data described and/or 
+       contained herein.
+     Standard Order Process(6.4): 
+       (Interim Statement) The Glacier Bay Information Management 
+       Team is currently developing the methodologies for 
+       distribution of data sets.  Until standardized methods are 
+       developed please contact the Information Management System 
+       Administrator to obtain the latest information on methods 
+       for obtaining data.
+
+Section 7 -- Metadata Reference Information
+     Metadata Date: 
+       7/14/95 12:16:14 PM
+
+     Metadata Contact Person (7.4): 
+       Name: Philip N. Hooge
+       Address Type: Mailing
+       Address     : Glacier Bay Field Station, Box 140
+       City        : Gustavus
+       State/Provin: AK
+       Postal Code : 99826
+       Country     : USA
+       Voice Phone :  907-697-2230
+       Fax         :  
+       E-Mail Addr :  Philip_Hooge@nps.gov
+       Affiliation : NBS Glacier Bay Field Station
+       Position    :  Research Population Ecologist
+
+     Metadata Contact Organization (7.4): 
+       Name: NBS Glacier Bay Field Station
+       Address Type: Mailing
+       Address     :  
+       City        : Gustavus
+       State/Provin: AK
+       Postal Code : 99826
+       Country     : USA
+       Voice Phone : None
+       Fax         : None
+       E-Mail Addr : GLBA_Information_Management@nps.gov
+     Metadata Standard Name(7.5): 
+       FGDC Content Standards for Digital Geospatial Metadata
+     Metadata Standard Version(7.6): 
+       June 8, 1994
+
+----------------------- GLBA File Information --------------------------------
+GLBA File Name: k:\projects\halibut\diet\data\stomcont.dbf
+GLBA Last Update By: Philip N. Hooge
+GLBA Last Update On:7/14/95 12:01:42 PM
+------------------------------------------------------------------------------
+
+Identification Information
+     Originator (7.1.1): 
+       Philip N. Hooge
+     Publication Date (7.1.2): 
+       Not Available
+
+  Citation Information:
+     Title(1.1): 
+       The stomach contents of Pacific halibut
+     Abstract(1.2.1): 
+       This dataset contains information on diet items taken from  
+       Pacific halibut (Hippoglossus stenolepis) processed for 
+       stomach contents, morphological characteristics,  age and 
+       reproductive condition which were captured in Glacier Bay 
+       National Park.  The primary emphasis was on the sport catch 
+       due to the wider range of size frequency classes but some 
+       data from the commercial harvest is included.
+     Purpose(1.2.2): 
+       These data were collected as part of an effort to quantify 
+       the ecosystem level effects of the commercial harvest of 
+       halibut as part of a 10 year study to evaluate the 
+       commercial harvest of halibut in Glacier Bay National Park. 
+       Knowledge of the diet, age/size frequency classes, 
+       reproductive condition, and sex were lacking for halibut 
+       and was determined to be necessary to evaluate what effects 
+       the commercial harvest has on Glacier Bay.
+     Time Period of Content(1.3): 
+       8/01/92-8/30/94
+
+Status
+     Progress(1.4.1): 
+       In Work
+     Maintenance and Update Frequency(1.4.2): 
+       As Needed
+
+Spatial Domain
+     Description of Geographic Extent(1.5.0): 
+       All of Glacier Bay but the primary focus was on the sport 
+       catch from Ripple Cove, Point Carolus, Strawberry Island 
+       Area, Bartlett Cove and Francis Island area.
+
+  Bounding Coordinates:
+     West Bounding Coordinate(1.5.1.1): 
+       13710.00
+     East Bounding Coordinate(1.5.1.2): 
+       13546.00
+     North Bounding Coordinate(1.5.1.3): 
+       5940.00
+     South Bounding Coordinate(1.5.1.4): 
+       5820.00
+
+Keywords
+     Theme Keyword Thesaurus(1.6.1.1): 
+       None
+     Theme Keyword(1.6.1.2):
+     Access Constraints(1.7): 
+       Some Glacier Bay Ecosystem Project data sets may contain 
+       data with access constraints.  Such areas include sensitive 
+       information on the locations of endangered species or 
+       cultural artifacts and data which contain private or 
+       confidential information. Data sets which are not complete 
+       may have access constraints until completion. Please 
+       contact the Information Management Systems Administrator at 
+       the Glacier Bay Field Station for details on any access 
+       constraints.
+     Use Constraints(1.8): 
+       Some Glacier Bay Ecosystem Project data sets may contain 
+       data with use constraints.  Such areas include sensitive 
+       information on the locations of endangered species or 
+       cultural artifacts and data which contain private or 
+       confidential information. In addition some data sets are 
+       collaborative efforts with outside researchers and 
+       represent unpublished work for which we request respect for 
+       intellectual property rights.  Some data sets are not 
+       complete and if access is given the use may be restricted 
+       until completion. Please contact the Information Management 
+       Systems Administrator at the Glacier Bay Field Station for 
+       details on any use constraints.
+
+Data Quality Information
+
+  Attribute Accuracy:
+     Completeness Report(2.3): 
+       Data is not complete, estimated completion date is 12/5/95  
+
+Lineage
+
+  Process Step:
+
+Spatial Data Organization Information
+
+Entity and Attribute Information
+
+  Entity Type:
+     Entity Type Label(5.1.1.1): 
+       Prey Item
+     Entity Type Definition(5.1.1.2): 
+        
+
+  Attribute:
+
+     Attribute Label (5.1.2.1): 
+       FISHNMBR
+     Attribute Definition (5.1.2.2):
+       The number of the halibut that the diet prey item came from 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer value 
+
+     Attribute Label (5.1.2.1): 
+       PREYNMBR
+     Attribute Definition (5.1.2.2):
+       The number of the prey item for a particular halibut
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A integer that starts with 0 for the first prey item for a 
+            particular halibut and goes up the number of prey items
+
+     Attribute Label (5.1.2.1): 
+       SPECIES
+     Attribute Definition (5.1.2.2):
+       The scientific name of the species 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Code Set
+          CodeSet Name (5.1.2.4.3.1): 
+            Species.dbf
+
+     Attribute Label (5.1.2.1): 
+       CODE
+     Attribute Definition (5.1.2.2):
+       The species code 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Code Set
+          CodeSet Name (5.1.2.4.3.1): 
+            Species.dbf 
+
+     Attribute Label (5.1.2.1): 
+       TAX_LEVEL
+     Attribute Definition (5.1.2.2):
+       The taxonomical level that the prey item was identified to
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Range
+          Range Domain Minimum (5.1.2.4.2.1): 
+            1
+          Range Domain Maximum (5.1.2.4.2.2): 
+            6
+
+
+     Attribute Label (5.1.2.1): 
+       SEX
+     Attribute Definition (5.1.2.2):
+       The sex of the prey item 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Domain Type: 
+       Enumerated
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            M
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            Male 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            F
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            Female 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+          Enumerated Domain Value (5.1.2.4.1.1): 
+            U
+          Enumerated Domain Def (5.1.2.4.1.2): 
+            Unknown 
+          Enumerated Domain Def Source (5.1.2.4.1.3): 
+            None
+
+
+     Attribute Label (5.1.2.1): 
+       LENGTH
+     Attribute Definition (5.1.2.2):
+       The length of the prey item 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       Millimeters
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with one decimal place 
+
+     Attribute Label (5.1.2.1): 
+       WIDTH
+     Attribute Definition (5.1.2.2):
+       The width of the prey item 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       Millimeters
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with one decimal place 
+
+     Attribute Label (5.1.2.1): 
+       WEIGHT
+     Attribute Definition (5.1.2.2):
+       The weight of the prey item 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       grams
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with two decimal places 
+
+     Attribute Label (5.1.2.1): 
+       PERCT_WGHT
+     Attribute Definition (5.1.2.2):
+       Percent weight of total stomach contents 
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       gram 
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with 2 decimal places 
+
+     Attribute Label (5.1.2.1): 
+       TOTALWGHT
+     Attribute Definition (5.1.2.2):
+       The total weight of the stomach contents for that 
+       particular halibut
+     Attribute Definition Source (5.1.2.3): 
+       None
+     Attribute Units of Measure (5.1.2.5): 
+       gram
+     Attribute Domain Type: 
+       Unrepresentable
+          Unrepresentable Domain (5.1.2.4.4): 
+            A real with two decimal places 
+
+Distribution Information
+     Distributor(6.1): 
+       Information Management System Administrator ,National 
+       Biological Service, Box 140, Glacier Bay Field 
+       Station, Gustavus, AK 99826, (907-697-2230)
+     Distribution Liability(6.3): 
+       Although these data have been processed successfully on a 
+       computer system at the National Biological Service, no 
+       warranty expressed or implied is made regarding the 
+       accuracy or utility of the data on any other system or for 
+       general or scientific purposes, nor shall the act of 
+       distribution constitute any such warranty. This disclaimer 
+       applies both to individual use of the data and aggregate 
+       use with other data.  It is strongly recommended that these 
+       data are directly acquired from a National Biological 
+       Service server, and not indirectly through other sources 
+       which may have changed the data in some way.  It is also 
+       strongly recommended that careful attention be paid to the 
+       contents of the metadata file associated with these data.  
+       The National Biological Service shall not be held liable 
+       for improper or incorrect use of the data described and/or 
+       contained herein.
+     Standard Order Process(6.4): 
+       (Interim Statement) The Glacier Bay Information Management 
+       Team is currently developing the methodologies for 
+       distribution of data sets.  Until standardized methods are 
+       developed please contact the Information Management System 
+       Administrator to obtain the latest information on methods 
+       for obtaining data.
+
+Section 7 -- Metadata Reference Information
+     Metadata Date: 
+       7/14/95 2:51:05 PM
+
+     Metadata Contact Person (7.4): 
+       Name: Philip N. Hooge
+       Address Type: Mailing
+       Address     : Glacier Bay Field Station, Box 140
+       City        : Gustavus
+       State/Provin: AK
+       Postal Code : 99826
+       Country     : USA
+       Voice Phone :  907-697-2230
+       Fax         :  
+       E-Mail Addr :  Philip_Hooge@nps.gov
+       Affiliation : NBS Glacier Bay Field Station
+       Position    :  Research Population Ecologist
+
+     Metadata Contact Organization (7.4): 
+       Name: NBS Glacier Bay Field Station
+       Address Type: Mailing
+       Address     :  
+       City        : Gustavus
+       State/Provin: AK
+       Postal Code : 99826
+       Country     : USA
+       Voice Phone : None
+       Fax         : None
+       E-Mail Addr : GLBA_Information_Management@nps.gov
+     Metadata Standard Name(7.5): 
+       FGDC Content Standards for Digital Geospatial Metadata
+     Metadata Standard Version(7.6): 
+       June 8, 1994
