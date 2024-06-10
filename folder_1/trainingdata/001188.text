@@ -1,0 +1,600 @@
+Warning in <TClassTable::Add>: class timespec already in TClassTable
+Loading Uber
+OBJ: TStyle	tmpStyle	Temp Style : 0 at: 0x8538fc0
+
+Processing meuPlots.C("/afs/fnal.gov/files/home/room3/hartnell/caius/mytest/MeuCal/MeuSummary601_0.root")...
+Successfully opened connection to: mysql:odbc://minos-db1.fnal.gov/temp
+This client, and MySQL server (MySQL 4.1.11-log) does support prepared statements.
+Successfully opened connection to: mysql:odbc://minos-db1.fnal.gov/offline
+This client, and MySQL server (MySQL 4.1.11-log) does support prepared statements.
+DbiCascader Status:- 
+Status   URL
+
+Closed         mysql:odbc://minos-db1.fnal.gov/temp
+Closed (auth)  mysql:odbc://minos-db1.fnal.gov/offline
+
+DbiTableProxy: Can L2 cache CalTimeCalibration
+DbiTableProxy: Can L2 cache CalTimeJump
+DbiTableProxy: Can L2 cache PulserTimeDrift
+DbiTableProxy: Can L2 cache PulserTimingCardSetting
+DbiTableProxy: Can L2 cache CalADCtoPEs
+DbiTableProxy: Can L2 cache CalVaLinearity
+DbiTableProxy: Can L2 cache CalDrift
+DbiTableProxy: Can L2 cache CalStripToStrip
+DbiTableProxy: Can L2 cache CalStripAtten
+DbiTableProxy: Can L2 cache CalMIPCalibration
+DbiTableProxy: Can L2 cache CalTempCalibration
+DbiTableProxy: Can L2 cache Dcs_Env_Far
+DbiTableProxy: Can L2 cache Dcs_Env_Near
+
+-----------------------------------------------------
+TimeCalibrator:  SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+PeCalibrator:    SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+VALinCalibrator: SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+DriftCalibrator: SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+LinCalibrator:   SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+StripCalibrator: SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+AttenCalibrator: StripAttenCalScheme
+ (NEW attenuation calibration scheme) 
+  Task = 0
+  Default attenuation is F12 = 0.333	Lambda1 = 1	Lambda2 = 7
+
+-----------------------------------------------------
+MIPCalibrator:   SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+Thermometer:     SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+Running with input file name=/afs/fnal.gov/files/home/room3/hartnell/caius/mytest/MeuCal/MeuSummary601_0.root
+Running MeuPlots Constructor...
+find gives=75
+Adding file=/afs/fnal.gov/files/home/room3/hartnell/caius/mytest/MeuCal/MeuSummary601_0.root
+MeuSummary information:
+MeuSummary.MeuHitInfo pointer address=0x8b8e5a0
+MeuSummary.MeuHitInfo pointer address=0x8d12450
+======> EVENT:0
+ s               = NULL
+ fUniqueID       = 0
+ fBits           = 50331648
+ Event           = 26
+ Count           = 0
+ Temperature     = 0.000000
+ Run             = 601
+ SubRun          = 0
+ TimeSec         = 1100736087
+ TimeNanoSec     = 3134
+ Detector        = 2
+ SimFlag         = 4
+ Snarl           = 46
+ TrigSrc         = 36
+ NStrip          = 55
+ Evt             = 0
+ Slc             = 0
+ MedianTime      = 3.15469e-06
+ GoodContainment = 0
+ GoodWindow      = 0
+ GoodDataQuality = 0
+ CrateMask       = 0
+ BusyChips       = 0
+ ColdChips       = 0
+ SM1             = 1
+ SM2             = 0
+ SMBoth          = 0
+ EntSM1Front     = 0
+ EntSM1Back      = 0
+ EntSM2Front     = 0
+ EntSM2Back      = 0
+ EntSMEnd        = 0
+ ExitSM1Front    = 0
+ ExitSM1Back     = 0
+ ExitSM2Front    = 0
+ ExitSM2Back     = 0
+ ExitSMEnd       = 0
+ PC              = 1
+ FC              = 0
+ AwayFromCoil    = 0
+ MCHighEn        = 0.000000
+ MCLowEn         = 0.000000
+ MCParticleId    = 0
+ DistToEdgeFid   = 0.350000
+ VtxDistToEdge   = 0.000000
+ EndDistToEdge   = 0.000000
+ RFid            = 3.000000
+ RFidCoil        = 0.500000
+ RVtx            = 3.922757
+ REnd            = 2.772549
+ VtxPlane        = 42
+ EndPlane        = 10
+ MCVtxPlane      = -1
+ MCEndPlane      = -1
+ VtxX            = -2.292864
+ VtxY            = 3.197962
+ VtxZ            = 2.493080
+ EndX            = -1.620830
+ EndY            = 2.234600
+ EndZ            = 0.589397
+ TotalMatTraversed = 2.367349
+ MinPlane2       = 10
+ MinPlane3       = 11
+ MaxPlane2       = 42
+ MaxPlane3       = 41
+ WinStopSidePl   = 24
+ MCTrueWinStopSidePl = -1
+ WinStopSideView = 2
+ WinStopSideX    = -1.724774
+ WinStopSideY    = 2.571607
+ WinStopSideZ    = 1.422260
+ WinStopSideTPos = 0.598801
+ WinStopSideLPos = 3.038000
+ WinStopSideStrip = 110.000000
+ WinVtxSidePl    = 35
+ MCTrueWinVtxSidePl = -1
+ WinVtxSideView  = 3
+ WinVtxSideX     = -2.045235
+ WinVtxSideY     = 2.892067
+ WinVtxSideZ     = 2.076650
+ WinVtxSideTPos  = 3.491200
+ WinVtxSideLPos  = 0.598801
+ WinVtxSideStrip = 180.000000
+ WinAdc          = 682.203552
+ WinPe           = 8.828372
+ WinSigLin       = 682.203552
+ WinSigCor       = 749.755066
+ WinSigMap       = 680.183655
+ MCWinEnDep      = 0.000000
+ MCWinSuppEnDep  = -1.000000
+ MCWinSigCor_MeV = 0.000000
+ MCWinSigMap_MeV = 0.000000
+ MCTrueWinSigCor_MeV = -1.000000
+ MCTrueWinSigMap_MeV = -1.000000
+ WinAvPLCor      = 1.231160
+ WinAvCosThetaZ  = -0.812242
+ WinAvNumDigits  = 2.833333
+ WinAvNumStrips  = 1.833333
+ BDSelectSpill   = 1
+ BDtortgt        = -1.000000
+ BDtor101        = -1.000000
+ MeuHitInfo      = 12
+ MeuHitInfo.fUniqueID = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+ MeuHitInfo.fBits = 50331648, 50331648, 50331648, 50331648, 50331648, 50331648, 50331648, 50331648, 50331648, 50331648, 50331648, 50331648
+ MeuHitInfo.Plane = 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35
+ MeuHitInfo.View = 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3
+ MeuHitInfo.Strip = 110, 170, 110, 171, 110, 173, 110, 175, 110, 178, 110, 180
+ MeuHitInfo.StripBestGuess = 110, 170, 110, 171, 110, 173, 110, 175, 110, 178, 110, 180
+ MeuHitInfo.StripHalfLength = 4.000000, 2.621500, 4.000000, 2.581000, 4.000000, 2.500000, 4.000000, 2.419000, 4.000000, 2.297500, 4.000000, 2.216500
+ MeuHitInfo.StripClearFibre1 = 2.340000, 4.380000, 2.570000, 4.330000, 2.490000, 4.430000, 2.800000, 4.330000, 2.640000, 5.600000, 3.350000, 5.700000
+ MeuHitInfo.StripClearFibre2 = 2.160000, 5.820000, 2.090000, 5.760000, 2.040000, 6.050000, 2.220000, 5.950000, 2.140000, 6.850000, 3.250000, 6.850000
+ MeuHitInfo.StripPigtail1 = 0.904000, 0.636000, 0.904000, 0.694000, 0.904000, 0.811000, 0.904000, 0.927000, 0.904000, 1.102000, 0.904000, 1.219000
+ MeuHitInfo.StripPigtail2 = 0.454000, 0.636000, 0.454000, 0.694000, 0.454000, 0.811000, 0.454000, 0.927000, 0.454000, 1.102000, 0.454000, 1.219000
+ MeuHitInfo.DistToStripCentre = -3.038004, 0.598805, -3.099805, 0.598805, -3.161605, 0.598805, -3.244005, 0.598805, -3.347005, 0.598806, -3.450005, 0.598806
+ MeuHitInfo.TPos = 0.598801, 3.079200, 0.598801, 3.120400, 0.598801, 3.202800, 0.598801, 3.285200, 0.598801, 3.408800, 0.598801, 3.491200
+ MeuHitInfo.LPos = 3.038000, 0.598801, 3.099800, 0.598801, 3.161600, 0.598801, 3.244000, 0.598801, 3.347000, 0.598801, 3.450000, 0.598801
+ MeuHitInfo.MCLPos = -999.000000, -999.000000, -999.000000, -999.000000, -999.000000, -999.000000, -999.000000, -999.000000, -999.000000, -999.000000, -999.000000, -999.000000
+ MeuHitInfo.X    = -1.724774, -1.753907, -1.768474, -1.783040, -1.812173, -1.841305, -1.870438, -1.899571, -1.943270, -1.986969, -2.016102, -2.045235
+ MeuHitInfo.Y    = 2.571607, 2.600739, 2.615306, 2.629872, 2.659005, 2.688138, 2.717271, 2.746403, 2.790103, 2.833802, 2.862935, 2.892067
+ MeuHitInfo.Z    = 1.422260, 1.481750, 1.541240, 1.600729, 1.660219, 1.719711, 1.779201, 1.838691, 1.898180, 1.957670, 2.017160, 2.076650
+ MeuHitInfo.PLCor = 1.143226, 1.126852, 1.111315, 1.126850, 1.178343, 1.216397, 1.257119, 1.322660, 1.345579, 1.322659, 1.300259, 1.322659
+ MeuHitInfo.Adc  = 559.000000, 277.000000, 864.000000, 317.000000, 792.000000, 629.000000, 648.000000, 1052.000000, 654.000000, 1886.000000, 1162.000000, 1438.000000
+ MeuHitInfo.Adc1 = 233.000000, 137.000000, 651.000000, 149.000000, 510.000000, 340.000000, 476.000000, 794.000000, 367.000000, 876.000000, 1000.000000, 571.000000
+ MeuHitInfo.Adc2 = 326.000000, 140.000000, 213.000000, 168.000000, 282.000000, 289.000000, 172.000000, 258.000000, 287.000000, 1010.000000, 162.000000, 867.000000
+ MeuHitInfo.Pe   = 7.149268, 3.294174, 14.051869, 4.789086, 10.195526, 7.221090, 7.989235, 13.753386, 8.483068, 24.825882, 14.456303, 16.314682
+ MeuHitInfo.Pe1  = 3.112011, 2.088306, 9.704656, 2.174573, 6.992815, 4.591833, 5.165828, 11.843712, 5.252534, 13.538772, 12.538202, 6.755886
+ MeuHitInfo.Pe2  = 4.037257, 1.205867, 4.347214, 2.614513, 3.202711, 2.629257, 2.823407, 1.909675, 3.230534, 11.287111, 1.918099, 9.558797
+ MeuHitInfo.SigDrf = 559.000000, 277.000000, 864.000000, 317.000000, 792.000000, 629.000000, 648.000000, 1052.000000, 654.000000, 1886.000000, 1162.000000, 1438.000000
+ MeuHitInfo.SigDrf1 = 233.000000, 137.000000, 651.000000, 149.000000, 510.000000, 340.000000, 476.000000, 794.000000, 367.000000, 876.000000, 1000.000000, 571.000000
+ MeuHitInfo.SigDrf2 = 326.000000, 140.000000, 213.000000, 168.000000, 282.000000, 289.000000, 172.000000, 258.000000, 287.000000, 1010.000000, 162.000000, 867.000000
+ MeuHitInfo.SigLinOnly = 559.000000, 277.000000, 864.000000, 317.000000, 792.000000, 629.000000, 648.000000, 1052.000000, 654.000000, 1886.000000, 1162.000000, 1438.000000
+ MeuHitInfo.SigLinOnly1 = 233.000000, 137.000000, 651.000000, 149.000000, 510.000000, 340.000000, 476.000000, 794.000000, 367.000000, 876.000000, 1000.000000, 571.000000
+ MeuHitInfo.SigLinOnly2 = 326.000000, 140.000000, 213.000000, 168.000000, 282.000000, 289.000000, 172.000000, 258.000000, 287.000000, 1010.000000, 162.000000, 867.000000
+ MeuHitInfo.SigLin = 559.000000, 277.000000, 864.000000, 317.000000, 792.000000, 629.000000, 648.000000, 1052.000000, 654.000000, 1886.000000, 1162.000000, 1438.000000
+ MeuHitInfo.SigLin1 = 233.000000, 137.000000, 651.000000, 149.000000, 510.000000, 340.000000, 476.000000, 794.000000, 367.000000, 876.000000, 1000.000000, 571.000000
+ MeuHitInfo.SigLin2 = 326.000000, 140.000000, 213.000000, 168.000000, 282.000000, 289.000000, 172.000000, 258.000000, 287.000000, 1010.000000, 162.000000, 867.000000
+ MeuHitInfo.SigCor = 464.364380, 215.153839, 1197.459351, 405.109070, 650.794983, 746.227295, 760.062561, 1193.092529, 760.088623, 2349.664795, 1151.828247, 1406.391846
+ MeuHitInfo.SigCor1 = 233.127518, 130.084702, 897.513062, 175.382431, 495.333160, 476.063110, 522.845398, 1037.980225, 536.810120, 1086.469971, 1006.594116, 567.256104
+ MeuHitInfo.SigCor2 = 231.236847, 85.069145, 299.946350, 229.726624, 155.461838, 270.164154, 237.217163, 155.112335, 223.278534, 1263.194824, 145.234161, 839.135681
+ MeuHitInfo.SigCorTrk1 = 233.127518, 130.084702, 787.111633, 175.382431, 495.333160, 476.063110, 522.845398, 537.999939, 462.443207, 1022.731018, 632.836548, 567.256104
+ MeuHitInfo.SigCorTrk2 = 231.236847, 85.069145, 299.946350, 229.726624, 155.461838, 270.164154, 237.217163, 0.000000, 223.278534, 1018.417419, 145.234161, 649.453186
+ MeuHitInfo.SigMap = 463.939270, 224.822449, 930.311157, 404.334717, 504.223358, 787.337524, 609.010742, 1276.355225, 647.590576, 2340.746094, 706.773010, 1377.875122
+ MeuHitInfo.SigMap1 = 128.901215, 147.082932, 490.013611, 194.614929, 269.888062, 540.550903, 263.440033, 1137.270020, 290.829102, 1205.952026, 486.658356, 624.953247
+ MeuHitInfo.SigMap2 = 335.038055, 77.739525, 440.297546, 209.719772, 234.335297, 246.786636, 345.570679, 139.085236, 356.761505, 1134.794067, 220.114685, 752.921936
+ MeuHitInfo.MCSigMap = 481.901184, 199.939484, 1635.312256, 431.106903, 813.515686, 657.257812, 948.356506, 794.696228, 947.346558, 2359.358398, 1831.971313, 1606.359009
+ MeuHitInfo.NumDigits = 2.000000, 2.000000, 3.000000, 2.000000, 2.000000, 2.000000, 2.000000, 4.000000, 3.000000, 4.000000, 4.000000, 4.000000
+ MeuHitInfo.NumStrips = 1.000000, 1.000000, 2.000000, 1.000000, 1.000000, 1.000000, 1.000000, 3.000000, 2.000000, 3.000000, 3.000000, 3.000000
+ MeuHitInfo.MCEnDep = 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000
+ MeuHitInfo.MCSuppEnDep = 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000
+
+Analysing 1 file(s). Reading from disk...
+MeuSummary.MeuHitInfo pointer address=0x915d158
+MeuSummary tree has 52750 entries
+First run number=601
+Finished MeuPlots Constructor
+ ** Running MakeValidationPlots method... **
+Environmental variable $MEUANA_DIR not set. Writing file(s) to current directory
+Output file opened: ./MeuPlots601.root
+Fraction of loop complete: 0/52750  (0%)
+Filling time vector=1100736087, secs from 1995=311817687
+
+-----------------------------------------------------
+TimeCalibrator:  SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+PeCalibrator:    SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+VALinCalibrator: SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+DriftCalibrator: SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+LinCalibrator:   SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+StripCalibrator: SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+AttenCalibrator: StripAttenCalScheme
+ (NEW attenuation calibration scheme) 
+  Task = 0
+  Default attenuation is F12 = 0.333	Lambda1 = 1	Lambda2 = 7
+
+-----------------------------------------------------
+MIPCalibrator:   SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+
+-----------------------------------------------------
+Thermometer:     SimpleCalScheme
+Generic CalScheme PrintConfig()
+"SimpleCalScheme", 10 entries. keys locked, values unlocked
+    defaultAttenLength1 = 1
+    defaultAttenLength2 = 7
+    defaultAttenN1 = 0.3333
+    defaultDrift = 1
+    defaultGainFD = 60
+    defaultGainND = 100
+    defaultLinearity = 1
+    defaultSigCorPerMip = 750
+    defaultStripToStrip = 1
+    defaultTemp = 18
+Using VldContext: {   Far|    MC|2004-11-18 00:01:27.000000000Z}
+
+fWinVtxSidePl=35, fWinStopSidePl=24
+Looping over MeuHitInfo entries, numEntries=12
+Looping over MeuHitInfo entries, numEntries=12
+..Last Message (counting continues).. Looping over MeuHitInfo entries, numEntries=12
+Filling time vector=1100736114, secs from 1995=311817714
+fWinVtxSidePl=460, fWinStopSidePl=454
+..Last Message (counting continues).. Filling time vector=1100736182..Last Message (counting continues).. , secs from 1995=311817782
+fWinVtxSidePl=328, fWinStopSidePl=331
+fWinVtxSidePl=332, fWinStopSidePl=343
+fWinVtxSidePl=425, fWinStopSidePl=430
+fWinVtxSidePl=108, fWinStopSidePl=112
+fWinVtxSidePl=374, fWinStopSidePl=380
+fWinVtxSidePl=122, fWinStopSidePl=118
+fWinVtxSidePl=467, fWinStopSidePl=462
+fWinVtxSidePl=22, fWinStopSidePl=28
+fWinVtxSidePl=63, fWinStopSidePl=59
+fWinVtxSidePl=7, fWinStopSidePl=9
+fWinVtxSidePl=196, fWinStopSidePl=199
+fWinVtxSidePl=392, fWinStopSidePl=404
+fWinVtxSidePl=154, fWinStopSidePl=166
+fWinVtxSidePl=177, fWinStopSidePl=182
+fWinVtxSidePl=440, fWinStopSidePl=432
+fWinVtxSidePl=440, fWinStopSidePl=451
+fWinVtxSidePl=52, fWinStopSidePl=61
+..Last Message (counting continues).. fWinVtxSidePl=81, fWinStopSidePl=74
+Fraction of loop complete: 2638/52750  (5%)
+Fraction of loop complete: 5276/52750  (10%)
+Fraction of loop complete: 7914/52750  (15%)
+Fraction of loop complete: 10552/52750  (20%)
+Fraction of loop complete: 13190/52750  (25%)
+Fraction of loop complete: 15828/52750  (30%)
+Fraction of loop complete: 18466/52750  (35%)
+Fraction of loop complete: 21104/52750  (40%)
+Fraction of loop complete: 23742/52750  (45%)
+Fraction of loop complete: 26380/52750  (50%)
+Fraction of loop complete: 29018/52750  (55%)
+Fraction of loop complete: 31656/52750  (60%)
+Fraction of loop complete: 34294/52750  (65%)
+Fraction of loop complete: 36932/52750  (70%)
+Fraction of loop complete: 39570/52750  (75%)
+Fraction of loop complete: 42208/52750  (80%)
+Fraction of loop complete: 44846/52750  (85%)
+Fraction of loop complete: 47484/52750  (90%)
+Fraction of loop complete: 50122/52750  (95%)
+Finished main loop
+Using Detector=2, SimFlag=4
+Found start time and end time: 1100736087 -> 1101925677, #months=1
+CosTheta=-1, meu=493.25, mean=499.829, entries=597
+CosTheta=-0.9, meu=497.429, mean=504.595, entries=1364
+CosTheta=-0.8, meu=498.219, mean=507.026, entries=2183
+CosTheta=-0.7, meu=496.062, mean=506.102, entries=3130
+CosTheta=-0.6, meu=501.222, mean=509.523, entries=3638
+CosTheta=-0.5, meu=503.232, mean=513.351, entries=4643
+CosTheta=-0.4, meu=505, mean=519.266, entries=4616
+CosTheta=-0.3, meu=512.344, mean=539.021, entries=3415
+CosTheta=-0.2, meu=539.375, mean=587.862, entries=539
+CosTheta=-0.1, meu=241.5, mean=241.761, entries=1
+CosTheta=0, meu=488.5, mean=488.984, entries=1
+CosTheta=0.1, meu=540.875, mean=579.143, entries=547
+CosTheta=0.2, meu=514.967, mean=540.74, entries=3761
+CosTheta=0.3, meu=503.694, mean=520.112, entries=5121
+CosTheta=0.4, meu=499.159, mean=510.048, entries=5393
+CosTheta=0.5, meu=497.64, mean=508.38, entries=4392
+CosTheta=0.6, meu=494.268, mean=503.974, entries=3921
+CosTheta=0.7, meu=498.105, mean=504.873, entries=2792
+CosTheta=0.8, meu=493.375, mean=501.907, entries=1830
+CosTheta=0.9, meu=489.143, mean=497.004, entries=852
+meu=479.173 for quantile=0.4, diff=-20.2365 (-4.05208%)
+meu=481.132 for quantile=0.41, diff=-18.2775 (-3.65981%)
+meu=483.102 for quantile=0.42, diff=-16.3072 (-3.26529%)
+meu=485.056 for quantile=0.43, diff=-14.3537 (-2.87414%)
+meu=487.042 for quantile=0.44, diff=-12.368 (-2.47653%)
+meu=488.993 for quantile=0.45, diff=-10.4167 (-2.08581%)
+meu=491.087 for quantile=0.46, diff=-8.32306 (-1.66658%)
+meu=493.087 for quantile=0.47, diff=-6.32232 (-1.26596%)
+meu=495.194 for quantile=0.48, diff=-4.21551 (-0.844098%)
+meu=497.346 for quantile=0.49, diff=-2.06391 (-0.413271%)
+meu=499.41 for quantile=0.5, diff=0 (0%)
+meu=501.546 for quantile=0.51, diff=2.13667 (0.427839%)
+meu=503.519 for quantile=0.52, diff=4.10946 (0.822864%)
+meu=505.662 for quantile=0.53, diff=6.25278 (1.25204%)
+meu=507.676 for quantile=0.54, diff=8.26689 (1.65533%)
+meu=509.897 for quantile=0.55, diff=10.4879 (2.10006%)
+meu=512.109 for quantile=0.56, diff=12.6994 (2.54288%)
+meu=514.137 for quantile=0.57, diff=14.7276 (2.949%)
+meu=516.204 for quantile=0.58, diff=16.7943 (3.36284%)
+meu=518.605 for quantile=0.59, diff=19.1953 (3.8436%)
+
+meu=499.41, mean=510.125, entries=44482
+
+
+Forwards and backwards:
+  forward  meu=498.159, mean=509.222, entries=24304
+  backward meu=501.026, mean=511.213, entries=20178
+
+SM1 and SM2:
+  SM1:  meu=500.324, mean=511.062, entries=22786
+  SM2:  meu=498.605, mean=509.141, entries=21696
+
+Individual stripends:
+    meuU1=247.703, mean=258.018, entries=52750
+    meuU2=247.708, mean=257.794, entries=52750
+    meuV1=248.213, mean=258.211, entries=52750
+    meuV2=248.066, mean=257.832, entries=52750
+
+GeVPerMeu=-4.68333e-05
+Filling vs. Time plots...
+Setting axis info:
+  Start time 18:01:27 on 2004/11/17
+  End time   12:27:57 on 2004/12/01
+Set axis title to be 'Time (2004/11/17 - 2004/12/01)'
+Filling vs. Time plots...
+binSizeDrift=1.18959e+06, numMonths=1
+index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+..Last Message (counting continues).. index=0, vTimeSec[i]=3.11818e+08, startTimeSecs=311817687
+Vector size with CosTh cut=44482
+Vector size with truncation and CosTh cut=44472
+For error on the median using high statistics rms =  SigMaps114.4
+bin=1, meuStd=499.41 +/- 0.542479, meu=499.41 +/- 0.542479, meuX=499.41 +/- 0.542479
+Filling vs. Temperature plots...
+=W= MeuPlots [-1|-1] MeuPlots.cxx,v1.28:675> FillTProfile: One or more vectors is empty
+=W= MeuPlots [-1|-1] MeuPlots.cxx,v1.28:675> FillTProfile: One or more vectors is empty
+=W= MeuPlots [-1|-1] MeuPlots.cxx,v1.28:675> FillTProfile: One or more vectors is empty
+ ** Finished MakeValidationPlots method **
+Writing histos to: ./MeuPlots601.root ...
+End of meuPlots.C
+
+Calibrator shutting down.
+Calibrator Errors Statistics:
+          Calibrator      Calls ||   General|Miss Table|  Miss Row|  FP Error|Insuf.Data| Bad Input
+             Unknown          0 ||        0 |        0 |        0 |        0 |        0 |        0
+      TimeCalibrator          0 ||        0 |        0 |        0 |        0 |        0 |        0
+        PeCalibrator          0 ||        0 |        0 |        0 |        0 |        0 |        0
+     VALinCalibrator          0 ||        0 |        0 |        0 |        0 |        0 |        0
+       LinCalibrator          0 ||        0 |        0 |        0 |        0 |        0 |        0
+     DriftCalibrator    1292479 ||        0 |        0 |        0 |        0 |        0 |        0
+     StripCalibrator          0 ||        0 |        0 |        0 |        0 |        0 |        0
+     AttenCalibrator          0 ||        0 |        0 |        0 |        0 |        0 |        0
+       MIPCalibrator          0 ||        0 |        0 |        0 |        0 |        0 |        0
+         Thermometer          0 ||        0 |        0 |        0 |        0 |        0 |        0
+Channels with the most errors: 
+DatabaseInterface shutdown not requested

@@ -1,0 +1,900 @@
+
+
+<META name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+<SCRIPT language="JavaScript">
+
+function handlerClickHomeTopMenu( a_boton, a_carpetaId ,a_instancia, a_NodosAbiertos)  {
+
+
+  if(a_boton == "Hom")
+    parent.location.href = "../../OpenNet/asp/default.asp?boton=" + a_boton + "&botonAnterior=" + botonAnterior + "&carpetaSeleccionada=" + carpetaAnterior;
+  else {
+    var carpeta             = getParam( "carpeta"             );
+    var txtBuscar           = getParam( "txtBuscar"           );
+    var verFicha            = getParam( "verFicha"            );
+    var botonAnterior       = getParam( "botonAnterior"       );
+    var carpetaSeleccionada = getParam( "carpetaSeleccionada" );
+
+    var urlRight    = arrOpciones[ a_boton ][3];
+
+    urlRight += "?boton=" + a_boton + "&argInstanciaId=" + a_instancia + "&argCarpetaId="  + a_carpetaId  + "&argTreeNodosAbiertos=" + a_NodosAbiertos+"("+a_carpetaId+")" + "&argTreeNodoSel=" + a_carpetaId + "&argTreeNodoActual=" + a_carpetaId;
+
+    var ObjPagina = parent.location;
+    ObjPagina.href = urlRight
+  }
+}
+  </script>
+<!-- Esto es para que al seleccionar una carpeta, se expanda o se constraiga también --><!-- Fin contracción o expanción al seleccionar una carpeta -->
+
+<script language="JavaScript">
+
+function handlerClickHomeTopMenu( a_boton, a_carpetaId ,a_instancia, a_NodosAbiertos)  {
+
+  if(a_boton == "Hom")
+    parent.location.href = "../../OpenNet/asp/default.asp?boton=" + a_boton + "&botonAnterior=" + botonAnterior + "&carpetaSeleccionada=" + carpetaAnterior;
+  else {
+    var carpeta             = getParam( "carpeta"             );
+    var txtBuscar           = getParam( "txtBuscar"           );
+    var verFicha            = getParam( "verFicha"            );
+    var botonAnterior       = getParam( "botonAnterior"       );
+    var carpetaSeleccionada = getParam( "carpetaSeleccionada" );
+
+    var urlRight    = arrOpciones[ a_boton ][3];
+
+    urlRight += "?boton=" + a_boton + "&argInstanciaId=" + a_instancia + "&argCarpetaId="  + a_carpetaId  + "&argTreeNodosAbiertos=" + a_NodosAbiertos + "&argTreeNodoSel=" + a_carpetaId + "&argTreeNodoActual=" + a_carpetaId;
+
+    var ObjPagina = parent.location;
+    ObjPagina.href = urlRight
+  }
+}
+  </script>
+
+</HTML>
+<meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5">
+
+<meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5">
+
+
+<HTML>
+<HEAD>
+<meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5">
+<TITLE>Noticias</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="stylesheet" TYPE="text/css" HREF=../../common/images/administracion/administracion.css>
+<LINK REL="stylesheet" TYPE="text/css" HREF="../images/2/estilos.css">
+<SCRIPT type='text/javascript' language='JavaScript'>
+  window.defaultStatus = "";
+  window.status        = window.defaultStatus;
+</SCRIPT>
+<LINK rel="stylesheet" type="text/css" href="../../OpenNet/images/homepage/estilos.css">
+<LINK rel="stylesheet" type="text/css" href="../../common/images/aplicaciones/estilos.css">
+<SCRIPT LANGUAGE="JavaScript" SRC="../../common/asp/idioma.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="../../common/asp/urlParams.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="../../common/asp/rollover.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="../../common/asp/validacion.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="../../common/asp/conversionFuncionesVBScriptaJavascript.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="../../OpenNet/asp/botonesHomeTop.asp"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="../../OpenNet/asp/about.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="../../common/asp/menus/menu.js"></script>
+<LINK rel="stylesheet" type="text/css" href="../../common/asp/menus/menu.css">
+
+
+<script language="JavaScript">
+  var states = ['mout', 'mover', 'mdown'];
+
+
+
+  MENU_ITEMS0 = [['Embassy',"javascript:handlerClickHomeTopMenu('Doc26','','26','' );", {'sb' : 'Embassy','sw':71} ,['Mission Statement',"javascript:handlerClickHomeTopMenu('Doc26','495','26','(0)' );"     , {'sb' : 'Ir a Mission Statement'}  ],['The Ambassador',"javascript:handlerClickHomeTopMenu('Doc26','648','26','(0)' );"     , {'sb' : 'Ir a The Ambassador'}  ,['Activities',"javascript:handlerClickHomeTopMenu('Doc26','650','26','(0)(648)' );"     , {'sb' : 'Ir a Activities'}  ],['Culture and The Ambassador',"javascript:handlerClickHomeTopMenu('Doc26','663','26','(0)(648)' );"     , {'sb' : 'Ir a Culture and The Ambassador'}  ],['Interviews/OpEd',"javascript:handlerClickHomeTopMenu('Doc26','666','26','(0)(648)' );"     , {'sb' : 'Ir a Interviews/OpEd'}  ],],['Key Officers',"javascript:handlerClickHomeTopMenu('Doc26','68','26','(0)' );"     , {'sb' : 'Ir a Key Officers'}  ],['U.S. Trade with Chile',"javascript:handlerClickHomeTopMenu('Doc26','280','26','(0)' );"     , {'sb' : 'Ir a U.S. Trade with Chile'}  ,['U.S. Exporter\'s Guide U.S.-Chile FTA',"javascript:handlerClickHomeTopMenu('Doc26','373','26','(0)(280)' );"     , {'sb' : 'Ir a U.S. Exporter\'s Guide U.S.-Chile FTA'}  ],['Doing Business in Chile',"javascript:handlerClickHomeTopMenu('Doc26','374','26','(0)(280)' );"     , {'sb' : 'Ir a Doing Business in Chile'}  ],],['Agriculture/Food/Trade',"javascript:handlerClickHomeTopMenu('Doc26','278','26','(0)' );"     , {'sb' : 'Ir a Agriculture/Food/Trade'}  ],['Multimedia',"javascript:handlerClickHomeTopMenu('Doc26','577','26','(0)' );"     , {'sb' : 'Ir a Multimedia'}  ,['Multimedia 2008',"javascript:handlerClickHomeTopMenu('Doc26','658','26','(0)(577)' );"     , {'sb' : 'Ir a Multimedia 2008'}  ],['Multimedia 2007',"javascript:handlerClickHomeTopMenu('Doc26','652','26','(0)(577)' );"     , {'sb' : 'Ir a Multimedia 2007'}  ],['Dimension Internacional 2007',"javascript:handlerClickHomeTopMenu('Doc26','644','26','(0)(577)' );"     , {'sb' : 'Ir a Dimension Internacional 2007'}  ],['Podcasts',"javascript:handlerClickHomeTopMenu('Doc26','653','26','(0)(577)' );"     , {'sb' : 'Ir a Podcasts'}  ],],['Public Affairs: Press & Culture',"javascript:handlerClickHomeTopMenu('Doc26','271','26','(0)' );"     , {'sb' : 'Ir a Public Affairs: Press & Culture'}  ,['Press',"javascript:handlerClickHomeTopMenu('Doc26','290','26','(0)(271)' );"     , {'sb' : 'Ir a Press'}  ],['Culture',"javascript:handlerClickHomeTopMenu('Doc26','291','26','(0)(271)' );"     , {'sb' : 'Ir a Culture'}  ,['English Teaching',"javascript:handlerClickHomeTopMenu('Doc26','155','26','(0)(271)(291)' );"     , {'sb' : 'Ir a English Teaching'}  ,['Newsletter for English Teachers',"javascript:handlerClickHomeTopMenu('Doc26','429','26','(0)(271)(291)(155)' );"     , {'sb' : 'Ir a Newsletter for English Teachers'}  ],['TESOL Chile',"javascript:handlerClickHomeTopMenu('Doc26','258','26','(0)(271)(291)(155)' );"     , {'sb' : 'Ir a TESOL Chile'}  ],['Tests & Advisory: GMAT, GRE, TOEFL',"javascript:handlerClickHomeTopMenu('Doc26','423','26','(0)(271)(291)(155)' );"     , {'sb' : 'Ir a Tests & Advisory: GMAT, GRE, TOEFL'}  ],],['Binational Centers in Chile',"javascript:handlerClickHomeTopMenu('Doc26','175','26','(0)(271)(291)' );"     , {'sb' : 'Ir a Binational Centers in Chile'}  ],['Fulbright Chile',"javascript:handlerClickHomeTopMenu('Doc26','294','26','(0)(271)(291)' );"     , {'sb' : 'Ir a Fulbright Chile'}  ],['Youth and Education',"javascript:handlerClickHomeTopMenu('Doc26','261','26','(0)(271)(291)' );"     , {'sb' : 'Ir a Youth and Education'}  ],['Sports',"javascript:handlerClickHomeTopMenu('Doc26','205','26','(0)(271)(291)' );"     , {'sb' : 'Ir a Sports'}  ],],['American Corners',"javascript:handlerClickHomeTopMenu('Doc26','247','26','(0)(271)' );"     , {'sb' : 'Ir a American Corners'}  ],['American Academy Science & Technology',"javascript:handlerClickHomeTopMenu('Doc26','430','26','(0)(271)' );"     , {'sb' : 'Ir a American Academy Science & Technology'}  ,['U.S. Government sites',"javascript:handlerClickHomeTopMenu('Doc26','607','26','(0)(271)(430)' );"     , {'sb' : 'Ir a U.S. Government sites'}  ],],['Virtual Library',"javascript:handlerClickHomeTopMenu('Doc26','414','26','(0)(271)' );"     , {'sb' : 'Ir a Virtual Library'}  ],],['More Embassy Sections',"javascript:handlerClickHomeTopMenu('Doc26','267','26','(0)' );"     , {'sb' : 'Ir a More Embassy Sections'}  ,['APHIS',"javascript:handlerClickHomeTopMenu('Doc26','279','26','(0)(267)' );"     , {'sb' : 'Ir a APHIS'}  ],['Economic/Political',"javascript:handlerClickHomeTopMenu('Doc26','268','26','(0)(267)' );"     , {'sb' : 'Ir a Economic/Political'}  ,['Democracy, Human Rights and Labor',"javascript:handlerClickHomeTopMenu('Doc26','209','26','(0)(267)(268)' );"     , {'sb' : 'Ir a Democracy, Human Rights and Labor'}  ],['Economic and Business Affairs',"javascript:handlerClickHomeTopMenu('Doc26','210','26','(0)(267)(268)' );"     , {'sb' : 'Ir a Economic and Business Affairs'}  ],['Intellectual Property Rights',"javascript:handlerClickHomeTopMenu('Doc26','242','26','(0)(267)(268)' );"     , {'sb' : 'Ir a Intellectual Property Rights'}  ],['Oceans, Science, Environment',"javascript:handlerClickHomeTopMenu('Doc26','207','26','(0)(267)(268)' );"     , {'sb' : 'Ir a Oceans, Science, Environment'}  ],['Trade',"javascript:handlerClickHomeTopMenu('Doc26','287','26','(0)(267)(268)' );"     , {'sb' : 'Ir a Trade'}  ,['Chile-U.S.',"javascript:handlerClickHomeTopMenu('Doc26','208','26','(0)(267)(268)(287)' );"     , {'sb' : 'Ir a Chile-U.S.'}  ],],],['DEA: Drug Enforcement Administration',"javascript:handlerClickHomeTopMenu('Doc26','148','26','(0)(267)' );"     , {'sb' : 'Ir a DEA: Drug Enforcement Administration'}  ],['Legal Attaché Office: FBI',"javascript:handlerClickHomeTopMenu('Doc26','282','26','(0)(267)' );"     , {'sb' : 'Ir a Legal Attaché Office: FBI'}  ],['Human Resources',"javascript:handlerClickHomeTopMenu('Doc26','283','26','(0)(267)' );"     , {'sb' : 'Ir a Human Resources'}  ,['Foreign Service Careers',"javascript:handlerClickHomeTopMenu('Doc26','195','26','(0)(267)(283)' );"     , {'sb' : 'Ir a Foreign Service Careers'}  ],['\"No Fear Act\"',"javascript:handlerClickHomeTopMenu('Doc26','499','26','(0)(267)(283)' );"     , {'sb' : 'Ir a \"No Fear Act\"'}  ],],['Regional Security Office',"javascript:handlerClickHomeTopMenu('Doc26','347','26','(0)(267)' );"     , {'sb' : 'Ir a Regional Security Office'}  ,['Travel Warnings',"javascript:handlerClickHomeTopMenu('Doc26','229','26','(0)(267)(347)' );"     , {'sb' : 'Ir a Travel Warnings'}  ],['Office of Foreign Missions',"javascript:handlerClickHomeTopMenu('Doc26','230','26','(0)(267)(347)' );"     , {'sb' : 'Ir a Office of Foreign Missions'}  ],['Overseas Advisory Council',"javascript:handlerClickHomeTopMenu('Doc26','231','26','(0)(267)(347)' );"     , {'sb' : 'Ir a Overseas Advisory Council'}  ],['Threats and Protection',"javascript:handlerClickHomeTopMenu('Doc26','239','26','(0)(267)(347)' );"     , {'sb' : 'Ir a Threats and Protection'}  ],],['ONR - Office of Naval Research',"javascript:handlerClickHomeTopMenu('Doc26','75','26','(0)(267)' );"     , {'sb' : 'Ir a ONR - Office of Naval Research'}  ],['ITC-Americas ',"javascript:handlerClickHomeTopMenu('Doc26','181','26','(0)(267)' );"     , {'sb' : 'Ir a ITC-Americas '}  ],],['Embassy Holidays',"javascript:handlerClickHomeTopMenu('Doc26','79','26','(0)' );"     , {'sb' : 'Ir a Embassy Holidays'}  ],['Address/Contact Info',"javascript:handlerClickHomeTopMenu('Doc26','274','26','(0)' );"     , {'sb' : 'Ir a Address/Contact Info'}  ],['Jobs Available',"javascript:handlerClickHomeTopMenu('Doc26','94','26','(0)' );"     , {'sb' : 'Ir a Jobs Available'}  ],['Energy Saving',"javascript:handlerClickHomeTopMenu('Doc26','566','26','(0)' );"     , {'sb' : 'Ir a Energy Saving'}  ],],['VISAS',"javascript:handlerClickHomeTopMenu('Doc28','','28','' );", {'sb' : 'Consular Section: Visas','sw':55} ],['U.S. Citizens',"javascript:handlerClickHomeTopMenu('Doc52','','52','' );", {'sb' : 'Consular Section: American Citizens','sw':119} ],['Virtual Library',"javascript:handlerClickHomeTopMenu('Doc29','','29','' );", {'sb' : 'Information Resource Center','sw':135} ],['About Us',"javascript:handlerClickHomeTopMenu('Doc80','','80','' );", {'sb' : 'About Us','sw':79} ],['News Archives',"javascript:handlerClickHomeTop('New2' );", {'tt' : 'Press Releases', 'sb' : 'Press Releases','sw':119}  ], ];
+
+  var MENU_POS0=[
+  // Level 0 block configuration
+  {
+    // Item's height in pixels
+    'height'     : 19,
+    //19
+    // Item's width in pixels
+    'width'      : 300,
+    // Vertical Offset between adjacent levels in pixels
+    'block_top'  : null,//73,
+    //74
+    // Horizontal Offset between adjacent levels in pixels
+    'block_left' : null,// block_left,//240,
+    // if Block Orientation is vertical
+    'vertical'   : false,
+    // Block outing table parameters:
+    // [cellpadding, cellspacing, border]
+    'table'      : [0, 1, 0],
+    // Time Delay in milliseconds before o_block block expands
+    // after mouse pointer overs an item
+    'expd_delay' : 300,
+    // Time Delay in milliseconds before menu collapses after mouse
+    // pointer leafs all items
+    'hide_delay' : 300,
+    // Style class names for the level
+  'css' : {
+    // Block outing table class
+    'table' : 'mtable',
+    // Item outer tag style class for all item states or
+    // classes for [<default state>, <hovered state>, <clicked state>]
+    'outer' : ['mouto', 'movero', 'mdowno'],
+    // Item inner tag style class for all item states or
+    // classes for [<default state>, <ASOMADO state>, <clicked state>]
+    'inner' : ['minner','minner','minner']
+    },
+    //'transition' : ['progid:DXImageTransform.Microsoft.Pixelate(MaxSquare=15,enabled=0,Duration=0.55)', 'progid:DXImageTransform.Microsoft.Pixelate(MaxSquare=15,enabled=0,Duration=0.55)'],
+    //'transition': ['revealTrans(TRANSITION=5,DURATION=0.2)','revealTrans(TRANSITION=4,DURATION=0.1)'],
+    'transition': ['revealTrans(TRANSITION=5,DURATION=0.2)','revealTrans(TRANSITION=4,DURATION=0.1)'],
+    // level shadow scope settings
+   // 'shadow' : {
+    // horisontal offset of the shadow in pixels
+   // 'offX' : -1,
+    // vertical offset of the shadow in pixels
+   // 'offY' : -1,
+    // color of the shadow (SOMBRA)
+   // 'color' : '#FF0000'
+//    },
+  'opacity' : 0
+  },
+  // Level 1 block configuration
+  {
+  'width'      : 160,
+  'height'     : 19,
+  // Vertical Offset between adjacent levels in pixels
+  'block_top'  : 19,
+  // Horizontal Offset between adjacent levels in pixels
+  'block_left' : 0,
+
+    // Style class names for SEGUNDO NIVEL
+  'css' : {
+    // Block outing table class
+    'table' : 'mtable1',
+    // Item outer tag style class for all item states or
+    // classes for [<default state>, <hovered state>, <clicked state>]
+    'outer' : ['mouto1', 'movero1', 'mdowno1'],
+    // Item inner tag style class for all item states or
+    // classes for [<default state>, <ASOMADO state>, <clicked state>]
+    'inner' : ['minner1']
+    },
+
+
+  // block behaviour if single frame:
+  // 1 - shift to the edge, 2 - flip relatively to left upper corner
+  'wise_pos'   : 2,
+  'vertical'   : true,
+  //'transition' : [ 'progid:DXImageTransform.Microsoft.Wipe(GradientSize=1.0,wipeStyle=4,motion=forward,enabled=0,Duration=.5)']
+  'transition': ['revealTrans(TRANSITION=5,DURATION=0.2)','revealTrans(TRANSITION=4,DURATION=0.1)']
+  },
+  // Level 2 block configuration
+  {
+  'block_top'  : -3,
+  'block_left' : 159,
+    // Style class names for SEGUNDO NIVEL
+    'css' : {
+      // Block outing table class
+      'table' : 'mtable1',
+      // Item outer tag style class for all item states or
+      // classes for [<default state>, <hovered state>, <clicked state>]
+      'outer' : ['mouto1', 'movero1', 'mdowno1'],
+      // Item inner tag style class for all item states or
+      // classes for [<default state>, <ASOMADO state>, <clicked state>]
+      'inner' : ['minner1']
+      },
+
+  //'transition' : [ 'progid:DXImageTransform.Microsoft.Pixelate(MaxSquare=15,enabled=1,Duration=0.55)']
+  'transition': ['revealTrans(TRANSITION=5,DURATION=0.2)','revealTrans(TRANSITION=4,DURATION=0.1)']
+  },
+  // Level 3 block configuration
+  {
+  'block_left' : 159,
+  //'transition' : ['progid:DXImageTransform.Microsoft.CrStretch(stretchStyle=PUSH)']
+  'transition': ['revealTrans(TRANSITION=5,DURATION=0.2)','revealTrans(TRANSITION=4,DURATION=0.1)']
+  }
+  //o_block level configurations are inherited from level 3
+  ]
+  </script>
+ <SCRIPT LANGUAGE="JavaScript">
+  var botonAnterior = "";
+  var carpetaSeleccionada = "";
+  var carpetaAnterior     = "";
+  roll_addButton("BLf", "handlerClickHomeTop('BLf')");
+  roll_addButton("Hom2", "handlerClickHomeTop('Hom2')");
+</SCRIPT>
+<SCRIPT>
+function OverEspecial(modulo){
+  //CambiaFondo(modulo, 'over')
+  cambiaBorde(modulo, 'over')
+}
+function OutEspecial(modulo){
+  //CambiaFondo(modulo, 'out')
+  cambiaBorde(modulo, 'out')
+}
+  function cambiaBorde(modulo, que){
+  
+    var colOver    = "#666666"
+    var colOut     = "#005984"
+    var colActivo  = "#666666"
+    var colorNew
+    if (que == "over") colorNew = colOver 
+    else if (que == "out")               
+      if (getParam("boton") == modulo ) colorNew = colActivo 
+      else colorNew = colOut 
+    
+    ObjCelda = document.all["TDMED"+modulo]
+    ObjCelda.style.borderColor = colorNew
+    
+  }
+function capturaEnter(evt){
+   evt = (evt) ? evt : event;
+   var charCode = (evt.charCode) ? evt.charCode :
+        ((evt.which) ? evt.which : evt.keyCode);
+   if (charCode == 13 || charCode == 3) {
+     ClickSinHundir( 'BLf' )
+    }
+  }
+</SCRIPT>
+<!-- wucGenHeadHomeTop: END -->
+
+<SCRIPT>
+
+//Handler de botones
+function handlerClickHomeTop( a_boton )  {
+  //Valores por defecto
+  if( a_boton == "BLf" )  return( onclickBuscar() );
+  if( a_boton == "" )  a_boton = "Hom";
+  if( a_boton == "Idi" )  return cambiarIdioma(a_boton)
+
+//alert("paso"&a_boton);
+
+  if(a_boton == "Hom")
+    parent.location.href = "../../OpenNet/asp/default.asp?boton=" + a_boton + "&botonAnterior=" + botonAnterior + "&carpetaSeleccionada=" + carpetaAnterior;
+  else {
+    var carpeta             = getParam( "carpeta"             );
+    var txtBuscar           = getParam( "txtBuscar"           );
+    var verFicha            = getParam( "verFicha"            );
+    var botonAnterior       = getParam( "botonAnterior"       );
+    var carpetaSeleccionada = getParam( "carpetaSeleccionada" );
+
+    //Obtiene elementos a partir de boton
+    var instanciaId = arrOpciones[ a_boton ][0];
+    var strTitle    = arrOpciones[ a_boton ][1];
+    var urlLeft     = arrOpciones[ a_boton ][2];
+    var urlRight    = arrOpciones[ a_boton ][3];
+//alert(urlRight);
+
+    if( a_boton == "Usu" && verFicha  == "1" )  urlRight  = "../../OpenNet_Usuarios/asp/pagDefault.asp?boton=" + a_boton + "&argURLVolver=" + "%2E%2E/%2E%2E/OpenNet/asp/default.asp%3Fboton%3DHom" + "&argTargetVolver=_self";
+    else if( a_boton == "Map" )                 urlRight += "?boton=" + a_boton + "&argInstanciaId=" + instanciaId + "&botonAnterior=" + botonAnterior + "&carpetaSeleccionada=" + carpetaSeleccionada + "#Destacado";
+    else                                        urlRight += "?boton=" + a_boton + "&argInstanciaId=" + instanciaId + "&argCarpetaId="  + carpeta + "&argTreeNodoSel=" + carpeta;
+
+    var ObjPagina = parent.location
+    ObjPagina.href = urlRight
+  }
+}
+
+//Boton: Buscar
+function onclickBuscar() {
+
+  //Recupera editbox con query
+  //alert(document.forms["FormHomeTop"])
+  var queryObj = document.getElementById("Query");
+
+  //Verifica
+  if( LTrim( RTrim( queryObj.value ) ) == "" )  {
+    alert( "Enter text for search" );
+    queryObj.focus();
+    return;
+  }
+  top.location.href = "../../OpenSupport_Buscador/asp/pagDefault.asp?argModo=default&boton=Bus&argTexto=" + escape(queryObj.value);
+}
+
+function getProximoIdiomaId(){
+  var idiomaActual  =  eval("1")
+  switch(idiomaActual){
+    case 0: return 1;
+    case 1: return 0;
+  }
+}
+
+
+//Boton cambiar idioma
+function cambiarIdioma(a_boton){
+  document.FormHomeTop.nuevoIdioma.value = getProximoIdiomaId()
+  document.FormHomeTop.action = new String("../../OpenNet/asp/default.asp?boton=Hom&botonAnterior=" + botonAnterior + "&carpetaSeleccionada=" + carpetaAnterior)
+  document.FormHomeTop.method = "post"
+  document.FormHomeTop.submit();
+  //top.location.href =
+
+  return true;
+}
+
+</SCRIPT>
+
+
+<!--No se debe inculir el validacion.js, ya que debido a que puse el buscador en el top
+    Lo estoy incuyendo en el head del top-->
+<LINK REL="stylesheet" TYPE="text/css" HREF="../images/2/estilos.css">
+<SCRIPT>
+function onclickBuscarEnNews(){
+  var txtBuscar = document.frmCuerpos.argBuscar;
+  //Realiza la Busqueda solo si ingreso un texto
+  if( RTrim( LTrim( txtBuscar.value ) ) == "" ) {
+    alert( "You must enter a text to search." );
+    txtBuscar.focus();
+    return( false );
+  }
+
+  //Invoca pagina de busqueda
+
+  document.forms.frmCuerpos.Accion.value = "buscar";
+  document.forms.frmCuerpos.action       = "pagDefault.asp";
+  document.forms.frmCuerpos.submit();
+
+}
+
+function onclickSuscribirse(){
+  var a_email = document.frmCuerpos.argEmail;
+
+  //Valida ingreso de email
+  if( RTrim( LTrim( a_email.value ) ) == "" ) {
+    alert( "You must enter an e-mail to suscribe." );
+    a_email.focus();
+    return( false );
+  }
+
+  //Valida que email sea correcto
+  if( !IsValid_EMail( a_email ) ){
+    alert( "Invalid e-mail" );
+    a_email.focus();
+    return( false );
+  }
+
+  //Invoca pagina para suscribir email
+
+  document.forms.frmCuerpos.Accion.value = "suscripcion";
+  document.forms.frmCuerpos.action       = "pagDefault.asp";
+  document.forms.frmCuerpos.submit();
+
+}
+
+
+function OnChangeEdicion( a_edicionId ) {
+
+  if(a_edicionId==""){
+  
+    document.forms.frmCuerpos.Accion.value="MasEdiciones";
+    document.forms.frmCuerpos.action="pagDefault.asp";
+    document.forms.frmCuerpos.submit();
+  
+  }
+  else{
+  
+    document.frmCuerpos.argEdicionId.value = a_edicionId;
+    document.forms.frmCuerpos.action="pagDefault.asp";
+    document.forms.frmCuerpos.submit();
+  
+  }
+}
+
+//Arreglo con archivos de imagenes asociadas a cada boton
+roll_addButton("Sub", "handlerClickCuerpos('Sub')");
+
+
+
+//se deja comentada la funcion de buscar noticias por si se va a utilizar en algún momento
+roll_addButton("Bus2", "handlerClickCuerpos('Bus2')");
+
+//Handler de botones
+function handlerClickCuerpos( a_boton )  {
+  Out( a_boton );
+  if( a_boton == "Sub" )  return( onclickSuscribirse()  );
+
+  //se deja comentada la funcion de buscar noticias por si se va a utilizar en algún momento
+  if( a_boton == "Bus2" )  return( onclickBuscarEnNews()       );
+}
+</SCRIPT>
+
+	<SCRIPT>
+	function calculaAltoDeVentana( a_objWindow ) {
+	  if( !a_objWindow                   )  return( 0 );
+	  if( a_objWindow.frames.length == 0 )  return( a_objWindow.document.body.scrollHeight );
+	  for( var i = 0, alto = 0; i < a_objWindow.frames.length; i++ )
+		alto += calculaAltoDeVentana( a_objWindow.frames[i] );
+	  return( alto );
+	}
+
+	function agrandaFrame() {
+
+	  //Enmarca todo dentro de bloque try/catch por si ocurre que iframe no exista o que
+	  //pagina que contiene esta en otro dominio, y por lo tanto, no se pueda accesar.
+	  try {
+
+		//Recupera objeto que contiene documento
+		var objObjetoDocumento = document.getElementById("objDocumento");
+		if( !objObjetoDocumento )  return;
+
+		//Calcula alto de documento dentro del objeto anterior. Los casos que podrian darse son:
+		//- 1 frame : caso mas comun, cuando se abre documento con solo 1 archivo principal y
+		//            no tiene confirmacion de lectura
+		//- 2 frames: cuando se abre documento con mas de 1 principal o exclusivo cuando tiene
+		//            solo 1 principal pero confirmacion de lectura
+		//- 3 frames: cuando se dan las dos condiciones anteriores, documento tiene mas de 1
+		//            principal y esta marcado con confirmacion de lectura
+		//Adicionalmente podria pasar que el documento propiamente tal, corresponde a una pagina
+		//HTML con frames. Por eso se decide calcular el alto de manera generica.
+		var altoDocumento = calculaAltoDeVentana(objObjetoDocumento.contentWindow);
+
+		//Si tamaño del documento es mayor que el objeto, ajusta su tamaño
+		if( altoDocumento > objObjetoDocumento.clientHeight )
+		  objObjetoDocumento.style.height = altoDocumento + (document.all?36:28); //Magic numbers que me da lata averiguar de donde viene
+
+	  } catch(e) { ; }
+	}
+	</SCRIPT>
+
+</HEAD>
+<BODY class="cssBody" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" scroll="auto" onresize="agrandaFrame()" background="../../OpenNet/images/homepage/fondo.gif">
+<TABLE border="0" bordercolor="blue" cellpadding="0" cellspacing="0" width="765" height="680px" align="center">
+  <TR>
+    <TD width="100%" VALIGN="top" HEIGHT="0px">
+
+<TABLE border="0" bgcolor=#000000" bordercolor="#FF00000" CELLSPACING="0" CELLPADDING="0" BACKGROUND="../../OpenNet/images/homepage/pixel_rojo.gif" width="776px" STYLE="background-repeat: repeat-x;">
+  <TR>
+    <TD background="../../OpenNet/images/homepage/i_frame__continuacion.jpg">
+      <TABLE border="0" bordercolor="#000000" cellspacing="0" cellpadding="0" width="100%" BACKGROUND="" STYLE="background-repeat: repeat-x;" >
+        <TR>
+          
+          <TD style="background-repeat: no-repeat;height:73px;width:1px;"><A href='../../' target="_self"><IMG alt="EMBASSY OF THE UNITED STATES OF AMERICA   SANTIAGO - CHILE" src="../../OpenNet/images/homepage/izquierda1.jpg"border="none" /></A></TD>
+          
+
+    <TD style="background-repeat: no-repeat;height:73px;width:1px;" ><IMG src="../../OpenNet/images/homepage/frame_centro.jpg"/></TD>
+    <TD valign="top" BACKGROUND="../../OpenNet/images/homepage/i_frame_top_Right.gif" STYLE="background-repeat: repeat-x;padding-right:5px" >
+      <TABLE border="0" cellpadding="0" cellspacing="0"  height="100%" align="right">
+      <TR height=1%>
+        <TD colspan="3" align="right"><A href ="http://www.state.gov" target = "_blank"><IMG src="../../OpenNet/images/homepage/i_u.s_department.jpg" border="none" /></A></TD>
+      </TR>
+
+      <TR>
+        <TD BACKGROUND="../../OpenNet/images/homepage/pixel_rojo.gif" STYLE="background-repeat: repeat-x;" >
+        <LABEL for="Query" style="FONT-WEIGHT: bold; FONT-SIZE: 12px; TEXT-TRANSFORM: uppercase; COLOR: white; FONT-FAMILY: Arial">
+          Search&nbsp;</LABEL>
+        </TD>
+
+        <TD BACKGROUND="../../OpenNet/images/homepage/pixel_rojo.gif" STYLE="background-repeat: repeat-x;" >
+        <INPUT class="cssBusquedaInput" type="text" onkeydown="capturaEnter(event)" name="Query" id="Query" value='Enter Keyword ' onfocus="javascript:this.value = ''"
+
+          maxlength="150" style="width:80px">&nbsp;
+        </TD>
+
+        <TD width="22" style="padding-top:5px" BACKGROUND="../../OpenNet/images/homepage/pixel_rojo.gif" STYLE="background-repeat: repeat-x;" >
+        <A href="#" onclick="ClickSinHundir( 'BLf' ); return( false )" onmouseover="Over( 'BLf' )"
+          onmouseout="Out( 'BLf' )"><IMG name="BLf" height="18" src="../../OpenNet/images/homepage/gen_busquedaEsp_1.gif" border="0" alt="Buscar"> </A>
+
+        </TD>
+      </TR>
+
+      <!--lo agrege yo-->
+      <TR>
+        <TD class="cssBusquedaInput2" colspan="3" style='border:solid 0px #cccccc;'>
+         <A href="http://www.embajadaeeuu.cl/OpenSupport_Buscador/asp/pagdefault.asp?boton=Bus&argInstanciaId=6&argCarpetaId=&argTreeNodoSel="</a>
+        Complete Search&nbsp;
+        </TD>
+
+      </TR>
+
+   </TABLE>
+    </TD>
+   </TR>
+
+        
+        <!-- Menu -->
+        <!-- Si la constante de Menu desplegable está en True, se presentan los botones de las
+     instancias como un menú PullDown.
+     Si no se muestran los botones de la forma tradicional -->
+     
+        <TR bgcolor="#F4F4F4">
+          <TD colspan="3" style='border:solid 0px #cc00cc;' height='18'>
+            <TABLE cellspacing="0" cellpadding="0" border="0" WIDTH="100%" >
+              <TR>
+                <TD valign='top' align="left" style='border:solid 0px #cccccc;'>
+                  
+  <script language="JavaScript">
+
+    var intSeleccionado,cont;
+    cont=0;
+    intSeleccionado= -1*2+1;
+    function TMGWrapItemAll(s_caption, n_state) {
+      if (this.TMi == 0)
+      {cont=cont+1;
+      //return ['&nbsp;', s_caption, '&nbsp;<img src="../../common/asp/menus/images/', n_state, 'darrow.gif" width="12" height="12" align="absmiddle">&nbsp;'].join('');
+        if (cont == intSeleccionado )
+        {
+        return ['<div class="seleccionado" nowrap>&nbsp;', s_caption, '&nbsp;</DIV>'].join('');
+        }else
+        {
+        return ['&nbsp;', s_caption, '&nbsp;'].join('');
+        }
+      }else if (this.TM4.length > 3)
+        return ['<table cellpadding=0 cellspacing=0 border=0 width=100%><tr><td width=100% class="minner1">&nbsp; ', s_caption, '</td><td nowrap>&nbsp;<img src="../../common/asp/menus/images/flecha.gif"  align="absmiddle">&nbsp;</td></tr></table>'].join('');
+        return '&nbsp;' + s_caption
+    }
+    var M = new menu (MENU_ITEMS0, MENU_POS0, {'wrapper' : TMGWrapItemAll});
+  </script>
+
+                </TD>
+                <TD WIDTH="100%" style="border-top:solid #999999 1px;border-bottom:solid #999999 1px"><img src='../../common/Images/administracion/_blank.gif'></TD>
+                <TD align="right" style="border-top:solid #999999 1px;border-bottom:solid #999999 1px;border-right:solid #999999 1px;">
+                  <TABLE cellspacing="0" cellpadding="0" border="0" style="padding-left:2px;padding-right:2px ">
+                    <TR>
+                      <TD ALIGN="CENTER"><A  href='../../default.asp?boton=Hom' target="_self"  onmouseover="Over( 'Hom2' )" onmouseout="Out( 'Hom2' )"><IMG id="Hom2" WIDTH="13" SRC="../../OpenNet/images/homepage/home_1.gif" border="0" alt="Home"></A></TD>
+                      <TD ALIGN="CENTER" ><IMG WIDTH="1" SRC="../../OpenNet/images/homepage/separacion_home.jpg"></TD>
+                          
+                            <!--TD class="cssIdiomaTexto" nowrap><a href="http://www.embajadaeeuu.cl/OpenNet/asp/default.asp?boton=Hom" title="If you have difficulty using the cascading function on this website click on any folder and it will open" class= "cssIdiomaTexto">To change Navigation</a></TD-->
+                          
+                            <!--TD class="cssIdiomaTexto" nowrap><a href="http://www.embajadaeeuu.cl/OpenNet/asp/default.asp?boton=Hom" title="If you have difficulty using the cascading function on this website click on any folder and it will open" class= "cssIdiomaTexto">To change Navigation</a></TD-->
+                          
+                      <!--TD ALIGN="CENTER" ><IMG WIDTH="1" SRC="../../OpenNet/images/homepage/separacion_home.jpg"></TD-->
+                      <TD ALIGN="CENTER">
+                           <A HREF="#" class="cssIdiomaTexto" onclick="handlerClickHomeTop( 'Idi' ); return( false )" xonmouseover="OverEspecial( '' )" xonmouseout="OutEspecial( '' )" title="Cambiar Idioma">Español</A>
+                      </TD>
+                    </TR>
+                  </TABLE>
+                </TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        
+        <FORM name="FormHomeTop" style="margin:0px" action="javascript: ClickSinHundir( 'BLf' )">
+          <!-- DATOS HIDDEN -->
+          <INPUT type="hidden" id="nuevoIdioma" name="nuevoIdioma" value="">
+        </FORM>
+      </TABLE>
+
+      <!-- Logo y botones Soporte -->
+</TABLE>
+    </TD>
+  </TR>
+  <TR>
+    <TD height="100%" valign="top" align="left">
+
+
+<TABLE BORDER="0" BORDERCOLOR="red" CELLSPACING="0" CELLPADDING="0" WIDTH="773px" HEIGHT="100%">
+<TR>
+
+  <!--Cuerpos-->
+  <TD background="../../OpenNet/images/homepage/pixel_lado_izquierdo.jpg" style="background-repeat:repeat-y;background-color:white;" WIDTH="175" VALIGN="TOP">
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" HEIGHT="100%">
+  <TR>
+    <TD CLASS="cssBodyCuerpos" VALIGN="top">
+
+  <FORM NAME="frmCuerpos" xOnSubmit="Enviar();return(false)">
+  <INPUT type="hidden" name="argInstanciaId" value="2">
+  <INPUT type="hidden" name="argEdicionId"   value="38"  >
+  <INPUT type="hidden" name="argCuerpoId"   value=""  >
+
+
+  <!-- Ediciones -->
+
+  <TABLE BORDER="0" BORDERCOLOR="00FF00" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+    <TR>
+      <TD CLASS="cssTextoTopico">Editions</TD>
+    </TR>
+
+    <TR>
+      <TD CLASS="cssCuerposEdicionesSeccion" VALIGN="top">
+
+     <SELECT NAME="ComboEdiciones" class="cssCuerposCampoSelect" OnChange="OnChangeEdicion(this.options[this.selectedIndex].value);return(false)">
+      <OPTION value="41">1/8/2009
+    <OPTION selected value="38">1/3/2008
+    <OPTION value="36">1/1/2007
+    <OPTION value="34">1/1/2006
+    <OPTION value="31">1/1/2005
+<OPTION value="">...more editions
+
+     </SELECT>
+
+      </TD>
+    </TR>
+  </TABLE>
+
+
+
+  <!-- Cuerpos -->
+  
+  <TABLE BORDER="0" BORDERCOLOR="00FF00" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+    <TR>
+      <TD CLASS="cssTextoTopico"></TD>
+    </TR>
+
+    <TR>
+      <TD CLASS="cssCuerposCuerposSeccion" VALIGN="top">
+
+  <TABLE width="100%" border="0" cellpadding="2" cellspacing="0">
+    <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+    <TD VALIGN="top"><A class="cssCuerposNombreSeleccionado" href="pagDefault.asp?boton=New1&argInstanciaId=2&argEdicionId=38&argCuerpoId=" target="_top">News in Chronological Order</A></TD>
+    </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=9&argEdicionId=38" target="_top">Bilateral, Ambassador, Embassy Issues</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=41&argEdicionId=38" target="_top">Consular Affairs</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=59&argEdicionId=38" target="_top">Cultural Issues</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=34&argEdicionId=38" target="_top">Elections in the U.S.</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=60&argEdicionId=38" target="_top">Education and English Programs</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=72&argEdicionId=38" target="_top">Embassy Activities Outside Santiago</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=8&argEdicionId=38" target="_top">Environment/Energy Activities</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=2&argEdicionId=38" target="_top">Fight against Terrorism</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=30&argEdicionId=38" target="_top">Fight Drugs/Narcotics, Money Laundering</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=31&argEdicionId=38" target="_top">Human Rights and Democracy</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=40&argEdicionId=38" target="_top">Human Trafficking</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=61&argEdicionId=38" target="_top">International Issues</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=28&argEdicionId=38" target="_top">Iraq/Middle East</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=63&argEdicionId=38" target="_top">Press/Press Freedom/Transparency</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=37&argEdicionId=38" target="_top">Programs/Visitors, Grants/Scholarships</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=68&argEdicionId=38" target="_top">Reports prepared by the U.S.</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=27&argEdicionId=38" target="_top">Science/Technology/ HIV-AIDS</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=66&argEdicionId=38" target="_top">Sports</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=6&argEdicionId=38" target="_top">Trade/Economy/Intellectual Property</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=45&argEdicionId=38" target="_top">United Nations Issues</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=7&argEdicionId=38" target="_top">U.S. International Policy / Aid</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=36&argEdicionId=38" target="_top">U.S. Issues and Government</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=29&argEdicionId=38" target="_top">U.S. Policy Toward the Americas</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=57&argEdicionId=38" target="_top">Western Hemisphere/OAS/Latin America</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=52&argEdicionId=38" target="_top">Women's Issues</A></TD>
+      </TR>
+  
+      <TR valign="top"><TD width="11" height="7"  VALIGN="top" style="padding-top:7px;"><IMG src="../../OpenNews/images/2/flecha.gif"></TD>
+      <TD VALIGN="top"><A class="cssCuerposNombreCuerpo" href="pagDefault.asp?argInstanciaId=2&argCuerpoId=74&argEdicionId=38" target="_top">Youth</A></TD>
+      </TR>
+  
+  </TABLE>
+  
+      </TD>
+    </TR>
+  </TABLE>
+
+
+
+  <br>
+
+  <!-- Busqueda -->
+  
+  <TABLE BORDER="0" BORDERCOLOR="00FF00" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+    <TR>
+      <TD CLASS="cssTextoTopico">Search</TD>
+    </TR>
+
+    <TR>
+      <TD CLASS="cssCuerposBusquedaSeccion" VALIGN="top">
+
+  <TABLE width="100%" border="0" cellpadding="0" cellspacing="0">
+    <TR valign="top">
+      <TD width="80%" style="padding-left:3px"><INPUT class="cssCuerposCampoInput" maxlength="150" type="text" name="argBuscar" value="" size="10"></TD>
+      <TD align="center" valign="middle"><A HREF="#" onclick="ClickSinHundir( 'Bus2' ); return( false )" onmouseover="Over( 'Bus2' )" onmouseout="Out( 'Bus2' )"><IMG name="Bus2" width="18" height="17" hspace="6" src="../images/2/gen_busqueda_1.gif" border="0" alt="Buscar"></A></TD>
+  </TR>
+  </TABLE>
+  
+      </TD>
+    </TR>
+  </TABLE>
+
+
+
+  <!-- Suscribase -->
+  
+  <TABLE BORDER="0" BORDERCOLOR="00FF00" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+    <TR>
+      <TD CLASS="cssTextoTopico">Subscribe</TD>
+    </TR>
+
+    <TR>
+      <TD CLASS="cssCuerposSuscribaseSeccion" VALIGN="top">
+
+  <TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR VALIGN="top">
+      <TD WIDTH="80%" style="padding-left:3px"><INPUT CLASS="cssCuerposCampoInput" TYPE="text" NAME="argEmail" VALUE="" SIZE="10" maxlength="128"></TD>
+      <TD ALIGN="center" VALIGN="middle"><A HREF="#" onClick="ClickSinHundir( 'Sub' ); return( false )" onMouseOver="Over( 'Sub' )" onMouseOut="Out( 'Sub' )"><IMG width="18" height="18" name="Sub" hspace="6" src="../images/2/gen_subscribase_1.gif" align="middle" border=0 alt="Suscribe to send news to your e-mail"></A></TD>
+    </TR>
+    <TR>
+      <TD class="cssSolicitudEmail" colspan="2" style="padding-left:3px">Type your e-mail address to suscribe</TD>
+    </TR>
+  </TABLE>
+  
+      </TD>
+    </TR>
+  </TABLE>
+
+
+  <INPUT TYPE="HIDDEN" NAME="Accion" VALUE="">
+  </FORM>
+      </TD>
+  </TR>
+</TABLE>
+
+  </TD>
+
+  <!--Contenido-->
+  <TD id="hola" VALIGN="TOP" CLASS="cssBodyNoticia" style="padding-top:10px;">
+
+  <DIV class='cssPanelRuta' id='objRuta'><A href='pagDefault.asp?argInstanciaId=2&argCarpetaId=&argTreeNodoSel='>News Archives</A>&nbsp;&nbsp;>&nbsp;&nbsp;<A href='pagDefault.asp?argInstanciaId=2&argCuerpoId=36&argEdicionId=38'>U.S. Issues and Government</A>&nbsp;&nbsp;>&nbsp;&nbsp;U.S. Embassy will be closed Monday, October 13th to commemorate Columbus Day</DIV>
+
+
+
+
+<TABLE border="0" width="100%" cellspacing="0">
+<TR valign="top">
+<TD>
+
+<TABLE border="0" width="100%" cellspacing="0">
+  <TR valign="bottom">
+    <!-- Epigrafe de la Noticia -->
+    <TD align="left" class="cssNoticiaTextoEpigrafe"></TD>
+    <TD align="right">
+      <TABLE border="0" cellspacing="0" cellpadding="0">
+        <TR valign="bottom">
+          <TD class="cssMargenDerecho">
+            <DIV class="cssNoticiaDivFuenteFecha">
+              <!-- Fecha de la Noticia -->
+
+              <DIV class="cssNoticiaFecha">
+                Thursday, October 09, 2008
+              </DIV>
+
+              <!-- Autor de la Noticia
+              <DIV class="cssNoticiaAutorFuente">U.S. Embassy in Santiago</DIV>-->
+            </DIV>
+
+            <!-- Imprimir -->
+            
+                <DIV class="cssNoticiaFecha" style="padding-top:0px"><A href="pagNoticia.asp?accion=imprimir&argInstanciaId=2&argNoticiaId=4178" target="_pagNoticia" class="cssImprimirRollOver1" ></A></DIV>
+                
+          </TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+
+  <TR>
+    <TD height="10"> </TD>
+  </TR>
+
+  <TR valign="top">
+    <TD colspan=2>
+
+<!-- Titulo de la Noticia -->
+<FONT class="cssNoticiaTitulo">U.S. Embassy will be closed Monday, October 13th to commemorate Columbus Day</FONT>
+
+<!-- Bajada de la Noticia -->
+<DIV class="cssNoticiaBajada"></DIV>
+
+</TD>
+</TR>
+
+<TR align="center" valign="top">
+<TD colspan=2  height ="500" class="cssFondoEscudo ">
+
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+<TR>
+  <TD  class="cssNoticiaTextoContenido" >
+
+    
+
+    <!-- Resumen de la Noticia -->
+    <FONT class="cssNoticiaResumen">This holiday commemorates explorer Columbus' landing in the New World in 1492</FONT>
+    <P>
+    
+    <!-- Contenido de la Noticia -->
+    <FONT class="cssNoticiaTextoContenido"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; mso-margin-top-alt: auto"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><IMG height=187 alt="A model of the Santa Maria, one of the Christopher Columbus' three ships, is pulled up New York's Fifth Avenue in front of Saint Patrick's Cathedral during the Columbus Day Parade (© AP Images)" hspace=10 src="../../OpenNet_Editor/recursos/ColumbusDay%20350.JPG" width=250 align=right vspace=10 border=0>Columbus Day is the annual U.S. commemoration of explorer Christopher Columbus' landing in the New World (at San Salvador Island, also known as Waitling Island, today part of the British Bahamas) on October 12, 1492. Columbus was not the first European successfully to cross the Atlantic. Viking sailors are believed to have established a short-lived settlement in Newfoundland sometime in the 11th century, and scholars have argued for a number of other possible pre-Columbian landings. Columbus, however, initiated the lasting encounter between Europeans and the indigenous peoples of the Western Hemisphere.<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; mso-margin-top-alt: auto"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">A number of nations celebrate this encounter with annual holidays: Discovery Day in the Bahamas, Hispanic Day in Spain, and <I>Día de la Raza</I> in much of Latin America. In 1971, Congress moved the U.S. holiday from October 12 to the second Monday in October, to afford workers a long holiday weekend. In the United States, Columbus Day is typically a celebration of Italian and Italian-American cultural heritage, Columbus generally being considered a native of Genoa.<o:p></o:p></SPAN></P><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; mso-margin-top-alt: auto"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">In the late 15th century, Portuguese sailors dominated the effort to establish a sea route between Europe and India by circumnavigating Africa. It was with an eye toward outflanking the Portuguese that Isabella I of Spain authorized an expedition in which Columbus would sail west from Spain, aiming for India. This of course presumed that the world was round. Contrary to later popular belief, many educated people already understood this; Columbus' achievement rests instead in his success in persuading Isabella to finance a dangerous and speculative expedition.<o:p></o:p></SPAN></P><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; mso-margin-top-alt: auto"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><!--startphoto-->Columbus set sail with 90 men in August 1492 on three ships: the <I>Santa Maria</I>, the <I>Nina</I> and the <I>Pinta</I>. After sailing west for five weeks, the expedition reached land on October 12. Columbus believed he had found a new route to India, hence the use of the word Indians to describe the peoples he met.<o:p></o:p></SPAN></P><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; mso-margin-top-alt: auto"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Columbus would make three subsequent voyages and would die believing that he had found a new route to India and Asia, and not, in fact, the gateway to North and South America.<o:p></o:p></SPAN></P><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; mso-margin-top-alt: auto"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Because the United States evolved out of British colonization rather than the Spanish claims of Columbus and his successors, the United States for many years did not celebrate Columbus' "discovery," although ceremonies were held on the 300th and 400th anniversaries of his first landing. Two early celebrations also occurred in New York in 1866 and San Francisco in 1869.<o:p></o:p></SPAN></P><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; mso-margin-top-alt: auto"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Italian immigrants were the first to celebrate the holiday annually in U.S. cities where they had settled in large numbers, in part as a celebration of their heritage, since Columbus was believed to be Italian. In 1937, President Franklin D. Roosevelt proclaimed Columbus Day a national holiday, then held every October 12.<o:p></o:p></SPAN></P><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; mso-margin-top-alt: auto"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">U.S. federal government offices close on Columbus Day, as do most banks. Schools typically remain open, as do most American businesses. New York City continues to host a large and festive Columbus Day parade, more than 500 years since the historic appearance of three ships off the coast of a small Caribbean island.<BR><BR><o:p><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><EM>Photo Caption: A model of the "Santa Maria," one of Christopher Columbus' three ships, is pulled up New York's Fifth Avenue in front of St. Patrick's Cathedral during the Columbus Day Parade. (© AP Images).<o:p></o:p></EM></SPAN></P></o:p></SPAN><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; TEXT-ALIGN: center; mso-margin-top-alt: auto" align=center><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"></SPAN> </P><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; TEXT-ALIGN: center; mso-margin-top-alt: auto" align=center><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">**************<o:p></o:p></SPAN></P><P class=MsoNormal style="MARGIN: 0in 0in 0pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Distributed by the Bureau of International Information Programs, U.S. Department of State.<o:p></o:p></SPAN></P><P class=MsoNormal style="BACKGROUND: white; MARGIN: 0in 0in 10.5pt; LINE-HEIGHT: 13.5pt; mso-margin-top-alt: auto"></SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><o:p></o:p></SPAN> </P></FONT>
+    
+
+    <!-- Referencia de la Noticia -->
+    
+
+    <!-- Archivo Adjunto -->
+    
+
+    </TD>
+  </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+
+
+  </TD>
+
+</TR>
+</TABLE>
+
+    </TD>
+  </TR>
+</TABLE>
+
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6408824-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</BODY>
+</HTML>

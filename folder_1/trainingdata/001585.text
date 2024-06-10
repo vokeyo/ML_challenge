@@ -1,0 +1,1173 @@
+
+         Release version = 5.3.0
+
+         =======================================================
+
+         Error Log established
+         29-Feb-2004 06:24:51 CST
+
+         =======================================================
+         
+ CHKLOG: BFIELDM logical translation: /home/cdfsoft/dist/packages/GeometryBase/V00-00-79/src/bfieldmap.dbt                          
+ Bfield::print: nominal magnetic field is:     14.116;  field is  NON-UNIFORM 
+
+**** Listing of all available paths ****
+
+* = Enabled; ! = Active
+
+ 
+*   Default (all modules) path                AllPath           
+    Filter?  Mask  nQuery  nPassed
+*   CDF required manager sequence               ManagerSequence   
+*     no      on        0        0                ErrorLoggerManager
+*     no      on        0        0                PuffModule        
+*     no      on        0        0                CalibrationManager
+*     no      on        0        0                GeometryManager   
+*     no      on        0        0                SignalManager     
+      yes     on        0        0                ConfigManager     
+*     no      on        0        0              EventDump         
+      yes     on        0        0              Prereq            
+Current value of item(s) in the "DHInput" module:
+
+      Value of parmSetName for this module  is IGNORE
+      Value of verbose for this module  is false
+      Value of production for this module  is false
+      Value of events for this module  is 2147483646
+      Value of maxReadErrors for this module  is 2
+      Value of report for this module  is 100
+      Value of statusFile for this module  is 0
+      Value of firstEvent for this module  is -1
+      dropList in module DHInput has 0 values
+	(minimum 0, maximum 1000): 
+      classHideList in module DHInput has 0 values
+	(minimum 0, maximum 1000): 
+      hideList in module DHInput has 0 values
+	(minimum 0, maximum 1000): 
+      processDropList in module DHInput has 0 values
+	(minimum 0, maximum 1000): 
+      keepFromProcessList in module DHInput has 0 values
+	(minimum 0, maximum 1000): 
+      runSections: *:* 
+      selectEvents: *(*):*(*) 
+      runsTrigs: *(*):*(*) 
+      Value of recordType for this module  is SIMPLE
+      Value of timeout for this module  is 86400
+      Value of rawRS for this module  is false
+      Value of luminosityLog for this module  is NONE
+      Value of requireCatalog for this module  is true
+      Value of dropInput for this module  is false
+      Value of useBlockIO for this module  is false
+      Value of primaryBasketSz for this module  is 131072
+      Value of readRawTrig for this module  is true
+      Value of readRawTrack for this module  is true
+      Value of readRawCalor for this module  is true
+      Value of readTrack for this module  is true
+      Value of readCalor for this module  is true
+      Value of readMuon for this module  is true
+      Value of readElectron for this module  is true
+      Value of readPadCalor for this module  is true
+      Value of readPadTrack for this module  is true
+      Value of readL3 for this module  is true
+      Value of blockIORawTrig for this module  is false
+      Value of blockIORawTrack for this module  is false
+      Value of blockIORawCalor for this module  is false
+      Value of blockIOTrack for this module  is false
+      Value of blockIOCalor for this module  is false
+      Value of blockIOMuon for this module  is false
+      Value of blockIOElectron for this module  is false
+      Value of blockIOPadCalor for this module  is false
+      Value of blockIOPadTrack for this module  is false
+      Value of blockIOL3 for this module  is false
+      Value of skipOver for this module  is -1
+      There are no run/event requests for DHInput
+       Data not processed yet:
+    Static Files:
+    -------------
+  No Static Files
+    Catalog files:
+    --------------
+  No DataSets
+    SAM Dataset: jbot0h
+
+ Read files: 0 of maximum requested: 12
+ Elapsed clock time: 0 of maximum requested: 2592000 (2592000 seconds left)
+
+      This job processes section 1 of total 1 of input data
+      Value of maxFiles for this module  is 12
+      Value of maxTime for this module  is 2592000
+      Current value of items on the "sam" menu:
+            Value of project for this module  is 
+            Value of station for this module  is 
+            Value of group for this module  is test
+      Value of cache for this module  is SAM
+
+         =======================================================
+
+         Error Log established
+         29-Feb-2004 06:24:52 CST
+
+         =======================================================
+         
+ PcalDetectorElement::makeTop()
+DiskCacheManagerSam_v1::requestDataset-> warning: dataset jbot0h was requested. Overwrite by new request: jbot0h
+ShellCommand-> sam dump station --projects --station=cdf-sam 2>&1
+Response-> *** BEGIN DUMP STATION cdf-sam version v4_2_1_55 running at fcdfdata016 2 days 21 hours 35 minutes 16 seconds, admins: kreymer piccoli stdenis stonjek 
+
+Response-> Replica selection: prefer (enstore), avoid (empty)
+
+Response-> There are 80 authorized transfer groups
+
+Response-> Minimum delivery is 1024B; external deliveries are constrained to dcap://cdfdca-door01a dcap://cdfdca-door02a dcap://cdfdca-door03a dcap://cdfdca-door04a 
+
+Response-> Excess consumer satisfaction: 0
+
+Response-> PROJECT MANAGER: fileReleaseTO = 1 days : maxConsumer Wait time = 1 days, max prefetched files : 5
+
+Response-> STATION PROJECTS (45 already ended, 43 prematurely):
+
+Response-> project stdenis_cdf-sam_jbot0h_1078057358.07(5135) user cdfcaf.test started 29 Feb 06:23:06  UNIX pid 21557 contains 690 total files: 19 given to project, 0 delivery errors, and 671 still wanted (of these 0 in cache, 0 locked) 
+
+Response-> 
+
+Response-> *** END OF STATION DUMP ***
+
+Response-> 
+
+Sam2DiskCacheInterface::getProjectStatus-> name: stdenis_cdf-sam_jbot0h_1078057358.07 OK, total:0 given:19 unprocessed:671 cached:0
+Sam2DiskCacheInterface::createProject-> Reuse project stdenis_cdf-sam_jbot0h_1078057358.07
+ShellCommand-> sam establish consumer --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --appname=demo --appversion=1 2>&1
+Response-> CID 6520
+
+ShellCommand-> sam establish process --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cid=6520 2>&1
+Response-> CPID 24518
+
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 06:24:59 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> GPM promised to call back... callback received.
+
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0875/GI0875.0/jh025088.01cbbot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0875/GI0875.0/jh025088.01cbbot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0875/GI0875.0/jh025088.01cbbot0 on Sun Feb 29 06:25:33 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0875/GI0875.0/jh025088.01cbbot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of -1
+         the next event has run number 151688 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 06:25:37 CST run = 151688 event = 1528312
+ Alignment:    on: 1    wafers on:1
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:38 CST 
+         run = 151688 event = 1528312
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:38 CST 
+         run = 151688 event = 1528426
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:39 CST 
+         run = 151688 event = 1528574
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:39 CST 
+         run = 151688 event = 1528659
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:39 CST 
+         run = 151688 event = 1528819
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:39 CST 
+         run = 151688 event = 1528847
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:39 CST 
+         run = 151688 event = 1529127
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:39 CST 
+         run = 151688 event = 1529137
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:39 CST 
+         run = 151688 event = 1529388
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:39 CST 
+         run = 151688 event = 1529412
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:39 CST 
+         run = 151688 event = 1530599
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:40 CST 
+         run = 151688 event = 1531854
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:41 CST 
+         run = 151688 event = 1534374
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:43 CST 
+         run = 151688 event = 1540619
+DHInput Begin processing 100th record. Run 151688, Trigger 1541577
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:48 CST 
+         run = 151688 event = 1551516
+DHInput Begin processing 200th record. Run 151688, Trigger 1556607
+DHInput Begin processing 300th record. Run 151688, Trigger 1572144
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:25:57 CST 
+         run = 151688 event = 1576316
+DHInput Begin processing 400th record. Run 151688, Trigger 1586652
+DHInput Begin processing 500th record. Run 151688, Trigger 1602120
+DHInput Begin processing 600th record. Run 151688, Trigger 1619843
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:26:17 CST 
+         run = 151688 event = 1629199
+DHInput Begin processing 700th record. Run 151688, Trigger 1636802
+DHInput Begin processing 800th record. Run 151688, Trigger 1652021
+DHInput Begin processing 900th record. Run 151688, Trigger 1665262
+DHInput Begin processing 1000th record. Run 151688, Trigger 1680877
+DHInput Begin processing 1100th record. Run 151688, Trigger 1696588
+DHInput Begin processing 1200th record. Run 151688, Trigger 1709536
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:26:55 CST 
+         run = 151688 event = 1724393
+DHInput Begin processing 1300th record. Run 151688, Trigger 1726041
+DHInput Begin processing 1400th record. Run 151688, Trigger 1740757
+DHInput Begin processing 1500th record. Run 151688, Trigger 1755815
+DHInput Begin processing 1600th record. Run 151688, Trigger 1770350
+DHInput Begin processing 1700th record. Run 151688, Trigger 1784936
+DHInput Begin processing 1800th record. Run 151688, Trigger 1801084
+DHInput Begin processing 1900th record. Run 151688, Trigger 1816246
+DHInput Begin processing 2000th record. Run 151688, Trigger 1831120
+DHInput Begin processing 2100th record. Run 151688, Trigger 1844241
+DHInput Begin processing 2200th record. Run 151688, Trigger 1858560
+DHInput Begin processing 2300th record. Run 151688, Trigger 1878170
+DHInput Begin processing 2400th record. Run 151919, Trigger 201353
+DHInput Begin processing 2500th record. Run 151919, Trigger 218203
+DHInput Begin processing 2600th record. Run 151919, Trigger 233494
+DHInput Begin processing 2700th record. Run 151919, Trigger 245887
+DHInput Begin processing 2800th record. Run 151919, Trigger 258595
+DHInput Begin processing 2900th record. Run 151919, Trigger 270639
+DHInput Begin processing 3000th record. Run 151919, Trigger 285281
+DHInput Begin processing 3100th record. Run 151919, Trigger 301821
+DHInput Begin processing 3200th record. Run 151919, Trigger 316556
+DHInput Begin processing 3300th record. Run 151919, Trigger 331738
+DHInput Begin processing 3400th record. Run 151919, Trigger 348642
+DHInput Begin processing 3500th record. Run 151919, Trigger 365308
+DHInput Begin processing 3600th record. Run 151919, Trigger 379644
+DHInput Begin processing 3700th record. Run 151919, Trigger 394503
+DHInput Begin processing 3800th record. Run 151919, Trigger 407606
+DHInput Begin processing 3900th record. Run 151919, Trigger 422546
+DHInput Begin processing 4000th record. Run 151919, Trigger 437292
+DHInput Begin processing 4100th record. Run 151919, Trigger 454904
+DHInput Begin processing 4200th record. Run 151919, Trigger 469974
+DHInput Begin processing 4300th record. Run 151919, Trigger 485552
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0875/GI0875.0/jh025088.01cbbot0 after    4334 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0875/GI0875.0/jh025088.01cbbot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 06:30:01 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0867/GI0867.1/jh024fb4.01ebbot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0867/GI0867.1/jh024fb4.01ebbot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0867/GI0867.1/jh024fb4.01ebbot0 on Sun Feb 29 06:30:03 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0867/GI0867.1/jh024fb4.01ebbot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of 151919
+         the next event has run number 151476 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 06:30:05 CST run = 151476 event = 3329981
+DHInput Begin processing 4400th record. Run 151476, Trigger 3339713
+DHInput Begin processing 4500th record. Run 151476, Trigger 3353380
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:30:19 CST 
+         run = 151476 event = 3365130
+DHInput Begin processing 4600th record. Run 151476, Trigger 3369040
+DHInput Begin processing 4700th record. Run 151476, Trigger 3385005
+DHInput Begin processing 4800th record. Run 151476, Trigger 3402724
+DHInput Begin processing 4900th record. Run 151476, Trigger 3419718
+DHInput Begin processing 5000th record. Run 151476, Trigger 3435743
+DHInput Begin processing 5100th record. Run 151476, Trigger 3451670
+DHInput Begin processing 5200th record. Run 151476, Trigger 3466076
+DHInput Begin processing 5300th record. Run 151476, Trigger 3480599
+DHInput Begin processing 5400th record. Run 151476, Trigger 3496297
+DHInput Begin processing 5500th record. Run 151476, Trigger 3513109
+DHInput Begin processing 5600th record. Run 151476, Trigger 3529442
+DHInput Begin processing 5700th record. Run 151476, Trigger 3545504
+DHInput Begin processing 5800th record. Run 151476, Trigger 3562440
+DHInput Begin processing 5900th record. Run 151476, Trigger 3576357
+DHInput Begin processing 6000th record. Run 151476, Trigger 3589746
+DHInput Begin processing 6100th record. Run 151476, Trigger 3604764
+DHInput Begin processing 6200th record. Run 151476, Trigger 3622959
+DHInput Begin processing 6300th record. Run 151476, Trigger 3637864
+DHInput Begin processing 6400th record. Run 151476, Trigger 3653435
+DHInput Begin processing 6500th record. Run 151476, Trigger 3667111
+DHInput Begin processing 6600th record. Run 151476, Trigger 3680729
+DHInput Begin processing 6700th record. Run 151476, Trigger 3696751
+DHInput Begin processing 6800th record. Run 151476, Trigger 3712126
+DHInput Begin processing 6900th record. Run 151476, Trigger 3725811
+DHInput Begin processing 7000th record. Run 151476, Trigger 3741440
+DHInput Begin processing 7100th record. Run 151476, Trigger 3755405
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:33:03 CST 
+         run = 151476 event = 3760455
+DHInput Begin processing 7200th record. Run 151476, Trigger 3772629
+DHInput Begin processing 7300th record. Run 151476, Trigger 3788586
+DHInput Begin processing 7400th record. Run 151476, Trigger 3800620
+DHInput Begin processing 7500th record. Run 151476, Trigger 3814625
+DHInput Begin processing 7600th record. Run 151476, Trigger 3828896
+DHInput Begin processing 7700th record. Run 151476, Trigger 3846233
+DHInput Begin processing 7800th record. Run 151476, Trigger 3860891
+DHInput Begin processing 7900th record. Run 151476, Trigger 3875005
+DHInput Begin processing 8000th record. Run 151476, Trigger 3889770
+DHInput Begin processing 8100th record. Run 151476, Trigger 3906856
+DHInput Begin processing 8200th record. Run 151476, Trigger 3919573
+DHInput Begin processing 8300th record. Run 151476, Trigger 3934412
+DHInput Begin processing 8400th record. Run 151476, Trigger 3951082
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0867/GI0867.1/jh024fb4.01ebbot0 after    8491 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0867/GI0867.1/jh024fb4.01ebbot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 06:34:33 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> GPM promised to call back... callback received.
+
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.3/jh024d24.0367bot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.3/jh024d24.0367bot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.3/jh024d24.0367bot0 on Sun Feb 29 06:38:12 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.3/jh024d24.0367bot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of 151476
+         the next event has run number 150820 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 06:38:14 CST run = 150820 event = 4213458
+DHInput Begin processing 8500th record. Run 150820, Trigger 4214653
+DHInput Begin processing 8600th record. Run 150820, Trigger 4228579
+DHInput Begin processing 8700th record. Run 150821, Trigger 13379
+DHInput Begin processing 8800th record. Run 150821, Trigger 30351
+DHInput Begin processing 8900th record. Run 150821, Trigger 45290
+DHInput Begin processing 9000th record. Run 150821, Trigger 62266
+DHInput Begin processing 9100th record. Run 150821, Trigger 74433
+DHInput Begin processing 9200th record. Run 150821, Trigger 90981
+DHInput Begin processing 9300th record. Run 150821, Trigger 104014
+DHInput Begin processing 9400th record. Run 150821, Trigger 119873
+DHInput Begin processing 9500th record. Run 150821, Trigger 135128
+DHInput Begin processing 9600th record. Run 150821, Trigger 147393
+DHInput Begin processing 9700th record. Run 150821, Trigger 162910
+DHInput Begin processing 9800th record. Run 150821, Trigger 179064
+DHInput Begin processing 9900th record. Run 150821, Trigger 193445
+DHInput Begin processing 10000th record. Run 150821, Trigger 207112
+DHInput Begin processing 10100th record. Run 150821, Trigger 221769
+DHInput Begin processing 10200th record. Run 150821, Trigger 236947
+DHInput Begin processing 10300th record. Run 150821, Trigger 249565
+DHInput Begin processing 10400th record. Run 150821, Trigger 263578
+DHInput Begin processing 10500th record. Run 150821, Trigger 276409
+DHInput Begin processing 10600th record. Run 150821, Trigger 291410
+DHInput Begin processing 10700th record. Run 150821, Trigger 305691
+DHInput Begin processing 10800th record. Run 150821, Trigger 320333
+DHInput Begin processing 10900th record. Run 150821, Trigger 334159
+DHInput Begin processing 11000th record. Run 150821, Trigger 349123
+DHInput Begin processing 11100th record. Run 150821, Trigger 362459
+DHInput Begin processing 11200th record. Run 150821, Trigger 378301
+DHInput Begin processing 11300th record. Run 150821, Trigger 394025
+DHInput Begin processing 11400th record. Run 150821, Trigger 411376
+DHInput Begin processing 11500th record. Run 150821, Trigger 425313
+DHInput Begin processing 11600th record. Run 150821, Trigger 439531
+DHInput Begin processing 11700th record. Run 150821, Trigger 457196
+DHInput Begin processing 11800th record. Run 150821, Trigger 476257
+DHInput Begin processing 11900th record. Run 150821, Trigger 492434
+DHInput Begin processing 12000th record. Run 150821, Trigger 508637
+DHInput Begin processing 12100th record. Run 150821, Trigger 522797
+DHInput Begin processing 12200th record. Run 150821, Trigger 539265
+DHInput Begin processing 12300th record. Run 150821, Trigger 554877
+DHInput Begin processing 12400th record. Run 150821, Trigger 570708
+DHInput Begin processing 12500th record. Run 150823, Trigger 1505
+DHInput Begin processing 12600th record. Run 150823, Trigger 16290
+DHInput Begin processing 12700th record. Run 150823, Trigger 31849
+DHInput Begin processing 12800th record. Run 150823, Trigger 45857
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.3/jh024d24.0367bot0 after   12866 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.3/jh024d24.0367bot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 06:42:42 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.1/jh024da4.000dbot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.1/jh024da4.000dbot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.1/jh024da4.000dbot0 on Sun Feb 29 06:42:43 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.1/jh024da4.000dbot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of 150823
+         the next event has run number 150948 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 06:42:45 CST run = 150948 event = 48316
+DHInput Begin processing 12900th record. Run 150948, Trigger 53229
+DHInput Begin processing 13000th record. Run 150948, Trigger 66698
+DHInput Begin processing 13100th record. Run 150948, Trigger 79539
+DHInput Begin processing 13200th record. Run 150948, Trigger 93297
+DHInput Begin processing 13300th record. Run 150948, Trigger 104400
+DHInput Begin processing 13400th record. Run 150948, Trigger 117172
+DHInput Begin processing 13500th record. Run 150948, Trigger 131631
+DHInput Begin processing 13600th record. Run 150948, Trigger 144007
+DHInput Begin processing 13700th record. Run 150948, Trigger 154966
+DHInput Begin processing 13800th record. Run 150948, Trigger 167500
+DHInput Begin processing 13900th record. Run 150951, Trigger 6002
+DHInput Begin processing 14000th record. Run 150951, Trigger 19032
+DHInput Begin processing 14100th record. Run 150951, Trigger 29153
+DHInput Begin processing 14200th record. Run 150951, Trigger 40875
+DHInput Begin processing 14300th record. Run 150951, Trigger 54731
+DHInput Begin processing 14400th record. Run 150951, Trigger 68029
+DHInput Begin processing 14500th record. Run 150951, Trigger 81378
+DHInput Begin processing 14600th record. Run 150951, Trigger 92827
+DHInput Begin processing 14700th record. Run 150951, Trigger 104431
+DHInput Begin processing 14800th record. Run 150951, Trigger 117768
+DHInput Begin processing 14900th record. Run 150951, Trigger 128151
+DHInput Begin processing 15000th record. Run 150951, Trigger 141495
+DHInput Begin processing 15100th record. Run 150951, Trigger 156243
+DHInput Begin processing 15200th record. Run 150951, Trigger 169468
+DHInput Begin processing 15300th record. Run 150951, Trigger 183691
+DHInput Begin processing 15400th record. Run 150951, Trigger 195739
+DHInput Begin processing 15500th record. Run 150951, Trigger 207303
+DHInput Begin processing 15600th record. Run 150951, Trigger 221036
+DHInput Begin processing 15700th record. Run 150951, Trigger 233593
+DHInput Begin processing 15800th record. Run 150951, Trigger 246933
+DHInput Begin processing 15900th record. Run 150951, Trigger 261984
+DHInput Begin processing 16000th record. Run 150951, Trigger 276875
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.1/jh024da4.000dbot0 after   16016 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.1/jh024da4.000dbot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 06:51:42 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> GPM promised to call back... callback received.
+
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.4/jh025419.0098bot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.4/jh025419.0098bot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.4/jh025419.0098bot0 on Sun Feb 29 06:51:46 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.4/jh025419.0098bot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of 150951
+         the next event has run number 152601 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 06:51:48 CST run = 152601 event = 714701
+DHInput Begin processing 16100th record. Run 152601, Trigger 726051
+DHInput Begin processing 16200th record. Run 152601, Trigger 738980
+DHInput Begin processing 16300th record. Run 152601, Trigger 754356
+DHInput Begin processing 16400th record. Run 152601, Trigger 771236
+DHInput Begin processing 16500th record. Run 152601, Trigger 784768
+DHInput Begin processing 16600th record. Run 152601, Trigger 797866
+DHInput Begin processing 16700th record. Run 152601, Trigger 813303
+DHInput Begin processing 16800th record. Run 152601, Trigger 827501
+DHInput Begin processing 16900th record. Run 152602, Trigger 8221
+DHInput Begin processing 17000th record. Run 152602, Trigger 22335
+DHInput Begin processing 17100th record. Run 152602, Trigger 37098
+DHInput Begin processing 17200th record. Run 152602, Trigger 53952
+DHInput Begin processing 17300th record. Run 152602, Trigger 68023
+DHInput Begin processing 17400th record. Run 152602, Trigger 81716
+DHInput Begin processing 17500th record. Run 152602, Trigger 98102
+DHInput Begin processing 17600th record. Run 152602, Trigger 112942
+DHInput Begin processing 17700th record. Run 152602, Trigger 128569
+DHInput Begin processing 17800th record. Run 152602, Trigger 145431
+DHInput Begin processing 17900th record. Run 152602, Trigger 157877
+DHInput Begin processing 18000th record. Run 152602, Trigger 174745
+DHInput Begin processing 18100th record. Run 152602, Trigger 190021
+DHInput Begin processing 18200th record. Run 152602, Trigger 204279
+DHInput Begin processing 18300th record. Run 152602, Trigger 218013
+DHInput Begin processing 18400th record. Run 152602, Trigger 232563
+DHInput Begin processing 18500th record. Run 152602, Trigger 250224
+DHInput Begin processing 18600th record. Run 152602, Trigger 265199
+DHInput Begin processing 18700th record. Run 152602, Trigger 279691
+DHInput Begin processing 18800th record. Run 152602, Trigger 295569
+DHInput Begin processing 18900th record. Run 152602, Trigger 310147
+DHInput Begin processing 19000th record. Run 152602, Trigger 326486
+DHInput Begin processing 19100th record. Run 152602, Trigger 342813
+DHInput Begin processing 19200th record. Run 152602, Trigger 358408
+DHInput Begin processing 19300th record. Run 152602, Trigger 374743
+DHInput Begin processing 19400th record. Run 152602, Trigger 388751
+DHInput Begin processing 19500th record. Run 152602, Trigger 404231
+DHInput Begin processing 19600th record. Run 152602, Trigger 419284
+DHInput Begin processing 19700th record. Run 152602, Trigger 437726
+DHInput Begin processing 19800th record. Run 152602, Trigger 453446
+DHInput Begin processing 19900th record. Run 152602, Trigger 468919
+DHInput Begin processing 20000th record. Run 152602, Trigger 481623
+DHInput Begin processing 20100th record. Run 152602, Trigger 496795
+DHInput Begin processing 20200th record. Run 152602, Trigger 514180
+DHInput Begin processing 20300th record. Run 152602, Trigger 529645
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.4/jh025419.0098bot0 after   20320 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.4/jh025419.0098bot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 06:56:41 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> GPM promised to call back... callback received.
+
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.2/jh0253ec.0084bot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.2/jh0253ec.0084bot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.2/jh0253ec.0084bot0 on Sun Feb 29 06:57:09 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.2/jh0253ec.0084bot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of 152602
+         the next event has run number 152556 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 06:57:11 CST run = 152556 event = 676833
+DHInput Begin processing 20400th record. Run 152556, Trigger 688307
+DHInput Begin processing 20500th record. Run 152556, Trigger 702035
+DHInput Begin processing 20600th record. Run 152556, Trigger 716647
+DHInput Begin processing 20700th record. Run 152556, Trigger 731625
+DHInput Begin processing 20800th record. Run 152556, Trigger 746546
+DHInput Begin processing 20900th record. Run 152556, Trigger 761435
+DHInput Begin processing 21000th record. Run 152556, Trigger 775671
+DHInput Begin processing 21100th record. Run 152556, Trigger 792376
+DHInput Begin processing 21200th record. Run 152556, Trigger 809172
+DHInput Begin processing 21300th record. Run 152556, Trigger 822427
+DHInput Begin processing 21400th record. Run 152556, Trigger 838101
+DHInput Begin processing 21500th record. Run 152556, Trigger 851805
+DHInput Begin processing 21600th record. Run 152556, Trigger 868120
+DHInput Begin processing 21700th record. Run 152556, Trigger 882745
+DHInput Begin processing 21800th record. Run 152556, Trigger 900917
+DHInput Begin processing 21900th record. Run 152556, Trigger 914695
+DHInput Begin processing 22000th record. Run 152556, Trigger 929441
+DHInput Begin processing 22100th record. Run 152556, Trigger 945617
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 06:59:19 CST 
+         run = 152556 event = 953793
+DHInput Begin processing 22200th record. Run 152556, Trigger 963381
+DHInput Begin processing 22300th record. Run 152556, Trigger 977344
+DHInput Begin processing 22400th record. Run 152556, Trigger 990162
+DHInput Begin processing 22500th record. Run 152556, Trigger 1003615
+DHInput Begin processing 22600th record. Run 152556, Trigger 1018430
+DHInput Begin processing 22700th record. Run 152556, Trigger 1033237
+DHInput Begin processing 22800th record. Run 152556, Trigger 1047556
+DHInput Begin processing 22900th record. Run 152556, Trigger 1059486
+DHInput Begin processing 23000th record. Run 152556, Trigger 1075014
+DHInput Begin processing 23100th record. Run 152556, Trigger 1091855
+DHInput Begin processing 23200th record. Run 152556, Trigger 1105699
+DHInput Begin processing 23300th record. Run 152556, Trigger 1121999
+DHInput Begin processing 23400th record. Run 152556, Trigger 1135339
+DHInput Begin processing 23500th record. Run 152556, Trigger 1151879
+DHInput Begin processing 23600th record. Run 152558, Trigger 12501
+DHInput Begin processing 23700th record. Run 152558, Trigger 27070
+DHInput Begin processing 23800th record. Run 152558, Trigger 41418
+DHInput Begin processing 23900th record. Run 152558, Trigger 54601
+DHInput Begin processing 24000th record. Run 152558, Trigger 67109
+DHInput Begin processing 24100th record. Run 152558, Trigger 83867
+DHInput Begin processing 24200th record. Run 152558, Trigger 97084
+DHInput Begin processing 24300th record. Run 152558, Trigger 113351
+DHInput Begin processing 24400th record. Run 152558, Trigger 128647
+DHInput Begin processing 24500th record. Run 152558, Trigger 141857
+DHInput Begin processing 24600th record. Run 152558, Trigger 157572
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.2/jh0253ec.0084bot0 after   24642 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.2/jh0253ec.0084bot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 07:02:09 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> GPM promised to call back... callback received.
+
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0886/GI0886.2/jh0254ea.0139bot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0886/GI0886.2/jh0254ea.0139bot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0886/GI0886.2/jh0254ea.0139bot0 on Sun Feb 29 07:02:55 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0886/GI0886.2/jh0254ea.0139bot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of 152558
+         the next event has run number 152810 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 07:02:57 CST run = 152810 event = 1710766
+DHInput Begin processing 24700th record. Run 152810, Trigger 1719960
+DHInput Begin processing 24800th record. Run 152810, Trigger 1735056
+DHInput Begin processing 24900th record. Run 152810, Trigger 1749990
+DHInput Begin processing 25000th record. Run 152810, Trigger 1765859
+DHInput Begin processing 25100th record. Run 152810, Trigger 1779458
+DHInput Begin processing 25200th record. Run 152810, Trigger 1797728
+DHInput Begin processing 25300th record. Run 152810, Trigger 1812917
+DHInput Begin processing 25400th record. Run 152810, Trigger 1827912
+DHInput Begin processing 25500th record. Run 152810, Trigger 1841738
+DHInput Begin processing 25600th record. Run 152810, Trigger 1859582
+DHInput Begin processing 25700th record. Run 152810, Trigger 1876773
+DHInput Begin processing 25800th record. Run 152810, Trigger 1893041
+DHInput Begin processing 25900th record. Run 152810, Trigger 1909743
+DHInput Begin processing 26000th record. Run 152810, Trigger 1924771
+DHInput Begin processing 26100th record. Run 152810, Trigger 1939915
+DHInput Begin processing 26200th record. Run 152810, Trigger 1955865
+DHInput Begin processing 26300th record. Run 152810, Trigger 1968515
+DHInput Begin processing 26400th record. Run 152810, Trigger 1984695
+DHInput Begin processing 26500th record. Run 152810, Trigger 2001354
+DHInput Begin processing 26600th record. Run 152810, Trigger 2017480
+DHInput Begin processing 26700th record. Run 152810, Trigger 2032804
+DHInput Begin processing 26800th record. Run 152810, Trigger 2051133
+DHInput Begin processing 26900th record. Run 152810, Trigger 2069137
+DHInput Begin processing 27000th record. Run 152810, Trigger 2087041
+DHInput Begin processing 27100th record. Run 152810, Trigger 2098637
+DHInput Begin processing 27200th record. Run 152810, Trigger 2114558
+DHInput Begin processing 27300th record. Run 152810, Trigger 2130803
+DHInput Begin processing 27400th record. Run 152810, Trigger 2148568
+DHInput Begin processing 27500th record. Run 152810, Trigger 2163943
+DHInput Begin processing 27600th record. Run 152810, Trigger 2178541
+DHInput Begin processing 27700th record. Run 152810, Trigger 2195080
+DHInput Begin processing 27800th record. Run 152810, Trigger 2211771
+DHInput Begin processing 27900th record. Run 152810, Trigger 2227608
+DHInput Begin processing 28000th record. Run 152810, Trigger 2243734
+DHInput Begin processing 28100th record. Run 152810, Trigger 2259919
+DHInput Begin processing 28200th record. Run 152810, Trigger 2274949
+DHInput Begin processing 28300th record. Run 152810, Trigger 2292780
+DHInput Begin processing 28400th record. Run 152810, Trigger 2308402
+DHInput Begin processing 28500th record. Run 152810, Trigger 2325013
+DHInput Begin processing 28600th record. Run 152810, Trigger 2342803
+DHInput Begin processing 28700th record. Run 152810, Trigger 2356732
+DHInput Begin processing 28800th record. Run 152810, Trigger 2371577
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0886/GI0886.2/jh0254ea.0139bot0 after   28804 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0886/GI0886.2/jh0254ea.0139bot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 07:07:47 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> GPM promised to call back... callback received.
+
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.5/jh025428.0055bot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.5/jh025428.0055bot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.5/jh025428.0055bot0 on Sun Feb 29 07:15:15 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.5/jh025428.0055bot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of 152810
+         the next event has run number 152616 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 07:15:17 CST run = 152616 event = 652375
+DHInput Begin processing 28900th record. Run 152616, Trigger 667978
+DHInput Begin processing 29000th record. Run 152616, Trigger 681582
+DHInput Begin processing 29100th record. Run 152616, Trigger 696105
+DHInput Begin processing 29200th record. Run 152616, Trigger 710500
+DHInput Begin processing 29300th record. Run 152616, Trigger 725370
+DHInput Begin processing 29400th record. Run 152616, Trigger 743515
+DHInput Begin processing 29500th record. Run 152616, Trigger 760940
+DHInput Begin processing 29600th record. Run 152616, Trigger 775263
+DHInput Begin processing 29700th record. Run 152616, Trigger 790696
+DHInput Begin processing 29800th record. Run 152616, Trigger 806273
+DHInput Begin processing 29900th record. Run 152616, Trigger 822535
+DHInput Begin processing 30000th record. Run 152616, Trigger 837665
+DHInput Begin processing 30100th record. Run 152616, Trigger 854397
+DHInput Begin processing 30200th record. Run 152616, Trigger 867981
+DHInput Begin processing 30300th record. Run 152616, Trigger 881595
+DHInput Begin processing 30400th record. Run 152616, Trigger 899436
+DHInput Begin processing 30500th record. Run 152616, Trigger 915359
+DHInput Begin processing 30600th record. Run 152616, Trigger 930683
+DHInput Begin processing 30700th record. Run 152616, Trigger 947351
+DHInput Begin processing 30800th record. Run 152616, Trigger 963422
+DHInput Begin processing 30900th record. Run 152616, Trigger 979722
+DHInput Begin processing 31000th record. Run 152616, Trigger 994687
+DHInput Begin processing 31100th record. Run 152616, Trigger 1011110
+DHInput Begin processing 31200th record. Run 152616, Trigger 1023768
+DHInput Begin processing 31300th record. Run 152616, Trigger 1038324
+DHInput Begin processing 31400th record. Run 152616, Trigger 1053441
+DHInput Begin processing 31500th record. Run 152616, Trigger 1067711
+DHInput Begin processing 31600th record. Run 152616, Trigger 1083804
+DHInput Begin processing 31700th record. Run 152616, Trigger 1099427
+DHInput Begin processing 31800th record. Run 152616, Trigger 1113971
+DHInput Begin processing 31900th record. Run 152616, Trigger 1128177
+DHInput Begin processing 32000th record. Run 152616, Trigger 1145521
+DHInput Begin processing 32100th record. Run 152616, Trigger 1162955
+DHInput Begin processing 32200th record. Run 152616, Trigger 1177614
+DHInput Begin processing 32300th record. Run 152616, Trigger 1191217
+DHInput Begin processing 32400th record. Run 152616, Trigger 1205831
+DHInput Begin processing 32500th record. Run 152616, Trigger 1222615
+DHInput Begin processing 32600th record. Run 152616, Trigger 1235856
+DHInput Begin processing 32700th record. Run 152616, Trigger 1253452
+DHInput Begin processing 32800th record. Run 152617, Trigger 5730
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.5/jh025428.0055bot0 after   32896 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0878/GI0878.5/jh025428.0055bot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 07:20:05 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> GPM promised to call back... callback received.
+
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.0/jh024ba3.017bbot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.0/jh024ba3.017bbot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.0/jh024ba3.017bbot0 on Sun Feb 29 07:21:10 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.0/jh024ba3.017bbot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of 152617
+         the next event has run number 150435 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 07:21:12 CST run = 150435 event = 1398148
+DHInput Begin processing 32900th record. Run 150435, Trigger 1398247
+DHInput Begin processing 33000th record. Run 150435, Trigger 1413493
+DHInput Begin processing 33100th record. Run 150435, Trigger 1429337
+DHInput Begin processing 33200th record. Run 150435, Trigger 1447617
+DHInput Begin processing 33300th record. Run 150435, Trigger 1465337
+DHInput Begin processing 33400th record. Run 150435, Trigger 1480013
+DHInput Begin processing 33500th record. Run 150435, Trigger 1491660
+DHInput Begin processing 33600th record. Run 150435, Trigger 1509246
+%ERLOG-w CalData puff: : 
+         /home/cdfsoft/dist/packages/CalorObjects/V00-01-34/src/CalData.cc : 744
+          No offline LER coll for:   CEM PEM PPR CHA WHA PHA  
+          => CalorimetryModule should be rerun  GlobalLibraryLogger 
+         DHInputDataList::setupNextFileProcessing() 29-Feb-2004 07:22:01 CST 
+         run = 150435 event = 1518103
+DHInput Begin processing 33700th record. Run 150435, Trigger 1526088
+DHInput Begin processing 33800th record. Run 150435, Trigger 1540697
+DHInput Begin processing 33900th record. Run 150435, Trigger 1556928
+DHInput Begin processing 34000th record. Run 150435, Trigger 1575137
+DHInput Begin processing 34100th record. Run 150435, Trigger 1590365
+DHInput Begin processing 34200th record. Run 150435, Trigger 1606585
+DHInput Begin processing 34300th record. Run 150435, Trigger 1621121
+DHInput Begin processing 34400th record. Run 150435, Trigger 1636545
+DHInput Begin processing 34500th record. Run 150435, Trigger 1653038
+DHInput Begin processing 34600th record. Run 150435, Trigger 1668282
+DHInput Begin processing 34700th record. Run 150435, Trigger 1683825
+DHInput Begin processing 34800th record. Run 150435, Trigger 1699851
+DHInput Begin processing 34900th record. Run 150435, Trigger 1716144
+DHInput Begin processing 35000th record. Run 150435, Trigger 1732363
+DHInput Begin processing 35100th record. Run 150435, Trigger 1746128
+DHInput Begin processing 35200th record. Run 150435, Trigger 1758420
+DHInput Begin processing 35300th record. Run 150435, Trigger 1774918
+DHInput Begin processing 35400th record. Run 150435, Trigger 1791031
+DHInput Begin processing 35500th record. Run 150435, Trigger 1804848
+DHInput Begin processing 35600th record. Run 150435, Trigger 1819747
+DHInput Begin processing 35700th record. Run 150435, Trigger 1835843
+DHInput Begin processing 35800th record. Run 150435, Trigger 1852162
+DHInput Begin processing 35900th record. Run 150435, Trigger 1868465
+DHInput Begin processing 36000th record. Run 150435, Trigger 1885003
+DHInput Begin processing 36100th record. Run 150435, Trigger 1901134
+DHInput Begin processing 36200th record. Run 150435, Trigger 1915404
+DHInput Begin processing 36300th record. Run 150435, Trigger 1931074
+DHInput Begin processing 36400th record. Run 150435, Trigger 1947797
+DHInput Begin processing 36500th record. Run 150435, Trigger 1960847
+DHInput Begin processing 36600th record. Run 150435, Trigger 1975975
+DHInput Begin processing 36700th record. Run 150435, Trigger 1993031
+DHInput Begin processing 36800th record. Run 150435, Trigger 2009625
+DHInput Begin processing 36900th record. Run 150435, Trigger 2020820
+DHInput Begin processing 37000th record. Run 150435, Trigger 2037276
+DHInput Begin processing 37100th record. Run 150435, Trigger 2050344
+DHInput Begin processing 37200th record. Run 150435, Trigger 2066986
+DHInput Begin processing 37300th record. Run 150435, Trigger 2083454
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.0/jh024ba3.017bbot0 after   37373 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0865/GI0865.0/jh024ba3.017bbot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 07:26:02 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.2/jh024e4c.006ebot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.2/jh024e4c.006ebot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.2/jh024e4c.006ebot0 on Sun Feb 29 07:26:04 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.2/jh024e4c.006ebot0
+*****
+%ERLOG-w Missing Begin Run.: The last begin run had a run number of 150435
+         the next event has run number 151116 a dummy  
+         begin run will be created.  DHInput inputEvent() 
+         29-Feb-2004 07:26:07 CST run = 151116 event = 286911
+DHInput Begin processing 37400th record. Run 151116, Trigger 290398
+DHInput Begin processing 37500th record. Run 151116, Trigger 309699
+DHInput Begin processing 37600th record. Run 151116, Trigger 327135
+DHInput Begin processing 37700th record. Run 151116, Trigger 350536
+DHInput Begin processing 37800th record. Run 151116, Trigger 368180
+DHInput Begin processing 37900th record. Run 151116, Trigger 388640
+DHInput Begin processing 38000th record. Run 151116, Trigger 407779
+DHInput Begin processing 38100th record. Run 151116, Trigger 428300
+DHInput Begin processing 38200th record. Run 151116, Trigger 449472
+DHInput Begin processing 38300th record. Run 151116, Trigger 467197
+DHInput Begin processing 38400th record. Run 151116, Trigger 483140
+DHInput Begin processing 38500th record. Run 151116, Trigger 502658
+DHInput Begin processing 38600th record. Run 151116, Trigger 520656
+DHInput Begin processing 38700th record. Run 151116, Trigger 538596
+DHInput Begin processing 38800th record. Run 151116, Trigger 558663
+DHInput Begin processing 38900th record. Run 151116, Trigger 576373
+DHInput Begin processing 39000th record. Run 151116, Trigger 593988
+DHInput Begin processing 39100th record. Run 151116, Trigger 616023
+DHInput Begin processing 39200th record. Run 151116, Trigger 634653
+DHInput Begin processing 39300th record. Run 151116, Trigger 650739
+DHInput Begin processing 39400th record. Run 151116, Trigger 670355
+DHInput Begin processing 39500th record. Run 151116, Trigger 690832
+DHInput Begin processing 39600th record. Run 151116, Trigger 707325
+DHInput Begin processing 39700th record. Run 151118, Trigger 5867
+DHInput Begin processing 39800th record. Run 151118, Trigger 22329
+DHInput Begin processing 39900th record. Run 151118, Trigger 43867
+DHInput Begin processing 40000th record. Run 151118, Trigger 63041
+DHInput Begin processing 40100th record. Run 151118, Trigger 78738
+DHInput Begin processing 40200th record. Run 151118, Trigger 96755
+DHInput Begin processing 40300th record. Run 151118, Trigger 118342
+DHInput Begin processing 40400th record. Run 151118, Trigger 138615
+DHInput Begin processing 40500th record. Run 151118, Trigger 156095
+DHInput Begin processing 40600th record. Run 151118, Trigger 175448
+DHInput Begin processing 40700th record. Run 151118, Trigger 194383
+DHInput Begin processing 40800th record. Run 151118, Trigger 214514
+DHInput Begin processing 40900th record. Run 151118, Trigger 233275
+DHInput Begin processing 41000th record. Run 151118, Trigger 252671
+DHInput Begin processing 41100th record. Run 151118, Trigger 272794
+DHInput Begin processing 41200th record. Run 151118, Trigger 294514
+DHInput Begin processing 41300th record. Run 151118, Trigger 316454
+DHInput Begin processing 41400th record. Run 151118, Trigger 337332
+DHInput Begin processing 41500th record. Run 151118, Trigger 351760
+DHInput Begin processing 41600th record. Run 151120, Trigger 3032
+DHInput Begin processing 41700th record. Run 151120, Trigger 21197
+DHInput Begin processing 41800th record. Run 151120, Trigger 41624
+DHInput Begin processing 41900th record. Run 151120, Trigger 58596
+DHInput Begin processing 42000th record. Run 151120, Trigger 77215
+DHInput Begin processing 42100th record. Run 151120, Trigger 95228
+DHInput Begin processing 42200th record. Run 151120, Trigger 114542
+DHInput Begin processing 42300th record. Run 151120, Trigger 130762
+DHInput Begin processing 42400th record. Run 151120, Trigger 150992
+DHInput Begin processing 42500th record. Run 151120, Trigger 168702
+DHInput Begin processing 42600th record. Run 151120, Trigger 189691
+DHInput Begin processing 42700th record. Run 151120, Trigger 208546
+DHInput Begin processing 42800th record. Run 151120, Trigger 226973
+DHInput Begin processing 42900th record. Run 151120, Trigger 244304
+DHInput Begin processing 43000th record. Run 151120, Trigger 263385
+DHInput Begin processing 43100th record. Run 151120, Trigger 286412
+DHInput Begin processing 43200th record. Run 151121, Trigger 18684
+DHInput Begin processing 43300th record. Run 151121, Trigger 40748
+DHInput Begin processing 43400th record. Run 151121, Trigger 59403
+DHInput Begin processing 43500th record. Run 151121, Trigger 76456
+DHInput Begin processing 43600th record. Run 151121, Trigger 94345
+DHInput Begin processing 43700th record. Run 151121, Trigger 116110
+DHInput Begin processing 43800th record. Run 151121, Trigger 135201
+DHInput Begin processing 43900th record. Run 151121, Trigger 153217
+DHInput Begin processing 44000th record. Run 151121, Trigger 171798
+DHInput Begin processing 44100th record. Run 151121, Trigger 192855
+DHInput Begin processing 44200th record. Run 151121, Trigger 209749
+DHInput Begin processing 44300th record. Run 151121, Trigger 225885
+DHInput Begin processing 44400th record. Run 151121, Trigger 246971
+DHInput Begin processing 44500th record. Run 151121, Trigger 269934
+DHInput Begin processing 44600th record. Run 151121, Trigger 286549
+DHInput Begin processing 44700th record. Run 151121, Trigger 303101
+DHInput Begin processing 44800th record. Run 151121, Trigger 319337
+DHInput Begin processing 44900th record. Run 151121, Trigger 336206
+DHInput Begin processing 45000th record. Run 151121, Trigger 356561
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.2/jh024e4c.006ebot0 after   45012 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.2/jh024e4c.006ebot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 07:30:29 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.0/jh024d63.0040bot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.0/jh024d63.0040bot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.0/jh024d63.0040bot0 on Sun Feb 29 07:30:30 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.0/jh024d63.0040bot0
+*****
+DHInput Begin processing 45100th record. Run 150883, Trigger 463468
+DHInput Begin processing 45200th record. Run 150883, Trigger 481663
+DHInput Begin processing 45300th record. Run 150883, Trigger 498929
+DHInput Begin processing 45400th record. Run 150883, Trigger 516093
+DHInput Begin processing 45500th record. Run 150883, Trigger 535745
+DHInput Begin processing 45600th record. Run 150883, Trigger 551633
+DHInput Begin processing 45700th record. Run 150883, Trigger 569485
+DHInput Begin processing 45800th record. Run 150883, Trigger 584976
+DHInput Begin processing 45900th record. Run 150883, Trigger 600591
+DHInput Begin processing 46000th record. Run 150883, Trigger 614742
+DHInput Begin processing 46100th record. Run 150883, Trigger 632040
+DHInput Begin processing 46200th record. Run 150883, Trigger 648601
+DHInput Begin processing 46300th record. Run 150883, Trigger 666444
+DHInput Begin processing 46400th record. Run 150883, Trigger 682656
+DHInput Begin processing 46500th record. Run 150883, Trigger 698125
+DHInput Begin processing 46600th record. Run 150883, Trigger 715568
+DHInput Begin processing 46700th record. Run 150883, Trigger 731157
+DHInput Begin processing 46800th record. Run 150883, Trigger 748608
+DHInput Begin processing 46900th record. Run 150883, Trigger 768319
+DHInput Begin processing 47000th record. Run 150883, Trigger 785644
+DHInput Begin processing 47100th record. Run 150883, Trigger 804234
+DHInput Begin processing 47200th record. Run 150883, Trigger 823499
+DHInput Begin processing 47300th record. Run 150883, Trigger 837498
+DHInput Begin processing 47400th record. Run 150883, Trigger 853365
+DHInput Begin processing 47500th record. Run 150883, Trigger 871314
+DHInput Begin processing 47600th record. Run 150883, Trigger 886878
+DHInput Begin processing 47700th record. Run 150883, Trigger 903940
+DHInput Begin processing 47800th record. Run 150883, Trigger 921666
+DHInput Begin processing 47900th record. Run 150883, Trigger 934815
+DHInput Begin processing 48000th record. Run 150883, Trigger 953221
+DHInput Begin processing 48100th record. Run 150883, Trigger 969704
+DHInput Begin processing 48200th record. Run 150883, Trigger 986911
+DHInput Begin processing 48300th record. Run 150883, Trigger 1002551
+DHInput Begin processing 48400th record. Run 150883, Trigger 1019634
+DHInput Begin processing 48500th record. Run 150883, Trigger 1039496
+DHInput Begin processing 48600th record. Run 150883, Trigger 1054987
+DHInput Begin processing 48700th record. Run 150883, Trigger 1068782
+DHInput Begin processing 48800th record. Run 150883, Trigger 1083906
+DHInput Begin processing 48900th record. Run 150883, Trigger 1101178
+DHInput Begin processing 49000th record. Run 150883, Trigger 1116598
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.0/jh024d63.0040bot0 after   49092 records read.
+*****
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=ok --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0859/GI0859.0/jh024d63.0040bot0 2>&1
+Sam2DiskCacheInterface::getNextFile-> Request next file from SAM(R) on Sun Feb 29 07:35:23 2004
+
+ShellCommand-> sam get next file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+Response-> GPM promised to call back... callback received.
+
+Response-> File dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0853/GI0853.4/jh025122.0023bot0
+
+Next file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0853/GI0853.4/jh025122.0023bot0
+Sam2DiskCacheInterface::getNextFile-> SAM(R) delivered file dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0853/GI0853.4/jh025122.0023bot0 on Sun Feb 29 07:40:22 2004
+
+*****
+***** Opened input file: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0853/GI0853.4/jh025122.0023bot0
+*****
+DHInput Begin processing 49100th record. Run 151842, Trigger 235701
+DHInput Begin processing 49200th record. Run 151842, Trigger 251932
+DHInput Begin processing 49300th record. Run 151842, Trigger 267461
+DHInput Begin processing 49400th record. Run 151842, Trigger 284071
+DHInput Begin processing 49500th record. Run 151842, Trigger 304343
+DHInput Begin processing 49600th record. Run 151842, Trigger 323640
+DHInput Begin processing 49700th record. Run 151842, Trigger 339838
+DHInput Begin processing 49800th record. Run 151842, Trigger 357963
+DHInput Begin processing 49900th record. Run 151843, Trigger 5589
+DHInput Begin processing 50000th record. Run 151843, Trigger 21651
+DHInput Begin processing 50100th record. Run 151843, Trigger 36637
+DHInput Begin processing 50200th record. Run 151843, Trigger 50345
+DHInput Begin processing 50300th record. Run 151843, Trigger 65130
+DHInput Begin processing 50400th record. Run 151843, Trigger 80076
+DHInput Begin processing 50500th record. Run 151843, Trigger 97477
+DHInput Begin processing 50600th record. Run 151843, Trigger 113004
+DHInput Begin processing 50700th record. Run 151843, Trigger 131267
+DHInput Begin processing 50800th record. Run 151843, Trigger 148591
+DHInput Begin processing 50900th record. Run 151843, Trigger 164019
+DHInput Begin processing 51000th record. Run 151843, Trigger 180386
+DHInput Begin processing 51100th record. Run 151843, Trigger 197188
+DHInput Begin processing 51200th record. Run 151843, Trigger 213961
+DHInput Begin processing 51300th record. Run 151843, Trigger 230833
+DHInput Begin processing 51400th record. Run 151843, Trigger 245522
+DHInput Begin processing 51500th record. Run 151843, Trigger 261060
+DHInput Begin processing 51600th record. Run 151843, Trigger 280130
+DHInput Begin processing 51700th record. Run 151843, Trigger 296948
+DHInput Begin processing 51800th record. Run 151843, Trigger 312543
+DHInput Begin processing 51900th record. Run 151843, Trigger 328983
+DHInput Begin processing 52000th record. Run 151843, Trigger 346704
+DHInput Begin processing 52100th record. Run 151843, Trigger 360418
+DHInput Begin processing 52200th record. Run 151843, Trigger 374434
+DHInput Begin processing 52300th record. Run 151843, Trigger 389350
+DHInput Begin processing 52400th record. Run 151843, Trigger 405651
+DHInput Begin processing 52500th record. Run 151843, Trigger 424627
+DHInput Begin processing 52600th record. Run 151843, Trigger 440920
+DHInput Begin processing 52700th record. Run 151843, Trigger 456127
+DHInput Begin processing 52800th record. Run 151843, Trigger 471592
+DHInput Begin processing 52900th record. Run 151843, Trigger 485551
+DHInput Begin processing 53000th record. Run 151843, Trigger 498871
+DHInput Begin processing 53100th record. Run 151843, Trigger 512379
+DHInput Begin processing 53200th record. Run 151843, Trigger 530602
+*****
+Closing Input File: dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0853/GI0853.4/jh025122.0023bot0 after   53225 records read.
+*****
+%ERLOG-w DHInput:  # of processed files  12 fits requested limit  12 
+         GlobalLibraryLogger DHInputDataList::getNextFile() 
+         29-Feb-2004 07:45:13 CST run = 151843 event = 534602
+
+**** Execution Times for all Modules Run so Far ****
+
+During Begin Job:
+=================
+Module name:  No. of calls:  Mean cpu time:  Mean clk time:   Cpu StdDev:
+CalibrationMana	1		0.010000	0.005711	0.000000
+DHInput		1		0.000000	0.000024	0.000000
+DummyInput	1		1.470000	1.476837	0.000000
+DummyOutput	1		0.020000	0.018235	0.000000
+ErrorLoggerMana	1		0.000000	0.004413	0.000000
+EventDump	1		0.000000	0.002641	0.000000
+FileInput	1		0.000000	0.002796	0.000000
+FileOutput	1		0.000000	0.001718	0.000000
+GeometryManager	1		0.310000	0.304131	0.000000
+OldDHInput	1		0.000000	0.002922	0.000000
+OldDHOutput	1		0.020000	0.018326	0.000000
+PuffModule	1		0.000000	0.002760	0.000000
+SignalManager	1		0.000000	0.004816	0.000000
+XXXDiskFileInpu	1		0.000000	0.004575	0.000000
+YbosDiskFile	1		0.000000	0.003622	0.000000
+During Begin Run:
+=================
+Module name: Calls:  Mean cpu time:  Mean clk time:   Cpu StdDev:
+CalibrationMana	23		0.200000	0.584558	0.006411
+DHInput		23		0.000000	0.000487	0.000000
+DummyInput	23		0.000000	0.000007	0.000000
+DummyOutput	23		0.000000	0.000005	0.000000
+ErrorLoggerMana	23		0.000000	0.000027	0.000000
+EventDump	23		0.000000	0.000007	0.000000
+FileInput	23		0.000000	0.000006	0.000000
+FileOutput	23		0.000000	0.000025	0.000000
+GeometryManager	23		0.083043	0.085142	0.043057
+OldDHInput	23		0.000000	0.000005	0.000000
+OldDHOutput	23		0.000000	0.000005	0.000000
+PuffModule	23		0.000000	0.000005	0.000000
+SignalManager	23		0.000000	0.000007	0.000000
+XXXDiskFileInpu	23		0.000000	0.000007	0.000000
+YbosDiskFile	23		0.000000	0.000005	0.000000
+During End Job:
+===============
+Module name:  No. of calls:  Mean cpu time:  Mean clk time:   Cpu StdDev:
+During End Run:
+===============
+Module name:  No. of calls:  Mean cpu time:  Mean clk time:   Cpu StdDev:
+During Event Processing:
+========================
+Module name:         # Calls:     Mean cpu time:        Mean clk time:   Total Cpu:
+-----------------------------------------------------------------------------------
+CalibrationManager	53201	0.000004+/-0.000001   0.000008+/-0.000001   0.210
+DHInput			108564	0.017364+/-0.000154   0.037723+/-0.010555   1885.100
+ErrorLoggerManager	53201	0.000004+/-0.000001   0.000005+/-0.000000   0.210
+EventDump		53201	0.000003+/-0.000001   0.000007+/-0.000000   0.180
+FileOutput		106427	0.000014+/-0.000002   0.000016+/-0.000000   1.470
+GeometryManager		53201	0.000003+/-0.000001   0.000005+/-0.000000   0.160
+PuffModule		53201	0.012264+/-0.000104   0.012344+/-0.000103   652.440
+SignalManager		53201	0.000003+/-0.000001   0.000005+/-0.000000   0.150
+-----------------------------------------------------------------------------------
+Mean Cpu total = 0.029659; Mean Clock total = 0.050112
+Sum total Cpu = 1577.864396; Sum total Clock = 2666.011342
+
+ShellCommand-> sam release file --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 --status=fail --filename=dcap://cdfdca1.fnal.gov:25136/pnfs/fnal.gov/usr/cdfen/filesets/GI/GI08/GI0853/GI0853.4/jh025122.0023bot0 2>&1
+ShellCommand-> sam stop process --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 --cpid=24518 2>&1
+ShellCommand-> sam stop project --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 2>&1
+Response-> Project 'stdenis_cdf-sam_jbot0h_1078057358.07' on station 'cdf-sam' could not be stopped: Not all consumers have finished processing files..
+
+Project 'stdenis_cdf-sam_jbot0h_1078057358.07' on station 'cdf-sam' could not be stopped: Not all consumers have finished processing files..
+
+ShellCommand-> sam stop project --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 2>&1
+Response-> Project 'stdenis_cdf-sam_jbot0h_1078057358.07' on station 'cdf-sam' could not be stopped: Not all consumers have finished processing files..
+
+Project 'stdenis_cdf-sam_jbot0h_1078057358.07' on station 'cdf-sam' could not be stopped: Not all consumers have finished processing files..
+
+ShellCommand-> sam stop project --station=cdf-sam --project=stdenis_cdf-sam_jbot0h_1078057358.07 2>&1
+Response-> Project 'stdenis_cdf-sam_jbot0h_1078057358.07' on station 'cdf-sam' could not be stopped: Not all consumers have finished processing files..
+
+Project 'stdenis_cdf-sam_jbot0h_1078057358.07' on station 'cdf-sam' could not be stopped: Not all consumers have finished processing files..
+
+Termination Summary
+
+Process AC++Dump
+ type    message id       sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 DBSQL_O              .. DBEventLogger                       2168*    2168
+    2 DEBUG                .. DBEventLogger                       6411*    6411
+    3 DBACC_G              -! DBEventLogger                       2080*    2080
+    4 DBACC_O              -! DBEventLogger                       2168*    2168
+    5 Bfield::setUniform   -i GlobalLibraryLog                       1*       1
+    6 DBCON_A              -i DBEventLogger                         46*      46
+    7 DBCON_J              -i DBEventLogger                          2*       2
+    8 DBCON_O              -i DBEventLogger                         46*      46
+    9 SiPassiveMaterial::c -i GlobalLibraryLog                       5*       5
+   10 There are no more fi -i DHInput          openNextFile          1*       1
+   11 generateBeginFileFra -i DHInput          openNextFile         12*      12
+   12 generateBeginRunSect -i DHInput          nextEvent          2114*    2114
+   13 generateBeginRunSect -i DHInput          openNextFile         11*      11
+   14 CalData puff:        -w GlobalLibraryLog DHInputDataList:  31332*   31332
+   15 DHInput              -w GlobalLibraryLog DHInputDataList:      1        1
+   16 Missing Begin Run.   -w DHInput          inputEvent           12*      12
+
+* Some occurrences of this message were suppressed in all logs, due to limits.
+
+ type   message id   Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 DBSQL_O              151688/0         151688/0         151843/367061
+    2 DEBUG                151688/0         151688/0         151843/367061
+    3 DBACC_G              151688/0         151688/0         151843/367061
+    4 DBACC_O              151688/0         151688/0         151843/367061
+    5 Bfield::setUniform   0/0                               
+    6 DBCON_A              151688/0         151688/0         151843/367061
+    7 DBCON_J              0/0              151843/534602    
+    8 DBCON_O              151688/0         151688/0         151843/367061
+    9 SiPassiveMaterial::c 0/0              0/0              0/0
+   10 There are no more fi 151843/534602                     
+   11 generateBeginFileFra 0/0              151919/491621    150883/1130933
+   12 generateBeginRunSect 151688/1528312   151688/1531138   151843/528776
+   13 generateBeginRunSect 151476/3329981   150820/4213458   151842/234693
+   14 CalData puff:        151688/1528312   151688/1528426   151842/367061
+   15 DHInput              151843/534602                     
+   16 Missing Begin Run.   151688/1528312   151476/3329981   151842/234693
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+..                   8579                8579
+Success              4248                4248
+Info                 2238                2238
+Warning             31345               31345

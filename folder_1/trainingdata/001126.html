@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>OSG MRC - Find MRC Units</title>
+<meta name="description" content="Description goes here for this page." />
+<meta name="keywords" content="Keywords, go, here, for, this, page" />
+<link href="asp/mapping/mrc_map.css" rel="stylesheet" type="text/css" />
+<link href="osgmrc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="ctrBody">
+<map name="MRCLogo" id="MRCLogo">
+	<area shape="rect" coords="0,0,1,1" href="#Main" title="Skip Navigation" />
+	<area shape="rect" coords="2,2,163,118" href="/HomePage" title="Medical Reserve Corps Home Page" />
+</map>
+ <map name="MRCTitle" id="SurgeonGeneral">
+   <area shape="rect" coords="100,50,290,65" href="http://www.surgeongeneral.gov/" title="Office of the United States Surgeon General" />
+ </map>
+<table border="0" cellpadding="0" cellspacing="0" id="ctrHeader">
+	<tr>
+		<td rowspan="2" class="MRCLogo" style="font-size: 0px; line-height: 0px;">
+		  <img src="images/mrc_header_a2.gif" alt="Medical Reserve Corps Logo" width="163" height="118" border="0" usemap="#MRCLogo" />
+		</td>
+		<td class="MRCText" style="font-size: 0px; lin-height: 0px;"><img src="images/mrc_header_b2.gif" alt="Office of the Civilian Volunteer Medical Reserve Corps - Sponsored by The Office of the United States Surgeon General" width="602" height="71" border="0" usemap="MRCTitle" />
+		</td>
+	</tr>
+	<tr>
+		<td class="Search">
+		  <img src="images/mrc_header_e.jpg" alt="Volunteers Building Strong, Healthy, and Prepared Communities" width="346" height="47" border="0" style="float: left;" />
+			<div>
+				<form action="page.cfm?Search" method="post" name="SearchForm" id="SearchForm">
+				Search:
+				<input type="text" name="SearchString" class="inpText" />
+				<input name="Submit" type="image" value="Submit" src="images/hrd_button_search.gif" alt="Submit Search" style="vertical-align: text-bottom;" />
+				</form>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" id="ctrContent">
+	<tr>
+		<td class="Left" valign="top">
+			<div class="Menu">
+				<a href="/HomePage"><img src="images/home2.gif" alt="Home Page"	width="163" height="24" /></a><br />
+				<a href="/NewsEvents"><img src="images/news_events.gif" alt="News and Events" width="163" height="26" /></a><br />
+				<a href="/FindMRC.asp"><img src="images/find_mrc_unit.gif" alt="Find MRC Units" width="163" height="26" /></a><br />
+				<a href="/StartMRC"><img src="images/start_mrc.gif" alt="Start an MRC Unit" width="163" height="26" /></a><br />
+				<a href="/resources.asp"><img src="images/resources.gif" alt="Resources" width="163" height="26" /></a><br />
+				<a href="/About"><img src="images/about.gif" alt="About the MRC" width="163" height="26" /></a><br /></div>
+			<div class="quicklinks">
+				<p style="text-align: center;"><a href="http://www.medicalreservecorps.gov/2009TrainingSummit" title="2009 Training Summit"><img src="http://www.medicalreservecorps.gov/Image/2009_TrainingSummit/2009IntegratedTrainingButton.JPG" border="0" alt="2009 Integrated Medical Public Health, Preparedness and Response Training Summit" /></a></p>
+				<ul class="bluearrow">
+					<li><a href="http://www.medicalreservecorps.gov/NIMSGuidance">NIMS Guidance</a></li>
+					<li><a href="http://www.medicalreservecorps.gov/File/ESAR_VHP/ESAR-VHPMRCIntegrationFactSheet.pdf">MRC/ESAR-VHP Integration</a></li>
+					<li><a href="http://www.medicalreservecorps.gov/File/MRC_Resources/mrc_101.ppt">MRC 101</a>
+					<br />PDF (4.13 MB)</li>
+					<li><a href="http://www.medicalreservecorps.gov/SelfEvaluationTools">Self Evaluation Tools</a></li>
+					<li><a href="http://www.medicalreservecorps.gov/TAAssessment">TA Assessment</a></li>
+					<li><a href="http://www.medicalreservecorps.gov/PrioritiesPublicHealth">Priorities for Public Health </a></li>
+					<li><a href="http://www.medicalreservecorps.gov/POUpdates/PandemicFluGuidance">Pandemic Flu Guidance </a></li>
+				</ul>
+			</div>
+		</td>
+		<td valign="top" class="Right">
+			<div id="Main">				<map name="TabPanel" id="TabPanel">
+					<area shape="rect" coords="1,1,74,14" href="/login.asp" title="Login" />
+					<area shape="rect" coords="75,1,164,14" href="/UserRegistration.asp" title="Register" />
+					<area shape="rect" coords="165,1,302,14" href="/PhotoGallery" title="Photo Gallery" />
+					<area shape="rect" coords="303,1,390,14" href="/MRCListservs" title="ListServ" />
+					<area shape="rect" coords="391,1,509,14" href="/Coordinators/Regional" title="Newsletters" />
+					<area shape="rect" coords="510,1,580,14" href="/QuestionsAnswers" title="Frequently Asked Questions" />
+				</map>
+				<div id="TabPanel"><img src="images/MRC-LogIn-Slice_r3_c3.gif" border="0" usemap="#TabPanel" /></div>
+
+<p class="Breadcrumb"><a href="http://www.medicalreservecorps.gov">Home</a> &gt;</p>
+<h1>Find MRC Units <span class="smaller">(796 MRC Units found)</span></h1>
+
+<p>To view the profile of registered MRC Units, which includes contact information, click a state or territory
+  on the map or search by State or Region.<a href="#MapDropDown"><img src="images/1x1.gif" alt="Skip to Non-Visual friendly state/region selection drop down lists" border="0" height="1" width="1" /></a>  To search for MRC Units based on a radius from a specific Zip Code, go to <a href="UnitZipSearch.asp">Search MRC Units by Zip Code</a>.</p>
+<div align="right">
+  <!-- <a href="asp/mapping/pdfmapPort.asp">MRC Units Map</a> (PDF 96KB)  <img src="asp/mapping/gis_images/1x1.gif" border="0" height="4px" width="200px" alt="Spacer">-->
+  <a href="pdfmaps.asp">MRC Unit PDF Maps</a> </div>
+<!--- /// start map code /// --->
+<div class="containmap">
+  <!--- /// main map div /// --->
+  <map name="FPMap0">
+    <area href="state.asp?state=2" alt="Alabama" shape="polygon" coords="344, 183, 343, 219, 350, 223, 350, 219, 374, 216, 369, 183">
+    <area href="state.asp?state=5" alt="Arizona" shape="polygon" coords="104, 164, 98, 181, 98, 202, 129, 214, 149, 214, 149, 163">
+    <area href="state.asp?state=3" alt="Arkansas" shape="polygon" coords="284, 166, 285, 192, 288, 198, 315, 199, 329, 169">
+    <area href="state.asp?state=6" alt="California" shape="polygon" coords="7, 116, 7, 132, 45, 187, 73, 203, 98, 201, 97, 182, 50, 143, 49, 116">
+    <area href="state.asp?state=7" alt="Colorado" shape="polygon" coords="151, 125, 150, 161, 215, 161, 215, 125">
+    <area href="state.asp?state=8" alt="Connecticut" shape="polygon" coords="479, 116, 479, 125, 494, 124, 493, 116">
+    <area href="state.asp?state=10" alt="Delaware" shape="polygon" coords="459, 139, 460, 153, 463, 153, 466, 142, 460, 142, 458, 143">
+    <area href="state.asp?state=11" alt="Florida" shape="polygon" coords="401, 275, 408, 270, 395, 246, 396, 237, 382, 227, 371, 230, 362, 224, 352, 219, 375, 216, 406, 222, 419, 258, 419, 272">
+    <area href="state.asp?state=13" alt="Georgia" shape="polygon" coords="370, 183, 374, 216, 403, 219, 411, 204, 390, 181">
+    <area href="state.asp?state=17" alt="Idaho" shape="polygon" coords="75, 50, 75, 115, 130, 115, 130, 91, 114, 90, 82, 52">
+    <area href="state.asp?state=18" alt="Illinois" shape="polygon" coords="326, 112, 315, 128, 337, 162, 348, 147, 349, 113">
+    <area href="state.asp?state=19" alt="Indiana" shape="polygon" coords="349, 120, 348, 152, 365, 152, 374, 144, 375, 117">
+    <area href="state.asp?state=16" alt="Iowa" shape="polygon" coords="267, 103, 266, 109, 275, 128, 313, 128, 326, 114, 314, 102">
+    <area href="state.asp?state=20" alt="Kansas" shape="polygon" coords="216, 136, 216, 159, 284, 161, 282, 135">
+    <area href="state.asp?state=21" alt="Kentucky" shape="polygon" coords="334, 165, 345, 152, 363, 152, 375, 143, 395, 147, 402, 158, 389, 166">
+    <area href="state.asp?state=22" alt="Louisiana" shape="polygon" coords="287, 199, 316, 198, 318, 205, 311, 216, 330, 219, 336, 228, 334, 238, 310, 230, 292, 228, 292, 216, 287, 208">
+    <area href="state.asp?state=25" alt="Maine" shape="polygon" coords="502, 84, 520, 65, 532, 65, 539, 88, 505, 104">
+    <area href="state.asp?state=24" alt="Maryland" shape="polygon" coords="435, 139, 460, 157, 458, 140, 438, 139">
+    <area href="state.asp?state=23" alt="Massachusetts" shape="polygon" coords="481, 108, 481, 113, 500, 113, 507, 121, 514, 119, 506, 109">
+    <area href="state.asp?state=27" alt="Michigan" shape="polygon" coords="388, 117, 398, 97, 398, 85, 343, 56, 313, 67, 352, 83, 349, 117">
+    <area href="state.asp?state=28" alt="Minnesota" shape="polygon" coords="259, 52, 265, 80, 267, 102, 314, 104, 316, 96, 302, 91, 304, 74, 328, 59, 283, 50">
+    <area href="state.asp?state=31" alt="Mississippi" shape="polygon" coords="324, 181, 317, 194, 316, 208, 312, 215, 329, 220, 334, 224, 342, 224, 343, 182">
+    <area href="state.asp?state=29" alt="Missouri" shape="polygon" coords="273, 128, 282, 135, 284, 164, 331, 169, 331, 157, 312, 130">
+    <area href="state.asp?state=32" alt="Montana" shape="polygon" coords="82, 51, 115, 90, 195, 88, 194, 50">
+    <area href="state.asp?state=35" alt="Nebraska" shape="polygon" coords="197, 106, 196, 123, 214, 124, 215, 134, 277, 134, 265, 106">
+    <area href="state.asp?state=39" alt="Nevada" shape="polygon" coords="49, 116, 49, 141, 98, 180, 104, 166, 103, 117, 52, 116">
+    <area href="state.asp?state=36" alt="New Hampshire" shape="polygon" coords="499, 88, 489, 107, 504, 106">
+    <area href="state.asp?state=37" alt="New Jersey" shape="polygon" coords="465, 119, 468, 132, 462, 137, 468, 140, 474, 136, 476, 127, 469, 120, 468, 120">
+    <area href="state.asp?state=38" alt="New Mexico" shape="polygon" coords="148, 163, 148, 214, 156, 215, 156, 211, 204, 208, 205, 163">
+    <area href="state.asp?state=40" alt="New York" shape="polygon" coords="414, 118, 427, 102, 452, 98, 465, 91, 481, 88, 479, 126, 466, 117, 417, 116, 417, 114, 415, 114">
+    <area href="state.asp?state=33" alt="North Carolina" shape="polygon" coords="404, 166, 380, 179, 410, 177, 434, 190, 460, 177, 457, 166">
+    <area href="state.asp?state=34" alt="North Dakota" shape="polygon" coords="196, 50, 196, 79, 266, 78, 260, 51">
+    <area href="state.asp?state=41" alt="Ohio" shape="polygon" coords="376, 119, 374, 141, 398, 148, 414, 136, 413, 113, 395, 117">
+    <area href="state.asp?state=42" alt="Oklahoma" shape="polygon" coords="206, 161, 206, 165, 234, 166, 234, 184, 268, 191, 285, 194, 284, 163">
+    <area href="state.asp?state=43" alt="Oregon" shape="polygon" coords="8, 75, 8, 113, 75, 115, 74, 80">
+    <area href="state.asp?state=44" alt="Pennsylvania" shape="polygon" coords="415, 117, 415, 133, 461, 138, 467, 132, 464, 117">
+    <area href="state.asp?state=47" alt="Rhode Island" shape="polygon" coords="495, 116, 495, 124, 501, 122, 501, 116">
+    <area href="state.asp?state=48" alt="South Carolina" shape="polygon" coords="433, 190, 413, 204, 390, 182, 411, 179">
+    <area href="state.asp?state=49" alt="South Dakota" shape="polygon" coords="197, 79, 197, 105, 266, 107, 266, 79">
+    <area href="state.asp?state=50" alt="Tennessee" shape="polygon" coords="332, 168, 325, 180, 380, 180, 401, 167">
+    <area href="state.asp?state=51" alt="Texas" shape="polygon" coords="206, 169, 204, 209, 176, 209, 203, 238, 209, 231, 220, 231, 247, 265, 258, 265, 259, 248, 267, 242, 282, 233, 291, 228, 292, 217, 288, 209, 288, 195, 235, 184, 234, 169">
+    <area href="state.asp?state=52" alt="Utah" shape="polygon" coords="104, 117, 105, 162, 150, 162, 149, 125, 130, 124, 129, 115">
+    <area href="state.asp?state=55" alt="Vermont" shape="polygon" coords="481, 89, 482, 108, 489, 107, 498, 88">
+    <area href="state.asp?state=53" alt="Virginia" shape="polygon" coords="392, 165, 456, 166, 458, 155, 437, 139, 419, 155, 402, 159">
+    <area href="state.asp?state=58" alt="West Virginia" shape="polygon" coords="414, 133, 398, 149, 402, 157, 418, 154, 439, 136">
+    <area href="state.asp?state=57" alt="Wisconsin" shape="polygon" coords="313, 70, 304, 75, 303, 92, 315, 97, 315, 102, 325, 114, 349, 110, 353, 86, 345, 79">
+    <area href="state.asp?state=59" alt="Wyoming" shape="polygon" coords="130, 90, 129, 124, 197, 124, 195, 90">
+    <area href="state.asp?state=56" alt="Washington" shape="polygon" coords="4, 53, 10, 73, 25, 80, 76, 77, 75, 49, 17, 47, 17, 55">
+  </map>
+  <div class="mainmap"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM381260048850.jpg" usemap="#FPMap0" /> </div>
+  <!--- /// staes/territories div 1 /// --->
+  <div class="secmap" style="padding-left: 8px; ">
+    <!--- /// name & state/territory /// --->
+    <!--- /// name & state/territory /// --->
+    <div class="thrmap">
+      <div class="txtmap">Alaska</div>
+      <div class="statemap"> <a title="Alaska" href="state.asp?state=1"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM3812354851291.jpg" /></a> </div>
+    </div>
+    <!--- /// name & state/territory /// --->
+    <div class="thrmap">
+      <div class="txtmap">Hawaii</div>
+      <div class="statemap"> <a title="Hawaii" href="state.asp?state=15"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM381260048851.jpg" /></a> </div>
+    </div>
+    <!--- /// name & state/territory /// --->
+    <div class="thrmap">
+      <div class="txtmap">Puerto Rico /<br />
+        Virgin Islands</div>
+      <div class="statemap"> <a title="Puerto Rico / U.S. Virgin Islands" href="state.asp?state=54"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM3812354851292.jpg" /></a> </div>
+    </div>
+    <!--- /// name & state/territory /// --->
+    <div class="thrmap">
+      <div class="txtmap">Guam</div>
+      <div class="statemap"> <a title="Guam" href="state.asp?state=14"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM381260048852.jpg" /></a> </div>
+    </div>
+    <!--- /// name & state/territory /// --->
+    <div class="thrmaprght">
+      <div class="txtmap">Federated States<br />
+        of Micronesia</div>
+      <div class="statemap"> <a title="Federated States of Micronesia" href="state.asp?state=12"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM3812354851295.jpg" /></a> </div>
+    </div>
+  </div>
+  <!--- /// staes/territories div 2 /// --->
+  <div class="secmap" style="padding-left: 55px; ">
+    <!--- /// name & state/territory /// --->
+    <div class="thrmap">
+      <div class="txtmap">American Samoa</div>
+      <div class="statemap"> <a title="American Samoa" href="state.asp?state=4"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM3812354851293.jpg" /></a> </div>
+    </div>
+    <!--- /// name & state/territory /// --->
+    <div class="thrmap">
+      <div class="txtmap">Northern Mariana Islands</div>
+      <div class="statemap"> <a title="Northern Mariana Islands" href="state.asp?state=30"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM381260048853.jpg" /></a> </div>
+    </div>
+    <!--- /// name & state/territory /// --->
+    <div class="thrmap">
+      <div class="txtmap">Palau</div>
+      <div class="statemap"> <a title="Palau" href="state.asp?state=46"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM3812354851294.jpg" /></a> </div>
+    </div>
+    <!--- /// name & state/territory /// --->
+    <div class="thrmaprght">
+      <div class="txtmap">Marshall Islands</div>
+      <div class="statemap"> <a title="Marshall Islands" href="state.asp?state=26"> <img border="0" src="http://test.z-techcorp.com/output/usa_ALUMINUM381260048854.jpg" /></a> </div>
+    </div>
+  </div>
+</div>
+
+<!--- /// end map code /// --->
+<p id="MapDropDown"><b>View MRC Units By:</b>
+<table style="background-color:#638DB8; border: 1px solid #0B479D; width: 100%; margin: 0px 0px; padding: 0px 0px;font-weight: bold;" aligborder="0" width="100%"  cellpadding="0" cellspacing="0" >
+  <tr>
+    <form method="get" action="region.asp" id="form1" name="form1">
+      <td bgcolor="#EFEBEF" align="Center"> Region:
+        <select name="Region">
+          <option value="99" selected>Select a Region </option>
+          <option value="1">Region I</option>
+          <option value="2">Region II</option>
+          <option value="3">Region III</option>
+          <option value="4">Region IV</option>
+          <option value="5">Region V</option>
+          <option value="6">Region VI</option>
+          <option value="7">Region VII</option>
+          <option value="8">Region VIII</option>
+          <option value="9">Region IX</option>
+          <option value="10">Region X</option>
+        </select>
+        <input type="image" src="asp/mapping/gis_images/go_button.gif" border="0" align=middle alt="Submit" name="I1">
+      </td>
+    </form>
+    <form method="get" action="state.asp" id="form2" name="form2">
+      <td width="*" bgcolor="#EFEBEF"><b>Or </b>&nbsp;&nbsp;&nbsp;State:
+        <select size="1" name="State">
+          <option value="99" selected>Select a State</option>
+          <option value="2">Alabama</option>
+          <option value="1">Alaska</option>
+          <option value="4">American Samoa</option>
+          <option value="5">Arizona</option>
+          <option value="3">Arkansas</option>
+          <option value="6">California</option>
+          <option value="7">Colorado</option>
+          <option value="8">Connecticut</option>
+          <option value="10">Delaware</option>
+          <option value="9">District of Columbia</option>
+          <option value="12">Federated States of Macronesia</option>
+          <option value="11">Florida</option>
+          <option value="13">Georgia</option>
+          <option value="14">Guam</option>
+          <option value="15">Hawaii</option>
+          <option value="17">Idaho</option>
+          <option value="18">Illinois</option>
+          <option value="19">Indiana</option>
+          <option value="16">Iowa</option>
+          <option value="20">Kansas</option>
+          <option value="21">Kentucky</option>
+          <option value="22">Louisiana</option>
+          <option value="25">Maine</option>
+          <option value="26">Marshall Islands</option>
+          <option value="24">Maryland</option>
+          <option value="23">Massachusetts</option>
+          <option value="27">Michigan</option>
+          <option value="28">Minnesota</option>
+          <option value="31">Mississippi</option>
+          <option value="29">Missouri</option>
+          <option value="32">Montana</option>
+          <option value="35">Nebraska</option>
+          <option value="39">Nevada</option>
+          <option value="36">New Hampshire</option>
+          <option value="37">New Jersey</option>
+          <option value="38">New Mexico</option>
+          <option value="40">New York</option>
+          <option value="33">North Carolina</option>
+          <option value="34">North Dakota</option>
+          <option value="30">Northern Mariana Islands</option>
+          <option value="41">Ohio</option>
+          <option value="42">Oklahoma</option>
+          <option value="43">Oregon</option>
+          <option value="46">Palau</option>
+          <option value="44">Pennsylvania</option>
+          <option value="45">Puerto Rico</option>
+          <option value="47">Rhode Island</option>
+          <option value="48">South Carolina</option>
+          <option value="49">South Dakota</option>
+          <option value="50">Tennessee</option>
+          <option value="51">Texas</option>
+          <option value="52">Utah</option>
+          <option value="55">Vermont</option>
+          <option value="54">Virgin Islands</option>
+          <option value="53">Virginia</option>
+          <option value="56">Washington</option>
+          <option value="58">West Virginia</option>
+          <option value="57">Wisconsin</option>
+          <option value="59">Wyoming</option>
+        </select>
+        <input type="image" src="asp/mapping/gis_images/go_button.gif" border="0" align=middle alt="Submit" name="GO">
+      </td>
+    </form>
+  </tr>
+</table>
+
+<p> If you are unable to find an MRC Unit in your preferred location, contact your local public health or emergency management leaders, or a nearby 
+  <a href="https://www.citizencorps.gov/citizenCorps/councilmap.do" target="_blank">Citizen
+  Corps Council</a>. Citizen Corps Councils are often involved in the early formation
+  of local MRC Units and can usually provide information on recent activities
+  in their areas. Other sources of information include the <a href="StateCoordinators.asp">State
+  MRC Coordinators</a> and the 
+  <a href=" http://www.medicalreservecorps.gov/Coordinators/Regional">Regional MRC Coordinators</a>.
+  </p> 
+  <p align="center" id='lastUpdDate'>
+Last Updated on 2/5/2009</p>			</div>
+		</td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" id="ctrFooter">
+	<tr>
+		<td class="Left">&nbsp;</td>
+		<td class="Right">
+			<div class="Logos"><a title="U.S. Department of Health and Human Services Home Page" href="http://www.hhs.gov/"><img src="images/logo_dhhs.jpg" border="0" alt="DHHS logo" /></a><a title="U.S.A. Freedom Corps Home Page"  href="http://www.usafreedomcorps.gov/"><img src="images/logo_freedomcorps.gif" border="0" alt="U S A Freedom Corps logo - Make a Difference. Volunteer." /><a title="Citizen Corps Home Page" href="http://www.citizencorps.gov/"><img src="images/logo_citizencorps.gif" border="0" alt="Citizen Corps Logo" /><a title="U.S. Public Health Service Commissioned Corps Home Page" href="http://commcorps.shs.net/default.aspx"><img src="images/logo_usphs.gif" border="0" alt="U S P H S logo" /><a title="USA.Gov Home Page" href="http://www.usa.gov/"><img src="http://www.medicalreservecorps.gov/Image/usa_gov_120_33.gif" style="margin-right: 0px;" border="0" alt="USA.Gov Logo" /></div>
+			<div class="Links">
+			<a href="/ContactUs">Contact Us</a> <span style="font-size: 75%;">|</span> <a href="/PrivacyPolicy">Privacy Policy</a> <span style="font-size: 75%;">|</span> <a href="/Accessibility">Accessibility</a> <span style="font-size: 75%;">|</span> <a href="/Disclaimer">Disclaimer</a> <span style="font-size: 75%;">|</span> <a href="/SiteMap">Site Map</a>
+			</div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

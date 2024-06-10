@@ -1,0 +1,457 @@
+<script language=javascript>alert('The resource you are attemting to reach cannot be found.');</script>
+
+<html>
+  <head>
+		<title>eDirectives Home</title>
+    <meta name='description'   content='The Natural Resources Conservation Service is the Federal agency that works in partnership with the American people to conserve and sustain natural resources on private lands.' >
+    <meta name='creater'       content='NRCS' >
+    <meta name='date created'  content='2/5/2009' >
+    <meta name='date reviewed' content='2/5/2009' >
+    <meta name='keywords'      content='Natural Resources, Conservation, Water Quality, Soil Conservation, Agriculture, Soil Erosion, Resource Inventory, Geography of Hope, soil science, government, Science teacher, Farm, Environment, Ecology' >
+    <meta name='language'      content='English' >
+    <meta name='agency'        content='NRCS' >
+    <meta name='author'        content='NRCS' >
+    <meta name='format'        content='text/html' >
+    <meta name='document-classification' content='Agriculture' >
+    <meta name='document-type'           content='Government' >
+    <meta name='document-distribution'   content='Global' >
+
+<link rel="shortcut icon" type="image/ico" href="Images/favicon.ico">
+<link rel="icon" type="image/png" href="Images/favicon.png">
+
+<link rel="stylesheet" type="text/css" href="include/ct_styles_v2.0.css">
+<link rel="stylesheet" type="text/css" href="include/eDirectives.css">
+
+
+<script language="javascript" type="text/javascript" src="include/utils.js"></script>
+
+		<script language="javascript">
+			var selObj = new Image;
+			
+			function home_deselected() {
+				document.navhome.src = 'Images/navigation/top_nav_home_off.gif';
+			}
+			
+			function view_directive(id){
+				open_window('viewerFS.aspx?hid='+ id);
+			}
+			
+			function setFav(url, title) {
+				alert(url);
+				alert(title);
+				window.external.AddFavorite(url, title)
+			}
+			
+			function expand_main(id, lvl, img) {
+				home_deselected();
+				if (lvl == 1) {
+					document.getElementById('breadcrumb').innerHTML = '';
+					document.getElementById('results').innerHTML = '<p>&nbsp;&nbsp;&nbsp;&nbsp;loading content...';
+					eDirectives.Presentation.Resources.Ajax.AjaxMethods.getBreadcrumb(id, show_breadcrumb);
+				}	
+				document.getElementById('results').style.display = 'inline';
+				document.getElementById('dir_disp').style.display = 'none';
+				document.getElementById("qs_ea").innerHTML = "<img src=\"Images/navigation/section"+ id +".jpg\">";
+				document.getElementById("qs_ea").style.display = 'inline';
+
+				if (img != selObj) {
+					selObj.src = selObj.src.replace('_sel', '_off');
+					selObj = img;
+					selObj.src = selObj.src.replace('_on', '_sel');
+					selObj.src = selObj.src.replace('_off', '_sel');	
+				}
+				eDirectives.Presentation.Resources.Ajax.AjaxMethods.getChildList(id, parseInt(lvl), expand_main_cb);
+			}
+			
+			function expand_main_cb(response) {
+				document.getElementById('results').style.display = 'inline';
+				document.getElementById('results').innerHTML = response.value[1];
+			}
+			
+			
+			function expand_tree(id, lvl) {
+				eDirectives.Presentation.Resources.Ajax.AjaxMethods.getChildList(id, parseInt(lvl), expand_list_cb);
+			}
+			
+			function expand_directive(id, lvl) {
+				eDirectives.Presentation.Resources.Ajax.AjaxMethods.getDirCompList(id, parseInt(lvl), expand_dir_cb);
+			}
+			
+			function expand_list_cb(response) {
+				document.getElementById('lnk'+  response.value[0]).innerHTML = "<a class=\"exp_href\" href=\"javascript:OnClick=collapse_tree('"+ response.value[0] +"', "+ response.value[2] +");\"><img src=\"Images/folder_opened.png\" border=0></a>&nbsp;";
+				document.getElementById('alnk'+ response.value[0]).href = "javascript:OnClick=collapse_tree('"+ response.value[0] +"', "+ response.value[2] +");";
+
+				document.getElementById('expand'+ response.value[0]).style.display = 'inline';
+				document.getElementById('expand'+ response.value[0]).innerHTML = response.value[1];
+			}
+			
+			function expand_dir_cb(response) {
+				document.getElementById('lnk'+  response.value[0]).innerHTML = "<a class=\"exp_href\" href=\"javascript:OnClick=collapse_dir('"+ response.value[0] +"', "+ response.value[2] +");\"><img src=\"Images/folder_opened.png\" border=0></a>&nbsp;";
+				document.getElementById('expand'+ response.value[0]).style.display = 'inline';
+				document.getElementById('expand'+ response.value[0]).innerHTML = response.value[1];
+			}
+			
+			function show_directive (id) {
+				eDirectives.Presentation.Resources.Ajax.AjaxMethods.displayDirective(id, show_directive_cb);
+			}
+			
+			function show_directive_cb (response) {
+				document.getElementById('dir_disp').style.display = 'inline';
+				document.getElementById('dir_disp').innerHTML = '<table width=95% align=center><tr><td>'+ response.value +'</td></tr></table>';
+				document.getElementById('results').style.display = 'none';
+				document.getElementById('qs_ea').style.display = 'none';
+				document.getElementById('qs_rt').style.display = 'inline';
+			}
+			
+			function return_tree() {
+				document.getElementById('dir_disp').style.display = 'none';
+				document.getElementById('results').style.display = 'inline';
+				document.getElementById('qs_ea').style.display = 'inline';
+				document.getElementById('qs_rt').style.display = 'none';
+			}
+			
+			function collapse_tree(id, lvl) {
+				document.getElementById('expand'+ id).innerHTML = '';
+				document.getElementById('expand'+ id).style.display = 'none';
+				document.getElementById('lnk'+  id).innerHTML = "<a class=\"exp_href\" href=\"javascript:OnClick=expand_tree('"+ id +"', "+ lvl +");\"><img src=\"Images/folder_closed.png\" border=0></a>&nbsp;";
+				document.getElementById('alnk'+ id).href = "javascript:OnClick=expand_tree('"+ id +"', "+ lvl +");";
+			}
+			
+			function collapse_dir(id, lvl) {
+				document.getElementById('expand'+ id).innerHTML = '';
+				document.getElementById('expand'+ id).style.display = 'none';
+				document.getElementById('lnk'+  id).innerHTML = "<a class=\"exp_href\" href=\"javascript:OnClick=expand_directive('"+ id +"', "+ lvl +");\"><img src=\"Images/folder_closed.png\" border=0></a>&nbsp;";
+			}
+
+			function show_breadcrumb(response) {
+			  document.getElementById('breadcrumb').innerHTML = response.value;
+			}
+	      
+		  function jsBodyLoad() {
+		    
+		  }
+		  var id_list = "";
+		function search(terms) {
+		    location = "search.aspx?q=" + terms;
+			document.getElementById("results").innerHTML = "<center><img src='Images/2T_loadinfo_spinner.gif' /><br/>Searching...</center>";
+		//	eDirectives.Presentation.Resources.Ajax.AjaxSearch.processSearch(terms, search_cb);
+		}
+		
+		function search_cb(response) {
+		    alert(response.value[1]);
+		    if (response.value[1])
+		    {
+			    document.getElementById("results").innerHTML = response.value[0];
+			    document.getElementById("qs_ea").innerHTML  = "<img src=\"Images/navigation/section_search_results.jpg\">";
+			    document.getElementById("qs_ea").style.display = 'inline';
+			    document.getElementById("qs_ea").style.backgroundColor = "#1B7C1B";
+			    document.getElementById("breadcrumb").innerHTML = "<a href='Default.aspx'>Home</a> / Search Results";
+			}
+			//id_list = response.value[1];
+		}
+		function navigate_cb(response) {
+			if (response.error != null) {
+				alert(response.error);
+			}
+			document.getElementById("searchResults").innerHTML = response.value[0];
+			document.getElementById("topNav").innerHTML = response.value[3];
+			document.getElementById("bottomNav").innerHTML = response.value[3];
+			document.getElementById("returnStatus").innerHTML = "showing page "+ response.value[1] +" of "+ response.value[4] +" ("+ response.value[5] +" total matches found)";
+		}
+		
+		function open_window(iurl) {
+			if (window.misc_win) {
+				misc_win.close();
+			}
+			misc_win = window.open(iurl,"misc_win",'toolbar=0,location=0,directories=0,status=0,menubar=1,scrollbars=1,resizable=1,width=800,height='+ (window.screen.availHeight - (window.screen.availHeight * .4)));
+		}
+		function dn_submit() {
+			if (window.event && window.event.keyCode == 13) {
+				search(document.search_form.SearchText.value);
+				return;
+			}
+		}
+        
+        
+        function node_exists(wnId,lvl,objTimer)  {
+            if (document.getElementById('to' + wnId))  {
+                expand_tree(wnId,lvl);
+                clearInterval(objTimer);
+            }
+        }
+        		
+		
+		
+		</script>
+	</head>
+	<body bgcolor="#3e3e3e" OnLoad="jsBodyLoad();">
+		
+		<form name="search_form" action="#top" method="post" onsubmit="return false;">
+			<table width="766" align="center" cellspacing="0" border="0" cellpadding="0">
+				<tr>
+					<td colspan="2"><IMG SRC="Images/eDirectivesMasthead.jpg" name="ims"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<table width="766" border="0" cellspacing="0" cellpadding="0" id="tblTopNav">
+							<tr>
+								<td class="BlackBackgroundColor"><img border="0" src="Images/spacer.gif" width="1" height="0" alt=" " title=" "></td>
+								<td class="WhiteBackgroundColor">
+									<table cellpadding=0 cellspacing=0 border=0>
+										<tr>
+											<td><img border="0" src="Images/navigation/top_nav_left_spacer.gif" width="456" height="21" alt=" " title=" "></td>
+											
+											<td><a href="Default.aspx"><img title="Home" alt="Home" src="Images/navigation/top_nav_home_on.gif" border="0" id="navhome" name="navhome"></A></td>
+											<td><img border="0" src="Images/navigation/top_nav_spacer.gif" alt=" " title=" " width="1" height="21" ></td>
+											<td><a href="about.aspx" onmouseout="ci(document.navaboutnrcs32, 'top_nav_about_edir', 'off');" onmouseover="ci(document.navaboutnrcs32, 'top_nav_about_edir','on');"><img border="0" src="Images/navigation/top_nav_about_edir_off.gif" alt="About NRCS" title="About NRCS" name="navaboutnrcs32"></a></td>
+											<td><img border="0" src="Images/navigation/top_nav_spacer.gif" width="1" height="21" alt=" " title=" "></td>
+											<td><img border="0" src="Images/navigation/top_nav_spacer.gif" width="1" height="21" alt=" " title=" "></td>
+											<td><a href="help.aspx" onmouseout="ci(document.navhelp35, 'top_nav_help', 'off');" onmouseover="ci(document.navhelp35, 'top_nav_help', 'on');"><img border="0" src="Images/navigation/top_nav_help_off.gif" alt="Help" title="Help" name="navhelp35"></a></td>
+											<td><img border="0" src="Images/navigation/top_nav_spacer.gif" width="1" height="21" alt=" " title=" "></td>
+											<td><a href="contactus.aspx" onmouseout="ci(document.navcontactus36,'top_nav_contact', 'off')" onmouseover="ci(document.navcontactus36,'top_nav_contact', 'on')"><img border="0" src="Images/navigation/top_nav_contact_off.gif" alt="Contact Us" title="Contact Us" name="navcontactus36"></a></td>
+										</tr>
+									</table>
+								</td>
+								<td class="BlackBackgroundColor"><img border="0" src="Images/spacer.gif" width="1" height="0" alt=" " title=" "></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" bgcolor="#ffffff">
+						<table width="171" border="0" cellpadding="0" cellspacing="0" id="tblLeftNav">
+							<tr valign="top">
+								<td><img src="Images/navigation/nav_head_search.png" alt="Search" border="0"></td>
+							</tr>
+							<tr valign="top">
+								<td background="Images/navigation/ln_background.png"><span class="accessibility">Search for key words</span>
+									<table width="165" border="0" cellpadding="0" cellspacing="0" id="Table9">
+										<tr>
+								            <td align="left" style="PADDING-LEFT:0.5em; PADDING-TOP:0.3em"><input type="text" name="SearchText" size=14 OnKeyUp="dn_submit();"></td>
+											<td valign="bottom"><a href="javascript:onclick=search(document.search_form.SearchText.value);"><img src="Images/button-go.gif" alt="Go" border=0></a></td>
+										</tr>
+										<tr id="ucLeftNav_trASPsearch" style="DISPLAY:none">
+											<td colspan="2">
+												<span style="DISPLAY:block;PADDING-LEFT:0.5em;PADDING-BOTTOM:0.5em;PADDING-TOP:0.3em">
+													<select name="ddlSearchSite" id="ddlSearchSite" class="audiencebox">
+														<option selected value="All">All NRCS Directives</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<!--BEFORE-->
+							<tr>
+								<td><a href="AdvancedSearch.aspx" onmouseout="ci(document.ln_img_AdvSearch, 'ln_Advanced_Search','off')" onmouseover="ci(document.ln_img_AdvSearch, 'ln_Advanced_Search','on')"><img src="Images/navigation/ln_Advanced_Search_off.gif" alt="Advanced Search" name="ln_img_AdvSearch" border=0></a></td>
+							</tr>
+							<tr>
+								<td><a href="SearchTips.aspx" onmouseout="ci(document.ln_img_SrchTips, 'ln_Search_Tips','off')" onmouseover="ci(document.ln_img_SrchTips, 'ln_Search_Tips','on')"><img src="Images/navigation/ln_Search_Tips_off.gif" alt="Search Tips" name="ln_img_SrchTips" border=0></a></td>
+							</tr>
+							<!--AFTER-->
+							<tr>
+								<td><a href="RSSFeeds.aspx" onmouseout="ci(document.ln_img_RSS, 'ln_RSS','off')" onmouseover="ci(document.ln_img_RSS, 'ln_RSS','on')"><img src="Images/navigation/ln_RSS_off.gif" alt="RSS Feed" name="ln_img_RSS" border=0></a></td>
+							</tr>
+							<tr>
+								<td><img src="Images/navigation/nav_browse_by_directive.png" alt="Browse by Directive" border="0"></td>
+							</tr>
+							<tr>
+								<td valign="top" id="nav" width="171" bgcolor="#ffffff"><table bgcolor="#fafafa" cellpadding=0 border=0 cellspacing=0><tr><td valign=top class="txt"><a class="exp_href" href="javascript:OnClick=expand_main('176', 1, document.img_176);" OnMouseOver="ci(document.img_176, '176', 'on');" OnMouseOut="ci(document.img_176, '176', 'off');"><img name="img_176" src="Images/navigation/176_off.gif" width=171 border=0></a></td></tr>
+<tr><td valign=top class="txt"><a class="exp_href" href="javascript:OnClick=expand_main('177', 1, document.img_177);" OnMouseOver="ci(document.img_177, '177', 'on');" OnMouseOut="ci(document.img_177, '177', 'off');"><img name="img_177" src="Images/navigation/177_off.gif" width=171 border=0></a></td></tr>
+<tr><td valign=top class="txt"><a class="exp_href" href="javascript:OnClick=expand_main('178', 1, document.img_178);" OnMouseOver="ci(document.img_178, '178', 'on');" OnMouseOut="ci(document.img_178, '178', 'off');"><img name="img_178" src="Images/navigation/178_off.gif" width=171 border=0></a></td></tr>
+<tr><td valign=top class="txt"><a class="exp_href" href="javascript:OnClick=expand_main('179', 1, document.img_179);" OnMouseOver="ci(document.img_179, '179', 'on');" OnMouseOut="ci(document.img_179, '179', 'off');"><img name="img_179" src="Images/navigation/179_off.gif" width=171 border=0></a></td></tr>
+<tr><td valign=top class="txt"><a class="exp_href" href="javascript:OnClick=expand_main('180', 1, document.img_180);" OnMouseOver="ci(document.img_180, '180', 'on');" OnMouseOut="ci(document.img_180, '180', 'off');"><img name="img_180" src="Images/navigation/180_off.gif" width=171 border=0></a></td></tr>
+<tr><td valign=top class="txt"><a class="exp_href" href="javascript:OnClick=expand_main('181', 1, document.img_181);" OnMouseOver="ci(document.img_181, '181', 'on');" OnMouseOut="ci(document.img_181, '181', 'off');"><img name="img_181" src="Images/navigation/181_off.gif" width=171 border=0></a></td></tr>
+<tr><td valign=top class="txt"><a class="exp_href" href="javascript:OnClick=expand_main('182', 1, document.img_182);" OnMouseOver="ci(document.img_182, '182', 'on');" OnMouseOut="ci(document.img_182, '182', 'off');"><img name="img_182" src="Images/navigation/182_off.gif" width=171 border=0></a></td></tr>
+<tr><td valign=top class="txt"><a class="exp_href" href="javascript:OnClick=expand_main('183', 1, document.img_183);" OnMouseOver="ci(document.img_183, '183', 'on');" OnMouseOut="ci(document.img_183, '183', 'off');"><img name="img_183" src="Images/navigation/183_off.gif" width=171 border=0></a></td></tr>
+<tr><td valign=top class="txt"><a class="exp_href" href="javascript:OnClick=expand_main('184', 1, document.img_184);" OnMouseOver="ci(document.img_184, '184', 'on');" OnMouseOut="ci(document.img_184, '184', 'off');"><img name="img_184" src="Images/navigation/184_off.gif" width=171 border=0></a></td></tr>
+</table></td>
+							</tr>
+							<tr>
+								<td valign="top"><img src="Images/navigation/nav_footer.png" alt=" " title=" " border="0"></td>
+							</tr>
+						</table>
+					</td>
+					<td rowspan="2" width="595" bgcolor="#ffffff" valign="top">
+						<table width="100%">
+              <tr valign='top' class='WhiteBackgroundColor'>
+                <td >
+<span class="Breadcrumb" style="display:block; padding-bottom:.5em;"><span class="cNoColor">You are here: <span id='breadcrumb'>Home</span></span></span></td>
+              </tr>
+							<tr bgcolor="#228623">
+								<td id="qs_ea" class="cTxt" align="center"></td>
+							</tr>
+							<tr>
+								<td id="qs_rt" class="cTxt" align="right"></td>
+							</tr>
+							<tr>
+								<td id="dir_disp">
+								</td>
+							</tr>
+							<tr>
+								<td id="results">
+									<table width="100%" cellpadding="6">
+										<tr>
+											<td>
+												
+												<table border="0" cellpadding="0" cellspacing="0">
+											    
+													<tr valign="top" class="WhiteBackgroundColor">
+														<td colspan="3" align="left"
+															class="usda_paragraph_text">
+															The Electronic Directives System (eDirectives) provides employees of the Natural Resources Conservation 
+															Service (NRCS) immediate access to the most current directives issued by the NRCS.
+														</td>
+													</tr>
+													<tr>
+														<td colspan="3">&nbsp;</td>
+													</tr>
+													<tr valign="top" class="WhiteBackgroundColor">
+														<td colspan="3" style="padding-top:1em;"><img src="Images/WhatsNewLong.jpg" alt="Whats New"></td>
+													</tr>
+													<tr>
+														<td style="padding-top:.5em; padding-bottom:.5em;"  colspan="3" id="Td1" class="usda_paragraph_text">
+														    <b>August, 2008</b> <script>document.write(jsOutNewMsg(new Date(2008, 10, 01)))</script> &mdash; eDirectives has been enhanced with the following features:
+														    <ul>
+														        <li><b>Print to PDF</b>&mdash; All directives can now be converted to PDF format for easy printing by clicking on the "Create PDF" button at the bottom of the directive viewer screen.  The PDF version contains footers with citation references and page numbers on the bottom of every page.</li>
+														        <li><b>Recent Updates RSS Feed</b>&mdash; Information about recent updates to directives can now be received in Really Simple Syndication (RSS) format.  To use RSS, you will
+														        need an RSS reader, such as <i>My MSN, My Yahoo, the Firefox Browser</i> or other downloadable readers.  For more information on RSS, click on the RSS link in the left-hand menu.</li>
+														        <li><b>Google Search Integration</b>&mdash; eDirectives has been redesigned to use the USDA's Google Search Appliance to search for content within the directives system.  In addition, an Advanced Search screen has been added for users wanting more control over their searches.</li>
+														    </ul>
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:.5em; padding-bottom:.5em;" colspan="3" id="Td2" class="usda_paragraph_text">
+														    <b>May, 2008</b> &mdash; Engineering directives, formally stored in the 
+														    <i>Conservation Engineering Tools and Documents</i> web site (http://www.info.usda.gov/ced/) are 
+														    now available in the eDirectives site. Documents include the National Engineering Handbook and 
+														    Manual, as well as various engineering-related technical notes, technical releases,and user guides.
+														</td>
+													</tr>
+													<tr class="usda_spacing">
+														<td colspan="3" >&nbsp;</td>
+													</tr>
+													
+<tr>
+	<td colspan="3">
+		<img src="Images/Recent_Updates.jpg">
+	</td>
+</tr>
+<tr>
+    <td style="width:3px;"></td>
+	<td colspan="2" id="StaticUpdates" class="txt">
+	  <b>Handbooks</b>
+<ul>
+<li>January 27, 2009  <a href="21422.wba">H_210_NEH_630 : Part 630 - Hydrology</a></li>
+</ul>
+<b>National Bulletins</b>
+<ul>
+<li>February 5, 2009  <a href="22568.wba">NB_330_9_5 : NB_330_9_5, MGT – Volunteer Opportunities for the Conservation Delivery Streamlining Initiative</a> <SPAN class='cNew'>New</SPAN></li>
+<li>February 2, 2009  <a href="22514.wba">NB_300_9_13 : NB_300_9_13, LTP – Conservation Innovation Grants Fiscal Year 2009 State Component</a> <SPAN class='cNew'>New</SPAN></li>
+<li>February 2, 2009  <a href="22536.wba">NB_210_9_3 : NB_210_9_3, ENG – UNITED STATES SOCIETY ON DAMS (USSD) 2009 ANNUAL MEETING AND CONFERENCE</a> - <b>Action Required By:</b> 3/9/2009 <SPAN class='cNew'>New</SPAN></li>
+<li>February 2, 2009  <a href="22539.wba">NB_300_9_14 : NB_300_9_14,  LTP – Required Additions to Fiscal Year 2009 Payment Schedules – Activity Plans</a> - <b>Action Required By:</b> 3/6/2009 <SPAN class='cNew'>New</SPAN></li>
+<li>February 2, 2009  <a href="22542.wba">NB_440_9_9 : NB_440_9_9, PGM - Use of Revised Farm Service Agency (FSA) Forms FSA-211, Power of   Attorney and FSA-211A, Power of Attorney Signature Continuation Sheet</a> <SPAN class='cNew'>New</SPAN></li>
+<li>January 30, 2009  <a href="22561.wba">NB_230_9_7 : NB_230_9_7, EOP – Announcing Black History Month</a> <SPAN class='cNew'>New</SPAN></li>
+<li>January 30, 2009  <a href="22563.wba">NB_230_9_8 : NB_230_9_8, EOP – National Black History Month Poster Contest Winner</a> <SPAN class='cNew'>New</SPAN></li>
+<li>January 30, 2009  <a href="22566.wba">NB_300_9_16 : NB_330_9_16, LTP – Wetlands Reserve Program (WRP) Easement Compensation Procedures</a> - <b>Action Required By:</b> 2/17/2009 <SPAN class='cNew'>New</SPAN></li>
+<li>January 29, 2009  <a href="22560.wba">NB_200_9_1 : NB_200_9_1, ECN – Notification of Training Opportunity on Environmental Markets</a> <SPAN class='cNew'>New</SPAN></li>
+<li>January 27, 2009  <a href="22512.wba"> : NB_190_9_7,  ECS – EXTENSION FOR REVIEW OF DRAFT COMPREHENSIVE NUTRIENT   MANAGEMENT PLAN GENERAL MANUAL POLICY, FIELD OFFICE TECHNICAL GUIDE   TECHNICAL CRITERIA, AND FIELD HANDBOOK</a> - <b>Action Required By:</b> 2/16/2009 <SPAN class='cNew'>New</SPAN></li>
+<li>January 27, 2009  <a href="22513.wba">NB_300_9_12 : NB_300_9_12, LTP - Program Fund Management – ProTracts – Fiscal Year (FY) 2009 - Clarification</a></li>
+<li>January 27, 2009  <a href="22516.wba">NB_390_9_2 : NB_390_9_2, PDM - Resource Conservation and Development Area Plan Status and Submittal to National Headquarters</a></li>
+<li>January 27, 2009  <a href="22510.wba">NB_300_9_15 : NB_300_9_15, LTP – Required Updates to Fiscal Year (FY) 2009 Payment Schedules</a> - <b>Action Required By:</b> 3/6/2009</li>
+<li>January 27, 2009  <a href="22520.wba">NB_360_9_29 : NB_360_9_29,  PER – Implementation of GS-0800 Classification Standard</a> - <b>Action Required By:</b> 10/30/2009</li>
+<li>January 27, 2009  <a href="22522.wba">NB_360_9_30 : NB_360_9_30, PER – Cancellation of Occupational Series</a> - <b>Action Required By:</b> 12/31/2009</li>
+<li>January 27, 2009  <a href="22524.wba">NB_410_9_1 : NB_410_9_1, RDV – Guidance and Consultation with Federally Recognized Tribes Concerning New 2008 Farm Bill Interim Final Rules</a></li>
+<li>January 23, 2009  <a href="22508.wba">NB_360_9_28 : NB_360_9_28, PER – 2009 Excellence in Conservation Award</a> - <b>Action Required By:</b> 2/23/2009</li>
+<li>January 21, 2009  <a href="22504.wba">NB_360_9_27 : NB_360_9_27, PER – Nominations for DISC Profile Facilitator Cadre</a> - <b>Action Required By:</b> 2/20/2009</li>
+<li>January 21, 2009  <a href="22509.wba">NB_360_9_26 : NB_360_9_26, PER – National Mentoring Framework</a> - <b>Action Required By:</b> 2/28/2009</li>
+<li>January 19, 2009  <a href="22502.wba">NB_360_9_25 : NB_360_9_25, PER – Removal of Current Administration Official Photographs from all USDA -   Natural Resources Conservation Service Offices</a> - <b>Action Required By:</b> 1/21/2009</li>
+</ul>
+<b>National Instructions</b>
+<ul>
+<li>January 6, 2009  <a href="21164.wba">NI_110_308_NI_110_308 : NI.110.308, Guidance for the Confidential Financial Disclosure Report (OGE Form 450) Process</a></li>
+<li>January 6, 2009  <a href="22494.wba">NI_120_300 : Part 300 - Processing Freedom of Information Act (FOIA) and Privacy Act (PA) Requests</a></li>
+</ul>
+
+	</td>
+</tr>
+
+												</table>
+												
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			
+<table width="767" align="center" border="0" cellpadding="0" cellspacing="0" id="tblFooter">
+  <tr>
+    <td colspan="3" bgcolor="#333366" height="1"><img src='/Images/spacer.gif' alt=" " title=" " height="1"></td>
+  </tr>
+  <tr>
+    <td align="left" valign="bottom">
+      <table align="left" border="0" cellpadding="0" cellspacing="0" id="Table16">
+        <tbody>
+          <tr>
+            <td style="BORDER-LEFT: black 1px solid" align="right" bgcolor="#ffffff"><img src='/Images/spacer.gif' alt=" " title=" " height="8" width="0"></td>
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff"><img src='/Images/footer_corner_left.gif' alt=" " title=" " height="22" width="24"></td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+    <td align="left" valign="top" width="719">
+      <table border="0" cellpadding="0" cellspacing="0" width="719" id="Table17">
+        <tbody>
+          <tr>
+            <td class="FooterText" bgcolor="#ffffff"><img src='/Images/spacer.gif' alt=" " title=" " height="29" width="1"></td>
+            <td class="FooterText" align="left" bgcolor="#ffffff" valign="middle">
+            
+            
+            <div class="cNoColor">
+            <span style="float:right; margin-right:.5em;height:100%; vertical-align:top;">version: 1.1.2.10</span>
+            <a href="http://www.nrcs.usda.gov"><span>NRCS 
+              Home</span></a> | <a href="http://www.usda.gov" target="_top">USDA.gov</a> | 
+              <a href="http://www.ocio.usda.gov/directives/">USDA Directives</a>
+               
+              <br>
+              <a href="http://www.usda.gov/da/foia.htm">FOIA</a> | 
+              <a href="http://www.usda.gov/wps/portal/!ut/p/_s.7_0_A/7_0_1OB?navtype=FT&amp;navid=ACCESSIBILITY_STATEM">Accessibility Statement</a> | 
+              <a href="http://www.usda.gov/wps/portal/!ut/p/_s.7_0_A/7_0_1OB?navtype=FT&amp;navid=PRIVACY_POLICY">Privacy Policy</a> | 
+              <a href="http://www.usda.gov/wps/portal/!ut/p/_s.7_0_A/7_0_1OB?navtype=FT&amp;navid=NON_DISCRIMINATION">Nondiscrimination Statement</a> | 
+              <a href="http://www.ocio.usda.gov/qi_guide/index.html" target="_blank">Information Quality</a> | 
+              <a href="http://www.firstgov.gov/" target="_blank">FirstGov</a> | 
+              <a href="http://www.whitehouse.gov/" target="_blank">White House</a>
+            </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+    <td align="right" valign="top"><img src='/Images/footer_corner_right.gif' alt=" " title=" " border="0" height="30" width="24"></td>
+  </tr>
+</table>
+<div style="width: 100%; height: 2em">&nbsp;</div>
+
+
+</form>
+<form name="ajaxForm" method="post" action="default.aspx?content=H_210_654_ts17.pdf" id="ajaxForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMTAzMzk5ODYPZBYGZg8PFgIeCE1ldGFUYWdzBeoHPG1ldGEgbmFtZT0nZGVzY3JpcHRpb24nICAgY29udGVudD0nVGhlIE5hdHVyYWwgUmVzb3VyY2VzIENvbnNlcnZhdGlvbiBTZXJ2aWNlIGlzIHRoZSBGZWRlcmFsIGFnZW5jeSB0aGF0IHdvcmtzIGluIHBhcnRuZXJzaGlwIHdpdGggdGhlIEFtZXJpY2FuIHBlb3BsZSB0byBjb25zZXJ2ZSBhbmQgc3VzdGFpbiBuYXR1cmFsIHJlc291cmNlcyBvbiBwcml2YXRlIGxhbmRzLicgPgogICAgPG1ldGEgbmFtZT0nY3JlYXRlcicgICAgICAgY29udGVudD0nTlJDUycgPgogICAgPG1ldGEgbmFtZT0nZGF0ZSBjcmVhdGVkJyAgY29udGVudD0nMi81LzIwMDknID4KICAgIDxtZXRhIG5hbWU9J2RhdGUgcmV2aWV3ZWQnIGNvbnRlbnQ9JzIvNS8yMDA5JyA+CiAgICA8bWV0YSBuYW1lPSdrZXl3b3JkcycgICAgICBjb250ZW50PSdOYXR1cmFsIFJlc291cmNlcywgQ29uc2VydmF0aW9uLCBXYXRlciBRdWFsaXR5LCBTb2lsIENvbnNlcnZhdGlvbiwgQWdyaWN1bHR1cmUsIFNvaWwgRXJvc2lvbiwgUmVzb3VyY2UgSW52ZW50b3J5LCBHZW9ncmFwaHkgb2YgSG9wZSwgc29pbCBzY2llbmNlLCBnb3Zlcm5tZW50LCBTY2llbmNlIHRlYWNoZXIsIEZhcm0sIEVudmlyb25tZW50LCBFY29sb2d5JyA+CiAgICA8bWV0YSBuYW1lPSdsYW5ndWFnZScgICAgICBjb250ZW50PSdFbmdsaXNoJyA+CiAgICA8bWV0YSBuYW1lPSdhZ2VuY3knICAgICAgICBjb250ZW50PSdOUkNTJyA+CiAgICA8bWV0YSBuYW1lPSdhdXRob3InICAgICAgICBjb250ZW50PSdOUkNTJyA+CiAgICA8bWV0YSBuYW1lPSdmb3JtYXQnICAgICAgICBjb250ZW50PSd0ZXh0L2h0bWwnID4KICAgIDxtZXRhIG5hbWU9J2RvY3VtZW50LWNsYXNzaWZpY2F0aW9uJyBjb250ZW50PSdBZ3JpY3VsdHVyZScgPgogICAgPG1ldGEgbmFtZT0nZG9jdW1lbnQtdHlwZScgICAgICAgICAgIGNvbnRlbnQ9J0dvdmVybm1lbnQnID4KICAgIDxtZXRhIG5hbWU9J2RvY3VtZW50LWRpc3RyaWJ1dGlvbicgICBjb250ZW50PSdHbG9iYWwnID4KZGQCAQ8PFgIeC2JyZWFkY3J1bWJzBSE8c3BhbiBpZD0nYnJlYWRjcnVtYic+SG9tZTwvc3Bhbj5kZAICDw8WAh4JUGFnZVdpZHRoBQM3NjdkZGRXmT3dLofdAVxOUMedWm7L4b5jlg==" />
+
+
+<script src="/default.aspx?resource=prototype.js"></script>
+<script src="/default.aspx?resource=core.js"></script>
+<script src="/default.aspx?resource=converter.js"></script>
+<script src="/default.aspx?type=eDirectives.Presentation.Default"></script>
+<script src="/default.aspx?type=eDirectives.Presentation.Resources.Ajax.AjaxMethods"></script>
+<script src="/default.aspx?type=eDirectives.Presentation.Resources.Ajax.AjaxSearch"></script>
+
+		
+</form>
+</body>
+</html>
