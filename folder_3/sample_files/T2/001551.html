@@ -1,0 +1,405 @@
+<HTML>
+<!-- created Jul 29 1999 from 1061-tmp.texi line 7578 via texi2www -->
+<HEAD>
+<TITLE>admin options
+</TITLE>
+<LINK REV="Subdocument" HREF="admin.html">
+</HEAD><BODY>
+<CITE>CVS---Concurrent Versions System. Node: admin options
+</CITE><P><A><IMG ALIGN=BOTTOM SRC="http://w3.pppl.gov/icons/blank.gif" ALT="prev"></A>
+<A HREF="admin.html"> <IMG ALIGN=BOTTOM SRC="http://w3.pppl.gov/icons/up.gif" ALT="UP">admin</A>
+<A><IMG ALIGN=BOTTOM SRC="http://w3.pppl.gov/icons/blank.gif" ALT="next"></A>
+</P>
+<H3>A.6.1: admin options</H3>
+<P>
+Some of these options have questionable usefulness for
+<FONT SIZE=-1>CVS</FONT SIZE=-1> but exist for historical purposes.  Some even
+make it impossible to use <FONT SIZE=-1>CVS</FONT SIZE=-1> until you undo the
+effect!
+</P>
+<TABLE>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-A<VAR>oldfile</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Might not work together with <FONT SIZE=-1>CVS</FONT SIZE=-1>.  Append the
+access list of <VAR>oldfile</VAR> to the access list of the
+<FONT SIZE=-1>RCS</FONT SIZE=-1> file.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-a<VAR>logins</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Might not work together with <FONT SIZE=-1>CVS</FONT SIZE=-1>.  Append the
+login names appearing in the comma-separated list
+<VAR>logins</VAR> to the access list of the <FONT SIZE=-1>RCS</FONT SIZE=-1> file.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-b[<VAR>rev</VAR>]</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Set the default branch to <VAR>rev</VAR>.  In <FONT SIZE=-1>CVS</FONT SIZE=-1>, you
+normally do not manipulate default branches; sticky
+tags (see <A HREF="Sticky_tags.html">Sticky tags</A>) are a better way to decide
+which branch you want to work on.  There is one reason
+to run <CODE>cvs admin -b</CODE>: to revert to the vendor's
+version when using vendor branches (see <A HREF="Reverting_local_changes.html">Reverting local changes</A>).
+There can be no space between `<CODE>-b</CODE>' and its argument.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-c<VAR>string</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Sets the comment leader to <VAR>string</VAR>.  The comment
+leader is not used by current versions of <FONT SIZE=-1>CVS</FONT SIZE=-1> or
+<FONT SIZE=-1>RCS</FONT SIZE=-1> 5.7.  Therefore, you can almost surely not
+worry about it.  See <A HREF="Keyword_substitution.html">Keyword substitution</A>.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-e[<VAR>logins</VAR>]</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Might not work together with <FONT SIZE=-1>CVS</FONT SIZE=-1>.  Erase the login
+names appearing in the comma-separated list
+<VAR>logins</VAR> from the access list of the RCS file.  If
+<VAR>logins</VAR> is omitted, erase the entire access list.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-I</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Run interactively, even if the standard input is not a
+terminal.  This option does not work with the
+client/server <FONT SIZE=-1>CVS</FONT SIZE=-1> and is likely to disappear in
+a future release of <FONT SIZE=-1>CVS</FONT SIZE=-1>.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-i</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Useless with <FONT SIZE=-1>CVS</FONT SIZE=-1>.  This creates and initializes a
+new <FONT SIZE=-1>RCS</FONT SIZE=-1> file, without depositing a revision.  With
+<FONT SIZE=-1>CVS</FONT SIZE=-1>, add files with the <CODE>cvs add</CODE> command
+(see <A HREF="Adding_files.html">Adding files</A>).
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-k<VAR>subst</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Set the default keyword
+substitution to <VAR>subst</VAR>.  See <A HREF="Keyword_substitution.html">Keyword substitution</A>.  Giving an explicit `<CODE>-k</CODE>' option to
+<CODE>cvs update</CODE>, <CODE>cvs export</CODE>, or <CODE>cvs checkout</CODE> overrides this default.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-l[<VAR>rev</VAR>]</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Lock the revision with number <VAR>rev</VAR>.  If a branch
+is given, lock the latest revision on that branch.  If
+<VAR>rev</VAR> is omitted, lock the latest revision on the
+default branch.  There can be no space between
+`<CODE>-l</CODE>' and its argument.
+</P>
+<P>
+This can be used in conjunction with the
+`<CODE>rcslock.pl</CODE>' script in the `<CODE>contrib</CODE>'
+directory of the <FONT SIZE=-1>CVS</FONT SIZE=-1> source distribution to
+provide reserved checkouts (where only one user can be
+editing a given file at a time).  See the comments in
+that file for details (and see the `<CODE>README</CODE>' file
+in that directory for disclaimers about the unsupported
+nature of contrib).  According to comments in that
+file, locking must set to strict (which is the default).
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-L</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Set locking to strict.  Strict locking means that the
+owner of an RCS file is not exempt from locking for
+checkin.  For use with <FONT SIZE=-1>CVS</FONT SIZE=-1>, strict locking must be
+set; see the discussion under the `<CODE>-l</CODE>' option above.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-m<VAR>rev</VAR>:<VAR>msg</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Replace the log message of revision <VAR>rev</VAR> with
+<VAR>msg</VAR>.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-N<VAR>name</VAR>[:[<VAR>rev</VAR>]]</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Act like `<CODE>-n</CODE>', except override any previous
+assignment of <VAR>name</VAR>.  For use with magic branches,
+see <A HREF="Magic_branch_numbers.html">Magic branch numbers</A>.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-n<VAR>name</VAR>[:[<VAR>rev</VAR>]]</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Associate the symbolic name <VAR>name</VAR> with the branch
+or revision <VAR>rev</VAR>.  It is normally better to use
+`<CODE>cvs tag</CODE>' or `<CODE>cvs rtag</CODE>' instead.  Delete the
+symbolic name if both `<CODE>:</CODE>' and <VAR>rev</VAR> are
+omitted; otherwise, print an error message if
+<VAR>name</VAR> is already associated with another number.
+If <VAR>rev</VAR> is symbolic, it is expanded before
+association.  A <VAR>rev</VAR> consisting of a branch number
+followed by a `<CODE>.</CODE>' stands for the current latest
+revision in the branch.  A `<CODE>:</CODE>' with an empty
+<VAR>rev</VAR> stands for the current latest revision on the
+default branch, normally the trunk.  For example,
+`<CODE>cvs admin -n<VAR>name</VAR>:</CODE>' associates <VAR>name</VAR> with the
+current latest revision of all the RCS files;
+this contrasts with `<CODE>cvs admin -n<VAR>name</VAR>:$</CODE>' which
+associates <VAR>name</VAR> with the revision numbers
+extracted from keyword strings in the corresponding
+working files.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-o<VAR>range</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Deletes (<EM>outdates</EM>) the revisions given by
+<VAR>range</VAR>.
+</P>
+<P>
+Note that this command can be quite dangerous unless
+you know <EM>exactly</EM> what you are doing (for example
+see the warnings below about how the
+<VAR>rev1</VAR>:<VAR>rev2</VAR> syntax is confusing).
+</P>
+<P>
+If you are short on disc this option might help you.
+But think twice before using it---there is no way short
+of restoring the latest backup to undo this command!
+If you delete different revisions than you planned,
+either due to carelessness or (heaven forbid) a CVS
+bug, there is no opportunity to correct the error
+before the revisions are deleted.  It probably would be
+a good idea to experiment on a copy of the repository
+first.
+</P>
+<P>
+Specify <VAR>range</VAR> in one of the following ways:
+</P>
+<TABLE>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE><VAR>rev1</VAR>::<VAR>rev2</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Collapse all revisions between rev1 and rev2, so that
+CVS only stores the differences associated with going
+from rev1 to rev2, not intermediate steps.  For
+example, after `<CODE>-o 1.3::1.5</CODE>' one can retrieve
+revision 1.3, revision 1.5, or the differences to get
+from 1.3 to 1.5, but not the revision 1.4, or the
+differences between 1.3 and 1.4.  Other examples:
+`<CODE>-o 1.3::1.4</CODE>' and `<CODE>-o 1.3::1.3</CODE>' have no
+effect, because there are no intermediate revisions to
+remove.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>::<VAR>rev</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Collapse revisions between the beginning of the branch
+containing <VAR>rev</VAR> and <VAR>rev</VAR> itself.  The
+branchpoint and <VAR>rev</VAR> are left intact.  For
+example, `<CODE>-o ::1.3.2.6</CODE>' deletes revision 1.3.2.1,
+revision 1.3.2.5, and everything in between, but leaves
+1.3 and 1.3.2.6 intact.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE><VAR>rev</VAR>::</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Collapse revisions between <VAR>rev</VAR> and the end of the
+branch containing <VAR>rev</VAR>.  Revision <VAR>rev</VAR> is
+left intact but the head revision is deleted.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE><VAR>rev</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Delete the revision <VAR>rev</VAR>.  For example, `<CODE>-o 1.3</CODE>' is equivalent to `<CODE>-o 1.2::1.4</CODE>'.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE><VAR>rev1</VAR>:<VAR>rev2</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Delete the revisions from <VAR>rev1</VAR> to <VAR>rev2</VAR>,
+inclusive, on the same branch.  One will not be able to
+retrieve <VAR>rev1</VAR> or <VAR>rev2</VAR> or any of the
+revisions in between.  For example, the command
+`<CODE>cvs admin -oR_1_01:R_1_02 .</CODE>' is rarely useful.
+It means to delete revisions up to, and including, the
+tag R_1_02.  But beware!  If there are files that have not
+changed between R_1_02 and R_1_03 the file will have
+<EM>the same</EM> numerical revision number assigned to
+the tags R_1_02 and R_1_03.  So not only will it be
+impossible to retrieve R_1_02; R_1_03 will also have to
+be restored from the tapes!  In most cases you want to
+specify <VAR>rev1</VAR>::<VAR>rev2</VAR> instead.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>:<VAR>rev</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Delete revisions from the beginning of the
+branch containing <VAR>rev</VAR> up to and including
+<VAR>rev</VAR>.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE><VAR>rev</VAR>:</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Delete revisions from revision <VAR>rev</VAR>, including
+<VAR>rev</VAR> itself, to the end of the branch containing
+<VAR>rev</VAR>.
+</TD></TR>
+</TABLE>
+</P>
+<P>
+None of the revisions to be deleted may have
+branches or locks.
+</P>
+<P>
+If any of the revisions to be deleted have symbolic
+names, and one specifies one of the `<CODE>::</CODE>' syntaxes,
+then <FONT SIZE=-1>CVS</FONT SIZE=-1> will give an error and not delete any
+revisions.  If you really want to delete both the
+symbolic names and the revisions, first delete the
+symbolic names with <CODE>cvs tag -d</CODE>, then run
+<CODE>cvs admin -o</CODE>.  If one specifies the
+non-`<CODE>::</CODE>' syntaxes, then <FONT SIZE=-1>CVS</FONT SIZE=-1> will delete the
+revisions but leave the symbolic names pointing to
+nonexistent revisions.  This behavior is preserved for
+compatibility with previous versions of <FONT SIZE=-1>CVS</FONT SIZE=-1>, but
+because it isn't very useful, in the future it may
+change to be like the `<CODE>::</CODE>' case.
+</P>
+<P>
+Due to the way <FONT SIZE=-1>CVS</FONT SIZE=-1> handles branches <VAR>rev</VAR>
+cannot be specified symbolically if it is a branch.
+See <A HREF="Magic_branch_numbers.html">Magic branch numbers</A>, for an explanation.
+</P>
+<P>
+Make sure that no-one has checked out a copy of the
+revision you outdate.  Strange things will happen if he
+starts to edit it and tries to check it back in.  For
+this reason, this option is not a good way to take back
+a bogus commit; commit a new revision undoing the bogus
+change instead (see <A HREF="Merging_two_revisions.html">Merging two revisions</A>).
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-q</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Run quietly; do not print diagnostics.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-s<VAR>state</VAR>[:<VAR>rev</VAR>]</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Useful with <FONT SIZE=-1>CVS</FONT SIZE=-1>.  Set the state attribute of the
+revision <VAR>rev</VAR> to <VAR>state</VAR>.  If <VAR>rev</VAR> is a
+branch number, assume the latest revision on that
+branch.  If <VAR>rev</VAR> is omitted, assume the latest
+revision on the default branch.  Any identifier is
+acceptable for <VAR>state</VAR>.  A useful set of states is
+`<CODE>Exp</CODE>' (for experimental), `<CODE>Stab</CODE>' (for
+stable), and `<CODE>Rel</CODE>' (for released).  By default,
+the state of a new revision is set to `<CODE>Exp</CODE>' when
+it is created.  The state is visible in the output from
+<VAR>cvs log</VAR> (see <A HREF="log.html">log</A>), and in the
+`<CODE>$Log$</CODE>' and `<CODE>$State$</CODE>' keywords
+(see <A HREF="Keyword_substitution.html">Keyword substitution</A>).  Note that <FONT SIZE=-1>CVS</FONT SIZE=-1>
+uses the <CODE>dead</CODE> state for its own purposes; to
+take a file to or from the <CODE>dead</CODE> state use
+commands like <CODE>cvs remove</CODE> and <CODE>cvs add</CODE>, not
+<CODE>cvs admin -s</CODE>.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-t[<VAR>file</VAR>]</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Useful with <FONT SIZE=-1>CVS</FONT SIZE=-1>.  Write descriptive text from the
+contents of the named <VAR>file</VAR> into the RCS file,
+deleting the existing text.  The <VAR>file</VAR> pathname
+may not begin with `<CODE>-</CODE>'.  The descriptive text can be seen in the
+output from `<CODE>cvs log</CODE>' (see <A HREF="log.html">log</A>).
+There can be no space between `<CODE>-t</CODE>' and its argument.
+</P>
+<P>
+If <VAR>file</VAR> is omitted,
+obtain the text from standard input, terminated by
+end-of-file or by a line containing `<CODE>.</CODE>' by itself.
+Prompt for the text if interaction is possible; see
+`<CODE>-I</CODE>'.  Reading from standard input does not work
+for client/server <FONT SIZE=-1>CVS</FONT SIZE=-1> and may change in a future
+release of <FONT SIZE=-1>CVS</FONT SIZE=-1>.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-t-<VAR>string</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Similar to `<CODE>-t<VAR>file</VAR></CODE>'. Write descriptive text
+from the <VAR>string</VAR> into the <FONT SIZE=-1>RCS</FONT SIZE=-1> file, deleting
+the existing text.
+There can be no space between `<CODE>-t</CODE>' and its argument.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-U</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+Set locking to non-strict.  Non-strict locking means
+that the owner of a file need not lock a revision for
+checkin.  For use with <FONT SIZE=-1>CVS</FONT SIZE=-1>, strict locking must be
+set; see the discussion under the `<CODE>-l</CODE>' option
+above.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-u[<VAR>rev</VAR>]</CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+See the option `<CODE>-l</CODE>' above, for a discussion of
+using this option with <FONT SIZE=-1>CVS</FONT SIZE=-1>.  Unlock the revision
+with number <VAR>rev</VAR>.  If a branch is given, unlock
+the latest revision on that branch.  If <VAR>rev</VAR> is
+omitted, remove the latest lock held by the caller.
+Normally, only the locker of a revision may unlock it.
+Somebody else unlocking a revision breaks the lock.
+This causes a mail message to be sent to the original
+locker.  The message contains a commentary solicited
+from the breaker.  The commentary is terminated by
+end-of-file or by a line containing <CODE>.</CODE> by itself.
+There can be no space between `<CODE>-u</CODE>' and its argument.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-V<VAR>n</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+In previous versions of <FONT SIZE=-1>CVS</FONT SIZE=-1>, this option meant to
+write an <FONT SIZE=-1>RCS</FONT SIZE=-1> file which would be acceptable to
+<FONT SIZE=-1>RCS</FONT SIZE=-1> version <VAR>n</VAR>, but it is now obsolete and
+specifying it will produce an error.
+</P>
+</TD></TR>
+<TR><TD VALIGN=TOP><CODE>-x<VAR>suffixes</VAR></CODE>
+</TD>
+    <TD VALIGN=TOP><P>
+In previous versions of <FONT SIZE=-1>CVS</FONT SIZE=-1>, this was documented
+as a way of specifying the names of the <FONT SIZE=-1>RCS</FONT SIZE=-1>
+files.  However, <FONT SIZE=-1>CVS</FONT SIZE=-1> has always required that the
+<FONT SIZE=-1>RCS</FONT SIZE=-1> files used by <FONT SIZE=-1>CVS</FONT SIZE=-1> end in `<CODE>,v</CODE>', so
+this option has never done anything useful.
+</P>
+</TD></TR>
+</TABLE>
+<A><IMG ALIGN=BOTTOM SRC="http://w3.pppl.gov/icons/blank.gif" ALT="prev"></A>
+<A HREF="admin.html"> <IMG ALIGN=BOTTOM SRC="http://w3.pppl.gov/icons/up.gif" ALT="UP">admin</A>
+<A><IMG ALIGN=BOTTOM SRC="http://w3.pppl.gov/icons/blank.gif" ALT="next"></A>
+</BODY></HTML>

@@ -1,0 +1,287 @@
+<html>
+<head><title>Search Results</title>
+
+<SCRIPT type="text/javascript">
+ 
+var bIsRequesting;
+var response;
+var response_id;
+var action_type;
+var url;
+ 
+function getHTTPObject() {
+ var xmlhttp;
+ if (window.XMLHttpRequest) { // Mozilla, Safari,...
+       xmlhttp = new XMLHttpRequest();
+       if (xmlhttp.overrideMimeType) {
+                xmlhttp.overrideMimeType('text/xml');
+            }
+ } else if (window.ActiveXObject) { // IE
+       try {
+              xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+       } catch (e) {
+            try {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {}
+       }
+ }
+ return xmlhttp;
+}
+
+function handleHttpResponse(){
+  if (http.readyState == 4) {
+      if((http.status==200)){
+         try{
+             document.getElementById(response_id).innerHTML=http.responseText;
+         } catch (e) {
+	     document.getElementById(response_id).innerHTML="Click <a href=" +url + " target=_blank>here</a>";
+        }
+        bIsRequesting = false;
+      }else{
+         alert(http.status);
+    }
+  }
+}
+ 
+function request(request_type,request_url, strMsg, id, type,syn,r){
+  url = request_url;
+
+  if(bIsRequesting){
+    //alert("Please wait while you are requesting something");
+  }else{
+    bIsRequesting = true;
+    var request_type;
+    var request_url;
+    response_id = id;
+    response = r;
+    action_type = type;
+    //document.getElementById(response_id).innerHTML = "Loading...";
+    document.getElementById(response_id).innerHTML="Click <a href=" +url + " target=_blank>here</a>";
+    http.onreadystatechange = handleHttpResponse;
+    if(syn == 0){
+      http.open(request_type, request_url, true);
+    }else{
+      http.open(request_type, request_url, false);
+    }
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.setRequestHeader("Connection", "close");
+    http.send(strMsg);
+  }
+}
+ 
+var http = getHTTPObject();
+ 
+</SCRIPT>
+
+</head>
+<body bgcolor="#ffffff" vlink="#00aa00">
+<center><font size="+1" color="#000000">
+<center><p><font size=3><a href="../cgi-bin/gene_search.cgi?dbname=oralpp">Basic Search</a>&nbsp;|&nbsp<a href="../cgi-bin/inter_search.cgi?dbname=oralpp">Intermediate Search</a>&nbsp;|&nbsp<a href="../cgi-bin/coordinate.cgi?dbname=oralpp">Gene Image Map</a>&nbsp;|&nbsp
+<a href="../cgi-bin/right.cgi?dbname=oralpp&subdir=oralgen">Home</a></font><br> <br><b><i>Actinobacillus actinomycetemcomitans</i> Search Results</b></center>
+</font></center>
+
+<table border="1" width="100%" cellspacing="3" cellpadding="0">
+
+<b>Record: 1 of 1</b>&nbsp;&nbsp;<center><HTML><HEAD><META HTTP-EQUIV="Content-Type" charset="UTF-8"><TITLE>MiniMap</TITLE></HEAD><BODY BGCOLOR="#FFFFFF">
+  <MAP NAME="../map_images/1mini28501">
+    <AREA SHAPE=rect COORDS="142,18,142,30" ALT="IGRp1340" HREF="igr_id_search.cgi?dbname=oralpp&igs_id=IGRp1340">
+    <AREA SHAPE=rect COORDS="399,18,400,30" ALT="IGRp1343" HREF="igr_id_search.cgi?dbname=oralpp&igs_id=IGRp1343">
+    <AREA SHAPE=rect COORDS="194,18,200,30" ALT="IGRp1342" HREF="igr_id_search.cgi?dbname=oralpp&igs_id=IGRp1342">
+    <AREA SHAPE=rect COORDS="69,18,78,30" ALT="IGRp1339" HREF="igr_id_search.cgi?dbname=oralpp&igs_id=IGRp1339">
+    <AREA SHAPE=rect COORDS="161,18,182,30" ALT="IGRp1341" HREF="igr_id_search.cgi?dbname=oralpp&igs_id=IGRp1341">
+    <AREA SHAPE=rect COORDS="143,24,161,30" ALT="pPI0464" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0464">
+    <AREA SHAPE=rect COORDS="15,24,69,30" ALT="pPI0461" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0461">
+    <AREA SHAPE=rect COORDS="81,24,142,30" ALT="pPI0463" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0463">
+    <AREA SHAPE=rect COORDS="182,18,194,24" ALT="pPI0465" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0465">
+    <AREA SHAPE=rect COORDS="78,18,93,24" ALT="pPI0462" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0462">
+    <AREA SHAPE=rect COORDS="200,18,399,24" ALT="hepA, - pPI0466" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0466">
+    <AREA SHAPE=rect COORDS="400,18,600,24" ALT="pPI0467" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0467">
+    <AREA SHAPE=rect COORDS="143,18,161,24" ALT="pPI0464" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0464">
+    <AREA SHAPE=rect COORDS="15,18,69,24" ALT="pPI0461" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0461">
+    <AREA SHAPE=rect COORDS="81,18,142,24" ALT="pPI0463" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0463">
+    <AREA SHAPE=rect COORDS="182,24,194,30" ALT="pPI0465" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0465">
+    <AREA SHAPE=rect COORDS="78,24,93,30" ALT="pPI0462" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0462">
+    <AREA SHAPE=rect COORDS="200,24,399,30" ALT="hepA, - pPI0466" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0466">
+    <AREA SHAPE=rect COORDS="400,24,600,30" ALT="pPI0467" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0467">
+    <AREA SHAPE=rect COORDS="21,30,63,42" ALT="pPI0461" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0461">
+    <AREA SHAPE=rect COORDS="90,30,132,42" ALT="pPI0463" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0463">
+    <AREA SHAPE=rect COORDS="-11,24,20,36" ALT="bmgB, - pPI0460" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0460">
+    <AREA SHAPE=rect COORDS="0,42,24,54" ALT="bmgB, - pPI0460" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0460">
+    <AREA SHAPE=rect COORDS="131,42,173,54" ALT="pPI0464" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0464">
+    <AREA SHAPE=rect COORDS="167,6,209,18" ALT="pPI0465" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0465">
+    <AREA SHAPE=rect COORDS="64,6,106,18" ALT="pPI0462" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0462">
+    <AREA SHAPE=rect COORDS="287,6,311,18" ALT="hepA, - pPI0466" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0466">
+    <AREA SHAPE=rect COORDS="479,6,521,18" ALT="pPI0467" HREF="gene_id_search.cgi?dbname=oralpp&gene_id=pPI0467">
+  </MAP>
+  <IMG USEMAP="#../map_images/1mini28501" SRC="../map_images/1mini28501.gif" BORDER="0">
+</BODY>
+</HTML>
+</center><br>
+<br><tt><b>Gene ID:</b>pPI0466<br><br></tt><tt><b>DNA Molecule Name:</b><br>
+pPI1&nbsp;&nbsp;<br><br></tt>
+<tt><b>GenBank ID:</b><br><br><br></tt>
+<tt><b>Gene Name:</b><br>
+hepA&nbsp;&nbsp;<br><br></tt>
+<tt><b>Definition:</b><br>ATP-dependent helicase<br><br></tt>
+<tt><b>Cellular Location:</b><br>Cytoplasm [<span style='cursor:pointer; color:#FF0000;' onclick="request('GET','../cgi-bin/show_prediction.pl?dbname=oralpp&gene_id=pPI0466', '', 'CellularLocationpPI0466', '',0,'text');"><u>Evidence</u></span>]<br><div id='CellularLocationpPI0466'></div>
+<br></tt>
+<tt><b>Gene Start:</b><br>427768<br><br></tt><tt><b>Gene Stop:</b><br>431085<br><br></tt><tt><b>Gene Length:</b><br>3318<br><br></tt><tt><b>Molecular Weight*:</b><br>128496<br><br></tt><tt><b>pI*:</b><br><br><br></tt><tt><b>Net Charge*:</b><br><br><br></tt><tt><b>EC:</b><br>
+&nbsp;<br><br></tt>
+<tt><b>Functional Class:</b>
+<br>DNA metabolism; DNA replication, restriction, modification, recombination, and repair&nbsp;&nbsp;<br><br></tt>
+<tt><b>Gene Ontology:</b>
+<br><u><i>Molecular function</i></u><br>&nbsp;&nbsp;<a href="http://amigo.geneontology.org/cgi-bin/amigo/go.cgi?view=details&search_constraint=terms&query=GO:0003676"
+target=_blank>GO:0003676</a>&nbsp;&nbsp;&nbsp;&nbsp;nucleic acid binding<br>&nbsp;&nbsp;<a href="http://amigo.geneontology.org/cgi-bin/amigo/go.cgi?view=details&search_constraint=terms&query=GO:0003677"
+target=_blank>GO:0003677</a>&nbsp;&nbsp;&nbsp;&nbsp;DNA binding<br>&nbsp;&nbsp;<a href="http://amigo.geneontology.org/cgi-bin/amigo/go.cgi?view=details&search_constraint=terms&query=GO:0004386"
+target=_blank>GO:0004386</a>&nbsp;&nbsp;&nbsp;&nbsp;helicase activity<br>&nbsp;&nbsp;<a href="http://amigo.geneontology.org/cgi-bin/amigo/go.cgi?view=details&search_constraint=terms&query=GO:0005524"
+target=_blank>GO:0005524</a>&nbsp;&nbsp;&nbsp;&nbsp;ATP binding<br>&nbsp;&nbsp;<a href="http://amigo.geneontology.org/cgi-bin/amigo/go.cgi?view=details&search_constraint=terms&query=GO:0016787"
+target=_blank>GO:0016787</a>&nbsp;&nbsp;&nbsp;&nbsp;hydrolase activity<br><br><br></tt>
+<tt><b>Pathway:</b>
+<a href=path_table.cgi?dbname=oralpp&gene_id=pPI0466>pathway table</a><br><br></tt>
+<tt><b>Secondary Evidence:</b><br>Fuller-Pace FV. &nbsp;&nbsp;&nbsp;&nbsp;<BR>RNA helicases: modulators of RNA structure.<BR>Trends Cell Biol. 1994 Aug;4(8):271-4.<BR>PMID: <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&cmd=Retrieve&dopt=Citation&list_uids=14731588" target=_blank>14731588</a> <br><br></tt>
+<tt><b>Comment:</b><br><br><br></tt>
+<tt><b>Blast Summary:</b>&nbsp;&nbsp;<a target="new1" href="analyze.cgi?blast=PSI-BLAST&dbname=oralpp&gene_id=pPI0466">PSI-Blast Search</a><br><auto_blast dbname=pginpro>pPI0466 has significant similarity to the Porphyromonas gingivalis W83 gene <a href="gene_id_search.cgi?dbname=pgin&gene_id=PG0771">PG0771</a> (superfamily II  helicase) (1e-129).</auto_blast><BR><BR><auto_blast dbname=btiopro>pPI0466 has significant similarity to the Bacteroides thetaiotaomicron VPI-5482 gene BT4628 (1e-118).</auto_blast><BR><BR>Nearest neighbor is <a href="javascript:var newWin = window.open('http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=protein&list_uids=32266296&dopt=GenPept','GenBank','toolbar=no,location=no,directories=no,status=yes,menubar=no,resizable=yes,copyhistory=no,scrollbars=yes,width=750,height=470');">32266296</a> from H. hepaticus ATCC 51449.<BR><br><br></tt>
+<tt><br><br><b>InterPro Summary:</b>&nbsp;&nbsp;<a target="new2" href="analyze.cgi?interpro=interpro&dbname=oralpp&gene_id=pPI0466">InterProScan</a><br><br><table border=1><tr>
+
+</tr>
+<tr>
+<td valign="top"><b>InterPro<br>
+</b><a href="http://www.ebi.ac.uk/interpro/IEntry?ac=IPR001650" target="newwindow">IPR001650</a>
+<br>Domain<br>
+<a href="http://www.ebi.ac.uk/interpro/IEntry?ac=IPR001650" target="newwindow"><img src="http://www.ebi.ac.uk/InterProScan/images/interpro_smallest.gif" border="0"></a>
+<a href="http://srs.ebi.ac.uk/srsbin/cgi-bin/wgetz?-e+[InterPro-acc:IPR001650]+-newId" target="newwindow"><img src="http://www.ebi.ac.uk/InterProScan/images/srs_smallest.gif" border="0"></a>
+</td>
+<td valign="top">
+<table width="100%" cellSpacing="0" cellPadding="2" border="0">
+<tr>
+<td valign="top" colspan="4">
+<b><nobr>Helicase, C-terminal</nobr></b>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td width="10%"><a href="http://www.sanger.ac.uk/cgi-bin/Pfam/getacc?PF00271" target="newwindow">PF00271</a></td>
+<td width="400"><nobr><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="272" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/H.gif" width="15" height="7" onMouseOver="window.status='[758-804]T 1.8e-16 PF00271 Helicase_C'; return true" alt="[758-804]T 1.8e-16 PF00271 Helicase_C"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="109" height="7"></nobr></td>
+<td>Helicase_C</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td width="10%"><a href="http://smart.embl-heidelberg.de/smart/do_annotation.pl?BLAST=DUMMY&ACC=SM00490" target="newwindow">SM00490</a></td>
+<td width="400"><nobr><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="258" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/R.gif" width="29" height="7" onMouseOver="window.status='[719-804]T 1.2e-12 SM00490 HELICc'; return true" alt="[719-804]T 1.2e-12 SM00490 HELICc"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="109" height="7"></nobr></td>
+<td>HELICc</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td width="10%"><a href="http://www.expasy.org/prosite/PS51194" target="newwindow">PS51194</a></td>
+<td width="400"><nobr><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="245" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/M.gif" width="68" height="7" onMouseOver="window.status='[685-875]T 14.492 PS51194 HELICASE_CTER'; return true" alt="[685-875]T 14.492 PS51194 HELICASE_CTER"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="83" height="7"></nobr></td>
+<td>HELICASE_CTER</td>
+</tr>
+</table>
+</td></tr>
+<tr bgcolor="#dddddd">
+<td valign="top"><b>InterPro<br>
+</b><a href="http://www.ebi.ac.uk/interpro/IEntry?ac=IPR006935" target="newwindow">IPR006935</a>
+<br>Family<br>
+<a href="http://www.ebi.ac.uk/interpro/IEntry?ac=IPR006935" target="newwindow"><img src="http://www.ebi.ac.uk/InterProScan/images/interpro_smallest.gif" border="0"></a>
+<a href="http://srs.ebi.ac.uk/srsbin/cgi-bin/wgetz?-e+[InterPro-acc:IPR006935]+-newId" target="newwindow"><img src="http://www.ebi.ac.uk/InterProScan/images/srs_smallest.gif" border="0"></a>
+</td>
+<td valign="top">
+<table width="100%" cellSpacing="0" cellPadding="2" border="0">
+<tr>
+<td valign="top" colspan="4">
+<b><nobr>Type III restriction enzyme, res subunit</nobr></b>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td width="10%"><a href="http://www.sanger.ac.uk/cgi-bin/Pfam/getacc?PF04851" target="newwindow">PF04851</a></td>
+<td width="400"><nobr><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="91" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/H.gif" width="56" height="7" onMouseOver="window.status='[259-417]T 3e-05 PF04851 ResIII'; return true" alt="[259-417]T 3e-05 PF04851 ResIII"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="249" height="7"></nobr></td>
+<td>ResIII</td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td valign="top"><b>InterPro<br>
+</b><a href="http://www.ebi.ac.uk/interpro/IEntry?ac=IPR014001" target="newwindow">IPR014001</a>
+<br>Domain<br>
+<a href="http://www.ebi.ac.uk/interpro/IEntry?ac=IPR014001" target="newwindow"><img src="http://www.ebi.ac.uk/InterProScan/images/interpro_smallest.gif" border="0"></a>
+<a href="http://srs.ebi.ac.uk/srsbin/cgi-bin/wgetz?-e+[InterPro-acc:IPR014001]+-newId" target="newwindow"><img src="http://www.ebi.ac.uk/InterProScan/images/srs_smallest.gif" border="0"></a>
+</td>
+<td valign="top">
+<table width="100%" cellSpacing="0" cellPadding="2" border="0">
+<tr>
+<td valign="top" colspan="4">
+<b><nobr>DEAD-like helicases, N-terminal</nobr></b>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td width="10%"><a href="http://smart.embl-heidelberg.de/smart/do_annotation.pl?BLAST=DUMMY&ACC=SM00487" target="newwindow">SM00487</a></td>
+<td width="400"><nobr><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="91" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/R.gif" width="70" height="7" onMouseOver="window.status='[258-455]T 1.9e-08 SM00487 DEXDc'; return true" alt="[258-455]T 1.9e-08 SM00487 DEXDc"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="235" height="7"></nobr></td>
+<td>DEXDc</td>
+</tr>
+</table>
+</td></tr>
+<tr bgcolor="#dddddd">
+<td valign="top">noIPR<br>unintegrated</td>
+<td valign="top">
+<table width="100%" cellSpacing="0" cellPadding="2" border="0">
+<tr>
+<td valign="top" colspan="4">
+<b><nobr>unintegrated</nobr></b>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td width="10%"><a href="http://cathwww.biochem.ucl.ac.uk/cgi-bin/cath/GotoCath.pl?cath=G3DSA:3.40.50.300" target="newwindow">G3DSA:3.40.50.300</a></td>
+<td width="400"><nobr><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="248" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/G.gif" width="54" height="7" onMouseOver="window.status='[692-844]T 1.1e-12 G3DSA:3.40.50.300 no description'; return true" alt="[692-844]T 1.1e-12 G3DSA:3.40.50.300 no description"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="94" height="7"></nobr></td>
+<td>no description</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td width="10%"><a href="https://panther.appliedbiosystems.com/panther/family.do?clsAccession=PTHR10799" target="newwindow">PTHR10799</a></td>
+<td width="400"><nobr><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="92" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="61" height="7" onMouseOver="window.status='[262-432]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED'; return true" alt="[262-432]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="7" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="21" height="7" onMouseOver="window.status='[454-517]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED'; return true" alt="[454-517]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="10" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="14" height="7" onMouseOver="window.status='[547-587]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED'; return true" alt="[547-587]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="7" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="3" height="7" onMouseOver="window.status='[609-622]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED'; return true" alt="[609-622]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="27" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="43" height="7" onMouseOver="window.status='[697-820]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED'; return true" alt="[697-820]T 7.2e-68 PTHR10799 ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="103" height="7"></nobr></td>
+<td>ATP-DEPENDENT HELICASE SMARCA (SWI/SNF-RELATED MATRIX-ASSOCIATED ACTIN-DEPENDENT REGULATOR OF CHROMATIN A)-RELATED</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td width="10%"><a href="https://panther.appliedbiosystems.com/panther/family.do?clsAccession=PTHR10799:SF39" target="newwindow">PTHR10799:SF39</a></td>
+<td width="400"><nobr><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="92" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="61" height="7" onMouseOver="window.status='[262-432]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA'; return true" alt="[262-432]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="7" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="21" height="7" onMouseOver="window.status='[454-517]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA'; return true" alt="[454-517]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="10" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="14" height="7" onMouseOver="window.status='[547-587]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA'; return true" alt="[547-587]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="7" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="3" height="7" onMouseOver="window.status='[609-622]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA'; return true" alt="[609-622]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="27" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/X3.gif" width="43" height="7" onMouseOver="window.status='[697-820]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA'; return true" alt="[697-820]T 7.2e-68 PTHR10799:SF39 ATP-DEPENDENT HELICASE HEPA"><img src="http://www.ebi.ac.uk/InterProScan/images/0.gif" width="1" height="7"><img src="http://www.ebi.ac.uk/InterProScan/images/1.gif" width="103" height="7"></nobr></td>
+<td>ATP-DEPENDENT HELICASE HEPA</td>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<br>
+<tt><b>COGS Summary:</b>&nbsp;&nbsp;<a target="new2" href="analyze.cgi?cogs=cogs&dbname=oralpp&gene_id=pPI0466">COGS Search</a><br>BeTs to 6 clades of COG0553<br>COG name: Superfamily II DNA/RNA helicases, SNF2 family<br>Functional Class: K,L<br>The phylogenetic pattern of COG0553 is ao-pkzy-vdrlbcefghs----i-w<br>Number of proteins in this genome belonging to this COG is 1<br></tt>
+<tt><br><b>Blocks Summary:</b>&nbsp;&nbsp;<a target="new3" href="analyze.cgi?blocks=blocks&dbname=oralpp&gene_id=pPI0466">Blocks Search</a><br>Significant hit ( 1.2e-17) to 4/7 blocks of the IPB000330 family, which is described as "SNF2 related domain". Interpro entry for <a href="http://www.ebi.ac.uk/interpro/IEntry?ac=IPR000330"  target="block_linkIPR000330">IPR000330</a>.<BR>&nbsp;&nbsp;&nbsp;&nbsp;IPB000330B&nbsp;&nbsp;&nbsp;&nbsp;284-298&nbsp;&nbsp;&nbsp;&nbsp;0.31<BR>&nbsp;&nbsp;&nbsp;&nbsp;IPB000330C&nbsp;&nbsp;&nbsp;&nbsp;314-327&nbsp;&nbsp;&nbsp;&nbsp;0.87<BR>&nbsp;&nbsp;&nbsp;&nbsp;IPB000330D&nbsp;&nbsp;&nbsp;&nbsp;408-432&nbsp;&nbsp;&nbsp;&nbsp;9.1<BR>&nbsp;&nbsp;&nbsp;&nbsp;IPB000330G&nbsp;&nbsp;&nbsp;&nbsp;762-813&nbsp;&nbsp;&nbsp;&nbsp;2.4e-10<BR>Significant hit ( 3.6e-05) to 1/5 blocks of the IPB000629 family, which is described as "ATP-dependent helicase, DEAD-box". Interpro entry for <a href="http://www.ebi.ac.uk/interpro/IEntry?ac=IPR000629"  target="block_linkIPR000629">IPR000629</a>.<BR>&nbsp;&nbsp;&nbsp;&nbsp;IPB000629E&nbsp;&nbsp;&nbsp;&nbsp;766-807&nbsp;&nbsp;&nbsp;&nbsp;3.6e-05<br><br></tt>
+<tt><b>ProDom Summary:</b>&nbsp;&nbsp;<a target="new4" href="analyze.cgi?prodom=prodom&dbname=oralpp&gene_id=pPI0466">Protein Domain Search</a><br>Residues 759 to 822 match (3e-10) PD:PD039514 which is described as HELICASE ATP-BINDING NUCLEAR COMPLETE PROTEOME TRANSCRIPTION I DNA-BINDING DNA ZINC-FINGER  <BR><BR>Residues 356 to 725 match (1e-07) PD:PD402068 which is described as COMPLETE PROTEOME PLASMID PLI0027 ATP-BINDING HELICASE PM0696  <br><br></tt><tt><b>Paralogs:</b>&nbsp;&nbsp;<a target="new5" href="analyze.cgi?paralogs=paralogs&dbname=oralpp&gene_id=pPI0466">Local Blast Search</a><br><auto_blast dbname=pintpro>pPI0466 is paralogously related to <a href="gene_id_search.cgi?dbname=pintnew&gene_id=PI1033">PI1033</a> (ATP-dependent RNA helicase, DEAD/DEAH box family) (1e-05), <a href="gene_id_search.cgi?dbname=pintnew&gene_id=PI0221">PI0221</a> (DNA methylase, site-specific DNA-methyltransferase (adenine-specific)) (5e-04) and <a href="gene_id_search.cgi?dbname=pintnew&gene_id=PI0760">PI0760</a> (ATP-dependent RNA helicase, DEAD/DEAH box family) (7e-04).</auto_blast><BR><br><br></tt><tt><b>Pfam Summary:</b>&nbsp;&nbsp;<a target="new6" href="analyze.cgi?pfam=pfam&dbname=oralpp&gene_id=pPI0466">Pfam Search</a><br>Residues 722 to 804 (E-value = 3.7e-13) place pPI0466 in the <a href="http://pfam.janelia.org/family?acc=Helicase_C" target=_blank>Helicase_C</a> family which is described as Helicase conserved C-terminal domain (PF00271)<BR><br><br></tt>
+<tt><b>Top PDB Hits:</b><br>No PDB hits found using the nr database and 5 rounds of Psi-BLAST (E-value < 0.01)<br><br></tt><tt><b>Gene Protein Sequence:</b><br>
+MNTIQQPNSHIFTNKDGNTLIKEFEGVLQHNPQIRNLDAVVGFLRASGYF<br>SLRPFLDNIGKVRVLIGIDVDKYIAKAAQQGKLFFGAEEEVKEEYLRKIR<br>TDIETSNYRKDIEDGMYLMVQDLLDKKLELRAHPSKKIHAKIYVLYPDNF<br>NQYSQSMAITGSSNLSGNGLGITQDKQYEFNVKLDRYDDVKFAKDEFEQL<br>WKESEGCEITSEDIKAAIDRTYLKGDVPPYDLYIKMLMEYYADRVLETDS<br>ADPFDMPEGYTKYDYQMDAVIEGYQKLIRYDGFFLSDVVGLGKTIVATMI<br>AKKFLIENGYEHTKILVVYPPAVEQNWKSTFKDFGIDKYAKFITNGSLSK<br>VLDEEDYNYWNAEEYDLILVDEAHKFRSHTTSAFEQLQEICKMPRLETGN<br>ISGYKKKVMLISATPMNNSPADIYTEILLFQDPRHCTIDGVSNLTAFFSP<br>LIKEFKRLRKNNNTSIEDFKRLAEKVRDRIIKPLTVRRTRTDIESIPRYN<br>KDVNGFPKVEHPIENQYELNEHLANLFEQAIQILDKQLTYARYQAIAYLK<br>PEVANGLYDNAELISRSLAGIRKNGLVKRLESSFYAFQVSIENFHQANQN<br>MIDMFDNDKVYIAPDLDINLLLESGLSEEEIEEKLNAKASNNPKNAIFHA<br>ADFRPEFIDMLHNDQAILEQMLADWKDISDEDDSKFAKFNELLKHELFRS<br>DRNPEKKLVVFSESVDTVDYLKRRINRKDVLVISAQNRNKQFKTIRENFD<br>ANYKQKFNEYNIILTTDVLAEGVNLHRSNVIVNYDTPWNSTRLMQRIGRV<br>NRIGSASKHIYNYVFYPSREGNKQINLNQIALSKIQSFHSTFGEDNQIYS<br>QEEIIDRNLSKLFEEGVNEQKKDINKELPFYEELRTLFKTNRQEYNRIAK<br>ISLRSRTGRESKTINGVTLSEDTLVFLKTNFRKVFFLVSENAQEISVLDA<br>LNYFKATKDEKPVTRISNHHKHVEKALTKFRTIQDEEIRIQETSQKDLSN<br>LGAQVSTAINLLNNFMNEIGDNDLYIKVAHLKTLVERGVITYIAKRLQRI<br>QKNLRRTGGKVRMTHDEAFSEIITMAQKYAPYYIAEETMLNQQETDAEII<br>LSESFQ<br><br></tt><tt><b>Gene Nucleotide Sequence:</b>&nbsp;&nbsp;<A HREF="gene_flanks.cgi?dbname=oralpp&gene_id=pPI0466&start_flank=0&left_coords=1&right_coords=1">Sequence Viewer</A><BR>
+ATGAATACAATTCAGCAGCCCAATTCCCACATCTTTACCAATAAGGATGG<br>AAATACATTAATAAAAGAGTTTGAGGGGGTATTGCAGCATAACCCTCAAA<br>TCAGAAACCTTGATGCTGTTGTAGGCTTTCTTCGTGCATCTGGCTATTTC<br>TCCTTACGCCCTTTCCTTGATAATATCGGAAAGGTGAGAGTACTGATAGG<br>CATAGATGTAGACAAATATATCGCTAAAGCGGCACAGCAAGGAAAACTAT<br>TTTTTGGAGCAGAAGAAGAGGTTAAAGAAGAGTATCTCAGAAAGATAAGA<br>ACTGACATAGAAACTTCCAACTATCGTAAGGATATAGAAGACGGAATGTA<br>TCTAATGGTACAAGACCTTCTTGACAAAAAACTTGAATTACGCGCTCATC<br>CTTCCAAAAAGATTCATGCAAAGATATATGTACTATATCCCGATAATTTT<br>AATCAGTACTCTCAAAGTATGGCCATTACAGGTTCAAGTAACTTGTCAGG<br>GAATGGATTAGGAATAACGCAGGACAAACAATATGAGTTCAATGTAAAGT<br>TGGACCGATATGATGATGTGAAATTTGCAAAAGATGAATTCGAGCAGTTA<br>TGGAAAGAATCTGAAGGTTGTGAAATTACCTCTGAAGATATAAAAGCAGC<br>CATTGACAGAACCTACCTTAAAGGCGATGTTCCTCCTTATGATCTTTACA<br>TTAAGATGCTAATGGAGTATTATGCTGACCGTGTACTTGAGACCGACAGT<br>GCTGATCCCTTTGATATGCCAGAGGGCTATACGAAATATGATTATCAGAT<br>GGATGCCGTCATAGAAGGCTATCAAAAGCTTATTCGCTACGATGGATTCT<br>TTCTCTCGGATGTGGTTGGCTTGGGTAAGACCATTGTTGCAACCATGATT<br>GCAAAGAAATTCCTTATAGAGAATGGTTATGAGCACACCAAGATTCTTGT<br>AGTATACCCTCCAGCAGTAGAACAGAACTGGAAGTCTACTTTCAAAGATT<br>TTGGTATAGACAAATACGCCAAGTTCATTACAAACGGTAGCTTAAGCAAG<br>GTTCTTGATGAAGAGGATTATAATTATTGGAATGCAGAAGAATATGATCT<br>CATACTTGTAGATGAGGCTCATAAATTCCGTAGTCATACCACATCAGCTT<br>TTGAGCAACTTCAAGAAATTTGCAAGATGCCACGCTTAGAAACAGGTAAT<br>ATTTCTGGCTACAAAAAGAAGGTCATGCTAATTTCCGCAACCCCTATGAA<br>CAATTCTCCGGCTGATATCTATACGGAGATATTACTTTTCCAAGACCCTC<br>GTCATTGTACCATTGATGGAGTTAGCAATCTTACTGCATTCTTTTCTCCA<br>TTGATAAAAGAATTCAAGAGACTACGAAAAAATAACAATACAAGTATTGA<br>GGATTTTAAACGATTAGCAGAGAAGGTAAGAGACCGTATCATTAAACCAT<br>TAACTGTGCGTCGTACCCGAACAGATATAGAAAGTATACCCCGATACAAC<br>AAGGATGTGAATGGATTTCCTAAAGTTGAACATCCAATTGAGAACCAGTA<br>TGAGCTAAATGAGCATTTAGCCAATCTCTTTGAACAAGCTATACAGATTC<br>TTGATAAGCAGCTTACCTATGCACGTTATCAAGCTATTGCATACTTAAAA<br>CCAGAAGTCGCAAATGGTCTTTATGACAATGCAGAGTTGATAAGCCGTAG<br>TCTTGCAGGAATTCGAAAGAATGGACTTGTAAAGCGTTTGGAAAGTAGTT<br>TCTACGCATTTCAAGTTTCTATAGAGAATTTCCATCAAGCCAATCAGAAT<br>ATGATTGATATGTTTGATAATGACAAGGTCTATATTGCACCAGACCTTGA<br>CATCAATCTGCTATTGGAGTCTGGATTATCCGAAGAAGAAATCGAAGAGA<br>AACTTAACGCTAAAGCTTCTAACAATCCTAAGAACGCAATCTTTCATGCT<br>GCTGATTTCCGTCCAGAGTTTATTGATATGTTACATAATGATCAAGCTAT<br>CCTTGAACAAATGTTAGCTGACTGGAAAGATATTTCTGATGAAGATGATT<br>CTAAGTTTGCCAAGTTTAATGAGTTACTGAAACATGAACTTTTCAGAAGT<br>GATCGAAACCCAGAGAAAAAGTTAGTTGTGTTCTCTGAGTCAGTTGATAC<br>TGTTGACTATCTAAAACGTAGAATCAATCGTAAGGACGTATTGGTAATCT<br>CTGCACAGAATCGCAATAAACAATTTAAGACAATACGTGAGAACTTTGAT<br>GCTAACTACAAGCAGAAGTTCAACGAATATAATATCATCCTGACGACAGA<br>CGTACTGGCAGAAGGTGTCAACTTACATCGTTCTAATGTGATTGTGAATT<br>ATGATACGCCGTGGAATTCGACAAGGCTGATGCAGCGTATTGGTCGTGTT<br>AATCGTATTGGTTCTGCCTCAAAGCATATCTATAACTATGTTTTCTACCC<br>TTCAAGGGAAGGTAATAAACAAATTAATCTGAACCAGATTGCATTAAGCA<br>AAATCCAATCATTCCATAGTACATTTGGCGAGGATAATCAAATTTATTCT<br>CAAGAAGAAATTATAGACCGTAATCTAAGTAAATTGTTTGAAGAAGGAGT<br>GAACGAGCAAAAGAAAGATATTAACAAGGAACTACCTTTCTATGAGGAGC<br>TTCGCACTCTCTTTAAGACGAACCGACAGGAATACAACCGTATTGCTAAG<br>ATATCCTTACGCAGTCGAACTGGGCGAGAGTCTAAAACTATTAATGGTGT<br>TACGCTATCTGAAGACACACTGGTATTCTTAAAGACAAACTTCCGAAAAG<br>TGTTCTTCCTTGTGTCGGAAAATGCTCAAGAAATCTCAGTTCTTGATGCA<br>CTTAATTACTTCAAAGCAACTAAGGATGAGAAACCTGTTACTCGTATAAG<br>CAACCATCACAAGCATGTGGAGAAAGCCTTGACAAAGTTTCGTACCATTC<br>AAGACGAGGAAATCCGTATACAAGAAACCTCGCAGAAAGATCTCTCTAAT<br>CTGGGTGCTCAAGTTAGTACGGCTATCAATCTGTTGAACAACTTTATGAA<br>TGAGATTGGAGACAATGACCTTTACATCAAAGTTGCACATCTAAAAACAT<br>TGGTGGAGCGTGGTGTTATCACCTATATTGCCAAGCGTTTACAACGTATC<br>CAGAAAAACCTTCGACGTACTGGCGGTAAAGTTCGAATGACACATGATGA<br>GGCCTTCAGCGAAATCATCACAATGGCACAAAAGTATGCCCCTTATTATA<br>TTGCAGAAGAAACAATGTTGAATCAACAAGAAACAGACGCAGAAATTATA<br>CTTTCCGAAAGTTTCCAA<br><br></tt>
+<!-- Footer -->
+<!---New Footer, nnt, June 2006  -->
+<hr>
+<div id="bottom-section"align="center">
+    <div id="tagline">
+      <p class="byline"> <strong><big>Los Alamos National Laboratory &bull; </big>Est 1943</strong> 
+    </div>
+    <div id="lanlfooter">
+<small>
+Operated by <a href="http://lansllc.com/index.html">Los Alamos National
+    Security, LLC</a> for the <a href="http://www.energy.gov/">U.S. Department
+    of Energy's</a> National Nuclear Security Administration
+<br>
+<a href="http://int.lanl.gov/">Inside</a> | <a href="http://www.lanl.gov/copyright.shtml">&copy; Copyright
+2006 LANS LLC All rights reserved</a> | <a href="http://www.lanl.gov/copyright.shtml">Disclaimer/Privacy</a>  
+</small>
+<!-- CLOSE include for footer area -->
+<!-- End Footer -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3534683-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+</body>
+</html>

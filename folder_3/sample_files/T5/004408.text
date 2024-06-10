@@ -1,0 +1,2808 @@
+gene_id,gi,gene_start,gene_stop,definition
+PI0002,NULL,3930,3112,conserved hypothetical protein
+PI0004,NULL,6449,6339,hypothetical protein
+PI0005,NULL,7124,7510,hypothetical protein
+PI0006,NULL,7339,8328,hypothetical protein
+PI0007,NULL,7360,6557,hypothetical protein
+PI0009,NULL,9793,10734,NAD-dependent epimerase/dehydratase family protein
+PI0010,NULL,10768,11739,conserved hypothetical protein
+PI0011,NULL,12282,13388,conserved hypothetical protein
+PI0012,NULL,15567,13546,conserved hypothetical protein
+PI0014,NULL,17396,17977,hypothetical protein
+PI0017,NULL,22895,21873,thiol-disulfide isomerase; thioredoxin
+PI0018,NULL,23749,23162,hypothetical protein
+PI0019,NULL,23882,24514,conserved hypothetical protein
+pPI0360,NULL,329345,330388,cytochrome D ubiquinol oxidase subunit II
+PI0021,NULL,25708,25079,orotate phosphoribosyltransferase
+PI0022,NULL,25781,25951,hypothetical protein
+PI0023,NULL,26064,28130,internalin-related protein
+PI0024,NULL,28518,28619,hypothetical protein
+PI0025,NULL,28822,29883,two component system sensor histidine kinase
+pPI0333,NULL,307800,306913,conserved hypothetical protein; possible SAM-dependent methyltransferase
+PI0027,NULL,31816,30608,aminopeptidase C
+PI0028,NULL,32787,31699,aminopeptidase
+PI0029,NULL,34598,32733,glutamine amidotransferase (GMP synthase (glutamine-hydrolyzing))
+PI0031,NULL,36191,35262,peptidylprolyl isomerase
+PI0032,NULL,36314,36225,hypothetical protein
+PI0033,NULL,37161,36355,peptidylprolyl isomerase
+PI0036,NULL,38738,39349,glutathione peroxidase
+PI0037,NULL,39494,39676,hypothetical protein
+PI0038,NULL,40623,39718,transcriptional regulator, LysR family
+PI0040,NULL,41932,41150,conserved hypothetical protein (possible integral membrane protein)
+PI0041,NULL,42083,41925,hypothetical protein
+PI0042,NULL,43121,43504,hypothetical protein
+pPI0287,NULL,271255,271953,conserved hypothetical protein; possible hydrolase
+PI0044,NULL,43917,43105,thiamine biosynthetic enzyme
+PI0045,NULL,45485,43908,thiamine biosynthesis protein
+PI0046,NULL,46104,45493,thiamine monophosphate synthase (thiamine-phosphate pyrophosphorylase)
+PI0047,NULL,46841,46104,phosphomethylpyrimidine kinase
+PI0048,NULL,47259,48554,conserved hypothetical protein
+PI0049,NULL,51150,48745,outer membrane receptor protein (iron transport)
+PI0050,NULL,51679,52731,conserved hypothetical protein
+PI0051,NULL,52747,53448,hypothetical protein
+PI0052,NULL,52775,52452,hypothetical protein
+PI0053,NULL,54867,55184,hypothetical protein
+PI0054,NULL,54889,54719,hypothetical protein
+PI0055,NULL,54955,55104,hypothetical protein
+PI0057,NULL,56099,56572,conserved hypothetical protein
+PI0058,NULL,57104,56538,conserved hypothetical protein
+PI0059,NULL,58231,57272,peptide chain release factor RF-2
+PI0061,NULL,60750,60640,hypothetical protein
+PI0062,NULL,63082,61103,endopeptidase
+PI0063,NULL,63680,63321,transcriptional regulator, GntR family
+PI0064,NULL,64595,63762,hypothetical protein
+PI0065,NULL,65372,64641,conserved hypothetical protein
+PI0066,NULL,66149,65388,ABC transport system, ATP-binding component
+PI0067,NULL,66646,66413,hypothetical protein
+PI0068,NULL,66726,67079,arginine repressor
+PI0069,NULL,67439,67212,hypothetical protein
+PI0070,NULL,67793,70168,conserved hypothetical protein
+PI0071,NULL,70289,70098,hypothetical protein
+PI0072,NULL,71052,70279,conserved hypothetical protein
+PI0073,NULL,71845,71096,dihydropteroate synthase
+PI0074,NULL,73699,71993,Na+/phosphate symporter (sodium-dependent inorganic phosphate (Pi) transporter)
+PI0075,NULL,73888,75450,uridine kinase
+PI0076,NULL,75785,76252,conserved hypothetical protein
+PI0077,NULL,76384,77679,hypothetical protein
+PI0078,NULL,78390,77908,hypothetical protein
+PI0079,NULL,78705,79187,hypothetical protein
+PI0080,NULL,79187,80482,hypothetical protein
+PI0081,NULL,80760,80563,hypothetical protein
+PI0082,NULL,82771,80915,conserved hypothetical protein (possible phosphoglycerol transferase)
+PI0083,NULL,84175,82964,tyrosyl-tRNA synthetase
+PI0084,NULL,84580,84335,conserved hypothetical protein
+PI0085,NULL,85020,84580,RNase P protein component
+PI0086,NULL,85830,85084,possible uroporphyrinogen-III synthase
+PI0087,NULL,86793,85840,conserved hypothetical protein
+PI0089,NULL,88415,88302,hypothetical protein
+PI0090,NULL,89220,88519,amidophosphoribosyltransferase
+PI0091,NULL,89637,89834,hypothetical protein
+PI0092,NULL,89711,89220,regulatory protein RecX
+PI0093,NULL,90629,91597,riboflavin biosynthesis protein
+PI0094,NULL,90571,89711,protoporphyrinogen oxidase
+PI0095,NULL,91910,91584,hypothetical protein
+PI0096,NULL,93365,92025,glycerol-3-phosphate cytidylyltransferase
+pPI0286,NULL,270487,271245,possible phosphatidylglycerophosphate synthase
+PI0098,NULL,94762,95592,conserved hypothetical protein (possible glycosyl/glycerophosphate transferase)
+PI0099,NULL,95670,95837,hypothetical protein
+PI0100,NULL,96786,95983,LPS biosynthesis protein (lipopolysaccharide biosynthesis protein)
+PI0101,NULL,97813,96869,lauroyl/myristoyl acyltransferase
+PI0102,NULL,97996,98124,hypothetical protein
+PI0104,NULL,99245,99406,hypothetical protein
+PI0105,NULL,101513,99543,possible sulfatase
+PI0106,NULL,103377,101521,ABC transport system, ATP-binding/permease
+PI0107,NULL,104712,103420,2-methylthioadenine synthetase
+PI0108,NULL,106528,105032,L-lactate permease
+PI0109,NULL,106857,107243,hypothetical protein
+PI0110,NULL,107276,107980,ABC transport system, ATP-binding protein
+PI0111,NULL,108188,108325,hypothetical protein
+PI0112,NULL,108272,108153,hypothetical protein
+PI0113,NULL,108511,110142,arginyl-tRNA synthetase
+PI0114,NULL,108587,108279,hypothetical protein
+PI0115,NULL,108729,108202,hypothetical protein
+PI0116,NULL,110353,110829,conserved hypothetical protein
+PI0118,NULL,111700,111461,hypothetical protein
+PI0119,NULL,111783,111646,hypothetical protein
+PI0121,NULL,113268,112765,outer membrane protein, ompH family
+PI0124,NULL,117242,114627,outer membrane protein/protective antigen OMA87
+PI0126,NULL,118649,118065,conserved hypothetical protein
+PI0728,NULL,660567,661568,integrase
+PI0129,NULL,122001,121849,hypothetical protein
+PI0130,NULL,122327,122172,hypothetical protein
+PI0131,NULL,122630,124549,conserved hypothetical protein (possible outer membrane lipoprotein)
+PI0132,NULL,124579,123923,hypothetical protein
+PI0133,NULL,124692,124474,hypothetical protein
+PI0134,NULL,125757,124861,ISPg3-related transposase (IS5 family)
+PI0135,NULL,127317,125989,internalin-related protein
+PI0136,NULL,128144,127245,surface antigen BspA
+PI0137,NULL,129005,131209,lectin-like adhesin precursor
+PI0138,NULL,131222,131425,hypothetical protein
+PI0139,NULL,131975,132784,pyridoxine biosynthesis protein
+PI0140,NULL,132166,131783,conserved hypothetical protein
+PI0141,NULL,132850,133368,glutamine amidotransferase involved in pyridoxine biosynthesis
+PI0144,NULL,135560,136657,conserved hypothetical protein
+PI0145,NULL,136767,139784,secDF export membrane protein
+PI0146,NULL,140478,140945,transcription elongation factor
+PI0147,NULL,140973,141368,HIT family protein
+PI0149,NULL,143297,142875,conserved hypothetical protein
+PI0150,NULL,143651,143893,hypothetical protein
+PI0151,NULL,143945,144919,ISPg4-related transposase (IS5 family)
+PI0153,NULL,146912,146070,IS1249-related transposase
+PI0154,NULL,148371,147610,possible UDP-2,3-diacylglucosamine hydrolase
+PI0155,NULL,148747,148430,conserved hypothetical protein
+PI0248,NULL,246279,246707,protein associated with conjugate transformation/chromosome partioning
+PI0157,NULL,151325,151447,hypothetical protein
+PI0158,NULL,151358,151182,hypothetical protein
+PI0159,NULL,152180,151413,hypothetical protein
+PI0160,NULL,152750,153328,conserved hypothetical protein
+PI0707,NULL,643498,644547,conserved hypothetical protein; possible integral membrane protein
+PI0164,NULL,159355,158618,conserved hypothetical protein
+PI0165,NULL,161106,159742,AAA family ATPase
+PI0166,NULL,161226,161318,hypothetical protein
+PI0167,NULL,163304,163759,hypothetical protein
+PI0168,NULL,163339,161321,methionyl-tRNA synthetase (methionine--tRNA ligase)
+PI0169,NULL,163785,164096,hypothetical protein
+PI0170,NULL,163951,163445,hypothetical protein
+PI0171,NULL,164145,163990,hypothetical protein
+PI0172,NULL,164402,165298,ISPg3-related transposase
+PI0173,NULL,165618,165445,hypothetical protein
+PI0174,NULL,167130,166261,succinyl-CoA synthetase alpha subunit
+PI0175,NULL,168293,167163,succinyl-CoA synthetase beta subunit
+PI0176,NULL,168370,168501,hypothetical protein
+PI0177,NULL,169643,168639,2-oxoglutarate synthase, subunit korB
+PI0178,NULL,171487,169664,2-oxoglutarate synthase, subunit korA
+PI0179,NULL,171897,172019,hypothetical protein
+PI0180,NULL,173490,172045,TonB protein
+PI0181,NULL,174000,173575,conserved hypothetical protein
+PI0182,NULL,174337,174233,hypothetical protein
+PI0183,NULL,174870,174487,hypothetical protein
+PI0184,NULL,176576,174495,possible fibronectin type III domain protein
+PI0185,NULL,177881,177132,conserved hypothetical protein
+PI0186,NULL,178063,177959,hypothetical protein
+PI0187,NULL,178271,177996,hypothetical protein
+PI0188,NULL,179730,178573,phosphomethylpyrimidine kinase
+PI0190,NULL,180758,181186,3-dehydroquinate dehydratase II
+PI0191,NULL,181210,181845,O-methyltransferase
+PI0192,NULL,184886,182271,conserved hypothetical protein
+PI0193,NULL,185755,184886,conserved hypothetical protein
+PI0194,NULL,187017,185944,2-amino-3-ketobutyrate coenzyme A ligase (glycine C-acetyltransferase)
+PI0196,NULL,188703,188575,hypothetical protein
+PI0197,NULL,189887,188742,acetate kinase
+PI0198,NULL,190859,191116,hypothetical protein
+PI0200,NULL,191795,191685,hypothetical protein
+PI0201,NULL,195210,195458,hypothetical protein
+PI0202,NULL,195249,191893,DNA helicase
+PI0203,NULL,196124,195249,conserved hypothetical protein
+PI0205,NULL,197721,198155,deoxyuridine 5'-triphosphate nucleotidohydrolase
+PI0206,NULL,198252,199916,TPR-repeat-containing protein
+PI0207,NULL,199937,200812,conserved hypothetical protein
+PI0209,NULL,203030,202863,hypothetical protein
+PI0210,NULL,203106,203858,hypothetical protein
+PI0211,NULL,204207,204338,hypothetical protein
+PI0212,NULL,204557,207082,surface protein/internalin-related protein
+PI0213,NULL,208569,207205,conserved hypothetical protein
+PI0214,NULL,208710,208618,hypothetical protein
+PI0215,NULL,208963,209064,hypothetical protein
+PI0218,NULL,211209,210910,conserved hypothetical protein
+PI0219,NULL,211552,212097,conserved hypothetical protein
+PI0220,NULL,212120,212401,conserved hypothetical protein
+PI0097,NULL,94742,93375,aspartate aminotransferase
+PI0128,NULL,120672,121886,dipeptidase, pathogenicity island-encoded protein D
+PI0222,NULL,218502,217948,conserved hypothetical protein
+PI0224,NULL,222039,220681,conserved hypothetical protein
+PI0225,NULL,222178,222819,conserved hypothetical protein
+PI0226,NULL,223944,222250,ABC transporter, ATP-binding / permease protein
+pPI0174,NULL,149778,152351,bacteroides aerotolerance operon protein, batD-batE fusion protein
+pPI0221,NULL,201221,201880,oxidoreductase, short chain dehydrogenase/reductase family
+PI0229,NULL,228286,229464,hypothetical protein
+PI0230,NULL,228966,228730,hypothetical protein
+PI0231,NULL,229593,230570,transcriptional regulator
+PI0232,NULL,230662,231954,conserved hypothetical protein
+PI0323,NULL,305489,306130,hypothetical protein
+PI0264,NULL,256634,257431,transfer region-related protein, TraN
+PI0235,NULL,236013,235078,hypothetical protein
+pPI0565,NULL,531116,529470,ABC transporter, ATP-binding protein and permease
+PI0237,NULL,236119,237141,predicted two-component system sensor histidine kinase
+PI0238,NULL,237194,237886,two-component system response regulator
+PI0239,NULL,238115,238495,conserved hypothetical protein
+PI0240,NULL,238602,239402,conserved hypothetical protein
+PI0241,NULL,239767,240096,possible tetracycline resistance element /mobilization regulatory protein
+PI0242,NULL,240287,240147,hypothetical protein
+PI0243,NULL,240798,240646,hypothetical protein
+PI0020,NULL,25015,24665,conserved hypothetical protein
+PI0026,NULL,29896,30597,two-component system response regulator
+PI0246,NULL,244659,244306,conserved hypothetical protein
+PI0249,NULL,246712,247086,conserved hypothetical protein
+PI0250,NULL,247086,247673,hypothetical protein
+PI0251,NULL,247870,247691,hypothetical protein
+PI0252,NULL,247901,248443,conserved hypothetical protein
+pPI0172,NULL,149114,149767,bacteroides aerotolerance operon protein, batC
+PI0265,NULL,257436,258017,conjugative transposon protein, TraO
+PI0266,NULL,258071,258862,DNA primase (bacterial type)
+PI0267,NULL,258926,259351,conjugative transposon protein, TraQ
+PI0268,NULL,259338,259850,lysozyme-related protein
+PI0276,NULL,265081,264569,anti-restriction protein
+PI0295,NULL,277558,276986,lysine decarboxylase
+PI0307,NULL,290182,290727,RNA polymerase sigma-70 factor, ECF subfamily
+PI0262,NULL,254825,255154,conserved hypothetical protein
+pPI0171,NULL,148169,149089,bacteroides aerotolerance operon protein, batB
+pPI0455,NULL,418071,419276,transposase
+PI0269,NULL,259975,261540,conserved hypothetical protein
+PI0270,NULL,261528,262553,conserved hypothetical protein
+PI0271,NULL,262451,262260,hypothetical protein
+PI0272,NULL,263003,262761,conserved hypothetical protein
+PI0273,NULL,263096,263344,hypothetical protein
+PI0274,NULL,263247,262996,conserved hypothetical protein
+PI0275,NULL,264549,263278,hypothetical protein
+pPI0170,NULL,147059,148024,bacteroides aerotolerance operon protein, batA
+PI0277,NULL,265533,265120,hypothetical protein
+PI0278,NULL,265685,265554,hypothetical protein
+PI0279,NULL,266141,265740,hypothetical protein
+PI0280,NULL,266434,266141,conserved hypothetical protein
+PI0281,NULL,266664,266449,conserved hypothetical protein
+PI0282,NULL,266886,266680,hypothetical protein
+PI0283,NULL,268941,267694,Zn-dependent peptidase
+PI0285,NULL,270237,271352,succinyltransferase protein
+PI0286,NULL,272125,271973,ISPg3-related transposase
+PI0287,NULL,272412,272038,ISPg3-related transposase
+PI0288,NULL,272555,272412,hypothetical protein (possible ISPg3-related transposase)
+PI0289,NULL,272564,273310,hypothetical protein
+PI0290,NULL,273385,274191,conserved hypothetical protein
+PI0291,NULL,274207,275769,hypothetical protein
+PI0292,NULL,275964,275869,ISPg-3 transposase fragment
+PI0294,NULL,276866,276363,conserved hypothetical protein
+pPI0169,NULL,146009,147037,conserved hypothetical protein
+PI0296,NULL,277762,277884,hypothetical protein
+PI0297,NULL,277976,277887,hypothetical protein
+PI0298,NULL,283828,284724,ISPg3-related transposase
+PI0299,NULL,285146,284763,hypothetical protein
+PI0300,NULL,285303,285821,transposase
+PI0301,NULL,285812,286042,probable transposase
+PI0302,NULL,287079,286465,hypothetical protein
+PI0303,NULL,287670,287086,hypothetical protein
+PI0304,NULL,288722,289765,hypothetical protein
+PI0305,NULL,289027,287858,possible aminotransferase
+PI0306,NULL,289888,289049,conserved hypothetical protein
+PI0260,NULL,253163,254182,conjugative transposon protein, TraJ
+PI0308,NULL,290727,291662,conserved hypothetical protein
+PI0309,NULL,291789,291643,hypothetical protein
+pPI0154,NULL,135496,134681,1-acyl-sn-glycerol-3-phosphate acetyltransferase
+PI0311,NULL,294861,295028,hypothetical protein
+PI0312,NULL,295000,294731,hypothetical protein
+PI0313,NULL,295590,294973,conserved hypothetical protein
+PI0314,NULL,296738,295692,conserved hypothetical protein
+PI0315,NULL,298246,296819,conserved hypothetical protein
+PI0316,NULL,299142,298519,conserved hypothetical protein
+PI0317,NULL,300806,299319,possible kinase; TPR repeat?
+PI0318,NULL,301868,300819,conserved hypothetical protein
+PI0319,NULL,302108,301890,conserved hypothetical protein
+PI0321,NULL,303346,302738,conserved hypothetical protein
+PI0322,NULL,303648,303872,hypothetical protein
+PI0324,NULL,305740,303875,conserved hypothetical protein
+PI0259,NULL,252495,253103,conserved protein found in conjugation, TraI
+PI0326,NULL,306932,307828,ISPg3-related transposase
+PI0327,NULL,308931,309167,hypothetical protein
+PI0328,NULL,310053,309616,conserved hypothetical protein
+PI0329,NULL,310206,310574,hypothetical protein
+PI0330,NULL,310587,312605,hypothetical protein
+PI0332,NULL,312740,313612,conserved hypothetical protein
+PI0333,NULL,313618,313848,hypothetical protein
+PI0335,NULL,313848,314480,hypothetical protein
+PI0336,NULL,314639,314866,hypothetical protein
+PI0337,NULL,314872,315462,hypothetical protein
+PI0338,NULL,315477,315773,hypothetical protein
+PI0339,NULL,315875,316198,hypothetical protein
+PI0340,NULL,316235,316795,conserved hypothetical protein
+PI0341,NULL,317178,317675,conserved hypothetical protein
+PI0342,NULL,317696,318109,hypothetical protein
+PI0344,NULL,319499,318318,conserved hypothetical protein
+PI0345,NULL,320869,319625,conserved hypothetical protein
+PI0346,NULL,321390,320974,hypothetical protein
+PI0347,NULL,321715,321407,hypothetical protein
+PI0348,NULL,323271,321712,conserved hypothetical protein
+PI0349,NULL,323862,323284,hypothetical protein
+PI0350,NULL,323897,324895,conserved hypothetical protein
+PI0352,NULL,324900,325994,hypothetical protein
+PI0353,NULL,325397,324750,hypothetical protein
+PI0354,NULL,326026,326301,hypothetical protein
+PI0355,NULL,326297,326758,probable  N-acetylmuramoyl-L-alanine amidase
+PI0356,NULL,326782,327348,hypothetical protein
+PI0358,NULL,327701,328165,hypothetical protein
+PI0359,NULL,328479,328895,hypothetical protein
+PI0360,NULL,328898,333532,conserved hypothetical protein
+PI0361,NULL,333486,333202,hypothetical protein
+PI0362,NULL,333537,333998,hypothetical protein
+PI0363,NULL,333820,332972,hypothetical protein
+PI0364,NULL,334142,336889,hypothetical protein
+PI0365,NULL,336178,335861,hypothetical protein
+PI0366,NULL,336905,337954,conserved hypothetical protein
+PI0367,NULL,338024,339700,hypothetical protein
+PI0368,NULL,339722,340045,hypothetical protein
+PI0369,NULL,340224,340469,hypothetical protein
+PI0370,NULL,340593,341369,conserved hypothetical protein
+PI0371,NULL,341398,342033,thymidylate synthase
+PI0372,NULL,342151,344424,conserved hypothetical protein; possible ATPase
+PI0373,NULL,344433,344660,hypothetical protein
+pPI0151,NULL,132564,133802,periplasmic protease
+PI0375,NULL,346142,345774,hypothetical protein
+PI0376,NULL,346955,346557,conserved hypothetical protein
+PI0377,NULL,347883,347023,DNA primase/mobilizable transposon, excision protein
+PI0379,NULL,350012,350299,conserved hypothetical protein
+PI0380,NULL,350302,350601,conserved hypothetical protein
+PI0381,NULL,351614,350712,probable transcriptional regulator, AraC family
+PI0382,NULL,351650,352183,conserved hypothetical protein
+PI0383,NULL,352293,352961,conserved hypothetical protein; possible Zn-dependent hydrolase
+PI0384,NULL,353024,353881,probable radical SAM domain protein
+PI0385,NULL,354509,354108,hypothetical protein
+PI0386,NULL,354700,354509,integrase
+PI0387,NULL,354771,354872,hypothetical protein
+PI0390,NULL,357456,357815,conserved hypothetical protein
+PI0391,NULL,358276,357947,conserved hypothetical protein
+PI0393,NULL,358836,359513,conserved hypothetical protein
+PI0394,NULL,359544,360389,transcriptional regulator, AraC family
+PI0395,NULL,360528,361844,Na+-driven multidrug efflux pump
+PI0396,NULL,362133,362456,possible tetracycline resistance element mobilization regulatory protein, C-terminal fragment
+PI0397,NULL,362959,362546,conserved hypothetical protein
+PI0398,NULL,363518,363601,hypothetical protein
+PI0399,NULL,363725,364150,conserved hypothetical protein
+PI0400,NULL,364569,365102,conserved hypothetical protein
+PI0401,NULL,365095,367167,conserved hypothetical protein
+PI0402,NULL,370083,368032,conserved hypothetical protein
+PI0403,NULL,371185,370229,probable integrase
+pPI0097,NULL,91793,89739,prolyl endopeptidase
+PI0405,NULL,372674,372805,hypothetical protein
+PI0406,NULL,372874,373113,hypothetical protein
+PI0407,NULL,374207,373113,tryptophanyl-tRNA synthetase (tryptophan--tRNA ligase)
+PI0408,NULL,374788,374294,hypothetical protein
+PI0411,NULL,377840,379888,conserved hypothetial protein; possible hydrolase
+PI0452,NULL,425433,426851,conserved hypothetical protein; possible surface antigen
+PI0414,NULL,384467,385270,hypothetical protein
+PI0416,NULL,386534,386767,hypothetical protein
+PI0417,NULL,386677,386790,hypothetical protein
+PI0418,NULL,386806,386916,hypothetical protein
+PI0419,NULL,386841,387521,conserved hypothetical protein
+PI0420,NULL,386888,386691,hypothetical protein
+PI0421,NULL,387643,387834,hypothetical protein
+PI0422,NULL,388085,387546,conserved hypothetical protein
+PI0423,NULL,388492,388241,hypothetical protein
+PI0425,NULL,389594,389782,hypothetical protein
+PI0426,NULL,391266,389485,conserved hypothetical protein
+PI0427,NULL,393148,391280,conserved hypothetical protein
+PI0428,NULL,396381,393220,hypothetical protein
+PI0429,NULL,399662,396558,hypothetical protein
+PI0217,NULL,210495,210854,conserved hypothetical protein; possible lipoprotein
+PI0221,NULL,217856,212496,DNA methylase, site-specific DNA-methyltransferase (adenine-specific)
+PI0432,NULL,404921,405097,hypothetical protein
+PI0433,NULL,405133,404864,hypothetical protein
+PI0434,NULL,405832,406950,possible beta-lactamase
+PI0435,NULL,407137,407325,30S ribosomal protein S21
+PI0438,NULL,409177,410364,elongation factor Tu
+PI0439,NULL,410459,410704,conserved hypothetical protein; possible preprotein translocase subunit SecE
+PI0440,NULL,410722,411264,transcription antiterminator
+PI0445,NULL,413419,413066,conserved hypothetical protein
+PI0446,NULL,413618,417424,DNA-directed RNA polymerase, beta subunit
+PI0447,NULL,417454,421815,DNA-directed RNA polymerase, beta' subunit
+PI0448,NULL,421984,423084,hypothetical protein
+PI0449,NULL,423092,423787,hypothetical protein
+PI0450,NULL,423801,424106,hypothetical protein
+PI0451,NULL,424483,425187,serine proteases,  S51 group
+PI0453,NULL,426937,427254,conserved hypothetical protein
+PI0454,NULL,427023,426793,hypothetical protein
+PI0455,NULL,427501,428562,hypothetical protein
+PI0458,NULL,430017,432131,translation elongation factor G (EF-G)/tetracycline resistance factor Q
+PI0481,NULL,443254,443469,translation initiation factor IF-1
+PI0486,NULL,445213,446208,DNA-directed RNA polymerase, alpha subunit
+PI0488,NULL,447046,447597,conserved hypothetical protein
+PI0491,NULL,451287,451150,hypothetical protein
+PI0492,NULL,451841,452518,hypothetical protein
+PI0493,NULL,454972,452984,surface antigen BspA
+PI0494,NULL,455003,455230,hypothetical protein
+PI0495,NULL,456448,455012,conserved hypothetical protein
+PI0496,NULL,456772,458670,heat shock protein hsp70 (chaperone protein dnaK)
+PI0498,NULL,459491,460399,integrase
+PI0500,NULL,460814,461467,mobilizable transposon, tnpC protein
+PI0674,NULL,613851,616214,conserved hypothetical protein
+PI0504,NULL,464599,464718,hypothetical protein
+PI0505,NULL,464718,465635,mobilization protein
+PI0506,NULL,465641,466300,conserved hypothetical protein
+PI0507,NULL,466395,466607,transcriptional regulator
+PI0508,NULL,466603,467496,possible cell filamentation protein
+PI0509,NULL,467694,469247,conserved hypothetical protein
+PI0510,NULL,469256,470359,hypothetical protein
+PI0511,NULL,470574,470912,hypothetical protein
+PI0512,NULL,470925,471500,conserved hypothetical protein
+PI0514,NULL,472548,473000,possible cell filamentation protein
+PI0515,NULL,473185,475491,conserved hypothetical protein
+PI0516,NULL,476168,476004,ferredoxin, 4Fe-4S
+PI0518,NULL,478019,477216,5'-nucleotidase precursor
+PI0520,NULL,479011,478895,hypothetical protein
+PI0521,NULL,479121,479026,hypothetical protein
+PI0523,NULL,479904,479608,hypothetical protein
+PI0525,NULL,482335,481472,transcriptional regulator, Arac family
+PI0526,NULL,482499,482404,hypothetical protein
+PI0528,NULL,483182,482931,hypothetical protein
+PI0529,NULL,483801,483166,hypothetical protein
+PI0530,NULL,483912,484817,possible membrane-fusion protein
+PI0378,NULL,349599,348166,conserved hypothetical protein; possible helicase
+PI0404,NULL,372586,371435,integrase
+PI0534,NULL,488708,489550,conserved hypothetical protein; possible transposase
+PI0535,NULL,489839,489648,hypothetical protein
+PI0536,NULL,492303,492683,hypothetical protein
+PI0537,NULL,492472,489896,alanyl-tRNA synthetase (alanine--tRNA ligase)
+PI0538,NULL,492701,492985,transcriptional regulator
+PI0539,NULL,493546,493788,hypothetical protein
+PI0540,NULL,493925,493095,conserved hypothetical protein
+PI0541,NULL,495069,493900,GTP-binding protein, GTP1/OBG family
+PI0542,NULL,495694,495855,hypothetical protein
+PI0543,NULL,495782,495213,adenylate kinase
+PI0544,NULL,496321,495785,hypoxanthine-guanine phosphoribosyltransferase (hypoxanthine phosphoribosyltransferase)
+PI0545,NULL,496551,497927,sugar kinase
+PI0546,NULL,497939,498298,hypothetical protein
+PI0547,NULL,498516,499526,fructose-bisphosphate aldolase
+PI0549,NULL,500644,500751,hypothetical protein
+PI0550,NULL,500790,502535,possible glycosyl hydrolase
+PI0551,NULL,502743,502468,hypothetical protein
+PI0552,NULL,503395,502856,hypothetical protein
+PI0554,NULL,504555,504659,hypothetical protein
+PI0555,NULL,505034,504717,conserved hypothetical protein
+PI0557,NULL,506944,506327,conserved hypothetical protein
+PI0558,NULL,507176,507775,probable transcriptional regulator, TetR family
+PI0559,NULL,507808,508800,conserved hypothetical protein
+PI0560,NULL,508970,508740,hypothetical protein
+PI0561,NULL,509092,509196,hypothetical protein
+PI0562,NULL,510258,509236,conserved hypothetical protein
+PI0563,NULL,511239,510388,possible integral membrane protein
+PI0564,NULL,511677,511781,hypothetical protein
+PI0565,NULL,511717,511619,hypothetical protein
+PI0566,NULL,512688,511972,enoyl-[acyl-carrier-protein] reductase
+PI0567,NULL,513115,512921,hypothetical protein
+PI0568,NULL,513191,513090,hypothetical protein
+PI0569,NULL,514684,513437,phosphoglycerate kinase
+pPI0006,NULL,5438,3798,conserved hypothetical protein; possible membrane protein
+pPI0062,NULL,52403,51606,NADH dehydrogenase I, chain B
+PI0572,NULL,516522,517649,tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase
+PI0573,NULL,517972,519279,aminopeptidase C (bleomycin hydrolase)
+PI0574,NULL,519400,519504,hypothetical protein
+PI0575,NULL,520288,519701,hypothetical protein
+PI0577,NULL,521951,522760,conserved hypothetical protein
+PI2097,NULL,2052203,2051052,conserved hypothetical protein
+PI0579,NULL,524269,523559,hypothetical protein
+PI0581,NULL,525195,532649,conserved hypothetical protein
+PI0582,NULL,525274,524993,hypothetical protein
+PI0583,NULL,526336,526088,hypothetical protein
+PI0584,NULL,527716,527492,hypothetical protein
+PI0585,NULL,533318,532800,conserved hypothetical protein
+PI0586,NULL,533897,534424,hypothetical protein
+PI0587,NULL,534556,535407,conserved hypothetical protein
+PI0588,NULL,535485,535156,hypothetical protein
+PI0589,NULL,537019,535631,asparaginyl-tRNA synthetase (asparagine--tRNA ligase)
+PI0590,NULL,538605,537103,ribosomal large subunit pseudouridine synthase B
+PI0591,NULL,540078,538735,adenylosuccinate lyase
+PI0592,NULL,542671,540935,DNA mismatch repair protein
+PI0593,NULL,543107,544429,NAD-specific glutamate dehydrogenase
+PI0594,NULL,544528,545217,possible rare lipoprotein A
+PI0595,NULL,546466,545711,conserved hypothetical protein
+PI0596,NULL,546540,546668,hypothetical protein
+PI0597,NULL,547122,546766,hypothetical protein
+PI0598,NULL,547293,547201,hypothetical protein
+PI0599,NULL,547516,547605,hypothetical protein
+PI0600,NULL,547622,548857,bifunctional purine biosynthesis protein, 5-aminoimidazole-4-carboxamide ribonucleotide(AICAR) transformylase/IMP cyclohydrolase
+PI0601,NULL,548898,549080,hypothetical protein
+PI0602,NULL,549239,549691,conserved hypothetical protein
+PI1985,NULL,1940805,1940431,hypothetical protein
+PI2090,NULL,2047710,2048126,thioesterase family protein
+PI0604,NULL,551978,550965,O-succinylbenzoic acid--CoA ligase
+PI0605,NULL,553086,552052,chloromuconate cycloisomerase
+PI0606,NULL,553977,553096,naphthoate synthase
+PI0607,NULL,555608,553941,2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylic acid synthase/2-oxoglutarate decarboxylase
+PI0610,NULL,559291,557543,conserved hypothetical protein
+PI0611,NULL,559961,559527,hypothetical protein
+PI0612,NULL,560601,562262,lysyl-tRNA synthetase
+PI0613,NULL,562307,563299,glycerol-3-phosphate dehydrogenase (NAD(P)+)
+PI0614,NULL,563310,564653,glucose-6-phosphate isomerase
+PI0615,NULL,564691,565446,hydrolase, haloacid dehalogenase-like family
+PI0616,NULL,565700,566500,electron transfer flavoprotein, beta-subunit
+PI0617,NULL,566507,567526,electron transfer flavoprotein, alpha subunit
+PI0619,NULL,569504,569632,hypothetical protein
+PI0620,NULL,569869,570690,hypothetical protein
+PI0621,NULL,570910,571287,conserved hypothetical protein
+PI0622,NULL,571314,572147,hypothetical protein
+PI0623,NULL,572307,573140,hypothetical protein
+PI0624,NULL,574343,574531,hypothetical protein
+PI0625,NULL,574413,573244,possible membrane transport protein
+PI0627,NULL,576141,575758,conserved hypothetical protein
+PI0628,NULL,576745,576167,phosphoribosylglycinamide formyltransferase
+PI0629,NULL,577182,576769,heat shock protein 15
+PI0632,NULL,578616,579791,NusB family protein (N utilization substance protein B)
+PI0634,NULL,580222,581181,conserved hypothetical protein
+PI0636,NULL,582273,582172,hypothetical protein
+PI0637,NULL,582457,582257,hypothetical protein
+PI0638,NULL,582462,582358,hypothetical protein
+PI0640,NULL,583881,583429,conserved hypothetical protein
+PI0641,NULL,584620,583931,conserved hypothetical protein
+PI0643,NULL,586538,586720,hypothetical protein
+PI0644,NULL,586629,585844,dnaJ protein
+PI0645,NULL,586867,586559,hypothetical protein
+PI0646,NULL,587265,586723,hypothetical protein
+PI1828,NULL,1768559,1769149,peptidase, M23/M37 family, C-terminal
+PI1908,NULL,1853264,1852401,transcriptional regulator, AraC family
+PI0648,NULL,589791,589588,hypothetical protein
+PI0649,NULL,589835,591685,oxaloacetate decarboxylase
+PI0650,NULL,591757,592410,conserved hypothetical protein
+PI0651,NULL,592410,592955,HD superfamily hydrolase
+PI0652,NULL,593018,595852,conserved hypothetical protein
+PI0653,NULL,596296,596186,hypothetical protein
+PI0654,NULL,597283,596423,K+-dependent Na+/Ca+ exchanger related-protein
+PI0655,NULL,599601,597430,Na+/H+ anitporter
+PI0656,NULL,601193,599973,peptidase T (tripeptide aminopeptidase)
+PI0657,NULL,601319,602227,conserved hypothetical protein
+PI0658,NULL,602327,603103,conserved hypothetical protein
+PI0659,NULL,603343,603456,hypothetical protein
+PI0660,NULL,604057,603578,conserved hypothetical protein
+PI0661,NULL,604275,604096,hypothetical protein
+PI0662,NULL,604287,605273,conserved hypothetical protein
+PI0663,NULL,606139,606603,possible transcriptional regulator
+PI0664,NULL,607031,607879,dihydroorotate dehydrogenase, electron transfer subunit
+PI0665,NULL,608005,608859,dihydroorotate dehydrogenase
+PI0666,NULL,610231,609146,chorismate synthase
+PI0667,NULL,610537,610253,hypothetical protein
+PI0668,NULL,611015,610356,peptidyl-prolyl cis-trans isomerase SlyD, FKBP-type (peptidylprolyl isomerase)
+PI0669,NULL,611207,611064,hypothetical protein
+PI0670,NULL,611340,611140,hypothetical protein
+PI0671,NULL,611867,611679,hypothetical protein
+PI0672,NULL,612290,611886,conserved hypothetical protein
+PI0673,NULL,612765,612346,hypothetical protein
+PI1815,NULL,1754570,1753524,polyphosphate-selective porin O
+PI1827,NULL,1768153,1768662,peptidase, M23/M37 family, N-terminal
+PI0675,NULL,614017,613787,hypothetical protein
+PI0676,NULL,614716,614895,hypothetical protein
+PI0677,NULL,616653,616766,hypothetical protein
+PI0678,NULL,616848,617039,hypothetical protein
+PI0679,NULL,617072,616944,hypothetical protein
+PI0680,NULL,617098,618693,hypothetical protein
+PI0681,NULL,619140,619316,hypothetical protein
+PI0682,NULL,619432,619112,hypothetical protein
+PI0683,NULL,619857,619432,hypothetical protein
+PI0684,NULL,620567,619497,coproporphyrinogen III oxidase
+PI0685,NULL,620988,623108,elongation factor G
+PI0687,NULL,624396,625712,hypothetical protein
+PI0688,NULL,625810,625598,hypothetical protein
+PI0689,NULL,625937,625764,hypothetical protein
+PI0690,NULL,627376,626165,uracil permease
+PI0691,NULL,628025,628429,hypothetical protein
+PI0693,NULL,629672,628527,periplasmic iron binding protein, ABC transporter
+PI0694,NULL,629885,631237,Na+/dicarboxylate or sulfate symporter
+PI0695,NULL,632761,631553,xanthine/uracil permease family protein
+PI0696,NULL,633660,632881,NADH pyrophosphatase, MutT family hydrolase (NAD+ diphosphatase)
+PI0697,NULL,635400,633700,5'-nucleotidase family protein
+PI0698,NULL,636771,635512,conserved hypothetical protein
+PI0699,NULL,637224,636787,conserved hypothetical protein
+PI0701,NULL,638597,638496,hypothetical protein
+PI0702,NULL,639700,638780,conserved hypothetical protein; possible tetracenomycin C synthesis protein homolog
+PI0703,NULL,639795,640256,hypothetical protein
+PI0704,NULL,640387,641424,conserved hypothetical protein
+PI0705,NULL,641414,642331,conserved hypothetical protein; possible lipoprotein
+PI0706,NULL,642366,643454,pyridoxal phosphate biosynthetic protein (4-hydroxythreonine-4-phosphate dehydrogenase)
+PI1794,NULL,1726756,1725749,conserved hypothetical protein
+PI0708,NULL,644615,646294,conserved hypothetical protein
+PI0709,NULL,647449,646607,possible IS1249-related transposase
+PI0710,NULL,647807,648064,hypothetical protein
+PI0711,NULL,648970,648074,ISPg3-related transposase
+PI0712,NULL,649218,650417,conserved hypothetical protein; possible xylanase
+PI0713,NULL,650434,650589,hypothetical protein
+PI0714,NULL,651485,652207,conserved hypothetical protein
+PI0715,NULL,652451,652681,hypothetical protein
+PI0716,NULL,652665,652276,conserved hypothetical protein
+PI0717,NULL,653180,652698,conserved hypothetical protein
+PI0718,NULL,653865,654272,hypothetical protein
+PI0719,NULL,654070,653183,conserved hypothetical protein
+PI0720,NULL,654520,654089,conserved hypothetical protein
+PI0721,NULL,654755,655042,hypothetical protein
+PI0722,NULL,655473,654613,RNA polymerase sigma-70 factor
+PI0723,NULL,657439,656183,conserved hypothetical protein
+PI0725,NULL,658763,658993,hypothetical protein
+PI0726,NULL,659313,659182,hypothetical protein
+PI0727,NULL,659401,660552,integrase
+PI0729,NULL,661568,661825,integrase
+PI0730,NULL,661825,662226,hypothetical protein
+PI0731,NULL,663733,662429,conserved hypothetical protein
+PI0732,NULL,664427,663738,conserved hypothetical protein
+PI0734,NULL,668820,667192,ABC transporter, ATP-binding / permease
+PI0735,NULL,670651,668933,ABC transporter, ATP-binding / permease
+PI0736,NULL,671331,670720,transcriptional regulator, TetR family
+PI0737,NULL,671549,671322,hypothetical protein
+PI0738,NULL,671931,671647,conserved hypothetical protein
+PI0739,NULL,672221,671934,conserved hypothetical protein
+PI0740,NULL,672425,672252,hypothetical protein
+PI0741,NULL,672627,674057,conserved hypothetical protein
+PI0603,NULL,549858,550901,3-dehydroquinate synthase
+PI0744,NULL,674311,675246,DNA primase/mobilizable transposon, excision protein
+PI0745,NULL,675314,675730,conserved hypothetical protein
+PI0746,NULL,676111,676479,hypothetical protein
+PI0747,NULL,676466,676762,possible mobilization protein
+PI0748,NULL,676756,677274,possible mobilization protein
+PI0749,NULL,677374,677529,hypothetical protein
+PI0750,NULL,680693,677886,zinc protease
+PI0751,NULL,681956,680763,conserved hypothetical protein
+PI0752,NULL,683527,682022,conserved hypothetical protein
+PI0753,NULL,683911,683531,hypothetical protein
+PI0754,NULL,686484,683911,possible outer membrane receptor
+PI0755,NULL,686944,686831,hypothetical protein
+PI0756,NULL,687286,689040,50S ribosomal protein L7/L12
+PI0757,NULL,689344,693801,possible hemagglutinin/protease
+PI0758,NULL,690566,690387,hypothetical protein
+PI0759,NULL,693903,694058,hypothetical protein
+PI0761,NULL,696313,696408,hypothetical protein
+PI0762,NULL,696560,697393,mannose-6-phosphate isomerase, class I
+PI0763,NULL,697457,698062,thymidine kinase
+PI0764,NULL,698102,699205,permease
+PI0765,NULL,700882,699893,conserved hypothetical protein; possible surface protein
+PI0766,NULL,702036,700921,conserved hypothetical protein
+PI0768,NULL,704721,704212,conserved hypothetical protein; possible acetyltransferase
+PI0769,NULL,706232,704793,phosphomannomutase
+PI0770,NULL,706310,706414,hypothetical protein
+PI0771,NULL,707167,706664,conserved hypothetical protein
+PI0772,NULL,708541,707297,conserved hypothetical protein
+PI0773,NULL,709552,708638,D-3-phosphoglycerate dehydrogenase
+PI0774,NULL,710704,709637,phosphoserine aminotransferase (phosphoserine transaminase)
+PI0775,NULL,712227,710914,ATP-independent RNA helicase
+PI0776,NULL,713383,712217,predicted TPR-repeat-containing protein
+PI0777,NULL,714534,713425,predicted TPR-repeat-containing protein
+PI0778,NULL,714685,714945,hypothetical protein
+PI0779,NULL,715860,714694,predicted TPR-repeat-containing protein
+PI0782,NULL,721987,720713,beta-lactamase induction signal transducer, AmpG protein
+PI0783,NULL,723284,723457,hypothetical protein
+PI0784,NULL,723363,722032,possible amidase enhancer precursor
+PI0785,NULL,723884,724198,hypothetical protein
+PI0786,NULL,724195,723380,conserved hypothetical protein; possible glycosyltransferase
+PI0787,NULL,725853,724276,glycosyltransferase
+PI0790,NULL,729093,729266,hypothetical protein
+PI0791,NULL,729169,728501,conserved hypothetical protein
+PI0792,NULL,729687,729208,conserved hypothetical protein
+PI0793,NULL,729894,731138,ABC transporter, permease protein
+PI0794,NULL,731243,732925,long-chain-fatty-acid--CoA ligase
+PI0795,NULL,731313,731104,hypothetical protein
+PI0796,NULL,733464,735014,competence protein
+PI0797,NULL,735156,735812,tRNA pseudouridine synthase A (pseudouridylate synthase)
+PI0570,NULL,514805,515455,exsB protein; possible aluminum resistance protein
+PI0799,NULL,737223,738914,alpha-amylase family protein
+PI0800,NULL,739008,739391,alanyl-tRNA synthetase (alanine--tRNA ligase)
+PI0801,NULL,739505,739747,hypothetical protein
+PI0802,NULL,739684,739887,hypothetical protein
+PI0804,NULL,742850,742074,conserved hypothetical protein; possible membrane protein
+PI0805,NULL,743867,742869,conserved hypothetical protein
+PI0808,NULL,745621,746517,ISPg3-related transposase
+PI0809,NULL,746770,747168,hypothetical protein
+PI0810,NULL,747086,746883,hypothetical protein
+PI0811,NULL,749997,746878,protease/hemagglutinin PrtT, streptopain family
+PI0812,NULL,750325,751152,conserved hypothetical protein; possible ferredoxin
+PI0813,NULL,751235,752998,conserved hypothetical protein
+PI0814,NULL,753086,754486,conserved hypothetical protein
+PI0815,NULL,754737,754615,hypothetical protein
+PI0817,NULL,757001,758269,glycosyl transferase, group 1 family protein
+PI0818,NULL,758325,759719,alpha-amylase
+PI0819,NULL,759979,759554,hypothetical protein
+PI0820,NULL,760040,759834,hypothetical protein
+PI0821,NULL,761273,760203,conserved hypothetical protein
+PI0822,NULL,762085,761168,tRNA delta(2)-isopentenylpyrophosphate transferase
+PI0823,NULL,763198,762182,glyceraldehyde 3-phosphate dehydrogenase, type I
+PI0824,NULL,763477,763800,large conductance mechanosensitive channel protein
+PI0825,NULL,763858,764256,hypothetical protein
+PI0826,NULL,764105,763878,hypothetical protein
+PI0827,NULL,764223,764131,hypothetical protein
+PI0828,NULL,765755,764217,GMP synthase (glutamine amidotransferase)
+PI0829,NULL,766599,765805,nucleotidyl transferase family; possible mannose-1-phosphate guanyltransferase
+PI0830,NULL,768266,766716,conserved hypothetical protein
+PI0831,NULL,768508,768269,hypothetical protein
+PI0832,NULL,768974,770215,sigma-54-dependent transcriptional regulator
+PI0833,NULL,770199,770726,conserved hypothetical protein
+PI0834,NULL,770925,771533,conserved hypothetical protein
+PI0835,NULL,771545,771919,conserved hypothetical protein; possible protein-export membrane protein
+PI0836,NULL,772203,772433,conserved hypothetical protein
+PI0837,NULL,772448,772741,conserved hypothetical protein
+PI0838,NULL,772839,773987,DNA replication and repair protein
+PI0839,NULL,773983,774270,conserved hypothetical protein
+PI0840,NULL,775209,774367,conserved hypothetical protein; possible transposase
+PI0841,NULL,775546,775641,hypothetical protein
+PI1713,NULL,1628558,1630252,ABC transporter, ATP-binding protein
+PI0843,NULL,777922,776285,carboxyl-terminal protease
+PI0844,NULL,778376,777933,cytidine/deoxycytidylate deaminase (dCMP deaminase)
+PI1546,NULL,1465159,1464200,mobilizable transposon, excision protein
+PI1552,NULL,1469464,1468661,transcriptional regulator, LuxR family
+PI0849,NULL,783333,783602,hypothetical protein
+PI0850,NULL,783895,783371,conserved hypothetical protein
+PI0851,NULL,784450,784584,hypothetical protein
+PI0852,NULL,785495,784692,conserved hypothetical protein
+PI0854,NULL,788059,786653,MiaB-like tRNA modifying enzyme
+PI0855,NULL,789605,789234,hypothetical protein
+PI0856,NULL,789987,789721,hypothetical protein
+PI0857,NULL,790837,791046,hypothetical protein
+PI0858,NULL,793454,790233,carbamyl phosphate synthase, large subunit
+PI0859,NULL,794530,793457,carbamoyl-phosphate synthase, small subunit
+PI0860,NULL,796336,794570,amidophosphoribosyltransferase
+PI0861,NULL,798330,796486,glucosamine--fructose-6-phosphate aminotransferase (glutamine-fructose-6-phosphate transaminase (isomerizing))
+PI0863,NULL,799577,800623,L-asparaginase I
+PI0864,NULL,801518,800667,dihydrodipicolinate synthase
+PI0865,NULL,801777,803744,possible phosphoglycerol transferase
+PI0866,NULL,804053,803916,hypothetical protein
+PI0867,NULL,804262,803999,hypothetical protein
+PI0868,NULL,804341,805636,exodeoxyribonuclease VII, large subunit
+PI0869,NULL,805658,805834,possible exodeoxyribonuclease VII (small subunit)
+PI0871,NULL,806974,807975,hypothetical protein
+PI0872,NULL,807867,807511,hypothetical protein
+PI1516,NULL,1434521,1435753,multidrug resistance protein; HlyD family secretion protein
+PI0874,NULL,809118,810341,conserved hypothetical protein
+PI0875,NULL,810748,811497,conserved hypothetical protein
+PI0876,NULL,811095,810907,hypothetical protein
+PI0877,NULL,812870,811518,hypothetical protein
+PI0878,NULL,813549,812902,hypothetical protein
+PI0879,NULL,814111,813536,hypothetical protein
+PI0880,NULL,814478,815056,hypothetical protein
+PI0881,NULL,815056,815343,conserved hypothetical protein
+PI0882,NULL,816263,815685,conserved hypothetical protein; possible para-aminobenzoate synthase component I
+PI0884,NULL,817442,817729,hypothetical protein
+PI0885,NULL,817623,817420,hypothetical protein
+PI0886,NULL,817780,817869,hypothetical protein
+PI0887,NULL,817798,817676,hypothetical protein
+PI0888,NULL,817891,818673,hypothetical protein
+PI0889,NULL,818898,820415,pyruvate kinase
+PI0890,NULL,820991,820557,ribose 5-phosphate isomerase B
+PI0891,NULL,822965,821052,transketolase
+PI0892,NULL,823999,823271,acyl-ACP thioesterase
+PI1477,NULL,1401943,1399874,TonB-dependent outer membrane receptor
+PI0894,NULL,826410,825916,2-oxoglutarate oxidoreductase, gamma subunit (2-oxoglutarate-ferredoxin oxidoreductase)
+PI0896,NULL,828336,827278,2-oxoglutarate oxidoreductase, alpha subunit
+PI0897,NULL,828597,828367,ferredoxin, 4Fe-4S
+PI0898,NULL,828790,828614,conserved hypothetical protein
+PI0899,NULL,829759,828878,methylenetetrahydrofolate dehydrogenase/methenyltetrahydrofolate cyclohydrolase
+PI0900,NULL,831152,829803,signal recognition particle protein
+PI0901,NULL,831368,832267,hypothetical protein
+PI0902,NULL,832431,832640,hypothetical protein
+PI0903,NULL,833287,832814,conserved hypothetical protein
+PI0904,NULL,834355,833312,conserved hypothetical protein
+PI0905,NULL,834757,834539,hypothetical protein
+PI0906,NULL,836068,835793,hypothetical protein
+PI0907,NULL,836973,835027,NAD-dependent DNA ligase
+PI0908,NULL,837672,837010,conserved hypothetical protein
+PI0909,NULL,838148,837666,possible mutT/NUDIX family protein
+PI0910,NULL,838225,839604,possible sodium hydrogen antiporter (Na+/H+ antiporter)
+PI0912,NULL,842752,842174,conserved hypothetical protein
+PI0913,NULL,843793,842840,glycerate dehydrogenase
+PI0914,NULL,845052,843802,ATPase, AAA family
+PI0915,NULL,845323,846057,hypothetical protein
+PI0916,NULL,845975,845757,hypothetical protein
+PI0917,NULL,847152,846511,phosphoglycolate phosphatase
+PI1432,NULL,1353831,1353151,DNA methylase
+PI0919,NULL,849779,849438,conserved hypothetical protein
+PI0920,NULL,852419,849828,xanthan lyase
+PI0921,NULL,852979,852422,acyltransferase
+PI0922,NULL,853253,852984,conserved hypothetical protein
+PI0924,NULL,855144,856013,possible glycosyl hydrolase
+PI0926,NULL,856964,857107,hypothetical protein
+PI0927,NULL,857423,859756,transglutaminase-related protein
+PI0928,NULL,859991,860332,hypothetical protein
+PI1402,NULL,1323075,1324040,3-deoxy-7-phosphoheptulonate synthase
+PI0930,NULL,862472,861117,alpha-L-fucosidase precursor
+PI0931,NULL,863133,862792,hypothetical protein
+PI0932,NULL,863994,865424,conserved hypothetical protein; possible hemin receptor
+PI0933,NULL,865944,865840,hypothetical protein
+PI0934,NULL,866192,865995,hypothetical protein
+PI0936,NULL,868469,869524,conserved hypothetical protein
+PI0937,NULL,869578,869375,hypothetical protein
+PI0938,NULL,869601,869485,hypothetical protein
+PI0939,NULL,870009,872501,TonB-dependent outer membrane protein
+PI0941,NULL,874583,874735,hypothetical protein
+PI0943,NULL,875293,876051,conserved hypothetical protein
+PI0944,NULL,875309,875208,hypothetical protein
+PI0946,NULL,878664,878113,glutathione peroxidase
+PI0947,NULL,880769,878916,conserved hypothetical protein
+PI0948,NULL,881220,882038,hypothetical protein
+PI0949,NULL,883339,882404,endonuclease
+PI0951,NULL,884666,885508,hypothetical protein
+PI0952,NULL,884835,883858,conserved hypothetical protein
+PI0953,NULL,885450,885259,hypothetical protein
+PI0954,NULL,885707,886360,hypothetical protein
+PI0955,NULL,886144,884876,conserved hypothetical protein
+PI0956,NULL,888796,886217,conserved hypothetical protein
+PI0957,NULL,888929,890047,conserved hypothetical protein
+PI0960,NULL,891441,891277,hypothetical protein
+PI0962,NULL,892241,892762,phosphoglycerate mutase
+PI0963,NULL,893697,893338,hypothetical protein
+PI0964,NULL,894247,893378,conserved hypothetical protein
+PI0965,NULL,894452,894294,hypothetical protein
+PI0966,NULL,894547,895269,possible glycosyl hydrolase
+PI0967,NULL,895564,896619,conserved hypothetical protein
+PI0968,NULL,896706,896086,hypothetical protein
+PI0970,NULL,897714,897394,hypothetical protein
+PI0973,NULL,899623,900885,glycine dehydrogenase [decarboxylating] subunit 1
+PI0974,NULL,899651,899511,hypothetical protein
+PI0975,NULL,900938,902413,glycine dehydrogenase [decarboxylating] subunit 2
+PI0978,NULL,905174,905007,hypothetical protein
+PI0979,NULL,905738,905184,transcriptional regulator, tetR family
+PI0980,NULL,907081,905843,conserved hypothetical protein
+PI1374,NULL,1295980,1294865,tetraacyldisaccharide 4'-kinase
+PI1388,NULL,1310084,1309494,transcriptional regulator, LuxR family
+PI0982,NULL,909709,909572,hypothetical protein
+PI0983,NULL,910051,909890,hypothetical protein
+PI0984,NULL,910076,910204,hypothetical protein
+PI0985,NULL,910314,911972,aspartyl-tRNA synthetase
+PI0986,NULL,912148,912426,conserved hypothetical protein
+PI0987,NULL,912344,912120,hypothetical protein
+PI0988,NULL,912487,912813,hypothetical protein
+PI0990,NULL,914032,915114,GDP-mannose 4,6-dehydratase
+PI0991,NULL,915449,916519,conserved hypothetical protein
+PI0992,NULL,917282,916596,RNA polymerase sigma-70 factor
+PI0993,NULL,918541,917315,probable TPR-repeat-containing protein
+PI0994,NULL,920269,918551,glutaminyl-tRNA synthetase
+PI0995,NULL,920698,920883,hypothetical protein
+PI0996,NULL,920720,920598,hypothetical protein
+PI0997,NULL,921115,922353,hypothetical protein
+PI0998,NULL,922836,923396,possible flavin reductase domain protein
+PI0999,NULL,922872,922516,hypothetical protein
+PI1000,NULL,923472,923732,conserved hypothetical protein
+PI1001,NULL,923650,923982,hypothetical protein
+PI1003,NULL,924834,925778,conserved hypothetical protein
+PI1004,NULL,925960,926277,conserved hypothetical protein
+PI1005,NULL,926541,926341,hypothetical protein
+PI1370,NULL,1290680,1292236,alkyl hydroperoxide reductase, subunit F
+PI1007,NULL,928631,927096,conserved hypothetical protein
+PI1008,NULL,928924,929391,cytochrome c nitrite reductase, small subunit
+PI1009,NULL,929482,930900,cytochrome c nitrite reductase, large subunit
+PI1010,NULL,931062,932255,conserved hypothetical protein
+PI1011,NULL,932255,933049,cytochrome c biogenesis protein CycY
+PI1013,NULL,934428,933904,probable transcriptional regulator
+PI1015,NULL,936583,937407,conserved hypothetical protein
+PI1017,NULL,937721,937446,ISPg3-related transposase, C-terminal region
+PI1018,NULL,938341,937694,ISPg3-related transposase, N-terminal region
+PI1019,NULL,938368,938472,hypothetical protein
+PI1020,NULL,938839,938609,hypothetical protein
+PI1021,NULL,939125,939694,conserved hypothetical protein; possible methyltransferase
+PI1022,NULL,940053,940211,hypothetical protein
+PI1023,NULL,940255,940076,hypothetical protein
+PI1024,NULL,940307,940792,conserved hypothetical protein; possible nitroreductase family protein
+PI1027,NULL,943337,943459,hypothetical protein
+PI0532,NULL,486403,487389,ABC transporter, ATP-binding/permease protein
+PI1031,NULL,948567,948421,hypothetical protein
+PI1033,NULL,952173,950437,ATP-dependent RNA helicase, DEAD/DEAH box family
+PI1034,NULL,953456,952233,conserved hypothetical protein; possible membrane protein
+PI1035,NULL,954593,953469,queuine tRNA-ribosyltransferase (tRNA-guanine transglycosylase)
+PI1036,NULL,957057,954586,ATP-dependent  Lon protease
+PI1037,NULL,957809,957168,probable methyltransferase
+PI1038,NULL,958825,958980,hypothetical protein
+PI1039,NULL,958886,957861,conserved hypothetical protein
+PI1040,NULL,959075,960262,8-amino-7-oxononanoate synthase
+PI1041,NULL,960735,960583,hypothetical protein
+PI1042,NULL,961592,961756,hypothetical protein
+PI1043,NULL,961657,960995,conserved hypothetical protein
+PI1045,NULL,965708,965244,cytidine/deoxycytidylate deaminase family protein
+PI1046,NULL,966141,965932,hypothetical protein
+PI1047,NULL,966404,965754,conserved hypothetical protein
+PI1049,NULL,967401,967312,hypothetical protein
+PI1050,NULL,969758,967386,conserved hypothetical protein
+PI1051,NULL,970288,970193,hypothetical protein
+PI1052,NULL,972641,970632,fructose-1,6-bisphosphatase
+PI1053,NULL,973698,972673,conserved hypothetical protein
+PI1054,NULL,975038,973836,conserved hypothetical protein
+PI1056,NULL,977160,976387,cell-division ATP-binding protein
+PI1057,NULL,977426,977608,hypothetical protein
+PI1059,NULL,979234,978254,conserved hypothetical protein
+PI1060,NULL,979789,979340,conserved hypothetical protein
+PI1061,NULL,980133,979789,conserved hypothetical protein
+PI1063,NULL,981105,983159,excinuclease ABC, subunit B
+PI1064,NULL,983384,983211,hypothetical protein
+PI1065,NULL,983522,983710,hypothetical protein
+PI1068,NULL,986226,984883,nucleolar protein, Sun (Fmu) family protein; tRNA/rRNA cytosine-C5-methylase
+PI1069,NULL,988207,988518,hypothetical protein
+PI1072,NULL,990360,990563,hypothetical protein
+PI1073,NULL,993753,990733,hemogluttinin A-related protein (HagA)
+PI1074,NULL,995507,993855,hypothetical protein
+PI1075,NULL,998631,995968,pyruvate phosphate dikinase
+PI1076,NULL,999033,999125,hypothetical protein
+PI1077,NULL,999629,999339,hypothetical protein
+PI1078,NULL,999990,999640,conserved hypothetical protein
+PI1079,NULL,1000215,1000003,conserved hypothetical protein
+PI1080,NULL,1000404,1000943,conserved hypothetical protein; possible outer membrane lipoprotein
+PI0571,NULL,515301,516509,conserved hypothetical protein; possible permease
+PI1084,NULL,1002804,1004750,threonyl-tRNA synthetase
+PI1085,NULL,1006559,1005291,ISPg4-related transposase (IS5 family)
+PI1086,NULL,1010305,1006742,pyruvate:ferredoxin oxidoreductase
+PI1087,NULL,1011617,1010436,conserved hypothetical protein
+PI1088,NULL,1011746,1012912,conserved hypothetical protein
+PI1089,NULL,1014100,1013015,conserved hypothetical protein
+PI1090,NULL,1014506,1015840,tRNA uracil 5-methyltransferase
+PI1092,NULL,1018671,1016920,conserved hypothetical protein
+PI1093,NULL,1018765,1019256,conserved hypothetical protein
+PI1095,NULL,1019899,1020357,conserved hypothetical protein
+PI1097,NULL,1021583,1022059,acetyltransferase, GNAT family
+PI1098,NULL,1023183,1022401,conserved hypothetical protein
+PI0578,NULL,522786,523313,methyltransferase
+PI1101,NULL,1024737,1025375,hypothetical protein
+PI1102,NULL,1026307,1025456,conserved hypothetical protein
+PI1103,NULL,1026687,1027235,hypothetical protein
+PI1105,NULL,1029063,1030295,hypothetical protein
+PI1106,NULL,1030606,1030929,conserved hypothetical protein
+PI1107,NULL,1030946,1031596,conserved hypothetical protein
+PI1108,NULL,1031596,1032753,conserved hypothetical protein
+PI1109,NULL,1032760,1033722,possible glycosyltransferase
+PI1110,NULL,1033809,1034843,probable glycosyltransferase, family 8
+PI1111,NULL,1035508,1036464,ISPg3-related transposase
+PI1112,NULL,1036583,1037701,glycosyltransferase
+PI1113,NULL,1038021,1039205,conserved hypothetical protein
+PI1115,NULL,1039384,1040391,conserved hypothetical protein
+PI1116,NULL,1040397,1041440,conserved hypothetical protein
+PI1117,NULL,1041458,1042339,glycosyl transferase, family 2
+PI1118,NULL,1042636,1043745,glycosyl transferases, group 1
+PI1119,NULL,1043825,1045000,glycosyl transferases, group 1
+PI1120,NULL,1045010,1046122,conserved hypothetical protein
+PI1123,NULL,1048151,1049257,conserved hypothetical protein
+PI1124,NULL,1051268,1049664,possible nucleoside-diphosphate sugar epimerase
+PI1125,NULL,1051576,1051346,hypothetical protein
+PI1126,NULL,1052712,1051693,methionyl-tRNA formyltransferase
+PI1128,NULL,1055115,1054603,probable yrdC domain protein, translation factor (SUA5)
+PI1129,NULL,1055517,1055663,hypothetical protein
+PI1130,NULL,1057116,1055806,probable glucose/galactose transporter
+PI1131,NULL,1058544,1057264,folylpolyglutamate synthase
+PI1132,NULL,1059728,1058574,DnaJ heat shock protein (Hsp40)
+PI1134,NULL,1062133,1060514,ABC transporter, ATP-binding protein
+PI1135,NULL,1062263,1062075,hypothetical protein
+PI1136,NULL,1062601,1062335,conserved hypothetical protein
+PI1137,NULL,1064678,1063110,hypothetical protein
+PI1138,NULL,1064873,1064700,hypothetical protein
+PI1369,NULL,1289920,1290483,alkyl hydroperoxide reductase, subunit  C
+PI1140,NULL,1069477,1067513,ABC transporter, ATP-binding protein
+PI1141,NULL,1069603,1069773,hypothetical protein
+PI1143,NULL,1070564,1069920,hypothetical protein
+PI1147,NULL,1074829,1073822,conserved hypothetical protein
+PI1151,NULL,1076254,1076442,hypothetical protein
+PI1152,NULL,1077216,1076512,response regulator/transcriptional regulator RprY
+PI1153,NULL,1078698,1077256,histidine kinase sensor protein
+PI1154,NULL,1079113,1080144,conserved hypothetical protein; possible periplasmic solute-binding protein
+PI1155,NULL,1080412,1080224,hypothetical protein
+PI1367,NULL,1287000,1287923,redox-sensitive transcriptional activator,  OxyR
+PI1157,NULL,1082785,1081844,hypothetical protein
+PI1158,NULL,1082970,1082815,1,4-alpha-glucan branching enzyme, C-terminal region
+PI1160,NULL,1085954,1084896,possible phosphatidylinositol-4-phosphate 5-kinase
+PI1161,NULL,1086590,1086081,conserved hypothetical protein
+PI1164,NULL,1088876,1088343,hypothetical protein
+PI1165,NULL,1089529,1089696,hypothetical protein
+PI1166,NULL,1089597,1089445,hypothetical protein
+PI1167,NULL,1089828,1089950,hypothetical protein
+PI1168,NULL,1089982,1089836,hypothetical protein
+PI1169,NULL,1090743,1090111,hypothetical protein
+PI1345,NULL,1259325,1260740,conserved hypothetical protein; possible TPR-repeat-containing protein
+PI1171,NULL,1091896,1091468,hypothetical protein
+PI1332,NULL,1249514,1250626,aminotransferase, possible pyridoxal-phosphate-dependent aminotransferase
+PI1173,NULL,1095191,1096252,transcription regulatory protein, LacI family
+PI1174,NULL,1096293,1097102,hypothetical protein
+PI1175,NULL,1098219,1097512,conserved hypothetical protein
+PI1177,NULL,1098996,1099214,hypothtical protein
+PI1178,NULL,1100624,1099389,histidyl-tRNA synthetase
+PI1179,NULL,1101883,1100768,adenylosuccinate synthetase
+PI1181,NULL,1104078,1102810,ISPg4-related transposase (IS5 family)
+PI1182,NULL,1104165,1104431,hypothetical protein
+PI1183,NULL,1105907,1104582,conserved hypothetical protein
+PI1184,NULL,1106223,1105924,conserved hypothetical protein
+PI1185,NULL,1106617,1106216,hypothetical protein
+PI1186,NULL,1106832,1106620,conserved hypothetical protein
+PI1187,NULL,1107305,1106832,conserved hypothetical protein
+PI1188,NULL,1108779,1108955,hypothetical protein
+PI1189,NULL,1108828,1107254,conserved hypothetical protein
+PI1190,NULL,1109379,1109005,conserved hypothetical protein
+PI1191,NULL,1110437,1109604,phosphoribosyl pyrophosphate synthetase
+PI1192,NULL,1111253,1112413,carboxynorspermidine decarboxylase
+PI1193,NULL,1111274,1110576,conserved hypothetical protein
+PI1194,NULL,1112534,1113184,DnaJ protein (Hsp-40)
+PI1195,NULL,1113311,1113520,hypothetical protein
+PI1196,NULL,1113690,1113541,hypothetical protein
+PI1197,NULL,1114549,1113698,pseudouridylate synthetase
+PI1199,NULL,1115806,1115279,possible acetyltransferase
+PI1200,NULL,1116662,1115802,carbon-nitrogen hydrolase/beta-alanine synthase
+PI1203,NULL,1121629,1124499,conserved hypothetical protein
+PI1204,NULL,1124695,1124570,hypothetical protein
+PI1205,NULL,1127187,1127300,hypothetical protein
+PI1207,NULL,1127269,1127117,hypothtical protein
+PI1208,NULL,1127939,1127295,monofunctional biosynthetic peptidoglycan transglycosylase
+PI1209,NULL,1128099,1129055,phosphate starvation-inducible protein, phoH family
+PI1210,NULL,1129081,1130019,phosphoribosylaminoimidazole-succinocarboxamide synthase (SAICAR synthetase)
+PI1211,NULL,1130066,1130797,ubiquinone/menaquinone biosynthesis methyltransferase
+PI1212,NULL,1130814,1131575,shikimate 5-dehydrogenase
+PI1213,NULL,1131737,1132747,phosphoribosylformylglycinamidine cyclo-ligase (AIR synthase)
+PI0533,NULL,487399,488481,ABC transporter, permease protein
+PI1215,NULL,1134107,1134931,orotidine 5'-phosphate decarboxylase
+PI1216,NULL,1134954,1136171,probable phosphohydrolase
+PI1217,NULL,1136226,1137263,UDP-3-O-[3-hydroxymyristoyl] glucosamine N-acyltransferase
+PI1218,NULL,1137272,1138657,UDP-3-O-acyl-N-acetylglucosamine deacetylase
+PI1220,NULL,1139470,1140342,tRNA isopentenyltransferase (tRNA delta(2)-isopentenylpyrophosphate transferase) (IPP transferase)
+PI1221,NULL,1140408,1142915,penicillin-binding protein 1A
+PI1222,NULL,1142974,1143438,hypothetical protein
+PI1223,NULL,1143677,1144519,conserved hypothetical protein
+PI1224,NULL,1147617,1144714,sensor histidine kinase and response regulator
+PI1225,NULL,1147898,1147993,hypothetical protein
+PI1226,NULL,1148024,1148323,hypothetical protein
+PI1227,NULL,1148588,1149034,conserved hypothetical protein; possible DNA-binding protein, histone-like family
+PI1228,NULL,1149185,1151395,conserved hypothetical protein
+PI1229,NULL,1151400,1151729,conserved hypothetical protein
+PI1230,NULL,1152789,1151980,probable metallo-beta-lactamase family protein
+PI1231,NULL,1153315,1153524,hypothetical protein
+PI1232,NULL,1153451,1152897,conserved hypothetical protein
+PI1233,NULL,1154307,1153474,conserved hypothetical protein; possible  MazG family protein
+PI1234,NULL,1154499,1157189,valyl-tRNA synthetase (valine--tRNA ligase)
+PI1236,NULL,1159340,1159074,10 kDa chaperonin, cpn10, GroES
+PI1239,NULL,1164840,1163638,possible peptidase C1-like family (aminopeptidase C)
+PI1240,NULL,1166332,1164938,probable Xaa-Pro dipeptidase (aminopeptidase P)
+PI1241,NULL,1166505,1167293,probable phosphoesterase
+PI1242,NULL,1167940,1167302,tRNA (guanine-N1-)-methyltransferase
+PI1243,NULL,1168074,1168820,conserved hypothetical protein
+PI1244,NULL,1169236,1168943,hypothetical protein
+PI1245,NULL,1171552,1171238,hypothetical protein
+PI1246,NULL,1171556,1169532,conserved hypothetical protein; possible lipoprotein
+PI1247,NULL,1173242,1171770,conserved hypothetical protein
+PI1248,NULL,1173767,1173354,conserved hypothetical protein
+PI1249,NULL,1174207,1173803,conserved hypothetical protein
+PI1250,NULL,1174841,1174296,RNA polymerase ECF-type sigma 70 factor
+PI1251,NULL,1175212,1174880,hypothetical protein
+PI1252,NULL,1175500,1175285,hypothetical protein
+PI1253,NULL,1175751,1175656,hypothetical protein
+PI1255,NULL,1176849,1177547,conserved hypothetical protein
+PI1256,NULL,1177621,1178169,conserved hypothetical protein
+PI1257,NULL,1178111,1179076,dTDP-4-dehydrorhamnose reductase
+PI1259,NULL,1182149,1180881,ISPg4-related transposase (IS5 family)
+PI1260,NULL,1183332,1182193,IS1001-related transposase
+PI1261,NULL,1183487,1184134,ISPg3-related transposase, N-terminal region
+PI1262,NULL,1184107,1184382,ISPg3-related transposase, C-terminal region
+PI1263,NULL,1184866,1184642,probable integrase
+PI1264,NULL,1184946,1185134,hypothetical protein
+PI1265,NULL,1185572,1185156,hypothetical protein
+PI1266,NULL,1185997,1185491,hypothetical protein
+PI1267,NULL,1186535,1186245,probable integrase
+PI1268,NULL,1188043,1187192,possible IS1249-related transposase
+PI1269,NULL,1188841,1188287,conserved hypothetical protein; possible peptidase
+PI1270,NULL,1190889,1188901,probable dipeptidyl peptidase
+PI1296,NULL,1209949,1208960,glycosyltransferase
+PI1319,NULL,1239052,1235795,possible OmpA , outer membrane protein-related protein
+PI1274,NULL,1193664,1193020,possible phosphoribosylanthranilate isomerase
+PI1275,NULL,1194367,1193678,indole-3-glycerol phosphate synthase
+PI1276,NULL,1194406,1194543,hypothetical protein
+PI1277,NULL,1194574,1194699,hypothetical protein
+PI1278,NULL,1194707,1195360,ribulose-phosphate 3-epimerase (pentose-5-phosphate-3-epimerase)
+PI1280,NULL,1196614,1196105,conserved hypothetical protein
+PI1281,NULL,1197051,1196785,hypothetical protein
+PI1282,NULL,1198329,1197358,ATP synthase, gamma subunit (F0F1-ATPase, gamma subunit)
+PI1283,NULL,1199924,1198344,ATP synthase, alpha subunit
+PI1284,NULL,1200383,1199940,ATP synthase, delta subunit
+PI1285,NULL,1200994,1200488,ATP synthase, B subunit
+PI1286,NULL,1201303,1201064,ATP synthase, C subunit
+PI1287,NULL,1202473,1201364,ATP synthase, A subunit
+PI1288,NULL,1202889,1202473,hypothetical protein
+PI1289,NULL,1203168,1202932,ATP synthase, delta/epsilon subunit
+PI1290,NULL,1204635,1203199,ATP synthase, beta subunit
+PI1292,NULL,1207088,1206246,conserved hypothetical protein
+PI1293,NULL,1208507,1207239,ISPg4-related transposase (IS5 family)
+PI1294,NULL,1208630,1208776,hypothetical protein
+PI1295,NULL,1208776,1208910,hypothetical protein
+PI1297,NULL,1211324,1209939,conserved hypothetical protein
+PI1298,NULL,1211324,1212376,glycosyltransferase
+PI1299,NULL,1212331,1213311,glycosyltransferase
+PI1300,NULL,1213330,1214430,probable glycosyltransferase
+PI1302,NULL,1215227,1214937,hypothetical protein
+PI1303,NULL,1216171,1215275,ISPg3-related transposase
+PI1304,NULL,1216527,1216940,hypothetical protein
+PI1305,NULL,1219792,1216994,conserved hypothetical protein
+PI1306,NULL,1222512,1220404,dipeptidyl peptidase IV
+PI1308,NULL,1223777,1223559,hypothetical protein
+PI1310,NULL,1227402,1228943,LysM domain protein
+PI1312,NULL,1228991,1229737,conserved hypothetical protein
+PI1313,NULL,1229850,1231301,possible POT family (proton-dependent oligopeptide transport family)
+PI1314,NULL,1231328,1231483,hypothetical protein
+PI1315,NULL,1231916,1232299,conserved hypothetical protein
+PI1316,NULL,1232715,1232386,conserved hypothetical protein
+PI1317,NULL,1232978,1235434,surface antigen BspA
+PI1318,NULL,1235448,1235615,hypothetical protein
+PI0039,NULL,41137,40643,conserved hypothetical protein; possible integral membrane protein
+PI0043,NULL,43216,42434,thiamine phosphate pyrophosphorylase
+PI1320,NULL,1239821,1239171,conserved hypothetical protein
+PI1321,NULL,1240461,1239904,conserved hypothetical protein
+PI1322,NULL,1241696,1240464,nucleoside permease
+PI1323,NULL,1242543,1241950,conserved hypothetical protein
+PI1324,NULL,1243085,1242660,conserved hypothetical protein
+PI1325,NULL,1244154,1243555,conserved hypothetical protein
+PI1327,NULL,1245703,1246326,conserved hypothetical protein
+PI1328,NULL,1246337,1246840,conserved hypothetical protein
+PI1330,NULL,1248076,1248483,WxcM-like, C-terminal family protein
+PI1331,NULL,1248582,1249523,conserved hypothetical protein
+PI1272,NULL,1192402,1191842,possible transcriptional regulator
+PI1273,NULL,1193015,1192425,anthranilate synthase component II
+PI1333,NULL,1251432,1250917,conserved hypothetical protein
+PI1335,NULL,1253629,1252958,Fe-S oxidoreductase
+PI1337,NULL,1254546,1255334,conserved hypothetical protein
+PI1338,NULL,1255410,1256654,phosphoserine phosphatase
+PI1339,NULL,1256811,1257224,hypothetical protein
+PI1340,NULL,1256932,1256708,hypothetical protein
+PI1341,NULL,1257708,1258019,hypothetical protein
+PI1342,NULL,1257859,1257197,conserved hypothetical protein
+PI1343,NULL,1258599,1257922,conserved hypothetical protein
+PI1344,NULL,1259164,1258691,hypothetical protein
+PI0247,NULL,245513,246292,conjugative transposon protein, TraA
+PI1346,NULL,1260954,1261088,hypothetical protein
+PI1347,NULL,1262238,1261270,DNA damage-inducible protein
+PI1350,NULL,1265957,1266991,conserved hypothetical protein
+PI1351,NULL,1267002,1268546,conserved hypothetical protein
+PI1352,NULL,1268540,1269847,conserved hypothetical protein
+PI1353,NULL,1269850,1270992,conserved hypothetical protein
+PI1355,NULL,1272162,1273220,possible capsular polysaccharide biosynthesis protein
+PI1356,NULL,1273302,1273400,hypothetical protein
+PI1357,NULL,1274319,1273567,glycosyltransferase
+PI1359,NULL,1276053,1275613,hypothetical protein
+PI1360,NULL,1277655,1276063,conserved hypothetical protein
+PI1361,NULL,1278385,1279953,CTP synthase (UTP-ammonia lyase)
+PI1362,NULL,1279960,1281873,60Kd inner membrane protein
+PI1363,NULL,1281982,1281806,hypothetical protein
+PI1364,NULL,1282002,1284053,dipeptidyl peptidase IV
+PI1365,NULL,1284116,1285735,conserved hypothetical protein; probable transmembrane protein
+PI1366,NULL,1286707,1286186,conserved hypothetical protein; possible hydrolase, HAD superfamily
+PI1271,NULL,1191344,1190895,transcriptional regulator,  AraC/XylS family
+pPI0508,NULL,472703,473917,IS1001-related transposase
+pPI0511,NULL,474206,474619,methylaspartate mutase, S subunit
+PI1371,NULL,1292606,1292499,hypothetical protein
+PI1372,NULL,1294031,1293039,thiamine monophosphate kinase
+PI1373,NULL,1295046,1294171,purine nucleoside phosphorylase (PNP)
+PI1198,NULL,1115279,1114722,acetyltransferase
+PI1375,NULL,1297674,1296103,protease IV family, clan S (peptidase family S49)
+PI1377,NULL,1300019,1299429,cAMP-binding domain protein (cyclic nucleotide-binding domain)
+PI1379,NULL,1301957,1302352,hypothetical protein
+PI1380,NULL,1303302,1302727,conserved hypothetical protein
+PI1381,NULL,1303736,1303200,conserved hypothetical protein
+PI1382,NULL,1304197,1303748,hypothetical protein
+PI1384,NULL,1306234,1305311,conserved hypothetical protein
+PI1387,NULL,1308161,1309477,cardiolipin synthetase
+PI1389,NULL,1310892,1310179,transcriptional regulator, LuxR family
+PI1390,NULL,1311389,1311294,hypothetical protein
+PI1391,NULL,1311560,1311754,hypothetical protein
+PI1392,NULL,1312808,1312041,hypothetical protein
+PI1393,NULL,1313883,1312930,aldose 1-epimerase
+PI1394,NULL,1314192,1315922,glutamate formiminotransferase
+PI1395,NULL,1314467,1314207,hypothetical protein
+PI1396,NULL,1315939,1317933,urocanate hydratase
+PI1397,NULL,1318019,1319491,histidine ammonia-lyase
+PI1398,NULL,1319569,1320732,probable imidazolonepropionase
+PI1399,NULL,1320713,1320904,hypothetical protein
+PI1400,NULL,1321531,1321968,hypothetical protein
+PI0647,NULL,587645,589336,potassium uptake protein
+PI1403,NULL,1324060,1325031,conserved hypothetical protein
+PI1404,NULL,1325043,1326059,hypothetical protein
+PI1405,NULL,1326633,1326175,conserved hypothetical protein
+PI1407,NULL,1329176,1327833,conserved hypothetical protein
+PI1409,NULL,1330989,1331621,conserved hypothetical protein
+PI1410,NULL,1331719,1332009,conserved hypothetical protein
+PI1411,NULL,1332024,1332314,conserved hypothetical protein
+PI1412,NULL,1332348,1333883,HD superfamily hydrolase
+PI1413,NULL,1333867,1334019,hypothetical protein
+PI1414,NULL,1334053,1334496,conserved hypothetical protein
+PI1415,NULL,1335995,1334079,cation transporting ATPase/E1-E2 ATPase
+PI1416,NULL,1336250,1336041,cation-transporting ATPase
+PI1417,NULL,1337561,1336266,MATE efflux family protein (Na+-driven multidrug efflux pump)
+PI1418,NULL,1339261,1338125,UDP-N-acetylglucosamine 2-epimerase
+PI1419,NULL,1340223,1339276,conserved hypothetical protein; membrane protease subunits, stomatin/prohibitin homologs
+PI1421,NULL,1341941,1342180,hypothetical protein
+PI1422,NULL,1342002,1340830,hypothetical protein
+PI1423,NULL,1343071,1342028,hypothetical protein
+PI1424,NULL,1343289,1344104,probable peptidase family M48
+PI1425,NULL,1344909,1344628,conserved hypothetical protein
+PI1428,NULL,1347755,1346766,quinolinate synthetase A
+PI1430,NULL,1351834,1349738,subtilisin-like serine proteinase
+PI1431,NULL,1352219,1352869,conserved hypothetical protein
+PI0234,NULL,234613,235041,integrase
+PI1433,NULL,1354388,1353867,hypothetical protein
+PI1434,NULL,1354451,1354630,hypothetical protein
+PI1435,NULL,1355673,1354699,D12 class N6 adenine-specific DNA methyltransferase
+PI1436,NULL,1356101,1356292,hypothetical protein
+PI1437,NULL,1356228,1356467,hypothetical protein
+PI1439,NULL,1360149,1360406,hypothetical protein
+PI1440,NULL,1363069,1357325,conserved hypothetical protein
+PI1441,NULL,1363269,1363733,hypothetical protein
+PI1442,NULL,1364709,1364089,radical-activating enzyme (pyruvate-formate lyase-activating enzyme)
+PI1443,NULL,1365404,1364700,conserved hypotehtical protein; possible tonB-dependent outer membrane receptor
+PI1445,NULL,1368543,1369133,hypothetical protein
+PI1446,NULL,1369892,1369167,conserved hypothetical protein
+PI1447,NULL,1370112,1372016,probable OPT oligopeptide transporter protein
+PI1448,NULL,1371892,1371719,hypothetical protein
+PI1449,NULL,1372158,1372574,conserved hypothetical protein
+PI1450,NULL,1372951,1372823,hypothetical protein
+PI1451,NULL,1373071,1375425,outer membrane receptor proteins, tonB dependent (possibly iron transport related)
+PI1452,NULL,1375493,1376122,possible nicotinamide mononucleotide transporter
+PI1453,NULL,1376122,1376769,probable thiamine pyrophosphokinase
+PI1455,NULL,1378403,1379023,hypothetical protein
+PI1456,NULL,1379981,1379004,conserved hypothetical protein
+PI1457,NULL,1381288,1379990,N-acetylmuramoyl-L-alanine amidase
+PI1458,NULL,1381686,1381306,dihydroneopterin aldolase
+PI1459,NULL,1382368,1381709,ribonucleotide reductase, alpha subunit, C-terminal region
+PI1460,NULL,1384496,1382355,ribonucleotide reductase, alpha subunit, N-terminal region
+PI1461,NULL,1384504,1385133,conserved hypothetical protein
+PI1462,NULL,1385443,1385234,hypothetical protein
+PI1463,NULL,1387129,1385489,fumarate hydratase, class I
+PI1464,NULL,1390196,1387281,zinc protease
+PI1465,NULL,1392077,1390221,conserved hypothetical protein
+PI1467,NULL,1393643,1393969,conserved hypothetical protein
+PI1468,NULL,1394040,1394858,conserved hypothetical protein; probable TPR domain protein
+PI1469,NULL,1395156,1395404,hypothetical protein
+PI1470,NULL,1395182,1394958,hypothetical protein
+PI1471,NULL,1395696,1395190,conserved hypothetical protein
+PI1472,NULL,1395811,1395939,hypothetical protein
+PI1473,NULL,1395890,1395669,hypothetical protein
+PI1474,NULL,1396067,1397029,conserved hypothetical protein
+PI1475,NULL,1397282,1397965,possible short chain dehydrogenase
+PI1476,NULL,1397839,1399464,acyl-CoA synthase/O-succinylbenzoic acid-CoA ligase
+PI1172,NULL,1094974,1091990,sensor histidine kinase
+PI1478,NULL,1402013,1402204,hypothetical protein
+PI1479,NULL,1402238,1402807,xanthine phosphoribosyltransferase
+PI1480,NULL,1402815,1404155,xanthine/uracil permease family protein
+PI1481,NULL,1404176,1404292,hypothetical protein
+PI1482,NULL,1404319,1404705,hypothetical protein
+PI1483,NULL,1404734,1404450,hypothetical protein
+PI1484,NULL,1404759,1405283,conserved hypothetical protein
+PI1485,NULL,1405399,1405310,hypothetical protein
+PI1486,NULL,1407122,1405647,alginate O-acetylation protein
+PI1487,NULL,1407764,1408000,hypothetical protein
+PI1488,NULL,1407889,1407134,hypothetical protein
+PI1491,NULL,1410248,1409550,conserved hypothetical protein
+PI1492,NULL,1412370,1410295,triosephosphate isomerase
+PI1493,NULL,1412878,1412408,conserved hypothetical protein
+PI1494,NULL,1413186,1414028,conserved hypothetical protein
+PI1495,NULL,1417082,1414572,conserved hypothetical protein
+PI1497,NULL,1417711,1418379,LuxS protein, autoinducer AI-2 production protein
+PI1498,NULL,1418567,1420048,probable membrane associated lipoprotein
+PI1499,NULL,1420100,1420240,hypothetical protein
+PI1500,NULL,1421452,1420766,hypothetical protein
+PI1501,NULL,1423306,1421564,GTP-binding elongation factor family protein TypA/BipA
+PI1502,NULL,1423544,1423407,hypothetical protein
+PI1504,NULL,1424458,1424964,non-specific DNA-binding protein
+PI1505,NULL,1425469,1425062,2-amino-4-hydroxy-6-hydroxymethyldihydropteridine pyrophosphokinase
+PI1506,NULL,1426622,1425510,S-adenosylmethionine:tRNA ribosyltransferase-isomerase (queuine synthetase)
+PI1507,NULL,1427500,1426694,tRNA pseudouridine synthase B
+PI1509,NULL,1428482,1428243,conserved hypothetical protein
+PI1511,NULL,1429720,1430058,hypothetical protein
+PI1512,NULL,1429953,1429669,hypothetical protein
+PI1513,NULL,1430292,1432562,conserved hypothetical protein
+PI1515,NULL,1434241,1434384,hypothetical protein
+PI1170,NULL,1091458,1090736,possible response regulator
+PI1517,NULL,1435971,1439033,AcrB/AcrD family multidrug resistance protein
+PI1518,NULL,1439062,1440438,outer membrane protein oprM precursor, multidrug resistance protein
+PI1519,NULL,1440467,1441246,UDP-N-acetylglucosamine acetyltransferase
+PI1520,NULL,1441302,1441430,hypothetical protein
+PI1521,NULL,1441521,1441360,hypothetical protein
+PI1526,NULL,1447492,1447755,hypothetical protein
+PI1527,NULL,1448330,1449580,immunoreactive 46 kDa antigen PG99
+PI1528,NULL,1449938,1449825,hypothetical protein
+PI1530,NULL,1450579,1450968,conserved hypothetical protein
+PI1531,NULL,1450979,1451794,biotin--acetyl-CoA-carboxylase ligase
+PI1532,NULL,1451784,1452491,uridylate kinase
+PI1533,NULL,1452807,1453649,conserved hypothetical protein; possible transposase
+PI1535,NULL,1455561,1454236,response regulator
+PI1536,NULL,1455695,1455868,hypothetical protein
+PI1537,NULL,1459452,1455904,predicted TPR-repeat-containing protein
+PI1538,NULL,1459922,1459527,conserved hypothetical protein
+PI1539,NULL,1461194,1459944,3-phosphoshikimate 1-carboxyvinyltransferase
+PI1540,NULL,1461831,1461502,hypothetical protein
+PI1541,NULL,1461944,1461744,hypothetical protein
+PI1542,NULL,1462926,1461868,mobilization protein
+PI1543,NULL,1463341,1462913,hypothetical protein
+PI1544,NULL,1463739,1463647,hypothetical protein
+PI1545,NULL,1464194,1463727,conserved hypothetical protein
+PI1156,NULL,1081841,1080723,possible glycerate kinase family protein
+PI1547,NULL,1465948,1466286,hypothetical protein
+PI1548,NULL,1466946,1465441,conserved hypothetical protein
+PI1549,NULL,1467161,1467442,conserved hypothetical protein
+PI1550,NULL,1467500,1467763,conserved hypothetical protein
+PI1551,NULL,1467927,1468640,HesA/MoeB/ThiF family protein
+PI0257,NULL,249488,249862,conjugative transposon protein, TraF
+PI1553,NULL,1469604,1470230,hypothetical protein
+PI1554,NULL,1470415,1470543,hypothetical protein
+PI1555,NULL,1470717,1471814,conserved hypothetical protein
+PI1556,NULL,1471795,1472856,hypothetical protein
+PI1557,NULL,1472856,1474046,conserved hypothetical protein
+PI1558,NULL,1474097,1476166,conserved hypothetical protein
+PI1559,NULL,1477032,1476646,hypothetical protein
+PI1560,NULL,1478325,1477102,integrase
+PI1561,NULL,1479762,1478857,conserved hypothetical protein; possible lipoprotein
+PI1562,NULL,1480509,1479784,methyltransferase
+PI0524,NULL,480909,480013,meso-diaminopimelate D-dehydrogenase
+PI1564,NULL,1485532,1483595,surface antigen BspA
+PI1565,NULL,1487417,1485600,conserved hypothetical protein; possible surface antigen
+PI1567,NULL,1489369,1489581,hypothetical protein
+PI1568,NULL,1491103,1489724,OmpA family protein
+PI1569,NULL,1493327,1492572,hypothetical protein
+PI1570,NULL,1494838,1493420,succinyl-diaminopimelate desuccinylase
+PI1571,NULL,1495840,1494905,surface antigen BspA
+PI1572,NULL,1497922,1498275,hypothetical protein
+PI1573,NULL,1500003,1496569,transcription-repair coupling factor
+PI1574,NULL,1500465,1501286,conserved hypothetical protein
+PI1575,NULL,1501283,1501912,LemA protein
+PI1577,NULL,1503939,1503742,conserved hypothetical protein
+PI1579,NULL,1507973,1505853,penicillin-binding protein 2
+PI1580,NULL,1508473,1507973,conserved hypothetical protein
+PI1583,NULL,1511260,1510670,phosphoribosylaminoimidazolecarboxamide formyltransferase (AICAR)/IMP cyclohydrolase (ATIC)
+PI1585,NULL,1514320,1513040,ampG permease
+PI1586,NULL,1514512,1515243,possible HesA/MoeB/ThiF family protein
+PI1587,NULL,1515424,1516326,conserved hypothetical protein; possible permease
+PI1588,NULL,1516990,1516442,DNA polymerase III, epsilon chain
+PI1589,NULL,1517902,1517498,conserved hypothetical protein
+PI1590,NULL,1518193,1518558,transcriptional regulator
+PI1591,NULL,1519783,1518887,ISPg3-related transposase
+PI1592,NULL,1520037,1521899,conserved hypothetical protein; possible permease
+PI1595,NULL,1524539,1525189,conserved hypothetical protein
+PI1596,NULL,1525228,1525851,conserved hypothetical protein
+PI1598,NULL,1526786,1527742,phosphate ABC transporter, phosphate-binding component
+PI1599,NULL,1527857,1529236,predicted TPR-repeat-containing protein
+PI1600,NULL,1529409,1530335,conserved hypothetical protein
+PI1601,NULL,1530422,1530514,hypothetical protein
+PI1602,NULL,1531165,1533879,conserved hypothetical protein; possible internalin-related protein
+PI1603,NULL,1533919,1534065,hypothetical protein
+PI1604,NULL,1534157,1534255,hypothetical protein
+PI1605,NULL,1535238,1534384,conserved hypothetical protein
+PI1606,NULL,1535239,1535625,conserved hypothetical protein
+PI1607,NULL,1535894,1535265,ABC-related lipoprotein releasing system, ATP-binding protein
+PI1608,NULL,1536360,1535947,possible Na+/H+ anti-porter
+PI1609,NULL,1537160,1536198,Na+/H+ anti-porter
+PI1610,NULL,1538062,1537082,Na+/H+ anti-porter
+PI1611,NULL,1538296,1539249,aspartate-semialdehyde dehydrogenase
+PI1612,NULL,1539307,1540005,hypothetical protein
+PI1613,NULL,1540118,1540966,hypothetical protein
+PI1614,NULL,1540941,1541468,hypothetical protein
+PI1615,NULL,1541602,1542054,hypothetical protein
+PI1616,NULL,1542313,1542729,hypothetical protein
+PI1617,NULL,1543063,1543224,hypothetical protein
+PI1618,NULL,1543199,1542810,hypothetical protein
+PI1619,NULL,1544078,1543350,two-component system response regulator
+PI1620,NULL,1545220,1544096, two-component system sensor protein
+PI1621,NULL,1545564,1545800,hypothetical protein
+PI1622,NULL,1546922,1547290,hypothetical protein
+PI1623,NULL,1547303,1549321,hypothetical protein
+PI1625,NULL,1549456,1550328,conserved hypothetical protein; possible phage transposase
+PI1626,NULL,1550334,1550582,hypothetical protein
+PI1627,NULL,1550585,1551217,hypothetical protein
+PI1628,NULL,1551222,1551842,hypothetical protein
+PI1629,NULL,1551847,1552026,hypothetical protein
+PI1630,NULL,1552267,1552554,hypothetical protein
+PI1631,NULL,1552564,1552857,hypothetical protein
+PI1632,NULL,1552959,1553282,hypothetical protein
+PI1633,NULL,1553015,1552644,hypothetical protein
+PI1634,NULL,1553319,1553879,conserved hypothetical protein
+PI1635,NULL,1554088,1554366,hypothetical protein
+PI1636,NULL,1554386,1554883,hypothetical protein
+PI1637,NULL,1555344,1554640,hypothetical protein
+PI1638,NULL,1556673,1555477,conserved hypothetical protein
+PI1639,NULL,1558193,1556865,conserved hypothetical protein
+PI1640,NULL,1558618,1558202,hypothetical protein
+PI1641,NULL,1558943,1558635,hypothetical protein
+PI1642,NULL,1560499,1558940,conserved hypothetical protein
+PI1643,NULL,1561076,1562089,conserved hypothetical protein
+PI1644,NULL,1561090,1560512,hypothetical protein
+PI1646,NULL,1562094,1563188,hypothetical protein
+PI1647,NULL,1562591,1561704,hypothetical protein
+PI1650,NULL,1563335,1563961,N-acetylmuramoyl-L-alanine amidase
+PI1651,NULL,1563985,1564572,hypothetical protein
+PI1652,NULL,1564795,1565295,hypothetical protein
+PI1653,NULL,1565298,1565774,hypothetical protein
+PI1654,NULL,1568018,1567809,hypothetical protein
+PI1655,NULL,1570277,1569819,hypothetical protein
+PI1656,NULL,1570382,1570843,hypothetical protein
+PI1657,NULL,1570861,1573731,hypothetical protein
+PI1658,NULL,1573747,1574796,conserved hypothetical protein
+PI1659,NULL,1574865,1576532,hypothetical protein
+PI1660,NULL,1575065,1574799,hypothetical protein
+PI1661,NULL,1576554,1576877,hypothetical protein
+PI1662,NULL,1577056,1577301,hypothetical protein
+PI1663,NULL,1577407,1577267,hypothetical protein
+PI1664,NULL,1577425,1578150,conserved hypothetical protein
+PI1665,NULL,1578226,1578864,thymidylate synthase
+PI1666,NULL,1579371,1579478,conserved hypothetical protein
+PI1667,NULL,1579903,1580832,conserved hypothetical protein
+PI1668,NULL,1580832,1581383,conserved hypothetical protein
+PI1669,NULL,1581397,1583865,hypothetical protein
+PI1670,NULL,1583865,1587086,hypothetical protein
+PI1671,NULL,1586713,1586537,hypothetical protein
+PI1672,NULL,1587589,1587167,conserved hypothetical protein; possible DNA-binding protein, histone-like family
+PI1673,NULL,1587962,1587858,hypothetical protein
+PI1674,NULL,1587969,1588214,hypothetical protein
+PI1675,NULL,1590595,1588247,TonB-dependent outer membrane receptor
+PI1676,NULL,1591833,1591036,phosphatidate cytidylyltransferase
+PI1677,NULL,1593861,1591906,cell division protein FtsH
+PI1678,NULL,1594380,1594024,conserved hypothetical protein
+PI1679,NULL,1595024,1594884,hypothetical protein
+PI1680,NULL,1597052,1595178,conserved hypothetical protein
+PI1681,NULL,1598189,1597266,Mg2+/Co2+ transporter
+PI1682,NULL,1599894,1598443,aminoacyl-histidine dipeptidase
+PI1684,NULL,1601213,1601833,dimethyladenosine transferase
+PI1686,NULL,1601958,1601734,hypothetical protein
+PI1687,NULL,1602447,1602962,ribosome recycling factor
+PI1688,NULL,1603022,1603963,possible GTPase
+PI1689,NULL,1604450,1605262,conserved hypothetical protein
+PI1690,NULL,1605124,1605687,transcription regulator; possible Fe2+/Zn2+ uptake regulation proteins
+PI1691,NULL,1605796,1605644,hypothetical protein
+PI1694,NULL,1609857,1610006,hypothetical protein
+PI1695,NULL,1610119,1610370,hypothetical protein
+PI1696,NULL,1610684,1612309,conserved hypothetical protein
+PI1697,NULL,1612357,1613949,conserved hypothetical protein
+PI1698,NULL,1613970,1616729,subtilisin-like serine protease
+PI1699,NULL,1616744,1617694,conserved hypothetical protein
+PI1700,NULL,1617747,1619303,hypothetical protein
+PI1702,NULL,1620727,1620927,hypothetical protein
+PI1703,NULL,1621016,1621540,conserved hypothetical protein
+PI1705,NULL,1621921,1622766,3-oxoacyl-(acyl-carrier-protein) synthase III
+PI1706,NULL,1622910,1623728,GTP-binding protein
+PI1708,NULL,1625227,1625622,hypothetical protein
+PI1709,NULL,1626747,1625983,ABC transporter, ATP-binding protein
+PI1710,NULL,1627416,1626784,ABC-type permease component
+PI1711,NULL,1627737,1628489,ABC transporter, ATP-binding protein
+PI1712,NULL,1627834,1627637,hypothetical protein
+PI1142,NULL,1070032,1072182,S1 RNA binding domain protein, S1 ribosomal protein
+PI1714,NULL,1630516,1631412,ISPg3-related transposase
+PI1715,NULL,1631779,1632384,conserved hypothetical protein; possible DNA-binding protein, histone-like family
+PI1716,NULL,1632066,1631728,hypothetical protein
+PI1717,NULL,1633948,1632806,major outer membrane protein
+PI1719,NULL,1636267,1635998,conserved hypothetical protein
+PI1720,NULL,1638052,1636286,conserved hypothetical protein
+PI1722,NULL,1641055,1639676,possible peptidyl-prolyl cis-trans isomerase
+PI1723,NULL,1641789,1642193,conserved hypothetical protein
+PI1725,NULL,1643164,1643280,hypothetical protein
+PI1727,NULL,1647049,1645820, ATP-dependent Clp protease, ATP-binding subunit
+PI1728,NULL,1647718,1647056,ATP-dependent Clp protease, proteolytic subunit
+PI1730,NULL,1650254,1650427,hypothetical protein
+PI1731,NULL,1651926,1650262,formate--tetrahydrofolate ligase
+PI1732,NULL,1652158,1652018,hypothetical protein
+PI1733,NULL,1652497,1652300,hypothetical protein
+PI1734,NULL,1653889,1652549,possible carboxyl-terminal protease-related protein
+PI1735,NULL,1654383,1653568,conserved hypothetical protein
+PI1737,NULL,1657906,1659453,glycyl-tRNA synthetase
+PI1738,NULL,1659483,1660172,FKBP-type peptidyl-prolyl cis-trans isomerase
+PI1739,NULL,1660317,1661705,Na+-driven multidrug efflux pump, MATE efflux family protein
+PI1740,NULL,1661744,1662376,DedA family protein
+PI1741,NULL,1663916,1662894,lipid-A-disaccharide synthase
+PI1743,NULL,1664990,1664088,stationary-phase survival protein
+PI1744,NULL,1665775,1666680,chromosome partitioning protein
+PI1745,NULL,1666755,1667477,conserved hypothetical protein
+PI1746,NULL,1667496,1667666,hypothetical protein
+PI1749,NULL,1671697,1671179,conserved hypothetical protein
+PI1750,NULL,1673956,1672274,sulfate transporter
+PI1751,NULL,1680340,1679975,desulfoferrodoxin
+PI1752,NULL,1680614,1681330,conserved hypothetical protein
+PI1753,NULL,1681342,1680431,conserved hypothetical protein
+PI1754,NULL,1682070,1681342,conserved hypothetical protein
+PI1755,NULL,1682570,1682070,RNA polymerase sigma-70 factor, ECF subfamily
+PI1756,NULL,1682767,1683210,conserved hypothetical protein
+PI1757,NULL,1684074,1684277,hypothetical protein
+PI1758,NULL,1684117,1683347,hypothetical protein
+PI1759,NULL,1684321,1684446,hypothetical protein
+PI1760,NULL,1684553,1684717,hypothetical protein
+PI1761,NULL,1684603,1684436,hypothetical protein
+PI1762,NULL,1684809,1685705,ISPg3-related transposase
+PI1763,NULL,1688662,1686017,two-component system sensor histidine kinase/response regulator
+PI1764,NULL,1689088,1691313,conserved hypothetical protein
+PI1765,NULL,1691421,1693238,fructanase, glycoside hydrolase family
+PI1766,NULL,1693259,1694410,sugar transporter, possible glucose/galactose transporter
+PI1767,NULL,1694425,1695303,fructokinase, pfkB family
+PI1768,NULL,1695596,1696699,conserved hypothetical protein
+PI1769,NULL,1696997,1696647,hypothetical protein
+PI1770,NULL,1697476,1700058,4-alpha-glucanotransferase
+PI1771,NULL,1700136,1702334,alpha-glucosidase
+PI1772,NULL,1702397,1704307,pullulanase
+PI1773,NULL,1704422,1706167,alpha-amylase (neopullulanase)
+PI1774,NULL,1707091,1706324,hypothetical protein
+PI1775,NULL,1708180,1707395,hypothetical protein
+PI1777,NULL,1709542,1710141,conserved hypothetical protein
+PI1778,NULL,1710149,1711459,UDP-N-acetylglucosamine 1-carboxyvinyltransferase
+PI0639,NULL,582818,583225,small heat shock protein
+PI1780,NULL,1712006,1713157,1-deoxy-D-xylulose 5-phosphate reductoisomerase
+PI1781,NULL,1713214,1714611,membrane-associated zinc metalloprotease
+PI1782,NULL,1714622,1715455,possible LPS biosynthesis protein
+PI1783,NULL,1715502,1716218,possible 4-diphosphocytidyl-2c-methyl-D-erythritol synthase
+PI1784,NULL,1716341,1717255,possible dTDP-glucose 4,6-dehydratase, NAD-dependent epimerase/dehydratase family
+PI1785,NULL,1717262,1718164,conserved hypothetical protein
+PI1786,NULL,1718264,1718440,hypothetical protein
+PI1787,NULL,1718554,1719225,conserved hypothetical protein
+PI1788,NULL,1718621,1718767,hypothetical protein
+PI1789,NULL,1718867,1719097,hypothetical protein
+PI1790,NULL,1722319,1722822,hypothetical protein
+PI1791,NULL,1724301,1718629,conserved hypothetical protein
+PI1792,NULL,1724781,1725203,hypothetical protein
+PI1793,NULL,1725704,1725231,2C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+PI1795,NULL,1730546,1727004,conserved hypothetical protein
+PI0430,NULL,403161,399970,periplasmic protease; MdsD protein
+PI1797,NULL,1731619,1731287,hypothetical protein
+PI1798,NULL,1732884,1731928, elongation factor Ts
+PI1800,NULL,1733961,1733863,hypothetical protein
+PI1802,NULL,1735017,1734490,50S ribosomal protein L13
+PI1803,NULL,1737851,1735221,conserved hypothetical protein
+PI1804,NULL,1738350,1738249,hypothetical protein
+PI1806,NULL,1742251,1740917,integral membrane transport protein; possible sugar transport proteins
+PI1807,NULL,1742293,1742541,hypothetical protein
+PI1808,NULL,1743410,1742307,LacI family transcriptional regulator
+PI1809,NULL,1746744,1748384,outer membrane protein
+PI1810,NULL,1748445,1749626,outer membrane protein
+PI1811,NULL,1749658,1750689,conserved hypothetical protein
+PI1812,NULL,1750899,1752914,possible alpha-amylase
+PI1813,NULL,1753018,1753146,hypothetical protein
+PI1814,NULL,1753293,1753093,hypothetical protein
+PI1816,NULL,1755574,1754786,acid phosphatase
+PI1817,NULL,1756556,1755660,ISPg3-related transposase
+PI1818,NULL,1757031,1757330,hypothetical protein
+PI1819,NULL,1759939,1756760,hypothetical protein
+PI1820,NULL,1760102,1760437,hypothetical protein
+PI1821,NULL,1761577,1760654,possible thioredoxin family protein
+PI1822,NULL,1763325,1761592,ABC transporter, ATP-binding / permease
+PI1824,NULL,1764619,1765065,ThiJ/PfpI family protein
+PI1825,NULL,1765136,1765765,2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase
+PI0503,NULL,463371,464258,mobilizable transposon, excision protein
+PI0519,NULL,478869,478093,5'-nucleotidase/2',3'-cyclic phosphodiesterase
+PI1829,NULL,1769395,1769499,hypothetical protein
+PI1830,NULL,1770421,1769579,conserved hypothetical protein
+PI1831,NULL,1773227,1770438,conserved hypothetical protein
+PI1832,NULL,1774083,1773301,conserved hypothetical protein
+PI1833,NULL,1774555,1774097,bacterioferritin comigratory protein
+PI1834,NULL,1775001,1776221,anaerobic C4-dicarboxylate membrane transporter
+PI1835,NULL,1776284,1777336,L-asparaginase I
+PI1836,NULL,1777448,1778641,conserved hypothetical protein
+PI1838,NULL,1780913,1782088,conserved hypothetical protein
+PI1839,NULL,1782318,1782560,hypothetical protein
+PI1840,NULL,1782996,1787084,conserved hypothetical protein
+PI1841,NULL,1787100,1788029,conserved hypothetical protein
+PI1842,NULL,1788075,1788377,conserved hypothetical protein
+PI1843,NULL,1788671,1788564,hypothetical protein
+PI1844,NULL,1790339,1790232,hypothetical protein
+PI1845,NULL,1791597,1791812,hypothetical protein
+PI1846,NULL,1791845,1792003,hypothetical protein
+PI1847,NULL,1792146,1793909,conserved hypothetical protein; possible integral membrane protein
+PI1848,NULL,1793939,1795075,hypothetical protein
+PI1849,NULL,1795056,1796099,conserved hypothetical protein; possible acyltransferase family protein
+PI1850,NULL,1796107,1796982,prenyltransferase, UbiA family
+PI1851,NULL,1796987,1797946,conserved hypothetical protein
+PI1852,NULL,1798092,1799381,conserved hypothetical protein
+PI1853,NULL,1799462,1800814,conserved hypothetical protein
+PI1854,NULL,1801065,1801787,possible glycosyl transferase
+PI1855,NULL,1803228,1801855,lipopolysaccharide biosynthesis protein
+PI1856,NULL,1803945,1803343,nicotinate-nucleotide adenylyltransferase
+PI1858,NULL,1805415,1804540,conserved hypothetical protein
+PI1859,NULL,1805887,1805534,conserved hypothetical protein
+PI1860,NULL,1806089,1806319,hypothetical protein
+PI1861,NULL,1806174,1806067,hypothetical protein
+PI1862,NULL,1806329,1806451,hypothetical protein
+PI1863,NULL,1806814,1810452,phosphoribosylformylglycinamidine synthase
+PI1864,NULL,1810458,1811069,chromate transport protein
+PI1865,NULL,1811075,1811647,chromate transport protein
+PI1866,NULL,1811833,1811970,hypothetical protein
+PI1867,NULL,1814728,1812530,helicase related protein
+PI1868,NULL,1814975,1814778,hypothetical protein
+PI1869,NULL,1815271,1815486,hypothetical protein
+PI1870,NULL,1815573,1815442,hypothetical protein
+PI1871,NULL,1815928,1817193,glycosyl transferase, group 1 family protein
+PI1872,NULL,1817197,1817976,glycosyl transferase, group 2 family protein
+PI1873,NULL,1818018,1818479,hypothetical protein
+PI1874,NULL,1818577,1818984,hypothetical protein
+PI1875,NULL,1819074,1819166,hypothetical protein
+PI1876,NULL,1819222,1820028,possible flagellar motor protein, OmpA family
+PI1877,NULL,1820050,1820199,hypothetical protein
+PI1878,NULL,1820129,1820221,hypothetical protein
+PI1879,NULL,1821305,1820811,uracil phosphoribosyltransferase
+PI1880,NULL,1821807,1823360,phosphoenolpyruvate carboxykinase (ATP)
+PI1881,NULL,1823673,1824590,ISPg3-related transposase
+PI1882,NULL,1825927,1826547,hypothetical protein
+PI1883,NULL,1826234,1825014,conserved hypothetical protein; possible surface protein
+PI1884,NULL,1827023,1827517,conserved hypothetical protein
+PI1885,NULL,1827699,1826407,cell division protein
+PI1886,NULL,1829218,1827773,cell division protein
+PI1887,NULL,1830046,1829255,cell division protein
+PI1888,NULL,1831535,1830120,UDP-N-acetylmuramate--L-alanine ligase
+PI1889,NULL,1832651,1831551,UDP-N-acetylglucosamine--N-acetylmuramyl-(pentapeptide) pyrophosphoryl-undecaprenol N-acetylglucosamine transferase
+PI1890,NULL,1834132,1833026,cell division protein FtsW
+PI1891,NULL,1835336,1835977,hypothetical protein
+PI1892,NULL,1835607,1834357,UDP-N-acetylmuramoylalanine--D-glutamate ligase
+PI1893,NULL,1837032,1835764,phospho-N-acetylmuramoyl-pentapeptide-transferase
+PI1894,NULL,1838544,1837087,UDP-N-acetylmuramoylalanyl-D-glutamyl-2,6-diaminopimelate ligase
+PI1896,NULL,1840994,1841248,hypothetical protein
+PI1897,NULL,1841295,1840759,conserved hypothetical protein
+PI1898,NULL,1842504,1841428,S-adenosyl-methyltransferase
+PI1899,NULL,1842841,1842371,conserved hypothetical protein
+PI1900,NULL,1843239,1844009,conserved hypothetical protein
+PI1901,NULL,1844072,1845061,hemolysin A
+PI1902,NULL,1845235,1845071,hypothetical protein
+PI1903,NULL,1845432,1845629,hypothetical protein
+PI1904,NULL,1847611,1845308,glutamine synthetase
+PI1905,NULL,1847914,1847768,hypothetical protein
+PI1906,NULL,1848148,1850961,zinc protease, immunoreactive 106 kDa antigen PG115
+PI1907,NULL,1852087,1851245,possible IS1249-related transposase
+PI0162,NULL,156270,157061,ADP-ribosylglycohydrolase (ADP-ribosyl-[dinitrogen reductase] hydrolase)
+PI1910,NULL,1855918,1856025,hypothetical protein
+PI1913,NULL,1857244,1858068,conserved hypothetical protein
+PI1914,NULL,1858165,1858656,RNA polymerase, ECF-type sigma factor
+PI1915,NULL,1858656,1859966,conserved hypothetical protein
+PI1916,NULL,1860800,1860351,conserved hypothetical protein
+PI1917,NULL,1861656,1860937,uracil-DNA glycosylase
+PI1919,NULL,1863935,1862439,2,3-bisphosphoglycerate-independent phosphoglycerate mutase
+PI1920,NULL,1865084,1865263,hypothetical protein
+PI1921,NULL,1865160,1864057,conserved hypothetical protein
+PI1922,NULL,1865359,1865514,hypothetical protein
+PI1923,NULL,1865972,1865700,conserved hypothetical protein
+PI1924,NULL,1866555,1866037,cytidine deaminase
+PI1925,NULL,1867993,1866527,conserved hypothetical protein
+PI1926,NULL,1868254,1871037,conserved hypothetical protein
+PI1927,NULL,1871327,1872106,hypothetical protein
+PI1928,NULL,1872136,1873464,conserved hypothetical protein
+PI1929,NULL,1873527,1874234,conserved hypothetical protein; possible ankyrin repeat protein (eukaryotic-like)
+PI1930,NULL,1874359,1875114,conserved hypothetical protein; possible ankyrin repeat protein (eukaryotic-like)
+PI1931,NULL,1878151,1875596,alpha glycan phosphorylase, maltodextrin phosphorylase
+PI1932,NULL,1879866,1878220,glycogen synthase
+PI1933,NULL,1880065,1880523,hypothetical protein
+PI1934,NULL,1882503,1882661,hypothetical protein
+PI1935,NULL,1887171,1883464,possible  internalin-related protein
+PI1936,NULL,1889548,1887179,conserved hypothetical protein; possible serine-type protease
+PI1937,NULL,1891146,1889551,hypothetical protein
+PI1938,NULL,1895698,1891994,hypothetical protein
+PI1939,NULL,1896726,1896568,hypothetical protein
+PI1940,NULL,1897327,1895870,conserved hypothetical protein; possible outer membrane protein
+PI1942,NULL,1901329,1901081,hypothetical protein
+PI1943,NULL,1901436,1902266,hypothetical protein
+PI1944,NULL,1902050,1901151,hypothetical protein
+PI1945,NULL,1902647,1902072,ribonuclease HII
+PI1946,NULL,1902853,1903080,hypothetical protein
+PI1947,NULL,1902925,1902674,hypothetical protein
+PI1948,NULL,1903224,1903316,hypothetical protein
+PI1951,NULL,1906712,1905963,ABC transporter, ATP-binding protein
+PI1952,NULL,1907099,1906728,hypothetical protein
+PI1954,NULL,1911707,1908924,translation initiation factor IF-2
+PI1955,NULL,1913118,1911922,N utilization substance protein A
+PI1956,NULL,1913686,1913189,conserved hypothetical protein
+PI1957,NULL,1913899,1916634,calcium-transporting ATPase
+PI1958,NULL,1916722,1917429,hypothetical protein
+PI1959,NULL,1918030,1917848,hypothetical protein
+PI1960,NULL,1919043,1918153,hypothetical protein
+PI1961,NULL,1919087,1919215,hypothetical protein
+PI1962,NULL,1920766,1919234,conserved hypothetical protein
+PI1963,NULL,1922317,1921349,hypothetical protein
+PI1964,NULL,1922913,1922317,conserved hypothetical protein
+PI1965,NULL,1922966,1922871,hypothetical protein
+PI1966,NULL,1924151,1922991,conserved hypothetical protein
+PI1967,NULL,1924501,1924376,hypothetical protein
+PI1968,NULL,1925624,1924518,hypothetical protein
+PI1969,NULL,1925797,1925636,hypothetical protein
+PI1970,NULL,1927942,1926614,hypothetical protein
+PI1971,NULL,1928167,1929009,possible IS1249-related transposase
+PI1972,NULL,1930563,1929769,hypothetical protein
+PI1973,NULL,1931231,1930569,conserved hypothetical protein
+PI1974,NULL,1931647,1931333,hypothetical protein
+PI1975,NULL,1932993,1931653,conserved hypothetical protein
+PI1976,NULL,1933414,1933133,hypothetical protein
+PI1977,NULL,1934679,1933408,hypothetical protein
+PI1978,NULL,1935594,1934755,hypothetical protein
+PI1979,NULL,1937387,1935612,conserved hypothetical protein
+PI1980,NULL,1938005,1937610,conserved hypothetical protein
+PI1981,NULL,1938037,1938198,hypothetical protein
+PI1982,NULL,1939268,1938579,conserved hypothetical protein
+PI1983,NULL,1940064,1939291,possible xylanase
+PI1986,NULL,1941611,1941003,hypothetical protein
+PI1987,NULL,1942460,1941696,conserved hypothetical protein; possible outer outer membrane lipoprotein Omp28
+PI1988,NULL,1944128,1942476,conserved hypothetical protein
+PI1989,NULL,1944643,1944158,conserved hypothetical protein; possible thioredoxin
+PI1990,NULL,1944704,1944826,hypothetical protein
+PI1991,NULL,1946430,1944751,conserved hypothetical protein
+PI1992,NULL,1946567,1946662,hypothetical protein
+PI1993,NULL,1949052,1946755,thiol protease/hemagglutinin, PrtT precursor
+PI1994,NULL,1949500,1949904,hypothetical protein
+PI1995,NULL,1950272,1949364,hypothetical protein
+PI1996,NULL,1950454,1950648,hypothetical protein
+PI1997,NULL,1951639,1951944,hypothetical protein
+PI1998,NULL,1951910,1953208,hypothetical protein
+PI1999,NULL,1956728,1956597,hypothetical protein
+PI2000,NULL,1959053,1959769,conserved hypothetical protein; possible membrane protein
+PI2001,NULL,1959990,1960538,hypothetical protein
+PI2002,NULL,1960802,1960975,hypothetical protein
+PI2003,NULL,1960963,1961124,hypothetical protein
+PI2004,NULL,1961094,1963064,1-deoxy-D-xylulose 5-phosphate synthase
+PI2005,NULL,1963090,1964427,potassium uptake protein
+PI2006,NULL,1964620,1965906,potassium uptake system protein
+PI2008,NULL,1968021,1967263, ABC transporter, ATP-binding protein
+PI2011,NULL,1970790,1970569,hypothetical protein
+PI2012,NULL,1971615,1970947,hypothetical protein
+PI2013,NULL,1972469,1972849,hypothetical protein
+PI2014,NULL,1972663,1971611,conserved hypothetical protein
+PI2016,NULL,1974993,1973908,ribosomal large subunit pseudouridine synthase D
+PI2017,NULL,1975778,1975002,conserved hypothetical protein
+PI2019,NULL,1976271,1976834,elongation factor P
+PI2020,NULL,1977006,1977986,glycosyl transferase, group 2 family protein
+PI2022,NULL,1978771,1979019,hypothetical protein
+PI2023,NULL,1978892,1978725,hypothetical protein
+PI2024,NULL,1979045,1978944,hypothetical protein
+PI2025,NULL,1979512,1979168,conserved hypothetical protein
+PI2026,NULL,1980143,1979637,RNA polymerase sigma-70 factor, ECF subfamily
+PI2027,NULL,1982190,1980301,arginine decarboxylase
+pPI0173,NULL,149202,148975,hypothetical protein
+PI2028,NULL,1982862,1982302,shikimate kinase
+PI2030,NULL,1986187,1985741,hypothetical protein
+PI2031,NULL,1986681,1986193,hypothetical protein
+PI2032,NULL,1987181,1986684,RNA polymerase sigma factor, ECF subfamily
+PI2033,NULL,1987726,1987208,hypothetical protein
+PI2034,NULL,1988180,1987713,conserved hypothetical protein
+PI2036,NULL,1989576,1989379,hypothetical protein
+PI2037,NULL,1990429,1989512,TIM-barrel protein, NifR3 family
+PI2038,NULL,1990603,1992651,conserved hypothetical protein; possible  internalin-related protein
+PI2039,NULL,1993051,1992773,hypothetical protein
+PI2040,NULL,1994125,1993208,conserved hypothetical protein; possible transporter
+PI2041,NULL,1994301,1994720,conserved hypothetical protein
+PI2042,NULL,1996198,1994315,cation-transporting ATPase
+PI2043,NULL,1996317,1996198,hypothetical protein
+PI2044,NULL,1997411,1997139,hypothetical protein
+PI2045,NULL,1998783,1998634,hypothetical protein
+PI2046,NULL,1999170,1999265,hypothetical protein
+PI2047,NULL,1999468,2000766,UDP-N-acetylmuramoylalanyl-D-glutamyl-2,6-diaminopimelate--D-alanyl-D-alanyl ligase
+PI2048,NULL,2000845,2002626,possible two-component system sensor histidine kinase
+PI2049,NULL,2003763,2002642,possible transcriptional regulator, AraC family
+PI2050,NULL,2004152,2007688,hypothetical protein
+PI2051,NULL,2007707,2007895,hypothetical protein
+PI2052,NULL,2009756,2008734,hypothetical protein
+PI2053,NULL,2012936,2010813,conserved hypothetical protein; possible outer membrane receptor protein
+PI2054,NULL,2013023,2013136,hypothetical protein
+PI2055,NULL,2013465,2013139,hypothetical protein
+PI2056,NULL,2013907,2014488,conserved hypothetical protein
+PI2057,NULL,2015912,2015079,conserved hypothetical protein; possible metal-dependent membrane protease
+PI2059,NULL,2017459,2017728,conserved hypothetical protein
+PI2060,NULL,2017735,2018418,conserved hypothetical protein; possible metalloprotease
+PI2061,NULL,2018426,2021707,type I restriction enzyme restriction subunit
+PI2062,NULL,2021798,2024068,type I restriction-modification system
+PI2063,NULL,2024086,2025216,conserved hypothetical protein
+PI2064,NULL,2025216,2027051,conserved hypothetical protein; possible type I restriction-modification system, S subunit
+PI2065,NULL,2027017,2027313,hypothetical protein
+PI2066,NULL,2027319,2027786,hypothetical protein
+PI2067,NULL,2027900,2028397,hypothetical protein
+PI2068,NULL,2028468,2028860,hypothetical protein
+PI2069,NULL,2029400,2029125,ISPg3-related transposase, C-terminal fragment
+PI2070,NULL,2030021,2029125,ISPg3-related transposase, N-terminal fragment
+PI2071,NULL,2030048,2030368,hypothetical protein
+PI2072,NULL,2030877,2031530,possible ISmav2-related transposase
+PI2073,NULL,2033547,2032135,mobilization protein
+PI2074,NULL,2034435,2033800,conserved hypothetical protein
+PI2075,NULL,2035415,2034561,conserved hypothetical protein
+PI2076,NULL,2035818,2035543,hypothetical protein
+PI2077,NULL,2036130,2036032,hypothetical protein
+PI2078,NULL,2036843,2036193,hypothetical protein
+PI2079,NULL,2038021,2036855,conserved hypothetical protein; possible ATPase
+PI2080,NULL,2038358,2038233,hypothetical protein
+PI2081,NULL,2039716,2038442,conserved hypothetical protein; possible integrase
+PI2082,NULL,2040018,2040323,hypothetical protein
+PI2083,NULL,2040464,2040721,hypothetical protein
+PI2084,NULL,2041129,2040527,hypothetical protein
+PI2085,NULL,2041863,2041240,conserved hypothetical protein
+PI2087,NULL,2044315,2043563,dihydropicolinate reductase
+PI2088,NULL,2044577,2045875,conserved hypothetical protein; possible PAP2 superfamily protein
+PI2089,NULL,2046340,2047710,conserved hypothetical protein
+PI2091,NULL,2048159,2049286,DNA processing protein
+PI2092,NULL,2049320,2049466,hypothetical protein
+PI2093,NULL,2049500,2049330,hypothetical protein
+PI2096,NULL,2050408,2050944,conserved hypothetical protein; possible phosphoesterase
+PI1030,NULL,948411,947986,biotin carboxyl carrier protein
+PI2098,NULL,2052533,2052246,hypothetical protein
+PI2099,NULL,2052549,2053337,D-alanyl-D-alanine dipeptidase
+PI2100,NULL,2053491,2054594,conserved hypothetical protein
+PI2101,NULL,2054668,2055810,conserved hypothetical protein
+PI2103,NULL,2057994,2057842,hypothetical protein
+PI2104,NULL,2058050,2059450,carboxyl-terminal protease
+PI2105,NULL,2059497,2059646,hypothetical protein
+PI2106,NULL,2059558,2059361,hypothetical protein
+PI2107,NULL,2060083,2059844,hypothetical protein
+PI2108,NULL,2060685,2059801,cell surface protein; possible cell surface antigen BspA
+PI2109,NULL,2061583,2060693,surface antigen BspA
+PI2110,NULL,2061610,2062506,ISPg3-related transposase (IS195 family)
+PI2111,NULL,2063318,2062911,conserved hypothetical protein
+PI2113,NULL,2063934,2064338,hypothetical protein
+PI2114,NULL,2064849,2063875,conserved hypothetical protein
+PI2115,NULL,2065225,2065106,hypothetical protein
+PI2116,NULL,2066107,2065355,fumarate reductase/succinate dehydrogenase, iron-sulfur protein
+PI2117,NULL,2066744,2066157,fumarate reductase/succinate dehydrogenase flavoprotein subunit, C-terminal
+PI2118,NULL,2068057,2066606,fumarate reductase/succinate dehydrogenase flavoprotein subunit, N-terminal
+PI2119,NULL,2068818,2068171,conserved hypothetical protein; possible cytochrome B subunit
+PI2120,NULL,2068979,2069110,hypothetical protein
+PI2122,NULL,2070540,2069884,conserved hypothetical protein
+PI2123,NULL,2071851,2072384,adenine phosphoribosyltransferase
+PI2125,NULL,2074590,2075039,D-tyrosyl-tRNA(Tyr) deacylase
+PI2126,NULL,2075047,2075415,conserved hypothetical protein
+PI2128,NULL,2076885,2076652,hypothetical protein
+PI2129,NULL,2077781,2076948,octaprenyl-diphosphate synthase
+PI2131,NULL,2080928,2080818,hypothetical protein
+PI2132,NULL,2081199,2081101,hypothetical protein
+PI2133,NULL,2081246,2082379,collagenase
+PI2134,NULL,2082409,2082870,hypothetical protein
+PI2135,NULL,2082894,2083313,conserved hypothetical protein
+PI2136,NULL,2082900,2082745,hypothetical protein
+PI2137,NULL,2083313,2083867,RNA methylase SpoU family
+PI2138,NULL,2085193,2083976,nicotinate phosphoribosyltransferase
+PI2139,NULL,2085406,2086812,cysteinyl-tRNA synthetase
+PI2140,NULL,2087227,2086913,conserved hypothetical protein
+PI2141,NULL,2087309,2087617,hypothetical protein
+PI2142,NULL,2087746,2089236,conserved hypothetical protein
+PI2144,NULL,2092094,2092360,hypothetical protein
+PI2145,NULL,2092353,2092709,hypothetical protein
+PI2146,NULL,2093381,2092542,prolipoprotein diacylglyceryl transferase
+PI2148,NULL,2095601,2094645,ribonuclease III
+PI2149,NULL,2096853,2095594,3-oxoacyl-acyl-carrier-protein synthase
+PI2150,NULL,2097345,2097112,acyl carrier protein
+PI2151,NULL,2097713,2098312,conserved hypothetical protein
+PI2152,NULL,2098358,2099356,heptosyltransferase
+PI2153,NULL,2099532,2099690,hypothetical protein
+PI2154,NULL,2100001,2102889,leucyl-tRNA synthetase
+PI2155,NULL,2101112,2100804,hypothetical protein
+PI2156,NULL,2102936,2103937,conserved hypothetical protein; possible permease
+PI2159,NULL,2105407,2107431,immunoreactive 84 kDa antigen PG93
+PI2160,NULL,2107410,2108417,hypothetical protein
+PI2161,NULL,2108811,2108719,hypothetical protein
+PI2162,NULL,2108936,2109553,conserved hypothetical protein
+PI2163,NULL,2109585,2110094,conserved hypothetical protein
+PI2164,NULL,2110158,2110706,acetyltransferase, GNAT family
+PI2165,NULL,2110759,2111265,conserved hypothetical protein; possible membrane protein
+PI2166,NULL,2111534,2112133,hypothetical protein
+PI2167,NULL,2111730,2111951,hypothetical protein
+PI2168,NULL,2111806,2111426,hypothetical protein
+PI2169,NULL,2112385,2111846,hypothetical protein
+PI2170,NULL,2112848,2112378,RNA polymerase sigma-70 factor, ECF subfamily
+PI2171,NULL,2113891,2112875,conserved hypothetical protein
+PI2172,NULL,2113959,2114051,hypothetical protein
+PI2173,NULL,2114024,2113935,hypothetical protein
+PI2174,NULL,2114385,2115029,hypothetical protein
+PI2175,NULL,2115147,2116586,RNA polymerase sigma-54
+PI2176,NULL,2116624,2117238,conserved hypothetical protein
+PI2177,NULL,2117267,2117770,phosphoribosylaminoimidazole carboxylase
+pPI0001,NULL,114,422,transposase-related protein (transposase fragment)
+pPI0002,NULL,889,1935,conserved hypothetical protein
+pPI0003,NULL,1334,1423,hypothetical protein
+pPI0004,NULL,3760,2126,peptidase
+pPI0005,NULL,5284,5646,hypothetical protein
+PI0233,NULL,231984,233831,membrane protein, possible exporter
+pPI0007,NULL,5460,5741,hypothetical protein
+pPI0008,NULL,5844,5641,hypothetical protein
+pPI0009,NULL,6089,6274,hypothetical protein
+pPI0010,NULL,6724,6909,hypothetical protein
+pPI0011,NULL,6758,5844,conserved hypothetical protein
+pPI0014,NULL,7904,8032,hypothetical protein
+pPI0016,NULL,12202,11954,hypothetical protein
+pPI0017,NULL,12500,12631,hypothetical protein
+pPI0018,NULL,12553,12407,hypothetical protein
+pPI0019,NULL,13117,12557,hypothetical protein
+pPI0020,NULL,14384,13395,conserved hypothetical protein
+pPI0021,NULL,15358,14207,conserved hypothetical protein
+pPI0022,NULL,15533,15336,hypothetical protein
+pPI0023,NULL,15567,15734,hypothetical protein
+pPI0024,NULL,15776,15883,hypothetical protein
+pPI0025,NULL,15790,15584,hypothetical protein
+pPI0026,NULL,16005,19280,conserved hypothetical protein
+pPI0027,NULL,16639,16878,hypothetical protein
+pPI0028,NULL,19379,19537,hypothetical protein
+pPI0029,NULL,19543,20160,xylanase/chitin deacetylase; polysaccharide deacetylase
+pPI0030,NULL,20132,21139,iron-sulfur cluster binding protein
+pPI0031,NULL,23595,25592,hypothetical protein
+pPI0033,NULL,26237,26419,hypothetical protein
+pPI0034,NULL,26343,27128,hypothetical protein
+pPI0035,NULL,28625,24183,hemogluttinin A-related protein (HagA); Lys-gingipain related protein
+pPI0036,NULL,28776,28633,hypothetical protein
+pPI0037,NULL,29023,29154,hypothetical protein
+pPI0038,NULL,30726,29410,uncharacterized membrane protein
+pPI0039,NULL,30799,32073,hypothetical protein
+pPI0040,NULL,30860,30955,hypothetical protein
+pPI0041,NULL,32976,30913,conserved hypothetical protein
+pPI0042,NULL,33335,33213,hypothetical protein
+pPI0043,NULL,33704,33892,hypothetical protein
+pPI0044,NULL,34902,33730,hypothetical protein
+pPI0045,NULL,35190,35351,hypothetical protein
+pPI0047,NULL,37916,38149,hypothetical protein
+pPI0048,NULL,38650,40038,serine protease
+pPI0049,NULL,40211,40372,hypothetical protein
+pPI0050,NULL,40739,40464,probable  transcriptional regulator
+pPI0051,NULL,41276,41055,ISPg3-related transposase fragment
+pPI0052,NULL,42006,41221,ISPg3-related transposase fragment
+pPI0053,NULL,43868,42432,NADH:ubiquinone oxidoreductase chain N
+pPI0054,NULL,45353,43887,NADH:ubiquinone oxidoreductase chain M
+pPI0055,NULL,47424,45403,NADH:ubiquinone oxidoreductase chain  L
+pPI0056,NULL,47742,47437, NADH:ubiquinone oxidoreductase chain K
+pPI0057,NULL,48278,47742,NADH:ubiquinone oxidoreductase chain J
+pPI0058,NULL,48828,48298,NADH:ubiquinone oxidoreductase chain I
+pPI0059,NULL,49845,51056,hypothetical protein
+pPI0060,NULL,49963,48872,NADH:ubiquinone oxidoreductase chain H
+pPI0061,NULL,51584,50013, NADH dehydrogenase I, D subunit
+pPI0063,NULL,52816,52469,NADH dehydrogenase I, A subunit
+pPI0064,NULL,54066,53563,hypothetical protein
+pPI0065,NULL,55295,54066,conserved hypothetical protein
+pPI0066,NULL,55525,55340,hypothetical protein
+pPI0067,NULL,56519,55620,conserved hypothetical protein
+pPI0068,NULL,56938,56504,conserved hypothetical protein
+pPI0069,NULL,57494,56931,conserved hypothetical protein
+pPI0070,NULL,57895,57389,RNA polymerase sigma-70 factor, ECF subfamily
+PI0156,NULL,150973,148856,conserved hypothetical protein
+pPI0072,NULL,60533,62152,possible lectin-like adhesin precursor
+pPI0073,NULL,62172,62369,hypothetical protein
+pPI0074,NULL,62173,61892,hypothetical protein
+pPI0075,NULL,62386,63468,DNA/RNA endonuclease
+pPI0076,NULL,64767,64198,conserved hypothetical protein
+pPI0077,NULL,66651,65020,aminoacyl-histidine dipeptidase (peptidase d)
+pPI0078,NULL,66773,67366,conserved hypothetical protein
+pPI0079,NULL,68158,68490,hypothetical protein
+pPI0080,NULL,69104,68172,hypothetical protein
+pPI0081,NULL,71477,69171,penicillin-binding protein 1A
+PI1006,NULL,927109,926744,conserved hypothetical protein
+PI1014,NULL,936192,934666,prismane protein, hybrid-cluster protein
+pPI0083,NULL,72607,73059,aspartate carbamoyltransferase, regulatory subunit
+pPI0085,NULL,74877,75026,hypothetical protein
+pPI0086,NULL,79555,75188,conserved hypothetical protein
+pPI0087,NULL,79891,81099,NADH:ubiquinone oxidoreductase
+pPI0088,NULL,81238,82302,Na+-translocating NADH-quinone reductase subunit
+pPI0089,NULL,82321,83028,Na+-translocating NADH-quinone reductase subunit
+pPI0090,NULL,83067,83693,Na+-translocating NADH-quinone reductase subunit
+pPI0091,NULL,83699,84322,Na+-transporting NADH:ubiquinone oxidoreductase subunit 5
+pPI0093,NULL,85833,85973,hypothetical protein
+pPI0094,NULL,88883,86088,DNA and RNA helicase
+pPI0095,NULL,89191,88802,hypothetical protein
+pPI0096,NULL,89602,89507,hypothetical protein
+PI1002,NULL,923982,924734,metal dependent hydrolase
+pPI0098,NULL,95065,92246,conserved hypothetical protein
+pPI0099,NULL,95157,95273,hypothetical protein
+pPI0100,NULL,98506,96083,ATP-dependent Clp protease, ATP binding subunit
+pPI0101,NULL,98613,98837,hypothetical protein
+pPI0102,NULL,98866,98738,hypothetical protein
+pPI0103,NULL,100313,98859,conserved hypothetical protein
+pPI0105,NULL,101377,102138,pantoate--beta-alanine ligase
+pPI0106,NULL,102147,102488,aspartate 1-decarboxylase
+pPI0107,NULL,102665,103279,conserved hypothetical protein
+pPI0108,NULL,103054,103317,hypothetical protein
+pPI0109,NULL,103301,103690,conserved hypothetical protein
+pPI0110,NULL,104111,103941,hypothetical protein
+pPI0111,NULL,104348,104142,hypothetical protein
+pPI0113,NULL,106215,107540,conserved hypothetical protein
+pPI0116,NULL,109518,109862,hypothetical protein
+pPI0117,NULL,109534,110190,hypothetical protein
+pPI0118,NULL,109552,108824,conserved hypothetical protein
+pPI0119,NULL,110194,110997,hypothetical protein
+pPI0120,NULL,110955,109768,conserved hypothetical protein
+pPI0121,NULL,111853,110963,oxidoreductase/dehydrogenase
+pPI0122,NULL,112162,113433,conserved hypothetical protein
+pPI0123,NULL,112607,112446,hypothetical protein
+pPI0124,NULL,113844,113587,conserved hypothetical protein
+pPI0125,NULL,115433,114471,acetate/butyrate kinase
+pPI0126,NULL,116453,115542,phosphotransacetylase
+pPI0127,NULL,116667,116843,hypothetical protein
+pPI0128,NULL,116788,116612,hypothetical protein
+pPI0129,NULL,116990,116880,hypothetical protein
+pPI0130,NULL,117262,120357,uncharacterized cell surface protein
+pPI0131,NULL,120671,120576,hypothetical protein
+pPI0132,NULL,121821,120922,ISPg3-related transposase
+pPI0133,NULL,122525,122259,hypothetical protein (possible ISPg4-related transposase (IS5 family))
+pPI0134,NULL,123293,122622,ISPg4-related transposase (IS5 family)
+pPI0135,NULL,123587,123345,hypothetical protein
+pPI0136,NULL,124136,124345,possible ISL3-related transposase
+pPI0137,NULL,124426,124851,hypothetical protein
+pPI0139,NULL,126408,126809,ferritin A
+pPI0140,NULL,126955,127125,hypothetical protein
+pPI0141,NULL,127255,128415,Mrp/Nbp35 family ATP-binding protein (chromosome partitioning)
+pPI0142,NULL,129051,128569,hypothetical protein
+pPI0143,NULL,129256,129035,conserved hypothetical protein
+pPI0144,NULL,130448,129432,integral membrane protein (possible protease)
+pPI0145,NULL,131221,130709,conserved hypothetical protein
+pPI0146,NULL,131412,131215,hypothetical protein
+pPI0147,NULL,131430,131795,hypothetical protein
+pPI0148,NULL,131822,131415,hypothetical protein
+pPI0149,NULL,131991,132284,hypothetical protein
+pPI0150,NULL,132547,132344,hypothetical protein
+PI0245,NULL,244318,243086,possible mobilization protein
+pPI0152,NULL,134057,134188,hypothetical protein
+pPI0153,NULL,134215,133760,hypothetical protein
+PI0989,NULL,912973,913974,mannose-1-phosphate guanylyltransferase
+pPI0156,NULL,138050,136701,dihydroorotase
+pPI0157,NULL,138970,138086, thiol:disulfide interchange protein
+pPI0158,NULL,139057,139545,hypothetical protein
+pPI0159,NULL,139476,139054,hypothetical protein
+pPI0160,NULL,139951,139463,conserved hypothetical protein
+pPI0162,NULL,141478,141771,hypothetical protein
+pPI0163,NULL,141780,141956,hypothetical protein
+pPI0164,NULL,142074,142481,hypothetical protein
+pPI0165,NULL,142511,142221,hypothetical protein
+pPI0166,NULL,143450,143848,hypothetical protein
+pPI0167,NULL,144169,145080, magnesium chelatase, subunit I
+pPI0168,NULL,145215,145970,conserved hypothetical protein
+PI0929,NULL,861108,860434,copper homeostasis protein
+PI0958,NULL,890051,890629,G:T/U mismatch-specific DNA glycosylase
+PI0959,NULL,890635,891264,uridine kinase
+PI0961,NULL,892103,891450,conserved hypothetical protein
+PI0981,NULL,909450,907108,outer membrane protein, TonB dependent receptor
+pPI0175,NULL,152369,153067,probable membrane-associated phospholipid phosphatase
+pPI0176,NULL,153083,154354,S-adenosylmethionine:tRNA-ribosyltransferase-isomerase (queuine synthetase)
+pPI0179,NULL,157724,157885,hypothetical protein
+pPI0180,NULL,157816,158391,hypothetical protein
+pPI0181,NULL,157952,157791,hypothetical protein
+pPI0182,NULL,158690,158550,hypothetical protein
+pPI0183,NULL,158752,158609,hypothetical protein
+pPI0184,NULL,158821,158922,hypothetical protein
+pPI0185,NULL,159847,159623,hypothetical protein
+pPI0186,NULL,160289,160495,hypothetical protein
+pPI0187,NULL,161195,161043,hypothetical protein
+pPI0188,NULL,161443,161249,hypothetical protein
+pPI0189,NULL,161887,163068,hypothetical protein
+pPI0190,NULL,165962,163779,NADP-dependent malate dehydrogenase
+PI0502,NULL,461938,463149,conserved hypothetical protein; possible helicase
+pPI0192,NULL,167470,167763,hypothetical protein
+pPI0193,NULL,169020,166945,GTP pyrophosphokinase
+pPI0194,NULL,169293,170807,conserved hypothetical protein
+pPI0195,NULL,169715,169329,hypothetical protein
+pPI0196,NULL,170839,170594,hypothetical protein
+pPI0197,NULL,170855,169788,conserved hypothetical protein
+pPI0198,NULL,171356,170910,conserved hypothetical protein
+pPI0199,NULL,171868,171584,hypothetical protein
+pPI0200,NULL,172155,175172,hypothetical protein
+pPI0201,NULL,175398,175703,hypothetical protein
+pPI0202,NULL,175748,175332,hypothetical protein
+pPI0203,NULL,175786,175640,hypothetical protein
+pPI0204,NULL,175980,176168,hypothetical protein
+pPI0205,NULL,176400,176513,hypothetical protein
+pPI0206,NULL,176581,176952,hypothetical protein
+pPI0207,NULL,176925,177083,hypothetical protein
+pPI0208,NULL,177708,177106,conserved hypothetical protein
+pPI0209,NULL,181075,177716,conserved hypothetical protein
+pPI0210,NULL,182284,181394,conserved hypothetical protein
+pPI0211,NULL,182461,182874,hypothetical protein
+pPI0212,NULL,189886,188774,hypothetical protein
+pPI0213,NULL,191638,189902,conserved hypothetical protein
+pPI0214,NULL,193239,191971,ISPg4-related transposase (IS5 family)
+pPI0215,NULL,193348,194175,ISPg3-related transposase
+pPI0216,NULL,194217,194540,conserved hypothetical protein
+pPI0217,NULL,195559,194966,conserved hypothetical protein
+pPI0218,NULL,196004,199150,conserved hypothetical protein
+pPI0219,NULL,198844,198632,hypothetical protein
+pPI0220,NULL,200612,199878,conserved hypothetical protein
+pPI0222,NULL,202028,202126,hypothetical protein
+pPI0223,NULL,203256,202396,hypothetical protein
+pPI0224,NULL,204123,203452,conserved hypothetical protein
+pPI0225,NULL,206658,204193,phenylalanyl-tRNA synthetase beta subunit
+pPI0226,NULL,208537,207248,conserved hypothetical protein
+pPI0228,NULL,210083,209391,conserved hypothetical protein
+pPI0229,NULL,211082,210132,geranylgeranyl pyrophosphate synthase
+pPI0230,NULL,211905,211171,TonB protein
+pPI0231,NULL,212114,213055,conserved hypothetical protein
+pPI0233,NULL,215924,214806,hypothetical protein
+pPI0234,NULL,217042,216131,hypothetical protein
+pPI0235,NULL,217426,217605,hypothetical protein
+pPI0237,NULL,221263,220037,hemolysin-like protein
+pPI0238,NULL,221755,221306,conserved hypothetical protein
+pPI0239,NULL,223154,221985,probable outer membrane protein
+pPI0240,NULL,223502,224626,conserved hypothetical protein
+pPI0241,NULL,224629,224985,hypothetical protein
+pPI0242,NULL,225162,228461, preprotein translocase subunit SecA
+pPI0243,NULL,228507,228827,hypothetical protein
+pPI0244,NULL,228607,228374,hypothetical protein
+pPI0245,NULL,228842,228702,hypothetical protein
+pPI0246,NULL,229608,229715,hypothetical protein
+pPI0247,NULL,229669,229499,hypothetical protein
+pPI0248,NULL,229812,229666,hypothetical protein
+pPI0249,NULL,232395,229963,outer membrane protein
+pPI0250,NULL,234685,232382,conserved hypothetical protein
+pPI0251,NULL,237473,234582,conserved hypothetical protein
+pPI0252,NULL,238901,237570,conserved hypothetical protein
+pPI0253,NULL,240027,238963,site-specific DNA-methyltransferase
+pPI0254,NULL,240911,240027,site-specific DNA methyltransferase
+pPI0255,NULL,240984,241118,hypothetical protein
+pPI0256,NULL,241631,241512,hypothetical protein
+pPI0257,NULL,241940,241785,conserved hypothetical protein
+pPI0258,NULL,242165,241980,50S ribosomal protein L33
+pPI0259,NULL,242433,242173,50S ribosomal protein L28
+pPI0260,NULL,243798,242971,4-diphosphocytidyl-2C-methyl-D-erythritol 2-phosphate synthase
+pPI0262,NULL,246118,245897,possible cob(I)alamin adenosyltransferase
+pPI0263,NULL,246430,246128,possible cob(I)alamin adenosyltransferase
+pPI0265,NULL,248923,250266,ribonuclease BN
+pPI0266,NULL,251331,250723,conserved hypothetical protein
+pPI0267,NULL,253859,251358,DNA segregation ATPase FtsK/SpoIIIE
+pPI0268,NULL,253904,254584,probable ribonuclease D
+pPI0271,NULL,257398,257285,hypothetical protein
+pPI0273,NULL,260263,260153,hypothetical protein
+pPI0274,NULL,263148,260596,conserved hypothetical protein
+pPI0275,NULL,264127,263276,conserved hypothetical protein
+pPI0276,NULL,265089,264241,conserved hypothetical protein
+pPI0277,NULL,265775,265089,conserved hypothetical protein
+pPI0278,NULL,266695,265994,ABC-type multidrug transport system, ATPase component
+pPI0279,NULL,268129,266756,conserved hypothetical protein
+pPI0280,NULL,268429,268614,hypothetical protein
+pPI0281,NULL,268443,268535,hypothetical protein
+pPI0282,NULL,268736,269470,glucose-1-phosphate cytidylyltransferase
+pPI0283,NULL,269308,270246,hypothetical protein
+pPI0284,NULL,270148,269897,hypothetical protein
+pPI0285,NULL,270452,270225,hypothetical protein
+PI0343,NULL,317980,317645,hypothetical protein
+PI0351,NULL,324828,324457,hypothetical protein
+PI0331,NULL,312635,311796,hypothetical protein
+PI0334,NULL,313658,313374,hypothetical protein
+pPI0288,NULL,272113,273336,myo-inositol-1-phosphate synthase
+pPI0289,NULL,273290,275899,conserved hypothetical protein
+pPI0290,NULL,277463,276036,hypothetical protein
+pPI0291,NULL,277471,277647,hypothetical protein
+pPI0292,NULL,277923,277489,hypothetical protein
+pPI0293,NULL,278803,278982,hypothetical protein
+pPI0294,NULL,279359,278001,succinyl-diaminopimelate desuccinylase
+pPI0295,NULL,279570,279701,hypothetical protein
+pPI0296,NULL,279641,279808,hypothetical protein
+pPI0297,NULL,279727,279605,hypothetical protein
+pPI0298,NULL,282176,282349,hypothetical protein
+pPI0299,NULL,282236,280023,peptidyl-dipeptidase Dcp
+pPI0300,NULL,282893,282315,nitroimidazole resistance protein
+pPI0301,NULL,283001,283114,hypothetical protein
+pPI0302,NULL,283590,284951,alkaline phosphatase related protein
+pPI0303,NULL,284816,285580,conserved hypothetical protein (possible deoxynucleoside kinase)
+pPI0304,NULL,285677,286240,conserved hypothetical protein (possible deoxynucleoside kinase)
+pPI0305,NULL,286335,287273,thioredoxin reductase
+pPI0306,NULL,287392,287198,hypothetical protein
+pPI0307,NULL,287512,287411,hypothetical protein
+pPI0308,NULL,288513,289265,conserved hypothetical protein (possible ABC transporter binding protein)
+pPI0309,NULL,289456,289268,hypothetical protein
+pPI0312,NULL,290646,291023,hypothetical protein
+pPI0313,NULL,291705,291208,hypothetical protein
+pPI0314,NULL,291937,292029,hypothetical protein
+pPI0315,NULL,292335,291994,hypothetical protein
+pPI0316,NULL,294075,292360,lipoate synthase
+pPI0317,NULL,294533,295606,possible membrane regulatory protein
+pPI0318,NULL,295765,295926,hypothetical protein
+pPI0320,NULL,297394,296888,phosphatase
+pPI0321,NULL,297572,298333,conserved hypothetical protein
+pPI0322,NULL,298350,298973,glucose-inhibited division protein
+pPI0325,NULL,300385,300903,hypothetical protein
+pPI0326,NULL,302279,303058,hypothetical protein
+pPI0329,NULL,304365,303313,2-methylthioadenine synthetase
+pPI0332,NULL,306907,307617,hypothetical protein
+PI0918,NULL,849296,847218,Fe-S oxidoreductase, family 2
+pPI0334,NULL,307832,308935,hypothetical protein
+pPI0335,NULL,308952,309722,conserved hypothetical protein
+pPI0336,NULL,309028,307841,conserved hypothetical protein
+pPI0337,NULL,309762,310277,conserved hypothetical protein
+pPI0338,NULL,310356,311816,conserved hypothetical protein
+pPI0339,NULL,310398,310219,hypothetical protein
+pPI0340,NULL,311580,311383,hypothetical protein
+pPI0341,NULL,311824,311690,hypothetical protein
+pPI0342,NULL,311827,312399,Maf protein
+pPI0343,NULL,312457,312963,acetyltransferase/carbonic anhydrase
+pPI0344,NULL,313215,313102,hypothetical protein
+pPI0345,NULL,314283,313369, phenylalanyl-tRNA synthetase, alpha subunit
+pPI0346,NULL,314570,315421,conserved hypothetical protein
+pPI0348,NULL,316557,317249,metal-dependent hydrolase
+pPI0351,NULL,319339,320004,ribosomal large subunit pseudouridine synthase D
+pPI0352,NULL,320015,320278,hypothetical protein
+pPI0354,NULL,323211,321913,ABC transporter, permease
+pPI0355,NULL,324420,323335,ABC transporter, permease
+pPI0356,NULL,325378,324542,conserved hypothetical protein
+pPI0357,NULL,327110,325641,outer membrane protein
+pPI0358,NULL,327315,327530,conserved hypothetical protein
+pPI0359,NULL,327717,329249,cytochrome D ubiquinol oxidase subunit I
+pPI0361,NULL,331006,332205,conserved hypothetical protein
+pPI0363,NULL,333083,334930,hyothetical protein
+pPI0364,NULL,335410,335877,conserved hypothetical protein
+pPI0365,NULL,335419,333137,phosphomannomutase
+pPI0366,NULL,339144,336391,DNA helicase
+pPI0367,NULL,339850,339413,tmRNA-binding protein
+pPI0368,NULL,340316,340501,hypothetical protein
+pPI0369,NULL,340391,339885,conserved hypothetical protein
+pPI0370,NULL,341592,340435,possible replication protein (RepA)
+pPI0371,NULL,341679,341816,hypothetical protein
+pPI0372,NULL,341725,341525,hypothetical protein
+pPI0373,NULL,342084,342260,hypothetical protein
+pPI0374,NULL,342499,343374,conserved hypothetical protein
+PI0895,NULL,827254,826487,2-oxoglutarate oxidoreductase, beta subunit, possible ketoisovalerate oxidoreductase,  vorA
+pPI0377,NULL,346848,346961,hypothetical protein
+pPI0378,NULL,347018,348166,L-serine dehydratase
+pPI0379,NULL,348648,348265,hypothetical protein
+pPI0382,NULL,353140,353229,hypothetical protein
+pPI0383,NULL,353399,353301,hypothetical protein
+pPI0384,NULL,353562,354377,IS1001-related transposase
+pPI0385,NULL,355731,354463,ISPg4-related transposase (IS5 family)
+pPI0386,NULL,355807,356130,IS1001-related transposase
+pPI0387,NULL,356165,355992,hypothetical protein
+pPI0389,NULL,358746,360893,conserved hypothetical protein (TPR domain)
+pPI0390,NULL,360919,361062,hypothetical protein
+pPI0391,NULL,362076,361276,metallo-beta-lactamase superfamily protein
+pPI0392,NULL,364472,362202,outer membrane protein
+pPI0393,NULL,364650,365306,tRNA and rRNA methylase
+pPI0394,NULL,365345,365917,hypothetical protein
+pPI0395,NULL,366065,366286,hypothetical protein
+pPI0396,NULL,367609,366302,prolyl-tRNA synthetase
+pPI0397,NULL,368051,368728,outer membrane protein
+pPI0399,NULL,370694,373018,ferrous iron transport protein B
+pPI0400,NULL,373214,374278,penicillin-binding protein 2
+pPI0401,NULL,374594,375370,conserved hypothetical protein (possible esterase/serine protease)
+pPI0403,NULL,377992,378456,possible pyruvate formate-lyase activating enzyme
+pPI0404,NULL,378224,377976,hypothetical protein
+pPI0405,NULL,378582,378821,hypothetical protein
+pPI0406,NULL,378594,378373,hypothetical protein
+pPI0407,NULL,380083,378824,conserved hypothetical protein
+pPI0408,NULL,380569,380730,hypothetical protein
+pPI0409,NULL,380788,380660,hypothetical protein
+pPI0410,NULL,381413,380799,rubrerythrin
+pPI0411,NULL,381609,381698,hypothetical protein
+pPI0412,NULL,381673,381572,hypothetical protein
+pPI0413,NULL,381854,382327,conserved hypothetical protein
+pPI0414,NULL,382358,382534,hypothetical protein
+pPI0415,NULL,383968,382778,conserved hypothetical protein
+pPI0416,NULL,384610,385134,conserved hypothetical protein
+pPI0417,NULL,385263,385102,hypothetical protein
+pPI0419,NULL,386343,386158,hypothetical protein
+pPI0420,NULL,388563,386374,pyruvate-formate lyase
+pPI0421,NULL,389052,389165,hypothetical protein
+pPI0422,NULL,389336,389443,hypothetical protein
+pPI0423,NULL,389539,389429,hypothetical protein
+pPI0424,NULL,390869,389973,ISPg3-related transposase
+pPI0425,NULL,392458,390983,conserved hypothetical protein; possible ATPase
+pPI0426,NULL,392665,393477,transposase/integrase
+pPI0427,NULL,393493,393915,transposase/integrase
+pPI0428,NULL,394138,394566,ISPg4-related transposase fragment(IS5 family)
+pPI0429,NULL,394559,394705,hypothetical protein (possible ISPg4-related transposase (IS5 family))
+pPI0430,NULL,394783,395040,hypothetical protein (possible ISPg4-related transposase (IS5 family))
+pPI0431,NULL,395188,396378,transposase
+pPI0432,NULL,396704,396594,hypothetical protein
+pPI0433,NULL,397974,397078,ISPg3-related transposase
+pPI0434,NULL,398463,398299,hypothetical protein
+pPI0435,NULL,398588,398899,conserved hypothetical protein
+pPI0436,NULL,398944,399393,conserved hypothetical protein
+pPI0437,NULL,399518,400195,hypothetical protein
+pPI0438,NULL,400667,400404,hypothetical protein
+pPI0439,NULL,401033,401452,conserved hypothetical protein
+pPI0440,NULL,402302,401466,phage related integrase
+pPI0441,NULL,402661,403356, type I restriction-modification enzyme
+pPI0442,NULL,403411,403533,hypothetical protein
+PI0893,NULL,825722,824553,outer membrane protein 41 precursor
+pPI0444,NULL,405717,404755,conserved hypothetical protein
+pPI0445,NULL,407310,405760,type I restriction-modification system methyltransferase
+pPI0446,NULL,409027,407327,conserved hypothetical protein
+PI0873,NULL,808108,809016,conserved hypothetical protein; possible permease
+PI0883,NULL,817311,816271,para-aminobenzoate synthase component I
+pPI0448,NULL,412169,411927,conserved hypothetical protein
+pPI0449,NULL,412394,413290,ISPg3-related transposase
+pPI0450,NULL,413317,414021,subtilisin-like serine protease
+pPI0451,NULL,414639,414214,conserved hypothetical protein
+pPI0452,NULL,415617,415273,conserved hypothetical protein
+pPI0453,NULL,416247,415858,conserved hypothetical protein
+pPI0454,NULL,417406,416276,transposase
+PI0263,NULL,255396,256472,conjugative transposon protein, TraM
+pPI0456,NULL,419287,420837,ATP-binding protein/ATPase
+pPI0457,NULL,422407,421196,ATPase
+pPI0458,NULL,423293,422637,conserved hypothetical protein
+pPI0459,NULL,424187,423318,mobilization protein BmgA
+pPI0462,NULL,425737,425982,hypothetical protein
+pPI0464,NULL,427115,426810,conserved hypothetical protein
+pPI0465,NULL,427473,427673,possible transcriptional regulator
+pPI0468,NULL,435362,434466,type IIS restriction enzyme R and M protein
+pPI0469,NULL,437266,437511,hypothetical protein
+pPI0470,NULL,437378,436623,methyltransferase
+pPI0471,NULL,437592,437693,hypothetical protein
+pPI0472,NULL,439515,437989,elastase precursor/subtilisin-like serine protease
+pPI0473,NULL,440654,440043,ISPg3-related transposase
+pPI0474,NULL,440791,440895,hypothetical protein
+pPI0475,NULL,441139,441237,hypothetical protein
+pPI0476,NULL,441626,441240,conserved hypothetical protein
+pPI0479,NULL,443964,445163,phosphopantothenoylcysteine synthetase/decarboxylase
+pPI0480,NULL,445102,446025,conserved hypothetical protein
+pPI0481,NULL,445988,446305,hypothetical protein
+pPI0482,NULL,446169,447707,ATPase involved in DNA repair (recN)
+pPI0483,NULL,447983,449389,TPR-containing protein
+pPI0484,NULL,448173,447403,hypothetical protein
+pPI0485,NULL,451173,449956,hypothetical protein
+pPI0486,NULL,453873,452248, anaerobic C4-dicarboxylate transporter
+pPI0487,NULL,455190,455336,hypothetical protein
+pPI0488,NULL,455401,455520,hypothetical protein
+pPI0489,NULL,457304,455910,conserved hypothetical protein
+pPI0490,NULL,457527,457429,hypothetical protein
+pPI0491,NULL,457700,457969,hypothetical protein
+pPI0492,NULL,457893,457994,hypothetical protein
+pPI0493,NULL,458548,459354,methionine aminopeptidase
+pPI0494,NULL,459450,460481,possible O-sialoglycoprotein endopeptidase
+pPI0496,NULL,461014,461217,hypothetical protein
+pPI0497,NULL,462053,462193,hypothetical protein
+pPI0499,NULL,464661,462469,conserved hypothetical protein
+pPI0500,NULL,464857,464949,hypothetical protein
+pPI0501,NULL,465111,465704,conserved hypothetical protein
+pPI0502,NULL,465774,467162,phosphomannomutase
+pPI0504,NULL,467794,469572,ABC transport ATP-binding component
+pPI0505,NULL,469901,470116,ISPg3-related transposase
+pPI0506,NULL,470129,471397,ISPg4-related transposase
+pPI0507,NULL,472548,471652,ISPg3-related transposase
+PI0253,NULL,248434,249033,conjugative transposon protein, TraD
+pPI0509,NULL,473895,474089,hypothetical protein
+pPI0510,NULL,474056,473913,hypothetical protein
+pPI0512,NULL,474743,476008,glutamate mutase
+PI0847,NULL,782292,781270,thiamine biosynthesis lipoprotein, ApbE
+PI0862,NULL,799182,798409,polysaccharide export outer membrane protein
+pPI0515,NULL,478908,480281,conserved hypothetical protein
+pPI0516,NULL,480309,480626,conserved hypothetical protein
+pPI0517,NULL,480774,481715,hypothetical protein
+pPI0518,NULL,481270,480884,hypothetical protein
+pPI0519,NULL,481719,482558,hydro-lyase, tartrate fumarate family, alpha subunit
+pPI0520,NULL,482521,483138,hydro-lyase, tartrate fumarate family, beta subunit
+pPI0521,NULL,483689,483820,hypothetical protein
+pPI0522,NULL,486044,483924,conserved hypothetical protein (possible serine protease)
+pPI0523,NULL,487628,486087,polysaccharide biosynthesis protein/membrane protein
+pPI0525,NULL,489208,489417,hypothetical protein
+pPI0526,NULL,490397,489465,conserved hypothetical protein
+pPI0527,NULL,491693,490428,phosphoribosylamine--glycine ligase
+pPI0530,NULL,496668,495799,RNA polymerase sigma factor
+pPI0531,NULL,496829,497089,hypothetical protein
+pPI0532,NULL,497191,497322,hypothetical protein
+pPI0533,NULL,498637,497249,hypothetical protein
+pPI0534,NULL,499115,498660,hypothetical protein
+pPI0535,NULL,499482,499384,hypothetical protein
+pPI0536,NULL,499848,499492,hypothetical protein
+pPI0537,NULL,500258,499944,hypothetical protein
+pPI0538,NULL,501037,500261,conserved hypothetical protein
+pPI0539,NULL,501187,501276,hypothetical protein
+pPI0540,NULL,502304,501696,conserved hypothetical protein
+pPI0541,NULL,504324,502321,conserved hypothetical protein
+pPI0542,NULL,505351,504425,hypothetical protein
+pPI0543,NULL,507263,505422,conserved hypothetical protein
+pPI0544,NULL,507881,507486,hypothetical protein
+pPI0545,NULL,508496,508915,hypothetical protein
+pPI0546,NULL,508982,510685,hypothetical protein
+pPI0547,NULL,510685,513123,ATPase with chaperone activity (endopeptidase Clp related)
+pPI0548,NULL,513261,514043,hypothetical protein
+pPI0549,NULL,514056,514937,hypothetical protein
+pPI0550,NULL,514927,516075,hypothetical protein
+pPI0551,NULL,516129,516575,hypothetical protein
+pPI0552,NULL,516588,517034,hypothetical protein
+pPI0553,NULL,517046,518017,conserved hypothetical protein (possible cell surface protein)
+pPI0554,NULL,518033,520297,hypothetical protein
+pPI0555,NULL,518586,518924,hypothetical protein
+pPI0556,NULL,520856,520713,hypothetical protein
+pPI0557,NULL,520970,521266,hypothetical protein
+pPI0558,NULL,521589,523409,conserved hypothetical protein
+pPI0559,NULL,523646,524269,hypothetical protein
+pPI0560,NULL,524262,525413,hypothetical protein
+pPI0561,NULL,525437,526342,hypothetical protein (possible TPR-containing protein)
+pPI0563,NULL,529104,528970,hypothetical protein
+pPI0564,NULL,529504,529818,hypothetical protein
+PI0842,NULL,776251,775673,5-formyltetrahydrofolate cyclo-ligase
+PI0845,NULL,780499,778412,peptidyl-dipeptidase
+pPI0566,NULL,532947,531229,ABC transport system, ATP-binding / permease
+pPI0567,NULL,533531,533016,transcriptional regulator
+PI0310,NULL,291797,294370,outer membrane protein
+pPI0569,NULL,535499,535377,hypothetical protein
+pPI0570,NULL,536224,536391,hypothetical protein
+pPI0571,NULL,536648,535821,hypothetical protein
+pPI0572,NULL,536753,536986,hypothetical protein
+pPI0573,NULL,537027,537233,hypothetical protein
+pPI0575,NULL,537498,537322,hypothetical protein
+pPI0576,NULL,537964,538320,MarR family transcriptional regulator
+pPI0577,NULL,538324,538455,hypothetical protein
+pPI0578,NULL,538602,539009,Fe2+/Zn2+ uptake regulation protein
+pPI0579,NULL,538858,539043,hypothetical protein
+pPI0580,NULL,539240,539617,hypothetical protein
+pPI0581,NULL,539565,539446,hypothetical protein
+pPI0582,NULL,539747,539658,hypothetical protein
+pPI0583,NULL,540322,539855,conserved hypothetical protein (possible DNA-binding protein)
+pPI0584,NULL,540365,540853,hypothetical protein
+pPI0585,NULL,540771,540959,hypothetical protein
+pPI0586,NULL,540901,541536,hypothetical protein
+pPI0587,NULL,540934,540503,conserved hypothetical protein
+pPI0588,NULL,541317,541559,hypothetical protein
+pPI0589,NULL,541344,541198,hypothetical protein
+pPI0590,NULL,543345,542170,transcriptional regulator
+pPI0591,NULL,544356,543421,conserved hypothetical protein
+pPI0592,NULL,544690,544352,conserved hypothetical protein
+pPI0593,NULL,544890,544690,conserved hypothetical protein (possible DNA-binding protein)
+pPI0594,NULL,545839,545396,hypothetical protein
+pPI0595,NULL,546236,546607,possible translation initiation inhibitor
+pPI0596,NULL,546732,547145,hypothetical protein
+pPI0597,NULL,547374,547673,hypothetical protein
+pPI0598,NULL,549085,548927,hypothetical protein
+pPI0599,NULL,550045,549905,hypothetical protein
+pPI0600,NULL,550903,550721,hypothetical protein
+pPI0601,NULL,551244,551345,hypothetical protein
+pPI0602,NULL,551398,551517,hypothetical protein
+pPI0603,NULL,551719,552426,hypothetical protein
+pPI0604,NULL,552518,552622,hypothetical protein
+pPI0605,NULL,552650,552781,hypothetical protein
+pPI0606,NULL,552875,553531,hypothetical protein
+pPI0607,NULL,553744,554337,hypothetical protein
+pPI0608,NULL,554553,555014,hypothetical protein
+pPI0609,NULL,554995,554426,hypothetical protein
+pPI0610,NULL,555205,555098,hypothetical protein
+pPI0611,NULL,555231,555452,hypothetical protein
+pPI0612,NULL,555573,555469,hypothetical protein
+pPI0613,NULL,555972,555685,conserved hypothetical protein
+pPI0614,NULL,556165,555917,conserved hypothetical protein
+pPI0615,NULL,556470,556631,hypothetical protein
+pPI0616,NULL,557312,556494,hypothetical protein
+pPI0617,NULL,557807,558625,hypothetical protein
+pPI0618,NULL,558711,558962,hypothetical protein
+pPI0619,NULL,558913,558731,hypothetical protein
+pPI0620,NULL,558979,559164,hypothetical protein
+pPI0621,NULL,559155,558847,hypothetical protein
+pPI0622,NULL,559363,560778,conserved hypothetical protein
+pPI0623,NULL,560890,561099,hypothetical protein
+pPI0626,NULL,561561,563408,gingipain-related protein
+pPI0627,NULL,563717,563535,hypothetical protein
+pPI0628,NULL,563833,563651,hypothetical protein
+pPI0629,NULL,564440,563979,conserved hypothetical sequence
+pPI0630,NULL,564703,565413,conserved hypothetical protein
+pPI0631,NULL,565431,565640,possible transcriptional regulator
+pPI0632,NULL,565772,565861,hypothetical protein
+pPI0633,NULL,565903,568698,zinc protease
+pPI0634,NULL,569766,570440,conserved hypothetical protein
+pPI0635,NULL,570524,570724,hypothetical protein
+PI0742,NULL,672809,672534,hypothetical protein
+PI0743,NULL,672868,673086,hypothetical protein
+PI0788,NULL,726849,726292,3-methyladenine DNA glycosylase (DNA-3-methyladenine glycosylase I)
+pPI0637,NULL,573025,577431,protoporphyrin IX magnesium chelatase
+pPI0638,NULL,577364,578137,conserved hypothetical protein
+pPI0639,NULL,578154,577153,hypothetical protein
+pPI0640,NULL,578190,578783,conserved hypothetical protein
+pPI0641,NULL,578790,579122,conserved hypothetical protein
+pPI0642,NULL,579637,579248,hypothetical protein
+pYHBi01,NULL,192,4022,mobilization protein
+PI0374,NULL,345787,344711,MbpB protein
+PI0846,NULL,781069,780575,transcription regulator, CRP family
+PI1121,NULL,1046135,1046767,glycosyltransferase
+PI1201,NULL,1117895,1116738,peptidyl-arginine deiminase
+PI1748,NULL,1668676,1670982,guanosine-3',5'-bis(diphosphate) 3'-pyrophosphohydrolase/possible (p)ppgpp synthetase II
+PI0256,NULL,249184,249480,conjugative transposon protein, TraE
+PI0001,NULL,2972,540,possible Ton-B receptor
+PI0060,NULL,60226,58421,long-chain-fatty-acid--CoA ligase (acyl-CoA synthetase)
+PI0103,NULL,98276,99160,conserved hypothetical protein; possible permease
+PI0127,NULL,120217,118823,conserved hypothetical protein
+PI0161,NULL,156017,153504,possible TonB receptor
+PI0163,NULL,158470,157256,conserved hypothetical protein
+PI0204,NULL,197605,196259,dGTP triphosphohydrolase (deoxyguanosinetriphosphate triphosphohydrolase)
+PI0208,NULL,200816,202855,possible peptidase, M23/M37 family
+PI0152,NULL,146044,145454,DNA mismatch endonuclease vsr
+pPI0562,NULL,528494,526887,regulatory protein
+PI0392,NULL,358484,358795,possible transcriptional regulator
+PI0409,NULL,376029,374788,3-deoxy-D-manno-octulosonic-acid transferase (kdotransferase)
+pPI0082,NULL,71712,72590,aspartate carbamoyltransferase, catalytic chain
+PI0485,NULL,444590,445195,30S ribosomal protein S4
+PI0501,NULL,461570,461923,excisionase
+PI0513,NULL,471670,472431,ion transporter
+PI0531,NULL,484836,486299,ABC transporter, ATP-binding protein; possible gliding motility related
+PI0548,NULL,499672,500631,possible acetylxylan esterase
+PI0633,NULL,579811,580140,possible preprotein translocase, YajC subunit
+PI0686,NULL,623617,624309,glycosyl transferase, group 2 family protein
+PI0780,NULL,718573,716042,DNA gyrase, subunit A (DNA topoisomerase (ATP-hydrolyzing))
+PI0803,NULL,739897,741231,DNA-damage-inducible protein F
+PI0806,NULL,744454,743819,heavy metal efflux pump
+PI0816,NULL,755070,756980,glycogen debranching enzyme
+PI1649,NULL,1563220,1563501,hypothetical protein
+PI0848,NULL,783295,782387,glycosyl transferase, group 2 family protein
+PI0853,NULL,786653,785655,glycosyl transferase, group 2 family protein
+PI0935,NULL,866437,868380,collagenase, protease
+PI0945,NULL,876389,877684,sodium:solute symporter family protein
+PI1028,NULL,945911,943560,glutamate synthase, small subunit
+PI1055,NULL,976362,975049,aspartokinase
+PI1062,NULL,980840,980160,TPR repeat protein
+PI1094,NULL,1019376,1019888,recombination protein
+PI1096,NULL,1020357,1021550,glycosyltransferase
+PI1162,NULL,1087812,1086583,hemolysin-related protein, with CBS domain
+PI1581,NULL,1509443,1508565,cell shape-determining protein
+PI1582,NULL,1510517,1509531,cell shape-determining protein
+PI1202,NULL,1118279,1121620,UvrD/REP helicase
+PI1206,NULL,1127192,1124838,ATP-dependent DNA helicase, UvrD/PcrA/Rep family
+PI1254,NULL,1176706,1175774,probable glucokinase
+PI1348,NULL,1262529,1263146,glycosyltransferase
+PI1349,NULL,1263150,1265780,polysaccharide export protein
+PI1376,NULL,1299379,1298105,outer membrane protein
+PI1383,NULL,1305100,1304261,biopolymer transport protein tolQ related
+PI1401,NULL,1322167,1322943,TPR-repeat-containing protein
+PI1406,NULL,1327806,1326676,tyrosine-protein kinase
+PI1420,NULL,1340712,1340263,probable membrane protein
+PI1444,NULL,1365612,1368197,protease ClpB
+PI1510,NULL,1429334,1428552,cell division protein
+PI1524,NULL,1446064,1446717,phosphatidylserine decarboxylase
+PI1525,NULL,1446898,1447443,CDP-diacylglycerol--serine O-phosphatidyltransferase
+PI1594,NULL,1523668,1524504,MotA/TolQ/ExbB proton channel
+PI1683,NULL,1600958,1599948,integral membrane protein
+PI1692,NULL,1605831,1608308,alanine racemase
+PI1693,NULL,1608323,1609618,possible RmuC domain protein
+PI1701,NULL,1619452,1620618,sensor histidine kinase
+PI1736,NULL,1657150,1654394,topoisomerase IV, subunit A
+PI1776,NULL,1708763,1709485,probable peptidase of the M22 family (inactive? chaperone?))
+PI1779,NULL,1711475,1711993,16S rRNA processing protein
+PI1805,NULL,1740593,1738509,TPR repeat containing protein
+PI1823,NULL,1764262,1763378,inorganic polyphosphate/ATP-NAD kinase (Poly(P)/ATP NAD kinase)
+PI1909,NULL,1855330,1853363,DNA gyrase, B subunit
+PI1912,NULL,1856504,1857226,possible DNA repair protein
+PI2010,NULL,1969076,1970302,ABC transporter, permease component
+PI2029,NULL,1985314,1982915,DNA topoisomerase I
+PI2094,NULL,2049680,2050360,hypothetical protein
+PI2095,NULL,2050276,2049335,hypothetical protein
+PI2102,NULL,2055846,2057789,DNA topoisomerase IV, subunit B
+PI2127,NULL,2075463,2076371,deoxyribose-phosphate aldolase
+PI2143,NULL,2089263,2092034,DNA mismatch repair protein
+PI2158,NULL,2104532,2105407,glycosyl transferase, group 2 family protein
+PI2178,NULL,2117817,2119790,1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase, GcpE
+pPI0012,NULL,7497,6832,signal peptidase II
+pPI0013,NULL,7889,7509,DNAK suppressor protein
+pPI0015,NULL,11733,8026,isoleucyl-tRNA synthetase
+pPI0032,NULL,24112,21509,cysteine protease
+pPI0104,NULL,101107,100313,glycogen synthase
+pPI0177,NULL,154714,155817,mismatch repair ATPase
+pPI0236,NULL,219763,217781,peptidyl-prolyl cis-trans isomerase/trigger factor
+pPI0269,NULL,254652,255794,conserved hypothetical protein
+pPI0272,NULL,260048,257523,DNA mismatch repair protein MutS
+pPI0381,NULL,352029,353117,muramidase (flagellum-specific)/hemagglutinin
+pPI0398,NULL,370212,369226,membrane protein
+pPI0418,NULL,386135,385347,pyruvate formate-lyase activating enzyme
+PI0261,NULL,254205,254825,conjugative transposon protein, TraK
+pPI0460,NULL,424762,424238,mobilization protein BmgB
+pPI0463,NULL,426807,425776,possible  mobilizable transposon
+pPI0466,NULL,427768,431085,ATP-dependent helicase
+pPI0467,NULL,431104,434436,type IIS restriction/modification enzyme (endonuclease or methylase)
+pPI0495,NULL,460497,461042,competence-damage inducible protein
+pPI0524,NULL,488859,487597,possible spore maturation protein A
+pPI0529,NULL,495415,493958,N6-adenine-specific DNA methylase/ RNA methylase
+PI0482,NULL,443486,443599,50S ribosomal protein L36
+PI2018,NULL,1976049,1975897,50S ribosomal protein L34
+PI0228,NULL,225892,228264,outer membrane cobalamin receptor protein
+PI0478,NULL,441063,441236,50S ribosomal protein L30
+PI1704,NULL,1621558,1621740,50S ribosomal protein L32
+PI0468,NULL,437045,437236,50S ribosomal protein L29
+PI1145,NULL,1072854,1072660,50S ribosomal protein L35
+PI0950,NULL,883715,883467,50S ribosomal protein L31
+PI1911,NULL,1856295,1856044,ribosomal protein S20
+PI0464,NULL,435148,435411,30S ribosomal protein S19
+PI0469,NULL,437242,437505,30S ribosomal protein S17
+PI1149,NULL,1075817,1075548,30S ribosomal protein S18
+PI0142,NULL,134251,133979,DNA-binding protein
+PI1503,NULL,1423568,1423840,30S ribosomal protein S15
+pPI0114,NULL,108333,108046,50S ribosomal protein L27
+PI0473,NULL,438774,439073,30S ribosomal protein S14
+PI1522,NULL,1442097,1441786,thioredoxin M
+PI0499,NULL,460377,460706,integrase, C-terminal region
+PI0471,NULL,437876,438211,50S ribosomal protein L24
+PI0476,NULL,440181,440522,50S ribosomal protein L18
+PI1144,NULL,1072619,1072278,50S ribosomal protein L20
+PI1150,NULL,1076164,1075823,30S ribosomal protein S6
+PI0483,NULL,443725,444075,30S ribosomal protein S13
+pPI0115,NULL,108710,108354,50S ribosomal protein L21
+PI0470,NULL,437511,437873,50S ribosomal protein L14
+PI0522,NULL,479144,479509,50S ribosomal protein L19
+PI0444,NULL,413073,413450,50S ribosomal protein L7/L12
+PI0972,NULL,899082,899459,glycine cleavage system H protein 2
+PI0456,NULL,428899,429279,30S ribosomal protein S12
+PI1801,NULL,1734472,1734089,30S ribosomal protein S9
+PI0484,NULL,444162,444548,30S ribosomal protein S11
+PI0474,NULL,439183,439575,30S ribosomal protein S8
+PI0465,NULL,435446,435853,50S ribosomal protein L22
+PI1534,NULL,1454226,1453819,ATPase/GTPase
+PI1081,NULL,1000946,1001362,probable endonuclease/resolvase
+PI0609,NULL,557078,556659,conserved hypothetical protein
+PI0467,NULL,436611,437036,50S ribosomal protein L16
+PI0441,NULL,411322,411759,50S ribosomal protein L11
+PI1180,NULL,1102469,1102032,ferric uptake regulation protein
+PI0462,NULL,433847,434287,50S ribosomal protein L23
+PI0479,NULL,441265,441708,50S ribosomal protein L15
+PI0424,NULL,388569,389036,methylated-DNA--[protein]-cysteine S-methyltransferase
+PI2112,NULL,2063801,2063334,phosphopantetheine adenylyltransferase
+PI0472,NULL,438295,438765,50S ribosomal protein L5
+PI0457,NULL,429511,429984,30S ribosomal protein S7
+PI1685,NULL,1601852,1602325,GAF domain-containing protein
+pPI0311,NULL,290147,290620,riboflavin synthase, beta subunit
+PI0487,NULL,446284,446763,50S ribosomal protein L17
+pPI0574,NULL,537459,537941,thioredoxin
+PI1426,NULL,1345506,1345021,flavodoxin
+PI1091,NULL,1016320,1016814,transcriptional regulator, AsnC family
+PI1099,NULL,1023696,1023199,low molecular weight protein-tyrosine-phosphatase
+PI1857,NULL,1804456,1803956,guanylate kinase
+PI0117,NULL,110871,111374,ribonuclease HI
+PI0477,NULL,440532,441041,30S ribosomal protein S5
+PI0443,NULL,412495,413010,50S ribosomal protein L10
+PI1984,NULL,1940324,1940845,MutT/nudix family protein
+pPI0498,NULL,462357,462196,rubredoxin
+PI1058,NULL,978244,977717,possible FHA domain protein
+PI0977,NULL,904183,904761,riboflavin synthase, alpha subunit
+PI1083,NULL,1002115,1002648,TPR-repeat-containing protein
+PI1148,NULL,1075527,1074994,50S ribosomal protein L9
+PI0320,NULL,302712,302167,probable cobalamin adenosyltransferase
+PI1336,NULL,1253979,1254527,dTDP-4-dehydrorhamnose 3,5-epimerase
+PI0969,NULL,896767,897321,30S ribosomal protein S16
+PI1796,NULL,1731146,1730592,2-hydroxyhepta-2,4-diene-1,7-dioate isomerase, fumarylacetoacetate hydrolase family protein
+PI1082,NULL,1001422,1001982,polypeptide deformylase
+PI0475,NULL,439593,440156,50S ribosomal protein L6
+PI0630,NULL,577754,577185,peptidyl-tRNA hydrolase (aminoacyl-tRNA hydrolase)
+PI0227,NULL,225692,223950,ABC transporter, ATP-binding/permease protein
+PI0480,NULL,441716,443053,preprotein translocase, SecY subunit
+PI1918,NULL,1862284,1861706,uracil-DNA glycosylase
+pPI0324,NULL,299680,300258,Holliday junction resolvasome endonuclease subunit
+PI0460,NULL,432611,433192,50S ribosomal protein L3
+PI0258,NULL,249862,252345,conjugative transposon protein, TraG
+PI1146,NULL,1073563,1072970,translation initiation factor IF3
+PI0034,NULL,37893,37291,FKBP-type peptidyl-prolyl cis-trans isomerase
+pPI0503,NULL,467176,467787,GTP-binding protein
+PI0631,NULL,578460,577846,50S ribosomal protein L25/general stress protein
+PI1496,NULL,1417256,1417876,nucleoside phosphorylase
+PI0461,NULL,433195,433821,50S ribosomal protein L4
+PI1408,NULL,1329821,1329195,glucose-1-phosphate thymidylyltransferase
+PI0415,NULL,386487,385498,malate dehydrogenase
+pPI0232,NULL,213150,213785,cytidylate kinase
+PI2157,NULL,2103876,2104517,xanthosine triphosphate pyrophosphatase, HAM1 family
+pPI0323,NULL,299031,299672,probable metallo-beta-lactamase
+PI0580,NULL,524318,524962,Holliday junction DNA helicase
+pPI0513,NULL,476039,477493,methylaspartate mutase, E chain
+PI0635,NULL,581094,581750,dephospho-CoA kinase
+pPI0514,NULL,477625,478860,methylaspartate ammonia-lyase
+PI1133,NULL,1060464,1059802,GrpE protein
+pPI0310,NULL,289459,290130,TPR domain protein
+pPI0362,NULL,332227,332904,peptidyl-prolyl cis-trans isomerase
+PI0035,NULL,38013,38702,NAD-dependent protein deacetylase, SIR2 family
+PI0442,NULL,411784,412473,50S ribosomal protein L1
+PI0125,NULL,117950,117246,undecaprenyl pyrophosphate synthase
+PI0413,NULL,384079,382553,outer membrane protein
+PI0466,NULL,435865,436593,30S ribosomal protein S3
+PI0189,NULL,180497,179763,integrase
+PI1311,NULL,1227499,1226765,large protein related to C.hutchinsonii large proteins
+pPI0350,NULL,318527,319270,3-oxoacyl-[acyl-carrier protein] reductase
+PI0925,NULL,856698,855946,ribosomal protein L11 methyltransferase
+pPI0331,NULL,306877,306122,3-deoxy-manno-octulosonate cytidylyltransferase
+pPI0353,NULL,321156,320401,short-chain dehydrogenase
+pPI0319,NULL,296809,296048,3-methyl-2-oxobutanoate hydroxymethyltransferase (ketopantoate hydroxymethyl transferase)
+PI1219,NULL,1138669,1139436,UDP-N-acetylglucosamine acyltransferase
+pPI0227,NULL,209318,208548,possible DNase
+PI0807,NULL,745338,744547,hydrolase, haloacid dehalogenase-like hydrolase
+PI1067,NULL,984871,984080,thymidylate synthase
+pPI0071,NULL,59694,58168,conserved hypothetical protein; possible Fic family protein
+pPI0330,NULL,305499,304678,signal recognition particle GTPase
+PI0463,NULL,434298,435122,50S ribosomal protein L2
+PI0642,NULL,584812,585642,thioredoxin family protein
+PI0120,NULL,112757,111918,glutamate racemase
+PI0692,NULL,628329,627490,iron compound ABC transporter, permease protein
+PI1799,NULL,1733879,1733040,30S ribosomal protein S2
+PI0056,NULL,55967,55107,conserved hypothetical protein; possible DNA uptake protein
+PI1026,NULL,943309,942440,uridine phosphorylase
+PI1427,NULL,1346720,1345848,nicotinate-nucleotide pyrophosphorylase
+PI0436,NULL,407403,408281,integrase/recombinase
+PI0870,NULL,806073,806954,branched-chain amino acid aminotransferase
+PI0798,NULL,736151,737035,malonyl CoA-acyl carrier protein transacylase
+PI1597,NULL,1525889,1526773,tonB protein
+PI1307,NULL,1222657,1223556,possible Fe-S oxidoreductase
+PI2058,NULL,2016884,2015940,riboflavin biosynthesis protein
+PI0195,NULL,187312,188262,epimerase/reductase
+PI0199,NULL,190983,190030,phosphate acetyltransferase
+PI1291,NULL,1205766,1204792,6-phosphofructokinase
+pYHBi02,NULL,3073,2093,replication protein
+PI1584,NULL,1512038,1513018,A/G-specific adenine glycosylase
+PI2015,NULL,1973856,1972864,D-alanine--D-alanine ligase
+pPI0347,NULL,315477,316478,UDP-N-acetylmuramate dehydrogenase
+PI0971,NULL,897987,898991,glycine cleavage system T protein (aminomethyltransferase)
+PI1747,NULL,1667623,1668639,membrane-bound lytic murein transglycosylase D
+PI0700,NULL,637439,638473,UDP-glucose 4-epimerase
+pPI0447,NULL,411884,409044,type I restriction-modification system R subunit
+PI2147,NULL,2094467,2093403,GTP-binding protein
+pPI0138,NULL,126008,124941,peptide methionine sulfoxide reductase
+PI1354,NULL,1271040,1272146,UDP-N-acetylglucosamine 2-epimerase
+PI1214,NULL,1132771,1133880,peptide chain release factor 1
+PI0556,NULL,506220,505075,saccharopine dehydrogenase
+PI1329,NULL,1246869,1248014,dTDP-glucose 4,6-dehydratase
+PI0388,NULL,355067,356218,integrase
+pPI0084,NULL,73468,74631,glycine hydroxymethyltransferase
+PI1029,NULL,947265,946078,seryl-tRNA synthetase
+PI0389,NULL,356247,357446,integrase
+PI1593,NULL,1521980,1523185,3,4-dihydroxy-2-butanone 4-phosphate synthase/GTP cyclohydrolase II
+PI0284,NULL,268988,270217,flavoprotein A
+pPI0092,NULL,84370,85599,Na+-translocating NADH-quinone reductase subunit
+PI1949,NULL,1904590,1903358,aminotransferase, class V
+PI0088,NULL,88092,86803,S-adenosylmethionine synthetase
+PI1368,NULL,1288263,1289567,enolase (phosphopyruvate hydratase)
+PI0626,NULL,575758,574445,penicillin-binding protein, D-alanyl-D-alanine carboxypeptidase
+PI1950,NULL,1905948,1904608,iron-regulated membrane permease
+PI1122,NULL,1046776,1048119,pyridoxal-phosphate-dependent aminotransferase
+PI0976,NULL,902437,903792,dihydrolipoamide dehydrogenase (dihydrolipoyl dehydrogenanse)
+pPI0443,NULL,404662,403532,type I restriction-modification system S subunit
+PI0911,NULL,839896,841269,tyrosine phenol-lyase
+PI1837,NULL,1779093,1780466,aspartate ammonia-lyase
+pPI0388,NULL,357678,356302,DNA repair protein
+PI1334,NULL,1252935,1251544,ferrodoxin
+PI1025,NULL,942292,940892,tRNA modification GTPase
+pPI0270,NULL,255787,257190,ATPase of the PP-loop superfamily implicated in cell cycle control
+PI0576,NULL,521784,520366,helicase, UvrD/Rep
+PI1729,NULL,1649995,1648556,FKBP-type peptidyl-prolyl cis-trans isomerase, trigger factor
+PI1514,NULL,1432684,1434132,tRNA nucleotidyltransferase/poly(A) polymerase
+PI1576,NULL,1502312,1503763,serine protease precursor
+PI0016,NULL,21785,20331,magnesium chelatase, subunit ChlI
+PI0410,NULL,377550,376087,glutamyl-tRNA synthetase (glutamate--tRNA ligase)
+pPI0261,NULL,243932,245449,replicative DNA helicase
+PI0013,NULL,17166,15646,auxin-regulated protein
+PI0431,NULL,404733,403204,Xaa-Pro aminopeptidase
+PI0940,NULL,874489,872921,ribonuclease G
+PI1566,NULL,1487710,1489284,predicted TPR-repeat-containing protein
+PI0789,NULL,728445,726868,NAD-utilizing dehydrogenase
+PI1429,NULL,1349385,1347790,L-aspartate oxidase
+PI1032,NULL,950222,948603,methylmalonyl-CoA decarboxylase, alpha subunit
+PI1258,NULL,1179049,1180686,elongation factor Tu
+PI0015,NULL,20210,18552,possible  transport protein
+PI0003,NULL,6104,4410,pseudouridylate synthase
+PI1237,NULL,1161540,1159828,ATP-dependent DNA helicase
+PI1238,NULL,1163498,1161777,single-strand DNA-specific exonuclease
+pPI0046,NULL,36037,37821,serine protease/elastase
+PI1127,NULL,1054545,1052752,chloride channel protein
+PI1159,NULL,1084817,1082976,1,4-alpha-glucan branching enzyme, N-terminal region
+PI1718,NULL,1635981,1634137,DNA mismatch repair protein
+PI1071,NULL,990286,988430,DNA topoisomerase III
+pPI0376,NULL,344785,346689,transcription termination factor
+PI0490,NULL,451150,449210,DNA primase
+pPI0178,NULL,155836,157788,NAD(+) synthetase
+PI0244,NULL,242859,240892,possible mobilization protein C
+PI1139,NULL,1067386,1065356,endopeptidase, endothelin-converting enzyme
+PI0767,NULL,704085,702055,possible TonB-dependent receptor
+PI1563,NULL,1482875,1480821,thiol:disulfide interchange protein dsbD
+pPI0264,NULL,246713,248767,chaperone protein htpG (heat shock protein.)
+pPI0375,NULL,343454,344494,conserved hypothetical protein; possible exopolyphosphatase-related protein
+PI1826,NULL,1765790,1767883,ATP-dependent DNA helicase
+pPI0402,NULL,375771,377867,oxygen-sensitive ribonucleoside-triphosphate reductase
+PI1070,NULL,988361,986250,peptidoglycan-associated lipoprotein
+PI1895,NULL,1840723,1838600,penicillin-binding protein 2
+PI0223,NULL,220643,218517,topoisomerase IA
+PI0008,NULL,9621,7378,exoribonuclease II (ribonuclease II)
+pPI0528,NULL,494085,491764,dipeptidyl peptidase IV
+PI2021,NULL,1978065,1978691,DNA repair protein
+PI2035,NULL,1989383,1988352,Holliday junction DNA helicase ruvB
+PI2124,NULL,2072724,2074556,excinuclease ABC, subunit C
+PI0553,NULL,504443,503484,recombination protein
+PI0489,NULL,449168,447750,probable cardiolipin synthetase
+PI0618,NULL,567549,569273,acyl-CoA dehydrogenase family protein
+PI0148,NULL,142654,141563,mannose-1-phosphate guanylyltransferase
+PI0781,NULL,720647,719400,UDP-glucose/GDP-mannose dehydrogenase family; probable  UDP-glucose 6-dehydrogenase
+PI1742,NULL,1664966,1665730,SpoOJ regulator protein
+PI1279,NULL,1195951,1195355,RNA polymerase sigma factor/ECF subfamily  (sigma-70)
+PI1100,NULL,1024451,1024050,conserved hypothetical protein; possible rhodanese-domain protein
+PI1012,NULL,933604,933188,DNA-binding protein, histone-like family
+PI1386,NULL,1307144,1308091,sugar phosphate isomerase
+pPI0112,NULL,104528,106222,endonuclease
+pPI0155,NULL,136693,135521,phosphohydrolase (MutT family)
+pPI0191,NULL,166264,166815,transcriptional regulator
+pPI0327,NULL,302964,301813,DNA-binding protein (possible integration host factor IHF alpha)
+pPI0328,NULL,303251,302967,DNA binding protein (possible  HU protein)
+pPI0349,NULL,317853,318443,transcriptional regulator
+PI1044,NULL,961841,964699,excinuclease ABC, subunit A
+PI1309,NULL,1226665,1223891,excinuclease ABC, A subunit
+PI1454,NULL,1378201,1376798,chromosomal replication initiator protein, DnaA
+PI1523,NULL,1445950,1442180,DNA polymerase III, alpha subunit
+PI0724,NULL,658661,657543,DNA polymerase III, delta subunit
+pPI0161,NULL,140120,141805,DNA polymerase III subunit gamma/tau
+pPI0477,NULL,441911,443032, DNA polymerase III, beta subunit
+pPI0478,NULL,443107,443958,DNA polymerase III, epsilon subunit
+PI1385,NULL,1306364,1307119,3-deoxy-d-manno-octulosonic acid 8-phosphate synthase (DAHP synthase, Class I)
+PI1490,NULL,1409187,1408711,GTP cyclohydrolase I
+PI1066,NULL,983992,983567,dihydrofolate reductase
+PI1048,NULL,967253,966417,1,4-dihydroxy-2-naphthoate octaprenyltransferase
+PI0608,NULL,556640,555627,isochorismate synthase
+PI0122,NULL,113959,113459,outer membrane protein, ompH family
+PI0123,NULL,114561,114046,outer membrane protein, ompH family
+PI0497,NULL,458881,459435,predicted recombinase, tnpA protein
+pPI0461,NULL,425577,424690,DNA primase/mobilizable transposon, excision protein
+PI0216,NULL,209316,210476,transposase/integrase
+PI1953,NULL,1908642,1907275,possible ABC-type permease
+PI1358,NULL,1274467,1275576,phospho-N-acetylmuramoyl-pentapeptide-transferase
+PI2121,NULL,2070029,2071795,glucose inhibited division protein A
+PI1578,NULL,1505800,1504328,rod shape-determining protein
+PI2130,NULL,2078120,2080771,DNA polymerase I
+PI1707,NULL,1623935,1625209,GTP-binding protein
+PI1176,NULL,1098879,1098229,endonuclease III
+PI0459,NULL,432225,432527,30S ribosomal protein S10
+PI2086,NULL,2043510,2041975,signal peptidase I
+PI1326,NULL,1244322,1245668,Na+-driven multidrug efflux pump
+PI1438,NULL,1357335,1356403,penicillin tolerance protein/steroid biosynthesis
+PI1529,NULL,1450437,1450027,cytosine/adenosine deaminase
+PI1721,NULL,1639656,1638226,peptidyl-prolyl cis-trans isomerase, PPIC-type
+PI1724,NULL,1642726,1641215,inosine-5'-monophosphate dehydrogenase
+PI1508,NULL,1428240,1427428,undecaprenol kinase
+PI0760,NULL,696049,694226,ATP-dependent RNA helicase, DEAD/DEAH box family
+PI1378,NULL,1301711,1300044,GTP-binding protein lepA
+PI0527,NULL,482515,483783,outer membrane efflux protein
+PI0412,NULL,379891,382212,primosomal protein N', replication factor Y
+PI0923,NULL,853456,855111,6-phosphofructokinase
+PI0030,NULL,35110,34649,transcriptional regulator, AsnC family
+PI1941,NULL,1900679,1897509,outer membrane receptor; ragA protein
+PI1466,NULL,1393193,1392111,GTP-binding protein, possible GTP1/OBG family
+PI0942,NULL,875039,874764,DNA-binding protein HU
+PI1163,NULL,1088304,1087897,single-strand DNA binding protein
+PI2009,NULL,1968741,1969073,ribosome-binding factor A
+PI1489,NULL,1408647,1407898,exodeoxyribonuclease III
+PI1726,NULL,1645602,1643542,ATP-dependent DNA helicase
+PI0517,NULL,476401,477144,apparent PorT homolog
+PI0437,NULL,408310,408603,conserved hypothetical protein; possible ribosomal subunit interface protein
+PI1235,NULL,1158948,1157326,60 kDa chaperonin, groEL, cpn60
+pPI0380,NULL,349871,351643,30S ribosomal protein S1/hemin binding protein
+PI0325,NULL,306804,306604,ISPg3-related transposase fragment
+PI0733,NULL,667018,664529,membrane protein; predicted exporter
+PI1104,NULL,1027889,1029049,GDP-4-keto-6-deoxy-D-mannose-3,5-epimerase-4-reductase
+pPI0568,NULL,533893,535161,ISPg4-related transposase (IS5 family)
+pPI0636,NULL,570804,572882,outer membrane protein, TonB dependent receptor

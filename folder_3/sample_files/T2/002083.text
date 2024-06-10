@@ -1,0 +1,315 @@
+
+DA 02-260
+February 4, 2002
+
+AUCTION OF LICENSES IN THE 747-762 AND 777-792 MHz BANDS 
+SCHEDULED FOR JUNE 19, 2002
+COMMENT SOUGHT ON ADDING TO AUCTION INVENTORY AND FURTHER 
+MODIFYING PACKAGE BIDDING PROCEDURES
+Report No. AUC-02-31-A (Auction No. 31)
+	By this Public Notice, the Wireless Telecommunications Bureau (“Bureau”) seeks comment on 
+the potential inclusion of 24 additional licenses in Auction No. 31 and potential modifications of 
+previously-announced procedures for Auction No. 31.  In the Auction No. 31 Procedures Public Notice,   
+the Bureau established procedures for the auction of the twelve licenses in the 747-762 and 777-792 MHz 
+bands (the “Upper 700 MHz” bands). The Bureau later revised its procedures to include package bidding 
+in Auction No. 31 Package Bidding Procedures Public Notice,  and subsequently modified those 
+procedures in the Auction No. 31 Package Bidding Procedures Modification Public Notice.    In light of 
+subsequent developments and further analysis, we have determined that it may be appropriate to make 
+further refinements.  Accordingly, this Public Notice seeks comment on whether to:
+1. include 24 licenses from the 698-746 MHz band (the “Lower 700 MHz” band) in Auction 
+No. 31;
+2. increase the number of bidder-defined packages if the Lower 700 MHz band licenses are 
+included in Auction No. 31;
+3. change part (iii) of the minimum acceptable bid calculation by either substituting a new 
+method of calculating minimum acceptable bids (Option 1) or modifying the existing formula 
+for calculating minimum acceptable bids for new packages (Option 2) and, if Option 1 is 
+adopted, consider all bids submitted when determining provisionally winning bid sets;  and
+4. establish an aggregate reserve price or increase the previously-established minimum opening 
+bids.
+I. WHETHER TO INCLUDE 24 LICENSES FROM THE LOWER 700 MHZ BAND IN 
+AUCTION NO. 31
+The Bureau seeks comment on whether we should include 24 licenses from the Lower 700 MHz 
+band in Auction No. 31.  These 24 licenses consist of licenses for four blocks of spectrum in each of the 
+six regions known as the 700 MHz band economic area groupings (“700 MHz band EAGs”).  In each 700 
+MHz band EAG, four Lower 700 MHz band licenses are for the use of two 12 megahertz blocks (each 
+block consists of paired 6 megahertz segments) and two 6 megahertz blocks that are unpaired and 
+contiguous. 
+
+Including these 24 Lower 700 MHz band licenses in Auction No. 31 would enable bidders to 
+create and bid on packages containing 700 MHz band EAG licenses from both the Upper and Lower 700 
+MHz bands.  Commenters should address any potential advantages or disadvantages of permitting 
+package bidding on such combinations and facilitating the substitution of spectrum in the Upper and 
+Lower 700 MHz bands.  Interested parties are advised that the Bureau also seeks comment regarding this 
+issue in a separate Public Notice addressing procedures for the auction of licenses in the Lower 700 MHz 
+bands (Auction No. 44). 
+
+If these 24 additional licenses are included in Auction No. 31, operational considerations would 
+require the Bureau also to adopt the more comprehensive revision to the minimum acceptable bid 
+calculation described as Option 1 in Section III(B) below.
+II. WHETHER TO INCREASE THE NUMBER OF BIDDER-DEFINED PACKAGES
+The Bureau seeks comment on whether to increase the number of bidder-defined packages if the 
+Bureau includes 24 licenses from the Lower 700 MHz band in Auction No. 31.  Taking into account 
+various factors, including the available licenses, the Bureau previously announced that Auction No. 31 
+bidders would be permitted to create and bid on up to twelve different packages of their own choosing 
+during Auction No. 31.   Commenters are asked to address whether the inclusion of additional licenses in 
+Auction No. 31 would create any need to increase the number of bidder-defined packages, considering 
+that bidder-defined packages may contain any number of licenses, up to all the licenses available in the 
+auction.
+III. WHETHER TO CHANGE THE MINIMUM ACCEPTABLE BID CALCULATION
+A.	Summary of Existing Procedures
+The Bureau established the current three-part formula for calculating minimum acceptable bids in 
+the Auction No. 31 Package Bidding Procedures Modification Public Notice.   Pursuant to the existing 
+procedure, the minimum acceptable bid for any particular license or package would be the greatest of: (i) 
+the applicable minimum opening bid; (ii) the bidder's previous high bid on that license/package plus x%, 
+where the Bureau would specify the value of x in each round; and (iii) the bidder's previous high bid on 
+that particular license/package plus an amount based on the increase in the bidder’s previous high bid 
+needed to create a tie with the provisional winners.   If the bidder has not bid on a license or an already 
+constructed package, the bidder’s previous high bid for purposes of calculating part (iii) would be the 
+applicable minimum opening bid.
+	With respect to part (iii), the Bureau established that it would determine the amount to add to a 
+given previous high bid in three steps.  First, the Bureau would calculate a shortfall for the given bid, with 
+the shortfall being the difference between the revenue of the provisionally winning bid set and the 
+maximum total revenue associated with a set of bids that includes the given bid and satisfies all other 
+constraints for determining a provisionally winning set.  Second, the Bureau would determine a deficit for 
+the given bid, or its share of the shortfall produced by the set, in two stages.  Initially, the Bureau would 
+determine the ratio of bidding units in the given bid’s particular license/package to bidding units for all 
+the non-provisionally winning bids in the set of bids that produced the shortfall.  (If more than one set of 
+bids yields the same shortfall for a given bid, the Bureau would use the set that includes the most 
+provisionally winning bidding units.)  The Bureau then would multiply the given bid’s shortfall by this 
+ratio to arrive at the deficit for the given bid.  Third, and finally, the Bureau would determine the amount 
+to be added to the given previous high bid by multiplying the given bid’s deficit by y%.  At the beginning 
+of the auction, the Bureau would set y at 100 but would retain the discretion to adjust the amount during 
+the course of the auction.
+However, part (iii) cannot be used to calculate the minimum acceptable bid for a package in the 
+same round that the particular package is created because no shortfall or deficit was calculated with 
+respect to that particular package at the end of the prior round.  For such a new package, the Bureau 
+established the following procedures.  Generally, the third part of the initial minimum acceptable bid 
+formula would be calculated for new packages by multiplying the number of bidding units in the package 
+by the lowest $/bidding unit of any provisionally winning bid in the last five rounds.  However, in the 
+event the new package is the global package of all licenses available in the auction, the minimum 
+acceptable bid would be the revenue generated by the provisionally winning bid set in the previous round 
+plus w%.   This assures that no bid for the global package would be accepted that does not exceed the 
+maximum revenue in the preceding round.
+Pursuant to current Auction No. 31 procedures, provisionally winning bids would be determined 
+by considering: (1) for each bidder, bids from the most recent two rounds in which the bidder submitted 
+bids or renewed bids; and (2) all provisionally winning bids from the prior round; and (3) a set of FCC 
+bids on each license at some small amount less than the applicable minimum opening bid.   Furthermore, 
+a bidder’s bids submitted in a given round would be treated as mutually exclusive of the bidder’s bids 
+submitted in other rounds. 
+B. Proposed Procedures -- Option 1
+Option 1 involves two significant changes to current procedures, the first being a comprehensive 
+revision in calculating part (iii) of the minimum acceptable bid formula and the second regarding the bids 
+considered when determining provisionally winning bids.  These changes would be made jointly or not at 
+all.  Adopting the first proposed change would enable the Bureau to include additional licenses in Auction 
+No. 31, as discussed in Section I, above; could improve the pace of the auction; and would make it 
+feasible to consider all bids submitted during the auction when determining provisionally winning bids.  
+Considering all bids submitted during the auction when determining provisionally winning bids would 
+make bidders responsible for all bids throughout the auction and may discourage strategic bidding.  On 
+the other hand, considering all bids submitted might make it more complex for participants and other 
+observers to track the auction.
+
+We seek comment on both aspects of the proposal, as described below.
+
+1. Minimum Acceptable Bids
+	As the first part of Option 1, the Bureau proposes to replace part (iii) of the minimum acceptable 
+bid formula with a current price estimate of the license or package plus z%.  A current price estimate for 
+each license would be calculated at the close of each round using the Smoothed Anchoring Method (see 
+Attachment A).  The current price estimate for a package would be the sum of the current price estimates 
+of the licenses that comprise the package.  Pursuant to this proposal, the Bureau would set z to be zero at 
+the beginning of the auction but would retain the discretion to adjust the amount, including setting it at 
+less than zero, during the course of the auction in order to provide control over the pace of the auction.
+	Implementing current price estimates for licenses and packages would preclude the need for a 
+special version of part (iii) of the minimum acceptable bid formula for newly-created packages.  
+However, the Bureau would retain the exception for calculating the minimum acceptable bid for a newly-
+created global package.  After the first round of the auction, the minimum acceptable bid for the global 
+package would always be the revenue generated by the provisionally winning bid set in the previous 
+round plus w%.  The Bureau would make this distinction in order to retain the ability to ensure that bids 
+for the global package would continue to increase even if we were to employ a percentage z that would 
+not guarantee that outcome.  That is, we might want to set w higher than z.
+2. Bids Considered
+	As the second part of Option 1, the Bureau would consider all bids submitted during the auction 
+when determining the provisionally winning set of bids.  It is impractical to consider every bid submitted 
+during the auction when calculating shortfalls and deficits in each round pursuant to the existing 
+minimum acceptable bid formula.  In the event that the Bureau calculates minimum acceptable bids using 
+current price estimates, as described above, it would become feasible to consider every bid submitted 
+when calculating minimum acceptable bids.  As in the previously-established procedures, bids placed 
+and/or renewed in different rounds would be considered as mutually exclusive – a bidder could be a 
+provisional winner only on bids placed in the same round.
+C. Proposed Procedures -- Option 2
+	Option 2 involves a more modest change to current procedures, limited to revising the third part 
+of the minimum acceptable bid formula applicable to newly-created packages.  Pursuant to this alternative 
+proposal, for newly-created packages, the third part of the minimum acceptable bid formula would be 
+calculated by multiplying the number of bidding units in the package by the average dollar per bidding 
+unit of all provisionally winning bids in the past five rounds.  The average dollar per bidding unit would 
+be calculated by dividing the sum of gross revenues from the provisionally winning bids sets  over the 
+last five rounds by five times the sum of all of bidding units in the auction.  This exception would not 
+apply to bids for the global package, however, for which the minimum acceptable bid would be the 
+maximum revenue from the previous round plus w%.
+	This alternative proposed revision to the calculation of minimum acceptable bids could improve 
+the pace of the auction.  We seek comment on this proposal.
+IV. WHETHER TO ESTABLISH AN AGGREGATE RESERVE PRICE OR INCREASE 
+PREVIOUSLY-ESTABLISHED MINIMUM OPENING BIDS
+The Communications Act calls upon the Commission to prescribe methods by which a reasonable 
+reserve price will be required, or a minimum opening bid will be established, when the Commission 
+auctions licenses, unless the Commission determines that a reserve price or a minimum opening bid is not 
+in the public interest.   Consistent with this mandate, the Commission has directed the Bureau to seek 
+comment on the use of a minimum opening bid and/or reserve price and on the methodology to be 
+employed in establishing each of these mechanisms prior to the start of each auction.   After seeking 
+comment on relevant issues, the Bureau established minimum opening bids for Auction No. 31.   The 
+Bureau further established that the minimum opening bids for packages would be the sum of the 
+minimum opening bids for the licenses comprising the package. 
+For Auction No. 31, to supplement the established minimum opening bids, the Bureau seeks 
+comment on establishing an aggregate reserve price that exceeds the sum of the minimum opening bids.  
+A reserve price is an absolute minimum price below which specified goods will not be sold.  Bidders, 
+however, may place bids below reserve prices.  Furthermore, reserve prices can be either public or 
+undisclosed.  The spectrum in Auction No. 31 is subject to a unique statutory clearance process, which the 
+Commission has created incentives to accelerate.   In light of these complexities, using an aggregate 
+reserve price in addition to minimum opening bids may be appropriate to ensure “a recovery for the 
+public of a portion of the value of the public spectrum resource”  commensurate with Congressional 
+expectations. 
+With respect to the appropriate level of an aggregate reserve price, Congress has estimated that 
+the Upper 700 MHz band licenses available for auction will generate $2.6 billion in revenue.   The 
+Commission’s previous 700 MHz guard bands auctions raised nearly $541 million.   Therefore, we seek 
+comment on the possibility of an aggregate reserve in Auction No. 31 equal to $2.6 billion in gross bids.  
+This gross bid figure should result in net revenues approximating the Congressional revenue estimate 
+minus net revenues from the 700 MHz guard bands auctions.   Under this approach, the Commission 
+only would accept the provisionally winning set of bids at the close of Auction No. 31 if the gross amount 
+of the provisionally winning set of bids equals or exceeds the $2.6 billion aggregate reserve price. 
+Commenters are asked to address how the public interest would or would not be served by 
+adopting an aggregate reserve price.  In particular, given all the circumstances of this auction, we seek 
+comment on whether the public interest would be served by establishing an aggregate reserve price to 
+ensure that the Commission recovers for the public a portion of the value of the public spectrum resource 
+commensurate with Congressional expectations.  Additionally, we seek comment on whether an 
+aggregate reserve price would introduce an added threshold problem  with which bidders would have to 
+contend.
+Commenters also should address whether any aggregate reserve price should be made public or 
+remain undisclosed.   Commenters supporting disclosure should address when and how any aggregate 
+reserve price would be made public.  For example, should it be disclosed when the Bureau announces the 
+qualified bidders for the auction?  Or when the auction begins?  In addition, commenters should address 
+whether the Bureau should make periodic announcements during the auction regarding whether bids meet 
+the aggregate reserve price or postpone any announcements until after the auction closes.  Commenters 
+supporting an undisclosed aggregate reserve price should comment on whether the Bureau should 
+announce whether bids meet any aggregate reserve at any time before the auction closes.  For example, 
+should the Bureau announce whether bids meet any aggregate reserve price if the Bureau keeps the 
+auction open by exercising its discretion under the stopping rule? 
+	Commenters addressing the level of the proposed aggregate reserve price should support their 
+claims with valuation analyses and suggested reserve prices or formulas.   Any commenters suggesting 
+license-by-license reserve prices, in place of the proposed aggregate reserve price, should explain with 
+specificity how reserve prices for individual licenses would be established.  We particularly seek 
+comment on such factors as, among other things, the amount of spectrum being auctioned, levels and 
+circumstances of incumbency, the availability of technology to provide service, the size of the geographic 
+service areas, issues of interference with other spectrum bands and any other relevant factors that 
+reasonably could have an impact on valuation of the 747–762 and 777–792 MHz bands.
+	As an alternative, the Bureau also seeks comment on increasing the previously-established 
+minimum opening bids in Auction No. 31.  The previously-established minimum opening bids total $720 
+million.   If commenters believe that the public interest would be served by increasing the current 
+minimum opening bids, they should support their claims with valuation analyses and suggested minimum 
+opening bid levels or formulas.  With respect to the amounts of the minimum opening bids, we 
+particularly seek comment on such factors as, among other things, the amount of spectrum being 
+auctioned, levels of incumbency, the availability of technology to provide service, the size of the 
+geographic service areas, issues of interference with other spectrum bands and any other relevant factors 
+that reasonably could have an impact on valuation of the 747–762 and 777–792 MHz bands.
+
+CONCLUSION
+Comments are due on or before February 19, 2002, and reply comments are due on or before 
+February 26, 2002.  Because of the disruption of regular mail and other deliveries in Washington, DC, the 
+Bureau requires that all comments and reply comment be filed electronically.  Comments and reply 
+comments must be sent by electronic mail to the following address: auction31@fcc.gov.   The electronic 
+mail containing the comments or reply comments must include a subject or caption referring to Auction 
+No. 31 Comments.  The Bureau requests that parties format any attachments to electronic mail as Adobe® 
+Acrobat® (pdf) or Microsoft® Word documents.  Copies of comments and reply comments will be 
+available for public inspection during regular business hours in the FCC Public Reference Room, Room 
+CY-A257, 445 12th Street, SW, Washington, DC  20554.
+In addition, the Bureau requests that commenters fax a courtesy copy of their comments 
+and reply comments to the attention of Kathryn Garland at (717) 338-2850.
+	This proceeding has been designated as a “permit-but-disclose” proceeding in accordance with 
+the Commission’s ex parte rules.   Persons making oral ex parte presentations are reminded that 
+memoranda summarizing the presentations must contain summaries of the substance of the presentations 
+and not merely a listing of the subjects discussed.  More than a one- or two-sentence description of the 
+views and arguments presented is generally required.   Other rules pertaining to oral and written ex parte 
+presentations in permit-but-disclose proceedings are set forth in Section 1.1206(b) of the Commission’s 
+rules. 
+	For further information concerning this proceeding, contact the following employees of Auctions 
+and Industry Analysis Division, Wireless Telecommunications Bureau, at (202) 418-0660:  
+For legal questions:		Howard Davenport
+For general auction questions:	Craig Bomberger or Martha Stancill
+For software questions:		Karen Wrege
+– FCC –
+  	See Auction of Licenses in the 747-762 and 777-792 MHz Bands; Auction Notice and Filing Requirements 
+for 12 Licenses in the 700 MHz Bands Auction Scheduled for May 10, 2000; Minimum Opening Bids and Other 
+Auction Procedural Issues, DA 00-292, Public Notice, 15 FCC Rcd 2921 (2000) (“Auction No. 31 Procedures 
+Public Notice”).
+  	See Auction of Licenses in the 747-762 and 777-792 MHz Bands Scheduled for September 6, 2000, 
+Procedures Implementing Package Bidding for Auction No. 31; Bidder Seminar Scheduled for July 24, 2000, DA 
+00-1486, Public Notice, 15 FCC Rcd 11,526 (2000) (“Auction No. 31 Package Bidding Procedures Public Notice”).
+  	See Auction of Licenses in the 747-762 and 777-792 MHz Bands Scheduled for March 6, 2001; 
+Modifications to the Calculation for Determining Minimum Acceptable Bids and the Provisions Concerning “Last 
+and Best Bids” and Other Procedural Issues; Bidder Seminar Scheduled for January 23, 2001, and Test of Package 
+Bidding System Set for January 24, 25, and 26, 2001, DA 01-12, Public Notice, 16 FCC Rcd 217 (2001) (“Auction 
+No. 31 Package Bidding Procedures Modification Public Notice”).
+  	The provisionally winning bid set at the end of each round consists of those non-mutually exclusive 
+considered bids that maximize revenue while assigning each license only once.
+  	See Auction of Licenses in the 698-746 MHz Band Scheduled for June 19, 2002, Comment Sought on 
+Reserve Prices or Minimum Opening Bids and Other Auction Procedural Issues, Public Notice, DA 02-200 (rel. Jan. 
+24, 2002) (“Auction No. 44 Procedures Public Notice”) at 1-2.
+  	See Auction No. 44 Procedures Public Notice at 2.
+ 	Auction No. 31 Package Bidding Procedures Public Notice, 15 FCC Rcd at 11,532.  
+  	See Auction No. 31 Package Bidding Procedures Modification Public Notice, 16 FCC Rcd at 219-221.
+  	Id.
+  	Id., at 211.
+  	See Auction No. 31 Package Bidding Procedures Modification Public Notice, 16 FCC Rcd at 224, 231-32.
+  	See id. at 231.
+  	The provisionally winning bid set would include any license for which no bid has been submitted, with any 
+such license treated as though a bid had been submitted in the amount of the minimum opening bid.  See Auction No. 
+31 Package Bidding Procedures Public Notice, 15 FCC Rcd at 11,550-51.  Accordingly, the divisor for determining 
+the average dollar per bidding unit includes all the bidding units in the auction, as described above.
+ 	See 47 U.S.C. §309(j)(4)(F).  The Commission's authority to establish a reserve price or minimum opening 
+bid is set forth in 47 C.F.R. § 1.2104(c) and (d).
+ 	See Amendment of Part 1 of the Commission’s Rules – Competitive Bidding Procedures; Allocation of 
+Spectrum Below 5 GHz Transferred from Federal Government Use, 4660–4685 MHz, WT Docket No. 97-82, ET 
+Docket No. 94-32, Third Report and Order and Second Further Notice of Proposed Rule Making, 13 FCC Rcd 374, 
+455-456 141 (1997) (“Part 1 Third Report and Order”).
+ 	A minimum opening bid is the minimum bid price set at the beginning of the auction below which no bids 
+are accepted.  It is generally used to accelerate the competitive bidding process.  Also, in a minimum opening bid 
+scenario, the auctioneer generally has the discretion to lower the minimum opening bid later in the auction.  See 
+Auction No. 31 Package Biding Procedures Public Notice, 15 FCC Rcd at 11,543 and 11,561.
+ 	See id., at 11,543.
+  	See Service Rules for the 746-764 and 776-794 MHz Bands, and Revisions to Part 27 of the Commission’s 
+Rules; Carriage of the Transmissions of Digital Television Broadcast Stations; Review of the Commission’s Rules 
+and Policies Affecting the Conversion to Digital Television, WT Docket No. 99-168, CS Docket No. 98-120, MM 
+Docket No. 00-39, Order on Reconsideration of the Third Report and Order, 16 FCC Rcd 21,633 (2001).
+  	47 U.S.C. §309(j)(3)(C)(one Commission statutory objective when proceeding to auction is “recovery for 
+the public of a portion of the value of the public spectrum resource”).
+  	See, generally, Part 1 Third Report and Order, 13 FCC Rcd at 455 (regarding the use of reserve prices in 
+Commission auctions).
+  	See 145 Cong. Rec. H9907-04, H9919 (daily ed. October 13, 1999). 
+  	See 700 MHz Guard Bands Auction Closes, DA 00-2154, Public Notice, 15 FCC Rcd 18,026 (2000); 700 
+MHz Guard Bands Auction Closes, DA 01-478, Public Notice, 16 FCC Rcd 4590 (2001).
+  	This gross bid figure should approximate the amount necessary to result in $2.6 billion in net bids when 
+added to the net results from the 700 MHz guard bands auctions.  Unavoidably, there are uncertainties in estimating 
+the gross bids required to meet Congressional expectations regarding net revenues.
+  	Pursuant to previously established procedures, the winning set of bids would value any FCC-held licenses 
+at the close of the auction at the minimum opening bid for those licenses.  See Auction No. 31 Package Bidding 
+Procedures Public Notice, 15 FCC Rcd at 11,550-51.
+  	See Auction No. 31 Package Bidding Procedures Public Notice, 15 FCC Rcd at 11,529-30(defining and 
+discussing the threshold problem for purposes of Auction No. 31).
+  	Any commenters suggesting license-by-license reserve prices, in place of the proposed aggregate reserve 
+price, should address the issue of disclosure as well.
+  	See Auction No. 31 Procedures Public Notice, 15 FCC Rcd at 2946-47 (discussing stopping rule for 
+Auction No. 31); 47 C.F.R. §1.2104(e).
+  	In addressing these issues, commenters may also wish to address the possibility that 24 Lower 700 MHz 
+bands licenses may be added to the inventory of Auction No. 31.
+  	See Auction No. 31 Procedures Public Notice at 11,561.
+ 	Comments and reply comments in response to this Public Notice may not be filed using the Commission’s 
+Electronic Comment Filing System, which is used for the Commission’s docketed rule making proceedings.
+  	See 47 C.F.R. §§ 1.1200(a), 1.1206.
+  	See 47 C.F.R. § 1.1206(b).
+  	See 47 C.F.R. § 1.1206(b).
+	
+
+
+8
+
+PUBLIC NOTICE
+
+

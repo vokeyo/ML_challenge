@@ -1,0 +1,304 @@
+#! /bin/more
+################################################################################
+#
+# Package information for jcas.
+# Copyright (c) 2002-2003 Oak Ridge National Laboratory.
+#
+# See README in the source distribution top-level directory or package data
+# directory (usually /usr/local/share/jcas) for general information.
+#
+# See INSTALL in the source distribution top-level directory or package data
+# directory (usually /usr/local/share/jcas) for install information.
+#
+# See COPYING in the source distribution top-level directory or package data
+# directory (usually /usr/local/share/jcas) for license information.
+#
+# See AUTHORS in the source distribution top-level directory or package data
+# directory (usually /usr/local/share/jcas) for authors information.
+#
+# See ChangeLog in the source distribution top-level directory or package data
+# directory (usually /usr/local/share/jcas) for changes information.
+#
+################################################################################
+
+
+1. Introduction
+===============
+
+In the past four decades, the raw computational power of computer systems
+increased steadily affirming the initial prediction of Gordon Moore from 1965
+that the number of transistors, i.e. the raw computational power, on a chip
+doubles every eighteen months. With the introduction of parallel computing
+Moore's Law was even topped by doubling the computational performance of
+parallel computer systems every 12 months. This trend is not only driven by
+the achievements in processor technology but also by connecting more and more
+processors together using low latency/high bandwidth interconnects. The
+current top system, the Earth Simulator in Japan, has 5120 processors
+connected with a single stage crossbar (16 GB/s cross section bandwidth) and
+achieves up to 40 Tera FLOPS.
+
+In the next five to ten years the number of processors in distributed
+computer systems will rise to tens and even hundreds of thousands in order to
+keep up with the pace. While the vision of such super-scalable computer
+systems, like the IBM BlueGene/L, attracts more and more scientists for
+research in areas like climate modeling and nanotechnolgy, existing
+deficiencies in scalability and fault-tolerance of scientific algorithms need
+to be addressed soon. Amdahl's Law shows how efficiency drops off as the
+number of processors increases. A lot of scientific algorithms still do not
+scale well. Furthermore, the mean time to failure becomes shorter and
+shorter. A failure may occur every couple of minutes in a system with 100,000
+processors. Additionally, computing processors will not have local disk
+storage any longer due to associated costs, failure sensitivity and
+maintenance. Network bottlenecks and latencies to stable storage make
+frequent disk checkpointing (every hour) of applications for fault-tolerance
+impossible.
+
+The current research in cellular architectures is part of a collaborative
+effort between IBM and the ORNL to develop algorithms for the next-generation
+of supercomputers. This research focuses on the development of algorithms
+that are able to use a 100.000-processor machine efficiently and are capable
+of adapting to or simply surviving faults. Such huge computer systems will
+be deployed in the next five years and already existing problems in algorithm
+scalability and fault-tolerance are going to increase with the processor
+scale. In a first step, the ORNL developed a simulator in Java, since a
+100.000-processor machine does not exist today. A prototype of the Java
+Cellular Architecture Simulator (JCAS) was presented at the SuperComputing
+Conference in November 2001 and was able to emulate up to 5000 virtual
+processors on a single real processor solving Laplace'sequation. Another
+demonstration at the SuperComputing Conference in November 2002 was capable
+of emulating up to 500.000 virtual processors on a cluster with 5 real
+processors (1 for visualization and 4 for computation) solving Laplace's
+equation and the global maximum problem.
+
+
+2. The Simulator
+================
+
+This release of the simulator is able to run up to 1.000.000 virtual
+processors on the same cluster and provides C and FORTRAN interfaces to run
+native scientific software. We note that the number of simulated virtual
+processors highly depends on the amount of private data stored for every
+single virtual processor and on the problem to solve, i.e. the overall number
+of messages. The simulation runs a single master cell (or thread) for control
+and a given number of slave cells connected with a configurable network
+infrastructure. The current supported network types include: mesh, torus,
+nearest neighbour and random. The slave cells are addressed using a position
+in a configurable multidimensional space. The cell positions for the mesh and
+torus network types are aligned to a regular grid in this space. The nearest
+neighbour and random network types are available with regular grid or random
+position alignment. Applications may use the virtual space addressing of
+cells to map scientific algorithms, e.g. a 3-dimensional simulation of a
+climate model. The simulator is able to emulate faults by destroying a cell
+and notifying its neighbours. It is also capable of inserting cells and
+notifying its neighbours about it during the simulation run. This feature may
+be used for methods similar to adaptive mesh refinement in order to increase
+the density of cells in a specific region of interest in the simulated
+virtual space. Due to the need of user interaction and problem visualization,
+the simulator provides a graphical user interface. Applications may use a
+designated viewing area to display their progress or other data relevant to
+the scientific problem to solve. They also may provide their own menu items
+and dialog windows for controlling and interacting with the simulation during
+runtime.
+
+The interface between the simulator and applications is a simplified SPMD
+model. Every application provides its own implementation of a message
+processing method located in a Cell class. Every cell has properies, such as
+a position, a set of positions from its neighbour cells and a list of objects
+used as permanent storage (cell/thread private data). The cell itself does
+not run a real native thread or process due to the associated system overhead.
+Instead, a server is continiously routing, receiving and processing messages,
+where it automatically switches the cell/thread context like a simple batch
+system. Similar to such a batch processing system, messages (jobs) can be
+replaced in the message queue if they outdate each other. This is indicated
+by a negative message tag. If an incoming message has the same negative
+message tag as an already queued message, the message in the queue gets
+replaced. Certain algorithms may use this capability to improve performance.
+Although messages are transmitted and processed, the simulator does not yet
+provide functions of a typical message passing system (PVM/MPI). However,
+some similarities exist and basic MPI support is in development.
+
+
+3. Provided Applications
+========================
+
+There are three different basic applications packaged with the simulator in
+order to show its capabilities and the way they are achieved. A simple
+broadcast application is sending a boolean value through the virtual peer-to-
+peer network, causing the cells to switch their state. The states of all
+cells are displayed as red or blue dots in a rectangular viewing area, where
+the cell positions are simplified to 2 dimensions. The broadcast can be
+initiated by clicking on or nearby a dot/cell or by clicking on one of the
+buttons on the borders or corners. Another application gives every cell a
+random value and tries to find the maximum by simply letting every cell to
+broadcast its value to its neighbours where cells always keep the greater
+value. The search process is initiated in the same way like the previous
+broadcast. The next application is solving the Laplace's equation by having
+every cell averaging its value based on the values of its neighbours. The
+boundary conditions can be changed at runtime using sliders at the borders.
+The cell values are displayed in colors as mentioned earlier.
+
+
+4. Runtime Environment
+======================
+
+The simulator itself can run as a standalone application or as a distributed
+application. Experiments have shown that the maximum number of cells is
+mostly determined by the amount of available memory and the speed of
+algorithm completion by the minimum of real network usage, so that the ratio
+of computation and communication may be considered for choosing the
+simulation mode. A computational expensive application completes faster on
+more nodes, while a communication intensive application is better on less
+nodes. The demonstration at SC2002 was performed on a cluster with 4
+computation nodes (4 processors each, with 2GB RAM) and one visualization
+node (2 of processors, with 2GB RAM). SMP nodes, like in this example, are
+generally able to support the Java multithreading of the simulator, so that
+networking and message processing is performed on separate processors. The
+simulator was developed using the SUN Java development kit version 1.4.1_02
+and the GNU autotools: autoconf 2.57, automake 1.7.2 and lobtool 1.4.3. The
+GNU autotools are only used for development purpose, while the SUN Java SDK
+is also used to run the simulator itself.
+
+
+7. Command line Usage
+=====================
+
+The simulator itself can run as a standalone application or as a distributed
+application. Omitting the -n or -names option enables the standalone mode. To
+start the simulator in standalone mode simply type jcas. Be sure to include
+<installation directory>/bin your the search path for binaries or type
+<installation directory>/bin/jcas. The only option that is available in this
+mode is -[m|-memory] SIZE to increase the Java heap memory if needed. To
+run the simulator in the distributed mode list all TCP/IP hosts the simulator
+is started on with the -[n|-names] option and start the simulator on all
+TCP/IP hosts with the same list and the same order. The -[m|-memory] SIZE
+option is also available here. The list of names may contain already port
+numbers in the form NAME:PORT. The value of the -[p|-port] option is used
+for all omitted port numbers in all following -[n|-names]. The value of the
+-[b|-backlog] option is used to specify the backlog count of the TCP/IP server
+for accepting connections.  The simulator is usually started with the same
+command line on all nodes, e.g. `jcas -p 5000 -n node0 node1 node2 node3
+node4`. The first node in the list is used to drive the graphical user
+interface and the master cell. All slave cells are distributed over the nodes
+by evenly dividing the virtual cell space.
+
+Note to C3 users: The Cluster Command and Control (C3) tool suite was
+developed for operating a cluster at the Oak Ridge National Laboratory and is
+now part of the OSCAR distribution. Any cluster installed and maintained using
+OSCAR provides the `cexec` tool to execute a program on all machines or on a
+subset of machines of the cluster in parallel. In order to start up the
+simulator in distributed mode on a cluster, use the provided cexec wrapper in
+the form cjcas <cexec option> [jcas options], e.g. `cjcas :0-2 -n node0 node1
+node2`. For more information on C3 see http://www.csm.ornl.gov/torc/C3 and for
+more information on OSCAR see http://www.openclustergroup.org/.
+
+Note: Windows users without a UNIX-type environment simply click on `jcas.bat`
+in order to build the simulator for its first time and to run it in standalone
+mode. Edit the jcas-windows.bat file to add the Xms<value> and  -Xmx<value>
+options to increase the Java heap memory if needed. (See `java --help` for more
+on these options.)
+
+Usage:
+ jcas [options]
+Options:
+ -[b|-backlog] BACKLOG       Set server backlog count to BACKLOG.
+                             The default value for BACKLOG is 50.
+ -[h|-help]                  Print out command line help.
+ -[m|-memory] SIZE           Set Java heap size to SIZE.
+                             The default value for SIZE is 64m.
+ -[n|-names] NAME[:PORT] ..  Set list of host names with ports.
+                             The default list is: 127.0.0.1:5000.
+ -[p|-port] PORT             Set server port to PORT.
+                             The default value for PORT is 5000.
+ -[v|-version]               Print out version info.
+
+Usage:
+ cjcas <cexec argument> [options]
+Cexec argument:
+ See \`cexec --help\` for more information.
+Options:"
+ -[b|-backlog] BACKLOG       Set server backlog count to BACKLOG.
+                             The default value for BACKLOG is 50.
+ -[h|-help]                  Print out command line help.
+ -[m|-memory] SIZE           Set Java heap size to SIZE.
+                             The default value for SIZE is 64m.
+ -[n|-names] NAME[:PORT] ..  Set list of host names with ports.
+                             The default list is: 127.0.0.1:5000.
+ -[p|-port] PORT             Set server port to PORT.
+                             The default value for PORT is 5000.
+ -[v|-version]               Print out version info.
+
+Usage:
+ jcas-windows.bat
+
+
+Package Install Options
+=======================
+
+There are currently no additional options to `configure`. For the standard
+options see `configure --help` for more information.
+
+
+Development Information
+=======================
+
+Please see INSTALL in the source distribution top-level directory or package
+data directory (usually /usr/local/share/harness-bundle) for install information
+for development purpose. Please also see COPYING in the source distribution
+top-level directory or package data directory for license information for
+modifying this package, i.e. adding, removing and/or changing any files.
+
+In order to take part in the development process for this package, please unpack
+the source distribution and install it into the unpacked directory to make sure
+that this installation is for development purpose only. Please submit bug fixes
+or enhancements to the bugreport e-mail address supplied in configure.ac in the
+source distribution top-level directory.
+
+Please also see the "Introduction" section in INSTALL for instuctions on using
+`configure` and `autogen.sh`. If you change any file that is processed by
+`configure`, be sure to run `autogen.sh` and not to change any file that is
+created by `configure`. Change the template (`configure` input) file instead.
+See the "Package Install Options" section in this file for any additional
+`configure` and `autogen.sh` options.
+
+This source distribution provides the following make targets after running
+`configure` or `autogen.sh` in the source distribution top-level directory:
+
+`make` or `make all`: Compiles and links all binaries of this package. Do not
+                      run any created executable and do not link any created
+                      library (unless cross-linked inside the package), since
+                      the package is build and not installed.
+
+`make install`: Installs all files of this package marked to be installed. Run
+                any installed executable or script and link any installed
+                library in their installation path. Installed header files may
+                be included by other software packages. Some package information
+                files (README, INSTALL, etc.) are installed as well.
+
+`make clean`: Removes any files created by `make` or `make all`, but does not
+              remove any files installed by `make install`.
+
+`make uninstall`: Removes any files installed by `make install`, but does not
+                  remove any files created by `make` or `make all`.
+
+`make maintainer-clean`: Removes any files created by `make` or `make all` and
+                         files created by `configure`, but does not remove any
+                         files installed by `make install`.
+
+`make release`: Creates all files needed for a release of this software package.
+                This includes: tar and bz2 archives and source rpm. Do NOT use
+                `make dist` provided through `automake`.
+
+`make releases`: Recursively executes `make release` for software packages that
+                 bundle other software packages, so that the bundle release and
+                 all individual releases are created.
+
+`make backup`: Creates a tar archive of the source distribution top-level
+               directory with a timestamp and puts it into the directory above
+               the source distribution top-level directory.
+
+
+################################################################################
+#
+# End of file.
+#
+################################################################################

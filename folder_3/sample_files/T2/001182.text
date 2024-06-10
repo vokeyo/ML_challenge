@@ -1,0 +1,147 @@
+--- README	2006/01/18 17:29:25	1.1
++++ README	2006/10/26 21:30:04	1.3
+@@ -3,87 +3,90 @@
+ ARCHITECTURE:
+ 
+ 
+-Zoid consists of a generic infrastructure part and backend-specific parts.
++Zoid consists of a generic daemon, generic client-side support, and
++backend-specific parts.
+ 
+-The infrastructure is located in the "tunnel" directory.
++The generic daemon components are located in directories "daemon" and
++"include".
+ 
+-The backends are in directories such as "zoidfs" and "unix".
++Generic client-side support is currently integrated into a custom version
++of GNU libc, available separately.  That GNU libc requires a binary-patched
++compute node kernel image, which can be built with "cnk-binary-hack" (also
++available separately).
+ 
++The backends are in sub-directories such as "unix" and "zoidfs".
+ 
+-COMPILING:
+ 
++COMPILING BACKENDS:
+ 
+-cd tunnel && make
+ 
+-This will build:
+-- libzoid_blrts.a: a library containing client-side of the generic
+-  infrastructure, to be linked with your application that runs on BG/L
+-  compute nodes,
+-- libzoid_host.a: a version of the libzoid_blrts.a that is suitable for
+-  running on login nodes (useful for testing/debugging),
+-- zoid_preload.so: a shared object containing the server-side of the
+-  generic infrastructure, meant primarily to be linked with ciod on BG/L
+-  I/O nodes, but can also be used for testing with libzoid_host.a on login
+-  nodes.
+-
+-cd <backend_dir> && make
++cd <backend> && make
+ 
+ This will build:
++
+ - lib<backend>_blrts.a: a library containing client-side stubs interfacing
+   between the application code and the generic infrastructure, to be linked
+   with your application that runs on BG/L compute nodes,
+-- lib<backend>_host.a: a version of the lib<backend>_blrts.a that is
+-  suitable for running on login nodes (useful for testing/debugging),
+-- <backend>_preload.so: a shared object containing the server side stubs
+-  interfacing between the generic infrastructure and the call
+-  implementation, meant primarily to be linked with ciod on BG/L I/O nodes,
+-  but can also be used for testing with libzoid_host.a on login nodes.
+-
+-In addition to the above elements, you also need to compile a shared object
+-containing the backend-specific function implementations.  The location of
+-this part may vary by backend.
++- <backend>_preload.so: a shared object containing the server-side stubs
++  interfacing between the daemon and the call implementation, to be linked
++  with the Zoid daemon on BG/L I/O nodes.
+ 
++In addition to the server-side stubs, server-side function implementations
++must also be provided.  Their location is not standardized; in case of the
++"unix" backend, they are in the "unix/implementation" directory, and a
++simple "make" will build a shared object out of them.
+ 
+-LINKING APPLICATIONS:
+ 
++COMPILING DAEMON:
+ 
+-BG/L compute node applications need to be linked with libzoid_blrts.a and
+-one or more of the backend-specific lib<backend>_blrts.a libraries.
+ 
+-Analogous host libraries should be used for testing on a login node.
++cd daemon && make
+ 
++This will build "zoidd", the daemon.
+ 
+-RUNNING:
++Note: currently, the daemon is explicitly linked with the "unix" backend's
++server stub and implementation shared objects.  This simplifies the
++invocation (see below) and makes explicit the fact that the "unix" backend
++is in fact required by the client-side libc.
+ 
+ 
+-When running BG/L compute node applications, support for them in ciod, that
+-runs on I/O nodes, must be enabled.  To do that, preload ciod with the
+-following shared objects: zoid_preload.so, one or more
+-<backend>_preload.so, and one or more backend-specific function
+-implementation objects.
++LINKING APPLICATIONS:
+ 
+-The best way to do this is by modifying the ramdisk.  /etc/sysconfig/ciod
+-should contain a line such as:
+ 
+-export LD_PRELOAD=/home/iskra/zoid/tunnel/zoid_preload.so:/home/iskra/zoid/zoidfs/zoidfs_preload.so:/home/iskra/zoid/zoidfs/server/api/libzoidfs_server.so
++BG/L compute node applications need to be linked with the custom GNU libc
++and one or more of the backend-specific lib<backend>_blrts.a libraries.
++Use "-L" to specify the location of the custom libc.a.
++
++Note: currently, libc.a depends on libunix_blrts.a.  It is thus required
++to link with the latter (-lunix_blrts).  Because of circular dependencies
++between libraries, it might be necessary to specify -lc on the command line,
++possibly multiple times.  A few examples:
+ 
+-If you want to test the application on a login node, preload the same
+-objects into the application itself, i.e.:
++mpicc -L glibc-build-zoid -L zoid/unix -o hw_zoid hw.c -lc -lunix_blrts -lc
+ 
+-env LD_PRELOAD=../../../../tunnel/zoid_preload.so:../../../zoidfs_preload.so:../libzoidfs_server.so LD_LIBRARY_PATH=$(LIBSDIR) ./app-host
++mpicc -L glibc-build-zoid -L zoid/unix -o myhw2_zoid myhw2.c -lmpich.rts -lmsglayer.rts -lc -lunix_blrts
+ 
+ 
+-BUILDING NEW BACKENDS:
++RUNNING:
+ 
+ 
+-Follow existing backends as examples.  Essentially, you need to provide:
++Make sure to use the modified compute node kernel image.
+ 
+-- Makefile: existing ones are very generic -- changing only the first line
+-  should normally be sufficient,
+-- header file: must follow strict guidelines, specified at the top of
+-  "tunnel/scanner.pl" file,
+-- server-side function implementations.  The implementation should be
+-  generic, it should not use any parts of the zoid infrastructure.  There
+-  is one exception to this rule: an implementation may use a special
+-  variable "int zoid_calling_process_id", exported from zoid_preload.so, to
+-  tell the calling processes apart.
++zoidd needs to be started on the I/O nodes, in addition to the standard IBM
++ciod.  The two daemons can be started in an arbitrary order.  ZeptoOS
++config has an option to run a user script as part of the startup process.
++A sample line to start zoidd:
++
++cd <daemon_location> && ./zoidd >../../zoidd.out.`date '+%Y%m%d%H%M%S'`.`hostname` 2>&1 &
++
++Currently, jobs' output/error does not go to the usual channels; instead,
++it gets printed out by zoidd, so look into the generated file.  The
++standard ciod output file should be empty.
++
++ciod is suspended while zoidd is running.  zoidd used to kill ciod after a
++job was finished to trigger a partition reboot, but this was changed around
++2006-08-25.  Currently, if all processes of a job terminate normally, ciod
++is resumed, and it is up to the management system to decide whether to
++reboot a partition or not.  Note that zoidd still terminates after each
++job, so you might want to invoke it in a loop if you don't reboot
++partitions between jobs.

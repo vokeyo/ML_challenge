@@ -1,0 +1,173 @@
+C Copyright(c) 1998, Space Science and Engineering Center, UW-Madison
+C Refer to "McIDAS Software Acquisition and Distribution Policies"
+C in the file  mcidas/data/license.txt
+
+C *** $Id: mddates.f,v 1.3 1998/08/17 18:21:59 billl Rel $ ***
+
+*$ Name:
+*$      mddates   - Converts ptfile date fields. 
+*$
+*$ Interface:
+*$	integer function
+*$	mddates(integer indate, integer outdate, integer informat,
+*$              integer outformat)
+*$
+*$ Input:
+*$      indate    - Date before reformatting.
+*$      informat  - Format of indate.
+*$      outformat - Format of outdate.
+*$
+*$ Input and Output:
+*$      none
+*$
+*$ Output:
+*$      outdate   - Date after reformatting.
+*$
+*$ Return values:
+*$       0        - Success.  The conversion took place.
+*$      -1        - Date could not be reformatted, 
+*$                  input date was not formatted according to informat,
+*$                  or conversion to SYD was requested.
+*$      -2        - Informat or outformat was not a date format.
+*$
+*$ Remarks:
+*$      Informat and outformat contain 4-character strings:
+*$                  'CYD '          ccyyddd
+*$                  'SYD '         sssyyddd
+*$                  'YYDD'            yyddd
+*$
+*$      No format transformation can be made to SYD, because the implied
+*$      satelitte is not known.
+*$
+*$
+*$ Categories:
+*$      point   
+
+      integer function mddates  
+     &   ( indate,  outdate, informat,
+     &    outformat)
+
+      integer indate
+      integer outdate
+      character*(*)informat
+      character*(*)outformat
+
+      character*12 cfi
+      character*4  clit
+      character*4  cinf
+      character*4  coutf
+      
+
+      integer arg_year
+      integer arg_ddd
+      integer i
+      integer iret
+      integer kmp_year
+      integer temp_indate
+      integer temp_outdate
+      integer this_cent
+      integer this_year
+      integer today
+      
+c ---- Check for legal unit codes
+
+      cinf=informat
+      coutf=outformat
+c     call ddest('cinf,coutf '//cinf//' '//coutf,0)
+      if(cinf.ne.'SYD'.and.cinf.ne.'YYDD'.and.cinf.ne.'CYD') then
+c        call ddest('Input format is not a date '//cinf,0)
+         mddates=-2
+         return
+      endif
+ 
+      if(coutf.ne.'SYD'.and.coutf.ne.'YYDD'.and.coutf.ne.'CYD') then
+         call ddest('Output date format is not a date '//coutf,0)
+         mddates=-2
+         return
+      endif
+
+      if(coutf.eq.'SYD'.and.cinf.ne.'SYD') then
+         call edest('A conversion to SYD was requested.'
+     &            //' This cannot be done from '//cinf,0)
+         mddates=-1
+         return
+      endif
+
+c ---- SYD-SYD is only legal conversion if cinf is SYD and date
+c ---- is larger than 99365.
+      if(cinf.eq.'SYD' .and. indate.gt.99365)  then
+        if(coutf.ne.'SYD')  then
+           call edest('Date is greater than 99365 but SYD request'
+     &                //' is not for SYD',0)
+           mddates=-3
+           return
+        endif
+      endif
+
+c ---- Have legal formats, try to convert.
+c ---- If formats are the same, there is no need to convert.
+
+      if(cinf.eq.coutf)  then      
+         outdate=indate
+         if(cinf.eq.'YYDD')  then
+            outdate=mod(outdate,100000)
+         endif
+         go to 900
+      endif
+
+c ---- Check for SYD
+      if(cinf.eq.'SYD')  then
+        temp_indate=mod(indate,100000)
+        call ddest('temp_indate,indate'//cfi(temp_indate)
+     *              //cfi(indate),0)
+
+        if(coutf.eq.'CYD')  then
+           if(indate.gt.99365)then
+              outdate=indate
+              go to 900
+           endif
+           iret=nearcent(temp_indate,temp_outdate)
+c          call ddest(cinf//' '//coutf//cfi(temp_indate)
+c    *                         //cfi(temp_outdate),0)
+           outdate=temp_outdate
+           go to 900
+        endif
+
+        if(coutf.eq.'YYDD')  then
+           outdate=temp_indate
+           go to 900
+        endif
+      endif
+
+
+c ---- Check for CYD, only possible conversion left is to YYDD.
+      if(cinf.eq.'CYD')  then
+         if(coutf.eq.'YYDD')  then
+            outdate=mod(indate,100000)
+            go to 900
+         endif
+      endif
+
+c ---- Check for YYDD, only possible conversion left is to CYD
+c ---- Convert to ccyy
+      if(cinf.eq.'YYDD')  then
+         if(coutf.eq.'CYD')  then
+            if(indate.gt.99365) then
+               outdate=indate
+            else
+               iret=nearcent(indate,temp_outdate)
+               if(iret.lt.0) then
+                 mddates=-4
+                 return
+               else 
+                  outdate=temp_outdate
+               endif
+            endif
+            go to 900
+         endif
+      endif
+
+900   continue
+      mddates=0
+      return
+      end

@@ -1,0 +1,79 @@
+Date	Geol	Regno	Reg	Provno	Prov	TPSno	TPS	AUno	AU	Data	Comm	RminMMBBCF	Numtest1	Numtest2	AUM	Med1MMBBCF	Med2MMBBCF	Med3MMBBCF	Prob1 %	Prob2 %	Prob3 %	Geoprob %	Prob4 %	TAAmin a	TAAmed a	TAAmax a	CAmin a	CAmed a	CAmax a	TAAUmin %	TAAUmed %	TAAUmax %	UAAPmin %	UAAPmed %	UAAPmax %	RminMMBBCF	RmedMMBBCF	RmaxMMBBCF	GminCF/B	GmedCF/B	GmaxCF/B	NminB/MMCF	NmedB/MMCF	NmaxB/MMCF	LminB/MMCF	LmedB/MMCF	LmaxB/MMCF	APImin deg	APImed deg	APImax deg	Smin %	Smed %	Smax %	ODmin m	ODmed m	ODmax m	OWDmin m	OWDmed m	OWDmax m	IGmin %	IGmed %	IGmax %	CO2min %	CO2med %	CO2max %	H2Smin %	H2Smed %	H2Smax %	GDmin m	GDmed m	GDmax m	GWDmin m	GWDmed m	GWDmax m	TAAUPmin %	TAAUPmed %	TAAUPmax %																																																																																																																							
+9/7/00	M.E. Henry	5	North America	5020	Uinta-Piceance Basin	502001	Ferron Coal/Wasatch Plateau	50200161	"Deep (6,000 feet plus) Coal and Sandstone Gas"		Gas	0.2	8	0	Hypothetical				1	0.9	1	0.9	1	152300	160300	168300	60	160	320	100	100	100				0.2	0.5	4							0	0	0													2	5	9	1	5	11	0	0	0	1830	2070	2740				1	10	30																																																																																																																							
+9/12/00	M.E. Henry	5	North America	5020	Uinta-Piceance Basin	502001	Ferron Coal/Wasatch Plateau	50200181	Northern Coal Fairway/Drunkards Wash		Gas	0.05	328	310	Established	2.3	1.05	1.25	1	1	1	1	1	151600	159600	167600	40	120	280	63	73	83				0.05	0.8	12							0	0	0													0.1	2.2	3	1	3	7	0	0	0	150	700	1700				10	55	79																																																																																																																							
+9/12/00	M.E. Henry	5	North America	5020	Uinta-Piceance Basin	502001	Ferron Coal/Wasatch Plateau	50200182	Central Coal Fairway/Buzzards Bench		Gas	0.05	85	25	Established	0.34	0.15	2.3	1	1	1	1	1	238600	246000	253400	40	102	250	95	96	98				0.05	0.4	10							0	0	0													2	5	9	1	5	11	0	0	0	73	945	1830				5	38	55																																																																																																																							
+9/7/00	M.E. Henry	5	North America	5020	Uinta-Piceance Basin	502001	Ferron Coal/Wasatch Plateau	50200183	Southern Coal Fairway		Gas	0.05	16	0	Hypothetical				1	0.98	1	0.98	1	158300	166636	175000	40	108	250	98	99	100				0.05	0.2	5							0	0	0													2	5	9	1	5	11	0	0	0	305	1070	1830				1	35	50																																																																																																																							
+9/7/00	M.E. Henry	5	North America	5020	Uinta-Piceance Basin	502001	Ferron Coal/Wasatch Plateau	50200184	Joes Valley and Messina Grabens		"Gas, not quantitatively assessed."	0.05	1	0	Hypothetical				1	0.25	0.25	0.0625	1																																																																																																																																																																													
+1/9/01	M.E. Henry	5	North America	5020	Uinta-Piceance Basin	502001	Ferron Coal/Wasatch Plateau	50200185	Southern Coal Outcrop		Gas	0.05	0	0	Hypothetical				0.9	0.8	0.8	0.576	1	31900	35400	38900	40	102	250	100	100	100	8	32	80	0.05	0.1	3							0	0	0													2	5	9	1	5	11				75	180	425																																																																																																																													
+10/12/00	S.B. Roberts and R.C. Johnson	5	North America	5020	Uinta-Piceance Basin	502002	Mesaverde	50200261	Uinta Basin Continuous Gas	PI production data current through third quarter 1999	Gas	0.02	1074	869	Established	0.8	0.7	0.66	1	1	1	1	1	1845000	2050000	2255000	20	92	240	95	96	97	4	30	50	0.02	0.5	40							0.75	1.5	2.25													1	2	10	0.1	0.5	1	0	0	0	1350	2800	6700																																																																																																																													
+10/12/00	S.B. Roberts and R.C. Johnson	5	North America	5020	Uinta-Piceance Basin	502002	Mesaverde	50200262	Uinta Basin Transitional Gas	PI production data current through third quarter 1999	Gas	0.02	305	145	Established	0.45	0.2	0.3	1	1	1	1	1	1069000	1274000	1479000	20	92	240	97	98	99	12	20	38	0.02	0.25	15							0.75	1.5	2.25													1	2	10	0.1	0.5	1	0	0	0	1500	2500	3500																																																																																																																													
+10/13/00	R.C. Johnson and S.B. Roberts  	5	North America	5020	Uinta-Piceance Basin	502002	Mesaverde	50200263	Piceance Basin Continuous Gas	PI production data current through third quarter 1999	Gas	0.02	822	646	Established	0.44	0.39	0.63	1	1	1	1	1	1273000	1273000	1273000	20	67	180	96	97	98	8	20	35	0.02	0.5	15							1.5	3	4.5													0.1	0.3	0.5	0.1	3	5	0	0	0	1200	2700	4300																																																																																																																													
+10/13/00	R.C. Johnson and S.B. Roberts	5	North America	5020	Uinta-Piceance Basin	502002	Mesaverde	50200264	Piceance Basin Transitional Gas	PI production data current through third quarter 1999	Gas	0.02	188	56	Established	0.25	0.14	0.25	1	1	1	1	1	498000	622000	746000	20	80	180	95	97	99	1	12	20	0.02	0.25	4							1	2	3													0.1	0.3	0.5	0.1	3	5	0	0	0	750	1800	2700																																																																																																																													
+10/13/00	S.B. Roberts and R.C. Johnson	5	North America	5020	Uinta-Piceance Basin	502002	Mesaverde	50200281	Uinta Basin Blackhawk Coalbed Gas	PI production data current through third quarter 1999	Gas	0.05	26	16	Frontier	0.13	0.08	0.17	1	1	1	1	1	1650000	1737000	1823000	40	120	280	99.7	99.8	99.9	0.5	7	20	0.05	0.25	10							0	0	0													0.1	2.2	3	1	3	12	0	0	0	100	1000	1830																																																																																																																													
+10/16/00	S.B. Roberts and R.C. Johnson	5	North America	5020	Uinta-Piceance Basin	502002	Mesaverde	50200282	Mesaverde Group Coalbed Gas	PI production data current through third quarter 1999	Gas	0.02	90	18	Frontier	0.25	0.09	0.04	1	1	1	1	1	4280000	4815000	5350000	40	120	280	99.7	99.8	99.9	1	5	14	0.02	0.08	5							0	0	0													0.1	0.3	1	0.2	4	15	0	0	0	100	1000	1830																																																																																																																													
+10/10/00	M.A. Kirschbaum and L.N.R. Roberts	5	North America	5020	Uinta-Piceance Basin	502003	Mancos/Mowry	50200361	Piceance Basin Continuous Gas	PI data current through third quarter 1999	Gas	0.02	731	354	Established	0.3	0.13	0.22	1	1	1	1	1	1955000	2058000	2264000	30	110	240	94	96	98	4	18	49	0.02	0.25	10							0.5	1	1.5													0.1	0.4	25	0.01	2	6	0	0	0	700	2300	5000																																																																																																																													
+10/11/00	M.A. Kirschbaum and L.N.R. Roberts	5	North America	5020	Uinta-Piceance Basin	502003	Mancos/Mowry	50200362	Uinta Basin Continuous Gas	PI production data current through third quarter 1999	Gas	0.02	399	179	Established	0.33	0.42	0.81	1	1	1	1	1	4006000	4217000	4428000	30	110	240	98	99	100	5	9	18	0.02	0.5	16							1	2	3													0.1	1.3	7.4	0.15	0.6	1.2	0	0	0	300	2700	6100																																																																																																																													
+10/11/00	M.A. Kirschbaum and L.N.R. Roberts	5	North America	5020	Uinta-Piceance Basin	502003	Mancos/Mowry	50200363	Uinta-Piceance Transitional and Migrated Gas	PI production data current through third quarter 1999	Gas	0.02	2270	1489	Established	0.4	0.25	0.27	1	1	1	1	1	2235000	2540000	2845000	30	130	240	82	88	94	20	28	34	0.02	0.2	7							0.1	1.2	3.8													0.1	6	22	0.1	1	20	0	0	0	400	1200	4500																																																																																																																													
+10/16/00	R.F. Dubiel	5	North America	5020	Uinta-Piceance Basin	502005	Green River	50200561	Deep Uinta Overpressured Continuous Oil	PI production data current through third quarter 1999	Oil	0.003	942	849	Established	0.35	0.18	0.1	1	1	1	1	1	641000	713000	784000	80	305	640	34	58	77	35	50	80	0.003	0.045	0.45	825	1650	2475	35	70	105				31	37	42	0	0.1	0.2	2500	4000	6280																																																																																																																																												
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+																																																																																																																																																																																																				
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															

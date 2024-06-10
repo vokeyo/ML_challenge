@@ -1,0 +1,676 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (WinNT; I) [Netscape]">
+   <meta name="Author" content="Jeffrey T. Morisette">
+   <meta name="Description" content="Note related to the MODIS Land team LAI/fPAR meeting">
+   <meta name="Keywords" content="MODIS, MODland, LAI, fPAR, fAPAR">
+   <title>MODIS LAI/fPAR meeting</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<center>
+<h2>
+<a NAME="top"></a>MODLAND LAI/fPAR Validation Protocol Development</h2></center>
+
+<blockquote><b></b>&nbsp;
+<center>
+<br><b>October 12 - 1:00 - 5:00</b>
+<br><b>October 13 - 9:00 - 6:00</b>
+<br><b>Boston University</b>
+<br><b>414 in the School of Management Building</b>
+<br><b>595 Commonwealth Avenue</b></center>
+</blockquote>
+
+<h3>
+<br>
+<a href="#MINUTES">MINUTES<br>
+</a><a href="#ATTENDEES">ATTENDEES<br>
+</a><a href="#INITIAL">INITIAL QUESTION FROM JUNE 1998 MODIS SCIENCE TEAM
+MEETING<br>
+</a><a href="#AGENDA">AGENDA FROM MEETING</a></h3>
+&nbsp;
+<h3>
+<a NAME="MINUTES"></a>Summary of meeting:</h3>
+DAY ONE: Defining broad requirements for global LAI/FPAR/NPP products
+<br>_____________________________________________
+<p>BACKGROUND Following Alan Strahler's welcome, Jeff Privette opened the
+meeting by reviewing milestones in EOS LAI/FPAR/NPP validation planning.
+He noted several formal workshops had been held (see EOS Earth Observer,
+Vol. 8, No 2, and 10, 3) beginning in 1996. The last workshop had been
+a meeting of the EOS instrument teams with the newly funded AM-1 Validation
+Investigators in Dec. 1997. In that meeting, Alfredo Huete and Betty Walter-Shea
+co-chaired a breakout session on validation of biophysical properties.
+This session revealed the absence of LAI/fPAR collection/validation protocols
+and hence the need for the present meeting.
+<p>Punctuating these workshops were two intra-EOS team Prototype Validation
+Exercises (PROVEs), in which ground data were collected, upscaled, and
+compared to satellite data/products. Privette noted that the PROVEs coupled
+EOS instrument teams to experts in the wider scientific community as well
+as in other instrument teams, a result aimed to promote more efficiency
+and collaboration post-launch.
+<p>Privette challenged meeting participants to work over the two days to
+uncover potential flaws in the evolving program, as global LAI/FPAR/NPP
+validation has not previously been attempted, and thus conclusions from
+this workshop will form a blueprint for the overall scheme. Moreover, meeting
+recommendations may ultimately be used in part to defend criticism. He
+stressed that while MODLAND is charged with developing a global validation
+plan, the resulting plan should apply to similar land products from other
+AM-1 instruments such as MISR and ASTER, as well as Landsat 7.
+<p>Thus, specific goals for the meeting of the meeting were: 1) to define
+criteria for "validation" of global LAI, fPAR and NPP products from EOS
+2) review and assess site-level measurement and scaling techniques 3) determine
+acceptable protocols/priority for delivery and distribution of validation
+results 4) define community needs from instruments and EOS validation investigator
+teams
+<p>Jeff Morisette then reviewed the MODIS Validation Plan. The Plan was
+recently updated (Version 3, October, 1998) to include the EOS Land Validation
+Core Sites and MODLAND Product Sites, the potential contribution of the
+AM-1 Validation Investigators, the BigFoot and SAFARI 2000 activities,
+and other items. It can be downloaded from the redesigned MODLAND validation
+page at http://modarch.gsfc.nasa.gov/MODIS/LAND/VAL.
+<p>Alfredo Huete then presented a summary of the Biophysical/Vegetation
+validation break-out session from the December, 1997, SWAMP meeting. A
+variety of issues were raised without resolution in that session. For instance,
+would FIPAR be acceptable in place of FPAR, at what solar zenith angles
+should it be measured, and how can it be properly scaled? Huete suggested
+that a standardized sampling design be developed to help guide field personnel.
+He noted the data needs of validation data users vary inversely with the
+speed at which they must have the data. Specifically, Huete suggested prioritization
+be in order of: product validation, algorithm validation, interdisciplinary
+science, and auxiliary science. However, the in-situ data needs of end-users
+were not well known. Finally, Huete reminded participants that calibration
+issues needed attention. Some possibilities outlined at the Dec. workshop
+included single-point calibration labs (Thome, U. of Arizona?) and mobile
+calibration transfer instruments.
+<p>NPP PRODUCT ALGORITHM AND VALIDATION
+<p>Rama Nemani then presented the algorithm for the MODIS NPP product.
+The inputs for this product will be the land cover, LAI/fPAR products and
+DAO data. Ingesting the DAO data is a major processing load, and there
+was some discussion about using actual data for input for annual NPP estimates.
+Particular problems raised included partitioning aboveground vs. below
+ground biomass, quantifying soil respiration, and validating an NPP product
+from the NEE measurements of flux towers. Furthermore, the DAO outputs
+are not being validated, and at 2 deg. resolution, may be impossible to
+validate, although some comparison with measured data may be useful.
+<p>Initially the NPP product will be validated against field measurements
+at the four BigFoot/MODLERS sites as well as spatio-temporal patterns of
+NPP obtained by various studies as a part of VEMAP, GAIM/IGBP, EUROFLUX
+and AmeriFlux. It was noted that general product accuracy may be quite
+different than site product accuracy. Bill Emanuel pointed out that a model
+inter comparison could be developed to start a data sharing initiative
+among NPP modelers/users.
+<p>LAI/fPAR ALGORITHM AND VALIDATION
+<p>Ranga Myneni presented the algorithm for the MODIS/MISR LAI/fPAR products.
+He noted that the definition of LAI was the one sided green leaf area over
+a unit area of ground for all biomes except needleleaf, in which case leaf
+area is defined as projected leaf area. Further, he noted the 8-day LAI
+product as composited based on the maximum FPAR measurement.
+<p>The input for this process includes the MODIS land cover (LC, broken
+down into six biomes) and surface reflectance products. There are still
+questions about how the land cover biome will be determined since the MODIS
+LC classification does not map directly into the biome classification [a
+particular problem discussed in the subsequent LC meeting was the need
+for discrimination between cereal crops and broadleafed crops, and the
+current neglect of that division by MODIS landcover algorithm developers].
+Myneni noted the biome discretization itself needs validation.
+<p>Other issues identified included mixed biome classes at the 1 km resolution
+of the product (the algorithm currently assumes single biome in each cell),
+and the current averaging of available leaf spectra to fix leaf optical
+properties in the model. Emanuel noted that in some biome mixture cases,
+a forest cell may be predominately broadleaf deciduous during summer months
+but evergreen during winter months, effectively a change in biome type.
+The product algorithm currently does not accommodate such changes. Myneni
+noted improvements will be possible upon validation data collection, particularly
+in the assigning of fixed variable values.
+<p>Myneni also noted recent improvements had allowed mapping of errors
+in the input data fields to a probabilistic approach in algorithm results.
+Thus, the "answer" is an expected value plus a domain of possible values.
+Theoretical accuracy varied as a function of the spectral bands available
+for input. For example, accuracy decreased when blue wavelengths were used
+since this band has more noise. Simulations suggested the overall theoretical
+accuracy of the product is 20% (relative). He noted that testing with SeaWiFS
+data showed the majority of difficulties are associated with pixels with
+NDVI&lt;0.1, i.e., non-vegetated cases. He noted in these cases that if
+the soil reflectance is correctly retrieved, this provides good validation
+of the algorithm but not the LAI product itself.
+<p>Myneni gave a list of minimum requirements for validation field data,
+which included spectral canopy reflectances, leaf and soil properties.
+Ideally, field data would also include canopy structure. Exact prioritization
+of these variables became a topic for a breakout session.
+<p>Myneni then outlined five validation "tests" for the LAI/fPAR algorithm
+(descriptions available in the handout Myneni provided), including: 1 -
+Biome by Biome 2 - Soil Test 3 - Red-NIR Density Plots 4 - NDVI-LAI and
+FPAR-NDVI relationships 5 - Information conveyed about LAI by HDRF
+<p>He noted that validation of the algorithm at a point scale would help
+validate the product at larger scales. This important point suggests that
+significant natural variability at a single validation site would add more
+statistical significance to the overall validation of the product, despite
+the use of relatively few sites globally. Huete asked about the validation
+algorithm as it relates to the field data and the algorithm input data.
+Myneni described it as a triad of values to be compared: MODIS reflectance
+and land cover, field measured data, and the algorithm output. Privette
+noted that some cross-algorithm validation could occur since BRDF/albedo,
+LAI/fPAR and VI all use different but comparable reflectance models.
+<p>CURRENT LAI RELATED RESEARCH
+<p>Leonard Brown, of the Environmental Monitoring Section of CCRS, outlined
+"LAI Map of Canada", a validation procedure utilizing LAI-2000 and TRAC
+instruments, mid-summer TM imagery, and scaling to AVHRR to compare an
+LAI map with validation data. Landcover-dependent SR-LAI relationships
+developed through BOREAS are used to estimate maximum LAI. The canopy gap
+size distribution is estimated from TRAC. This leads to canopy gap estimates,
+from which LAI is estimated. They have found collaborators eager to participate
+and Brown discussed the effort involved with collecting data from the various
+collaborators/sources. He suggested that an agreement could develop between
+CCRS and EOS validation for accessing the Canadian data sets. He noted
+that while investigators generally were willing to collect the data on
+a good will basis (with coauthorships as a carrot), the coordination and
+troubleshooting for the network was essentially a full-time job. Instruments
+are also loaned out to investigators as necessary. Problem areas included
+finding competent users of equipment and getting enough ground data to
+justify purchase of high resolution satellite images. Morisette took as
+an action item developing a more formal collaboration with Brown's group.
+Brown noted that the Chen's TRAC sensor is now commercially available at
+roughly US$2000.
+<p>Xubin Zeng, from Bob Dickinson's BATS EOS IDS group at U. of Ariz.,
+discussed the climate modeling needs of the EOS LAI/fPAR data. He emphasized
+that three issues need to be addressed: LAI/fPAR versus fractional vegetation
+cover; accuracy requirement of LAI/fPAR in land modeling, and green versus
+total LAI. He discussed a new global 1 km fractional vegetation cover data
+he derived from the AVHRR NDVI data and IGBP land cover data in collaboration
+with several researchers. Using this data, it is possible to convert the
+leaf area with respect to pixel to the leaf area with respect to vegetated
+portion for use in climate models. Using several field experiments' data
+to drive a land model, he demonstrated that the same absolute accuracy
+of LAI would introduce much larger errors in simulating evapotranspiration
+over grassland (with smaller maximum LAI) than over tropical forest (with
+higher maximum LAI). It was suggested however that a relative error, rather
+than absolute, was more meaningful for that type of simulation. In addition,
+Zeng briefly discussed the community effort on the development of a Common
+Land Model (CLM) (one of the motivations for CLM is to make better use
+of EOS land data in land modeling). Myneni and Zeng discussed some inconsistencies
+in definitions between the LAI algorithm and land model input. Zeng cautioned
+that there appears to be a mismatch between the GCM community and product
+producers, and their understanding of what is needed. He suggested that
+two-stream radiative transfer scheme used in land models should be modified
+to be consistent with the derivation of satellite LAI and albedo data.
+<p>Privette briefly noted the possibility of including different modeling
+groups and validation networks (SAFARI 2000, LTER, SurfRad, FLUXNET, etc.)
+into the planning. Myneni brought up the need to know the uncertainty from
+the various field measurements and the frequency with which the data are
+collected. The discussion focused on ways to establish MODIS validation
+methods from the various sources. This methods could then be used to include
+other field work from different groups collecting LAI/fPAR measurements.
+<p>The group then broke into two discussion groups: 1) Auxiliary Measurements
+required for LAI/fPAR algorithm validation (Chair: Myneni) Myneni first
+noted that the current biome distribution of the 23 EOS Core Sites appeared
+sufficient as a foundation for global validation. It was decided that a
+subset of these sites with known LAI/fPAR measurements/investigators would
+be used in Year 1 to prototype a ramp-up activity. Representative biome
+sites included a mixed northern forest (Gower), a grassland and wheat site
+(Walter-Shea), a broadleaf agricultural site (Liang) and two woodland sites
+(Privette). Next, a prioritization of Measurements needed at these sites
+was outlined, including: 1. LAI and FPAR 2. nadir or bi-directional canopy
+(plot) spectra (or in MODIS spectral bands, particularly red, NIR, blue
+and green bands) 3. leaf optical properties (raw spectra preferred, although
+MODIS bands acceptable; only the mean value of the species in the vertical
+direction needed) 4. nadir soil/background spectra (or MODIS bands) 5.
+Fractional vegetation cover (a high IDS need was noted here) 6. Canopy
+allometric data (height, gap size, crown width) 7. Phenological stage (green-up,
+mature, senescent) and species composition (either by MODLAND structural
+classification or traditional taxonomy). 8. Additional parameters useful:
+wet/dry status (is canopy wet?), and the amount of non-photosynthesizing
+vegetation (litter, etc.) which could be measured at one "minimum photosythesis"
+stage of the year.
+<p>Myneni noted the goal was to constrain model for use in 1-D mode over
+a site. Not all measurements would be needed for validation, however, the
+more, the better. He noted also that leaf angle distribution, commonly
+measured, is not needed for validation. Emanuel noted that for BGC modelers
+could use basic meteorological information to help constrain LAI estimates.
+<p>2) Developing a Year 1 NPP product validation plan (Chair: Nemani) Nemani's
+group developed a list of problem issues that needed resolved. Many of
+these had already been raised in Nemani's talk, however the breakout provided
+focus opportunity for BigFoot representatives to discuss their approach
+with NPP algorithm developers.
+<br>_____________________________________________
+<p>DAY TWO: Defining tools and approaches at a site-level
+<br>_____________________________________________
+<p>EOS LAND VALIDATION CORE SITES
+<p>Morisette presented the EOS Land Validation Core Site list and discussed
+the planned EDC DAAC system that will acquire and archive image data for
+these sites and the ORNL DAAC "Mercury" system as a web-based access system
+for EOS validation field data. He noted the EDC system is in definitional
+stages and must be flexible to accommodate adjustments. Initially, Landsat
+and ASTER data ordering must be done via V0-IMS client. MODIS subsetting
+may be possible via the&nbsp;&nbsp; MODAPS at GSFC.
+<p>Liang inquired about cost-sharing of ETM+ imagery over core sites with
+MODLAND. Privette noted MODLAND's goal of purchasing at least four images/year/site.
+Emanuel suggests actively mining past LAI/fPAR data from Core Site scientists
+to develop expected temporal profiles and "reasonable ranges" for EOS products,
+and further to make recommendations to NASA HQ on the in-situ needs from
+site investigators. Morisette will take this as an action item. Liang questioned
+whether additional satellite data sets could be archived with the Core
+Site archives. Privette noted that EDC has thus far been fairly reluctant
+to take on Core Site archiving needs, however Strahler, a member of the
+EDC working group, suggested that EDC is taking a "wait and see" attitude
+for years 1 and 2, and if need is there, they will provide additional capacity
+and automation.
+<p>MQUALS
+<p>Huete presented the MODIS Quick Airborne Looks (MQUALS) package, which
+is near completion. He noted the difference in heterogeneity as a function
+of scale, and discussed the need for high resolution imagery. MQUALS is
+designed to provide: - direct radiometric validation - establish site-level
+biophysical-radiometric relationships - document surface conditions with
+3-, 4-, band digital imagery at 0.1 - 1.0 meter spatial resolution.
+<p>The instrument package will feature an albedometer (full shortwave),
+a 3 band digital camera system and a 4 band radiometer (profiler). Huete
+recently acquired the digital camera system and had done initial testing
+on the ground. The system produced reasonable-looking NDVI imagery. He
+emphasized the need for irradiance data with which reflectances could be
+generated from the profiler (a ground calibration panel and second profiler
+will be used simultaneously with flight). He noted the profiler is to be
+used for radiometric integrity, while the integrity of the imager will
+be tested upon flight. He suggested the radiometry and ground data sets
+could provide the biophysical relationships needed to scale point data
+over larger areas. Resolution from the camera will be 10 cm to 1 m. He
+suggested that initial flights include 2 altitudes to test scaling, and
+be over MODIS calibration sites. Off-nadir pointing profilers could be
+added to the system.
+<p>Huete outlined the initial protocol for MQUALS: 1) conduct preliminary
+stratification for a core site, 2) optimally interpolate to fill in gaps
+in the biophysical field data (e.g, LAI), 3 ) provide radiometric data
+over area (corresponding to each LC or soil stratification type), 4) overlay
+radiometric data on digital imagery and develop relationships, and 5) extend
+to VIs, LAI, FPAR. This procedure is to be completed in 7 days after flight.
+Liang suggested that 3-4 MQUALS occur per year, and asked who would cover
+costs. Huete noted expected costs per deployment were $2500-$3000, but
+responsible party needs to be discussed.
+<p>BigFoot
+<p>Warren Cohen and Dave Turner presented the strategy for BigFoot (the
+successor to MODLERS), a program designed to measure and scale surface
+data for input to NPP models. BigFoot will model four FLUXNET sites in
+year one (BOREAS NSA, Harvard Forest, ARM/CART and Bondville, IL), and
+gear its activities to support MODIS LAI/fPAR and NPP validation. They
+presented direct and indirect approaches to collecting LAI sample and techniques
+for scaling up to the MODIS, 1km resolution. The field measurements will
+be scaled up to 1km for a 25 square km area over the flux tower. He noted
+the project is mostly centered on NPP estimation, though LAI and landcover
+are included to get to NPP. Together with Nemani, they will study how NPP
+and NEE covary, and hope to translate between these using modeling. Climatological
+and ecological controls on NPP will also be studied, as will be scaling
+errors on global NPP characterization.
+<p>BigFoot's basic approach will be to measure LAI, LC, FPAR and NPP on
+a 5x5 km area, extrapolate these to high resolution grids, characterize
+the errors, compare to MODIS products, isolate the effects of LC generalization,
+image grain size, and ecological modeling parameters, and examining spatial
+autocorrelation and other effects. A minimum seasonal repeat cycle will
+be used for direct measurements, possibly more for indirect. Cohen noted
+that details of the scaling methods will be worked out in a February, 99
+meeting. Emanuel cautioned the BigFoot group about validating a BIOME-BGC-based
+MODLAND product with results from BIOME-BGC (circularity). All agreed that
+MQUALS initial science flights should focus on BigFoot sites.
+<p>EXAMPLE OF FIELD MEASUREMENTS
+<p>Brown discussed the various measurement used for validation of the Canada
+products and reviewed the TRAC instrument. He noted TRAC compensated for
+the limitations imposed by the LAI-2000, primarily related to clumping
+which occurs extensively in boreal forests. The result is underestimation
+of LAI (up to 100%). The TRAC measures sun flecks over transects to give
+gaps size distribution, which is translated to gap fraction.. He recommends
+transects be at least 50 m long and up to 200 m in more heterogeneous areas.
+A button on TRAC can be used to record fixed intervals on the transect
+in the data stream. Software takes solar angle into account. It samples
+at 32 Hz. Canadian researchers measure with LAI-2000 simultaneously. Wood-to-total
+area ratio and needle-to-shoot data from previous destructive measurements
+are used to estimate leaf area. LAI-2000 data is used for multiple-angle
+gap fraction data. The Canadians have measured 8-10 different sites, with
+10-70 plots per site. The network is 1-2 years old and the data are ready
+for distribution.
+<p>Bev Law, working in a mixed-age ponderosa pine canopy (45 and 250 years
+old), young ponderosa pine (15 years old) and a juniper/sagebrush ecosystem
+discussed the Decagon Ceptometer (AccuPAR) and LAI-2000. These areas are
+very open with clumped canopies. She recently compared a variety of methods
+to estimate LAI at the mixed-age ponderosa pine forest. She compared estimates
+from ceptometer data (transmittance inversion; Campbell 1991), sapwood,
+litterfall and LAI-2000 data (corrected for needle clumping within shoot
+using shoot samples, and clumping at scales larger than shoot using tram
+data; Chen 1991). She has a complete stem map for the 100m x 100 m study
+area, and her group inverted a 3-D radiative transfer model to estimate
+LAI. Based on her comparisons, she recommends the LAI-2000 when corrections
+for clumping are used and uniform overcast sky conditions exist. She recommended
+leaf litterfall data only for hardwood deciduous forests, not conifers.
+She emphasized that green leaf area, not total leaf area, data should be
+reported, and that transmittance data must compensate for green-to-total
+area, because the instruments measure only white light, which is susceptible
+to woody material. Also, one must measure above and below the herbaceous
+understory. For moss backgrounds, only reflectance data or mass data needed.
+She suggests that the midsummer maximum LAI, and some spring and fall values
+are the most that a person can handle due to time.
+<p>Jiaquo Qi presented measurement techniques used for arid and semi-arid
+regions (San Pedro Basin, SALSA, HAPEX-Niger) using the LAI-2000, and various
+sampling strategies and scatter plots showing the relationship between
+different biophysical parameters. He estimates total LAI and green/total
+biomass over a 1.6 km x 1.8 km area. He noted difficulty in getting 0.5
+LAI accuracy in grassland, as destructive is best but slow. He believes
+using gapping information outlined by Law may improve his LAI-2000 based
+estimates. He notes that leaves are too small in relation to the aperture
+of the leaf integrating sphere to get leaf spectra very well.
+<p>Betty Walter-Shea presented the work being done on the Osage, OK (ARM/CART
+area) wheat and tallgrass sites. This involves canopy reflectances, FPAR,
+soil reflectance, leaf optical properties, LAI, biomass, and others. She
+suggested that the group needs to develop a cost/effort table to PIs and
+NASA HQ on what it takes to acquire requisite data sets. It was noted that
+Walter-Shea has developed an efficient WWW-based way to provide up-to-date
+descriptions of her site and measurements to the greater community. See:
+http://enso.unl.edu/agmet/websummary.htm
+<p>The presentations and the discussion that followed indicated that different
+biomes do require unique considerations and that, even within a biome,
+different measurement techniques and methods of estimation can give different
+results. At the very least, the uncertainty in these measurements should
+be considered in their use as validation data or modeling efforts.
+<p>REVIEW OF RELATED MODIS PRODUCTS
+<p>Privette, substituting for Eric Vermote, reviewed the MODIS surface
+reflectance product and its validation. He noted validation is largely
+based on a relatively immature CIMEL sunphotometer/BRDF network that needs
+further development. He has submitted to GSFC a proposal to fund development
+of a 14-band next generation sunphotometer that could solve many of the
+problems in the current configuration. Status of that proposal should be
+known by Dec. 1. [Note the current BRDF instrument is currently collecting
+data at Howland, Maine; USDA Beltsville Farms, MD; and Oak Ridge, TN].
+In addition, aircraft data from MAS and MASTER will be used for validation.
+<p>Huete discussed the validation of the VI products. He noted that MODLAND
+reflectances are composited, not just the VIs, such that development of
+other indices is possible. The MODLAND VI product in general measures chlorophyll-associated
+change, regardless of cause. He would prefer to validate the model, but
+will initially seek only to validate the product. He also pointed out that
+validation in this context is more than just validating the input reflectance
+data -- it is also important to validate that the index responds to actual
+vegetation changes. For example, what is the lower threshold of vegetation
+change? What is the upper range of saturation? What is the sensitivity
+in different biomes? Huete will seek to express the VI and its uncertainties
+in terms of biophysical units like LAI and FPAR. He noted that there is
+room to develop VI vs. LAI/fPAR model validation.
+<p>Wolfgang Lucht and J.P. Muller discussed validation of the BRDF/Albedo
+products. They will seek to relate isotropic scattering to overall land
+reflectance, and volumetric scattering to LAI, and geometric-optical scattering
+to land surface structure/roughness. These are three components of albedo
+that might be checked, at least for consistency. They will also develop
+relationships between BRFs and albedo based on in-situ measurements, and
+develop continental albedo with these relationships and AVHRR. Lucht also
+will attempt to relate NDVI, shadowing and kernel values that are retrieved
+from MODIS. They have a declining interest in the BSRN and SurfRad global
+networks, which appear to have too limited footprints. They are putting
+heavy emphasis on ARM/CART, MQUALS, and some dependence on episodic data
+and one-time images.
+<p>Doug Muchoney reviewed the IGBP land cover validation workshop. The
+presentation discussed both the uncertainly of the products and its effect
+on the LAI/FPAR/NPP products and their validation. The surface reflectance
+and land cover directly effect the LAI/fPAR product because they are input
+(biome type is the direct input, which is derived from land cover). The
+VI product uncertain will effect the LAI/fPAR validation through the VI/LAI
+and VI/FPAR relationship (as described as "test 4" by Myneni in day one).
+The BRDF/Albedo validation addressed methods for assessing the field measurement
+scaling issue.
+<p>DISCUSSION
+<p>The group then discussed how the presentation and discussions from the
+past two days could help meet the objectives of the meeting and further
+develop a validation plan for MODIS biophysical products. Two general topics
+were 1) data protocols and 2) scaling/mixtures.
+<p>The group decided to focus on 11 Sites in the first year after launch.
+<p>The sites were chosen primarily to cover all MODLAND biome types and
+to have funded data collection and access, and included:
+<p>1 Uardry, Australia (grass; Simon Hook, AM-1 Val.) 2 Osage, Oklahoma
+(grass; Shashi Verma) 3 East Anglia, England (grass; J.P. Muller, MODIS)
+4 Skukuza, South Africa (woodland; Privette, AM-1 Val.) 5 Mongu, Zambia
+(woodland; Privette, AM-1 Val.) 6 San Pedro Basin/SALSA, Ariz. (shrubland;
+Huete/Qi, MODIS) 7 USDA BARC, Maryland (broadleaf crop; Liang, AM-1 Val.)
+8 Bondville, Illinois (broadleaf crop; BigFoot) 9 Harvard Forest, Mass.
+(broadleaf forest; BigFoot) 10 Park Falls, Wisc. (broadleaf forest; Gower,
+AM-1 Val.) 11 BOREAS NSA, Canada (needle leaf forest; BigFoot)
+<p>Several independently-funded investigators have also volunteered for
+possible participation in year one validation, including:
+<p>1 Cascades, Or. (needleleaf forest; Law) 2 Canada LAI Network (forest;
+Brown) 3 Krasnoyarsk, Russia (needleleaf forest; Slava Kharuk) 4 New Zealand
+(forest; Brown) 5 Gainesville, Florida (broadleaf crop; John Craig) 6 EMATREF,
+France (needleleaf forest; Jean-Louis Roujean)
+<br>&nbsp;
+<h3>
+LAI Validation Sites:</h3>
+
+<p><br><img SRC="images/lai_sites.gif" NOSAVE height=512 width=640>
+<p>This is a pilot activity, and participants stressed that the number
+of sites will ramp up significantly with time.
+<p>Chris Justice discussed the need to better involve the Japanese GLI
+and EOS MISR validation groups/sites/activities, and underscored the need
+to develop real site contacts at all core sites. Emanuel suggested that
+existing networks be contacted about historical data sets that could provide
+realistic ranges. The ORNL DAAC mercury system will facilitate the distribution
+and access of this data. Beyond these sites, there was discussion about
+other locations collecting biophysical reference data and how this might
+be used. The discussion turned to incentives for encouraging collaboration
+and the idea of data sharing (both EOS image data and field data between
+sites) seemed to be a good solution. A suggestion for a CD-ROM with the
+initial Core Site data sets, in addition to the WWW pages, received strong
+interest. An EOS Earth Observer article upon AM-1 launch might help as
+well. Discussion turned to how these "other data sources" could be utilized
+for validation and it was proposed that the 11 initial sites will provide
+the lessons/tools needed to incorporate other data sets.
+<p>The initial sites will produce validation results within a year after
+launch and the lessons learned and techniques developed from these will
+be used to ramp-up validation analysis to include the wider array of sites
+(and networks of sites) that could be available during the second year
+after launch. It was noted that in some cases site personnel will only
+collect the data, but not compare it to MODIS products. Myneni discussed
+his plan to increase his group's attention to validation issues beginning
+in the New Year, and expected they would be able to handle all year 1 in
+situ data comparisons.
+<h3>
+<a NAME="ATTENDEES"></a>List of attendees:</h3>
+Leonard Brown Leonard.Brown@ccrs.nrcan.gc.ca (CCRS - Jing Chen and Joseph
+Cihlar's group)
+<br>Jordan Borak borak@bu.edu (BU)
+<br>Warren Cohen cohenw@ccmail.orst.edu (USDA, Forest Service, BigFoot)
+<br>Mike Dunderdale mdunder@ge.ucl.ac.uk (UCL, Grad. student under J. Peter
+Muller)
+<br>Bill Emanuel wre6s@cycles.evsc.virginia.edu (UVA, modeler)
+<br>Feng Gao fgao@bu.edu (BU)
+<br>Alfredo Huete ahuete@ag.Arizona.EDU (Univ. of Ariz., MODLAND)
+<br>Chris Justice justice@kratmos.gsfc.nasa.gov (UVA, MODLAND)
+<br>Juri Knjazihhin jknjazi@bu.edu (BU, working with Myneni)
+<br>Bev Law lawb@ccmail.orst.edu (attending, as per e-mail 9/4/98)
+<br>Shunlin Liang sliang@eng.umd.edu (Umd)
+<br>Alexander Lotsch alotsch@bu.edu (BU)
+<br>Wolfgang Lucht wlucht@crsa.bu.edu (BU)
+<br>Jeff Morisette jmoriset@chaco.gsfc.nasa.gov (UMd, MODLAND Validation)
+<br>Doug Muchoney muchoney@crsa.bu.edu (BU, MODLAND land cover)
+<br>J. Peter Muller jpmuller@ps.ucl.ac.uk (UCL, MODLAND)
+<br>Ranga Myneni rmyneni@crsa.bu.edu (BU, MODLAND)
+<br>Ramakrishna Nemani nemani@ntsg.umt.edu (UMT, working with Running)
+<br>Jeff Privette jeff.privette@gsfc.nasa.gov (NASA, MODLAND Validation)
+<br>Jiaguo Qi qi@pilot.msu.edu (Mich.State U)
+<br>Crystal Schaaf schaaf@crsa.bu.edu (BU)
+<br>Alan Strahler alan@bucrsb.bu.edu (BU, MODLAND)
+<br>Nick Strugnell nstrug@bu.edu (BU)
+<br>Trevor Tsang tsangt@cvsa.bu.edu (BU)
+<br>David Turner turnerd@fsl.orst.edu (Oregon State U., BigFoot)
+<br>BettyWalter-shea ewalter-shea@unl.edu (Univ of Nebr.)
+<br>Xuben Zeng xubin@mirage.atmo.arizona.edu (Univ of Ariz.)
+<h3>
+<a NAME="INITIAL"></a>Initial Question from June 1998 MODIS Science Team
+Meeting:</h3>
+1. Number of sites What is the minimum number of LAI/fPAR in-situ sample
+sites we need in operation in the first year after launch? 12
+<p>What number of in-situ sample sites should we be driving towards in
+year 2? 30
+<p>2. At what frequency (per season) do LAI/fPAR in-situ measurements need
+to be taken over:
+<p>green-up mature senescencing dormant temperate broadleaf forest 1 1
+1 1 temperate coniferous forest 0 1 0 1 broadleaf cropland 2 2 1 0 cereal
+cropland 2 2 1 0 desert 0 1 0 1 shrubland/woodland. 1 1 1 1
+<p>3. Using high spatial resolution remote sensing imagery (TM/ASTER/MQUALS)
+to extrapolate in-situ values, how many LAI/fPAR assessments are needed
+per year over each of the sites?
+<p>Estimates: temperate broadleaf forest 6 temperate coniferous forest
+4 broadleaf cropland 8 cereal cropland 8 desert 4 shrubland/woodland. 6
+<p>4. What is the minimum area per site over which in-situ measurements
+need to be taken?
+<p>Sufficient, representative coverage to extrapolate to 5 by 5 km. Estimated:
+2x2 km
+<p>5. What is the minimum area over which aerial extrapolation, using high
+resolution imagery should occur?
+<p>5 x 5 km area
+<p>6. In two-storied systems, are both under- and overstory LAI values
+expected or a single, total value?
+<p>Under and overstory LAI values are needed
+
+<p>7.What is the maximum uncertainty tolerable in site LAI values? +/-0.6
+What uncertainty is realistically desired? +/-0.2- to +/-0.4
+<p>8. How should areas containing land cover mixtures in every 1km^2 be
+handled in year 1?
+<p>Data provider measures individual LAI/fPAR per Land Cover-type, and
+spatial Land Cover map. Mixed LC sites should not be emphasized in year
+1 sampling, emphasize more "mixed" sites for years 2-4.
+<p>In such mixed areas, what sampling frequency should be used? That of
+fastest changing LC-type
+<p>9. What additional data is most useful but otherwise would not be collected
+for validation?
+<p>See meetings minutes for full description.
+<p>10. What fraction of international (vs. domestic) validation sites are
+needed for LAI/fPAR in year 1?
+<p>GOAL: 25% International sites
+<p>11. How many sites will already be sampled under existing Validation
+funding at the resolutions noted above? AM-1 Funding = 6 : Privette (2),
+Meyer (1) Walter-Shea (2), Liang (1), Gower (1) (Site funded by BigFoot
+program = 4, Possibility of other NASA sites ~2, or independent activity
+~10)
+<p>12. What is the approximate cost of sampling each of the biome types
+one time (in-situ)? Person*days*salary/person=1*2*40k/365=$800
+<p>13. FLUXNET/GTOS sites offer a way to expand the EOS LAI/fPAR validation.
+What would constitute an affordable pilot activity to demonstrate how EOS
+validation could interact with GTOS &ouml; which sites, what can they collect,
+do we have protocols for in-kind provisions?
+<p>(Part of ongoing work of Baldocchi and Olson's EOS FLUXNET program.)
+<p>14. Is there some kind of binding authority/contract that can be set
+up to ensure that a non-funded group delivers the required in-situ data?
+<p>Leverage on professional good will and emphasis from NASA Research program
+for non-EOS projects. Exchanges for MQUALS and TM data. 15. If we suggest
+prioritized archive and distribution of AM-1 data, or L7 data sets, can
+EDC meet this?
+<p>Five sites for year one pilot, possibly all core site if a need is shown.
+<p>If not, what is needed and where will it come from? MODAPS, processing
+ESIPs, and ORNL are possible distribution points
+<p>16. How to best integrate MQUALS into validation protocol?
+<p>Huete has developed a protocol, this will put on-line. The sites for
+1999 MQUALS will be worked out at the December 1998 MODIS Land Science
+team meeting.
+<p>17. What fraction of LAI/fPAR collectors are simply providing the raw
+data to MODLAND, and what fraction plan to compare these data to MODLAND
+products and make evaluations themselves?
+<p>Encourage field personnel to pick up task, otherwise BU can accommodate
+year 1 load.
+<br>
+<hr WIDTH="100%">
+<h2>
+<a NAME="AGENDA"></a>Agenda:</h2>
+
+<blockquote>
+<blockquote>Monday, Oct. 12 TITLE: Defining Broad Requirements for Global
+LAI/FPAR/NPP Products
+<p>1:00 - 1:15 Charge for meeting and day (Justice/Privette)
+<br>1:15 - 1:30 MODIS validation overview (Morisette)
+<br>1:30 - 1:45 Summary of December, 1997, SWAMP Validation Meeting (Huete)
+<br>1:45 - 2:00 Production and Validation of NPP (Nemani)
+<br>2:00 - 2:30 Production and Validation of LAI/fPAR (Myneni)
+<br>2:30 - 3:15 current players and anticipated roles (Privette)
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Zen -- ids application of LAI
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Brown -- Canadian val. network
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Privette -- other possible val. networks
+<br>&nbsp;&nbsp;&nbsp;&nbsp; (and Airborne sensors)
+<p>3:15 - 3:30 Break
+<p>3:30 - 5:00 Group discussion on LAI/FPAR/NPP validation (outline - Privette)
+<p>__________________________________________
+<p>Tuesday: TITLE: Defining tools and approach at a site-level
+<p>9:00-9:10 Charge (Justice/Privette)
+<br>9:10 - 9:20 TM/ASTER orders/availability (Morisette)
+<br>9:15 - 9:40 MQUALS (Huete)
+<br>9:40 - 10:00 Validation protocol within BigFoot (Running, Cohen))
+<br>10:00 - 12:30 Biome-specific protocols - focus on sampling design and
+scaling
+<p>12:30 - 1:30 Lunch
+<p>1:30 - 2:00 Surface Reflectance Relationship (Vermote)
+<br>2:00 - 2:30 VI relationship (Huete)
+<br>2:30 - 3:00 BRDF/Albedo relationship (Strahler/Muller)
+<p>3:00 - 3:15 Break
+<p>3:15 - 4:00 Discussion on protocols (group)
+<br>4:00 - 5:30 Develop implementation plan (Morisette/Privette - group)
+<br>5:45 - 6:00 Conclusion and responsibilities (Morisette - group)</blockquote>
+</blockquote>
+
+<hr WIDTH="100%">
+<p>August 10th and 11th meeting was postponed as of July 10th, 1998
+<p>
+<hr WIDTH="100%">
+<h2>
+<a NAME="directions"></a>Direction to meeting:</h2>
+DRIVING INSTRUCTIONS
+<br>1. Take Tunnel to Boston. Choose left lane.
+<br>2. At far end of tunnel, go STRAIGHT until the LAST POSSIBLE MOMENT,
+THEN TURN RIGHT instead of driving onto the curb. This puts you directly
+on to the ramp for 93 NORTH. (If you do not wait until the last possible
+moment, you will turn right too early and eventually wind up on 93 SOUTH).
+<br>3. Take the second exit, about 500 yds from where you entered, for
+STORROW DRIVE. Keep left on the ramp. Follow signs for Storrow Drive and
+get on it.
+<br>4. Stay on Storrow Drive. Generally right or center lanes will work
+best.
+<br>5. Exit Storrow Drive at KENMORE (left exit). The ramp quickly divides,
+and Kenmore is to the right. At the end of the ramp is a traffic light.
+TO B.U. SCHOOL OF MANAGEMENT:
+<br>6. Turn right, but NOT sharp right, onto Beacon Street. Stay to right
+through Kenmore Square and you will smoothly flow onto Commonwealth Avenue.
+School of Management is on the right about 2 blocks past Kenmore Square.
+<p>There is parking underneath at $12/day and on the street. Since Monday
+is a legal holiday, the garage is closed but the meters are free. However,
+I've been told that if the city wants to enforce the time limits for a
+space, they can, but probably won't due to reduced staffing.
+<p><b><i>Tunnel Warning:</i></b>
+<p><i>If you are driving to BU from Logan Airport on the Columbus Day Holiday,
+you will find you have two tunnels to choose from. You want the SUMNER
+TUNNEL, NOT the Ted Williams Tunnel.</i>
+<p><i>Explanation: The new Ted Williams Tunnel connects the airport and
+South Boston. Eventually it will link up with the Mass Turnpike and I-91,
+but now it only debauches you in the middle of a major construction zone
+for our new underground central artery. Normally it is only open to commercial
+traffic, but on weekends and holidays it is open to general traffic as
+well.</i>
+<p>BY PUBLIC TRANSPORTATION: To School of Management
+<p>By Taxi: Take a taxi from the airport. Tell the driver you want the
+Boston University School of Management located just past the Howard Johnson's
+in KENMORE SQUARE on COMM AVE. The fare should be around $15. Tip 10-15%
+on the meter. There will be an extra charge for airport service.
+<p>By Subway (The "T"):
+<br>1. Take the airport shuttle bus (free) to the T stop, buy a token (85
+cents). Then take the BLUE LINE inbound.
+<br>2. At the GOVERNMENT CENTER stop, change to the GREEN LINE westbound,
+B, C, or D car. All of these will stop at KENMORE.
+<br>3. Get off at KENMORE. As you exit from Kenmore at the turnstiles,
+turn right. You will emerge on the north side of Commonwealth Avenue. (If
+you can see the Barnes and Noble Bookstore across the street, you are on
+the south side of Comm Ave. Go back down and take the tunnel to the north
+side.)
+<br>4. Walk west about 2 blocks to the School of Management, on the right.
+<p><b>Related Sites:</b>
+<p><a href="http://enso.unl.edu/agmet/websummary.htm">http://enso.unl.edu/agmet/websummary.htm</a>&nbsp;
+: Betty Walter-Shea's sites
+<p><a href="http://cdiac.esd.ornl.gov/programs/NIGEC/fluxnet/">http://cdiac.esd.ornl.gov/programs/NIGEC/fluxnet/&nbsp;</a>
+:&nbsp; FLUXNET
+<br>&nbsp;
+<p>
+<hr SIZE=4 WIDTH="100%">
+<br>Page maintained by Dr. Jeffrey T. Morisette
+<br>phone: (301) 614-6676
+<br>e-mail jeff.morisette@gsfc.nasa.gov
+<p>Responsible NASA official: Dr. Jeffrey L. Privette, Code 923, Goddard
+Space Flight Center
+</body>
+</html>

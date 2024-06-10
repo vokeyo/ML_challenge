@@ -1,0 +1,975 @@
+
+
+
+
+
+
+
+DART Data Acquisition System
+
+Data, Permit & Trigger Link
+Interface Specification
+
+John Anderson & Ed Barsotti
+
+June 5, 1995
+ 
+Version 3.11
+
+Document # ESE-DART-950511
+
+
+DRAFT DOCUMENT
+
+
+
+
+
+
+
+
+TABLE OF CONTENTS
+
+1. DATA & PERMIT LINK INTERFACE	1
+1.1. OVERVIEW	1
+1.1.1. Physical Medium of the Data Link	1
+1.1.2. Physical Medium of the Permit Link	2
+1.1.3. Example Implementation of the Permit Link	3
+1.1.4. Data Format	3
+1.2. DATA FLOW CONTROL MECHANISMS	4
+1.3. INITIATING READOUT FROM THE FIRST DATA SOURCE IN A CHAIN	5
+1.4. CONNECTORS ... TYPES, ALIGNMENT, PIN ASSIGNMENTS & SIGNAL POLARITIES	6
+1.5. DATA & PERMIT LINK SIGNAL TIMING (AT SOURCE & DESTINATION CONNECTORS ... NORMAL OPERATION & 
+SOURCE TO SOURCE)	8
+1.6. RS-485 DRIVERS & RECEIVERS ... MANDATORY TYPES, ARTWORK STUB LENGTHS & SUPPLY & COMPONENT 
+BYPASSING	11
+1.7. REMOVAL OF OBSOLETE SIGNALS	12
+1.8. GROUNDING (AT ONE END) OF UNUSED SIGNAL LINES	13
+1.9. DRIVING WAIT	13
+1.10. DRIVING EOR	13
+1.11. DIFFERENTIAL DRIVER INPUT & TRI-STATE ENABLE/DISABLE TIMING	15
+1.12. FRONT-PANEL INDICATORS & TEST POINTS	15
+2. TRIGGER LINK INTERFACE	16
+2.1. OVERVIEW	16
+2.2. PHYSICAL MEDIUM OF THE TRIGGER LINK	17
+2.3. CONNECTORS ... TYPES, ALIGNMENT, PIN ASSIGNMENTS & SIGNAL POLARITIES	18
+2.4. TRIGGER LINK TIMING (AT SOURCE & DESTINATION CONNECTORS) ... PRE & POST TRIGGERING	19
+2.5. RS-485 DRIVERS & RECEIVERS ... MANDATORY TYPES, ARTWORK STUB LENGTHS & SUPPLY BYPASSING	21
+2.6. GROUNDING (AT ONE END) OF UNUSED SIGNAL LINES	21
+2.7. FRONT-PANEL INDICATORS & TEST POINTS	21
+3. IMPLEMENTATIONS & COMPONENT SELECTION TO MINIMIZE TEMPERATURE EFFECTS 
+ON TIMING	23
+4. MODULE & CABLE INSERTION & EXTRACTION UNDER POWERED CONDITIONS	24
+5. APPENDIX A ... EXTERNAL TERMINATION, DC BIASING & COMPONENT PROTECTION 
+NETWORKS	A-1
+5.1. DATA, DATA CONTROL AND TRIGGER LINKS	A-1
+5.2. PERMIT LINKS	A-4
+
+
+
+
+1. Data & Permit Link Interface
+1.1. Overview
+
+Data Sources and Destinations are connected to each other in the DART system by DART Data 
+Links, which carry data from the Data Sources to the Data Destination.  A second cabling 
+scheme, the Permit Link, interconnects only Data Sources and is used to control which Data 
+Source is the current driver of data on the Data Link.  Both links are described here.
+
+Terminology is necessary to provide a common frame of reference.  In this document, the term 
+“Upstream” refers to that end of a cable which is farthest away from the destination.  
+“Downstream” refers to the closest point on a cable to the eventual destination.  Both terms are 
+stated in reference to the flow of the data and the associated data strobe, and are used in this way 
+to describe both the Data Link and the Trigger Link.  The Data Destination(s) should all be 
+placed near each other at one end of the Data Link cable.  Special care must be taken when 
+Repeater modules are used such that all Data Destinations are located Downstream of all 
+Repeaters.
+1.1.1. Physical Medium of the Data Link
+
+The DART Data Link consists of two parallel twisted-pair ribbon cables, one of 34 pins and a 
+second of 50 pins, carrying both data and control signals.  The organization of the cables is as 
+follows:
+
+1) Low 16 data bits plus control signals on the 50-pin connector.
+2) High 16 data bits on the 34-pin connector.
+	
+	The control signals defined are as follows:
+
+1) DSTROBE (Data Strobe) is pulsed once per data word sent from Data Source to Data 
+Destination.
+2) EOR (End of Record) is pulsed once per block of data words sent from one or more Data 
+Sources to the Data Destination, and is used to delineate ‘events’ or ‘blocks’ of data.
+3) WAIT is asserted by the Data Destination to signal the Data Sources that transmission of 
+data should be halted.  The WAIT signal propagates backwards along the cable with respect 
+to Data, DSTROBE and EOR.
+	
+The Data Link shall be carried differentially upon multipair twisted flat cable such as 3M series 
+1700 or any other with equivalent or better signal transmission characteristics.  The nominal 
+characteristic impedance of the Data Link shall be 120 ohms for balanced transmission.
+
+Data Links shall connect through the use of standard insulation-displacement ribbon cable 
+connectors.  Matching headers on Data Sources, Repeaters and Data Destinations shall be 
+shrouded on a minimum of three sides and use latch & eject ears of sufficient length to allow the 
+use of on-cable strain relief to insure mechanical stability of the connection.  Cable connections 
+shall also employ strain relief.
+Rule 1
+1.1.2. Physical Medium of the Permit Link
+
+
+The Permit Link consists of a single coaxial cable which carries a single NIM signal from one 
+Data Source to the next.  A Data Source issues a Permit Out signal which is connected to the 
+Permit In of the next Data Source to inform the next Data Source that it should now drive the 
+bus.  The current Data Source must cease driving the bus with the leading edge of the Permit 
+Out signal.  The next Data Source may not enable its data drivers until it has seen the trailing 
+edge of Permit In.
+
+The Permit Link shall be carried as a NIM-level signal on standard coaxial cable with a 
+characteristic impedance between 45 and 55 ohms.  The Permit Out signal of each Data Source 
+shall be driven using a current driver which is capable of pulling no less than 16 mA of current 
+through a 50 ohm resistance to ground, such that a voltage of at least -0.8 V DC is developed 
+across the resistor when the driver is active.
+
+Data Sources and Repeaters shall employ a 50 ohm resistor to ground at their Permit In 
+connector to eliminate reflections and correctly terminate the coaxial cable.  Permit In receivers 
+shall respond to the voltage developed across the 50 ohm resistorin accordance with Sections 
+5.9.1 and 5.9.2 of the NIM Specification, DOE/ER-0457T (May 1990.  The shield wall of the 
+Permit In connector shall be connected to module ground.
+
+Permit Out drivers shall be of the current type such as 75LS110, MC10192 or 75LS112 so long 
+as the implementation supplies the 16mA required by NIM specifications.  If 75LS110 drivers 
+are used, two drivers in parallel shall be employed to supply the required current.
+
+Permit Links shall be interconnected by single-contact plus shield coaxial cable latching 
+connectors such as LEMO S series.  Connectors used for the Permit Link must contain a latching 
+mechanism to insure positive connection and must provide strain relief for the coaxial cable.
+
+Permit In and Permit Out connectors shall each be clearly labeled as such to minimize the 
+possibility of improperly connecting Permit Links between Data Sources.  
+
+Timing of the Permit In and Permit Out signals shall be in accordance with Figure 6.  The 
+Permit Out pulse shall have a duration of no less than 200 nanoseconds and no more than 400 
+nanoseconds.  The leading edge of the Permit Out pulse may occur no earlier than the later of 
+100 nanoseconds after the completion of the last data cycle or the trailing edge of EOR to 
+guarantee that the Permit Out occurs after all RS-485 data drivers have reached the high-
+impedance state.
+Rule 2
+
+
+
+
+1.1.3. Example Implementation of the Permit Link
+
+For user reference a typical Permit Link implementation of driver and receiver circuit is given in 
+Figure 1.
+
+ 
+ 
+
+Figure 1
+
+
+1.1.4. Data Format
+
+Data is sent as blocks of indeterminate length terminated by the End-Of-Record (EOR) signal.  
+A Data Source may optionally provide as the first data word a header which contains an 
+inclusive word count for the event (number of data words in packet, including the header in the 
+count), but no requirement exists upon the Data Destination to interpret or use the information 
+contained in any such header.  
+
+At the discretion of the user, the first word of every data block may be interpreted by the Data 
+Destination as an address which is used to select between multiple Data Destinations on the same 
+cable.  If addressing is used, bits 12-15 of the header are compared against four bits in an 
+internal register (or four bits set by DIPswitch) located within the Data Destination.  If a match 
+is found, the Data Destination will store the matching header word and all data received after 
+that point up to and including the EOR strobe.  The comparison is re-evaluated on the first data 
+word following each EOR, which is by definition the header of the next event.
+
+An EOR strobe is not used to carry any data, and the 32 bits of data present during the EOR 
+pulse are ignored by the Data Destination.  The EOR pulse is also used by the Data Destination 
+to perform any internal housekeeping such as pointer updates in preparation for the next event.
+
+Every data word shall be accompanied by a single Data Strobe pulse.  Logical blocks of data 
+shall be delineated by an End-of-Record (EOR) pulse which occurs outside of the data transfer.
+
+The Data Destination may treat the first word after reset and the first word after each EOR as a 
+special header word used to select between multiple Data Destinations.  If this selection process 
+is used, bits 12-15 of the header word shall contain a four-bit address which is used to uniquely 
+select one Data Destination, and bits 16-19 shall be interpreted as four ‘group bits’ which 
+individually are compared against bits in the Data Destination to allow selection of user-defined 
+groups of Data Destinations.
+Rule 3
+1.2. Data Flow Control Mechanisms
+
+The DART Data Link may have multiple Data Sources which feed data to either a single Data 
+Destination or a group of Data Destinations.  As there is no handshaking, the general description 
+of data transfer is ‘ship-and-pray’; that is, Data Sources need to communicate among themselves 
+for control of the data bus but the Data Sources receive no information concerning the number or 
+state of the Data Destinations.
+
+Data overrun is controlled by the Data Destination which asserts a WAIT signal when data input 
+threatens to overrun the internal buffering of the Data Destination.  The WAIT signal is asserted 
+asynchronous to the Data Strobe and may persist for an arbitrary length of time.  When WAIT is 
+asserted the Data Sources cease sending data until WAIT is released.
+
+Data Sources on the DART Data Link are designated as being ‘first’, ‘middle’ or ‘last’.  There 
+must be one and only one ‘first’ and one ‘last’ Data Source on a DART Data Link, but any 
+number of ‘middles’ is allowed, including zero.  In the simplest case, a single Data Source is 
+both ‘first’ and ‘last’.  Each type of Data Source follows certain rules:
+
+	1.	The ‘last’ Data Source is the only one which is allowed to drive the EOR signal.  All other 
+Data Sources in a group must disable (tri-state) their EOR driver at all times.
+
+	2.	Any ‘middle’ or ‘last’ Data Source must wait to receive a Permit In signal before it may 
+take control of the data bus and send data. After transmitting its group of data words, any 
+‘middle’ or ‘last’ Data Source issues a Permit Out signal which is connected to the Permit 
+In of the next device in the readout chain.  Upon power-up or reset, all ‘middle’ or ‘last’ 
+Data Sources are disabled.
+
+3.	The ‘first’ Data Source acts identically to the ‘middle’ save for the exception that, in 
+response to power-up or reset, the ‘first’ Data Source not only enables its data drivers but 
+also assumes that a Permit In signal has been received.  Thus, when the system is initialized, 
+the ‘first’ will ship data as soon as it has some to send.
+
+
+Each Data Source on the same Data Link shall be identified as being ‘first’, ‘middle’ or ‘last’ in 
+the set.  There shall be one and only one ‘first’ source, one and only one ‘last’ source.  Any 
+number of ‘middle’ sources is allowed, as limited by cable length and loading and pulse rise/fall 
+time restrictions.  In the case where only one Data Source is present on a link, that one source is 
+both ‘first’ and ‘last’.
+
+The ‘last’ Data Source shall be the sole driver of the EOR signal.  All other Data Sources in a 
+group must disable (tri-state) their EOR driver at all times such that that EOR signal is always 
+actively asserted either high or low, only by the ‘last’ data source.
+
+Any ‘middle’ or ‘last’ Data Source must wait to receive a Permit In signal before it may take 
+control of the data bus and send data.  After transmitting its set of data words any ‘middle’ or 
+‘last’ Data Source issues a Permit Out signal which is connected to the Permit In of the next 
+device in the readout chain.  Upon power-up or reset, all ‘middle’ or ‘last’ Data Sources are 
+disabled.
+Rule 4
+1.3. Initiating Readout From The First Data Source in a Chain
+
+As noted in the previous section, the ‘first’ data source begins with control of the bus, either 
+from a power-up state or due to a command sent via software during the initialization period.  As 
+soon as data is available, it will be sent.  In the second and all subsequent events, the Permit Out 
+of the ‘last’ Data Source drives the Permit In of the ‘first’ Data Source, re-enabling the ‘first’ to 
+again take control of the data bus.
+
+Independent of the Permit logic, Data Sources in general require that a trigger signal of some 
+form be sent to initiate data transfer.  Dependent upon the particular Data Source being used, 
+that trigger signal is either a command to go and fetch the data (e.g., FSCC Trigger In) or a 
+second enable which allows the Data Source to pass on data that has been previously pushed into 
+the Data Source (e.g., DYC+ End-Of-Event input).  In both cases, the Trigger Strobe has a one-
+to-one correspondence with the system Master Trigger such that each Trigger Strobe is uniquely 
+identified with one and only one Master Trigger.  Upon receipt of the Trigger Strobe, the Data 
+Source begins the process that will send one event’s worth of data up the DART Data Link. 
+
+
+
+
+
+The ‘first’ data source shall assume it has control of the Data Link bus upon reset, software 
+initialization or power-up.  In the second and subsequent events, the ‘first’ Data Source shall 
+wait for the receipt of Permit In before sending data.
+Rule 5
+1.4. Connectors ... Types, Alignment, Pin Assignments & Signal Polarities
+
+The DART Data Link is carried on a 50-pin and a 34-pin cable as shown here:
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2
+
+Signals connected to the DART Data Link shall be connected to its two connectors as is shown in 
+Figure 2.  Signals labeled UNUSED’ shall be left unconnected at the DART Data Link 
+connectors in all Data Sources, Data Destinations and Upstream  Termination Networks.
+Rule 6
+
+Data Strobe, EOR and WAIT signals shall all have the polarity as shown in Figures 3 and 4.  
+Each signal’s input to its RS-485 driver and output of its RS-485 receiver shall be the low-true 
+state of the signal.  The ‘inactive’ state of each signal’s driver input and receiver output shall be 
+a TTL ‘high’ (> 2.0 V) and the ‘active’ state a TTL ‘low’ (< 0.8 V).  The Data Strobe and EOR 
+shall  both be EDGE-sensitive signals where the active edge shall be the one in which driver 
+input and the receiver output transitions high-to-low.  WAIT is a LEVEL-sensitive signal.
+
+Data shall have the polarity as shown in Figure 5.  Each data signal’s input to its RS-485 driver 
+and output of its RS-485 receiver shall be the high-true state of the signal.  The ‘inactive’ state 
+of the data signal’s drivers input and receivers output shall be a TTL ‘low’ (< 0.8 V) and the 
+‘active’ state a TTL ‘high’ (> 2.0 V).    
+Rule 7
+
+ 
+
+Figure 3
+ 
+Figure 4
+
+ 
+
+Figure 5
+1.5. Data & Permit Link Signal Timing (At Source & Destination Connectors 
+... Normal Operation & Source To Source)
+
+Data is nominally driven in 100 nanosecond long cycles.  The Data Source waits for the receipt 
+of Permit In, at which point it enables its drivers for Data Strobe and, after a short delay, the data 
+bits.  After an internal delay period to allow for the drivers to be fully enabled, the data cycles 
+begin.  When all data is transferred the Data Source disables its data drivers, followed by 
+disabling the Data Strobe driver,  and finally issues the Permit Out pulse to the next Data 
+Source, as shown in Figure 6.
+
+
+
+
+Data Sources and Repeaters shall be designed such that the data is presented at the output 
+connector with timing and polarity matching Figure 6 of this document.  Data may optionally be 
+presented at rates slower than one word per 100 nanoseconds so long as the setup and hold 
+timing is not violated by doing so.
+
+The RS-485 drivers for the Data Strobe shall be enabled a minimum of 50 nanoseconds before 
+the RS-485 drivers for data bits are enabled, as shown in Figure 6.  Further, the RS-485 drivers 
+for the Data Strobe shall be disabled a minimum of 50 nanoseconds after the RS-485 drivers for 
+data bits are disabled.  This insures that the Data Strobe line is always in a relatively low 
+impedance state when the data bit drivers are enabled or disabled to eliminate false Data 
+Strobes caused by crosstalk or reflections.
+
+Cable lengths and the number and distribution of loads shall be maintained such that the 
+presentation of Data and Data Strobe  at the Data Destination connector provides a minimum of 
+20 nanoseconds setup time and 20 nanoseconds hold time as shown in Figure 7.
+Rule 8
+
+
+ 
+Figure 
+
+
+ 
+
+Figure 7
+
+Note that minimum setup and hold times of 20 nanoseconds each is required at the Data Destination.  Some skew of the data bits with 
+respect to the Data Strobe is inevitable over long cable lengths.  If, at the end of a cable length, the minimum setup and hold times are 
+not being observed, a Repeater is required or a shorter cable must be used to maintain the setup and hold times.
+
+
+
+
+
+
+1.6. RS-485 Drivers & Receivers ... Mandatory Types, Artwork Stub Lengths 
+& Supply & Component Bypassing
+
+The correct selection of RS-485 driver and receiver parts is critical to the correct operation of the 
+system.  Use of parts which are too slow will result in errors due to slew rate limitations or 
+violation of setup and hold times.
+
+New Modules being built for the DART system shall only use the following RS-485 components 
+to connect to DART’s Data & Trigger Links:
+
+	RS-485 drivers:	DS96F172
+		DS96F174
+	RS-485 receiver:	DS96F173 or DS96F175
+	RS-485 transceiver:	DS36F95
+
+Modules being redesigned or upgraded for use with DART shall only use the following RS-485 
+components to connect to DART’s Data & Trigger Links:
+
+	RS-485 drivers:	DS96F172		DS96172
+		TI75ALS172A		DS96F174
+		DS96174		TI75ALS174A
+	RS-485 receiver:	DS96F173		DS96173
+		TI75ALS173		DS96175
+	RS-485 transceiver:	DS36F95		TI75ALS1178
+
+Modules such as a point-to-point cable extender which do not participate in any form of Permit 
+logic (and, therefore, always have drivers enabled) may in addition use LTC487 drivers and 
+LTC489 receivers.
+Rule 9
+All drivers, receivers, transceivers, bias resistors and termination resistors must be kept as close 
+as possible to the connector to minimize reflections and capacitive loading.
+
+
+
+Artwork trace lengths from all RS-485 drivers, receivers and transceivers to their respective 
+connector pin shall not exceed 2 inches.
+Rule 10
+
+
+Power supply voltages supplying power to RS-485 ICs connected to DART’s Data, Permit 
+and/or Trigger Links must be bypassed properly very near the ICs to insure reliable operation.
+
+The DC steady-state current load of all RS-485 drivers in the DART Data Link is significant.  
+Total current in the steady-state condition approaches 2 Amperes, and increases when data bits 
+or control signals are switching states.  This generates a significant load on the power supply 
+which must be properly bypassed to avoid introducing noise in to the rest of the system.
+
+Each RS-485 driver, receiver and transceiver shall have its power pin bypassed to its ground pin 
+with a high-frequency 0.1µF capacitor.  Through-hole decoupling capacitors must be connected 
+directly to the +5 volt power and ground planes.  Surface-mount decoupling capacitors must be 
+connected directly to the +5 volt power and ground planes with minimal trace stubs.  All 
+decoupling capacitors shall be as close as physically possible to each driver.  Capacitor leads 
+are to be clipped as short as practical.
+
+PC board traces carrying RS-485 differential signals shall be laid out such that differential pairs 
+are carried on traces whose balanced, differential-mode characteristic impedance matches that 
+of the DART Data Link cable.  In addition, trace pairs for differential signals should match each 
+other in length as closely as possible.
+
+In addition, for every six driver, receiver or transceiver ICs in close proximity on a PC board, 
+there shall be a 4.7 µF tantalum capacitor, placed in the rough geographic center of the ICs, 
+connected to the ICs’ +5 volt power and ground planes in the same manner as the 0.1µF 
+decoupling capacitor.
+Rule 11
+1.7. Removal Of Obsolete Signals
+
+Various lines left over from previous similar cables but not used in DART are explicitly 
+removed from the cable specification.  These include the FILL_EVEN, 16/32, SSTROBE, 
+SPARE0, SPARE1, SPARE2 signal lines.  In addition, the RSBAF and ASTROBE lines present 
+in the original conception of DART but now known to be irrelevant are also removed.
+
+Connections from Data Source and Data Destination logic previously used to connect 
+FILL_EVEN, 16/32, SSTROBE, SPARE0, SPARE1, SPARE2, RSBAF and/or ASTROBE signals 
+to the Data Link connectors shall be disconnected thus disconnecting these now unused 
+connector pins from the logic.  Stub lengths at the connector shall be minimized.
+Rule 12
+
+
+
+
+
+1.8. Grounding (At One End) Of Unused Signal Lines
+
+Unused lines, including those listed in Section 1.7 above, shall be tied to ground by the 
+Downstream Terminator Network and Repeater (at Downstream side) only.  This insures that 
+these signal lines are grounded to avoid noise pickup, but that no ground loops are formed by 
+multiple grounding points.
+
+Data Sources & Data Destinations shall leave unused lines unconnected at their connectors.
+Rule 13
+1.9. Driving WAIT
+
+Each Data Destination must be able to drive the WAIT signal in order to control data flow and 
+insure that internal buffers are not overrun.  Each Data Destination will normally leave the 
+WAIT driver in the tri-state (disabled) condition, allowing external bias resistors found in the 
+Termination Networks to maintain WAIT in the ‘transfer enabled’, or high (not true), state.
+
+A Data Destination shall enable its WAIT driver and assert the WAIT signal whenever internal 
+data buffering FIFOs are at least half full. A pulse-stretching circuit shall be implemented such 
+that the minimum duration of the WAIT signal is 500 nanoseconds. The WAIT signal shall 
+continue to be asserted until the half-full flag of the FIFO is no longer asserted and the 500 
+nanosecond minimum pulse width requirement is met, at which time the WAIT shall be de-
+asserted and the WAIT driver disabled.  The RS-485 driver’s output enable may be connected to 
+the input signal WAIT (by wire or inverter as required) to accomplish this logic.
+
+Data Sources shall continuously monitor WAIT and shall cease sending data whenever WAIT is 
+asserted.  Data Sources shall sample  the WAIT signal with the same clock as used for the state 
+machine that controls data transfer such that response to WAIT is synchronized to the data 
+transfer in progress and no data transfer cycles are shortened or lengthened by the receipt of 
+WAIT.  
+Rule 14
+1.10. Driving EOR
+
+As stated in Rule 4, each Data Source shall have the optional ability to drive the EOR signal if 
+that Data Source is configured as the ‘last’ data source of a set  The EOR signal is used to 
+delineate a block of data and is issued after all data in that block has been sent to signal the Data 
+Destination that the block is complete.  
+
+The ‘last’ Data Source shall drive the EOR line actively at all times and shall issue, when 
+needed, a 150 nanosecond minimum, 300 nanosecond maximum wide EOR pulse. The EOR 
+signal shall be separated from any transitions in the Data Strobe by a minimum of 100 nsec as 
+shown in Figure 8.
+Rule 15
+
+
+ 
+Figure 8
+
+
+
+
+1.11. Differential Driver Input & Tri-State Enable/Disable Timing
+
+Careful control of tri-state conditions is essential to proper system operation.  Most important, 
+RS-485 driver enable and disable times must be taken in to account when designing modules 
+such that drivers of Data Strobe and Data are guaranteed to be either fully enabled or fully 
+disabled before their data inputs are allowed to change.
+
+RS-485 drivers for the Data Strobe and all data lines shall be enabled at least 50 nanoseconds 
+before any change may occur to the input pin of the driver, and all signals shall reach their final 
+state before the driver is disabled.  Upon disable, the input to the driver shall be maintained for 
+a minimum of 50 nsec before any input changes are allowed.
+Rule 16
+
+1.12. Front-Panel Indicators & Test Points
+
+To make system integration easier, DART Data Sources, Repeaters and Data Destinations should 
+provide visual indicators and test points to allow experimental users and field technicians ready 
+access to the operational state of each piece of hardware. 
+
+It is recommended that all DART Data Sources implement, at minimum, the following front 
+panel Data Link, Permit Link and miscellaneous indicators:
+
+POWER OK  (lit if power is applied and fuse is not blown)
+ON BUS   (lit when holding the Permit token, pulse-stretched to 50 milliseconds min. duration) 
+DSTRB  (lit whenever the Data Source is asserting the Data Strobe signal, pulse-stretched to 50 
+milliseconds minimum duration)
+EOR (lit whenever the Data Source is asserting the EOR signal, pulse-stretched for at least 50 
+milliseconds with each EOR sent)
+
+The DART Data Destination shall implement, at minimum, the following front panel indicators:
+
+POWER OK (lit if power is applied and fuse is not blown)
+ON BUS (lit if addressed, pulse-stretched to 50 milliseconds minimum duration)
+DSTRB (lit if Data Strobe is asserted, blinks for at least 50 milliseconds with every Data Strobe 
+received)
+EOR (lit if EOR is asserted, blinks for at least 50 milliseconds with every EOR received)
+WAIT (lit if WAIT is asserted,, pulse-stretched to 50 milliseconds minimum duration)
+Rule 17
+
+
+
+2. Trigger Link Interface
+
+2.1. Overview
+
+Trigger information is sent from experiment-specific trigger logic to the DART system in order 
+to perform two functions:
+
+	1.	Synchronize the data transfer amongst all the Data Sources; and, optionally,
+	2.	Provide routing information (Trigger ID bits) from the trigger system in order to direct data 
+corresponding to different trigger conditions to different Data Destinations.
+
+A single Trigger Strobe sent to all Data Sources is used to provide the data synchronization 
+function, and this same Trigger Strobe is also used to latch in Trigger ID bits which may be used 
+as the routing information.  Various trigger holdoff  (flow control) signals run in the opposite 
+direction of Trigger Strobe (and Trigger ID bits), from Data Source or Data Destination to 
+Trigger System.  A schematic view of the relationship between DART and the Trigger System is 
+shown in Figure 9.  The Buffer Almost Full signal from the Data Destination is another signal 
+which indicates that system conditions require triggers to temporarily halt, and so in the trigger 
+system this is another form of trigger holdoff.
+
+ 
+ 
+ Figure 9
+
+
+
+
+
+2.2. Physical Medium of the Trigger Link
+
+The Trigger Link is carried on a variety of media.  Combinations of current-source and 
+differential logic are used to carry the Trigger Strobe, the Trigger ID and the trigger holdoff 
+dependent upon the unique installation.
+
+Each Data Source shall implement the Trigger Link signal Trigger Strobe and a signal or 
+signals, collectively referred to as the trigger holdoff, that indicates to the trigger system that 
+triggers should be temporarily halted.  The trigger holdoff signal(s) shall be implemented as 
+NIM.
+
+The Trigger Strobe shall, at minimum, be implemented as a NIM signal which must be properly 
+terminated.  If the signal is internally terminated in a particular module visual indication of that 
+termination should be provided on the front panel.  If no internal termination is provided the 
+module shall implement two connectors for each unterminated NIM signal, with a visual 
+indication that the two connectors are bridged and unterminated.  The implementation of the 
+Trigger Strobe as a NIM signal, and any NIM trigger holdoff signals, shall be collectively 
+referred to as the ‘NIM Trigger Link ’.
+
+NIM Trigger Link signals shall be carried as NIM-level signals on coaxial cable with a 
+characteristic impedance of from 45 to 55 ohms, and shall be interfaced to the modules using 
+LEMO S series coaxial connectors.
+
+Data Sources may implement an additional set of inputs collectively referred to as the Trigger 
+ID (or, in some cases, the Event Synchronization Number).  If furnished, the Trigger ID shall be 
+implemented using a 10-pin header which provides for the input of four Trigger ID bits on pins 
+1-8 as shown in Figure 11.  Pins 9 and 10 of the 10-pin header may be used to implement an RS-
+485 version of the Trigger Strobe.  If the RS-485 Trigger Strobe is not implemented, then pins 9 
+and 10 of the 10-pin header shall be left unconnected.
+
+The Trigger ID bits, and the differential Trigger Strobe, if implemented, shall be carried on 
+mass-terminated twist-n-flat ribbon cable with a balanced-mode characteristic impedance of 
+from 110 to 130 ohms as RS-485 differential signals.  The group of RS-485 Trigger Strobe and 
+RS-485 Trigger ID shall be referred to as the ‘RS-485 Trigger Link’ as opposed to the ‘NIM 
+Trigger Link’.
+
+The Downstream Termination Network shall supply a 10-pin header for terminating the RS-485 
+Trigger Link at its source.  If the Downstream Termination Network is not physically close to the 
+Trigger System this termination shall be implemented within the Trigger System.
+
+RS-485 Trigger Link signals shall be interfaced to modules using mass-termination  headers 
+which are shrouded on a minimum of three sides and shall be strain-relieved using latch & eject 
+hardware on each header. 
+Rule 18
+
+
+
+2.3. Connectors ... Types, Alignment, Pin Assignments & Signal Polarities
+
+In a NIM Trigger Link implementation the signals are transmitted as single-ended current-mode 
+NIM signals as shown in Figure 10. In an RS-485 Trigger Link implementation the signals are 
+transmitted differentially with the ‘+’ side of the driver and receiver connected to the odd-
+numbered pin of the pair, as shown here in Figure 11 and Figure 12.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 10
+Polarity for NIM Trigger Link Signals
+ 
+
+Figure 11
+RS-485 Trigger Link Connector
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 12
+Polarity for RS-485 Trigger Link Signals
+
+2.4. Trigger Link Timing (At Source & Destination Connectors) ... Pre & Post 
+Triggering
+ 
+The Trigger Strobe is synchronized with a ‘gate’ or ‘stop’ signal applied to the data converters 
+which are read out by the Data Sources.  Logic in the Trigger System generates the ‘gate’ or 
+‘stop’, and, after some calculational delay, either issues a ‘Fast Clear’ to the converters 
+(indicative of an event with no useful data) or a Trigger Strobe (indicative of an event with 
+possibly useful data).  The Trigger Strobe may either be ‘pre-conversion’ or ‘post-conversion’.  
+In the former case, upon the receipt of the Trigger Strobe, the Data Source begins to poll the 
+converters to see if data is ready.  In the latter case, the Trigger Strobe indicates ‘end of event’ 
+and signals the Data Source that the converters are done and data is ready for further shipment 
+across the DART Data Link.  
+
+The criteria by which any event is deemed ‘not useful’ or ‘possibly useful’ is entirely 
+application-dependent.  Rates of triggers vary widely and some form of flow control is required 
+to hold off triggers when the Data Sources are in danger of being overrun.  The immediate 
+technique is to provide a local trigger holdoff output (or outputs) in each Data Source which, if 
+active, inhibits further triggers.  To allow manual control or to accommodate later obstructions 
+in the data flow, other trigger holdoff or Trigger Veto signals may be driven by the Data 
+Destination or later computational devices.  The trigger holdoff signals from all Data Sources are 
+combined in the Trigger System by logic of the experiment’s design, and the design and 
+implementation of this logic is outside the bounds of this specification document.  If the Trigger 
+ID is implemented the ID bits must be presented to the Data Source with sufficient setup and 
+hold time with respect to the active edge of the Trigger Strobe to guarantee that they are 
+correctly stored.
+
+Data Sources shall not collect data until they either have received a Trigger Strobe signal from 
+external trigger electronics or have determined that data is present by polling an internal 
+register or external status bit(s) of the data conversion electronics.  Trigger ID bits, if 
+implemented, shall be sent synchronous with Trigger Strobe. If the Trigger ID is implemented, 
+upon receipt of the Trigger Strobe, the Data Source shall latch the Trigger ID,  and use that ID 
+value as bits 12-15 of the first data word sent out over the DART Data Link cable in response to 
+Permit In or any other ‘initiate readout’ command..
+
+The Trigger System shall provide a Trigger Strobe pulse of minimum 50 nanoseconds duration 
+to the Data Sources.  The Trigger ID, if implemented, shall be set up a minimum of 100 nsec 
+before the active edge of the Trigger Strobe and shall provide, at minimum, a 100 nsec hold time 
+after the active edge of the Trigger Strobe, as detailed in  Figure 13.
+ 
+Trigger holdoff signals may be driven asynchronously with respect to the Trigger Strobe.
+
+If a readout controller is forced to read out an event which overflows its internal data buffer the 
+readout controller shall assert a trigger holdoff signal continuously until such time as a manual 
+or external  reset is applied to clear the internal data buffer and the conversion units associated 
+with that readout controller, even though the normal data link transfer to the Data Destination 
+may result in the internal buffer becoming less than half full. 
+Rule 19
+
+
+ 
+ Figure 13
+
+Note that no explicit relationship is defined between the ‘gate’ or ‘stop’ applied to the data 
+conversion electronics and the Trigger Strobe.  Dependent upon the timing and interface of the 
+conversion modules, the Trigger Strobe may occur either before, during or after the ‘gate’ or 
+‘stop’ signal, so long as each Trigger Strobe is uniquely associated with a single ‘gate’ or ‘stop’.
+
+2.5. RS-485 Drivers & Receivers ... Mandatory Types, Artwork Stub Lengths 
+& Supply Bypassing
+
+RS-485 drivers for Trigger Strobe and Trigger ID are identical to those used for the DART Data 
+Link as described in Rule 9, repeated here:
+
+New Modules being built for the DART system shall only use the following RS-485 components 
+to connect to DART’s Data & Trigger Links:
+
+	RS-485 drivers:	DS96F172
+		DS96F174
+	RS-485 receiver:	DS96F173 or DS96F175
+	RS-485 transceiver:	DS36F95
+
+Modules being redesigned or upgraded for use with DART shall only use the following RS-485 
+components to connect to DART’s Data & Trigger Links:
+
+	RS-485 drivers:	DS96F172		DS96172
+		TI75ALS172A		DS96F174
+		DS96174		TI75ALS174A
+	RS-485 receiver:	DS96F173		DS96173
+		TI75ALS173		DS96175
+	RS-485 transceiver:	DS36F95		TI75ALS1178
+Rule 20
+
+2.6. Grounding (At One End) Of Unused Signal Lines
+
+
+Pins 9 and 10 of the RS-485 Trigger Link Connector shall be connected to ground at the Trigger 
+System end of the link only, and only if the RS-485 Trigger Link implementation does not use 
+pins 9 and 10 for the RS-485 Trigger Strobe.
+Rule 21
+2.7. Front-Panel Indicators & Test Points
+
+To make system integration easier, DART Data Sources, Repeaters and Data Destinations should 
+provide visual indicators and test points to allow experimental users and field technicians ready 
+access to the operational state of each piece of hardware.
+
+
+
+All DART Data Sources shall implement, at minimum, the following front panel Trigger Link 
+indicators in addition to those required  for the Data Link in Rule 17:
+
+TSTRB  (lit whenever the receivedTrigger Strobe is asserted, pulse-stretched to at least 50 
+milliseconds)
+
+Trigger holdoff indicators, one for each trigger holdoff signal implemented in the module (lit 
+when any trigger holdoff signal is asserted, pulse-stretched to 50 milliseconds minimum)
+
+If the Data Source does not drive any form of trigger holdoff signal no indicator for trigger 
+holdoff is required.
+Rule 22
+
+
+
+
+3. Implementations & Component Selection To Minimize 
+Temperature Effects On Timing
+
+Variation in timing caused by temperature change can adversely affect data transfer.  DART data 
+systems should avoid the use of R-C time constant delays in favor of clocked systems or delay 
+lines wherever practical.
+
+Any timing elements used in the control, reception or generation of the Data Strobe, data, EOR 
+and Permit signals shall exhibit no more than +/- 10% variation in timing over a 0 to 70 degrees 
+Celsius operational range.  Any timing elements used in the control, reception or generation of 
+the Trigger Strobe, Trigger ID, trigger holdoff or WAIT signals shall exhibit no more than +/- 
+20% variation in timing over a 0 to 70 degrees Celsius operational range.
+Rule 23
+
+
+
+4. Module & Cable Insertion & Extraction Under Powered 
+Conditions
+
+Power supply transients caused by insertion or extraction of cables or devices under powered 
+conditions significantly increase the number of component failures in the system.  Live insertion 
+or extraction is not supported in the DART system.
+
+
+
+
+5. Appendix A ... External Termination, DC Biasing & Component 
+Protection Networks
+
+This section has been added for information only.  All termination and DC bias networks are 
+supplied by the Computing Division in external components such as Upstream and Downstream 
+Terminator Networks and Repeaters.  These termination networks are designed to provide both 
+AC terminations at one end and AC terminations and DC biasing on all signals at the signal 
+receiving end.  The DC biasing network also helps protect receiver inputs against electrostatic 
+discharge damage to RS-485 receivers.  The DC bias networks are designed such that all signals 
+float to their ‘inactive’ state (receiver output = TTL high for Data Strobe, EOR and WAIT 
+signals and receiver output =TTL low for data signals).  Very short cable runs may allow pass-
+through AC termination-only cards at Data Source output and Data Destination input connectors 
+in some experiment installations.
+
+Data Sources & Data Destinations shall not contain any AC termination and/or DC bias 
+networks.
+Rule 24
+
+5.1. Data, Data Control and Trigger Links
+
+The Upstream Terminator Network provides AC termination of all Data signals, the Data Strobe 
+and the EOR signal, plus DC bias/termination of the WAIT signal.  Similarly, the Downstream 
+Termination Network provides DC bias/termination of Data, Data Strobe and EOR, but only AC 
+termination of the WAIT signal.  As specified earlier, the Downstream Terminator Network or 
+the upstream {input} end of a Repeater connects all unused signal lines to ground.
+
+	Allowed topologies using the Repeater module are discussed in the specification for that 
+module, document # ESE-DART-950308-A. 
+
+
+
+All RS-485 links (DART Data and Trigger Links) shall be AC-terminated at the most upstream 
+(farthest from the receiver) end and both AC-terminated and DC-biased at the most downstream 
+(closest to the receiver) end as shown in Figures 3,4,5,13,15 and 16 by external termination 
+modules.  
+
+The Repeater shall implement a resistor network identical to that of the Downstream Terminator 
+Network on its Upstream (input) side.
+
+Unused signals on the DART Data and Trigger Links shall be grounded at the downstream end 
+of the cable by either a Downstream Terminator Network or a Repeater (at its upstream {input} 
+end) and shall be left floating at the other end of the cable.
+Rule 25
+
+
+
+
+
+The Upstream Terminator Network shall terminate the Data and EOR signals of the Data Link  
+with the network as shown in Figure 14 and terminate the WAIT signal with the network as 
+shown in Figure 15.  The Upstream Terminator Network shall terminate the Trigger Strobe and 
+Trigger ID bits of the RS-485 Trigger Link with the network as shown in Figure 15. Internal 50 
+ohm termination of the NIM Trigger Strobe shall be provided by the Upstream Terminator 
+Network.  The Upstream Terminator Network shall terminate the Data Strobe signal of the Data 
+Link with the network as shown in Figure 16.
+
+The Downstream Terminator Network shall terminate the Data Strobe, Data and EOR signals of 
+the Data Link  with the network as shown in Figure 15 and terminate the WAIT signal with the 
+network as shown in Figure 14.
+
+The Repeater shall terminate the Data and EOR signals of the Data Link with the network as 
+shown in Figure 15 on the Upstream (input) side of the Repeater only. The Repeater shall 
+terminate the Data Strobe signal of the Data Link with the network as shown in Figure 16.  The 
+Repeater shall terminate the WAIT signal of the Data Link with the network as shown in Figure 
+14 on the Upstream side only.  The Repeater shall terminate the Trigger Strobe and Trigger ID 
+bits of the RS-485 Trigger Link with the network as shown in Figure 15 on the Downstream 
+(output) side of the Repeater only.  The Repeater shall provide internal 50 ohm termination of 
+the NIM Trigger Strobe on the Downstream side and shall provide internal 50 ohm termination 
+of at least two trigger holdoff signals  on the Upstream side.
+Rule 26
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Figure 14
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 15
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 16
+5.2. Permit Links
+
+As noted in Section 1, the Permit signal is a NIM signal, requiring normal NIM termination.
+
+Permit signals routed between Data Sources shall be terminated in a single 50 ohm resistance to 
+ground, at the receiving (Permit In) end only.
+
+The Repeater shall terminate the Permit In signal on both the Upstream and Downstream sides 
+with an internal 50 ohm resistance.
+	Rule 27
+  Available from Denise Bumbar, Computing Division, FNAL, (708) 840-8277.
+  Changed ‘Upstream’ to ‘Downstream’ (error correction) as per note from Dan Graupman,03/01/95 2:57 PM
+  Struck out incorrect EOR sentence as per note from Dan Graupman, 03/01/95 2:55 PM
+
+
+
+
+2
+		
+
+
+
+i
+		
+
+
+
+1
+		
+
+
+
+2
+	A-	
+
+

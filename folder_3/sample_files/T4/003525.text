@@ -1,0 +1,605 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: U.S. Geological Survey, Coastal and Marine Geology Program
+      Publication_Date: 2005
+      Title: Bathymetry in Capitol Lake, September 2004
+      Geospatial_Data_Presentation_Form: vector digital data
+  Description:
+    Abstract: The Coastal Profiling System (CPS), a hydrographic surveying system mounted on a Personal Watercraft (PWC) originally designed by Oregon State University (Beach et al., 1996; Côté, 1999; MacMahan, 2001) to collect data in energetic nearshore environments, is now being used in areas of Puget Sound in the Pacific Northwest, USA to collect regional bathymetric data.  This data provides valuable insight into morphological changes and is being used for numerical modeling and sediment transport calculations.  The CPS was used to collect recent bathymetric data in Capitol Lake to support modeling studies attempting to predict the outcome of removing the dam and restoring the lake to an estuarine environment.
+    Purpose: This data is to be used to calculate sediment infilling rates within the lake as well as for developing the bottom boundary conditions for numerical models of water quality, sediment transport, and morphological change.
+    Supplemental_Information:
+      A description of the methodology used to collect data with the Coastal Profiling System is available in  the Washington Department of Ecology Report: Beach Monitoring in the Columbia River Littoral Cell, 1997 - 2000.
+
+
+      The following is a list of publications cited in this report:
+
+      Beach, R.A.; Holman, R.A.; and Stanley, J., 1996. Measuring nearshore bathymetry on high energy
+      beaches. American Geophysical Union Fall Meeting, 1996, F286.
+
+      Cote, J.M., 1999. The measurement of nearshore bathymetry on Intermediate and dissipative beaches.  Unpublished Masters Thesis, Oregon State University, Corvallis, Oregon, 102 pp.
+
+      Gelfenbaum, G., Sherwood, C.R., Kerr, L.A., and Kurrus, K., 2000, Grays Harbor wave refraction experiment 1999: Data report, US Geological Survey Open File Report, OF 00-44, 132 pp.
+
+      MacMahan, J., 2001.  Hydrographic surveying from a personal watercraft. Journal of Surveying
+      Engineering, 127(1), 12-24.
+
+      Ruggiero, P., and Voigt, B., 2000.  Beach monitoring in the Columbia River littoral cell, 1997-2000, Washington Department of Ecology Publication # 00-06-26, Olympia, WA, 112 pp.
+
+      Trimble Navigation Limited, 1998, 4700 Receiver Operation Manual. Version 1.0, Part Number
+      36238-00, Revision B.
+
+
+      Additional information about the data collection field activity, W-1-04-WA, is at URL: <http://walrus.wr.usgs.gov/infobank/w/w104wa/html/w-1-04-wa.meta.html>.
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Single_Date/Time:
+        Calendar_Date: 20040921
+        Time_of_Day: 133000
+    Currentness_Reference: ground condition
+  Status:
+    Progress: Complete
+    Maintenance_and_Update_Frequency: None planned
+  Spatial_Domain:
+    Description_of_Geographic_Extent: Capitol Lake, Washington
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -122.9142
+      East_Bounding_Coordinate: -122.9034
+      North_Bounding_Coordinate: 47.0447
+      South_Bounding_Coordinate: 47.0219
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus: none
+      Theme_Keyword: U.S. Geological Survey
+      Theme_Keyword: USGS
+      Theme_Keyword: Coastal and Marine Geology Program
+      Theme_Keyword: CMGP
+    Theme:
+      Theme_Keyword_Thesaurus: ISO 19115 Topic Category <http://gcmd.gsfc.nasa.gov/User/difguide/iso_topics.html>
+      Theme_Keyword: inlandWaters
+      Theme_Keyword: imageryBaseMapsEarthCover
+    Theme:
+      Theme_Keyword_Thesaurus: Global Change Master Directory (GCMD) <http://gcmd.gsfc.nasa.gov/>
+      Theme_Keyword: bathymetry
+      Theme_Keyword: GPS
+      Theme_Keyword: sediment transport
+    Theme:
+      Theme_Keyword_Thesaurus: none
+      Theme_Keyword: Global Positioning System
+      Theme_Keyword: sediment infilling
+      Theme_Keyword: hydrographic surveying
+    Place:
+      Place_Keyword_Thesaurus: Geographic Names Information System (GNIS) <http://geonames.usgs.gov/>
+      Place_Keyword: Washington
+      Place_Keyword: Olympia
+      Place_Keyword: Budd Inlet
+      Place_Keyword: Puget Sound
+      Place_Keyword: Capitol Lake
+  Access_Constraints: None
+  Use_Constraints: Users must assume liability to determine the appropriate use of these data.  This data set is not to be used for legal purposes.  The Coastal and Marine Geology Program, US Geological Survey should be acknowledged as the data source in products derived from these data.  Please contact the USGS for more detailed information if required.
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Peter Ruggiero
+        Contact_Organization: United States Geological Survey
+      Contact_Position: Coastal Engineer
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address:
+          Coastal and Marine Geology Program, MS-999,
+          345 Middlefield Road
+        City: Menlo Park
+        State_or_Province: CA
+        Postal_Code: 94025
+        Country: USA
+      Contact_Voice_Telephone: 650-329-5433
+      Contact_Facsimile_Telephone: 650-329-5190
+      Contact_Electronic_Mail_Address: pruggiero@usgs.gov
+  Data_Set_Credit: These data were collected by the US Geological Survey (Coastal and Marine Geology Program) with funding from the Washington State Department of Ecology Environmental Assessment Program, Watershed Studies Unit.
+  Native_Data_Set_Environment: ASCII text file, Windows NT 4.0 OS.
+Data_Quality_Information:
+  Logical_Consistency_Report: The fidelity of the data is ensured via the use of survey grade GPS receivers and a geodetic control monument.
+  Completeness_Report: The data is visually inspected for gross inaccuracies using a variety of software packages including HYPACK (Coastal Oceanographics Inc.) and Matlab (Mathworks Inc.).
+  Positional_Accuracy:
+    Horizontal_Positional_Accuracy:
+      Horizontal_Positional_Accuracy_Report: The survey-grade GPS equipment used in the monitoring program (Trimble 4000 series receivers) have manufacturer reported Root Mean Square (RMS) accuracies of approximately ±3-cm + 2ppm of baseline length (typically 10 km or less) in the horizontal while operating in Real Time Kinematic surveying mode (Trimble Navigation Limited, 1998).  These reported accuracies are, however, additionally subject to multi-path, satellite obstructions, poor satellite geometry, and atmospheric conditions.  While the horizontal uncertainty of individual data points is approximately 0.05 m, the CPSII operators cannot stay 'on line' at all times to this level of accuracy.  Typically, mean offsets are less than 2.0 m from the preprogrammed track lines and maximum offsets along the approximately 2 km long transects are typically less than 10.0 m.
+      Quantitative_Horizontal_Positional_Accuracy_Assessment:
+        Horizontal_Positional_Accuracy_Value: 0.05
+        Horizontal_Positional_Accuracy_Explanation: The survey-grade GPS equipment used in the monitoring program (Trimble 4000 series receivers) have manufacturer reported RMS accuracies of approximately ±3-cm + 2ppm of baseline length (typically 10 km or less) in the horizontal while operating in Real Time Kinematic surveying mode (Trimble Navigation Limited, 1998).
+    Vertical_Positional_Accuracy:
+      Vertical_Positional_Accuracy_Report: The survey-grade GPS equipment used in the monitoring program (Trimble 4000 series receivers) have manufacturer reported RMS accuracies of approximately ±5-cm + 2ppm of baseline length (typically 10 km or less) in the vertical while operating in Real Time Kinematic surveying mode (Trimble Navigation Limited, 1998).  These reported accuracies are, however, additionally subject to multi-path, satellite obstructions, poor satellite geometry, and atmospheric conditions that can combine to cause a vertical GPS drift that can be as much as 10-cm.  While repeatability tests and merges with topographic data suggest sub-decimeter vertical accuracy (MacMahan, 2001), variability in water temperature (not usually measured) can affect depth estimates by as much as 3 % of the water depth. For fresh water, the speed of sound is probably closer to 1450 m/s and would affect depth estimates by approximately 5 cm, due to the shallow depth in most of the lake.
+      Quantitative_Vertical_Positional_Accuracy_Assessment:
+        Vertical_Positional_Accuracy_Value: 0.15
+        Vertical_Positional_Accuracy_Explanation: The survey-grade GPS equipment used in the monitoring program (Trimble 4000 series receivers) have manufacturer reported RMS accuracies of approximately ±5-cm + 2ppm of baseline length (typically 10 km or less) in the vertical while operating in Real Time Kinematic surveying mode (Trimble Navigation Limited, 1998).  Detailed laboratory tests, field tests (bar check), repeatability tests and merges with topographic data also suggest sub-decimeter vertical accuracy (MacMahan, 2001).
+  Lineage:
+    Process_Step:
+      Process_Description: A Real Time Kinematic Differential Global Positioning System (RTK DGPS) base station is setup on a control monument.  An RTK DGPS base station consists of a Trimble 4400 receiver, a Trimble non-micro centered L1/L2 GPS antenna with a ground plane, a Pacific Crest UHF radio modem, radio antenna, two tripods, and various cables.  The GPS antenna is mounted onto a tripod that is leveled over the monument.  Once leveled the tripod is secured with sand bags and the antenna is connected to the GPS receiver via a data cable.  The radio modem and antenna are attached to the second tripod and connected to the GPS receiver via a data cable.  After all connections have been made, the Trimble 4400 receiver is started using a TDC1 or TSC1 handheld data logger and the radio modem is turned on.
+      Process_Date: Unknown
+    Process_Step:
+      Process_Description:
+        The Third Generation Coastal Profiling System (CPSIII) consists of a personal watercraft equipped with a GPS receiver and antenna, an echo sounder, a monitor for visual aid,  a keypad for operator control, and a computer running hydrographic surveying software for navigation,  data collection,  and data analysis (MacMahan, 2001).
+
+
+        The PWC used for the CPSIII is a 2003 Honda AquaTrax F-12 chosen because of its stability, compartment space, and relatively low price.  The 3-man PWC measures 3.20 m in length, 1.25 m in width, and 1.06 m in height.  During normal surveying operation, the wave runner travels at approximately 3 m/s (6 knots) and can operate for approximately 5 hours on one 60-L fuel tank.  The instruments are placed on a bracket at the stern of the vessel, and forward upper part of the vessel in front of the handlebars.  On the stern bracket are three large watertight cases, which house the GPS, computer, echo sounder electronics and batteries.  In the computer case, the echo sounder and the laptop computer are mounted.  This case has six external watertight connectors:  one is for serial communication with the GPS,  one for the echo sounder transducer,  one for the external screen,  one for the external 17 button keypad,  one for power,  and one spare.  The complete system is powered by two gel cell 12-volt marine batteries, configured in parallel and housed in a Pelican box mounted on the bracket at the stern of the PWC.  The system draws 12 volts at approximately 5 amps.
+
+        Horizontal and vertical positioning of the CPSIII is obtained using a Trimble 4700 GPS receiver, which is enclosed in a waterproof Pelican box placed on the bracket at the stern of the PWC.   Also within the GPS case is the GPS radio modem (Pacific Crest) that is used to communicate with the shore base station.   A small bracket is attached to the topside stern of the vessel for mounting the L1/L2 microcentered GPS antenna and the radio antenna.  The GPS antenna is mounted approximately 119 cm directly above the echo sounder transducer.
+
+        The echo sounder is an ESE-50 single frequency echo sounder with a 200 kHz transducer manufactured by Flash Fire Technology, Inc.  This echo sounder has adjustable gains, offset, and serial outputs.  The sampling rate is a function of water depth with an approximate sampling rate of 8 Hz applied in shallow water (0-10 m).  The transducer has a 10 - degree conical beam width and generates a pulse at 200 kHz.  The echo sounder transducer is mounted on a removable and adjustable arm at the stern of the vessel.  The electronics of the echo sounder were reconfigured along with a Big Bay Technologies Inc. P3 mini PC, placed in a watertight Pelican Case.  The CPSIII collects data at 5 Hz and while traveling at 3 m/s generates a depth sounding every 0.6 meters along the sea floor.
+
+        Navigation and surveying are aided by the use of a monitor (12 inch Big Bay Technologies outdoor high bright display) which is mounted in a watertight case on a bracket forward of the handlebars.  A small 17-button programmable Logic Controls keypad (24 cm X 8.9 cm X 3.2 cm) is placed in a waterproof radio bag mounted on the handlebars.
+      Process_Date: Unknown
+    Process_Step:
+      Process_Description:
+        HYPACK hydrographic surveying software is used as the data synchronization software and navigation system.  Hypack allows visual observation of trackline, distance offline, depth,  latitude, longitude, easting, northing, corrected depth, filename, line number, satellite quality, number of satellites, collection mode, and recording mode.  All of this information is useful to the operator when collecting hydrographic data.
+
+
+        HYPACK allows for surveying within a user-defined coordinate system, in this case NAD83 Washington State Plane (4602) - South and NAVD88.   As the GPS base station is set up over a monument and survey accurate data is stored in HYPACK in the appropriate datum.
+
+        The CPSIII has the ability to survey preset track lines and data is collected only when the PWC operator selects a line.  The PWC operator maneuvers the vessel to one end of the line and drives along the track until the vessel is in a water depth of approximately 1 m.
+      Process_Date: Unknown
+    Process_Step:
+      Process_Description: Each nearshore profile is examined, typically using a Perl script, to detect and remove any obvious outliers from the raw files that are either shallower than the echo sounder blanking interval or deeper than a user defined cutoff value.
+      Process_Date: Unknown
+    Process_Step:
+      Process_Description: Each nearshore profile is viewed using HYPACKs editor.  Here, any obviously bad data points that did not get eliminated by the previous processing step are removed by highlighting the point and deleting it from the record.  Individual files are then exported from HYPACK in Easting, Northing, Elevation ASCII triplets with one data file per nearshore profile.
+      Process_Date: Unknown
+    Process_Step:
+      Process_Description: Finally, a smoothing operation is performed using a running median filter on the vertical coordinate to reduce high frequency fluctuations.  A minimum filter was used for sections of lines where plant material blocked much of the signal and caused noise within the water column.  Varying window sizes are used to obtain a smooth profile while maintaining the integrity of the actual data points.  These files, which have been processed through the Perl script, the HYPACK editor, corrected for vertical offsets, speed of sound, and salinity, and smoothed are considered the final data files.
+      Process_Date: Unknown
+      Process_Contact:
+        Contact_Information:
+          Contact_Person_Primary:
+            Contact_Person: Peter Ruggiero
+            Contact_Organization: United States Geological Survey
+          Contact_Position: Coastal Engineer
+          Contact_Address:
+            Address_Type: mailing and physical address
+            Address:
+              Coastal and Marine Geology Program, MS-999,
+              345 Middlefield Road
+            City: Menlo Park
+            State_or_Province: CA
+            Postal_Code: 94025
+            Country: USA
+          Contact_Voice_Telephone: 650-329-5433
+          Contact_Facsimile_Telephone: 650-329-5190
+          Contact_Electronic_Mail_Address: pruggiero@usgs.gov
+Spatial_Data_Organization_Information:
+  Direct_Spatial_Reference_Method: Point
+  Point_and_Vector_Object_Information:
+    SDTS_Terms_Description:
+      SDTS_Point_and_Vector_Object_Type: Point
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Planar:
+      Grid_Coordinate_System:
+        Grid_Coordinate_System_Name: State Plane Coordinate System 1983
+        State_Plane_Coordinate_System:
+          SPCS_Zone_Identifier: Washington, South
+          Lambert_Conformal_Conic:
+            Standard_Parallel: 45.833333
+            Standard_Parallel: 47.333333
+            Longitude_of_Central_Meridian: -120.5
+            Latitude_of_Projection_Origin: 45.333333
+            False_Easting: 500000
+            False_Northing: 0
+      Planar_Coordinate_Information:
+        Planar_Coordinate_Encoding_Method: Coordinate Pair
+        Coordinate_Representation:
+          Abscissa_Resolution: 0.01
+          Ordinate_Resolution: 0.01
+        Planar_Distance_Units: meters
+    Geodetic_Model:
+      Horizontal_Datum_Name: North American Datum of 1983
+      Ellipsoid_Name: Geodetic Reference System 80
+      Semi-major_Axis: 6378137
+      Denominator_of_Flattening_Ratio: 298.257
+  Vertical_Coordinate_System_Definition:
+    Altitude_System_Definition:
+      Altitude_Datum_Name: North American Vertical Datum of 1988
+      Altitude_Resolution: 0.01
+      Altitude_Distance_Units: meters
+      Altitude_Encoding_Method: Explicit elevation coordinate included with horizontal coordinates
+Entity_and_Attribute_Information:
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line005_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+    Attribute:
+      Attribute_Label: Easting
+      Attribute_Definition: Easting coordinate position.
+      Attribute_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Unknown
+      Attribute_Value_Accuracy_Information:
+        Attribute_Value_Accuracy: 0.05
+        Attribute_Value_Accuracy_Explanation: +/- meters
+      Attribute_Measurement_Frequency: Irregular
+    Attribute:
+      Attribute_Label: Elevation
+      Attribute_Definition: Elevation measurement of the data point.
+      Attribute_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Unknown
+      Attribute_Value_Accuracy_Information:
+        Attribute_Value_Accuracy: 0.15
+        Attribute_Value_Accuracy_Explanation: +/- meters
+      Attribute_Measurement_Frequency: Irregular
+    Attribute:
+      Attribute_Label: Northing
+      Attribute_Definition: Value of the Northing coordinate
+      Attribute_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Unknown
+      Attribute_Value_Accuracy_Information:
+        Attribute_Value_Accuracy: 0.05
+        Attribute_Value_Accuracy_Explanation: +/- meters
+      Attribute_Measurement_Frequency: Irregular
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line006_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line007_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line008_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line009_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line010_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line011_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line012_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line013_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line014_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line015_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line016_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line017_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line018_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line019_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line020_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line021_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line022_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line023_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line024_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line025_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line026_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line027_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line028_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line029_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line030_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line031_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line032_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line033_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line034_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line035_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line036_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line037_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line038_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line039_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line040_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line041_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line042_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line043_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line044_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line045_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line046_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line047_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line048_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line049_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line050_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line051_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line052_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line053_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line054_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line055_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line056_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line057_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line058_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line059_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line060_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line061_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line064_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line065_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line066_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line067_b.xyz
+      Entity_Type_Definition: ASCII text file
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line062_b.xyz
+      Entity_Type_Definition: ASCII text file.
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: cl04_line063_b.xyz
+      Entity_Type_Definition: ASCII text file.
+      Entity_Type_Definition_Source: US Geological Survey, Coastal and Marine Geology Program
+  Overview_Description:
+    Entity_and_Attribute_Overview: 61 ASCII text files that include: Easting, Northing, Elevation.
+    Entity_and_Attribute_Detail_Citation: Unknown
+Distribution_Information:
+  Distributor:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: United States Geological Survey
+        Contact_Person: Peter Ruggiero
+      Contact_Position: Coastal Engineer
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address:
+          Coastal and Marine Geology Program, MS-999,
+          345 Middlefield Road
+        City: Menlo Park
+        State_or_Province: CA
+        Postal_Code: 94025
+        Country: USA
+      Contact_Voice_Telephone: 650-329-5433
+      Contact_Facsimile_Telephone: 650-329-5190
+      Contact_Electronic_Mail_Address: pruggiero@usgs.gov
+  Distribution_Liability: Users must assume liability to determine the appropriate use of these data.  This data set is not to be used for legal purposes.  The Coastal and Marine Geology Program, US Geological Survey should be acknowledged as the data source in products derived from these data.  Please contact the US Geological Survey for more detailed information if required.
+  Standard_Order_Process:
+    Digital_Form:
+      Digital_Transfer_Information:
+        Format_Name: ASCII
+      Digital_Transfer_Option:
+        Offline_Option:
+          Offline_Media: CD-ROM
+          Recording_Format: ISO 9660
+    Fees: May involve cost recovery for production of CD-ROM.  Please contact Peter Ruggiero for additional information and report availability.
+    Ordering_Instructions: Contact Peter Ruggiero at the US Geological Survey.
+  Custom_Order_Process: Please contact Peter Ruggiero at the US Geological Survey for ordering information.
+Metadata_Reference_Information:
+  Metadata_Date: 20041115
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Peter Ruggiero
+        Contact_Organization: United States Geological Survey
+      Contact_Position: Coastal Engineer
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address:
+          Coastal and Marine Geology Program, MS-999,
+          345 Middlefield Road
+        City: Menlo Park
+        State_or_Province: CA
+        Postal_Code: 94025
+        Country: USA
+      Contact_Voice_Telephone: 650-329-5433
+      Contact_Facsimile_Telephone: 650-329-5190
+      Contact_Electronic_Mail_Address: pruggiero@usgs.gov
+  Metadata_Standard_Name: FGDC Content Standards for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+  Metadata_Time_Convention: local time

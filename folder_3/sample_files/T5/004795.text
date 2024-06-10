@@ -1,0 +1,298 @@
+From novaes@fnal.gov Mon Sep 23 16:41:28 2002
+Date: Mon, 23 Sep 2002 16:36:57 -0500
+From: Sergio F. Novaes <novaes@fnal.gov>
+To: novaes@fnal.gov
+Subject: FPD News 20/Sep/02
+
+Helio da Motta Filho
+Monday, September 02, 2002
+switches
+
+I am following the specifications of the micro switches in
+case we need spares.
+
+Manufacturer:HSI - Haydon Switch & Instrument, Inc
+Model: 6130
+__________________________________________________________________________
+
+Jorge Luis Barreto
+Tuesday, September 03, 2002
+Meeting Summary
+
+        Today at 3pm, W. Prado, C. Martins, V. Bodyagin, C. Avila,
+M. Strang, S. Novaes and J. Barreto met at Salle des Heros to discuss
+the dipole elastic data sample and its tracking, for Runs 342-347.
+
+        The Data sample contains 760 evts (out of ~140K raw events), and
+pots locations are estimated to be at D1=11.89mm (~15Sig) and D2=11.57mm
+(~16Sig), respectively. All plots presented during the meeting can be
+found (set0302.tar.gz file) at
+
+                www-clued0.fnal.gov/~barreto/fpd/data_analysis/
+
+        Data have been reconstructed using the standard procedure in the
+tracking code and results can be found in the plots:
+
+1) D1_hits.ps ---> Hit distributions at D1 location;
+2) D2_hits.ps ---> Hit distributions at D2 location;
+3) dip_x_cor.ps --> X correlations
+4) dip_y_cor.ps --> Y correlations
+5) xi_dip_reco.ps --> reconstructed xi_distribution;
+6) t_dip_reco.ps  --> reconstructed t_distribution;
+7) xi_dip_halo_reco.ps --> ibid, for the halo sample;
+8) t_dip_halo_reco.ps ---> ibid.
+
+        From these plots, it seems there is real good correlations at
+both dipoles pots, and hit distributions seem quite right, containing
+high reconstructed x_values, which could be associate with high t events,
+since trigger was D1.D2.P1O. However, MC results shows that for elastic
+and at these pot locations, shouldn't exist any elastic events, since
+high_t elastic trajectories hit the beam pipe somewhere inside quadrupoles
+and separators (see dip_xy.ps file), without reaching the dipole
+locations. Although MC was done with no smearing in the Z-vertex, its
+results is not expected to change by a large x amount when including the
+smearing on it.
+
+        After some discussion, we came up with two different conclusions
+about these results:
+
+1) Pots are much closer to the beam than we think it is;
+
+2) Data contain basically halo hits and the trigger veto is not doing
+its job correctly. One possibility to consider, in this case, is the fact
+that the beam profile is vertical at the P_side and horizontal at
+Pbar_side. For the p_side, halo particle should be much more extended in
+the vertical plane than in the horizontal one. The opposite happens in the
+pbar side. Since we are vetoing early hits with P1O (horizontal side),
+much of the vertical halo particles are not vetoed in the
+(horizontal) pbar side. However, such explanation only holds if the beam
+indeed rotates physically of 90 degrees by going from the p_side to the
+pbar_side. If it only gets squeezed, not rotated, then the actual trigger
+set should work. Maybe Mike Martens can clarify this point further.
+
+        Any other idea in this issue will be welcome.
+__________________________________________________________________________
+
+Mike Martens
+helium in tunnel
+
+I have gotten more information on the He in the Tev tunnel. There are
+known leaks in the Tevatron cryo system. Mostly this is due to leaks in
+the ceramic feedthroughs in the corrector spool pieces of which there
+are hundreds. The spool pieces are being retrofitted to eliminate/reduce
+the leaks, but this is a long term project that won't be finished for
+years.
+
+There are fans to circulate the air in the Tevatron tunnel at about 3 to
+4 mph. Of course, this doesn't help the He situation since air is only
+pushed around. There is no system to exchange tunnel air with the
+outside air so it is not likely that we can reduce the He levels in the
+tunnel in any convenient manner in the short term.
+
+I am not sure what options we have. If it is really a problem we would
+have to figure out a way to isolate the area around our detectors and
+circulate fresh air into that volume. I don't know how difficult this
+would be, but my guess is that it would have to happen during a
+significantly long
+shutdown.___________________________________________________________________
+_______
+
+Michael Strang
+Tuesday, September 17, 2002
+Pot Position webpage
+
+I've created a new interactive webpage that calculates sigma's from beam
+for pot positions as well as using the most restrictive sigma from groups
+of pots moved in to calculate which positions all pots in the group should
+be
+moved to in order for them to all be at the same sigma.
+
+The page can be found at:
+
+http://d0server1.fnal.gov/users/strang/web/fpd/documents/potpos.html
+
+The first section is for input:
+
+I've defaulted the emittances to 20 and used the latest values I have
+for beam displacement. These values can be changed if needed to reflect
+actual beam conditions. I've hardcoded the beta values, beam energy and home
+to
+beam pipe center values from the latest information I have.
+
+The important part to update is the pot positions in mm from home. Type
+in the values for all pots that have been moved in their final positions.
+Then click
+on the Calculate button.
+
+The bottom of the page will now show the following:
+
+Sigma from beam for all pots that have been moved. A 0 means the pot
+wasn't moved.
+
+Distance of pot from the beam in mm.
+
+Finally, separately for dipoles, horizontal pots and vertical pots, it
+will scan the moved pots and find the largest sigma value then calculate
+where all
+other pots in the group should be moved so that they are at this same sigma.
+
+Please look at the page and send me any comments.
+__________________________________________________________________________
+
+Sergio F. Novaes
+Wednesday, September 18, 2002
+Some FPD page locations have changed
+,
+
+    Several of our FPD links have changed. This will allow a more flexible
+update. They are being automatically redirected to the new locations. Please
+update your bookmarks.
+
+    The news locations are:
+
+Proton ID Meeting: http://www-d0.fnal.gov/fpd/Pages/pid.html
+
+Physics Tasks and Software Update:
+http://www-d0.fnal.gov/fpd/Pages/tasks.htm
+
+Training Due Dates: http://www-d0.fnal.gov/fpd/Pages/training.htm
+
+Schedule for 2002 at Fermilab: http://www-d0.fnal.gov/fpd/Pages/schedule.htm
+
+Videoconference: http://www-d0.fnal.gov/fpd/Pages/videoconference.htm
+
+FPD Logbook - Quick Reference Manual: Logbook instructions:
+http://www-d0.fnal.gov/fpd/Pages/logbook.html
+
+ __________________________________________________________________________
+
+Vladimir Sirotenko
+Thursday, September 19, 2002
+RM configuration summary
+
+Please find below brief summary of FPD RM current configuration.
+
+The document can be found at:
+
+http://www-d0.fnal.gov/fpd/Links/Files/mux_python.html
+
+and at
+
+http://d0server1.fnal.gov/users/strang/web/fpd/documents/mux_python.html
+
+
+                  FPD RM Configuration
+                  ====================
+
+This is a brief summary of current RM configuration after MUX installation
+
+There are 5 RM in the tunnel, one for each castle.
+
+EPICS names from FPD RM are the following:
+
+P1: FPD_RM_02-11
+P2: FPD_RM_02-13
+A1: FPD_RM_02-01
+A2: FPD_RM_02-03
+D : FPD_RM_02-05
+
+Digital ports configuration:
+
+P2 ( bin05, 1 port )                à  output
+P7 ( bin06^Öbin13, 8 mux ports )      ß input
+P3 ( bin00, 1 port )
+      ß  input
+P8 ( bin01^Öbin04, 4 mux ports )      à  output
+
+where bin** - fields of RM EPICS record
+
+Piano switches on the RM front panel must be set as  -_  _--_
+
+Digital ports details (lower bit is 0) :
+
+P2 (bin05) :  Software Control Command
+
+     bit 4: smoke reset, =1 all the time, =0 when reset
+     bit 5: control of driver power box, =1 on, =1 off
+     bit 6: control of amplifier board power box, =1 on, =1 off
+     bit 7: software emergency line (not implemented)
+     bit 8: not used
+
+P8 (bin01^Öbin04) : Pot Motion Command, 16 bit word
+
+     bin01 - control of UP pot
+     bin02 - control of DOWN pot
+     bin03 - control of IN pot
+     bin04 - control of OUT pot
+
+P3 (bin00)  :  Software Control Status
+
+     bit 0: smoke signal, =1 no smoke, =0 smoke
+     bit 1: driver power box status, =1 on, =1 off
+     bit 2: amplifier board power box status, =1 on, =1 off
+     bit 3: control line status, =1 enabled, =0 disabled
+     bit 4: emergency line status, =1 emergency, =0 no emergency
+     bit 5: readout of what is written in bit 5 of P2
+     bit 6: readout of what is written in bit 6 of P2
+     bit 7: readout of what is written in bit 7 of P2
+     bit 8: readout of what is written in bit 8 of P2
+     bit 9 ^Ö bit 11: low bits of RMI geographical address (not
+implemented)
+
+P7 (bin06^Öbin13) :  Pot Motion Status
+
+     bin06 ^Ö readout of what is written in P8, bin01
+     bin07 - readout of what is written in P8, bin02
+     bin08 - readout of what is written in P8, bin03
+     bin09 - readout of what is written in P8, bin04
+     bin10 ^Ö status of UP pot, 8 bits
+
+                  bit 0: cable status bit, =0 ok, =1 failure
+                  bit 1: home bit, =0 not home, =1 home
+                  bit 2: in bit, =1 in, =0 out
+                  bit 3: motion bit, =0 stop, =1 motion
+                  bit 4: mechanical status, =0 ok, =1 failure
+                  bit 5: driver status, =1 ok, =1 failure
+                  bit 6: direction, =1 in, =0 out
+     bin11 ^Ö status of DOWN pot, 8 bits
+     bin12 ^Ö status of IN pot, 8 bits
+     bin13 ^Ö status of OUT pot, 8 bits
+
+Analog ports configuration:
+
+AD32 :  raw LVDT from UP pot
+AD33 :  raw LVDT from DOWN pot
+AD34 :  raw LVDT from IN pot
+AD35 :  raw LVDT from OUT pot
+
+where AD** - fields in FPD_RM_02-xx RM record
+__________________________________________________________________________
+
+Stefan Gruenendahl
+Monday, September 23, 2002
+FPD channels: VRB location
+
+The web location of the current VRB channel spreadsheet is
+
+http://d0server1.fnal.gov/projects/triggerelectronics/locations%26cables/cab
+le_spreadseets/vrb_channels_afe8_20020823.xls
+
+The SVX (Sequencer) data are in VRB crate x52, slot x13;
+SVX info: sheet '52 M213-1'
+The trigger data are in VRB crate x13, slot C, 'channel' (fiber, really) 2
+and 3 , i.e. the last two fibers.
+Trigger info: sheet' Trig Optical Cable Source'.
+
+The date in the file name might change, in which case the web browser access
+doesn't really help
+
+__________________________________________________________________________
+
+ Sergio F. Novaes                                                Fermilab
+ E-mail: novaes@fnal.gov                                     P.O. Box 500
+ Phone: (630) 840.2454                                   Mail Station 352
+ Cell:   (630) 272.1819                            Batavia, IL 60510-0500
+ Fax:   (630) 840.8886                                                USA
+__________________________________________________________________________
+
+

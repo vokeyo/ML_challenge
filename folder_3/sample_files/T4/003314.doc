@@ -1,0 +1,1263 @@
+
+
+
+
+
+          Life-history and the evolution of ontogeny
+                in the ostracode genus Cyprideis
+
+
+
+              Peter N. Schweitzer and G. P. Lohmann
+
+
+
+
+
+
+
+
+RRH: OSTRACODE ONTOGENY AND LIFE-HISTORY
+LRH: PETER N. SCHWEITZER AND G. P.LOHMANN
+%@
+Abstract.--A large body of paleontological literature concerns the
+importance of ontogeny as a source of morphological variation for
+evolution; morphologies that appear during one stage of an organism's
+development are made available for use in another simply by modifying
+the developmental program.  Paleontologists need to know why this
+occurs, both so they can study the process of evolution in extinct
+animals and so they can discuss the fossil record in terms that are
+applicable to modern forms.  If most cases of heterochrony can be
+attributed to life-history evolution then the fossil record provides
+evidence of the nature of selection (in particular the age-specific
+mortality) that extinct animals experienced.  The hypothesis of interest
+here is that species in which maturity is accelerated will also show
+generalized morphology and small size, while those with delayed maturity
+will have more specialized morphology and large size.
+
+     Four species of the ostracode genus Cyprideis were studied to
+determine whether differences in age at maturity are correlated with
+heterochrony in the expected manner.  For each species the changes in
+size and shape through geological time were evaluated in the statistical
+context of modern geographic and seasonal variation.  Living populations
+were sampled regularly to detect differences in seasonality and to
+estimate the duration of development.
+
+     Evolution of ontogeny is apparent at the level of species in this
+group, but it is not simply related to differences in life-history.  In
+comparisons among species, we find evidence of heterochrony where there
+is no difference in the age at maturity, and a difference in age at
+maturity where there is no heterochrony.  Similarly, three of the four
+species show the expected positive correlation between size and age at
+maturity yet the fourth species is relatively large and matures rapidly.
+Cyprideis does not support the generalization that life-history
+evolution causes heterochrony, and casts doubt on the inference of
+life-history evolution from heterochrony where the data are drawn
+exclusively from extinct forms.
+
+
+Peter N. Schweitzer. Woods Hole Oceanographic Institution/ Massachusetts
+    Institute of Technology Joint Program in Oceanography, Woods Hole,
+    Massachusetts 02543.
+
+
+G. P. Lohmann. Department of Geology and Geophysics, Woods Hole
+    Oceanographic Institution, Woods Hole, Massachusetts 02543.
+%@
+
+
+
+                        Introduction
+
+     To infer the mechanisms of evolution from fossils, paleontologists
+must know how the conditions under which organisms lived affected the
+processes that generated and modified their morphology and distribution.
+In contrast, neontologists have focused their efforts on the evolution
+of life-history traits, characteristics of reproductive behavior
+considered by biologists to be the most important components of fitness
+(Stearns 1976).  If paleontologists can translate the information
+contained in the form and distribution of fossils into information about
+life-history traits, they will be able to use the results of modern
+ecological theory to interpret evolutionary events and provide tests of
+life-history theory on geological timescales.  To realize this
+potential, the crucial links between life-history and ontogeny must be
+tested.
+
+     The objective of this study is to test the relationships among age
+at maturity and the changes in size and shape that accompany growth.  To
+conduct such a test we must be able to measure all of the variables of
+interest, and so we must work with extant species.  But since the
+results will be applied to paleontological problems, the subject taxa
+ought to have a fossil record.  Comparisons among samples and among taxa
+require an understanding of the sources of variation within samples.
+Here seasonal variation in one locality is used to place confidence
+limits on geographic variation, which in turn provides confidence limits
+for assessing change through geological time.
+
+     Paleontologists have always been interested in the role of
+development in evolution (Gould 1977), and have often paid special
+attention to the occurrence of heterochrony, change in the relative
+rates, timing, or duration of somatic and reproductive development.
+Heterochrony encompasses four distinct processes; acceleration of
+maturity (progenesis), retardation of somatic development (neoteny),
+retardation of maturity (hypermorphosis) and acceleration of somatic
+development (usually abbreviated as acceleration).  Both progenesis and
+neoteny produce paedomorphosis, meaning that descendant adults resemble
+the juvenile stage of their ancestors.  In contrast, hypermorphosis and
+acceleration produce peramorphosis, in which descendant juveniles
+resemble the adult stages of ancestors.  Many publications have detailed
+procedures for observing, classifying, and interpreting these various
+forms of heterochrony (Gould 1977; Alberch et al. 1979; McNamara 1986;
+Fink 1982).
+
+     Several authors have recently explored the idea that evolutionary
+changes in development represent organisms' adaptation to ecological
+hazards (Gould 1977; McKinney 1986). They reasoned that if changes in
+reproductive behavior can be understood as adaptation to particular
+ecological hazards, the fossil evidence of such changes gives
+paleontologists a valuable tool for understanding the ecology of extinct
+species.  The crucial link between ecological theory and paleontological
+data is the use of heterochrony to infer life-history evolution. If
+reproduction and development are closely tied together, then changes in
+the reproductive behavior of individuals might affect the way they
+develop.
+
+     Gould (1977) supposed that morphology is indexed by chronological
+age in an evolutionary context: species that mature late look different
+from those that mature early.  Specifically, the adults of species that
+mature early resemble juveniles of those that mature late.  This theory
+is attractive because it links a life-history trait (age at maturity)
+with observable characteristics of fossil individuals (the shape of
+various developmental stages).  Gould went a step farther, theorizing
+that new species arise by progenesis (acceleration of maturity) in
+unstable environments because the taxa there have r-selected
+reproductive behavior.  Conversely, stable environments produce
+hypermorphosis (delayed maturity) because the taxa there are K-selected.
+Groups of organisms living in different selective regimes should show
+significant differences in the character of evolutionary change.
+Progenesis makes descendant adults look like ancestral juveniles, while
+hypermorphosis makes descendant juveniles look like ancestral adults
+(Alberch et al. 1979).  The model is attractive to paleontologists
+because geological observations are often sufficient to classify
+paleoenvironments as stable or unstable; McKinney (1986) provides an
+example.
+
+     Three aspects of Gould's theory must be reformulated if we are to
+apply it with confidence.  The first is its concept of ecological
+adaptation. Gould's exposition was phrased in terms of r- and
+K-selection, a theory of life-history tactics. Life-history tactics are
+sets of correlated life-history traits once thought to have evolved
+together to solve particular ecological problems.  Life history traits
+include age and size at maturity, number and size of offspring, and the
+timing and costs of the reproductive efforts; see the review by Stearns
+(1976).  The correlations among these traits are now believed to arise
+from processes other than coadaptation (Stearns 1980), and many
+ecologists have discarded the theory of r- and K-selection because it
+does not accurately describe the processes that produce differences
+among taxa (Stearns 1983, 1984) and it does not accurately predict the
+response of populations to environmental stress (Stearns 1977).  Since
+it concentrated on progenesis and hypermorphosis, Gould's theory should
+be specified as a relationship between environmental stress and age at
+maturity.
+
+     The second difficulty with Gould's theory is that the environmental
+stresses now thought to influence life-history traits include the
+probability and predictability of mortality as a function of an
+individual's age (Stearns 1977).  These are not the sort of stresses
+that paleontologists can detect, and require much closer observation of
+the populations than does the vague concept of environmental stability
+employed, for example, by McKinney (1986).  Paleoenvironmental analysis
+can suggest modern environments that are analogous to sedimentary
+facies, but within those modern environments a broad range of conditions
+may occur.  Living organisms must be studied if characteristics of the
+environment are to be included in the theory.
+
+     The third problem that must be overcome in order to test Gould's
+theory is that one must make the assumption that shape changes with
+chronological age.  If an individual's morphology is wholly determined
+by its stage of maturity, not how long it has lived, then changing the
+age at maturity does not alter the appearance of ontogeny in the fossil
+record.  A test of this assumption requires measuring the chronological
+age of the specimens.  Some animals have morphological features that
+actually record time (Jones 1986) but others do not.  For those animals
+that do not show their chronological age, the dependence of shape on
+time might be inferred from field observation or culture experiments.
+Recent discussions emphasize the complex nature of this problem;
+chronological age is clearly of critical importance as a growth
+parameter (Blackstone 1986, 1987), but it is not too hard to find
+situations in which the measure of age ought to be based on something
+else (Strauss 1987).  If development is suspended for a time, as in the
+present study, chronological age is somewhat misleading.
+
+     Gould (1977) and Alberch et al. (1979) provided formal methods for
+describing the evolution of ontogeny.  In general, one must examine the
+relationships between size, shape, chronological age and developmental
+events. When we look at the fossils, however, one or more of the
+important elements is either lacking or cannot be properly interpreted.
+McKinney's (1986) analysis of echinoid evolution was conducted without
+direct observation of chronological age and with only one developmental
+event (presence of genital pores).  McKinney equated size with
+chronological age, forgoing the possibility of distinguishing
+proportioned giantism from hypermorphosis and proportioned dwarfism from
+progenesis.  Any change in size was interpreted as heterochrony.
+McNamara (1986) made the same assumption in his guide to the
+nomenclature of heterochrony.  For example, neotenic species were
+assumed to have delayed maturity and thus larger size.  But the
+correlation of neoteny and hypermorphosis that McNamara described is not
+part of the theory but is instead a finding that must be supported with
+evidence from living taxa, since the chronological age of fossils cannot
+be unequivocally measured in most cases.  Neoteny is defined without
+reference to the age at maturity, but using McNamara's key one cannot
+practically identify cases of pure neoteny.
+
+     Conversely, Schweitzer et al. (1986) equated developmental age with
+chronological age, making it impossible to distinguish progenesis from
+neoteny and hypermorphosis from acceleration. Selection on morphology
+was thus indistinguishable from selection on developmental timing. There
+is no way out of this dilemma, of course, unless more information is
+brought to bear, either in the form of observations on the living
+relatives of extinct animals or in the extrapolation into the fossil
+record of general rules known to constrain living animals.
+
+     Several characteristics of ostracodes make them particularly useful
+for studies of the evolution of ontogeny.  During the course of their
+development, these small crustaceans molt, shedding and completely
+replacing their calcareous carapaces (Kesling 1951). The number of molts
+is consistent within ostracode families, so corresponding growth stages
+(instars) can be regarded as the same developmental event in closely
+related taxa. Their small calcite carapaces are frequently preserved
+whole in the rock record in great abundance, and because there are many
+extant ostracode species, their ecology can be studied in detail.  The
+molted shells form an instantaneous record of their development,
+undisturbed by processes such as resorption and accretion that occur
+continously in molluscs, so the shape and size of the developmental
+stages can be easily and accurately measured.  Since the growth of the
+shell does not leave a record of time, however, chronological age cannot
+be measured from morphology alone.  Field observations are required.
+Ontogeny is characterized using the average size and shape of the
+instars as in Schweitzer et al. (1986), since it is usually impossible
+to reconstruct a specific individual's ontogeny from the molted shells
+scattered throughout the sediment.
+
+     The ostracode genus Cyprideis was chosen because it has been
+studied in great detail both morphologically (Sandberg 1964, 1974) and
+ecologically (Theissen 1966, Vesper 1972, Heip 1976a,b, Bodergat 1983).
+It is an indicator of Pleistocene shoreline sediments along the Atlantic
+coastal plain of the U.S. (Cronin 1979, Cronin et al. 1984) and its
+fossil record extends into the Pliocene (van den Bold 1976).  It is
+today abundant and accessible on the tidal mudflats of many salt marshes
+and estuaries (Tressler and Smith 1948, Grossman and Benson 1967,
+Kontrovitz and Bitter 1976).
+
+     Ecological studies of ostracodes have only rarely concerned the
+estimation of life-history parameters.  Most of those conducted by
+paleontologists dwell instead on associations of taxa with environmental
+data, other taxa, or both (e.g. Gutentag and Benson 1967, King and
+Kornicker 1970, Sandberg and Plusquellec 1974, Bodergat 1983).  In his
+review of the literature on life-cycles of podocopid ostracodes, Horne
+(1980) found most studies were conducted by paleontologists using small
+monthly samples or culture experiments in the laboratory.  The only
+species of Cyprideis subject to detailed study was C. torosa from
+northwestern Europe.  Tressler and Smith (1948) made some observations
+on Cyprideis in the Chesapeake Bay, but it is not clear now what species
+they studied, since they referred to it as C. beaveni and the type
+material has been damaged (Sandberg 1964).
+
+     In the most detailed studies of ostracode ecology and life-history
+ever conducted, Heip (1976a,b), Herman and Heip (1982), and Herman et
+al. (1983) determined the character of the life cycle of Cyprideis
+torosa from a brackish-water pond in Belgium.  Their eight year sampling
+program revealed that C. torosa matures in about 60 days during the
+summer months, with one generation per year.  Both eggs and young were
+observed in the brood chambers of adult females.  They measured the
+population density (number of specimens per unit area of the bottom)
+every two weeks, providing estimates of the rate of development overall
+and the duration of each of the six largest instars. In the present
+study, living populations were sampled regularly using the same
+approach.
+
+                    Materials and methods
+
+     Ontogeny is documented by measuring the size, shape, and stage of
+maturity of specimens.  To measure age at maturity one must observe
+closely the growth of representative individuals.  Since size, shape,
+and stage of maturity of many specimens can be determined, it is
+feasible to assess the extent of variability these characteristics show.
+Four important sources of variability exist within the genus Cyprideis:
+seasonality, geography, anagenesis (variation within species through
+geologic time), and cladogenesis (variation among species).  Within
+species, seasonality provides a context for evaluating geographic
+variation; geographic variations that are subsumed by seasonal
+variations are not regarded as significant. These two sources of
+variation in turn establish a context for assessing the statistical
+significance of variation within species through geologic time. Finally,
+all intraspecific variation helps us understand the significance of
+differences among species.
+
+Material used to characterize size and shape.--The samples taken to
+measure size and shape are listed in the appendix.  Modern samples were
+taken from the surface of tidal mudflats in or near salt marshes.  The
+numbers of specimens measured are not necessarily representative of the
+relative abundance of the instars in the samples. However, where the
+number of specimens measured is few or none, the stage was either
+extremely rare or was absent; every effort was made to measure a
+representative growth series of each species in each sample. Since
+specimens were picked from the 150um sieve, the A-5 and A-6 stages were
+often missed.  All of the fossil samples were borrowed from other
+researchers.  The procedures they used for washing and separating the
+specimens vary.  In many cases the 250um sieve seems to have been used,
+so specimens younger than A-3 were rarely measured in these samples.
+
+     Ideally we should examine stratigraphic sequences spaced regularly
+throughout a species' geographic range.  In practice this is difficult
+to achieve for two reasons.  First, the environment in which these
+ostracodes are found has a patchy stratigraphic distribution.  Salt
+marshes are well known as resource-recycling ecosystems, and shells of
+Cyprideis often dissolve before the soft parts inside have decomposed,
+some dissolution is evident even in living individuals.  Second, in
+order to accurately observe the living populations in any one location,
+one must sample throughout the year.  It is impractical to carry out
+seasonal sampling programs in widely separated locations concurrently.
+Here seasonal variability was assessed using samples collected by the
+senior author at three-month intervals from Sippewissett Marsh,
+Massachusetts.
+
+     The best one can do is cover as much of the geographic range as
+possible with spot samples, mindful of the seasonal fluctuations in
+abundance. For Cyprideis ovata and C. salebrosa this tactic worked well.
+Well-populated modern samples could be obtained from localities
+thousands of kilometers apart.  For C. mexicana and  C. margarita, the
+stratigraphic and geographic distributions of the samples are not
+independent, so the geographic variation might be explained by change
+through geological time and vice versa.  Our modern samples of the
+latter three taxa come from Massachusetts and Nova Scotia, but our
+fossil samples come from Virginia and the Carolinas.
+
+Regular sampling of living populations.--During the spring and summer of
+1988, samples were taken regularly from an exposed tidal mudflat in
+Sippewissett Marsh, a salt marsh on the southwestern coast of Cape Cod,
+Massachusetts.  From each sample the right valves of Cyprideis were
+identified to species and molt stage.  Population density was calculated
+by dividing the number of individuals counted by the area from which
+they were taken.  Details of the sampling program and procedures are
+given in Schweitzer (1989).  Since the production of new individuals
+peaks sharply in late spring, each successive molt stage shows the same
+sharp increase in abundance at a later date.  The offset in time of an
+instar's abundance spike from that of the previous instar is an estimate
+of the intermolt period, and the sum of the intermolt periods is the
+duration of development.
+
+Quantitative description and analysis of shape variation.--The methods
+of shape measurement and description closely follow those described in
+Lohmann and Schweitzer (in press), Schweitzer et al. (1986), and Lohmann
+(1983).  Right valves were measured in right lateral view (i.e. looking
+at the specimen from the outside, with the commissure flat on a glass
+slide). The posterior hinge tooth was made the starting point for the
+shape description function, a modified form of the phi* function (Zahn
+and Roskies, 1972) used to describe each shell's outline.  This use of a
+homologous landmark point incorporates some biological information into
+what is otherwise a purely geometrical description of the shape of the
+ostracode shell.
+
+     Principal component analysis provides a basis for viewing
+multivariate data in which a few of the basis vectors can portray most
+of the relationships among the data points.  The basis vectors are
+optimal in the sense that the first k principal components
+(eigenvectors) explain more of the variation of the data than do the
+first k of any other set of basis vectors (e.g. Fourier harmonics).  We
+interpret the eigenvectors by looking at the spatial relationships among
+points about which we have additional information that was not
+explicitly included in the analysis, such as ontogenetic sequence,
+geographic provenance, or gender.  This does not imply that the
+eigenvectors are optimal for characterizing ontogenetic sequence,
+geographic provenance, or sexual dimorphism--for these one would use
+discriminant functions--but rather that the variation among the shapes,
+which is caused by these and other factors, is being portrayed in the
+most efficient manner.
+
+     To summarize the variation in shape within instars, principal
+component analysis was used in the manner described by Schweitzer et al.
+(1986), and the average shape of each instar was used to represent the
+instar in an analysis of the variation among instars.
+
+     The principal components of variation among instars were calculated
+using the covariances among shapes rather than the correlations among
+shapes.  This procedure differs from the methods used by Lohmann (1983)
+and Schweitzer et al. (1986) in that the columns of the data matrix are
+not normalized to unit variance, and the mean of each row is set to
+zero.  The variances of the rows are not normalized.  Consequently the
+first eigenvector describes variation; in Lohmann (1983) the first
+eigenvector describes the average shape.  Details of the analytic
+methods are given in Schweitzer (1989).
+
+Detection of heterochrony.--Gould (1977) and Alberch et al. (1979)
+described ontogeny formally as a trajectory through the mathematical
+hyperspace defined by size and shape.  Heterochrony is recognized by
+comparing the developmental trajectories of different taxa, and the six
+processes that produce heterochrony are identified by comparing the
+changes in ontogeny with the temporal sequence of developmental events.
+Fink (1982) showed how heterochrony could be inferred from phylogenetic
+analysis.  Paedomorphosis, for example, is suggested by the occurrence
+of primitive characteristics in taxa whose other characteristics are
+largely derived.  Such an analysis requires a broader understanding of
+the genus than we have, however.
+
+     Here the methods of Alberch et al. (1979) have been employed to
+search for heterochrony.  The molt stages of the ostracodes are treated
+as correlative developmental events, and maturity is marked by the last
+and largest instar.  The developmental pathways of two or more species
+are plotted on the principal components of shape variation; the
+component that is most highly correlated with the ontogenetic sequence
+corresponds to the general shape factor sigma of Alberch et al.
+Paedomorphosis is inferred where the development of one species
+terminates at the juvenile stage of another, while peramorphosis is
+indicated by the reverse situation.
+
+     Note, however, that principal component analysis of shape
+development cannot separate purely heterochronic characteristics from
+those that are not heterochronic.  Sexual dimorphism and non-ontogenetic
+variations among species may be correlated with ontogeny in a
+statistical sense. Alberch et al. (1979: figure 10) described procedures
+for removing the nonlinear aspects of shape change from a heterochronic
+analysis, but in practice these other characteristics cannot be
+completely eliminated.
+
+                         Results
+
+Taxonomy and phylogeny.--The taxonomic philosophy employed here is that
+of Wiley (1981); all members of a non-branching lineage belong to the
+same species.  In practical terms, this means that if specimens from
+separate places look different, they are not considered separate species
+unless the two morphologies also are found together.  This idea is based
+on two assumptions: (1) all of the specimens being classified are
+similar enough to consider the possibility of their being conspecific,
+and (2) individuals of the same species living in the same place will
+look alike.  (Sexual and ontogenetic variants must be accounted for as
+well, but in ostracodes these forms are easy to identify.)  The error in
+this procedure is that closely related species that do not occur
+together are combined under the same name; cladogenesis is inferred only
+when it is supported by biogeographic evidence.  The danger in this
+procedure is that assumption (1) above requires experience on the part
+of the researcher and faith in that experience on the part of the
+reader.
+
+     Four species of Cyprideis live in tidal marshes and estuaries on
+the east coast of North America.  Each has distinctive characteristics
+of shell texture and musculature by which it can be identified, even in
+juvenile stages. Each shows both sexual dimorphism and ontogenetic
+variation.  A proper phylogenetic analysis of this group is not yet
+available, since it would require detailed morphological and
+biogeographical analysis of species that live outside the study area and
+of the related genera Cytheridea and Haplocytheridea.  Table 1 shows the
+morphological characteristics used to identify specimens in this study.
+
+Ecology and life-history.--The four species C. margarita, C. mexicana,
+C. ovata, and C. salebrosa occur together on the surface of tidal
+mudflats in Sippewissett Marsh, Massachusetts.  Regular measurements of
+population density show the seasonal changes in population structure
+that each species undergoes, and allow these changes to be compared with
+the results published by Heip (1976b) for C. torosa. Details of the
+sampling procedures and listings of the data are given in Schweitzer
+(1989). The population density of each instar of each species is shown
+in figure 1.
+
+     Similar changes of population structure occurred in all four
+species. Late juvenile instars present in March and April matured in May
+and June, producing a sharp increase of early juveniles that appeared
+later in successive instars.  Clear differences among species are
+apparent as well.  The new generation produced by Cyprideis margarita
+reached maturity in about two months, but C. mexicana that hatched
+during the summer must have matured the following spring, since the
+large sample of C. mexicana taken in December 1987 contained essentially
+the same age structure as those taken in October 1988.  With minor
+exceptions, all growth stages of C. margarita are present in every
+sample.  But most samples of C. mexicana contained only three or fewer
+instars.  Cyprideis margarita appears to mature more rapidly than does
+C. mexicana.
+
+     Cyprideis salebrosa and C. ovata occur in smaller numbers, but
+their patterns of population density are quite similar to those of the
+more abundant C. margarita and C. mexicana.  In particular, C. salebrosa
+behaves like C. mexicana, and C. ovata like C. margarita.  Three lines
+of evidence support this inference.  First, the large peaks in abundance
+of juvenile specimens of C. ovata are nearly synchronous, like C.
+margarita, while those of C. salebrosa are progressively more offset in
+time, like C. mexicana.  Second, the large increase in juveniles of C.
+ovata occurs at the beginning of June, like C. margarita, whereas C.
+salebrosa juveniles begin to increase in July, like C. mexicana.  Third,
+a large sample taken in December 1987 contained both adults and
+juveniles of C. ovata and C. margarita, but only juveniles (and only
+stages A-1, A-2, and A-3) of both C. salebrosa and C. mexicana.
+
+     The most important environmental parameter for ostracode growth
+seems to be temperature (Heip, 1976b; Herman and Heip, 1982; Martens,
+1985). Ostracodes grow more slowly in cold water and may reach a larger
+size than they do in warm water (Latifa, 1987).  Variations of water
+temperature at Sippewissett Marsh support the observation by Heip
+(1976b) that growth and production in ostracodes is slowest when the
+water temperature goes below 15 degrees C, and fastest when it exceeds
+20 degrees C.  That development of Cyprideis mexicana and C. salebrosa
+slows dramatically through the winter months seems clear from the
+general aspect of figure 1. Cyprideis margarita also shows some evidence
+for retarded growth in cold conditions.  A secondary peak of juveniles
+appears in August, but progresses towards adulthood much more slowly
+than the cohort which hatched in early June.  The slight bulges in A-2
+and A-3 instars in late September and early October indicate that this
+second generation probably overwinters in juvenile form in much the same
+way as does the new generation of C. mexicana.  The second generation is
+not as obvious in C. ovata, due to its low population density.  The
+patterns of abundance in other samples support these observations,
+though the spot samples listed in the appendix were not taken for the
+purpose of measuring population density, and only general statements
+about relative abundance can be made from them.
+
+     Some information about variation in the ecology of Cyprideis
+salebrosa can be gained from the sample of the salt marsh at Kelly's
+beach in Kouchibouguac National Park, New Brunswick.  There both sexes
+and all instars of C. salebrosa occur in great abundance, quite unlike
+the distribution in Sippewissett Marsh.  The Kouchibouguac sample of C.
+salebrosa was taken in August of 1987.  The abundance of specimens and
+their population structure are much like that of C. margarita in
+Sippewissett Marsh; at no time during the summer of 1988 were all
+instars of C. salebrosa observed in a single sample, but this was the
+norm for C. margarita.  These observations suggest that the life cycle
+of C. salebrosa at Kouchibouguac is similar to that of C. margarita at
+Sippewissett.
+
+Intraspecific variation.--Morphological variation is hierarchical.
+Typically, ontogenetic variation is present in every sample, seasonal
+variation is present at every location, and geographic variation is
+present in every species.  In order to assess the statistical
+significance of differences among samples one must first understand
+these sources of within-sample variation.  We discuss each in turn,
+beginning with seasonal variation.
+
+     Some crustaceans show seasonal variations in morphology that seem
+to be related to aspects of the physical or biological environment.  A
+single population of cladocerans, for example, may show a variety of
+morphologies throughout the year in response to changes in temperature
+or predation (Dodson 1974).  The ability of populations to adapt with
+such flexibility is called phenotypic plasticity; phenotypic because one
+genotype may permit the expression of several different external forms,
+plasticity implying that although small changes in a single individual
+might be reversed during its lifetime, larger changes cannot (Stearns
+1981).  Plasticity of this sort is properly considered a characteristic
+not of individuals but of populations.  Though it may be an important
+mechanism for producing stasis in the fossil record, phenotypic
+plasticity may have a confusing influence in studies such as this one.
+
+     In fossil samples both seasonal and interannual variation is
+combined, but differential production and preservation may obscure their
+relative importance.  Periodic sampling of living populations gives us a
+statistical estimate of seasonal variation.  It also shows how shape and
+size are affected by whatever environmental parameters can be measured,
+but in field studies many of the ecological variables that might be
+important can neither be controlled nor measured.  Samples for this
+purpose were taken from Sippewissett Marsh on May 25, August 27, and
+December 2, 1987. Specimens were picked selectively to measure fifteen
+to twenty individuals of each instar of each species. Some instars were
+quite rare or simply could not be found, however.  The strong
+differences in seasonality shown by these samples prompted a more
+detailed investigation of these species' population dynamics.
+
+     Size was measured as the area of the outline of the right valve in
+right lateral view.  Size differences were evaluated using univariate t
+and F statistics.  Slight seasonal differences were found in all of the
+species, the magnitude of which ranged between one and two standard
+deviations of the data.  The three largest instars of Cyprideis
+margarita are largest in May and smallest in December.  C. mexicana
+females are larger in May than in August, but are absent in December.
+C. ovata are generally largest in August and smallest in December,
+though results from the smaller instars are inconclusive.  The two
+largest juvenile instars of C. salebrosa were smallest in May and
+largest in December and August.
+
+     Shape was measured as the phi* function of Zahn and Roskies (1972).
+Shape variation was summarized using eigenfunction analysis (see above,
+Lohmann 1983, and Lohmann and Schweitzer in press).  Each shape is
+plotted on the first three principal components of variation defined by
+the averages of all stages in all samples, thus avoiding a bias against
+rare stages. In all four species the first component of variation
+describes the ontogeny.  The second and third components describe sexual
+dimorphism and non-ontogenetic seasonal variations.  The results are
+used to assess the significance of geographic and stratigraphic
+variability.
+
+     In one species the pattern of seasonal variation is interesting in
+its own right.  In Cyprideis margarita, which shows significant
+variation of ontogeny (instars A-1, A-2, and A-3 in figure 2).  December
+specimens are less advanced than their counterparts in May and August.
+The ecological data reported here provides evidence that the December
+specimens probably matured much more slowly than those collected in
+August and May.  This suggests that when the intermolt period increases,
+the rate of development of shape decreases (meaning the shape changes
+that lead to adulthood occur in smaller steps).  This plasticity seems
+to affect only the late preadult instars, since the adults are not
+affected in the same way.
+
+     Geographic variation in Cyprideis tends to be complicated because
+we do not fully understand the mechanisms by which separate populations
+are established and maintained.  The best example of this complexity is
+the morphological variation of the species C. salebrosa.  We discuss
+this species first, then turn to the variation shown by other species.
+
+     Cluster analysis of the average shape of adult female shells of
+Cyprideis salebrosa suggests that two distinct morphologies exist.
+Principal components analysis shows the same relationships among the
+averages; the individual shapes can be plotted on these axes to show
+that the groups described by cluster analysis do not overlap.  Note that
+the samples of living material show the dichotomy most clearly; fossil
+samples are intermediate in form.  Specimens from the Pleistocene of
+Virginia and the Carolinas and modern specimens from Sippewissett Marsh
+have a produced, slightly pointed anterior, while those from Nova
+Scotia, New Brunswick, Venezuela, and the Caloosahatchee Formation of
+the Florida Pleistocene have a stouter, more inflated anterior (Figure
+3).  Specimens from the Pliocene of Haiti (Cul de Sac well) are
+intermediate in appearance, and appear to be the same form as the
+holotype, depicted by van den Bold (1963).  Male specimens show the same
+pattern but are less sharply divided.
+
+     These two forms are regarded in this paper as subspecies.  Their
+true relationship can be established only by more thorough sampling or
+by controlled experiment.  Their geographic ranges appear to overlap, so
+more detailed sampling may reveal (a) living intermediate forms,
+implying that the shape variation is actually continuous; (b) living
+samples containing both forms, indicating reproductive isolation; or (c)
+clear differences in the character of the environments in which each
+form is found, indicating the two forms are environmentally-cued
+polymorphs (Reyment, 1983).  With the present data one cannot choose
+among these interpretations.  Because the relationship between them
+needs further clarification, this paper will refer to the type found at
+Sippewissett Marsh as "variety A" and the other (of which the
+Kouchibouguac specimens are typical) as "variety B".
+
+     Though not as pronounced, similar complexity is shown by other
+species of Cyprideis as well.  Size varies significantly among samples
+from different localities.  In general, the more southerly the locality,
+the smaller the specimens.  The specimens of Cyprideis mexicana and C.
+margarita from the Waccamaw Formation are larger, however, than younger
+Pleistocene material from the same region.  C. salebrosa variety B from
+the Pleistocene Caloosahatchee Formation of Florida are larger than
+living specimens from Lago de Valencia in Venezuela.  These exceptions
+imply that geographic variation does not explain all of the size
+variation among samples from different places.  Significant differences
+among modern samples (e.g. in C. ovata, of which no fossils were
+measured) suggest that geographic variation in size is slightly larger
+than seasonal variation.
+
+     In addition to the specimens that we measured, we have studied
+recent material from the Laguna de Tamiahua, in Veracruz, Mexico,
+collected by P. A. Sandberg as part of his 1964 monograph on Cyprideis
+and deposited in the U.S. National Museum.  These specimens of C.
+salebrosa, C. ovata, and C. mexicana are uniformly smaller than those
+found on the Atlantic coast.  The size of the adult Mexican C.
+salebrosa, for example, is about the same as the specimens from Lago de
+Valencia, Venezuela; the largest of these is smaller than the smallest
+of the Canadian adults. Every species of Cyprideis from the Caribbean
+and Gulf of Mexico is smaller there than to the north along the Atlantic
+coast.
+
+     Seasonal variability provides a context in which we can judge the
+significance of geographic variation; we need not try to explain
+differences smaller than the seasonal variation in Sippewissett Marsh.
+In this sense seasonal variation in shape accounts for most of the
+intraspecific variation shown by these species.  Prominent exceptions
+are specimens of C. mexicana from the Waccamaw Formation and the
+Pliocene and Pleistocene specimens of C. salebrosa variety A.
+Pleistocene samples of adult Cyprideis margarita from the Princess Anne
+terrace formation and the Waccamaw Formation do not fall within the
+scatter defined by seasonal variation, yet material from the nearby
+Silver Bluff terrace formation does.  Adult female C. ovata from San
+Salvador are more like male C. ovata than are specimens from other
+places, but the other instars from the same locality are not
+statistically different from specimens found in Massachusetts.  Details
+of the shape variability shown by each species are given in Schweitzer
+(1989).
+
+     In addition to the shape of the outline, several other
+characteristics distinguish the specimens of Cyprideis mexicana of the
+Waccamaw Formation from more modern specimens.  Those from the Waccamaw
+Formation possess four to five blunt anteromarginal denticles like the
+denticles frequently observed in modern C. salebrosa and in C. floridana
+from the Duplin Formation.  The Waccamaw specimens also possess a
+posteroventral flange, a feature typical of modern C. salebrosa and C.
+ovata but lacking in modern C. mexicana.  Cyprideis mexicana from the
+Waccamaw Formation appears to be a morphological intermediate; a
+population with the size, shape, and other characteristics of C.
+mexicana showing a few of the characteristics of C. floridana of the
+Duplin Formation and C. salebrosa of the Caloosahatchee Formation.
+Likewise the fossil specimens of C. salebrosa are morphologically
+intermediate with respect to the two living morphologies as shown above.
+These observations suggest that C. mexicana evolved from either C.
+floridana or C. salebrosa in the early Pleistocene, and that
+considerable anagenesis (morphological change through time without
+forming separate taxonomic entities) has occurred in the history of the
+species C. salebrosa.  The earliest known occurrence of Cyprideis
+margarita is in the Waccamaw Formation, and though its shape is similar
+to C. mexicana, fossil specimens intermediate in other morphological
+characters have not been described. Evidence of the stratigraphic record
+of Cyprideis in the Caribbean region (van den Bold 1976) seems to
+indicate a Caribbean origin for C. salebrosa and C. ovata, but not for
+C. mexicana, which is not found as a fossil there (van den Bold,
+personal communication) nor for C. margarita, which has never been
+reported in the Caribbean region.
+
+Morphological relationships among species.--Changes in size that
+accompany age are usually plotted on logarithmic scales, because an
+individual's size at any particular stage of development is largely
+determined by its size at the preceding stage.  Figure 4 shows the
+growth rates of each species in Sippewissett Marsh with those of
+Cyprideis salebrosa variety B and the Caribbean species C. similis.
+The two smallest species have more nearly log-linear growth than do the
+larger taxa, but all are better fit by the more complicated
+log-quadratic model ln S(i) = a + bi + ci^2, where S(i) is the size of
+the i-th instar.  Cyprideis mexicana grows by larger increments in the
+late preadult stages than during the early juvenile stages.  In this
+species the A-2 and A-1 stages develop during the spring, after
+overwintering as juveniles. This suggests that overwintering affects the
+growth rate, but C. salebrosa variety A, the other species that
+overwinters only in juvenile form, does not show the same strong
+increase in size in the late preadult stages.
+
+     Heterochrony is a shift in the relative rates of somatic and
+reproductive development (Gould 1977).  It can be seen only along
+directions of shape change that parallel ontogeny, by marking
+developmental events (here molt stages) along the trajectory. Schweitzer
+et al. (1986) provided a simple example in which adults of one species
+of the ostracode Cavellina resembled the last preadult stage (A-1
+instar) of another. In that example the difference between species was
+as large as the change in shape each species showed during ontogeny.  In
+Cyprideis the opposite is true; the differences among species are
+smaller than the ontogenetic variation of a single species.
+
+     Figure 5 shows the covariation in shape shown by the four species
+living in Sippewissett Marsh.  This figure shows morphological evidence
+for heterochrony.  It is an analysis of the changes in shape during
+ontogeny that are common to each of the four species.  The principal
+components of shape variation are interpreted by considering how the
+species, sexes, and instars are arranged on them. The earliest juvenile
+stages all plot together, and successive instars of each species are
+spread out along the first principal component.  This component
+therefore describes ontogeny.  The second component describes sexual
+dimorphism, while the third describes non-ontogenetic differences among
+species.  Specimens that are farther to the right along the first
+principal component are regarded as having more specialized morphology
+in the sense that adults are more specialized than juveniles.  Those to
+the left are more generalized, meaning they are more juvenile in form.
+
+     The A-1 instar of Cyprideis salebrosa is as specialized (i.e. as
+far along the first principal component) as are adults of C. mexicana
+and C. margarita. This relationship is apparent from cluster analysis as
+well; A-1 instars of C. salebrosa cluster with adults of the other
+species. Likewise the A-2 instar of C. salebrosa matches the A-1 instars
+of C. mexicana and C. margarita.  C. ovata instars pace those of C.
+salebrosa up to the A-2 instar, but the A-1 and adult stages fall
+behind. Figure 5 was constructed using C. salebrosa variety A; C.
+salebrosa variety B shows the same heterochronic relationship to C.
+mexicana and C. margarita but to a lesser extent.
+
+     Cyprideis salebrosa is peramorphic relative to both C. mexicana and
+C. margarita, but the morphological relationship between the latter two
+species does not indicate heterochrony.  These findings remain when the
+records of seasonal, geographic, and stratigraphic variability are taken
+into account.  Cyprideis ovata is more complicated, showing early
+morphology as specialized as C. salebrosa but late morphology more like
+C. mexicana and C. margarita.
+
+     Were these solely extinct forms the analysis would stop here.  The
+relationships among these species would simply be categorized with the
+appropriate words and speculation that Cyprideis salebrosa, whose
+stratigraphic record extends farthest into the past, spawned the two
+species C. mexicana and C. margarita by paedomorphosis.  But since the
+life-history of each species has been examined, we know the parts of
+this story that pure paleontology does not provide.  Cyprideis mexicana
+and C. salebrosa mature in approximately the same amount of time, but C.
+margarita matures much more quickly.  The expected correlations, that
+delayed maturity yields specialized morphology and large size, and
+accelerated maturity leads to generalized morphology and small size,
+occur in only two of the four species studied here, C. salebrosa and C.
+margarita.  Cyprideis ovata is nearly as large as C. salebrosa yet
+matures quickly, like C. margarita, while C. mexicana, which matures at
+the same rate as C. salebrosa, is nevertheless smaller.
+
+                         Discussion
+
+     Paleontologists have invested significant effort in detecting and
+classifying occurrences of heterochrony in the fossil record.  These
+studies are of value only in the context of a theory that links the
+occurrence of heterochrony to elements of the organisms' ecology.  Such
+a theory has been presented, i.e. that heterochrony is caused by
+life-history evolution.  If the fossil record contains identifiable
+examples of life-history evolution, paleontologists can use the results
+of modern population biology to understand the workings of anagenesis
+and cladogenesis over long periods of time.
+
+     A proper test of the theory linking age at maturity with
+morphological changes observable in fossils requires clarification of
+its underlying assumptions.  In particular, shape is assumed to be
+dependent on chronological age, but size is not.  If size is used as a
+proxy for chronological age, heterochrony cannot be cleanly
+distinguished from changes in size, and the results are ambiguous.
+Furthermore, maturity must be recognizable in the taxa that are studied,
+and sources of variation both within and among species must be
+understood.
+
+     How age should be measured is a difficult and unsolved problem in
+evolutionary biology.  This study takes the point of view expressed by
+Blackstone (1986, 1987) that the proper measure of age is chronological.
+Strauss (1987) in response argues for a looser concept of biological
+age, measured either by size, time, or developmental events.  The
+ecology of Cyprideis margarita lends some support to Strauss's point of
+view.  The rate of growth slows significantly during the winter, yet we
+see no morphological evidence of hypermorphosis in specimens maturing
+during the spring.  In what sense are the specimens that mature in the
+spring (having hatched in the late summer) biologically older than those
+maturing in the late summer, having hatched sixty days before?  In
+contrast, a general notion of biological age leaves open the question of
+how to interpret heterochrony.  Is molting the proper marker of
+biological age in these ostracodes, or should we use the axes that
+describe changes in shape as a continuous measure of development?  If
+heterochrony can be interpreted only by measuring the mortality and
+fecundity of a living population, it is pointless to study the
+occurrence of heterochrony in fossils.
+
+                         Conclusion
+
+     We studied four sympatric species of the ostracode genus Cyprideis
+to determine the seasonal and geographic variation in size and shape,
+the record of change through geological time, and the dynamics of
+population growth.  Figure 6 shows the expected correlations among the
+rates of growth, development, and maturation as well as the correlations
+observed in this study.  In general, we expect accelerated maturity to
+yield generalized morphology and small size. Similarly, delayed maturity
+leads to specialized morphology and large size.  Two of the four species
+studied here fit the expected pattern, Cyprideis margarita and C.
+salebrosa.  The other two do not.  Although it produces only one
+generation per year, C. mexicana has a pattern of morphological
+development very similar to that of C. margarita.  Similarly, C. ovata
+produces two generations per year like C. margarita but it is large,
+like C. salebrosa.  The other two characteristics, morphological
+development in C. ovata and size of C. mexicana, change during ontogeny
+from one pattern to the other.  These may represent changes in the onset
+or offset of growth; for example, the accelerated growth of C. ovata
+early in ontogeny (which makes it parallel C. salebrosa) is "turned off"
+early, retarding the shape of the last two stages accordingly.
+
+     In higher taxa, heterochrony is a mechanism that affects the degree
+of specialization, i.e. the precision with which morphology fits
+particular environmental circumstances.  Paedomorphosis is, in effect,
+escape from specialization, while peramorphosis increases
+specialization.  At the scale of populations and species, the
+significance of heterochrony is still not well understood.  Where it is
+caused by life-history evolution, occurrences of heterochrony can be
+interpreted using modern ecological theory.  But modern ecological
+theory deals with age-specific mortality and fecundity; if age
+determines neither size nor shape and no independent estimate of age at
+maturity is available, heterochrony in fossils cannot be interpreted as
+life-history evolution.  The findings of this research indicate at least
+that heterochrony is not always the result of life-history evolution.
+
+     Paleontologists may apply modern ecological theory to fossils, but
+only if they can observe the relevant aspects of the timing of growth
+and maturation.  For many taxa the necessary information can be obtained
+only by studying living representatives.
+
+                         Acknowledgements
+
+     Financial support for this research came from the Education
+Department of the Woods Hole Oceanographic Institution and NSF grants
+OCE82-14930, OCE84-10221, and OCE84-17040 to G. P. Lohmann.  Specimens
+were kindly loaned by T. M. Cronin, W. A. van dem Bold, J. W. Teeter,
+and E. A. Canuel.  We appreicate the reviews of early drafts of this
+work provided by P. W. Signor, L. Kaufmann, H. K. Dean, R. L. Kaesler,
+T. M. Cronin, N. C. Slowey, and S. C. Stearns.  This is Woods Hole
+Oceanographic Institution contribution 7047.
+
+%@
+Table 1. Morphological characteristics used to identify species of
+Cyprideis. Surface textures of fossil specimens from the Duplin and
+Waccamaw Formations are uncertain because they may have been affected by
+taphonomic processes.
+
+taxon                   morphological characteristics
+                           upper        postero    antero        normal
+              surface    mandibular     ventral   marginal        pore
+              texture      scar         flange    denticles      canals
+
+margarita     smooth      elongate      present     many          round
+mexicana      pitted      rounded        absent   (in young)      round
+ovata       reticulate    oval          present    few,weak    multiradiate
+salebrosa     pitted      elongate      present    few,rare       round
+
+Duplin        smooth?     elongate      present      few          round
+Waccamaw      pitted?     rounded       present      few          round
+
+%@
+Figure 1. Population density of Cyprideis from Sippewissett Marsh,
+Massachusetts during 1988.  Each point is the average of two samples
+taken on the same date.  Dots along the bottom axis mark the dates
+samples were collected.
+
+Figure 2. Seasonal variation of Cyprideis margarita at Sippewissett
+Marsh, Massachusetts.  Each small dot represents the shape of one
+specimen, plotted on the principal components defined by the average
+shapes of each instar from each sample.  Ellipses approximate 95%
+confidence limits on the mean shape of each instar; they indicate the
+position of the mean shape and the general trend of the distribution.
+
+Figure 3. Morphological variation of adult female Cyprideis salebrosa.
+Each plotted shape represents the average of the specimens from the
+sample; the axes are the principal components of the plotted shapes.
+
+Figure 4. Growth in Cyprideis.  The logarithm of outline area is plotted
+as a function of instar number, ending at the terminal adult stage.
+Bimodality in the adult stage is due to sexual dimorphism, most
+pronounced in C. similis.  The curved line shows the quadratic
+regression of log size on instar number, calculated for the six preadult
+instars, since adults do not generally fit this model.
+
+Figure 5. Shape variation among species of Cyprideis. Axes are the first
+three principal components of shape variation computed from the average
+shape of each instar of the species C. margarita, C. mexicana, C. ovata,
+and C. salebrosa.  Adult female specimens are marked with filled
+symbols, adult males are marked with open symbols.  The meaning of such
+principal components is inferred from the distribution on the graph of
+characteristics that were not explicitly included in the analysis, i.e.
+species identification, gender, and ontogenetic stage of the specimens.
+The first principal component (PC I) is highly correlated with ontogeny,
+the second with gender.  The third describes non-developmental
+differences among species.
+
+Figure 6. Summary of interspecific variation of morphology and ecology.
+Under assumptions commonly used by paleontologists, accelerated maturity
+leads to generalized morphology and small size, while delayed maturity
+leads to specialized morphology and large size.  Two species studied
+here fit the expected pattern (Cyprideis margarita and C. salebrosa),
+while the other two do not.  Parentheses indicate patterns that change
+from one category to the other during ontogeny.
+
+%@
+Literature cited
+
+ALBERCH, P., S. J. GOULD, G. F. OSTER, and D. B. WAKE. 1979. Size and
+shape in ontogeny and phylogeny. Paleobiology 5:296-317.
+
+BLACKSTONE, N. W. 1986. Relative growth and specific growth rates in
+crustaceans. Growth 50:118-127.
+
+BLACKSTONE, N. W. 1987. Allometry and relative growth: Pattern and
+process in evolutionary studies. Systematic Zoology 36:76-78.
+
+BODERGAT, A. M. 1983. Les ostracodes, temoins de leur environment:
+Approche chimique et ecologie en milieu lagunaire et oceanique.
+Documents Laboratoire Geologique de Lyon 88.
+
+BOLD, W. A. VAN DEN, 1963. Upper Miocene and Pliocene Ostracoda of
+Trinidad.  Micropaleontology 9:361-424.
+ 
+BOLD, W. A. VAN DEN, 1976. Distribution of species of the tribe
+Cyprideidini (Ostracoda, Cytherideidae) in the Neogene of the Caribbean.
+Micropaleontology 22:1-43.
+
+BOOKSTEIN, F. L. 1978. The Measurement of Biological Shape and Shape
+Change. Springer-Verlag, Berlin.
+
+BOOKSTEIN, F. L., B. CHERNOFF, R. L. ELDER, J. M. HUMPHRIES, G. R.
+SMITH, and R. E. STRAUSS, 1985. Morphometrics in Evolutionary Biology.
+Special Publication 15, Academy of Natural Sciences of Philadelphia.
+
+CRONIN, T.M. 1979. Late Pleistocene marginal marine ostracodes from the
+southeastern Atlantic coastal plain and their paleoenvironmental
+implications. Geographie Physique Quaternaire 33:121-173.
+
+CRONIN, T. M., L. M. BYBELL, R. Z. POORE, B. W. BLACKWELDER, J. C.
+LIDDICOAT, and J. E. HAZEL. 1984. Age and correlation of emerged
+Pliocene and Pleistocene deposits, U.S. Atlantic coastal plain.
+Palaeogeography, Palaeoclimatology, Palaeoecology 47:21-51.
+
+DODSON, S. I. 1974. Adaptive change in plankton morphology in response
+to size-selective predation: A new hypothesis of cyclomorphism.
+Limnology and Oceanography 19:721-729.
+
+EDWARDS, R. A. 1944. Ostracoda from the Duplin Marl (Upper Miocene) of
+North Carolina. Journal of Paleontology 18:505-528.
+
+FINK, W. L. 1982. The conceptual relationship between ontogeny and
+phylogeny. Paleobiology 8:254-264.
+
+GARBETT, E. C., and R. F. MADDOCKS, 1979. Zoogeography of Holocene
+Cytheracean ostracodes in the bays of Texas. Journal of Paleontology
+53:841-919.
+
+GOULD, S. J. 1977. Ontogeny and Phylogeny. Belknap Press, Cambridge, MA.
+
+GROSSMAN, S. and R. H. BENSON. 1967. Ecology of Rhizopodea and Ostracoda
+of southern Pamlico Sound region, North Carolina. University of Kansas
+Paleontological Contribution 44:1-90.
+
+GUTENTAG, E. D. and R. H. BENSON. 1962. Neogene (Plio-Pleistocene)
+freshwater ostracodes from the Central High Plains.  Kansas State
+Geological Survey Bulletin 157:1-60.
+
+HEIP, C. 1976a. The spatial pattern of Cyprideis torosa (Jones, 1850)
+(Crustacea, Ostracoda). Journal of the Marine Biological Association of
+the United Kingdom 56:179-189.
+
+HEIP, C. 1976b. The life-cycle of Cyprideis torosa (Crustacea,
+Ostracoda). Oecologia 24:229-245.
+
+HERMAN, P. M. J., and C. HEIP. 1982. Growth and respiration of Cyprideis
+torosa Jones 1850 (Crustacea, Ostracoda). Oecologia 54:300-303.
+
+HERMAN, P. M. J., C. HEIP, and G. VRANKEN. 1983. The production of
+Cyprideis torosa Jones 1850 (Crustacea, Ostracoda). Oecologia
+58:326-331.
+
+HORNE, D. J. 1980. Life-cycles of podocopid Ostracoda -- A review (with
+particular reference to marine and brackish-water species). Pp. 581-
+590. In R. F. Maddocks (ed.), Applications of Ostracoda. University of
+Houston Geosciences.
+
+JONES, D. S. 1986. Sclerochronology and the size versus time problem in
+heterochronic anslysis.  Geological Society of America Abstracts with
+Programs 18:649
+
+KESLING, R. V. 1951. The morphology of ostracod molt stages. Illinois
+Biological Monographs vol. 21, nos. 1-3.
+
+KING, C. E. and L. S. KORNICKER 1970. Ostracoda in Texas bays and
+lagoons: an ecologic study. Smithsonian Contributions to Zoology 24.
+
+KONTROVITZ, M., and R. BITTER, 1976. Holocene ostracoda from the
+Shrewsbury River, New Jersey. Micropaleontology 22:72-82.
+
+LATIFA, G. A. 1987. Effect of temperature on the development of
+embryonic and postembryonic stages of Heterocypris incongruens (Ramdohr,
+1808) (Ostracoda). Crustaceana 52:95-100.
+
+LISTER, K. H. 1975. Quaternary freshwater ostracoda from the Great Salt
+Lake basin, Utah. University of Kansas Paleontological Contributions
+Paper 78.
+
+LOHMANN, G. P. 1983. Eigenshape analysis of microfossils: A general
+morphometric procedure for describing changes in shape. Mathematical
+Geology 15:659-672.
+
+LOHMANN, G. P. and P. N. SCHWEITZER. In press. On eigenshape analysis.
+Proceedings of the workshop on Morphometrics in Systematic Biology,
+University of Michigan, Ann Arbor.
+
+MCKINNEY, M. L. 1986. Ecological causation of heterochrony: a test and
+implications for evolutionary theory. Paleobiology 12:282-289.
+
+MCNAMARA, K. J. 1986. A guide to the nomenclature of heterochrony.
+Journal of Paleontology 60:4-13.
+
+MARTENS, K. 1985. Effects of temperature and salinity on postembryonic
+growth in Mytilocypris henricae (Chapman) (Crustacea, Ostracoda).
+Journal of Crustacean Biology 5:258-272.
+
+MORKHOVEN, F. C. P. M. VAN. 1963. Post-Paleozoic Ostracoda: Their
+morphology, taxonomy, and economic use. Elsevier, Amsterdam.
+
+REYMENT, R. A. 1983. Phenotypic evolution in microfossils. Pp. 209-254.
+In KECNER, M. K., B. WALLACE, and C. T. PRANCE, (eds.), Evolutionary
+Biology, vol. 16. Plenum; New York.
+
+SANDBERG, P. A., 1964. The ostracod genus Cyprideis in the Americas.
+Stockholm Contributions in Geology 12:1-176.
+
+SANDBERG, P. A., and P. L. PLUSQUELLEC, 1974. Notes on the anatomy and
+passive dispersal of Cyprideis (Cytheracea, Ostracoda). Geoscience and
+Man 6:1-26
+
+SANGER, D. B., and J. W. TEETER, 1982. The distribution of living and
+fossil Ostracoda and their use in the interpretation of the
+post-Pleistocene history of Little Lake, San Salvador Island, Bahamas.
+CCFL Field Station Occasional Papers 1982 number 1.
+
+SCHWEITZER, P. N. 1989. Inference of ecology from the ontogeny of
+microfossils.  Ph.D. thesis, Woods Hole Oceanographic Institution/
+Massachusetts Institute of Technology Joint Program in Oceanography,
+Woods Hole.
+
+SCHWEITZER, P. N., R. L. KAESLER, and G. P. LOHMANN. 1986. Ontogeny and
+heterochrony in the ostracode Cavellina Coryell from Lower Permian rocks
+in Kansas. Paleobiology 12:290-301.
+
+STEARNS, S. C. 1976. Life-history tactics: A review of the ideas.
+Quarterly Review of Biology 51:3-47.
+
+STEARNS, S. C. 1977. The evolution of life-history traits: A critique of
+the theory and a review of the data. Annual Reviews of Ecology and
+Systematics 8:145-171.
+
+STEARNS, S. C. 1981. The role of development in the evolution of
+life-histories.  Pp. 237-258. In J. T. Bonner (ed.), Evolution and
+Development. Springer-Verlag; Berlin.
+
+STEARNS, S. C. 1982a. The emergence of evolutionary and community
+ecology as experimental sciences. Perspectives in Biology and Medicine
+25:621-648.
+
+STEARNS, S. C. 1983. The impact of size and phylogeny on patterns of
+covariation in the life-history traits of mammals. Oikos 41:173-187.
+
+STEARNS, S. C. 1984. The effects of size and phylogeny on patterns of
+covariation in the life-history traits of lizards and snakes. American
+Naturalist 123:56-72.
+
+STOUT, L. N. 1981. An unusual occurrence of the brackish-water ostracode
+Cyprideis salebrosa in central Missouri. Journal of Paleontology
+55:898-900.
+
+STRAUSS, R.E. 1987. On allometry and relative growth in evolutionary
+studies. Systematic Zoology 36:72-75.
+
+TRESSLER, W. L., and E. M. SMITH. 1948. An ecological study of seasonal
+distribution of Ostracoda, Solomons Island, Maryland region.
+Publications, Chesapeake Biological Laboratory 71:1-61.
+
+THEISEN, B. F. 1966. The life history of seven species of ostracodes
+from a Danish brackish water locality. Meddelelser fra Danmarks Fiskeri-
+og Havundersogelser 4:215-270.
+
+VESPER, B. 1972. Zur Morphologie und Okologie von  Cyprideis torosa
+(Jones, 1850) (Crustacea, Ostracoda) unter besonderer Berucksichtigung
+seiner Biometrie. Mitt. Hamburg Zool. Mus. Inst. 68:21-77.
+
+WILEY, E. O. 1981. Phylogenetics, the Theory and Practice of
+Phylogenetic Systematics. Wiley-Interscience, New York.
+
+ZAHN, C. T. and R. Z. ROSKIES. 1972. Fourier descriptors for plane
+closed curves. IEEE Transactions on Computers C-121:269-281.
+%@
+                         Appendix
+
+Material used to characterize size and shape
+
+Species               instars represented               Age       Locality
+              M    F  A-1  A-2  A-3  A-4  A-5  A-6
+C. margarita
+             13   11    3    -    -    -    -    -   Pleistocene   78TC42  (3)
+             20   20   10    -    -    -    -    -   Pleistocene   78TC65A (2)
+             20   20   19   20    6    -    -    -   May    87     Sippewissett (19)
+             10   20   19   21   20    -    -    -   August 87     Sippewissett (19)
+              -    -    -    -    -   15   15   15   July   88     Sippewissett (19)
+              6   13   23   13   19   14    6    -   December 87   Sippewissett (19)
+              2    6    2    6    2    1    -    -   August 86     Evangeline (13)
+              -    -    3    2    -    -    -    -   September 87  Beaufort (12)
+              4    1    2    2    1    -    -    -   Pleistocene   Waccamaw Fm. (4)
+C. mexicana
+             20   20   20   20    -    -    -    -   Pleistocene   Langley Bluffs (9)
+              -   15   21   38   39   37   17   15   August 85-6   Evangeline (13)
+             12   20   10    -    -    -    -    -   Summer 84     Barnstable (17)
+             20   14   20   20   16    -    -    -   May    87     Sippewissett (19)
+              -   21    -    -    -   16    -    -   August 87     Sippewissett (19)
+              -    -    -    -    -   15   15   19   August 88     Sippewissett (19)
+              -    -    5   20   20    -    -    -   December 87   Sippewissett (19)
+              -    -    -    -    9    2    -    -   September 87  Beaufort (12)
+             11   15   10    9    2    -    -    -   Pleistocene   Waccamaw Fm. (4)
+              1   21   19   11    2    -    -    -   Pleistocene   82TC178 (8)
+              9   20   17    8    3    -    -    -   Pleistocene   82TC179 (8)
+              -    3    4    7    1    2    -    -   Pleistocene   82TC181 (8)
+C. ovata
+              5    9   19   13    7    1    -    -   Summer 84     Barnstable (17)
+              2    6   12    6    2    -    -    -   September 87  Beaufort (12)
+              -    4   24   30   29   10    1    -   July   86     Assateague (15)
+             22   40   40   30   20   20   11    -   Living        San Salvador (16)
+              -   18   18   21   11    1    -    -   May    87     Sippewissett (19)
+              9   16   19   15   17   15    2    -   August 87     Sippewissett (19)
+              -    -    -    -    -   13   15    6   Summer 88     Sippewissett (19)
+              5   13   22   20   17    5    -    -   December 87   Sippewissett (19)
+C. floridana
+             10    9    9    1    -    -    -    -   Pliocene      Duplin Fm. 47.5 (5)
+             10    9   10    4    -    -    -    -   Pliocene      Duplin Fm. 48.5 (5)
+              2    7    5    2    -    -    -    -   Pliocene      Duplin Fm. 52.5 (5)
+C. salebrosa
+              3   34   25   16    9    4    5    -   August 85-6   Scott's Bay (14)
+              8   24   15    8    -    -    -    -   Pleistocene   Norfolk Fm. (1)
+              1    6    7    -    -    -    -    -   Pleistocene   81TC77 (7)
+              9   23    6    4    -    -    -    -   Pleistocene   81TC78 (7)
+              3   10    4    1    -    -    -    -   Pleistocene   81TC79 (7)
+              1    6    2    1    -    -    -    -   Pleistocene   81TC80 (7)
+              4    4    1    1    -    -    -    -   Pleistocene   82TC174 (8)
+              1    4   11    4    2    1    -    -   Pleistocene   82TC176 (8)
+              1    2    8    3    -    -    -    -   Pliocene      Cul de Sac (10)
+             18   35   19    5    -    -    -    -   Living        Lago de Valencia (11)
+             11    8   20   20    8    -    -    -   May    87     Sippewissett (19)
+              -   12    3   12   21   13    -    -   August 87     Sippewissett (19)
+              -    -    -    -    -   14   14   17   Summer 88     Sippewissett (19)
+              -    -    6   13    9    -    -    -   December 87   Sippewissett (19)
+              -    -    1    2    1    1    -    -   September 87  Beaufort (12)
+             20   20   20   20   16   18   20    6   August 87     Kouchibouguac (18)
+              6   14   20   22   12    3    1    -   Pleistocene   Caloosahatchee Fm. (6)
+C. similis
+              28   31   42   20   14   15    8   12   Living        Lago de Valencia (11)
+
+Numbers in parentheses refer to items in the following list of
+localities.
+
+1. Norfolk Formation, Late Pleistocene, Virginia. Sample 156, locality
+   16 of Cronin (1979). Material loaned by T.M. Cronin.
+
+2. 78TC65A Princess-Anne terrace-formation, Late Pleistocene, South
+   Carolina. Locality 11 of Cronin (1979). Material loaned by T.M.
+   Cronin.
+
+3. 78TC42 Silver Bluff terrace-formation, Late Pleistocene, South Carolina.
+   Locality 2 of Cronin (1979). Material loaned by T.M. Cronin.
+
+4. Waccamaw Formation, Early Pleistocene, North Carolina. Locality 40 in
+   figure 2 of Cronin et al. (1984). Material loaned by T.M. Cronin.
+
+5. Duplin Formation, Late Pliocene, North Carolina. Locality 65 in
+   figure 3 of Cronin et al. (1984), sample LB-173 of Cronin (1981).
+   Three subsamples (47.5, 48.5, and 49.5) represent different samples
+   from the same outcrop. Material loaned by T.M. Cronin.
+
+6. Caloosahatchee Formation, Early Pleistocene, Florida. The slide was
+   marked "Below Bee Branch Member". Material loaned by T.M. Cronin.
+
+7. 81TC77,78,79,80 Upper part of Flanner Beach Formation, Late Middle
+   Pleistocene, Dare County, North Carolina. Material loaned by T.M.
+   Cronin.
+
+8. 82TC174,176,178,179,181 Lower part of Flanner Beach Formation, Middle
+   Pleistocene, Dare County, North Carolina. Material loaned by T.M.
+   Cronin.
+
+9. Langley Bluffs, Late Pleistocene, Virginia. Material loaned by T.M.
+   Cronin.
+
+10. Cul de Sac 51, 772' borehole in Haiti (van den Bold 1976).
+
+11. Lago de Valencia (Isla Tacarigua), Venezuela (van den Bold 1976)
+
+12. Beaufort, North Carolina. salt marsh near roadway sampled September
+    29, 1987 by E.A. Canuel.
+
+13. Evangeline Beach, Nova Scotia, sampled by the author near the low
+    tide line August 14, 1985 and August 22, 1986.
+
+14. Scott's Bay, Nova Scotia. Picnic grounds off Wharf Road.  Sampled by
+    the author from a small tidal creek bounded by cobble beaches August
+    16, 1985 and August 21, 1986.
+
+15. Assateague Island, Maryland. Sampled by the author from a pond in
+    the Old Ferry Landing area July 5, 1986.
+
+16. San Salvador, Bahamas. Sample taken from Reckley Hill Pond by J.W.
+    Teeter.
+
+17. Barnstable Harbor, Massachusetts. Sampled biweekly during summer
+    1984 by N.P. Gurwick and the author.
+
+18. Kouchibouguac National Park, New Brunswick. Pond in salt marsh on
+    mainland shore behind barrier island at Kelly's Beach sampled by the
+    author August 1987.
+
+19. Sippewissett Marsh, Massachusetts. Sampled by the author on numerous
+    occasions as described in text.
+
+

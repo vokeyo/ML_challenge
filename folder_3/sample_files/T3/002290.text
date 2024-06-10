@@ -1,0 +1,2688 @@
+%
+% Simply add SPIRES BibTEX entries here:
+
+@Article{Bahcall:2002ij,
+     author    = "Bahcall, John N. and Gonzalez-Garcia, M. C. and Pena-Garay,
+                  Carlos",
+     title     = "Solar neutrinos before and after KamLAND",
+     journal   = "JHEP",
+     volume    = "02",
+     year      = "2003",
+     pages     = "009",
+     eprint    = "hep-ph/0212147",
+     SLACcitation  = "%%CITATION = HEP-PH 0212147;%%"
+}
+
+@Article{Bahcall:2004yr,
+     author    = "Bahcall, John N. and Basu, Sarbani and Pinsonneault, Marc
+                  and Serenelli, Aldo M.",
+     title     = "Helioseismological Implications of Recent Solar Abundance
+                  Determinations",
+     year      = "2004",
+     eprint    = "astro-ph/0407060",
+     SLACcitation  = "%%CITATION = ASTRO-PH 0407060;%%"
+}
+
+@Article{Ambats:2004js,
+     author    = "Ambats, I. and others",
+ collaboration = "NOvA",
+     title     = "NOvA: Proposal to Build an Off-Axis Detector to Study muon-
+                  netrino $\to$ electron-neutrino Oscillations in the NuMI
+                  Beamline",
+     note     = "FERMILAB-PROPOSAL-0929"
+}
+
+@Unpublished{nova2,
+author = "Fermilab NuMI Group", 
+title = "NuMI Facility Technical Design Report", 
+note = "Fermilab Report NuMI-346", 
+OPTkey = {},
+OPTmonth = "October",
+OPTyear = "1998",
+OPTannote = {}
+}
+
+@Article{Apollonio:2002en,
+     author    = "Apollonio, M. and others",
+     title     = "Oscillation physics with a neutrino factory. ((G)) ((U))",
+     year      = "2002",
+     eprint    = "hep-ph/0210192",
+     SLACcitation  = "%%CITATION = HEP-PH 0210192;%%"
+}
+
+%%% REFERENCES PHENOMENOLOGY SECTION:
+
+@Article{Fukuda:1994mc,
+     author    = "Fukuda, Y. and others",
+ collaboration = "Kamiokande",
+     title     = "Atmospheric muon-neutrino / electron-neutrino ratio in the
+                  multiGeV energy range",
+     journal   = "Phys. Lett.",
+     volume    = "B335",
+     year      = "1994",
+     pages     = "237-245",
+     SLACcitation  = "%%CITATION = PHLTA,B335,237;%%"
+}
+
+@Article{Fukuda:2000np,
+     author    = "Fukuda, S. and others",
+ collaboration = "Super-Kamiokande",
+     title     = "Tau neutrinos favored over sterile neutrinos in atmospheric
+                  muon  neutrino oscillations",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "85",
+     year      = "2000",
+     pages     = "3999-4003",
+     eprint    = "hep-ex/0009001",
+     SLACcitation  = "%%CITATION = HEP-EX 0009001;%%"
+}
+
+@Article{Ahn:2001cq,
+     author    = "Ahn, S. H. and others",
+ collaboration = "K2K",
+     title     = "Detection of accelerator produced neutrinos at a distance
+                  of 250-km",
+     journal   = "Phys. Lett.",
+     volume    = "B511",
+     year      = "2001",
+     pages     = "178-184",
+     eprint    = "hep-ex/0103001",
+     SLACcitation  = "%%CITATION = HEP-EX 0103001;%%"
+}
+
+@Article{Ahn:2002up,
+     author    = "Ahn, M. H. and others",
+ collaboration = "K2K",
+     title     = "Indications of neutrino oscillation in a 250-km long-
+                  baseline experiment",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "90",
+     year      = "2003",
+     pages     = "041801",
+     eprint    = "hep-ex/0212007",
+     SLACcitation  = "%%CITATION = HEP-EX 0212007;%%"
+}
+
+@Article{Apollonio:1999ae,
+     author    = "Apollonio, M. and others",
+ collaboration = "CHOOZ",
+     title     = "Limits on neutrino oscillations from the CHOOZ experiment",
+     journal   = "Phys. Lett.",
+     volume    = "B466",
+     year      = "1999",
+     pages     = "415-430",
+     eprint    = "hep-ex/9907037",
+     SLACcitation  = "%%CITATION = HEP-EX 9907037;%%"
+}
+
+@Article{Ahmad:2001an,
+     author    = "Ahmad, Q. R. and others",
+ collaboration = "SNO",
+     title     = "Measurement of the charged current interactions produced by
+                  B-8  solar neutrinos at the Sudbury Neutrino Observatory",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "87",
+     year      = "2001",
+     pages     = "071301",
+     eprint    = "nucl-ex/0106015",
+     SLACcitation  = "%%CITATION = NUCL-EX 0106015;%%"
+}
+
+@Article{Ahmed:2003kj,
+     author    = "Ahmed, S. N. and others",
+ collaboration = "SNO",
+     title     = "Measurement of the total active B-8 solar neutrino flux at
+                  the Sudbury Neutrino Observatory with enhanced neutral
+                  current sensitivity",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "92",
+     year      = "2004",
+     pages     = "181301",
+     eprint    = "nucl-ex/0309004",
+     SLACcitation  = "%%CITATION = NUCL-EX 0309004;%%"
+}
+
+@Article{Fukuda:2002pe,
+     author    = "Fukuda, S. and others",
+ collaboration = "Super-Kamiokande",
+     title     = "Determination of solar neutrino oscillation parameters
+                  using 1496 days  of Super-Kamiokande-I data",
+     journal   = "Phys. Lett.",
+     volume    = "B539",
+     year      = "2002",
+     pages     = "179-187",
+     eprint    = "hep-ex/0205075",
+     SLACcitation  = "%%CITATION = HEP-EX 0205075;%%"
+}
+
+@Article{Huber:2003pm,
+     author    = "Huber, Patrick and Lindner, M. and Schwetz, T. and Winter,
+                  W.",
+     title     = "Reactor neutrino experiments compared to superbeams",
+     journal   = "Nucl. Phys.",
+     volume    = "B665",
+     year      = "2003",
+     pages     = "487-519",
+     eprint    = "hep-ph/0303232",
+     SLACcitation  = "%%CITATION = HEP-PH 0303232;%%"
+}
+
+@Article{Eguchi:2002dm,
+     author    = "Eguchi, K. and others",
+ collaboration = "KamLAND",
+     title     = "First results from KamLAND: Evidence for reactor anti-
+                  neutrino disappearance",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "90",
+     year      = "2003",
+     pages     = "021802",
+     eprint    = "hep-ex/0212021",
+     SLACcitation  = "%%CITATION = HEP-EX 0212021;%%"
+}
+
+@Article{Aguilar:2001ty,
+     author    = "Aguilar, A. and others",
+ collaboration = "LSND",
+     title     = "Evidence for neutrino oscillations from the observation of
+                  anti-nu/e  appearance in a anti-nu/mu beam",
+     journal   = "Phys. Rev.",
+     volume    = "D64",
+     year      = "2001",
+     pages     = "112007",
+     eprint    = "hep-ex/0104049",
+     SLACcitation  = "%%CITATION = HEP-EX 0104049;%%"
+}
+
+@Article{Ables:1995wq,
+     author    = "Ables, E. and others",
+ collaboration = "MINOS",
+     title     = "P-875: A Long baseline neutrino oscillation experiment at
+                  Fermilab",
+     note     = "FERMILAB-PROPOSAL-0875"
+}
+
+@Article{Barger:2000nf,
+     author    = "Barger, Vernon D. and Geer, S. and Raja, R. and Whisnant,
+                  K.",
+     title     = "Exploring neutrino oscillations with superbeams",
+     journal   = "Phys. Rev.",
+     volume    = "D63",
+     year      = "2001",
+     pages     = "113011",
+     eprint    = "hep-ph/0012017",
+     SLACcitation  = "%%CITATION = HEP-PH 0012017;%%"
+}
+
+@Article{Mocioiu:2001jy,
+     author    = "Mocioiu, Irina and Shrock, Robert",
+     title     = "Neutrino oscillations with two Delta(m**2) scales",
+     journal   = "JHEP",
+     volume    = "11",
+     year      = "2001",
+     pages     = "050",
+     eprint    = "hep-ph/0106139",
+     SLACcitation  = "%%CITATION = HEP-PH 0106139;%%"
+}
+
+@Article{Minakata:2001qm,
+     author    = "Minakata, Hisakazu and Nunokawa, Hiroshi",
+     title     = "Exploring neutrino mixing with low energy superbeams",
+     journal   = "JHEP",
+     volume    = "10",
+     year      = "2001",
+     pages     = "001",
+     eprint    = "hep-ph/0108085",
+     SLACcitation  = "%%CITATION = HEP-PH 0108085;%%"
+}
+
+@Article{Itow:2001ee,
+     author    = "Itow, Y. and others",
+     title     = "The JHF-Kamioka neutrino project",
+     year      = "2001",
+     eprint    = "hep-ex/0106019",
+     SLACcitation  = "%%CITATION = HEP-EX 0106019;%%"
+}
+
+@Article{Minakata:2003ca,
+     author    = "Minakata, Hisakazu and Nunokawa, Hiroshi and Parke, Stephen
+                  J.",
+     title     = "The complementarity of eastern and western hemisphere long-
+                  baseline  neutrino oscillation experiments",
+     journal   = "Phys. Rev.",
+     volume    = "D68",
+     year      = "2003",
+     pages     = "013010",
+     eprint    = "hep-ph/0301210",
+     SLACcitation  = "%%CITATION = HEP-PH 0301210;%%"
+}
+
+@Article{Aguilar-Arevalo:2004bu,
+     author    = "Aguilar-Arevalo, Alexis A.",
+ collaboration = "MiniBoonE",
+     title     = "The MiniBooNE experiment",
+     year      = "2004",
+     eprint    = "hep-ex/0408074",
+     SLACcitation  = "%%CITATION = HEP-EX 0408074;%%"
+}
+
+@Article{Armbruster:2002mp,
+     author    = "Armbruster, B. and others",
+ collaboration = "KARMEN",
+     title     = "Upper limits for neutrino oscillations anti-nu/mu --> anti-
+                  nu/e from  muon decay at rest",
+     journal   = "Phys. Rev.",
+     volume    = "D65",
+     year      = "2002",
+     pages     = "112001",
+     eprint    = "hep-ex/0203021",
+     SLACcitation  = "%%CITATION = HEP-EX 0203021;%%"
+}
+
+@Article{unknown:2003ih,
+     author    = "Abbaneo, D. and others",
+ collaboration = "LEP",
+     title     = "A combination of preliminary electroweak measurements and
+                  constraints on the standard model",
+     year      = "2003",
+     eprint    = "hep-ex/0312023",
+     SLACcitation  = "%%CITATION = HEP-EX 0312023;%%"
+}
+
+@Article{Maltoni:2004ei,
+     author    = "Maltoni, M. and Schwetz, T. and Tortola, M. A. and Valle,
+                  J. W. F.",
+     title     = "Status of global fits to neutrino oscillations",
+     year      = "2004",
+     eprint    = "hep-ph/0405172",
+     SLACcitation  = "%%CITATION = HEP-PH 0405172;%%"
+}
+
+@Article{Strumia:2002fw,
+     author    = "Strumia, Alessandro",
+     title     = "Interpreting the LSND anomaly: Sterile neutrinos or CPT-
+                  violation  or...?",
+     journal   = "Phys. Lett.",
+     volume    = "B539",
+     year      = "2002",
+     pages     = "91-101",
+     eprint    = "hep-ph/0201134",
+     SLACcitation  = "%%CITATION = HEP-PH 0201134;%%"
+}
+
+@Article{Paes:2002ah,
+     author    = "Paes, Heinrich and Song, Li-guo and Weiler, Thomas J.",
+     title     = "The hidden sterile neutrino and the (2+2) sum rule",
+     journal   = "Phys. Rev.",
+     volume    = "D67",
+     year      = "2003",
+     pages     = "073019",
+     eprint    = "hep-ph/0209373",
+     SLACcitation  = "%%CITATION = HEP-PH 0209373;%%"
+}
+
+@Article{Peres:2000ic,
+     author    = "Peres, O. L. G. and Smirnov, A. Yu.",
+     title     = "(3+1) spectrum of neutrino masses: A chance for LSND?",
+     journal   = "Nucl. Phys.",
+     volume    = "B599",
+     year      = "2001",
+     pages     = "3",
+     eprint    = "hep-ph/0011054",
+     SLACcitation  = "%%CITATION = HEP-PH 0011054;%%"
+}
+
+@Article{Barger:2000ch,
+     author    = "Barger, Vernon D. and Kayser, B. and Learned, J. and
+                  Weiler, Thomas J. and Whisnant, K.",
+     title     = "Fate of the sterile neutrino",
+     journal   = "Phys. Lett.",
+     volume    = "B489",
+     year      = "2000",
+     pages     = "345-352",
+     eprint    = "hep-ph/0008019",
+     SLACcitation  = "%%CITATION = HEP-PH 0008019;%%"
+}
+
+@Article{Babu:2002ic,
+     author    = "Babu, K. S. and Pakvasa, Sandip",
+     title     = "Lepton number violating muon decay and the LSND neutrino
+                  anomaly",
+     year      = "2002",
+     eprint    = "hep-ph/0204236",
+     SLACcitation  = "%%CITATION = HEP-PH 0204236;%%"
+}
+
+@Article{Armbruster:2003pq,
+     author    = "Armbruster, B. and others",
+     title     = "Improved limits on anti-nu/e emission from mu+ decay",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "90",
+     year      = "2003",
+     pages     = "181804",
+     eprint    = "hep-ex/0302017",
+     SLACcitation  = "%%CITATION = HEP-EX 0302017;%%"
+}
+
+@Article{Musser:2004zw,
+     author    = "Musser, J. R.",
+ collaboration = "TWIST",
+     title     = "Measurement of the Michel parameter rho in muon decay",
+     year      = "2004",
+     eprint    = "hep-ex/0409063",
+     SLACcitation  = "%%CITATION = HEP-EX 0409063;%%"
+}
+
+@Article{Murayama:2000hm,
+     author    = "Murayama, Hitoshi and Yanagida, T.",
+     title     = "LSND, SN1987A, and CPT violation",
+     journal   = "Phys. Lett.",
+     volume    = "B520",
+     year      = "2001",
+     pages     = "263-268",
+     eprint    = "hep-ph/0010178",
+     SLACcitation  = "%%CITATION = HEP-PH 0010178;%%"
+}
+
+@Article{Barenboim:2001ac,
+     author    = "Barenboim, G. and Borissov, L. and Lykken, J. and Smirnov,
+                  A. Yu",
+     title     = "Neutrinos as the messengers of CPT violation",
+     journal   = "JHEP",
+     volume    = "10",
+     year      = "2002",
+     pages     = "001",
+     eprint    = "hep-ph/0108199",
+     SLACcitation  = "%%CITATION = HEP-PH 0108199;%%"
+}
+
+@Article{Barenboim:2002rv,
+     author    = "Barenboim, G. and Borissov, L. and Lykken, J.",
+     title     = "Neutrinos that violate CPT, and the experiments that love
+                  them",
+     journal   = "Phys. Lett.",
+     volume    = "B534",
+     year      = "2002",
+     pages     = "106-113",
+     eprint    = "hep-ph/0201080",
+     SLACcitation  = "%%CITATION = HEP-PH 0201080;%%"
+}
+
+@Article{Gonzalez-Garcia:2003jq,
+     author    = "Gonzalez-Garcia, M. C. and Maltoni, M. and Schwetz, T.",
+     title     = "Status of the CPT violating interpretations of the LSND
+                  signal",
+     journal   = "Phys. Rev.",
+     volume    = "D68",
+     year      = "2003",
+     pages     = "053007",
+     eprint    = "hep-ph/0306226",
+     SLACcitation  = "%%CITATION = HEP-PH 0306226;%%"
+}
+
+@Article{Barger:2003xm,
+     author    = "Barger, V. and Marfatia, D. and Whisnant, K.",
+     title     = "LSND anomaly from CPT violation in four-neutrino models",
+     journal   = "Phys. Lett.",
+     volume    = "B576",
+     year      = "2003",
+     pages     = "303-308",
+     eprint    = "hep-ph/0308299",
+     SLACcitation  = "%%CITATION = HEP-PH 0308299;%%"
+}
+
+@Article{Kaplan:2004dq,
+     author    = "Kaplan, David B. and Nelson, Ann E. and Weiner, Neal",
+     title     = "Neutrino oscillations as a probe of dark energy",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "93",
+     year      = "2004",
+     pages     = "091801",
+     eprint    = "hep-ph/0401099",
+     SLACcitation  = "%%CITATION = HEP-PH 0401099;%%"
+}
+
+@Article{Barenboim:2004wu,
+     author    = "Barenboim, Gabriela and Mavromatos, Nick E.",
+     title     = "CPT violating decoherence and LSND: A possible window to
+                  Planck scale physics",
+     year      = "2004",
+     eprint    = "hep-ph/0404014",
+     SLACcitation  = "%%CITATION = HEP-PH 0404014;%%"
+}
+
+@Article{Kostelecky:2004hg,
+     author    = "Kostelecky, V. Alan and Mewes, Matthew",
+     title     = "Lorentz violation and short-baseline neutrino experiments",
+     year      = "2004",
+     eprint    = "hep-ph/0406255",
+     SLACcitation  = "%%CITATION = HEP-PH 0406255;%%"
+}
+
+@Article{Donini:2001xy,
+     author    = "Donini, A. and Meloni, D.",
+     title     = "The 2+2 and 3+1 four-family neutrino mixing at the neutrino
+                  factory",
+     journal   = "Eur. Phys. J.",
+     volume    = "C22",
+     year      = "2001",
+     pages     = "179-186",
+     eprint    = "hep-ph/0105089",
+     SLACcitation  = "%%CITATION = HEP-PH 0105089;%%"
+}
+
+@Article{Donini:2001xp,
+     author    = "Donini, A. and Lusignoli, M. and Meloni, D.",
+     title     = "Telling three from four neutrinos at the neutrino factory",
+     journal   = "Nucl. Phys.",
+     volume    = "B624",
+     year      = "2002",
+     pages     = "405-422",
+     eprint    = "hep-ph/0107231",
+     SLACcitation  = "%%CITATION = HEP-PH 0107231;%%"
+}
+
+@Article{Minakata:2002jv,
+     author    = "Minakata, H. and Sugiyama, H. and Yasuda, O. and Inoue, K.
+                  and Suekane, F.",
+     title     = "Reactor measurement of Theta(13) and its complementarity to
+                  long-baseline experiments",
+     journal   = "Phys. Rev.",
+     volume    = "D68",
+     year      = "2003",
+     pages     = "033017",
+     eprint    = "hep-ph/0211111",
+     SLACcitation  = "%%CITATION = HEP-PH 0211111;%%"
+}
+
+@Article{Bahcall:2004ut,
+     author    = "Bahcall, John N. and Gonzalez-Garcia, M. C. and Pena-Garay,
+                  Carlos",
+     title     = "Solar neutrinos before and after Neutrino 2004",
+     journal   = "JHEP",
+     volume    = "08",
+     year      = "2004",
+     pages     = "016",
+     eprint    = "hep-ph/0406294",
+     SLACcitation  = "%%CITATION = HEP-PH 0406294;%%"
+}
+
+@Article{Bandyopadhyay:2004da,
+     author    = "Bandyopadhyay, Abhijit and Choubey, Sandhya and Goswami,
+                  Srubabati and Petcov, S. T. and Roy, D. P.",
+     title     = "Update of the solar neutrino oscillation analysis with the
+                  766-Ty KamLAND spectrum",
+     year      = "2004",
+     eprint    = "hep-ph/0406328",
+     SLACcitation  = "%%CITATION = HEP-PH 0406328;%%"
+}
+
+@Article{Akhmedov:2004ny,
+     author    = "Akhmedov, Evgeny K. and Johansson, Robert and Lindner,
+                  Manfred and Ohlsson, Tommy and Schwetz, Thomas",
+     title     = "Series expansions for three-flavor neutrino oscillation
+                  probabilities in matter",
+     journal   = "JHEP",
+     volume    = "04",
+     year      = "2004",
+     pages     = "078",
+     eprint    = "hep-ph/0402175",
+     SLACcitation  = "%%CITATION = HEP-PH 0402175;%%"
+}
+
+@Article{Barger:2002xk,
+     author    = "Barger, V. and Marfatia, D. and Whisnant, K.",
+     title     = "How two neutrino superbeam experiments do better than one",
+     journal   = "Phys. Lett.",
+     volume    = "B560",
+     year      = "2003",
+     pages     = "75-86",
+     eprint    = "hep-ph/0210428",
+     SLACcitation  = "%%CITATION = HEP-PH 0210428;%%"
+}
+
+@Article{Huber:2002rs,
+     author    = "Huber, Patrick and Lindner, M. and Winter, W.",
+     title     = "Synergies between the first-generation JHF-SK and NuMI
+                  superbeam experiments",
+     journal   = "Nucl. Phys.",
+     volume    = "B654",
+     year      = "2003",
+     pages     = "3-29",
+     eprint    = "hep-ph/0211300",
+     SLACcitation  = "%%CITATION = HEP-PH 0211300;%%"
+}
+
+@Article{Freund:2001ui,
+     author    = "Freund, M. and Huber, Patrick and Lindner, M.",
+     title     = "Systematic exploration of the neutrino factory parameter
+                  space  including errors and correlations",
+     journal   = "Nucl. Phys.",
+     volume    = "B615",
+     year      = "2001",
+     pages     = "331-357",
+     eprint    = "hep-ph/0105071",
+     SLACcitation  = "%%CITATION = HEP-PH 0105071;%%"
+}
+
+@Article{Cervera:2000kp,
+     author    = "Cervera, A. and others",
+     title     = "Golden measurements at a neutrino factory",
+     journal   = "Nucl. Phys.",
+     volume    = "B579",
+     year      = "2000",
+     pages     = "17-55",
+     eprint    = "hep-ph/0002108",
+     SLACcitation  = "%%CITATION = HEP-PH 0002108;%%"
+}
+
+@Article{Freund:2001pn,
+     author    = "Freund, Martin",
+     title     = "Analytic approximations for three neutrino oscillation
+                  parameters and  probabilities in matter",
+     journal   = "Phys. Rev.",
+     volume    = "D64",
+     year      = "2001",
+     pages     = "053003",
+     eprint    = "hep-ph/0103300",
+     SLACcitation  = "%%CITATION = HEP-PH 0103300;%%"
+}
+%%% END REFERENCES PHENOMENOLOGY SECTION
+
+%%% REFERENCES THEORY SECTION:
+
+@Article{Fukugita:1986hr,
+     author    = "M. Fukugita and T. Yanagida",
+     title     = "BARYOGENESIS WITHOUT GRAND UNIFICATION",
+     journal   = "Phys. Lett.",
+     volume    = "174B",
+     year      = "1986",
+     pages     = "45",
+     SLACcitation  = "%%CITATION = PHLTA,174B,45;%%"
+}
+
+@Article{Mohapatra:1981yp,
+     author    = "Rabindra N. Mohapatra and Goran Senjanovi{\'c}",
+     title     = "NEUTRINO MASSES AND MIXINGS IN GAUGE MODELS WITH
+                  SPONTANEOUS PARITY VIOLATION",
+     journal   = "Phys. Rev.",
+     volume    = "D23",
+     year      = "1981",
+     pages     = "165",
+     SLACcitation  = "%%CITATION = PHRVA,D23,165;%%"
+}
+
+@Article{Lazarides:1981nt,
+     author    = "Lazarides, G. and Shafi, Q. and Wetterich, C.",
+     title     = "PROTON LIFETIME AND FERMION MASSES IN AN {SO(10)}
+                  MODEL",
+     journal   = "Nucl. Phys.",
+     volume    = "B181",
+     year      = "1981",
+     pages     = "287",
+     SLACcitation  = "%%CITATION = NUPHA,B181,287;%%"
+}
+
+@Article{Antusch:2004gf,
+     author    = "Antusch, Stefan and King, S. F.",
+     title     = "Sequential dominance",
+     year      = "2004",
+     eprint    = "hep-ph/0405272",
+     SLACcitation  = "%%CITATION = HEP-PH 0405272;%%"
+}
+
+@Article{Magg:1980ut,
+     author    = "Magg, M. and Wetterich, C.",
+     title     = "NEUTRINO MASS PROBLEM AND GAUGE HIERARCHY",
+     journal   = "Phys. Lett.",
+     volume    = "B94",
+     year      = "1980",
+     pages     = "61",
+     SLACcitation  = "%%CITATION = PHLTA,B94,61;%%"
+}
+
+@Article{Minkowski:1977sc,
+     author    = "Minkowski, Peter",
+     title     = "mu $\to$ e gamma AT A RATE OF ONE OUT OF 1-billion MUON
+                  DECAYS?",
+     journal   = "Phys. Lett.",
+     volume    = "B67",
+     year      = "1977",
+     pages     = "421",
+     SLACcitation  = "%%CITATION = PHLTA,B67,421;%%"
+}
+
+@Article{Branco:2002xf,
+     author    = "Branco, G. C. and others",
+     title     = "Minimal scenarios for leptogenesis and {CP} violation",
+     journal   = "Phys. Rev.",
+     volume    = "D67",
+     year      = "2003",
+     pages     = "073025",
+     eprint    = "hep-ph/0211001",
+     SLACcitation  = "%%CITATION = HEP-PH 0211001;%%"
+}
+
+@Article{deGouvea:2003xe,
+     author    = "de Gouvea, Andre and Murayama, Hitoshi",
+     title     = "Statistical test of anarchy",
+     journal   = "Phys. Lett.",
+     volume    = "B573",
+     year      = "2003",
+     pages     = "94-100",
+     eprint    = "hep-ph/0301050",
+     SLACcitation  = "%%CITATION = HEP-PH 0301050;%%"
+}
+
+@Article{Hall:1999sn,
+     author    = "Hall, Lawrence J. and Murayama, Hitoshi and Weiner, Neal",
+     title     = "Neutrino mass anarchy",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "84",
+     year      = "2000",
+     pages     = "2572-2575",
+     eprint    = "hep-ph/9911341",
+     SLACcitation  = "%%CITATION = HEP-PH 9911341;%%"
+}
+
+@Article{Altarelli:2002hx,
+     author    = "Altarelli, Guido and Feruglio, Ferruccio",
+     title     = "Theoretical models of neutrino masses and mixings",
+     year      = "2002",
+     eprint    = "hep-ph/0206077",
+     SLACcitation  = "%%CITATION = HEP-PH 0206077;%%"
+}
+
+@Article{King:2002nf,
+     author    = "King, S. F.",
+     title     = "Constructing the large mixing angle {MNS} matrix in see-saw
+                  models with  right-handed neutrino dominance",
+     journal   = "JHEP",
+     volume    = "09",
+     year      = "2002",
+     pages     = "011",
+     eprint    = "hep-ph/0204360",
+     SLACcitation  = "%%CITATION = HEP-PH 0204360;%%"
+}
+
+
+@Article{King:1999mb,
+     author    = "King, S. F.",
+     title     = "Large mixing angle {MSW} and atmospheric neutrinos from
+                  single  right-handed neutrino dominance and {U(1)} family
+                  symmetry",
+     journal   = "Nucl. Phys.",
+     volume    = "B576",
+     year      = "2000",
+     pages     = "85-105",
+     eprint    = "hep-ph/9912492",
+     SLACcitation  = "%%CITATION = HEP-PH 9912492;%%"
+}
+
+@Article{Antusch:2004re,
+     author    = "Antusch, Stefan and King, Steve F.",
+     title     = "Neutrino mixing from the charged lepton sector with
+                  sequential right-handed lepton dominance",
+     journal   = "Phys. Lett.",
+     volume    = "B591",
+     year      = "2004",
+     pages     = "104-112",
+     eprint    = "hep-ph/0403053",
+     SLACcitation  = "%%CITATION = HEP-PH 0403053;%%"
+}
+
+@Article{Antusch:2004xd,
+     author    = "Antusch, Stefan and King, Steve F.",
+     title     = "From hierarchical to partially degenerate neutrinos via
+                  type {II} upgrade of type {I} see-saw models",
+     year      = "2004",
+     eprint    = "hep-ph/0402121",
+     SLACcitation  = "%%CITATION = HEP-PH 0402121;%%"
+}
+
+@Article{Goh:2003hf,
+     author    = "Goh, H. S. and Mohapatra, R. N. and Ng, Siew-Phang",
+     title     = "Minimal {SUSY SO(10)} model and predictions for neutrino
+                  mixings and leptonic {CP} violation",
+     journal   = "Phys. Rev.",
+     volume    = "D68",
+     year      = "2003",
+     pages     = "115008",
+     eprint    = "hep-ph/0308197",
+     SLACcitation  = "%%CITATION = HEP-PH 0308197;%%"
+}
+
+@Article{Babu:1998wi,
+     author    = "Babu, K. S. and Pati, Jogesh C. and Wilczek, Frank",
+     title     = "Fermion masses, neutrino oscillations, and proton
+                  decay in the light of {SuperKamiokande}",
+     journal   = "Nucl. Phys.",
+     volume    = "B566",
+     year      = "2000",
+     pages     = "33-91",
+     eprint    = "hep-ph/9812538",
+     SLACcitation  = "%%CITATION = HEP-PH 9812538;%%"
+}
+
+@Article{Blazek:1999hz,
+     author    = "Blazek, T. and Raby, S. and Tobe, K.",
+     title     = "Neutrino oscillations in an {SO(10) SUSY GUT} with
+                  {U(2) x U(1)**n} family symmetry",
+     journal   = "Phys. Rev.",
+     volume    = "D62",
+     year      = "2000",
+     pages     = "055001",
+     eprint    = "hep-ph/9912482",
+     SLACcitation  = "%%CITATION = HEP-PH 9912482;%%"
+}
+
+@Article{Albright:2001uh,
+     author    = "Albright, Carl H. and Barr, Stephen M.",
+     title     = "Realization of the large mixing angle solar neutrino
+                  solution in an {SO(10)} supersymmetric grand unified
+                  model",
+     journal   = "Phys. Rev.",
+     volume    = "D64",
+     year      = "2001",
+     pages     = "073010",
+     eprint    = "hep-ph/0104294",
+     SLACcitation  = "%%CITATION = HEP-PH 0104294;%%"
+}
+
+@Article{Ross:2002fb,
+     author    = "Ross, G. G. and Velasco-Sevilla, L.",
+     title     = "Symmetries and fermion masses",
+     journal   = "Nucl. Phys.",
+     volume    = "B653",
+     year      = "2003",
+     pages     = "3-26",
+     eprint    = "hep-ph/0208218",
+     SLACcitation  = "%%CITATION = HEP-PH 0208218;%%"
+}
+
+@Article{Bando:2003ei,
+     author    = "Bando, Masako and Obara, Midori",
+     title     = "Neutrino mass matrix predicted from symmetric
+                  texture",
+     journal   = "Prog. Theor. Phys.",
+     volume    = "109",
+     year      = "2003",
+     pages     = "995-1015",
+     eprint    = "hep-ph/0302034",
+     SLACcitation  = "%%CITATION = HEP-PH 0302034;%%"
+}
+
+@Article{King:1998jw,
+     author    = "King, S. F.",
+     title     = "Atmospheric and solar neutrinos with a heavy singlet",
+     journal   = "Phys. Lett.",
+     volume    = "B439",
+     year      = "1998",
+     pages     = "350-356",
+     eprint    = "hep-ph/9806440",
+     SLACcitation  = "%%CITATION = HEP-PH 9806440;%%"
+}
+
+@Article{King:2003rf,
+     author    = "King, S. F. and Ross, G. G.",
+     title     = "Fermion masses and mixing angles from {SU(3)} family
+                  symmetry and unification",
+     journal   = "Phys. Lett.",
+     volume    = "B574",
+     year      = "2003",
+     pages     = "239-252",
+     eprint    = "hep-ph/0307190",
+     SLACcitation  = "%%CITATION = HEP-PH 0307190;%%"
+}
+
+@Article{Bando:2003wb,
+     author    = "Bando, Masako and Kaneko, Satoru and Obara, Midori and
+                  Tanimoto, Morimitu",
+     title     = "Can symmetric texture reproduce neutrino bi-large
+                  mixing",
+     journal   = "Phys. Lett.",
+     volume    = "B580",
+     year      = "2004",
+     pages     = "229-235",
+     eprint    = "hep-ph/0309310",
+     SLACcitation  = "%%CITATION = HEP-PH 0309310;%%"
+}
+
+@Article{Mohapatra:2003tw,
+     author    = "Mohapatra, R. N. and Parida, M. K. and Rajasekaran,
+G.",
+     title     = "High scale mixing unification and large neutrino
+                  mixing angles",
+     journal   = "Phys. Rev.",
+     volume    = "D69",
+     year      = "2004",
+     pages     = "053007",
+     eprint    = "hep-ph/0301234",
+     SLACcitation  = "%%CITATION = HEP-PH 0301234;%%"
+}
+
+@Article{Antusch:2003kp,
+     author    = "Antusch, Stefan and Kersten, Joern and Lindner,
+                  Manfred and Ratz, Michael",
+     title     = "Running neutrino masses, mixings and {CP} phases:
+                  {A}nalytical results and  phenomenological consequences",
+     journal   = "Nucl. Phys.",
+     volume    = "B674",
+     year      = "2003",
+     pages     = "401-433",
+     eprint    = "hep-ph/0305273",
+     SLACcitation  = "%%CITATION = HEP-PH 0305273;%%"
+}
+
+@Article{Casas:1999tp,
+     author    = "Casas, J. A. and Espinosa, J. R. and Ibarra, A. and
+                  Navarro, I.",
+     title     = "Naturalness of nearly degenerate neutrinos",
+     journal   = "Nucl. Phys.",
+     volume    = "B556",
+     year      = "1999",
+     pages     = "3-22",
+     archive   = "http://arXiv.org/abs",
+     eprint    = "hep-ph/9904395",
+     SLACcitation  = "%%CITATION = HEP-PH 9904395;%%"
+}
+
+@Article{Casas:1999ac,
+     author    = "Casas, J. A. and Espinosa, J. R. and Ibarra, A. and
+                  Navarro, I.",
+     title     = "Nearly degenerate neutrinos, supersymmetry and
+                  radiative corrections",
+     journal   = "Nucl. Phys.",
+     volume    = "B569",
+     year      = "2000",
+     pages     = "82-106",
+     archive   = "http://arXiv.org/abs",
+     eprint    = "hep-ph/9905381",
+     SLACcitation  = "%%CITATION = HEP-PH 9905381;%%"
+}
+
+@Article{King:2000hk,
+     author    = "King, S. F. and Singh, N. Nimai",
+     title     = "Renormalisation group analysis of single right-handed
+                  neutrino  dominance",
+     journal   = "Nucl. Phys.",
+     volume    = "B591",
+     year      = "2000",
+     pages     = "3-25",
+     archive   = "http://arXiv.org/abs",
+     eprint    = "hep-ph/0006229",
+     SLACcitation  = "%%CITATION = HEP-PH 0006229;%%"
+}
+
+@Article{Antusch:2002rr,
+	 author    = "Antusch, Stefan and Kersten, Joern and Lindner,
+                  Manfred and Ratz, Michael",
+     title     = "Neutrino mass matrix running for non-degenerate
+                  see-saw scales",
+     journal   = "Phys. Lett.",
+     volume    = "B538",
+     year      = "2002",
+     pages     = "87-95",
+     archive   = "http://arXiv.org/abs",
+     eprint    = "hep-ph/0203233",
+     SLACcitation  = "%%CITATION = HEP-PH 0203233;%%"
+}
+
+@Article{Antusch:2002hy,
+     author    = "Antusch, Stefan and Kersten, Joern and Lindner,
+                  Manfred and Ratz, Michael",
+     title     = "The {LMA} Solution from Bimaximal Lepton
+                  Mixing at the {GUT} Scale by
+                  Renormalization Group Running",
+     journal   = "Phys. Lett.",
+     volume    = "B544",
+     year      = "2002",
+     pages     = "1-10",
+     archive   = "http://arXiv.org/abs",
+     eprint    = "hep-ph/0206078",
+     SLACcitation  = "%%CITATION = HEP-PH 0206078;%%"
+}
+
+@Article{Antusch:2002fr,
+     author    = "Antusch, Stefan and Ratz, Michael",
+     title     = "Radiative generation of the {LMA} solution from small
+                  solar neutrino  mixing at the {GUT} scale",
+     journal   = "JHEP",
+     volume    = "11",
+     year      = "2002",
+     pages     = "010",
+     eprint    = "hep-ph/0208136",
+     SLACcitation  = "%%CITATION = HEP-PH 0208136;%%"
+}
+
+@Article{Vissani:2003aj,
+     author    = "Vissani, Francesco and Narayan, Mohan and Berezinsky,
+                  Veniamin",
+     title     = "U(e3) from physics above the {GUT} scale",
+     journal   = "Phys. Lett.",
+     volume    = "B571",
+     year      = "2003",
+     pages     = "209-216",
+     eprint    = "hep-ph/0305233",
+     SLACcitation  = "%%CITATION = HEP-PH 0305233;%%"
+}
+
+@Article{Grimus:2001ex,
+     author    = "Grimus, Walter and Lavoura, Luis",
+     title     = "Softly broken lepton numbers and maximal neutrino
+                  mixing",
+     journal   = "JHEP",
+     volume    = "07",
+     year      = "2001",
+     pages     = "045",
+     eprint    = "hep-ph/0105212",
+     SLACcitation  = "%%CITATION = HEP-PH 0105212;%%"
+}
+
+@Article{Grimus:2003kq,
+     author    = "Grimus, Walter and Lavoura, Luis",
+     title     = "A discrete symmetry group for maximal atmospheric
+                  neutrino mixing",
+     journal   = "Phys. Lett.",
+     volume    = "B572",
+     year      = "2003",
+     pages     = "189-195",
+     eprint    = "hep-ph/0305046",
+     SLACcitation  = "%%CITATION = HEP-PH 0305046;%%"
+}
+
+@Article{Babu:2002dz,
+     author    = "Babu, K. S. and Ma, Ernest and Valle, J. W. F.",
+     title     = "Underlying {A(4)} symmetry for the neutrino mass
+                  matrix and the quark  mixing matrix",
+     journal   = "Phys. Lett.",
+     volume    = "B552",
+     year      = "2003",
+     pages     = "207-213",
+     eprint    = "hep-ph/0206292",
+     SLACcitation  = "%%CITATION = HEP-PH 0206292;%%"
+}
+
+@Article{Ohlsson:2002rb,
+     author    = "Ohlsson, Tommy and Seidl, Gerhart",
+     title     = "A flavor symmetry model for bilarge leptonic mixing
+                  and the lepton  masses",
+     journal   = "Nucl. Phys.",
+     volume    = "B643",
+     year      = "2002",
+     pages     = "247-279",
+     eprint    = "hep-ph/0206087",
+     SLACcitation  = "%%CITATION = HEP-PH 0206087;%%"
+}
+
+@Article{Ma:2004yx,
+     author    = "Ma, Ernest",
+     title     = "Lepton family symmetry and neutrino mass matrix",
+     journal   = "Mod. Phys. Lett.",
+     volume    = "A19",
+     year      = "2004",
+     pages     = "577-582",
+     eprint    = "hep-ph/0401025",
+     SLACcitation  = "%%CITATION = HEP-PH 0401025;%%"
+}
+
+@Article{Maekawa:2001uk,
+     author    = "Maekawa, Nobuhiro",
+     title     = "Neutrino masses, anomalous {U(1)} gauge symmetry and
+                  doublet-triplet  splitting",
+     journal   = "Prog. Theor. Phys.",
+     volume    = "106",
+     year      = "2001",
+     pages     = "401-418",
+     eprint    = "hep-ph/0104200",
+     SLACcitation  = "%%CITATION = HEP-PH 0104200;%%"
+}
+
+@Article{Frampton:2004ud,
+     author    = "Frampton, P. H. and Petcov, S. T. and Rodejohann, W.",
+     title     = "On deviations from bimaximal neutrino mixing",
+     journal   = "Nucl. Phys.",
+     volume    = "B687",
+     year      = "2004",
+     pages     = "31-54",
+     eprint    = "hep-ph/0401206",
+     SLACcitation  = "%%CITATION = HEP-PH 0401206;%%"
+}
+
+@Article{Rodejohann:2004cg,
+     author    = "Rodejohann, W.",
+     title     = "Type {II} See-Saw Mechanism, Deviations from Bimaximal
+                  Neutrino Mixing and Leptogenesis",
+     year      = "2004",
+     eprint    = "hep-ph/0403236",
+     SLACcitation  = "%%CITATION = HEP-PH 0403236;%%"
+}
+
+@Article{Ross:2004qn,
+     author    = "Ross, Graham G. and Velasco-Sevilla, Liliana and
+                  Vives, Oscar",
+     title     = "Spontaneous {CP} violation and non-{A}belian family
+                  symmetry in {SUSY}",
+     journal   = "Nucl. Phys.",
+     volume    = "B692",
+     year      = "2004",
+     pages     = "50-82",
+     eprint    = "hep-ph/0401064",
+     SLACcitation  = "%%CITATION = HEP-PH 0401064;%%"
+}
+
+@Article{Pati:2002pe,
+     author    = "Pati, Jogesh C.",
+     title     = "Leptogenesis within a predictive {G(223)/SO(10)}
+                  framework",
+     year      = "2002",
+     eprint    = "hep-ph/0209160",
+     SLACcitation  = "%%CITATION = HEP-PH 0209160;%%"
+}
+
+@Article{Kubo:2003pd,
+     author    = "Kubo, Jisuke",
+     title     = "Majorana phase in minimal {S(3)} invariant extension
+                  of the standard model",
+     journal   = "Phys. Lett.",
+     volume    = "B578",
+     year      = "2004",
+     pages     = "156-164",
+     eprint    = "hep-ph/0309167",
+     SLACcitation  = "%%CITATION = HEP-PH 0309167;%%"
+}
+
+@Article{Xing:2004xu,
+     author    = "Xing, Zhi-zhong and Zhou, Shun",
+     title     = "Isomeric Lepton Mass Matrices and Bi-large Neutrino
+                  Mixing",
+     year      = "2004",
+     eprint    = "hep-ph/0403261",
+     SLACcitation  = "%%CITATION = HEP-PH 0403261;%%"
+}
+
+@Article{Shafi:2004jy,
+     author    = "Shafi, Qaisar and Tavartkiladze, Zurab",
+     title     = "Suppressed theta(13) in a democratic approach",
+     journal   = "Phys. Lett.",
+     volume    = "B594",
+     year      = "2004",
+     pages     = "177-184",
+     eprint    = "hep-ph/0401235",
+     SLACcitation  = "%%CITATION = HEP-PH 0401235;%%"
+}
+
+@Article{Buchmuller:2001dc,
+     author    = "Buchm{\"u}ller, W. and Wyler, D.",
+     title     = "{CP} violation, neutrino mixing and the baryon
+                  asymmetry",
+     journal   = "Phys. Lett.",
+     volume    = "B521",
+     year      = "2001",
+     pages     = "291-298",
+     eprint    = "hep-ph/0108216",
+     SLACcitation  = "%%CITATION = HEP-PH 0108216;%%"
+}
+
+@Article{Appelquist:2002me,
+     author    = "Appelquist, Thomas and Shrock, Robert",
+     title     = "Neutrino masses in theories with dynamical electroweak
+                  symmetry  breaking",
+     journal   = "Phys. Lett.",
+     volume    = "B548",
+     year      = "2002",
+     pages     = "204-214",
+     eprint    = "hep-ph/0204141",
+     SLACcitation  = "%%CITATION = HEP-PH 0204141;%%"
+}
+
+@Article{Casas:2003kh,
+     author    = "Casas, J. A. and Espinosa, J. R. and Navarro, I.",
+     title     = "Large mixing angles for neutrinos from infrared fixed
+                  points",
+     journal   = "JHEP",
+     volume    = "09",
+     year      = "2003",
+     pages     = "048",
+     eprint    = "hep-ph/0306243",
+     SLACcitation  = "%%CITATION = HEP-PH 0306243;%%"
+}
+
+@Article{Asaka:2003iy,
+     author    = "Asaka, T. and Buchm{\"u}ller, W. and Covi, L.",
+     title     = "Quarks and leptons between branes and bulk",
+     journal   = "Phys. Lett.",
+     volume    = "B563",
+     year      = "2003",
+     pages     = "209-216",
+     eprint    = "hep-ph/0304142",
+     SLACcitation  = "%%CITATION = HEP-PH 0304142;%%"
+}
+
+@Article{Chen:2002pa,
+     author    = "Chen, Mu-Chun and Mahanthappa, K. T.",
+     title     = "Symmetric textures in {SO(10)} and {LMA} solution for
+                  solar neutrinos",
+     journal   = "Phys. Rev.",
+     volume    = "D68",
+     year      = "2003",
+     pages     = "017301",
+     eprint    = "hep-ph/0212375",
+     SLACcitation  = "%%CITATION = HEP-PH 0212375;%%"
+}
+
+@Article{Shindou:2004tv,
+     author    = "Shindou, Tetsuo and Takasugi, Eiichi",
+     title     = "The role of {Majorana CP} phases in the bi-maximal
+                  mixing scheme: {H}ierarchical {D}irac mass case",
+     year      = "2004",
+     eprint    = "hep-ph/0402106",
+     SLACcitation  = "%%CITATION = HEP-PH 0402106;%%"
+}
+
+@Article{Kitano:2000xk,
+     author    = "Kitano, Ryuichiro and Mimura, Yukihiro",
+     title     = "Large angle {MSW} solution in grand unified theories
+                  with {SU(3) x U(1)} horizontal symmetry",
+     journal   = "Phys. Rev.",
+     volume    = "D63",
+     year      = "2001",
+     pages     = "016008",
+     eprint    = "hep-ph/0008269",
+     SLACcitation  = "%%CITATION = HEP-PH 0008269;%%"
+}
+
+@Article{deGouvea:2004gr,
+     author    = "de Gouv{\^e}a, Andre",
+     title     = "Deviation of atmospheric mixing from maximal and
+                  structure in the leptonic flavor sector",
+     journal   = "Phys. Rev.",
+     volume    = "D69",
+     year      = "2004",
+     pages     = "093007",
+     eprint    = "hep-ph/0401220",
+     SLACcitation  = "%%CITATION = HEP-PH 0401220;%%"
+}
+
+@Article{Dorsner:2004qb,
+     author    = "Dorsner, I. and Smirnov, A. Yu.",
+     title     = "Neutrino masses and mixing: {S}ingular mass matrices and
+                  quark lepton symmetry",
+     journal   = "Nucl. Phys.",
+     volume    = "B698",
+     year      = "2004",
+     pages     = "386-406",
+     eprint    = "hep-ph/0403305",
+     SLACcitation  = "%%CITATION = HEP-PH 0403305;%%"
+}
+
+@Article{Haba:2000be,
+     author    = "Haba, Naoyuki and Murayama, Hitoshi",
+     title     = "Anarchy and hierarchy",
+     journal   = "Phys. Rev.",
+     volume    = "D63",
+     year      = "2001",
+     pages     = "053010",
+     eprint    = "hep-ph/0009174",
+     SLACcitation  = "%%CITATION = HEP-PH 0009174;%%"
+}
+
+@Article{Harrison:2003aw,
+     author    = "Harrison, P. F. and Scott, W. G.",
+     title     = "Permutation symmetry, tri-bimaximal neutrino mixing
+                  and the {S3} group  characters",
+     journal   = "Phys. Lett.",
+     volume    = "B557",
+     year      = "2003",
+     pages     = "76",
+     eprint    = "hep-ph/0302025",
+     SLACcitation  = "%%CITATION = HEP-PH 0302025;%%"
+}
+
+@Article{Peres:2003wd,
+     author    = "Peres, O. L. G. and Smirnov, A. Yu.",
+     title     = "Atmospheric neutrinos: {LMA} oscillations, {U(e3)}
+                  induced interference and {CP}-violation",
+     journal   = "Nucl. Phys.",
+     volume    = "B680",
+     year      = "2004",
+     pages     = "479-509",
+     eprint    = "hep-ph/0309312",
+     SLACcitation  = "%%CITATION = HEP-PH 0309312;%%"
+}
+
+@Article{Raidal:2004iw,
+     author    = "Raidal, Martti",
+     title     = "Prediction {T}heta(c) + {T}heta(sol) = pi/4 from flavor
+                  physics: {A} new evidence for grand unification?",
+     year      = "2004",
+     eprint    = "hep-ph/0404046",
+     SLACcitation  = "%%CITATION = HEP-PH 0404046;%%"
+}
+
+@Article{Zhou:2004wz,
+     author    = "Zhou, Shun and Xing, Zhi-zhong",
+     title     = "A Systematic Study of Neutrino Mixing and {CP}
+				  Violation from Lepton Mass Matrices with Six Texture
+                  Zeros",
+     year      = "2004",
+     eprint    = "hep-ph/0404188",
+     SLACcitation  = "%%CITATION = HEP-PH 0404188;%%"
+}
+
+@Article{Fukuda:1998mi,
+  author =	 "Fukuda, Y. and others",
+  collaboration ="Super-Kamiokande",
+  title =	 "Evidence for oscillation of atmospheric neutrinos",
+  journal =	 "Phys. Rev. Lett.",
+  volume =	 "81",
+  year =	 "1998",
+  pages =	 "1562-1567",
+  eprint =	 "hep-ex/9807003",
+  SLACcitation = "%%CITATION = HEP-EX 9807003;%%",
+}
+
+@Inproceedings{Yanagida:1980,
+     author    = "Yanagida, T.",
+     editor    = "Sawada, O. and Sugamoto, A.",
+     booktitle = "Proceedings of the Workshop on the Unified Theory and
+                  the Baryon Number in the Universe",
+     organization = "KEK, Tsukuba, Japan",
+     pages     = "95",
+     year      = "1979"
+}
+
+@Inproceedings{Glashow:1979vf,
+     author    = "Glashow, S. L.",
+     title     = "THE FUTURE OF ELEMENTARY PARTICLE PHYSICS",
+     editor    = "M. L{\'e}vy and J.-L. Basdevant and D. Speiser and
+                  J. Weyers and R. Gastmans and M. Jacob",
+     booktitle = "Proceedings of the 1979 Carg{\`e}se Summer Institute
+on
+                  Quarks and Leptons",
+     pages     = "687-713",
+     publisher = "Plenum Press, New York",
+     year      = "1980"
+}
+
+@Article{Mohapatra:1980ia,
+     author    = "Mohapatra, Rabindra N. and Senjanovi{\'c}, Goran",
+     title     = "NEUTRINO MASS AND SPONTANEOUS PARITY VIOLATION",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "44",
+     year      = "1980",
+     pages     = "912",
+     SLACcitation  = "%%CITATION = PRLTA,44,912;%%"
+}
+
+@Inproceedings{Gell-Mann:1980vs,
+     author    = "Gell-Mann, Murray and Ramond, Pierre and Slansky,
+                  Richard",
+     title     = "COMPLEX SPINORS AND UNIFIED THEORIES",
+     editor    = "van Nieuwenhuizen, P. and Freedman, D. Z.",
+     booktitle = "Supergravity",
+     pages     = "315",
+     publisher = "North Holland, Amsterdam",
+     year      = "1979"
+}
+
+@Article{Arkani-Hamed:2000bq,
+     author    = "Arkani-Hamed, Nima and Hall, Lawrence J. and Murayama,
+                  Hitoshi and Smith, David R. and Weiner, Neal",
+     title     = "Small neutrino masses from supersymmetry breaking",
+     journal   = "Phys. Rev.",
+     volume    = "D64",
+     year      = "2001",
+     pages     = "115011",
+     eprint    = "hep-ph/0006312",
+     SLACcitation  = "%%CITATION = HEP-PH 0006312;%%"
+}
+
+@Article{Borzumati:2000mc,
+     author    = "Borzumati, Francesca and Nomura, Yasunori",
+     title     = "Low-scale see-saw mechanisms for light neutrinos",
+     journal   = "Phys. Rev.",
+     volume    = "D64",
+     year      = "2001",
+     pages     = "053005",
+     eprint    = "hep-ph/0007018",
+     SLACcitation  = "%%CITATION = HEP-PH 0007018;%%"
+}
+
+@Article{Arnowitt:2003kc,
+     author    = "Arnowitt, R. and Dutta, Bhaskar and Hu, B.",
+     title     = "Yukawa textures, neutrino masses and {H}o{\v r}ava-{W}itten
+                  {M}-theory",
+     journal   = "Nucl. Phys.",
+     volume    = "B682",
+     year      = "2004",
+     pages     = "347-366",
+     eprint    = "hep-th/0309033",
+     SLACcitation  = "%%CITATION = HEP-TH 0309033;%%"
+}
+
+@Article{Abel:2004tt,
+     author    = "Abel, Steven and Dedes, Athanasios and Tamvakis,
+Kyriakos",
+     title     = "Naturally small {Dirac} neutrino masses in
+supergravity",
+     year      = "2004",
+     eprint    = "hep-ph/0402287",
+     SLACcitation  = "%%CITATION = HEP-PH 0402287;%%"
+}
+
+@Article{Kitano:2002px,
+     author    = "Kitano, Ryuichiro",
+     title     = "Small {D}irac neutrino masses in supersymmetric grand
+                  unified theories",
+     journal   = "Phys. Lett.",
+     volume    = "B539",
+     year      = "2002",
+     pages     = "102-106",
+     eprint    = "hep-ph/0204164",
+     SLACcitation  = "%%CITATION = HEP-PH 0204164;%%"
+}
+
+@Article{Barr:2000ka,
+     author    = "Barr, Stephen M. and Dorsner, Ilja",
+     title     = "A general classification of three neutrino models and
+                  {U(e3)}",
+     journal   = "Nucl. Phys.",
+     volume    = "B585",
+     year      = "2000",
+     pages     = "79-104",
+     eprint    = "hep-ph/0003058",
+     SLACcitation  = "%%CITATION = HEP-PH 0003058;%%"
+}
+
+@Article{Altarelli:2004za,
+     author    = "Altarelli, Guido and Feruglio, Ferruccio",
+     title     = "Models of neutrino masses and mixings",
+     year      = "2004",
+     eprint    = "hep-ph/0405048",
+     SLACcitation  = "%%CITATION = HEP-PH 0405048;%%"
+}
+
+@Article{Honda:2003pg,
+     author    = "Honda, Mizue and Kaneko, Satoru and Tanimoto,
+                  Morimitsu",
+     title     = "Prediction of {$U_{e3}$} and its stability in neutrino
+                  mass matrix with two zeros",
+     journal   = "JHEP",
+     volume    = "09",
+     year      = "2003",
+     pages     = "028",
+     eprint    = "hep-ph/0303227",
+     SLACcitation  = "%%CITATION = HEP-PH 0303227;%%"
+}
+
+@Article{Frampton:2002qc,
+     author    = "Frampton, P. H. and Glashow, S. L. and Yanagida, T.",
+     title     = "Cosmological sign of neutrino {CP} violation",
+     journal   = "Phys. Lett.",
+     volume    = "B548",
+     year      = "2002",
+     pages     = "119-121",
+     eprint    = "hep-ph/0208157",
+     SLACcitation  = "%%CITATION = HEP-PH 0208157;%%"
+}
+
+@Article{Mei:2003gn,
+     author    = "Mei, Jian-wei and Xing, Zhi-zhong",
+     title     = "Radiative corrections to neutrino mixing and {CP}
+                  violation in the minimal seesaw model with leptogenesis",
+     journal   = "Phys. Rev.",
+     volume    = "D69",
+     year      = "2004",
+     pages     = "073003",
+     eprint    = "hep-ph/0312167",
+     SLACcitation  = "%%CITATION = HEP-PH 0312167;%%"
+}
+
+@Article{Petcov:1982ya,
+     author    = "Petcov, S. T.",
+     title     = "ON PSEUDODIRAC NEUTRINOS, NEUTRINO OSCILLATIONS AND
+                  NEUTRINOLESS DOUBLE BETA DECAY",
+     journal   = "Phys. Lett.",
+     volume    = "B110",
+     year      = "1982",
+     pages     = "245-249",
+     SLACcitation  = "%%CITATION = PHLTA,B110,245;%%"
+}
+
+@Article{Leung:1983ti,
+     author    = "Leung, C. N. and Petcov, S. T.",
+     title     = "A COMMENT ON THE COEXISTENCE OF {D}IRAC AND {M}AJORANA
+                  MASSIVE NEUTRINOS",
+     journal   = "Phys. Lett.",
+     volume    = "B125",
+     year      = "1983",
+     pages     = "461",
+     SLACcitation  = "%%CITATION = PHLTA,B125,461;%%"
+}
+
+@Article{Branco:2001pq,
+     author    = "Branco, Gustavo C. and Morozumi, Takuya and Nobre, B.
+M.
+                  and Rebelo, M. N.",
+     title     = "A bridge between {CP} violation at low energies and
+                  leptogenesis",
+     journal   = "Nucl. Phys.",
+     volume    = "B617",
+     year      = "2001",
+     pages     = "475-492",
+     eprint    = "hep-ph/0107164",
+     SLACcitation  = "%%CITATION = HEP-PH 0107164;%%"
+}
+
+@Article{Pascoli:2003uh,
+     author    = "Pascoli, S. and Petcov, S. T. and Rodejohann, W.",
+     title     = "On the connection of leptogenesis with low energy {CP}
+                  violation and {LFV} charged lepton decays",
+     journal   = "Phys. Rev.",
+     volume    = "D68",
+     year      = "2003",
+     pages     = "093007",
+     eprint    = "hep-ph/0302054",
+     SLACcitation  = "%%CITATION = HEP-PH 0302054;%%"
+}
+
+@Article{King:2002qh,
+     author    = "King, S. F.",
+     title     = "Leptogenesis - {MNS} link in unified models with
+natural
+                  neutrino mass hierarchy",
+     journal   = "Phys. Rev.",
+     volume    = "D67",
+     year      = "2003",
+     pages     = "113010",
+     eprint    = "hep-ph/0211228",
+     SLACcitation  = "%%CITATION = HEP-PH 0211228;%%"
+}
+
+
+@Article{Antusch:2004yx,
+     author    = "Antusch, Stefan and Huber, Patrick and Kersten, Joern and
+                  Schwetz, Thomas and Winter, Walter",
+     title     = "Is there maximal mixing in the lepton sector?",
+     journal   = "Phys. Rev.",
+     volume    = "D70",
+     year      = "2004",
+     pages     = "097302",
+     eprint    = "hep-ph/0404268",
+     SLACcitation  = "%%CITATION = HEP-PH 0404268;%%"
+}
+
+@Article{Mei:2004rn,
+     author    = "Mei, Jian-wei and Xing, Zhi-zhong",
+     title     = "Radiative generation of {$\theta_{13}$} with the
+                  seesaw threshold effect",
+     year      = "2004",
+     eprint    = "hep-ph/0404081",
+     SLACcitation  = "%%CITATION = HEP-PH 0404081;%%"
+}
+
+@Article{Casas:1999tg,
+     author    = "Casas, J. A. and Espinosa, J. R. and Ibarra, A. and
+                  Navarro, I.",
+     title     = "General {RG} Equations for Physical Neutrino
+                  Parameters and their Phenomenological Implications",
+     journal   = "Nucl. Phys.",
+     volume    = "B573",
+     year      = "2000",
+     pages     = "652",
+     eprint    = "hep-ph/9910420",
+     SLACcitation  = "%%CITATION = HEP-PH 9910420;%%"
+}
+
+@Article{Aizawa:2004qf,
+     author    = "Aizawa, Ichiro and Ishiguro, Motoyasu and Kitabayashi,
+                  Teruyuki and Yasue, Masaki",
+     title     = "Bilarge neutrino mixing and mu - tau permutation
+                  symmetry for two-loop radiative mechanism",
+     journal   = "Phys. Rev.",
+     volume    = "D70",
+     year      = "2004",
+     pages     = "015011",
+     eprint    = "hep-ph/0405201",
+     SLACcitation  = "%%CITATION = HEP-PH 0405201;%%"
+}
+
+@Article{Chen:2004rr,
+     author    = "Chen, Shao-Long and Frigerio, Michele and Ma, Ernest",
+     title     = "Large neutrino mixing and normal mass hierarchy: {A}
+                  discrete understanding",
+     year      = "2004",
+     eprint    = "hep-ph/0404084",
+     SLACcitation  = "%%CITATION = HEP-PH 0404084;%%"
+}
+
+@Article{Grimus:2004rj,
+     author    = "Grimus, Walter and Joshipura, Anjan S. and Kaneko,
+Satoru
+                  and Lavoura, Luis and Tanimoto, Morimitsu",
+     title     = "Lepton mixing angle theta(13) = 0 with a horizontal
+                  symmetry {D(4)}",
+     journal   = "JHEP",
+     volume    = "07",
+     year      = "2004",
+     pages     = "078",
+     eprint    = "hep-ph/0407112",
+     SLACcitation  = "%%CITATION = HEP-PH 0407112;%%"
+}
+
+@Article{Harrison:2004he,
+     author    = "Harrison, P. F. and Scott, W. G.",
+     title     = "The simplest neutrino mass matrix",
+     journal   = "Phys. Lett.",
+     volume    = "B594",
+     year      = "2004",
+     pages     = "324-332",
+     eprint    = "hep-ph/0403278",
+     SLACcitation  = "%%CITATION = HEP-PH 0403278;%%"
+}
+
+@Article{Mohapatra:2004mf,
+     author    = "Mohapatra, R. N.",
+     title     = "$\theta_{13}$ as a probe of $\mu\leftrightarrow\tau$
+                  symmetry for leptons",
+     journal   = "JHEP",
+     volume    = "10",
+     year      = "2004",
+     pages     = "027",
+     eprint    = "hep-ph/0408187",
+     SLACcitation  = "%%CITATION = HEP-PH 0408187;%%"
+}
+
+@Article{Rodejohann:2004qh,
+     author    = "Rodejohann, Werner and Xing, Zhi-zhong",
+     title     = "Flavor democracy and type-{II} seesaw realization of
+bilarge
+                  neutrino mixing",
+     year      = "2004",
+     eprint    = "hep-ph/0408195",
+     SLACcitation  = "%%CITATION = HEP-PH 0408195;%%"
+}
+
+@Article{Barbieri:2003qd,
+     author    = "Barbieri, Riccardo and Hambye, Thomas and Romanino,
+Andrea
+                  ",
+     title     = "Natural relations among physical observables in the
+                  neutrino mass  matrix",
+     journal   = "JHEP",
+     volume    = "03",
+     year      = "2003",
+     pages     = "017",
+     eprint    = "hep-ph/0302118",
+     SLACcitation  = "%%CITATION = HEP-PH 0302118;%%"
+}
+
+@Article{Chen:2003zv,
+     author    = "Chen, Mu-Chun and Mahanthappa, K. T.",
+     title     = "Fermion masses and mixing and {CP}-violation in {SO(10)}
+models
+                  with family  symmetries",
+     journal   = "Int. J. Mod. Phys.",
+     volume    = "A18",
+     year      = "2003",
+     pages     = "5819-5888",
+     eprint    = "hep-ph/0305088",
+     SLACcitation  = "%%CITATION = HEP-PH 0305088;%%"
+}
+
+@Article{Raby:2003ay,
+     author    = "Raby, Stuart",
+     title     = "A natural framework for bi-large neutrino mixing",
+     journal   = "Phys. Lett.",
+     volume    = "B561",
+     year      = "2003",
+     pages     = "119-124",
+     eprint    = "hep-ph/0302027",
+     SLACcitation  = "%%CITATION = HEP-PH 0302027;%%"
+}
+
+@Article{Lebed:2003sj,
+     author    = "Lebed, Richard F. and Martin, Daniel R.",
+     title     = "Constraints on natural {MNS} parameters from {$|U(e3)|$}",
+     journal   = "Phys. Rev.",
+     volume    = "D70",
+     year      = "2004",
+     pages     = "013004",
+     eprint    = "hep-ph/0312219",
+     SLACcitation  = "%%CITATION = HEP-PH 0312219;%%"
+}
+
+@Article{Ibarra:2003xp,
+     author    = "Ibarra, A. and Ross, Graham G.",
+     title     = "Neutrino properties from {Y}ukawa structure",
+     journal   = "Phys. Lett.",
+     volume    = "B575",
+     year      = "2003",
+     pages     = "279-289",
+     eprint    = "hep-ph/0307051",
+     SLACcitation  = "%%CITATION = HEP-PH 0307051;%%"
+}
+
+@Article{Frampton:2004vw,
+     author    = "Frampton, P. H. and Mohapatra, R. N.",
+     title     = "Possible gauge theoretic origin for quark-lepton
+                  complementarity",
+     year      = "2004",
+     eprint    = "hep-ph/0407139",
+     SLACcitation  = "%%CITATION = HEP-PH 0407139;%%"
+}
+
+@Article{Chankowski:1999xc,
+     author    = "Chankowski, Piotr H. and Krolikowski, Wojciech and
+                  Pokorski, Stefan",
+     title     = "Fixed points in the evolution of neutrino mixings",
+     journal   = "Phys. Lett.",
+     volume    = "B473",
+     year      = "2000",
+     pages     = "109",
+     eprint    = "hep-ph/9910231",
+     SLACcitation  = "%%CITATION = HEP-PH 9910231;%%"
+}
+
+@Article{Joshipura:2004ws,
+     author    = "Joshipura, Anjan S.",
+     title     = "Summary of Model Predictions for {$U_{e3}$}",
+     year      = "2004",
+     eprint    = "hep-ph/0411154",
+     SLACcitation  = "%%CITATION = HEP-PH 0411154;%%"
+}
+
+%%% END REFERENCES THEORY SECTION
+
+@Article{Sorel:2003hf,
+     author    = "Sorel, Michel and Conrad, Janet M. and Shaevitz, Michael",
+     title     = "A combined analysis of short-baseline neutrino experiments
+                  in the (3+1)  and (3+2) sterile neutrino oscillation
+                  hypotheses",
+     year      = "2003",
+     eprint    = "hep-ph/0305255",
+     SLACcitation  = "%%CITATION = HEP-PH 0305255;%%"
+}
+
+@Unpublished{cp_3_2,
+     author = "Barger, V. and Sorel, M. and Whisnant, K.",
+     note = "In preparation",
+}
+
+@Article{Barenboim:2002ah,
+     author    = "Barenboim, G. and Borissov, L. and Lykken, J.",
+     title     = "CPT violating neutrinos in the light of KamLAND. ((U))",
+     year      = "2002",
+     eprint    = "hep-ph/0212116",
+     SLACcitation  = "%%CITATION = HEP-PH 0212116;%%"
+}
+
+@Article{VanDalen:2003fg,
+     author    = "VanDalen, Gordon J.",
+     title     = "Oscillations and cross sections at the SNS with a large
+                  Cerenkov detector",
+     year      = "2003",
+     eprint    = "nucl-ex/0309014",
+     SLACcitation  = "%%CITATION = NUCL-EX 0309014;%%"
+}
+
+@Unpublished{sns,
+     note = "The Spallation Neutron Source (SNS) is an accelerator-based source being built in Oak Ridge, Tennessee, by the U.S.\ DOE. 
+Also see {\bf http://www.phy.ornl.gov/workshops/sns2/}for details on the neutrino source.", 
+     URL = "http://sns.gov/"
+}
+
+@Article{Brice:2004kn,
+     author    = "Brice, S. J. and Geer, S. and Paul, K. and Tayloe, R.",
+     title     = "Low-energy neutrino beams with an upgraded Fermilab proton
+                  driver",
+     year      = "2004",
+     eprint    = "hep-ex/0408135",
+     SLACcitation  = "%%CITATION = HEP-EX 0408135;%%"
+}
+
+@Article{Athanassopoulos:1996wc,
+     author    = "Athanassopoulos, C. and others",
+ collaboration = "LSND",
+     title     = "Evidence for neutrino oscillations from muon decay at
+                  rest",
+     journal   = "Phys. Rev.",
+     volume    = "C54",
+     year      = "1996",
+     pages     = "2685-2708",
+     eprint    = "nucl-ex/9605001",
+     SLACcitation  = "%%CITATION = NUCL-EX 9605001;%%"
+}
+
+@Article{Church:1997ry,
+     author    = "Church, E. and others",
+ collaboration = "BooNe",
+     title     = "A proposal for an experiment to measure muon-neutrino $\to$
+                  electron-neutrino oscillations and muon-neutrino
+                  disappearance at the Fermilab Booster: BooNE",
+     note     = "FERMILAB-PROPOSAL-0898"
+}
+
+@Unpublished{lanl_sns,
+     author = "Garvey, G. and others",
+     title = "Measuring Active-Sterile Neutrino Oscillations with a Stopped Pion Beam",
+     note = "In preparation"
+}
+
+%
+%  neutrino factory references
+%
+@Article{Geer:1997iz,
+     author    = "Geer, S.",
+     title     = "Neutrino beams from muon storage rings: Characteristics and
+                  physics  potential",
+     journal   = "Phys. Rev.",
+     volume    = "D57",
+     year      = "1998",
+     pages     = "6989-6997",
+     eprint    = "hep-ph/9712290",
+     SLACcitation  = "%%CITATION = HEP-PH 9712290;%%"
+}
+
+
+@Article{Albright:2000xi,
+     author    = "Albright, C. and others",
+     title     = "Physics at a neutrino factory",
+     year      = "2000",
+     eprint    = "hep-ex/0008064",
+     SLACcitation  = "%%CITATION = HEP-EX 0008064;%%"
+}
+
+
+@Article{Holtkamp:2000cb,
+     author    = "Holtkamp, N. and Geer, S.",
+     title     = "Feasibility study of neutrino source based on muon storage
+                  ring",
+     journal   = "ICFA Beam Dyn. Newslett.",
+     volume    = "21",
+     year      = "2000",
+     pages     = "37-51",
+     SLACcitation  = "%%CITATION = 00376,21,37;%%"
+}
+
+
+@Unpublished{study-1,
+author = {Anderson T.. and others},
+title = {A Feasibility Study of a Neutrino Source Based on
+a Muon Storage Ring},
+note = {FERMILAB-Pub-00/108-E},
+OPTkey = {},
+OPTmonth = {April},
+OPTyear = {2000},
+OPTannote = {}
+}
+
+@Unpublished{study-2,
+author = {Goodman M. and others},
+title = {Feasibility Study II},
+note = {BNL-52623},
+OPTkey = {},
+OPTmonth = {June},
+OPTyear = {2001},
+OPTannote = {}
+}
+
+@Unpublished{aps-nufact,
+author = {Albright C. and others},
+title = {Neutrino Factory and Beta Beams Experiments and Development},
+note = {FNAL-TM-2259},
+OPTkey = {},
+OPTmonth = {July},
+OPTyear = {2004},
+OPTannote = {}
+}
+
+@Article{Huber:2002mx,
+     author    = "Huber, Patrick and Lindner, Manfred and Winter, Walter",
+     title     = "Superbeams versus neutrino factories",
+     journal   = "Nucl. Phys.",
+     volume    = "B645",
+     year      = "2002",
+     pages     = "3-48",
+     eprint    = "hep-ph/0204352",
+     SLACcitation  = "%%CITATION = HEP-PH 0204352;%%"
+}
+%
+%  beta beam references
+%
+@Article{zucchelli,
+  author = 	 {P.~Zucchelli},
+  OPTtitle = 	 {},
+  journal = 	 {Phys.Lett.},
+  year = 	 {2002},
+  OPTkey = 	 {},
+  volume = 	 {{B532}},
+  OPTnumber = 	 {},
+  pages = 	 {166},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@Misc{EURISOLref,
+  OPTkey = 	 {},
+  author = 	 {H.L.~Ravn \textit{et al.}},
+  title = 	 {Feasibility Study for A European
+Isotope-Separation On-Line Radioactive Ion Beam Facility: Appendix C},
+  howpublished = {{\tt http://www.ganil.fr/eurisol/Final\_Report/APPENDIX-C.pdf}},
+  OPTmonth = 	 {},
+  year = 	 {2003},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+@Article{jj-beta,
+     author    = "Burguet-Castell, J. and Casper, D. and Gomez-Cadenas, J. J.
+                  and Hernandez, P. and Sanchez, F.",
+     title     = "Neutrino oscillation physics with a higher gamma beta-
+                  beam",
+     journal   = "Nucl. Phys.",
+     volume    = "B695",
+     year      = "2004",
+     pages     = "217-240",
+     eprint    = "hep-ph/0312068",
+     SLACcitation  = "%%CITATION = HEP-PH 0312068;%%"
+}
+@Misc{sortais,
+  OPTkey = 	 {},
+  OPTauthor = 	 {},
+  OPTtitle = 	 {},
+  OPThowpublished = {},
+  OPTmonth = 	 {},
+  OPTyear = 	 {},
+  note = 	 {{\tt http://moriond.in2p3.fr/radio/Moriond-Sortais\_1.ppt}},
+  OPTannote = 	 {}
+}
+@Article{BouchezRef,
+     author    = "Bouchez, Jacques and Lindroos, Mats and Mezzetto, Mauro",
+     title     = "Beta beams: Present design and expected performances",
+     year      = "2003",
+     OPTnote = 	 {Proc. of NuFact03, in press},
+     eprint    = "hep-ex/0310059",
+     SLACcitation  = "%%CITATION = HEP-EX 0310059;%%"
+}
+
+
+@Article{Kodama:2000mp,
+     author    = "Kodama, K. and others",
+ collaboration = "DONUT",
+     title     = "Observation of tau-neutrino interactions",
+     journal   = "Phys. Lett.",
+     volume    = "B504",
+     year      = "2001",
+     pages     = "218-224",
+     eprint    = "hep-ex/0012035",
+     SLACcitation  = "%%CITATION = HEP-EX 0012035;%%"
+}
+
+@Article{Eskut:2000de,
+     author    = "Eskut, E. and others",
+ collaboration = "CHORUS",
+     title     = "New results from a search for nu/mu --> nu/tau and nu/e -->
+                  nu/tau  oscillation",
+     journal   = "Phys. Lett.",
+     volume    = "B497",
+     year      = "2001",
+     pages     = "8-22",
+     SLACcitation  = "%%CITATION = PHLTA,B497,8;%%"
+}
+
+@Article{Astier:2001yj,
+     author    = "Astier, P. and others",
+ collaboration = "NOMAD",
+     title     = "Final NOMAD results on nu/mu --> nu/tau and nu/e --> nu/tau
+                  oscillations including a new search for nu/tau appearance
+                  using  hadronic tau decays",
+     journal   = "Nucl. Phys.",
+     volume    = "B611",
+     year      = "2001",
+     pages     = "3-39",
+     eprint    = "hep-ex/0106102",
+     SLACcitation  = "%%CITATION = HEP-EX 0106102;%%"
+}
+
+@Unpublished{opera,
+     author = "OPERA Collaboration, D.Autriero and others",
+     note = "Proceedings of Neutrino 2004",
+}
+
+@Unpublished{icarus,
+     author = "ICARUS Collaboration, A.Bueno and others",
+     note = "Proceedings of Neutrino 2004",
+}
+
+@Article{Huber:2003ak,
+     author    = "Huber, Patrick and Winter, Walter",
+     title     = "Neutrino factories and the 'magic' baseline",
+     journal   = "Phys. Rev.",
+     volume    = "D68",
+     year      = "2003",
+     pages     = "037301",
+     eprint    = "hep-ph/0301257",
+     SLACcitation  = "%%CITATION = HEP-PH 0301257;%%"
+}
+
+@Article{Asratyan:2003dp,
+     author    = "Asratyan, A. and others",
+     title     = "Neutrino superbeams and the magic baseline",
+     year      = "2003",
+     eprint    = "hep-ex/0303023",
+     SLACcitation  = "%%CITATION = HEP-EX 0303023;%%"
+}
+
+@Unpublished{pdstudy,
+author = "C. Ankenbrandt and others",
+title = "Proton Driver Physics Study (Fermilab)",
+note = {{\tt http://projects.fnal.gov/protondriver/}}
+}
+
+@Article{Barger:2001qd,
+     author    = "Barger, Vernon D. and others",
+     title     = "Oscillation measurements with upgraded conventional
+                  neutrino beams",
+     year      = "2001",
+     eprint    = "hep-ph/0103052",
+     SLACcitation  = "%%CITATION = HEP-PH 0103052;%%"
+}
+
+@Article{Mocioiu:1999ag,
+     author    = "Mocioiu, Irina and Shrock, Robert",
+     title     = "Matter effects on long baseline neutrino oscillation
+                  experiments",
+     journal   = "AIP Conf. Proc.",
+     volume    = "533",
+     year      = "2000",
+     pages     = "74-79",
+     eprint    = "hep-ph/9910554",
+     SLACcitation  = "%%CITATION = HEP-PH 9910554;%%"
+}
+
+@Article{Mocioiu:2000st,
+     author    = "Mocioiu, Irina and Shrock, Robert",
+     title     = "Matter effects on neutrino oscillations in long baseline
+                  experiments",
+     journal   = "Phys. Rev.",
+     volume    = "D62",
+     year      = "2000",
+     pages     = "053017",
+     eprint    = "hep-ph/0002149",
+     SLACcitation  = "%%CITATION = HEP-PH 0002149;%%"
+}
+
+@Article{Freund:1999gy,
+     author    = "Freund, M. and Lindner, M. and Petcov, S. T. and Romanino,
+                  A.",
+     title     = "Testing matter effects in very long baseline neutrino
+                  oscillation  experiments",
+     journal   = "Nucl. Phys.",
+     volume    = "B578",
+     year      = "2000",
+     pages     = "27-57",
+     eprint    = "hep-ph/9912457",
+     SLACcitation  = "%%CITATION = HEP-PH 9912457;%%"
+}
+
+@Article{DeJongh:2002dv,
+     author    = "DeJongh, Fritz",
+     title     = "Long baseline neutrino physics: From Fermilab to Kamioka",
+     year      = "2002",
+     eprint    = "hep-ex/0203005",
+     SLACcitation  = "%%CITATION = HEP-EX 0203005;%%"
+}
+
+@Article{Chen:2001eq,
+     author    = "Chen, He-sheng and others",
+ collaboration = "VLBL Study Group H2B-1",
+     title     = "H2B: Prospect of a very long baseline neutrino oscillation
+                  experiment  HIPA to Beijing",
+     year      = "2001",
+     eprint    = "hep-ph/0104266",
+     SLACcitation  = "%%CITATION = HEP-PH 0104266;%%"
+}
+
+@Article{Huber:2004ug,
+     author    = "Huber, Patrick and Lindner, M. and Rolinec, M. and Schwetz,
+                  T. and Winter, W.",
+     title     = "Prospects of accelerator and reactor neutrino oscillation
+                  experiments for the coming ten years",
+     journal   = "Phys. Rev.",
+     volume    = "D70",
+     year      = "2004",
+     pages     = "073014",
+     eprint    = "hep-ph/0403068",
+     SLACcitation  = "%%CITATION = HEP-PH 0403068;%%"
+}
+
+@Article{McConnel:2004bd,
+     author    = "McConnel, Kendall B. and Shaevitz, Michael H.",
+     title     = "Comparisons and combinations of reactor and long-baseline
+                  neutrino oscillation measurements",
+     year      = "2004",
+     eprint    = "hep-ex/0409028",
+     SLACcitation  = "%%CITATION = HEP-EX 0409028;%%"
+}
+
+@Article{Aprili:2002wx,
+     author    = "Aprili, P. and others",
+ collaboration = "ICARUS",
+     title     = "The ICARUS experiment: A second-generation proton decay
+                  experiment and neutrino observatory at the Gran Sasso
+                  laboratory. Cloning of T600 modules to reach the design
+                  sensitive mass. (Addendum)",
+     note     = "CERN-SPSC-2002-027"
+}
+
+@Article{Duchesneau:2002yq,
+     author    = "Duchesneau, D.",
+ collaboration = "OPERA",
+     title     = "The CERN - Gran Sasso neutrino program",
+     journal   = "eConf",
+     volume    = "C0209101",
+     year      = "2002",
+     pages     = "TH09",
+     eprint    = "hep-ex/0209082",
+     SLACcitation  = "%%CITATION = HEP-EX 0209082;%%"
+}
+
+
+@Article{Winter:2003ye,
+     author    = "Winter, Walter",
+     title     = "Understanding CP phase-dependent measurements at neutrino
+                  superbeams in terms of bi-rate graphs",
+     journal   = "Phys. Rev.",
+     volume    = "D70",
+     year      = "2004",
+     pages     = "033006",
+     eprint    = "hep-ph/0310307",
+     SLACcitation  = "%%CITATION = HEP-PH 0310307;%%"
+}
+
+@Article{Ayres:2002nm,
+     author    = "Ayres, D. and others",
+ collaboration = "Nova",
+     title     = "Letter of intent to build an off-axis detector to study
+                  nu/mu --> nu/e oscillations with the NuMI neutrino beam",
+     year      = "2002",
+     eprint    = "hep-ex/0210005",
+     SLACcitation  = "%%CITATION = HEP-EX 0210005;%%"
+}
+
+@Unpublished{NuMI,
+     title     = "NuMI Off-axis Proposal",
+     note      = "In preparation. See http://www-off-axis.fnal.gov/"
+}
+
+@Article{Apollonio:2002gd,
+     author    = "Apollonio, M. and others",
+     title     = "Search for neutrino oscillations on a long base-line at the
+                  CHOOZ  nuclear power station",
+     journal   = "Eur. Phys. J.",
+     volume    = "C27",
+     year      = "2003",
+     pages     = "331-374",
+     eprint    = "hep-ex/0301017",
+     SLACcitation  = "%%CITATION = HEP-EX 0301017;%%"
+}
+
+@Article{Boehm:2001ik,
+     author    = "Boehm, F. and others",
+     title     = "Final results from the Palo Verde neutrino oscillation
+                  experiment",
+     journal   = "Phys. Rev.",
+     volume    = "D64",
+     year      = "2001",
+     pages     = "112001",
+     eprint    = "hep-ex/0107009",
+     SLACcitation  = "%%CITATION = HEP-EX 0107009;%%"
+}
+
+@Article{Minakata:2003wq,
+     author    = "Minakata, Hisakazu and Sugiyama, Hiroaki",
+     title     = "Exploring leptonic CP violation by reactor and neutrino
+                  superbeam experiments",
+     journal   = "Phys. Lett.",
+     volume    = "B580",
+     year      = "2004",
+     pages     = "216-228",
+     eprint    = "hep-ph/0309323",
+     SLACcitation  = "%%CITATION = HEP-PH 0309323;%%"
+}
+
+@Unpublished{Heeger,
+     author    = "Heeger,K",
+     title     = "Measuring theta13 with reactor neutrinos: Initiatives in the US",
+     note      = "Talk given at NOON 2004, available at http://www-sk.icrr.u-tokyo.ac.jp/noon2004/"
+}
+
+@Unpublished{shaevitztalk,
+     author    = "Shaevitz,M",
+     note      = "Talk given at the APS Neutrino Study, working group meeting, Feb. (2004), http://apsreactor.uchicago.edu/meetings/chicago/shaevitz.pdf"
+}
+
+@Article{Fogli:2003th,
+     author    = "Fogli, G. L. and Lisi, E. and Marrone, A. and Montanino, D.
+                  ",
+     title     = "Status of atmospheric nu/mu --> nu/tau oscillations and
+                  decoherence  after the first K2K spectral data",
+     journal   = "Phys. Rev.",
+     volume    = "D67",
+     year      = "2003",
+     pages     = "093006",
+     eprint    = "hep-ph/0303064",
+     SLACcitation  = "%%CITATION = HEP-PH 0303064;%%"
+}
+
+@Article{Maltoni:2003da,
+     author    = "Maltoni, M. and Schwetz, T. and Tortola, M. A. and Valle,
+                  J. W. F.",
+     title     = "Status of three-neutrino oscillations after the SNO-salt
+                  data",
+     journal   = "Phys. Rev.",
+     volume    = "D68",
+     year      = "2003",
+     pages     = "113010",
+     eprint    = "hep-ph/0309130",
+     SLACcitation  = "%%CITATION = HEP-PH 0309130;%%"
+}
+
+@Unpublished{SKupdate,
+     author    = "Hayato,Y for the Super-Kamiokande Collaboration",
+     note      = "Talk given at the HEP2003 conference (Aachen, Germany, 2003), http://eps2003.physik.rwth-aachen.de"
+}
+%
+% Milind's references 
+%
+@Unpublished{3m,
+     author   = "3M Collaboration", 
+     note     = " Megaton Modular Multi-Purpose Neutrino Detector", 
+     URL      = "http://www.hep.upenn.edu/Homestake"
+} 
+
+@Unpublished{uno,
+     author   =  "UNO Collaboration",
+     note ="Physics Potential and Feasibility of UNO, SBHEP01-03",
+     year = "2001", 
+     OPTmonth = "June"
+}
+
+@Article{Arneodo:2000jt,
+     author    = "Arneodo, F. and others",
+ collaboration = "ICARUS",
+     title     = "The ICARUS liquid argon time projection chamber",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A471",
+     year      = "2000",
+     pages     = "272-275",
+     SLACcitation  = "%%CITATION = NUIMA,A471,272;%%"
+}
+
+@Unpublished{agsup,
+     author   =  "J. Alessi {\em et al}.", 
+     title ="AGS Super Neutrino Beam 
+Facility, Accelerator and Target system Design", 
+     note = "BNL-71228-2003-IR", 
+     year = "2003" , 
+     URL = "http://nwg.phy.bnl.gov/", 
+     OPTmonth = "April"
+}
+ 
+@Unpublished{e889,
+      author = "E889 Collaboration",
+      title  = "Physics Design Report",
+      note = "BNL No. 52459",
+      year = "1995" ,
+      OPTmonth = "April" ,
+      URL = " http://minos.phy.bnl.gov/nwg/papers/E889 "
+} 
+
+@Article{Fukuda:2002uc,
+     author    = "Fukuda, Y. and others",
+     title     = "The Super-Kamiokande detector",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A501",
+     year      = "2003",
+     pages     = "418-462",
+     SLACcitation  = "%%CITATION = NUIMA,A501,418;%%"
+}
+
+@Article{Antonioli:1999rp,
+     author    = "Antonioli, P. and others",
+     title     = "The AQUA-RICH atmospheric neutrino experiment",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A433",
+     year      = "1999",
+     pages     = "104-120",
+     SLACcitation  = "%%CITATION = NUIMA,A433,104;%%"
+}
+
+@Article{Diwan:2003bp,
+     author    = "Diwan, M. V. and others",
+     title     = "Very long baseline neutrino oscillation experiments for
+                  precise  measurements of mixing parameters and CP violating
+                  effects",
+     journal   = "Phys. Rev.",
+     volume    = "D68",
+     year      = "2003",
+     pages     = "012002",
+     eprint    = "hep-ph/0303081",
+     SLACcitation  = "%%CITATION = HEP-PH 0303081;%%"
+}
+
+@Article{Diwan:2004bt,
+     author    = "Diwan, Milind V.",
+     title     = "The case for a super neutrino beam",
+     year      = "2004",
+     eprint    = "hep-ex/0407047",
+     SLACcitation  = "%%CITATION = HEP-EX 0407047;%%"
+}
+
+@Article{Petyt:2004,
+     author    = "Petyt,David A.",
+     title     = "Other oscillation measurementys in the off-axis detector",
+     note      = "Off-Axis-NOTE-SIM-32",
+     OPTmonth  = "April",
+     OPTyea    = "2004"   
+}
+
+@Article{Ishitsuka:2004un,
+     author    = "Ishitsuka, M.",
+ collaboration = "Super-Kamiokande",
+     title     = "Super Kamiokande results: Atmospheric and solar neutrinos",
+     year      = "2004",
+     eprint    = "hep-ex/0406076",
+     SLACcitation  = "%%CITATION = HEP-EX 0406076;%%"
+}
+
+@Article{Yang,
+     author    = "Yang,T. and Wojcicki,S.",
+     note      = "\nova-NOTE-30, http://www-nova.fnal.gov/notes/notes.html"
+}
+
+@Article{Barger:2001yr,
+  author =	 "Barger, V. and Marfatia, D. and Whisnant, K.",
+  title =	 "Breaking eight-fold degeneracies in neutrino CP
+                  violation, mixing, and mass hierarchy",
+  journal =	 "Phys. Rev.",
+  volume =	 "D65",
+  year =	 "2002",
+  pages =	 "073023",
+  archive =	 "http://arXiv.org/abs",
+  eprint =	 "hep-ph/0112119",
+  SLACcitation = "%%CITATION = HEP-PH 0112119;%%",
+  SLACcitation = "%%CITATION = JHEPA,0204,007;%%"
+}
+
+@Article{Ardellier:2004ui,
+     author    = "Ardellier, F. and others",
+     title     = "Letter of intent for double-CHOOZ: A search for the mixing
+                  angle theta(13)",
+     year      = "2004",
+     eprint    = "hep-ex/0405032",
+     SLACcitation  = "%%CITATION = HEP-EX 0405032;%%"
+}
+
+
+@Article{debbie,
+     author        = "D.~A.~Harris and others",
+     collaboration = "Minerva",
+     title         = "Neutrino Scattering Uncertain ties and their Role in Long Baseline Oscillation Experiments",
+     note          = " MINER$\nu$A Note 800, September, 2004",
+     eprint        = "arXiv:hep-ex/0410010"
+} 
+
+
+@Article{Port,
+      author       = "Portheault, B.",
+      eprint       = "hep-ph/0406226",
+      year         = 2004
+} 
+
+
+@Article{Botje,
+      author       = "Botje, M.",
+      journal      = "Euro. Phys. Jour. C",
+      volume       = 14,
+      pages        = 285,
+      year         = 2000
+} 
+
+@Article{Ji97,
+      author       = "Ji, X.",
+      journal      = "Phys. Rev. Lett.",
+      volumne      = 78,
+      pages        = 610,
+      year         = 1997
+}
+ 
+@Article{Ji97b,
+      author       = "Ji, X.",
+      journal      = "Phys. Rev.",
+      volume       = "D55",
+      pages        = 7114,
+      year         = 1997
+}
+
+@Article{Rady96,
+      author       = "Radyushkin, A.V.",
+      journal      = "Phys. Lett.",
+      volume       = "B380",
+      pages        = 417,
+      year         = 1996
+}
+
+@Article{Rady96b,
+      author       = "Radyushkin, A.V.",
+      journal      = "Phys. Lett.",
+      volume       = "B385",
+      pages        = 333,
+      year         = 1996
+}
+
+@Article{Collins,
+      author       = "Collins, J.C. and Frankfurt, L. and Strikman, M.",
+      journal      = "Phys. Rev.",
+      volume       = "D56",
+      pages        = 2982,
+      year         = 1997
+}
+
+@Article{Psaker, 
+      note          = "private communcation"
+}
+
+
+@Article{Filippone,
+      author       = "Filippone, B.W. and Ji, X.D.",
+      journal      = "Adv. Nucl. Phys.",
+      volume       = 26,
+      pages        = 1,
+      year         = 2001,
+      eprint       = "hep-ph/0101224"
+}
+
+@Article{LSNDnmm,
+      author       = "Auerbach, L.B. and others",
+      journal      = "Phys. Rev. D",
+      volume       = 63,
+      pages        = 112001,
+      year         = 2001,
+      eprint       = "hep-ex/0101039"
+}
+
+@Article{Jones00,
+      author       = "Jones, M.K. and others",
+      journal      = "Phys. Rev. Lett",
+      volume       = 84,
+      pages        = 1398,
+      year         = 2000
+}
+
+@Article{Gayou02,
+      author       = "Gayou, O. and others",
+      journal      = "Phys. Rev. Lett",
+      volume       = 88,
+      pages        = 092301,
+      year         = 2002
+}
+
+@Article{ioana1,
+      author       = "Niculescu, I. and others",  
+      journal      = "Phys. Rev. Lett.",
+      volume       = 85,
+      pages        = "1182-1185",
+      year         = 2000
+}
+
+@Article{report,
+      author       = "Melnitchouk, W. and Ent, R. and Keppel, C.E.",  
+      note         = "accepted by Physics Reports"
+}
+
+@Article{sabine,
+      author       = "Jeschonnek, S. and Van Orden, J.W.",   
+      journal      = "Phys. Rev.",
+      volume       = "D69",
+      pages        = 054006,
+      year         = 2004
+}
+
+@Article{close,
+      author       = "Close, F.E. and Isgur, N",   
+      journal      = "Phys. Lett.",
+      volume       = "B509",
+      pages        = "81-86",
+      year         = 2001
+}
+
+@Article{rolf1,
+      author       = "Ent, R. and Keppel, C.E. and Niculescu, I.",   
+      journal      = "Phys. Rev.",
+      volume       = "D62",
+      pages        = 073008,
+      year         = 2000
+}
+
+@Article{CM93,
+      author       = "Carlson, C.E. and Mukhopadhyay, N.C.",  
+      journal      = "Phys. Rev.",
+      volume       = "D47",
+      pages        = 1737,
+      year         = 1993
+}
+
+@Article{Di86,
+      author       = "Diemoz, M. and Ferroni, F. and Longo, E.",   
+      journal      = "Phys. Rev.",
+      volume       = 130,
+      pages        = 293,
+      year         = 1986
+}
+
+@Article{Be88,
+      author       = "Belusevic, R. and Rein, D.",  
+      journal      = "Phys. Rev.",
+      volume       = "D38",
+      pages        = 2753,
+      year         = 1988,
+}
+
+@Article{Be88_b,
+      author       = "Belusevic, R. and Rein, D.",  
+      journal      = "Phys. Rev.",
+      volume       = "D46",
+      pages        = 3747,
+      year         = 1992
+}  
+
+@Article{strange,
+      author       = "Shrock, R.",
+      journal      = "Phys. Rev.",
+      volume       = "D12",
+      pages        = 2049,
+      year         = 1975,
+}  
+
+@Article{strange_b,
+      author       = "Amer, A.A.",
+      journal      = "Phys. Rev.",
+      volume       = "D18",
+      pages        = 2290,
+      year         = 1978
+}
+
+
+
+
+
+
+
+
+@Article{ioffe,
+      author       = "Ioffe, B.",
+      journal      = "Phys. Rev.",
+      volume       = "47",
+      pages        = 340,
+      year         = 1993
+}
+
+@Article {Hyperon-CP_a,
+      author       = "Pais, A.",
+      journal      = "Phys. Rev. Lett.",
+      volume       = "3",
+      pages        = 242,
+      year         = 1959
+} 
+
+@Article {Hyperon-CP_b,
+      author       = "Overseth, Q.E. and Pakvasa, S.",
+      journal      = "Phys. Rev.",
+      volume       = "184",
+      pages        = 1663,
+      year         = 1969
+}
+
+@Article {Hyperon-CP_c,
+      author       = "Donoghue, J.F. and Pakvasa, S.",
+      journal      = "Phys. Rev. Lett.",
+      volume       = "55",
+      pages        = 162,
+      year         = 1985
+}
+
+@Article {ACP_a,
+      author       = "Donoghue, J.F. and He, X.G. and Pakvasa, S.",
+      journal      = "Phys. Rev.",
+      volume       = "D34",
+      pages        = 833,
+      year         = 1986
+}
+
+@Article {ACP_b,
+      author       = "He, X.G. and Steger, H. and Valencia, G.",
+      journal      = "Phys. Lett.",
+      volume       = "B272",
+      year         = 1991,
+      pages        = 411
+}
+
+@Article{Valencia,
+      author       = "Valencia, G.",
+      note         = "Proc. $\overline{p}2000$ Workshop, {\it op cit}"
+}
+
+@Article{Tandean,
+      author       = "Tandean, J. and Valencia, G.",
+      journal      = "Phys. Rev.",
+      volume       = "D67",
+      pages        = 056001,
+      year         = 2003
+}
+
+@Article {Lee-Yang,
+      author       = "Lee, T.D. and Yang, C.N.",
+      journal      = "Phys. Rev.",
+      volume       = "108",
+      pages        = 1645,
+      year         = 1957
+}
+
+@Article{Donoghue-etal_a,
+      author       = "Donoghue, J.F. and Holstein, B.R. and Valencia, G.",
+      journal      = "Phys. Lett.",
+      volume       = "178B",
+      pages        = 319,
+      year         = 1986
+}
+
+@Article{Donoghue-etal_b,
+      author       = "Donoghue, J.F. and Holstein, B.R. and Valencia, G.",
+      journal      = "Int. J. Mod. Phys.",
+      volume       = "A2",
+      pages        = 319,
+      year         = 1987
+}
+
+@Article{He,
+      author       = "He, X.G. and Murayama, H. and Pakvasa, S. and Valencia, G.",
+      journal      = "Phys. Rev.",
+      volume       = "D61",
+      pages        = "071701(R)",
+      year         = 2000
+}
+
+@Article{R608,
+      author       = "Chauvat, P. and others",
+      journal      = "Phys. Lett.",
+      volume       = "163B",
+      year         = 1985,
+      pages        = 273
+}
+
+@Article{DM2,
+      author       = "Tixier, M.H. and others",
+      journal      = "Phys. Lett.",
+      volume       = "B212",
+      year         = 1988,
+      pages        = 523
+}
+
+@Article{PS185,
+      author       = "Barnes, P.D. and others",
+      journal      = "Nucl. Phys. B (Proc. Suppl.)",
+      volume       = "56A",
+      year         = 1997,
+      pages        = 46
+}
+
+@Article{E756,
+      author       = "Luk, K.B. and others",
+      title        = "Search for Direct {em CP} Violation in Nonleptonic Decays of Charged Xi and Lambda Hyperons",
+      journal      = "Phys. Rev. Lett.",
+      volume       = "85",
+      pages        = 4860,
+      year         = 2000
+}
+
+@Article{E871_a,
+      author       = "Antos, J. and others",
+      title        = "Fermilab Proposal 871 (revised)",
+      year         = 1994
+}
+
+@Article{E871_b,
+      author       = "Burnstein, R.A. and others",
+      eprint       = "hep-ex/0405034",
+      note         = "to appear in Nucl. Instrum. Methods (2004)", 
+      url          = "http://ppd.fnal.gov/experiments/e871/welcome.html"
+}
+
+@Article{Holmstrom,
+      author       = "Holmstrom, T. and others",
+      title        = "Search for {em CP} Violation in Charged-$Xi$ and $Lambda$ Hyperon Decays,",
+      journal      = "Phys. Rev. Lett.",
+      volume       = "93",
+      pages        = 262001,
+      year         = 2004
+}
+
+@Article{CLEO,
+      author       = "Jaffe, D.E. and others",
+      title        = "Search for Direct CP Violation in $Xi$ Hyperon Decay",
+      note         = "CLNS 98/1587, CLEO 98-16",
+      year         = 2000,
+      eprint       = "hep-ex/0009037"
+}
+
+@Article{Kaplan2000,
+      author       = "Kaplan, D.M.",
+      title        = "Prospects for Low-Energy Antiproton Physics at Fermilab",
+      note         = "in Proc. Biennial Conf.  on Low-Energy Antiproton Physics (LEAP 2000), Venice, Italy, 20--26 Aug 2000",
+      journal      = "Nucl. Phys.",
+      volume       = "A692",
+      pages        = 206,
+      year         = 2001
+}

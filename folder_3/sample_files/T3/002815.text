@@ -1,0 +1,188 @@
+  United States Environmental Protection Agency
+
+Prevention, Pesticides and Toxic Substances (7101)
+
+EPA 712-C-96-038 August 1996
+
+Product Properties Test Guidelines
+
+OPPTS 830.7550
+Partition Coefficient (n-Octanol/Water), Shake Flask Method)
+
+
+
+Introduction
+
+This guideline is one of a series of test guidelines that have been developed by the Office of Prevention, Pesticides and Toxic Substances, United States Environmental Protection Agency for use in the testing of pesticides and toxic substances, and the development of test data that must be submitted to the Agency for review under Federal regulations.
+
+The Office of Prevention, Pesticides and Toxic Substances (OPPTS) has developed this guideline through a process of harmonization that blended the testing guidance and requirements that existed in the Office of Pollution Prevention and Toxics (OPPT) and appeared in Title 40, Chapter I, Subchapter R of the Code of Federal Regulations (CFR), the Office of Pesticide Programs (OPP) which appeared in publications of the National Technical Information Service (NTIS) and the guidelines published by the Organization for Economic Cooperation and Development (OECD).
+
+The purpose of harmonizing these guidelines into a single set of OPPTS guidelines is to minimize variations among the testing procedures that must be performed to meet the data requirements of the U. S. Environmental Protection Agency under the Toxic Substances Control Act (15 U.S.C. 2601) and the Federal Insecticide, Fungicide and Rodenticide Act (7 U.S.C. 136,  et seq. ).
+
+Final Guideline Release:  This document is available from the U.S. Government Printing Office, Washington, DC 20402 on  The Federal Bulletin Board . By modem dial 202-512-1387, telnet and ftp: fedbbs.access.gpo.gov (IP 162.140.64.19), internet: http://fedbbs.access.gpo.gov, or call 202-512-0132 for disks or paper copies.  This guideline is available in ASCII and PDF (portable document format) from the EPA Public Access Gopher (gopher.epa.gov) under the heading ``Environmental Test Methods and Guidelines.''
+
+
+
+OPPTS 830.7550 Partition coefficient ( n -octanol/water), shake flask method.
+(a)  Scope _(1)  Applicability.  This guideline is intended to meet testing requirements of both the Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) (7 U.S.C. 136,  et seq. ) and the Toxic Substances Control Act (TSCA) (15 U.S.C. 2601).
+
+(2)  Background.   The source materials used in developing this harmonized OPPTS test guideline are the OPPT guideline under 40 CFR 796.1550 PartitionCoefficient (n-Octanol/water), OPP guideline 63ÿ0911 Octanol/water partition coefficient (Pesticide Assessment Guidelines, Subdivision D: Product Chemistry, EPA Report 540/9ÿ0982ÿ09018, October 1982), and OECD guideline 107 Partition Coefficient (n-octanol/water). 
+
+(b)  Introductory information _(1)  Prerequisites.  Suitable analytical method; dissociation constant; water solubility; hydrolysis (preliminary test).
+
+(2)  Coefficient of variation.  The coefficient of variation on the mean values reported by the participants of the OECD Laboratory Intercomparison Testing, part I, 1979 appeared to be dependent on the chemicals tested; it ranges from 0.17 to 1.03.
+(3)  Qualifying statements.  This method applies only to pure, water soluble substances which do not dissociate or associate, and which are not surface active. In order to use the partition coefficient as a screening test for bioaccumulation, it should be ascertained that the impurities in the commercial product are of minor importance. Testing of partition coefficient ( n -octanol/water) cannot be used as a screening test in the case of organometallic compounds.
+
+(4)  Recommendation.  There is a high pressure liquid chromatography (HPLC) method described in the references in paragraphs (f)(6), (f)(7), and (f)(8) of this guideline which has not as yet been evaluated. The convenience of this method recommends its investigation as an alternative method.
+
+(5)  Standard documents.   The scientific literature in this field was consulted extensively in developing this test guideline. It is based on the references in paragraphs (f)(3) and (f)(9) of this guideline.
+
+(c)  Method _(1)  Introduction, purpose, scope, relevance, application, and limits of test.  The partition coefficient of a substance between water and a lipophilic solvent ( n -octanol) is one model variable which may be used to describe the transfer of a substance from the aquatic environment into an organism and the potential bioaccumulation of the substance. Studies show a highly significant relationship between the partition coefficient of different substances in the system water/ n -octanol and their bioaccumulation in fish described in the reference in paragraph (f)(1) of this guideline. It has also been shown to be a useful parameter in other forms of biological activity (see the reference in paragraph (f)(2) of this guideline).
+
+(2)  Definitions and units.  The partition coefficient (P) is defined as the ratio of the equilibrium concentrations (C  i ) of a dissolved substance in a two-phase system consisting of two largely immiscible solvents. In the case  n -octanol and water
+
+         P  ow  = C  n-octanol /C  water 
+
+The partition coefficient (P) therefore is the quotient of two concentrations and is usually given in the form of its logarithm to base ten (log P).
+
+(3)  Reference substances.  The reference substances need not be employed in all cases when investigating a new substance. They are provided primarily so that calibration of the method may be performed from time to time and to offer the chance to compare the results when another method is applied. The values presented below are not necessarily representative of the results which can be obtained with this test method as they have been derived from an earlier version of the test guideline.
+
+I95 Table 1._Data for Reference Substances
+
+Tested Substance     \1\
+
+P  ow      \2\
+
+
+
+Di(2-ethylhexyl)phthalate (OECD)
+
+ 1.3   ÿ0A  10  5     (4.6   ÿ0A  10  4  ÿ09 2.8   ÿ0A  10  5 )
+
+Hexachlorobenzene (OECD)
+
+ 3.6   ÿ0A  10  5     (1.1   ÿ0A  10  5  ÿ09 8.3   ÿ0A  10  5 )
+
+ o -Dichlorobenzene (EEC)
+
+ 5.1   ÿ0A  10  3     (1.5   ÿ0A  10  3  ÿ09 2.3   ÿ0A  10  4 )
+
+Dibutyl phthalate (EEC)
+
+ 1.3   ÿ0A  10  4     (1.7   ÿ0A  10  3  ÿ09 2.8   ÿ0A  10  4 )
+
+Trichloroethylene (OECD)
+
+ 2.0   ÿ0A  10  3     (5.2 x 10  2  ÿ09 3.7 x 10  3 )
+
+Urea (OECD)
+
+ 6.2 x 10  -2     (2.0 x 10  -2  - 2.4 x 10  -1 )
+
+\1\ Substances not tested: Ethyl acetate, 4-methyl-2,4-pentanediol.
+
+\2\ Total, mean, and range of mean values (in parentheses) submitted by the participants of the OECD or EEC Laboratory Intercomparison Testing.
+
+
+
+(4)  Principle of the test method.  In order to determine a partition coefficient, equilibrium between all interacting components of the system must be achieved, and the concentrations of the substances dissolved in the two phases must be determined. A study of the literature on this subject indicates that there are many different techniques which can be used to solve this problem, i.e. the thorough mixing of the two phases followed by their separation in order to determine the equilibrium concentration for the substance being examined.
+
+(5)  Quality criteria _(i)  Repeatability.  In order to assure the precision of the partition coefficient, duplicate determinations are to be made under three different test conditions, whereby the quantity of substance specified as well as the ratio of the solvent volumes may be varied. The determined values of the partition coefficient expressed as their common logarithms should fall within a range of   ÿ1B  0.3 log units.
+
+(ii)  Sensitivity.  The sensitivity of the method is determined by the sensitivity of the analytical procedure. This should be sufficient to permit the assessment of values of P  ow  up to 105 when the concentration of the solute in either phase is not more than 0.01 mol/L. The substance being tested must not be water insoluble (mass concentration   r  > 10  -6  g/L).
+
+(iii)  Specificity.  The Nernst partition law applies only at constant temperature, pressure, and pH for dilute solutions. It strictly applies to a pure substance dispersed between two pure solvents. If several different solutes occur in one or both phases at the same time, this may affect the results. Dissociation or association of the dissolved molecules result in deviations from the Nernst partition law. Such deviations are indicated by the fact that the partition coefficient becomes dependent upon the concentration of the solution. Because of the multiple equilibria involved, this test guideline should not be applied to ionizable compounds without corrections being made. (The use of buffer solutions in place of water should be considered for such compounds.)
+
+(iv)  Possibility of standardization.  This method can be standardized.
+
+(d)  Description of the test procedure _(1)  Preparations.  Preliminary estimate of the partition coefficient. The size of the partition coefficient can be estimated either by means of a simple calculation (see paragraph (f)(2) of this guideline) or by use of the solubilities of the test substance in the pure solvents (see references in paragraphs (f)(3) and (f)(5) of this guideline). For this,
+
+   P  estimate  = (saturation C  n-octanol )/(saturation C  water )
+
+Alternatively, it may be roughly determined by performing a simplified preliminary test.
+
+(2)  Preparation of the solvents _(i)  n - Octanol.  The determination of the partition coefficient should be carried out with analytical grade  n -octanol. Inorganic contaminants can be removed from commercial  n -octanol by washing with acid and base, drying, and distilling. More sophisticated methods will be required to separate the  n -octanol from organic contaminants with similar vapor pressure if they are present.
+
+(ii)  Water.  Distilled water or water twice-distilled from glass or quartz apparatus should be employed. (Note: Water taken directly from an ion exchanger should not be used.)
+
+(iii)  Presaturation of the solvents.  Before a partition coefficient is determined, the phases of the solvent system are mutually saturated by shaking at the temperature of the experiment. For doing this, it is practical to shake two large stock bottles of purified  n -octanol or distilled water each with a sufficient quantity of the other solvent for 24 hours on a mechanical shaker, and then to let them stand long enough to allow the phases to separate and to achieve a saturation state.
+
+(3)  Preparation for the test.  The entire volume of the two-phase system should nearly fill the test vessel. This will help prevent loss of material due to volatilization. The volume ratio and quantities of substance to be used are fixed by the following:
+
+(i) The preliminary assessment of the partition coefficient (see paragraph (d)(1)(i) of this guideline).
+
+(ii) The minimum quantity of test substance required for the analytical procedure.
+
+(iii) The limitation of a maximum concentration in either phase of 0.01 mol/L.
+
+(iv) Three tests are carried out. In the first, the calculated volume ratio is added; in the second, twice the volume of  n -octanol is added; and in the third, half the volume of  n -octanol is added.
+
+(4)  Test substance.  The test substance should be the purest available. For a material balance during the test a stock solution is prepared in     n -octanol with a mass concentration between 1 and 100 mg/mL. The actual mass concentration of this stock solution should be precisely determined before it is employed in the determination of the partition coefficient. This solution should be stored under stable conditions.
+
+(5)  Test conditions.  The test temperature should be kept constant (  ÿ1B  1 C) and lie in the range of 20ÿ0925 C.
+
+(6)  Performance of the test.  (i) Establishment of the partition equilibrium. Duplicate test vessels containing the required, accurately measured amounts of the two solvents together with the necessary quantity of the stock solution should be prepared for each of the test conditions. The octanol parts should be measured by volume. The test vessels should either be placed in a suitable shaker or shaken by hand. A recommended method is to rotate the centrifuge tube quickly through 180 about its transverse axis so that any trapped air rises through the two phases. Experience has shown that 50 such rotations are usually sufficient for the establishment of the partition equilibrium. To be certain, 100 rotations in 5 minutes are recommended.
+
+(ii) Phase separation. In order to separate the phases, centrifugation of the mixture should be carried out. This should be done in a laboratory centrifuge maintained at room temperature, or, if a non-temperature-controlled centrifuge is used, the centrifuge tubes should be reequilibrated at the test temperature for at least 1 hour before analysis.
+
+(7)  Analysis.  (i) For the determination of the partition coefficient, it is necessary to analyze the concentrations of the test substance in both phases. This may be done by taking an aliquot of each of the two phases from each tube for each test condition and analyzing them by the chosen procedure.The total quantity of substances present in both phases should be calculated and compared with the quantity of the substance originally introduced.
+
+(ii) The aqueous phase should be sampled by the following procedure to minimize the risk of including traces of the octanol: A glass syringe with a removable needle should be used to sample the water phase. The syringe should initially be partially filled with air. Air should be gently expelled while inserting the needle through the octanol layer. An adequate volume of aqueous phase is withdrawn into the syringe. The syringe is quickly removed from the solution and the needle detached. The contents of the syringe may then be used as the aqueous sample.
+
+(iii) The concentration in the two separated phases should preferably be determined by a substance-specific method. Examples of physical-chemical determinations which may be appropriate are:
+
+(A) Photometric methods.
+
+(B) Gas chromatography.
+
+(C) High pressure liquid chromatography.
+
+(D) Back-extraction of the aqueous phase and subsequent gas chromatography.
+
+(e)  Data and reporting _(1)  Treatment of results.  The reliability of the determined values of P can be tested by comparison of the means of the duplicate determinations with the overall mean.
+
+(2)  Test report.  The following should be included in the report:
+
+(i) Name of the substance, including its purity.
+
+(ii) Temperature of the determination.
+
+(iii) The preliminary estimate of the partition coefficient and its manner of determination.
+
+(iv) Data on the analytical procedures used in determining concentrations.
+
+(v) The measured concentrations in both phases for each determination. (This means that a total of 12 concentrations will be reported).
+
+(vi) The weight of the test substance, the volume of each phase employed in each test vessel, and the total calculated amount of test substance present in each phase after equilibration.
+
+(vii) The calculated values of the partition coefficient (P) and the mean should be reported for each set of test conditions as should the mean for all determinations. If there is a suggestion of concentration dependency of the partition coefficient, this should be noted in the report.
+
+(viii) The standard deviation of individual P values about their mean should be reported.
+
+(ix) The mean P from all determinations should also be expressed as its logarithm (base 10).
+
+(f)  References.  The following references should be consulted for additional background material on this test guideline.
+
+(1) Neely, W.B. et al. Partition Coefficients to Measure Bioconcentration Potential of Organic Chemicals in Fish.  Environmental Science and Technology  8:1113 (1975).
+
+(2) Leo, A. et al. Partition Coefficients and their Uses.  Chemical Reviews  71:525 (1971).
+
+(3) Figge, K. et al. Die Bedeutung des Verteilungskoeffizienten fuÿAE4r die AbschaÿAE4tzung der Bioakkumulation von Umweltchemikalien und Methoden zu seiner Bestimmung. Report of the NATEC Gesellschaft fuÿAE4r naturwissenschaftlich-technische Dienste mbH, Behringstr. 154, 2000 Hamburg 50.
+(4) Hecker, E. Verteilungsverfahren im Laboratorium, Monographien zur ``Angewandten Chemie'' und ``Chemie-Ingenieur-Technik,'' No. 67, Verlag Chemie, Weinheim 1955.
+(5) JuÿAE4bermann, O.  Methoden der organischen Chemie  I/1:223 (1958).
+
+(6) Miyake, K. and H. Terada, Direct measurements of partition coefficients in an octanol-water system.  Journal of Chromatography  157:386 (1978).
+
+(7) Veith G.D. and R.T. Morris, A Rapid Method for Estimating Log P for Organic Chemicals, EPAÿ09600/3ÿ0978ÿ09049 (1978).
+
+(8) Mirrless, M.S. et al., Direct measurement of octanol-water partition coefficient by high pressure liquid chromatography.  Journal of Medicinal Chemistry  19:615 (1976).
+
+(9) EPA Draft Guidance of September 8, 1978 (Fÿ0916).
+
+(10) Rekker, R.F.  The Hydrophobic Fragmental Constant , Elsevier, Amsterdam (1977).
+
+(11) KoÿAE4nemann H. et al. Determination of log P  oct  values of chlorosubstituted benzenes, toluenes, and anilines by high performance liquid chromatography on ODS silica,  Journal of Chromatography  178:559 (1979).
+
+(12)  Organization for Economic Cooperation and Development , Guidelines for The Testing of Chemicals, OECD 107, Partition Coefficient (n-octanol/water) (Flask-shaking Method), OECD, Paris, France.
+
+

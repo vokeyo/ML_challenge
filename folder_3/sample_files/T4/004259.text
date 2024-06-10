@@ -1,0 +1,314 @@
+Newsgroups: sci.physics.fusion,sci.answers,news.answers
+Subject: Conventional Fusion FAQ Section 6/11 (Recent Results)
+From: rfheeter@pppl.gov
+Approved: news-answers-request@MIT.EDU
+Followup-To: sci.physics.fusion
+Reply-To: rfheeter@pppl.gov
+Summary: Fusion energy represents a promising alternative to 
+         fossil fuels and nuclear fission for world energy 
+         production. This FAQ answers Frequently Asked Questions
+         (from the sci.physics.fusion newsgroup) about conventional 
+         areas of fusion energy research. It also provides other 
+         useful information about the subject. This FAQ does NOT 
+         discuss unconventional forms of fusion (like Cold Fusion). 
+Expires: 1 Dec 1994 0:00:00 GMT
+
+Archive-name: fusion-faq/section6-results
+Last-modified: 16-Oct-1994
+Posting-frequency: More-or-less-monthly
+Disclaimer:  While this section is still evolving, it should 
+     be useful to many people, and I encourage you to distribute 
+     it to anyone who might be interested (and willing to help!!!).
+
+*****************************************************************
+6. Recent Results in Fusion Research
+
+Last Revised October 16, 1994
+Written by Robert F. Heeter, rfheeter@pppl.gov, unless
+otherwise cited.
+
+( This section discusses major fusion results from the past
+     few years. )
+
+***  A.  Recent Results on TFTR: D-T Experiments
+
+* (a) What was done?
+
+The Tokamak Fusion Test Reactor (TFTR) here at Princeton 
+switched from pure-deuterium fuel to a deuterium-tritium 
+(D-T) fuel mixture in December 1993.  As discussed in 
+Section 1, the D-T fuel is easier to fuse, but the neutrons 
+produced in the reaction D + T -> 4He + n will slowly make 
+the reactor radioactive, so this set of experiments will 
+be the last for TFTR.  In these reactions, over 6 million 
+watts (MW) of fusion power were produced for about a second.  
+This is four times more power than any previous controlled 
+fusion experiment.  The value of 6 MW should be compared to
+the roughly 30 MW of input power used, which indicates that
+fusion in TFTR remains short of breakeven.  (See glossary for
+explanations of unfamiliar terminology.)
+
+(There was an article on this in _Time_, Dec 20, 1993, p. 54, 
+at least in the American edition; there are of course other 
+articles out there too.  See Section 9, Part A (the bibliography
+on recent literature) for more references.)
+
+>>Update May 31 (mostly from TFTR News Updates by Rich Hawryluk):  
+   Over 9 megawatts were generated in late May.
+     This is 90 million times what could be generated in 1974
+     when TFTR was proposed.
+   Input power was up to 33.7 MW -> Q = 0.27.  
+     This means we are making almost as much fusion power as
+     is used to heat the plasma now.
+   Two articles on the December experiments were published in
+     the May 30 issue of Physical Review Letters.
+			Recent TFTR shots have exhibited exceptionally high performance,
+     with preliminary indications that energy confinement is 
+     enhanced by 20-30 percent in D-T relative to D-D fuel.
+   Plasma disruptions possibly caused by TAE mode activity have
+     been observed.  Fusion performance is limited by the MHD
+     activity, not by heating power or confinement.
+   Central fusion power density has been increased from 1.25 MW m-3
+     to 1.8 MW m-3.
+
+>>Update August 7
+   Work is ongoing to try to stabilize the power-limiting modes.
+>>Update September 13
+   Funding to continue D-T experiments throughout FY 1995 has
+   been granted. (see below)
+
+>>Update October 16
+   Though TFTR has not literally achieved "breakeven" (fusion power
+     output equals plasma heating power input), we are very close
+     now, and in addition we have achieved plasma conditions very
+     close to those needed in a real fusion powerplant.  The
+     scientific results achieved suggest that D-T plasmas have
+     better confinement than their D-D counterparts.  A number of
+     crucial scientific issues have been resolved and the sense
+     of the scientists here is that we can be fairly confident
+     that we can build a fusion reactor which will generate 
+     gigawatts of surplus energy.  The trick now is to find ways
+     to do this an an environmental and cost-effective manner.
+
+
+*	(b) Why does it matter?
+
+The generation of multi-megawatt levels of fusion power is a major
+achievement for the controlled fusion program.  Sustaining the
+power output for a second is also significant, because most
+known plasma instabilities occur much more quickly.  Also, use 
+of tritium to achieve high power levels enables researchers to 
+study plasmas under conditions closer to those of a working 
+fusion reactor.  There are effects due to the heavier tritium 
+ions, and due to the presence of highly energetic helium ions
+produced in the fusion reaction.  In particular, scientists
+were worried that the energetic He ions might trigger new plasma
+instabilities.  (Plasmas are notorious for finding new ways to
+misbehave whenever scientists manage to improve the operating 
+conditions.)  Fortunately, no major instabilities were observed,
+and in fact early reports are that plasma performance actually
+improves in high-power D-T conditions.  These results enhance
+the prospects for future experiments which will try to achieve
+even higher power outputs in nearly steady-state conditions.
+(See Section 8 for more information on future experiments.)
+
+
+***  B.  Recent Results on JET
+
+JET ran some experiments in 1991 using a 10% tritium mix, and 
+produced 1.7 megawatts of fusion power.  Since then researchers
+have been reconfiguring the machine.  (Anybody know if plasma
+operation has begun?)
+ 
+Appended below are comments adapted from a post I made on Feb 12, 
+1994 (which in turn referenced a Dec 14, 1993 posting by 
+Stephen Cooper at JET), which provide more background to the 
+JET & TFTR results.  
+
+
+***  C.  Recent Results in Inertial Confinement Fusion
+
+(Anybody got any info?  I haven't had time to look yet.)
+
+
+***  D.  Recent Results in Muon-Catalyzed Fusion
+(Based on information provided by Steven Jones of BYU.)
+
+Steven Jones posted on April 30:
+
+>In article <1994Apr27.214422.17681@debug.cuc.ab.ca>,
+>Lforbes@debug.cuc.ab.ca writes:
+>
+>>I have heard little lately (last year or so) about muon catalyzed 
+>>fusion; have there been any noteable developments?
+>
+>Not lately.  Not much has happened since DoE decided to cut funding 
+>in 1988, the year *before* cold fusion hit the fan, incidentally.
+>Despite the funding cut, we were able to do some experiments at 
+>LAMPF in 1989 and 1990, and we recently published a paper 
+>on results:
+>S.E. Jones, S.F. Taylor and A.N. Anderson, "Evaluation of 
+>muon-alpha sticking from liquid, non-equilibrated d-t targets 
+>with high tritium fractions," 
+>Hyperfine Interactions 82 (1993) 303-311.
+>
+>Other groups (PSI, Russia) are plugging along, and we're trying to
+>work out an international collaboration with them which looks 
+>fairly good right now, though funding is tight.
+
+
+***  E.  Recent major results from other experiments, and 
+theoretical work?
+
+
+
+(Anyone care to contribute anything major?)
+
+
+***  F.  Recent Political News
+
+* (a) U.S. Magnetic Fusion News:
+
+Congress postponed construction of TPX for a year pending
+(hopeful) passage of the fusion authorization bill.  Design 
+funding for TPX has been continued.  TPX construction funding 
+has been diverted to provide funds to extend D-T 
+experimentation on TFTR.  The authorization legislation was
+passed by both house and Senate, but the bills had conflicting
+provisions and Congress did not complete passage of a final bill
+this session.  The process will begin anew in the next legislative
+session.
+
+Meanwhile, Robert Hirsch has been hired by General Atomics.
+Hirsch is the former head of the fusion program and was recently
+working at the Electric Power Research Institute (EPRI).
+
+* (b) U.S. Inertial Fusion News
+
+(Are there any ICF gurus out there?)
+
+
+* (c) ITER News:
+
+Paul-Henri Rebut has been succeeded as head of ITER by
+Robert Aymar.  Concerns over ITER management have 
+been receiving press lately.
+
+
+* (d) European News:
+
+(What's going on in Europe these days?)
+
+
+* (e) Other world fusion news:
+
+(Japan?)
+
+
+***  G.  Appendix on TFTR and JET results
+
+*********************************************
+TFTR results vs JET results from 1991:
+(Written by Stephen R. Cooper at JET, with comments [like this] 
+by R.F. Heeter.)
+
+>From src@jet.uk Tue Dec 14 11:14:34 EST 1993
+Newsgroups: sci.physics.fusion
+Subject: Re: Laymen Q: Was Princeton's Fusion a 'breakthrough?'
+Organization: Joint European Torus
+References: <2ebdvg$44e@Mercury.mcs.com> <2ei3vk$o7o@mailer.fsu.edu>
+Date: Tue, 14 Dec 1993 12:01:28 GMT
+
+In <2ei3vk$o7o@mailer.fsu.edu> jac@ds8.scri.fsu.edu (Jim Carr)
+writes:
+>As I recall, the reports from JET in November 1991 indicated a Q of
+>about 1/9 for the light load of T, with plans to increase the T 
+>to 50% by 1996.  I think their extrapolation to 50% indicated 
+>they would be very close to breakeven at that point, but do not
+>recall the details. 
+
+>Could some JET person fill us in?
+
+[ Note by rfheeter: Q is the ratio of power produced in the
+machine by fusion to power put into the machine to heat
+the plasma. Q = 1 means fusion yield is equal to power
+input.  Economical fusion will require Q significantly 
+greater than 1.  See the glossary (Section 10) for more details.]
+
+Results quoted from "The JET Preliminary Tritium Experiment", 
+invited talk given to the 1992 International Conference on 
+Plasma Physics by P-H Rebut, Innsbruck, Austria, 29th June-3rd 
+July 1992).
+
+"Two Deuterium plasmas were heated by high power deuterium 
+neutral beams from fourteen sources and fuelled by two neutral 
+beam sources injecting tritium. In the best of the two D-T 
+discharges, the tritium concentration was about 11% of bulk plasma 
+at peak performance, when the total neutron emmision rate was 
+6.0E17 per second, with 1.7MW of fusion power. The fusion 
+amplification factor Q(DT) was 0.15. With an optimum tritium 
+concentration, this pulse would have produced a fusion power 
+of ~ 5MW and nominal Q(DT) of 0.46. The same extrapolation for 
+the best pure deuterium discharge of the PTE series gives about 
+11MW and a nominal Q(DT) of 1.14.
+
+[ Note by rfheeter:  neutral beams are made by accelerating
+deuterium ions, and then neutralizing the ions so that they
+can fly into the magnetic field of the tokamak without being
+deflected.  As they enter the plasma, they are re-ionized
+and their energy is subsequently shared with the other 
+ions in the plasma.  Thus this is a method for simultaneously
+heating and refueling the plasma. See glossary for more info...]
+
+The total integrated total neutron yield was 7.2E17 with an 
+accuracy of +/- 7% and the total fusion energy was about 2MJ. 
+The tritium injections last just 2 seconds out of a 10 second, 
+3MA flat top. The amount of tritium injected and the limited 
+number of shots were deliberatly restricted for operational 
+convenience."
+
+[ Note by rfheeter:  2 MJ = 2 million joules = 1 million
+watts for a duration of 2 seconds, or 2 million watts for
+a duration of one second.  1 Joule = 1 watt * 1 second.
+A "10 second, 3 MA flat top" refers to the relatively stable
+flat peak of a current-vs-time graph, indicating that
+the plasma current is stable at about 3 million amps
+(3 MA) for 10 seconds.  "Operational convenience" should
+probably be interpreted as "because we didn't want to
+make our reactor too radioactive, and tritium handling
+is a pain." - that's an editorial comment. ]
+
+--> Personal remarks start 
+[this Cooper writing now, and not quoting others.]
+
+The above seems to indicate that if JET had gone into it's full 
+D-T phase at this time and with this configuration, we certainly
+should have got to 50% of breakeven. As to if we could have 
+matched our best deuterium pulse, I guess we would have come 
+close especially as the TFTR results show no pathological 
+problems with a 50/50 D-T mix. But this is all hypothetical, 
+we no longer have anything like the configuration we had in 
+1991, we're just about to finish a major shutdown incorporating 
+a pumped divertor to look at impurity control and ash removal. 
+The old H mode shots that the 1991 experiment were based on 
+are a thing of the past and we'll have to wait and see how she 
+performs with the new configuration.
+
+[ Note by rfheeter: a "divertor" is a magnetic or physical
+way of channeling particles from the edge of the plasma
+out of the way, and helps to improve confinement of the plasma
+as well as remove impurities. "H mode" is a relatively
+stable operational mode of the tokamak, as contrasted with
+"L mode", which is less stable.  I believe H = High and
+L = Low, referring to high and low confinement.]
+
+[[ The rest of the article was about TFTR and not JET,
+and I have omitted it to save some space. ]]
+
+Stephen R Cooper                 Physics Operations Group
+src@jet.uk               Operations Division, JET.
+-	Disclaimer: Please note that the above is a personal view and 
+should not be construed as an official comment from the JET project.
+
+
+

@@ -1,0 +1,2175 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><!-- saved from url=(0058)http://www-i.nist.gov/admin/pba/kelly/divhome_template.htm -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Microsoft FrontPage 6.0">
+		<title>Data Analysis Sheet RS.1</title>
+		<script language="javascript"><!--
+//language is used to specify JavaScript as the language of choice 
+	
+function strainall(form) {
+
+	//  INPUTS
+	thick=eval(form.thick.value)
+	designL=eval(form.designL.value)
+	mag=eval(form.mag.value)
+	xcal=eval(form.xcal.value)
+	ainterx=eval(form.ainterx.value)
+	sigmax=eval(form.sigmax.value)
+	xres=eval(form.xres.value)
+	zcal=eval(form.zcal.value)
+	sigmaz=eval(form.sigmaz.value)
+	cert=eval(form.cert.value)
+	zres=eval(form.zres.value)
+	Ra=eval(form.Ra.value)
+
+	x1min=eval(form.x1min.value)
+	x1max=eval(form.x1max.value)
+	x2min=eval(form.x2min.value)
+	x2max=eval(form.x2max.value)
+
+	x1Fb=eval(form.x1Fb.value)
+	z1Fb=eval(form.z1Fb.value)
+	x2Fb=eval(form.x2Fb.value)
+	z2Fb=eval(form.z2Fb.value)
+	x3Fb=eval(form.x3Fb.value)
+	z3Fb=eval(form.z3Fb.value)
+
+	x1Sb=x3Fb
+	z1Sb=z3Fb
+	x2Sb=eval(form.x2Sb.value)
+	z2Sb=eval(form.z2Sb.value)
+	x3Sb=eval(form.x3Sb.value)
+	z3Sb=eval(form.z3Sb.value)
+	
+	x1Fc=eval(form.x1Fc.value)
+	z1Fc=eval(form.z1Fc.value)
+	x2Fc=eval(form.x2Fc.value)
+	z2Fc=eval(form.z2Fc.value)
+	x3Fc=eval(form.x3Fc.value)
+	z3Fc=eval(form.z3Fc.value)
+
+	x1Sc=x3Fc
+	z1Sc=z3Fc
+	x2Sc=eval(form.x2Sc.value)
+	z2Sc=eval(form.z2Sc.value)
+	x3Sc=eval(form.x3Sc.value)
+	z3Sc=eval(form.z3Sc.value)
+
+	x1Fd=eval(form.x1Fd.value)
+	z1Fd=eval(form.z1Fd.value)
+	x2Fd=eval(form.x2Fd.value)
+	z2Fd=eval(form.z2Fd.value)
+	x3Fd=eval(form.x3Fd.value)
+	z3Fd=eval(form.z3Fd.value)
+
+	x1Sd=x3Fd
+	z1Sd=z3Fd
+	x2Sd=eval(form.x2Sd.value)
+	z2Sd=eval(form.z2Sd.value)
+	x3Sd=eval(form.x3Sd.value)
+	z3Sd=eval(form.z3Sd.value)
+
+	// CALCULATIONS FOR TRACE "a" or "e"
+
+	x1mincal=x1min*xcal
+	x1maxcal=x1max*xcal
+	x2mincal=x2min*xcal
+	x2maxcal=x2max*xcal
+	x1ave=(x1mincal+x1maxcal)/2
+	x2ave=(x2mincal+x2maxcal)/2
+	ansLmin = x2mincal - x1mincal 
+	ansLmax = x2maxcal - x1maxcal
+	ansL = (ansLmin + ansLmax)/2
+	ansucLold = (ansLmax - ansLmin)/6
+	aLuncal = ansL/xcal
+	ansucLxcal = (sigmax/ainterx)*aLuncal
+	//---------------------------------
+	// Find ucLxres (for length not rs)
+	ansucLxres=xres*xcal/1.732
+	//--------------------------------
+	ansucL = Math.sqrt(ansucLold*ansucLold + ansucLxcal*ansucLxcal + ansucLxres*ansucLxres)
+	
+	ansx1ave=x1ave
+	ansx2ave=x2ave
+	form.ansx1ave.value=ansx1ave
+	form.ansx2ave.value=ansx2ave
+	form.ansL.value=ansL
+	form.ansucLold.value=ansucLold
+	form.ansucLxcal.value=ansucLxcal
+	form.ansucLxres.value=ansucLxres
+	form.ansucL.value=ansucL
+
+	// ASSIGNMENTS
+	// For Trace "b"
+	
+	x1F = x1Fb * xcal
+	x2F = x2Fb * xcal
+	x3F = x3Fb * xcal
+	z1F = z1Fb * zcal
+	z2F = z2Fb * zcal
+	z3F = z3Fb * zcal
+	
+	x1S = x1Sb * xcal
+	x2S = x2Sb * xcal
+	x3S = x3Sb * xcal
+	z1S = z1Sb * zcal
+	z2S = z2Sb * zcal
+	z3S = z3Sb * zcal
+	
+	rsb=0
+	strain(form)
+	signb=sign
+	ansaFb=aF
+	answ1Fb=w1F
+	ansaSb=aS
+	answ3Sb=w3S
+	form.ansaFb.value=ansaFb
+	form.answ1Fb.value=answ1Fb
+	form.ansaSb.value=ansaSb
+	form.answ3Sb.value=answ3Sb
+	ansxeFb=ansxeF
+	ansxeFb2=ansxeF
+	ansxeSb=ansxeS
+	ansxeSb2=ansxeS
+	form.ansxeFb.value=ansxeFb
+	form.ansxeFb2.value=ansxeFb2
+	form.ansxeSb.value=ansxeSb
+	form.ansxeSb2.value=ansxeSb2
+	anser0b=anser0*1e6
+	form.anser0b.value=anser0b
+	rsb=anser*1e6
+	anserb=rsb
+	form.anserb.value=anserb
+
+	// For Trace "c"
+	
+	x1F = x1Fc * xcal
+	x2F = x2Fc * xcal
+	x3F = x3Fc * xcal
+	z1F = z1Fc * zcal
+	z2F = z2Fc * zcal
+	z3F = z3Fc * zcal
+	
+	x1S = x1Sc * xcal
+	x2S = x2Sc * xcal
+	x3S = x3Sc * xcal
+	z1S = z1Sc * zcal
+	z2S = z2Sc * zcal
+	z3S = z3Sc * zcal
+
+	rsc=0
+	strain(form)
+	signc=sign
+	form.signc.value=signc
+	ansaFc=aF
+	answ1Fc=w1F
+	ansaSc=aS
+	answ3Sc=w3S
+	form.ansaFc.value=ansaFc
+	form.answ1Fc.value=answ1Fc
+	form.ansaSc.value=ansaSc
+	form.answ3Sc.value=answ3Sc
+	ansxeFc=ansxeF
+	ansxeFc2=ansxeF
+	ansxeSc=ansxeS
+	ansxeSc2=ansxeS
+	form.ansxeFc.value=ansxeFc
+	form.ansxeFc2.value=ansxeFc2
+	form.ansxeSc.value=ansxeSc
+	form.ansxeSc2.value=ansxeSc2
+	anser0c=anser0*1e6
+	form.anser0c.value=anser0c
+	rsc=anser*1e6
+	anserc=rsc
+	form.anserc.value=anserc
+	//------------------------------------------------
+	// 1. Find uzcal
+	// assume 99% extremes 
+	//
+	z1F = (z1Fc * zcal)
+	z2F = (z2Fc * zcal) + 3*(z2Fc*zcal - z1Fc*zcal)*sigmaz/cert
+	z3F = (z3Fc * zcal) + 3*(z3Fc*zcal - z1Fc*zcal)*sigmaz/cert
+	z1S = (z1Sc * zcal) + 3*(z1Sc*zcal - z1Fc*zcal)*sigmaz/cert
+	z2S = (z2Sc * zcal) + 3*(z2Sc*zcal - z1Fc*zcal)*sigmaz/cert
+	z3S = (z3Sc * zcal) + 3*(z3Sc*zcal - z1Fc*zcal)*sigmaz/cert
+	
+	rsup1=0
+	strain(form)
+	rsup1=anser*1e6
+	//----
+	z1F = (z1Fc * zcal)
+	z2F = (z2Fc * zcal) - 3*(z2Fc*zcal - z1Fc*zcal)*sigmaz/cert
+	z3F = (z3Fc * zcal) - 3*(z3Fc*zcal - z1Fc*zcal)*sigmaz/cert
+	z1S = (z1Sc * zcal) - 3*(z1Sc*zcal - z1Fc*zcal)*sigmaz/cert
+	z2S = (z2Sc * zcal) - 3*(z2Sc*zcal - z1Fc*zcal)*sigmaz/cert
+	z3S = (z3Sc * zcal) - 3*(z3Sc*zcal - z1Fc*zcal)*sigmaz/cert
+	
+	rsdown1=0
+	strain(form)
+	rsdown1=anser*1e6
+	//----
+	rslow=0
+	rshigh=0
+	if ((rsc < rsup1) && (rsc < rsdown1)) {rslow=rsc}
+	if ((rsup1 < rsc) && (rsup1 < rsdown1) ) {rslow=rsup1}
+	if ((rsdown1 < rsc) && (rsdown1 < rsup1)) {rslow=rsdown1}
+	
+	if ((rsc > rsup1) && (rsc > rsdown1)) {rshigh=rsc}
+	if ((rsup1 > rsc) && (rsup1 > rsdown1)) {rshigh=rsup1}
+	if ((rsdown1 > rsc) && (rsdown1 > rsup1)) {rshigh=rsdown1}
+	
+	whalf=(rshigh - rslow)/2
+	u1ptint=whalf/3
+	ansu1ptint=u1ptint
+	form.ansu1ptint.value=ansu1ptint
+	//------------------------------------------------
+	// 2. Find usamp
+	// assume 99% extremes 
+	//
+	sigmasamp=Ra/6
+	z2F = (z2Fc * zcal) + 3*sigmasamp
+	z2S = (z2Sc * zcal) + 3*sigmasamp
+	
+	z1F = (z1Fc * zcal) - 3*sigmasamp
+	z3F = (z3Fc * zcal) + 3*sigmasamp
+	z1S = (z1Sc * zcal) + 3*sigmasamp
+	z3S = (z3Sc * zcal) - 3*sigmasamp
+	rsup1=0
+	strain(form)
+	rsup1=anser*1e6
+ 	//----
+	z1F = (z1Fc * zcal) + 3*sigmasamp
+	z3F = (z3Fc * zcal) - 3*sigmasamp
+	z1S = (z1Sc * zcal) - 3*sigmasamp
+	z3S = (z3Sc * zcal) + 3*sigmasamp
+	rsup2=0
+	strain(form)
+	rsup2=anser*1e6
+	//----
+	z2F = (z2Fc * zcal) - 3*sigmasamp
+	z2S = (z2Sc * zcal) - 3*sigmasamp
+	
+	z1F = (z1Fc * zcal) - 3*sigmasamp
+	z3F = (z3Fc * zcal) + 3*sigmasamp
+	z1S = (z1Sc * zcal) + 3*sigmasamp
+	z3S = (z3Sc * zcal) - 3*sigmasamp
+	rsdown1=0
+	strain(form)
+	rsdown1=anser*1e6
+	//----
+	z1F = (z1Fc * zcal) + 3*sigmasamp
+	z3F = (z3Fc * zcal) - 3*sigmasamp
+	z1S = (z1Sc * zcal) - 3*sigmasamp
+	z3S = (z3Sc * zcal) + 3*sigmasamp
+	rsdown2=0
+	strain(form)
+	rsdown2=anser*1e6
+	//----
+	z2F = (z2Fc * zcal) 
+	z2S = (z2Sc * zcal) 
+	
+	z1F = (z1Fc * zcal) - 3*sigmasamp
+	z3F = (z3Fc * zcal) + 3*sigmasamp
+	z1S = (z1Sc * zcal) + 3*sigmasamp
+	z3S = (z3Sc * zcal) - 3*sigmasamp
+	rsn1=0
+	strain(form)
+	rsn1=anser*1e6
+	//----
+	z1F = (z1Fc * zcal) + 3*sigmasamp
+	z3F = (z3Fc * zcal) - 3*sigmasamp
+	z1S = (z1Sc * zcal) - 3*sigmasamp
+	z3S = (z3Sc * zcal) + 3*sigmasamp
+	rsn2=0
+	strain(form)
+	rsn2=anser*1e6
+	//----
+	rslow=0
+	rshigh=0
+	if ((rsc < rsup1) && (rsc < rsup2) && (rsc < rsdown1) && (rsc < rsdown2) && (rsc < rsn1) && (rsc < rsn2)) {rslow=rsc}
+	if ((rsup1 < rsc) && (rsup1 < rsup2) && (rsup1 < rsdown1) & (rsup1 < rsdown2) && (rsup1 < rsn1) && (rsup1 < rsn2)) {rslow=rsup1}
+	if ((rsup2 < rsc) && (rsup2 < rsup1) && (rsup2 < rsdown1) & (rsup2 < rsdown2) && (rsup2 < rsn1) && (rsup2 < rsn2)) {rslow=rsup2}
+	if ((rsdown1 < rsc) && (rsdown1 < rsup1) && (rsdown1 < rsup2) & (rsdown1 < rsdown2) && (rsdown1 < rsn1) && (rsdown1 < rsn2)) {rslow=rsdown1}
+	if ((rsdown2 < rsc) && (rsdown2 < rsup1) && (rsdown2 < rsup2) & (rsdown2 < rsdown1) && (rsdown2 < rsn1) && (rsdown2 < rsn2)) {rslow=rsdown2}
+	if ((rsn1 < rsc) && (rsn1 < rsup1) && (rsn1 < rsup2) & (rsn1 < rsdown1)&& (rsn1 < rsdown2) && (rsn1 < rsn2)) {rslow=rsn1}
+	if ((rsn2 < rsc) && (rsn2 < rsup1) && (rsn2 < rsup2) & (rsn2 < rsdown1)&& (rsn2 < rsdown2) && (rsn2 < rsn1)) {rslow=rsn2}
+
+	if ((rsc > rsup1) && (rsc > rsup2) && (rsc > rsdown1) && (rsc > rsdown2) && (rsc > rsn1) && (rsc > rsn2)) {rshigh=rsc}
+	if ((rsup1 > rsc) && (rsup1 > rsup2) && (rsup1 > rsdown1) & (rsup1 > rsdown2) && (rsup1 > rsn1) && (rsup1 > rsn2)) {rshigh=rsup1}
+	if ((rsup2 > rsc) && (rsup2 > rsup1) && (rsup2 > rsdown1) & (rsup2 > rsdown2) && (rsup2 > rsn1) && (rsup2 > rsn2)) {rshigh=rsup2}
+	if ((rsdown1 > rsc) && (rsdown1 > rsup1) && (rsdown1 > rsup2) & (rsdown1 > rsdown2) && (rsdown1 > rsn1) && (rsdown1 > rsn2)) {rshigh=rsdown1}
+	if ((rsdown2 > rsc) && (rsdown2 > rsup1) && (rsdown2 > rsup2) & (rsdown2 > rsdown1) && (rsdown2 > rsn1) && (rsdown2 > rsn2)) {rshigh=rsdown2}
+	if ((rsn1 > rsc) && (rsn1 > rsup1) && (rsn1 > rsup2) & (rsn1 > rsdown1) && (rsn1 > rsdown2) && (rsn1 > rsn2)) {rshigh=rsn1}
+	if ((rsn2 > rsc) && (rsn2 > rsup1) && (rsn2 > rsup2) & (rsn2 > rsdown1) && (rsn2 > rsdown2) && (rsn2 > rsn1)) {rshigh=rsn2}
+	
+	whalf=(rshigh - rslow)/2
+	u1ptsamp=whalf/3
+	ansu1ptsamp=u1ptsamp
+	form.ansu1ptsamp.value=ansu1ptsamp
+	//----------------------------------------
+	// 3. Find uzres
+	//
+	// assume 99% extremes 
+	//
+	x1ave=(x1mincal+x1maxcal)/2
+	x2ave=(x2mincal+x2maxcal)/2
+
+	z2F = (z2Fc * zcal) + zres/2
+	z2S = (z2Sc * zcal) + zres/2
+	
+	z1F = (z1Fc * zcal) - zres/2
+	z3F = (z3Fc * zcal) + zres/2
+	z1S = (z1Sc * zcal) + zres/2
+	z3S = (z3Sc * zcal) - zres/2
+	rsup1=0
+	strain(form)
+	rsup1=anser*1e6
+ 	//----
+	z1F = (z1Fc * zcal) + zres/2
+	z3F = (z3Fc * zcal) - zres/2
+	z1S = (z1Sc * zcal) - zres/2
+	z3S = (z3Sc * zcal) + zres/2
+	rsup2=0
+	strain(form)
+	rsup2=anser*1e6
+	//----
+	z2F = (z2Fc * zcal) - zres/2
+	z2S = (z2Sc * zcal) - zres/2
+	
+	z1F = (z1Fc * zcal) - zres/2
+	z3F = (z3Fc * zcal) + zres/2
+	z1S = (z1Sc * zcal) + zres/2
+	z3S = (z3Sc * zcal) - zres/2
+	rsdown1=0
+	strain(form)
+	rsdown1=anser*1e6
+	//----
+	z1F = (z1Fc * zcal) + zres/2
+	z3F = (z3Fc * zcal) - zres/2
+	z1S = (z1Sc * zcal) - zres/2
+	z3S = (z3Sc * zcal) + zres/2
+	rsdown2=0
+	strain(form)
+	rsdown2=anser*1e6
+	//----
+	z2F = (z2Fc * zcal) 
+	z2S = (z2Sc * zcal) 
+	
+	z1F = (z1Fc * zcal) - zres/2
+	z3F = (z3Fc * zcal) + zres/2
+	z1S = (z1Sc * zcal) + zres/2
+	z3S = (z3Sc * zcal) - zres/2
+	rsn1=0
+	strain(form)
+	rsn1=anser*1e6
+	//----
+	z1F = (z1Fc * zcal) + zres/2
+	z3F = (z3Fc * zcal) - zres/2
+	z1S = (z1Sc * zcal) - zres/2
+	z3S = (z3Sc * zcal) + zres/2
+	rsn2=0
+	strain(form)
+	rsn2=anser*1e6
+	//----
+	rslow=0
+	rshigh=0
+	if ((rsc < rsup1) && (rsc < rsup2) && (rsc < rsdown1) && (rsc < rsdown2) && (rsc < rsn1) && (rsc < rsn2)) {rslow=rsc}
+	if ((rsup1 < rsc) && (rsup1 < rsup2) && (rsup1 < rsdown1) & (rsup1 < rsdown2) && (rsup1 < rsn1) && (rsup1 < rsn2)) {rslow=rsup1}
+	if ((rsup2 < rsc) && (rsup2 < rsup1) && (rsup2 < rsdown1) & (rsup2 < rsdown2) && (rsup2 < rsn1) && (rsup2 < rsn2)) {rslow=rsup2}
+	if ((rsdown1 < rsc) && (rsdown1 < rsup1) && (rsdown1 < rsup2) & (rsdown1 < rsdown2) && (rsdown1 < rsn1) && (rsdown1 < rsn2)) {rslow=rsdown1}
+	if ((rsdown2 < rsc) && (rsdown2 < rsup1) && (rsdown2 < rsup2) & (rsdown2 < rsdown1) && (rsdown2 < rsn1) && (rsdown2 < rsn2)) {rslow=rsdown2}
+	if ((rsn1 < rsc) && (rsn1 < rsup1) && (rsn1 < rsup2) & (rsn1 < rsdown1)&& (rsn1 < rsdown2) && (rsn1 < rsn2)) {rslow=rsn1}
+	if ((rsn2 < rsc) && (rsn2 < rsup1) && (rsn2 < rsup2) & (rsn2 < rsdown1)&& (rsn2 < rsdown2) && (rsn2 < rsn1)) {rslow=rsn2}
+
+	if ((rsc > rsup1) && (rsc > rsup2) && (rsc > rsdown1) && (rsc > rsdown2) && (rsc > rsn1) && (rsc > rsn2)) {rshigh=rsc}
+	if ((rsup1 > rsc) && (rsup1 > rsup2) && (rsup1 > rsdown1) & (rsup1 > rsdown2) && (rsup1 > rsn1) && (rsup1 > rsn2)) {rshigh=rsup1}
+	if ((rsup2 > rsc) && (rsup2 > rsup1) && (rsup2 > rsdown1) & (rsup2 > rsdown2) && (rsup2 > rsn1) && (rsup2 > rsn2)) {rshigh=rsup2}
+	if ((rsdown1 > rsc) && (rsdown1 > rsup1) && (rsdown1 > rsup2) & (rsdown1 > rsdown2) && (rsdown1 > rsn1) && (rsdown1 > rsn2)) {rshigh=rsdown1}
+	if ((rsdown2 > rsc) && (rsdown2 > rsup1) && (rsdown2 > rsup2) & (rsdown2 > rsdown1) && (rsdown2 > rsn1) && (rsdown2 > rsn2)) {rshigh=rsdown2}
+	if ((rsn1 > rsc) && (rsn1 > rsup1) && (rsn1 > rsup2) & (rsn1 > rsdown1) && (rsn1 > rsdown2) && (rsn1 > rsn2)) {rshigh=rsn1}
+	if ((rsn2 > rsc) && (rsn2 > rsup1) && (rsn2 > rsup2) & (rsn2 > rsdown1) && (rsn2 > rsdown2) && (rsn2 > rsn1)) {rshigh=rsn2}
+	
+	whalf=(rshigh - rslow)/2
+	ansuczres=whalf/1.732
+	form.ansuczres.value=ansuczres
+	//----------------------------------------
+	// 4. Find uxres
+	//
+	xrescal=xres*xcal
+	x1ave=(x1mincal+x1maxcal)/2
+	x2ave=(x2mincal+x2maxcal)/2
+	z1F = z1Fc * zcal
+	z2F = z2Fc * zcal
+	z3F = z3Fc * zcal
+	z1S = z1Sc * zcal
+	z2S = z2Sc * zcal
+	z3S = z3Sc * zcal
+	
+	x1F = x1Fc * xcal + xrescal/2
+	x2F = x2Fc * xcal
+	x3F = x3Fc * xcal 
+	x1S = x1Sc * xcal 
+	x2S = x2Sc * xcal
+	x3S = x3Sc * xcal - xrescal/2
+	rsn1=0
+	strain(form)
+	rsn1=anser*1e6
+	
+	//----
+	x1F = x1Fc * xcal - xrescal/2
+	x2F = x2Fc * xcal
+	x3F = x3Fc * xcal 
+	x1S = x1Sc * xcal 
+	x2S = x2Sc * xcal
+	x3S = x3Sc * xcal + xrescal/2
+	rsn2=0
+	strain(form)
+	rsn2=anser*1e6
+	
+	//----
+	x1F = x1Fc * xcal + xrescal/2
+	x2F = x2Fc * xcal + xrescal/2
+	x3F = x3Fc * xcal 
+	x1S = x1Sc * xcal 
+	x2S = x2Sc * xcal - xrescal/2
+	x3S = x3Sc * xcal - xrescal/2
+	rsup1=0
+	strain(form)
+	rsup1=anser*1e6
+
+	//----
+	x1F = x1Fc * xcal - xrescal/2
+	x2F = x2Fc * xcal + xrescal/2
+	x3F = x3Fc * xcal 
+	x1S = x1Sc * xcal 
+	x2S = x2Sc * xcal - xrescal/2
+	x3S = x3Sc * xcal + xrescal/2
+	rsdown1=0
+	strain(form)
+	rsdown1=anser*1e6
+
+	//----
+	x1F = x1Fc * xcal + xrescal/2
+	x2F = x2Fc * xcal - xrescal/2
+	x3F = x3Fc * xcal 
+	x1S = x1Sc * xcal 
+	x2S = x2Sc * xcal + xrescal/2
+	x3S = x3Sc * xcal - xrescal/2
+	rsup2=0
+	strain(form)
+	rsup2=anser*1e6
+	
+	//----
+	x1F = x1Fc * xcal - xrescal/2
+	x2F = x2Fc * xcal - xrescal/2
+	x3F = x3Fc * xcal 
+	x1S = x1Sc * xcal 
+	x2S = x2Sc * xcal + xrescal/2
+	x3S = x3Sc * xcal + xrescal/2
+	rsdown2=0
+	strain(form)
+	rsdown2=anser*1e6
+
+	//----
+	rslow=0
+	rshigh=0
+	if ((rsc < rsup1) && (rsc < rsup2) && (rsc < rsdown1) && (rsc < rsdown2) && (rsc < rsn1) && (rsc < rsn2)) {rslow=rsc}
+	if ((rsup1 < rsc) && (rsup1 < rsup2) && (rsup1 < rsdown1) & (rsup1 < rsdown2) && (rsup1 < rsn1) && (rsup1 < rsn2)) {rslow=rsup1}
+	if ((rsup2 < rsc) && (rsup2 < rsup1) && (rsup2 < rsdown1) & (rsup2 < rsdown2) && (rsup2 < rsn1) && (rsup2 < rsn2)) {rslow=rsup2}
+	if ((rsdown1 < rsc) && (rsdown1 < rsup1) && (rsdown1 < rsup2) & (rsdown1 < rsdown2) && (rsdown1 < rsn1) && (rsdown1 < rsn2)) {rslow=rsdown1}
+	if ((rsdown2 < rsc) && (rsdown2 < rsup1) && (rsdown2 < rsup2) & (rsdown2 < rsdown1) && (rsdown2 < rsn1) && (rsdown2 < rsn2)) {rslow=rsdown2}
+	if ((rsn1 < rsc) && (rsn1 < rsup1) && (rsn1 < rsup2) & (rsn1 < rsdown1)&& (rsn1 < rsdown2) && (rsn1 < rsn2)) {rslow=rsn1}
+	if ((rsn2 < rsc) && (rsn2 < rsup1) && (rsn2 < rsup2) & (rsn2 < rsdown1)&& (rsn2 < rsdown2) && (rsn2 < rsn1)) {rslow=rsn2}
+
+	if ((rsc > rsup1) && (rsc > rsup2) && (rsc > rsdown1) && (rsc > rsdown2) && (rsc > rsn1) && (rsc > rsn2)) {rshigh=rsc}
+	if ((rsup1 > rsc) && (rsup1 > rsup2) && (rsup1 > rsdown1) & (rsup1 > rsdown2) && (rsup1 > rsn1) && (rsup1 > rsn2)) {rshigh=rsup1}
+	if ((rsup2 > rsc) && (rsup2 > rsup1) && (rsup2 > rsdown1) & (rsup2 > rsdown2) && (rsup2 > rsn1) && (rsup2 > rsn2)) {rshigh=rsup2}
+	if ((rsdown1 > rsc) && (rsdown1 > rsup1) && (rsdown1 > rsup2) & (rsdown1 > rsdown2) && (rsdown1 > rsn1) && (rsdown1 > rsn2)) {rshigh=rsdown1}
+	if ((rsdown2 > rsc) && (rsdown2 > rsup1) && (rsdown2 > rsup2) & (rsdown2 > rsdown1) && (rsdown2 > rsn1) && (rsdown2 > rsn2)) {rshigh=rsdown2}
+	if ((rsn1 > rsc) && (rsn1 > rsup1) && (rsn1 > rsup2) & (rsn1 > rsdown1) && (rsn1 > rsdown2) && (rsn1 > rsn2)) {rshigh=rsn1}
+	if ((rsn2 > rsc) && (rsn2 > rsup1) && (rsn2 > rsup2) & (rsn2 > rsdown1) && (rsn2 > rsdown2) && (rsn2 > rsn1)) {rshigh=rsn2}
+	
+	whalf=(rshigh - rslow)/2
+	ansucxres=whalf/1.732
+	form.ansucxres.value=ansucxres
+	//----------------------------------------
+	// 5. Find uxresL
+	//
+	xrescal=xres*xcal
+	
+	x1F = x1Fc * xcal
+	x2F = x2Fc * xcal
+	x3F = x3Fc * xcal
+	x1S = x1Sc * xcal
+	x2S = x2Sc * xcal
+	x3S = x3Sc * xcal
+
+	z1F = z1Fc * zcal
+	z2F = z2Fc * zcal
+	z3F = z3Fc * zcal
+	z1S = z1Sc * zcal
+	z2S = z2Sc * zcal
+	z3S = z3Sc * zcal
+	
+	x1minrescal=x1min*xcal-xrescal/2
+	x1maxrescal=x1max*xcal-xrescal/2
+	x2minrescal=x2min*xcal+xrescal/2
+	x2maxrescal=x2max*xcal+xrescal/2
+	x1ave=(x1minrescal+x1maxrescal)/2
+	x2ave=(x2minrescal+x2maxrescal)/2
+	rsmin=0
+	strain(form)
+	rsmin=anser*1e6
+	
+	x1minrescal=x1min*xcal+xrescal/2
+	x1maxrescal=x1max*xcal+xrescal/2
+	x2minrescal=x2min*xcal-xrescal/2
+	x2maxrescal=x2max*xcal-xrescal/2
+	x1ave=(x1minrescal+x1maxrescal)/2
+	x2ave=(x2minrescal+x2maxrescal)/2
+	rsmax=0
+	strain(form)
+	rsmax=anser*1e6
+
+	rslow=0
+	rshigh=0
+	if (rsmin < rsmax) {rslow=rsmin}
+	if (rsmax < rsmin) {rslow=rsmax}
+	if (rsmin > rsmax) {rshigh=rsmin}
+	if (rsmax > rsmin) {rshigh=rsmax}
+
+	whalf=(rshigh - rslow)/2
+	ansucxresL=whalf/1.732
+	form.ansucxresL.value=ansucxresL
+	//----------------------------------------
+	// 6. Find uL
+	//
+	x1F = x1Fc * xcal
+	x2F = x2Fc * xcal
+	x3F = x3Fc * xcal
+	x1S = x1Sc * xcal
+	x2S = x2Sc * xcal
+	x3S = x3Sc * xcal
+
+	z1F = z1Fc * zcal
+	z2F = z2Fc * zcal
+	z3F = z3Fc * zcal
+	z1S = z1Sc * zcal
+	z2S = z2Sc * zcal
+	z3S = z3Sc * zcal
+	x1ave=x1mincal
+	x2ave=x2mincal
+	rsmin=0
+	strain(form)
+	rsmin=anser*1e6
+
+	x1ave=x1maxcal
+	x2ave=x2maxcal
+	rsmax=0
+	strain(form)
+	rsmax=anser*1e6
+
+	rslow=0
+	rshigh=0
+	if (rsmin < rsmax) {rslow=rsmin}
+	if (rsmax < rsmin) {rslow=rsmax}
+	if (rsmin > rsmax) {rshigh=rsmin}
+	if (rsmax > rsmin) {rshigh=rsmax}
+	
+	whalf=(rshigh - rslow)/2
+	uL=whalf/3
+	ansuL=uL
+	form.ansuL.value=ansuL
+	//------------------------------------------
+	// 7. Find uW
+	//
+	// For Trace "d"
+	
+	x1ave=(x1mincal+x1maxcal)/2
+	x2ave=(x2mincal+x2maxcal)/2
+	
+	x1F = x1Fd * xcal
+	x2F = x2Fd * xcal
+	x3F = x3Fd * xcal
+	z1F = z1Fd * zcal
+	z2F = z2Fd * zcal
+	z3F = z3Fd * zcal
+	
+	x1S = x1Sd * xcal
+	x2S = x2Sd * xcal
+	x3S = x3Sd * xcal
+	z1S = z1Sd * zcal
+	z2S = z2Sd * zcal
+	z3S = z3Sd * zcal
+	
+	rsd=0
+	strain(form)
+	signd=sign
+	ansaFd=aF
+	answ1Fd=w1F
+	ansaSd=aS
+	answ3Sd=w3S
+	form.ansaFd.value=ansaFd
+	form.answ1Fd.value=answ1Fd
+	form.ansaSd.value=ansaSd
+	form.answ3Sd.value=answ3Sd
+	ansxeFd=ansxeF
+	ansxeFd2=ansxeF
+	ansxeSd=ansxeS
+	ansxeSd2=ansxeS
+	form.ansxeFd.value=ansxeFd
+	form.ansxeFd2.value=ansxeFd2
+	form.ansxeSd.value=ansxeSd
+	form.ansxeSd2.value=ansxeSd2
+	anser0d=anser0*1e6
+	form.anser0d.value=anser0d
+	rsd=anser*1e6
+	anserd=rsd
+	form.anserd.value=anserd
+
+	rslow=0
+	rshigh=0
+	if ((rsb < rsc) && (rsb < rsd)) {rslow=rsb}
+	if ((rsc < rsb) && (rsc < rsd)) {rslow=rsc}
+	if ((rsd < rsb) && (rsd < rsc)) {rslow=rsd}
+	
+	if ((rsb > rsc) && (rsb > rsd)) {rshigh=rsb}
+	if ((rsc > rsb) && (rsc > rsd)) {rshigh=rsc}
+	if ((rsd > rsb) && (rsd > rsc)) {rshigh=rsd}
+	
+	if (anserb == 0 || anserb == null || anserb == "" || isNaN(anserb) == true) {rslow=rsc}
+	if (anserb == 0 || anserb == null || anserb == "" || isNaN(anserb) == true) {rshigh=rsd}
+
+	if (anserc == 0 || anserc == null || anserc == "" || isNaN(anserc) == true) {rslow=rsb}
+	if (anserc == 0 || anserc == null || anserc == "" || isNaN(anserc) == true) {rshigh=rsd}
+	
+	if (anserd == 0 || anserd == null || anserd == "" || isNaN(anserd) == true) {rslow=rsb}
+	if (anserd == 0 || anserd == null || anserd == "" || isNaN(anserd) == true) {rshigh=rsc}
+
+	whalf=Math.abs(rshigh - rslow)/2
+	uW=whalf/1.732
+	ansuW=uW
+	form.ansuW.value=ansuW
+
+	ansucold=Math.sqrt(uW*uW + uL*uL + u1ptint*u1ptint + u1ptsamp*u1ptsamp)
+	//-------------------------------------------
+	// 8. Find uxcal
+	//
+	xcalmax=xcal+3*sigmax/ainterx
+	x1ave=xcalmax*(x1min+x1max)/2
+	x2ave=xcalmax*(x2min+x2max)/2
+	x1F = x1Fc * xcalmax
+	x2F = x2Fc * xcalmax
+	x3F = x3Fc * xcalmax
+	z1F = z1Fc * zcal
+	z2F = z2Fc * zcal
+	z3F = z3Fc * zcal
+	
+	x1S = x1Sc * xcalmax
+	x2S = x2Sc * xcalmax
+	x3S = x3Sc * xcalmax
+	z1S = z1Sc * zcal
+	z2S = z2Sc * zcal
+	z3S = z3Sc * zcal
+
+	ansermax=0
+	strain(form)
+	ansermax=anser*1e6
+	
+	xcalmin=xcal-3*sigmax/ainterx
+	x1ave=xcalmin*(x1min+x1max)/2
+	x2ave=xcalmin*(x2min+x2max)/2
+	x1F = x1Fc * xcalmin
+	x2F = x2Fc * xcalmin
+	x3F = x3Fc * xcalmin
+	z1F = z1Fc * zcal
+	z2F = z2Fc * zcal
+	z3F = z3Fc * zcal
+	
+	x1S = x1Sc * xcalmin
+	x2S = x2Sc * xcalmin
+	x3S = x3Sc * xcalmin
+	z1S = z1Sc * zcal
+	z2S = z2Sc * zcal
+	z3S = z3Sc * zcal
+
+	ansermin=0
+	strain(form)
+	ansermin=anser*1e6
+
+	ansucxcal=Math.abs((ansermax-ansermin))/6
+	form.ansucxcal.value=ansucxcal
+	
+	ansuc=Math.sqrt(ansucold*ansucold+ansucxcal*ansucxcal+ansuczres*ansuczres+ansucxres*ansucxres+ansucxresL*ansucxresL)
+	form.ansuc.value=ansuc
+
+	//  VERIFICATION
+	
+	verify()
+	form.anserror1.value=anserror1
+	form.anserror2.value=anserror2
+	form.anserror3.value=anserror3
+	form.anserror4.value=anserror4
+	form.anserror5.value=anserror5
+	form.anserror6.value=anserror6
+	form.anserror7.value=anserror7
+	form.anserror8.value=anserror8
+	form.anserror9.value=anserror9
+	form.anserror10.value=anserror10
+	form.anserror11.value=anserror11
+	form.anserror12.value=anserror12
+	form.anserror13.value=anserror13
+	form.anserror14.value=anserror14
+	form.anserror15.value=anserror15
+	form.anserror18.value=anserror18
+	form.anserror19.value=anserror19
+	form.anserror20.value=anserror20
+	form.anserror21.value=anserror21
+	form.anserror22.value=anserror22
+	form.anserror23.value=anserror23
+	form.anserror24.value=anserror24
+	form.anserror25.value=anserror25
+	form.anserror26.value=anserror26	
+	form.anserror27.value=anserror27
+	form.anserror28.value=anserror28
+	form.diffFb.value=diffFb
+	form.anserror29.value=anserror29
+	form.diffSb.value=diffSb
+	form.anserror30.value=anserror30
+	form.diffFc.value=diffFc
+	form.anserror31.value=anserror31
+	form.diffSc.value=diffSc
+	form.anserror32.value=anserror32
+	form.diffFd.value=diffFd
+	form.anserror33.value=anserror33
+	form.diffSd.value=diffSd
+	}
+
+function strain(form) {
+	sign=0
+	if (z3F > z1F) {sign=-1;
+		curve1up()}
+		else{sign=1;
+		curve1down()}
+
+	leng1()
+
+	if (z1S > z3S) {curve2up()}
+		else{curve2down()}
+
+	leng2()
+	
+	//  STRAIN CALCULATION FOLLOWS
+	
+	ansLc=ansLcF+ansLcS
+	ansLflat=x2ave - x1ave
+	ansdelL=ansLflat-ansLc
+	anser0=ansdelL/ansLc
+
+	//  ADDITIONAL CALCULATIONS
+
+	pi=3.14159
+	xeF = (pi*(x1F-x3F)/2 + x3F*(pi-w1F))/(pi-w1F)
+	xeS = ((3*pi/2 - w3S)*(x3S-x1S) + x3S*(w3S-pi))/(w3S-pi)
+	ansxeF = xeF
+	ansxeS = xeS
+	ansLep= xeS-xeF
+	ansLe=ansLc*ansLep/ansLflat
+
+	ansL0=(12*ansLe*ansLe*ansLc)/(12*ansLe*ansLe-pi*pi*thick*thick)
+	anser=(ansLflat - ansL0)/ansL0
+
+	// EXTRA ADDITIONAL CALCULATIONS
+
+	ansL0fixed=(3*ansLc*ansLc*ansLc)/(3*ansLc*ansLc-pi*pi*thick*thick)
+	ansL0pivot=(12*ansLc*ansLc*ansLc)/(12*ansLc*ansLc-pi*pi*thick*thick)
+	anserfixed=(ansLflat - ansL0fixed)/ansL0fixed
+	anserpivot=(ansLflat - ansL0pivot)/ansL0pivot
+	}
+
+function leng1(form) {
+	pi=3.14159
+	w1ave = w3F+(w3F-w1F)*(x1ave-x3F)/(x3F-x1F)
+	start = w1ave
+	Aprog=aF*(pi-start)/(x3F-x1ave)
+	last=pi
+	Lprog=0.0
+	xlast=start
+	zlast=Aprog*Math.cos(start)
+	n=0
+	nlast=1000
+	inc=(last-start)/nlast
+
+	for (n = 1 ; n <= nlast ; n++) {
+		x=xlast+inc
+		z=Aprog*Math.cos(x)
+		Lp=Math.sqrt((x-xlast)*(x-xlast)+(z-zlast)*(z-zlast))
+		Lprog=Lprog+Lp
+		xlast=x
+		zlast=z
+		}
+
+	Linum1=Lprog*(x3F-x1ave)/(pi-start)
+	ansLcF=Linum1
+	}
+
+function leng2(form) {
+	pi=3.14159
+	w2ave = w3S+(w3S-w1S)*(x2ave-x3S)/(x3S-x1S)
+	start = 2*pi-w2ave
+	Aprog=aS*(pi-start)/(x2ave-x1S)
+	last=pi
+	Lprog=0.0
+	xlast=start
+	zlast=Aprog*Math.cos(start)
+	n=0
+	nlast=1000
+	inc=(last-start)/nlast
+
+	for (n = 1 ; n <= nlast ; n++) {
+		x=xlast+inc
+		z=Aprog*Math.cos(x)
+		Lp=Math.sqrt((x-xlast)*(x-xlast)+(z-zlast)*(z-zlast))
+		Lprog=Lprog+Lp
+		xlast=x
+		zlast=z
+		}
+
+	Linum2=Lprog*(x2ave-x1S)/(pi-start)
+	ansLcS=Linum2
+	}
+
+function curve1up(form) {
+	pi=3.14159
+	n=0
+	w1F=0
+	w3F=pi
+	w1Fdelta=pi/2
+
+	for (n = 1 ; n <= 1000 ; n++) {
+		w2F=w3F+(w3F-w1F)*(x2F-x3F)/(x3F-x1F)
+		z2Fnew=((z1F-z3F)*Math.cos(w2F)+z3F*Math.cos(w1F)+z1F)/(Math.cos(w1F)+1)
+		w1Fold=w1F
+		if (z2F > z2Fnew) {w1F=w1F + w1Fdelta;}
+		if (z2F < z2Fnew) {w1F=w1F - w1Fdelta;}
+		w1Fnew=w1F
+		w1Fdelta=w1Fdelta/2
+		}
+
+	w1F=w1Fold
+	aF=(z3F-z1F)/(1+Math.cos(w1F))
+	}
+
+function curve1down(form) {
+	pi=3.14159
+	n=0
+	w1F=0
+	w3F=pi
+	w1Fdelta=pi/2
+
+	for (n = 1 ; n <= 1000 ; n++) {
+		w2F=w3F+(w3F-w1F)*(x2F-x3F)/(x3F-x1F)
+		z2Fnew=((z1F-z3F)*Math.cos(w2F)+z3F*Math.cos(w1F)+z1F)/(Math.cos(w1F)+1)
+		w1Fold=w1F
+		if (z2F > z2Fnew) {w1F=w1F - w1Fdelta;}
+		if (z2F < z2Fnew) {w1F=w1F + w1Fdelta;}
+		w1Fnew=w1F
+		w1Fdelta=w1Fdelta/2
+		}
+
+	w1F=w1Fold
+	aF=(z1F-z3F)/(1+Math.cos(w1F))
+	}
+
+function curve2up(form) {
+	pi=3.14159
+	n=0
+	w1S=pi
+	w3S=2*pi
+	w3Sdelta=pi/2
+
+	for (n = 1 ; n <= 1000 ; n++) {
+		w2S=w3S+(w3S-w1S)*(x2S-x3S)/(x3S-x1S)
+		z2Snew=((z3S-z1S)*Math.cos(w2S)+z1S*Math.cos(w3S)+z3S)/(Math.cos(w3S)+1)
+		w3Sold=w3S
+		if (z2S > z2Snew) {w3S=w3S - w3Sdelta;}
+		if (z2S < z2Snew) {w3S=w3S + w3Sdelta;}
+		w3Snew=w3S
+		w3Sdelta=w3Sdelta/2
+		}
+
+	w3S=w3Sold
+	aS=(z1S-z3S)/(1+Math.cos(w3S))
+	}
+
+function curve2down(form) {
+	pi=3.14159
+	n=0
+	w1S=pi
+	w3S=2*pi
+	w3Sdelta=pi/2
+
+	for (n = 1 ; n <= 1000 ; n++) {
+		w2S=w3S+(w3S-w1S)*(x2S-x3S)/(x3S-x1S)
+		z2Snew=((z3S-z1S)*Math.cos(w2S)+z1S*Math.cos(w3S)+z3S)/(Math.cos(w3S)+1)
+		w3Sold=w3S
+		if (z2S > z2Snew) {w3S=w3S + w3Sdelta;}
+		if (z2S < z2Snew) {w3S=w3S - w3Sdelta;}
+		w3Snew=w3S
+		w3Sdelta=w3Sdelta/2
+		}
+
+	w3S=w3Sold
+	aS=(z3S-z1S)/(1+Math.cos(w3S))
+	}
+
+function verify(form) {
+	anserror1="ok"
+	if (thick == "" || thick == null || thick == 0) {anserror1="wait"}
+	if (designL == "" || designL == null || designL == 0) {anserror1="wait"}
+	if (mag == "" || mag == null || mag == 0) {anserror1="wait"}
+	if (xcal == "" || xcal == null || xcal == 0) {anserror1="wait"}
+	if (ainterx == "" || ainterx == null || ainterx == 0) {anserror1="wait"}
+	if (sigmax == "" || sigmax == null || sigmax == 0) {anserror1="wait"}
+	if (xres == "" || xres == null || xres == 0) {anserror1="wait"}
+	if (zcal == "" || zcal == null || zcal == 0) {anserror1="wait"}
+	if (sigmaz == "" || sigmaz == null || sigmaz == 0) {anserror1="wait"}
+	if (cert == "" || cert == null || cert == 0) {anserror1="wait"}
+	if (zres == "" || zres == null || zres == 0) {anserror1="wait"}
+	if (Ra == "" || Ra == null || Ra == 0) {anserror1="wait"}
+		
+	if (x1max == "" || x1max == null || x1max == 0) {anserror1="wait"}
+	if (x1min == "" || x1min == null || x1min == 0) {anserror1="wait"}
+	if (x2min == "" || x2min == null || x2min == 0) {anserror1="wait"}
+	if (x2max == "" || x2max == null || x2max == 0) {anserror1="wait"}
+		
+	if (x1Fb == "" || x1Fb == null || x1Fb == 0) {anserror1="wait"}
+	if (x2Fb == "" || x2Fb == null || x2Fb == 0) {anserror1="wait"}
+	if (x3Fb == "" || x3Fb == null || x3Fb == 0) {anserror1="wait"}
+	if (z1Fb == "" || z1Fb == null || z1Fb == 0) {anserror1="wait"}
+	if (z2Fb == "" || z2Fb == null || z2Fb == 0) {anserror1="wait"}
+	if (z3Fb == "" || z3Fb == null || z3Fb == 0) {anserror1="wait"}
+	if (x2Sb == "" || x2Sb == null || x2Sb == 0) {anserror1="wait"}
+	if (x3Sb == "" || x3Sb == null || x3Sb == 0) {anserror1="wait"}
+	if (z2Sb == "" || z2Sb == null || z2Sb == 0) {anserror1="wait"}
+	if (z3Sb == "" || z3Sb == null || z3Sb == 0) {anserror1="wait"}
+	
+	if (x1Fc == "" || x1Fc == null || x1Fc == 0) {anserror1="wait"}
+	if (x2Fc == "" || x2Fc == null || x2Fc == 0) {anserror1="wait"}
+	if (x3Fc == "" || x3Fc == null || x3Fc == 0) {anserror1="wait"}
+	if (z1Fc == "" || z1Fc == null || z1Fc == 0) {anserror1="wait"}
+	if (z2Fc == "" || z2Fc == null || z2Fc == 0) {anserror1="wait"}
+	if (z3Fc == "" || z3Fc == null || z3Fc == 0) {anserror1="wait"}
+	if (x2Sc == "" || x2Sc == null || x2Sc == 0) {anserror1="wait"}
+	if (x3Sc == "" || x3Sc == null || x3Sc == 0) {anserror1="wait"}
+	if (z2Sc == "" || z2Sc == null || z2Sc == 0) {anserror1="wait"}
+	if (z3Sc == "" || z3Sc == null || z3Sc == 0) {anserror1="wait"}
+
+	if (x1Fd == "" || x1Fd == null || x1Fd == 0) {anserror1="wait"}
+	if (x2Fd == "" || x2Fd == null || x2Fd == 0) {anserror1="wait"}
+	if (x3Fd == "" || x3Fd == null || x3Fd == 0) {anserror1="wait"}
+	if (z1Fd == "" || z1Fd == null || z1Fd == 0) {anserror1="wait"}
+	if (z2Fd == "" || z2Fd == null || z2Fd == 0) {anserror1="wait"}
+	if (z3Fd == "" || z3Fd == null || z3Fd == 0) {anserror1="wait"}
+	if (x2Sd == "" || x2Sd == null || x2Sd == 0) {anserror1="wait"}
+	if (x3Sd == "" || x3Sd == null || x3Sd == 0) {anserror1="wait"}
+	if (z2Sd == "" || z2Sd == null || z2Sd == 0) {anserror1="wait"}
+	if (z3Sd == "" || z3Sd == null || z3Sd == 0) {anserror1="wait"}
+	
+	if (ansx1ave == "" || ansx1ave == null || ansx1ave == 0) {anserror1="wait"}
+	if (ansx2ave == "" || ansx2ave == null || ansx2ave == 0) {anserror1="wait"}
+	if (ansL == "" || ansL == null || ansL == 0) {anserror1="wait"}
+	if (ansucLold == "" || ansucLold == null || ansucLold == 0) {anserror1="wait"}
+	if (ansucLxcal == "" || ansucLxcal == null || ansucLxcal == 0) {anserror1="wait"}
+	if (ansucLxres == "" || ansucLxres == null || ansucLxres == 0) {anserror1="wait"}
+	if (ansucL == "" || ansucL == null || ansucL == 0) {anserror1="wait"}
+
+	if (signc == "" || signc == null || signc == 0) {anserror1="wait"}
+	if (ansaFb == "" || ansaFb == null || ansaFb == 0) {anserror1="wait"}
+	if (answ1Fb == "" || answ1Fb == null || answ1Fb == 0) {anserror1="wait"}
+	if (ansaSb == "" || ansaSb == null || ansaSb == 0) {anserror1="wait"}
+	if (answ3Sb == "" || answ3Sb == null || answ3Sb == 0) {anserror1="wait"}	
+	if (ansxeFb == "" || ansxeFb == null || ansxeFb == 0) {anserror1="wait"}
+	if (ansxeSb == "" || ansxeSb == null || ansxeSb == 0) {anserror1="wait"}
+	if (anser0b == "" || anser0b == null || anser0b == 0) {anserror1="wait"}
+	if (anserb == "" || anserb == null || anserb == 0) {anserror1="wait"}
+
+	if (ansaFc == "" || ansaFc == null || ansaFc == 0) {anserror1="wait"}
+	if (answ1Fc == "" || answ1Fc == null || answ1Fc == 0) {anserror1="wait"}
+	if (ansaSc == "" || ansaSc == null || ansaSc == 0) {anserror1="wait"}
+	if (answ3Sc == "" || answ3Sc == null || answ3Sc == 0) {anserror1="wait"}	
+	if (ansxeFc == "" || ansxeFc == null || ansxeFc == 0) {anserror1="wait"}
+	if (ansxeSc == "" || ansxeSc == null || ansxeSc == 0) {anserror1="wait"}
+	if (anser0c == "" || anser0c == null || anser0c == 0) {anserror1="wait"}
+	if (anserc == "" || anserc == null || anserc == 0) {anserror1="wait"}
+	if (ansuW == "" || ansuW == null || ansuW == 0) {anserror1="wait"}
+	if (ansuL == "" || ansuL == null || ansuL == 0) {anserror1="wait"}
+	if (ansu1ptint == "" || ansu1ptint == null || ansu1ptint == 0) {anserror1="wait"}
+	if (ansu1ptsamp == "" || ansu1ptsamp == null || ansu1ptsamp == 0) {anserror1="wait"}
+	if (ansucxcal == "" || ansucxcal == null || ansucxcal == 0) {anserror1="wait"}
+	if (ansuczres == "" || ansuczres == null || ansuczres == 0) {anserror1="wait"}
+	if (ansucxres == "" || ansucxres == null || ansucxres == 0) {anserror1="wait"}
+	if (ansucxresL == "" || ansucxresL == null || ansucxresL == 0) {anserror1="wait"}
+	if (ansuc == "" || ansuc == null || ansuc == 0) {anserror1="wait"}
+	
+	if (ansaFd == "" || ansaFd == null || ansaFd == 0) {anserror1="wait"}
+	if (answ1Fd == "" || answ1Fd == null || answ1Fd == 0) {anserror1="wait"}
+	if (ansaSd == "" || ansaSd == null || ansaSd == 0) {anserror1="wait"}
+	if (answ3Sd == "" || answ3Sd == null || answ3Sd == 0) {anserror1="wait"}			
+	if (ansxeFd == "" || ansxeFd == null || ansxeFd == 0) {anserror1="wait"}
+	if (ansxeSd == "" || ansxeSd == null || ansxeSd == 0) {anserror1="wait"}
+	if (anser0d == "" || anser0d == null || anser0d == 0) {anserror1="wait"}
+	if (anserd == "" || anserd == null || anserd == 0) {anserror1="wait"}
+	
+	anserror2="ok"
+	if (thick <= 0.000 || thick >= 10.000) {anserror2="wait"}
+			
+	anserror3="ok"
+	if (designL <= 0.0 || designL >= 1000.0) {anserror3="wait"}
+		
+	anserror4="ok"
+	if (ansL > designL + 3*ansucL) {anserror4="wait"}
+	if (ansL < designL - 3*ansucL) {anserror4="wait"}
+
+	anserror5="ok"
+	if ((designL <= 60) && (mag < 70)) {anserror5="wait"}
+	if ((designL <= 130) && (mag < 35)) {anserror5="wait"}
+	if ((designL <= 260) && (mag < 15)) {anserror5="wait"}
+	if ((designL <= 580) && (mag < 8)) {anserror5="wait"}
+	if ((designL <= 1140) && (mag < 3)) {anserror5="wait"}
+
+	anserror6="ok"
+	if (mag <= 2.5) {anserror6="wait"}
+
+	anserror7="ok"
+	if (xcal == 1.0 || xcal <= 0.95 || xcal >= 1.05) {anserror7="wait"}
+		
+	anserror8="ok"
+	if (ainterx <= 0.0 || ainterx >= 1500.0) {anserror8="wait"}
+	
+	anserror9="ok"
+	if (sigmax >= 4.0 || sigmax <= 0.0) {anserror9="wait"}
+
+	anserror10="ok"
+	if (xres <= 0.0 || xres >= 2.00) {anserror10="wait"}
+	
+	anserror11="ok"
+	if (zcal == 1.0 || zcal <= 0.95 || zcal >= 1.05) {anserror11="wait"}
+
+	anserror12="ok"
+	if (sigmaz <= 0.0 || sigmaz >= 0.050) {anserror12="wait"}
+	
+	anserror13="ok"
+	if (cert <= 0.0 || cert >= 25.0) {anserror13="wait"}
+
+	anserror14="ok"
+	if (zres <= 0.0 || zres > 0.005) {anserror14="wait"}
+	
+	anserror15="ok"
+	if (Ra <= 0.0 || Ra >= 0.100) {anserror15="wait"}
+
+	anserror18="wait"
+	if (x1min > x1max) {anserror18="ok"}
+	
+	anserror19="wait"
+	if (x2min > x1min) {anserror19="ok"}
+		
+	anserror20="wait"
+	if (x2max > x2min) {anserror20="ok"}
+	
+	anserror21="ok"
+	if ((x1min - x1max)*xcal > 10 || (x1max - x1min)*xcal > 10) {anserror21="wait"}
+
+	anserror22="ok"
+	if ((x2max - x2min)*xcal > 10 || (x2min - x2max)*xcal > 10) {anserror22="wait"}
+	
+	anserror23="wait"
+	if ((signb == signc) && (signb == signd)) {anserror23="ok"}
+			
+	anserror24="wait"
+	anszone=1
+	ansztwo=1
+	anszthree=1
+	if (ansx1ave <= x1Fb*xcal) {anszone=0}
+	if (ansx1ave <= x1Fc*xcal) {ansztwo=0}
+	if (ansx1ave <= x1Fd*xcal) {anszthree=0}
+	if (anszone + ansztwo + anszthree == 0) {anserror24="ok"}
+
+	anserror25="wait"
+	ansyone=1
+	ansytwo=1
+	ansythree=1
+	if (x3Sb*xcal <= ansx2ave) {ansyone=0}
+	if (x3Sc*xcal <= ansx2ave) {ansytwo=0}
+	if (x3Sd*xcal <= ansx2ave) {ansythree=0}
+	if (ansyone + ansytwo + ansythree == 0) {anserror25="ok"}
+		
+	anserror26="wait"
+	ansxone=1
+	ansxtwo=1
+	ansxthree=1	
+	if ((x1Fb < x2Fb) && (x2Fb < x3Fb)) {ansxone=0}
+	if ((x1Fc < x2Fc) && (x2Fc < x3Fc)) {ansxtwo=0}
+	if ((x1Fd < x2Fd) && (x2Fd < x3Fd)) {ansxthree=0}
+	if (ansxone + ansxtwo + ansxthree == 0) {anserror26="ok"}
+	
+	anserror27="wait"
+	answone=1
+	answtwo=1
+	answthree=1	
+	if ((x1Sb < x2Sb) && (x2Sb < x3Sb)) {answone=0}
+	if ((x1Sc < x2Sc) && (x2Sc < x3Sc)) {answtwo=0}
+	if ((x1Sd < x2Sd) && (x2Sd < x3Sd)) {answthree=0}
+	if (answone + answtwo + answthree == 0) {anserror27="ok"}
+			
+	anserror28="wait"
+	diffFb = Math.abs((x2Fb*xcal) - ansxeFb)
+	if (diffFb < 5) {anserror28="ok"}
+	
+	anserror29="wait"
+	diffSb = Math.abs((x2Sb*xcal) - ansxeSb)
+	if (diffSb < 5) {anserror29="ok"}
+
+	anserror30="wait"
+	diffFc = Math.abs((x2Fc*xcal) - ansxeFc)
+	if (diffFc < 5) {anserror30="ok"}
+
+	anserror31="wait"
+	diffSc = Math.abs((x2Sc*xcal) - ansxeSc)
+	if (diffSc < 5) {anserror31="ok"}
+
+	anserror32="wait"
+	diffFd = Math.abs((x2Fd*xcal) - ansxeFd)
+	if (diffFd < 5) {anserror32="ok"}
+
+	anserror33="wait"
+	diffSd = Math.abs((x2Sd*xcal) - ansxeSd)
+	if (diffSd < 5) {anserror33="ok"}
+	}
+	
+function aligny(form) {
+	anserror16="ok"
+	form.anserror16.value=anserror16
+	}
+	
+function alignn(form) {
+	anserror16="wait"
+	form.anserror16.value=anserror16
+	}
+	
+function alevely(form) {
+	anserror17="ok"
+	form.anserror17.value=anserror17
+	}
+	
+function aleveln(form) {
+	anserror17="wait"
+	form.anserror17.value=anserror17
+	}
+
+function clearout(form) {
+	form.ansx1ave.value = ""
+	form.ansx2ave.value = ""
+	form.ansL.value = ""
+	form.ansucLold.value = ""
+	form.ansucLxcal.value = ""
+	form.ansucLxres.value = ""
+	form.ansucL.value = ""
+	form.signc.value = ""
+	form.ansaFb.value = ""
+	form.answ1Fb.value = ""
+	form.ansaSb.value = ""
+	form.answ3Sb.value = ""
+	form.ansxeFb.value = ""
+	form.ansxeFb2.value = ""
+	form.ansxeSb.value = ""
+	form.ansxeSb2.value = ""
+	form.anser0b.value = ""
+	form.anserb.value = ""
+
+	form.ansaFc.value = ""
+	form.answ1Fc.value = ""
+	form.ansaSc.value = ""
+	form.answ3Sc.value = ""
+	form.ansxeFc.value = ""
+	form.ansxeFc2.value = ""
+	form.ansxeSc.value = ""
+	form.ansxeSc2.value = ""
+	form.anser0c.value = ""
+	form.anserc.value = ""
+	form.ansuW.value = ""
+	form.ansuL.value = ""
+	form.ansu1ptint.value = ""
+	form.ansu1ptsamp.value = ""
+	form.ansucxcal.value = ""
+	form.ansuczres.value = ""
+	form.ansucxres.value = ""
+	form.ansucxresL.value = ""
+	form.ansuc.value = ""
+	
+	form.ansaFd.value = ""
+	form.answ1Fd.value = ""
+	form.ansaSd.value = ""
+	form.answ3Sd.value = ""
+	form.ansxeFd.value = ""
+	form.ansxeFd2.value = ""
+	form.ansxeSd.value = ""
+	form.ansxeSd2.value = ""
+	form.anser0d.value = ""
+	form.anserd.value = ""
+
+	form.anserror1.value="wait"
+	form.anserror2.value=""
+	form.anserror3.value=""
+	form.anserror4.value=""
+	form.anserror5.value=""
+	form.anserror6.value=""
+	form.anserror7.value=""
+	form.anserror8.value=""
+	form.anserror9.value=""
+	form.anserror10.value=""
+	form.anserror11.value=""
+	form.anserror12.value=""
+	form.anserror13.value=""
+	form.anserror14.value=""
+	form.anserror15.value=""
+	form.anserror18.value=""
+	form.anserror19.value=""
+	form.anserror20.value=""
+	form.anserror21.value=""
+	form.anserror22.value=""
+	form.anserror23.value=""
+	form.anserror24.value=""
+	form.anserror25.value=""
+	form.anserror26.value=""
+	form.anserror27.value=""
+	form.anserror28.value=""
+	form.diffFb.value=""
+	form.anserror29.value=""
+	form.diffSb.value=""
+	form.anserror30.value=""
+	form.diffFc.value=""
+	form.anserror31.value=""
+	form.diffSc.value=""
+	form.anserror32.value=""
+	form.diffFd.value=""
+	form.anserror33.value=""
+	form.diffSd.value=""
+	}
+
+function sample(form) {
+	form.file3D.value = ""
+	form.file2D1.value = ""
+	form.file2D2.value = ""
+	form.file2D3.value = ""
+	form.file2D4.value = ""
+	form.file2D5.value = ""
+	form.material[0].checked=true
+	form.thick.value = "2.0186"
+	form.designL.value = 600.0
+	form.mag.value = 5.0
+	form.xcal.value = 1.01424
+	form.ainterx.value = 1148.64
+	form.sigmax.value = 1.667
+	form.xres.value = 1.5628
+	form.zcal.value = 1.00527
+	form.sigmaz.value = .025
+	form.cert.value = 9.887
+	form.zres.value = 0.001
+	form.Ra.value = .020
+
+	form.x1max.value = 323.494
+	form.x1min.value = 329.745
+	form.x2min.value = 914.221
+	form.x2max.value = 920.472
+	
+	form.x1Fb.value = 350.061
+	form.x2Fb.value = 465.706
+	form.x3Fb.value = 609.481
+	form.z1Fb.value = 4.13177
+	form.z2Fb.value = 3.70983
+	form.z3Fb.value = 3.25714
+	form.x2Sb.value = 761.069
+	form.x3Sb.value = 900.156
+	form.z2Sb.value = 3.71501
+	form.z3Sb.value = 4.15851
+
+	form.x1Fc.value = 350.061
+	form.x2Fc.value = 465.706
+	form.x3Fc.value = 612.606
+	form.z1Fc.value = 4.13709
+	form.z2Fc.value = 3.71638
+	form.z3Fc.value = 3.26271
+	form.x2Sc.value = 761.069
+	form.x3Sc.value = 900.156
+	form.z2Sc.value = 3.7171
+	form.z3Sc.value = 4.1645
+
+	form.x1Fd.value = 350.061
+	form.x2Fd.value = 465.706
+	form.x3Fd.value = 611.043
+	form.z1Fd.value = 4.11566
+	form.z2Fd.value = 3.7036
+	form.z3Fd.value = 3.26349
+	form.x2Sd.value = 761.069
+	form.x3Sd.value = 900.156
+	form.z2Sd.value = 3.71849
+	form.z3Sd.value = 4.166
+
+	form.ansx1ave.value = ""
+	form.ansx2ave.value = ""
+	form.ansL.value = ""
+	form.ansucLold.value = ""
+	form.ansucLxcal.value = ""
+	form.ansucLxres.value = ""
+	form.ansucL.value = ""
+	form.signc.value = ""
+	form.ansaFb.value = ""
+	form.answ1Fb.value = ""
+	form.ansaSb.value = ""
+	form.answ3Sb.value = ""
+	form.ansxeFb.value = ""
+	form.ansxeFb2.value = ""
+	form.ansxeSb.value = ""
+	form.ansxeSb2.value = ""
+	form.anser0b.value = ""
+	form.anserb.value = ""
+
+	form.ansaFc.value = ""
+	form.answ1Fc.value = ""
+	form.ansaSc.value = ""
+	form.answ3Sc.value = ""
+	form.ansxeFc.value = ""
+	form.ansxeFc2.value = ""
+	form.ansxeSc.value = ""
+	form.ansxeSc2.value = ""
+	form.anser0c.value = ""
+	form.anserc.value = ""
+	form.ansuW.value = ""
+	form.ansuL.value = ""
+	form.ansu1ptint.value = ""
+	form.ansu1ptsamp.value = ""
+	form.ansucxcal.value = ""
+	form.ansuczres.value = ""
+	form.ansucxres.value = ""
+	form.ansucxresL.value = ""
+	form.ansuc.value = ""
+	
+	form.ansaFd.value = ""
+	form.answ1Fd.value = ""
+	form.ansaSd.value = ""
+	form.answ3Sd.value = ""
+	form.ansxeFd.value = ""
+	form.ansxeFd2.value = ""
+	form.ansxeSd.value = ""
+	form.ansxeSd2.value = ""
+	form.anser0d.value = ""
+	form.anserd.value = ""
+
+	form.anserror1.value="wait"
+	form.anserror2.value=""
+	form.anserror3.value=""
+	form.anserror4.value=""
+	form.anserror5.value=""
+	form.anserror6.value=""
+	form.anserror7.value=""
+	form.anserror8.value=""
+	form.anserror9.value=""
+	form.anserror10.value=""
+	form.anserror11.value=""
+	form.anserror12.value=""
+	form.anserror13.value=""
+	form.anserror14.value=""
+	form.anserror15.value=""
+	form.anserror18.value=""
+	form.anserror19.value=""
+	form.anserror20.value=""
+	form.anserror21.value=""
+	form.anserror22.value=""
+	form.anserror23.value=""
+	form.anserror24.value=""
+	form.anserror25.value=""
+	form.anserror26.value=""
+	form.anserror27.value=""
+	form.anserror28.value=""
+	form.diffFb.value=""
+	form.anserror29.value=""
+	form.diffSb.value=""
+	form.anserror30.value=""
+	form.diffFc.value=""
+	form.anserror31.value=""
+	form.diffSc.value=""
+	form.anserror32.value=""
+	form.diffFd.value=""
+	form.anserror33.value=""
+	form.diffSd.value=""
+	}
+// -->
+		</script>
+        <style><!--
+body { color: blue }-->
+		</style>
+	</head>
+
+	<body bgcolor="white">
+		<table cellspacing="0" cellpadding="0" width="1005" align="center" border="0" hspace="0" vspace="0">
+	<img alt="Semiconductor Electronics Division Banner" src="../8-MainCalculatorImages/banner.gif" height="68" width="1005" border="0" usemap="#bannEEEL Link" align="left"><map name="bannEEEL Link"><area href="http://www.eeel.nist.gov" coords="13,7,346,26" shape="rect" alt="EEEL Home Page"><area href="http://www.nist.gov" coords="598,1,741,60" shape="rect" alt="NIST home page"></map>
+
+		</table>
+		<table cellspacing="0" cellpadding="0" align="left" border="0" width="98%">
+			<tbody>
+				<tr>
+					<td valign="top" width="1"><img height="5" src="../index_files/black_1pix.gif" width="1" border="0"></td>
+					<td valign="top" width="1000">
+						<table cellspacing="0" cellpadding="0" width="95%" align="center" border="0">
+							<tbody>
+								<tr valign="top" align="left">
+									<td width="990">
+										<div align="left">
+											<form name="formx" method="POST" action="http://www.nist.gov/cgi-bin/eeel/DataSheetG.pl" onsubmit="alert('Your data will be submitted to the round robin.')">
+											<font color="black">&nbsp;</font><font color="blue" size="6"><b>Data 
+											Analysis Sheet RS.1</b></font></div>
+										<div align="left">
+											<p class="MsoNormal"><b>Data 
+											analysis sheet for residual strain 
+											measurements</b></p>
+										</div>
+										<div align="left">
+											<p><font color="black"><img border="0" src="../2-DataSheetRS/FigureRS.1.1.gif" width="436" height="132" alt="Top view of fixed-fixed beam used to measure residual strain."></font></p>
+										</div>
+										<div align="left">
+											<p><font color="black">Figure 
+											RS.1.1.<span style="mso-spacerun: yes">&nbsp; </span>
+											Top view of fixed-fixed beam used to 
+											measure residual strain.</font></p>
+											<p><font color="black">To obtain the 
+											following measurements, consult ASTM 
+											standard test method E 2245 entitled<br>
+											&quot;Standard Test Method for Residual 
+											Strain Measurements of Thin, 
+											Reflecting Films<br>
+											Using an Optical Interferometer.&quot;</font></p>
+											<p>
+											<hr>
+											<div align="left">
+												filename of 3-D data set 
+												(optional)&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; <input type="text" size="30" name="file3D"><br>
+												filename of 2-D data traces 
+												(optional) = <input type="text" size="30" name="file2D1"><br>
+												&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" size="30" name="file2D2"> <input type="text" size="30" name="file2D3"><br>
+												&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" size="30" name="file2D4"> <input type="text" size="30" name="file2D5"><br>
+												material =&nbsp;<font color="black"> 
+												Poly1 <input type="radio" name="material" value="Poly1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												Poly2&nbsp; <input type="radio" name="material" value="Poly2">&nbsp;&nbsp;&nbsp;&nbsp; 
+												stacked Poly1 and Poly2&nbsp; <input type="radio" name="material" value="stacked Poly1 and Poly2"><br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												SiC-2&nbsp; <input type="radio" name="material" value="SiC-2">&nbsp;&nbsp;&nbsp;&nbsp; 
+												SiC-3&nbsp; <input type="radio" name="material" value="SiC-3"> <span style="mso-spacerun: yes">
+												&nbsp;</span></font><font color="blue"><span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0% 50%"> </span></font>
+												<font color="#000000">&nbsp;o</font><font color="black">ther&nbsp; 
+												<input type="radio" name="material" value="other" checked> </font>
+												<font color="blue">
+												<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">
+												&nbsp;</br>
+												beam thickness = <i>t</i>&nbsp;=&nbsp;</span><input type="text" size="9" name="thick"> 
+												µm</font><br>
+												design length = <input type="text" size="9" name="designL"> <font color="blue">
+												µ</font>m<br>
+												which fixed-fixed beam on the 
+												test chip ?&nbsp; <font color="black">
+												First <input type="radio" name="fixed-fixed beam" value="first">&nbsp;&nbsp;&nbsp;Second <input type="radio" name="fixed-fixed beam" value="second">&nbsp;&nbsp;&nbsp; 
+												Third <input type="radio" name="fixed-fixed beam" value="third"> &nbsp;&nbsp; 
+												Other 
+												<input type="radio" name="fixed-fixed beam" value="other" checked>&nbsp;&nbsp;</font><br>
+												magnification = <input type="text" size="9" name="mag"> 
+												×<br>
+												orientation =&nbsp; <font color="#000000">
+												0 degree </font><input type="radio" name="orient" value="zero">&nbsp;&nbsp;&nbsp; <font color="#000000">
+												90 degree</font> <input type="radio" name="orient" value="ninety"><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp; 
+												180 degree</font> 
+												<input type="radio" name="orient" value="oneeighty"><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp; 
+												270 degree</font> 
+												<input type="radio" name="orient" value="twoseventy"><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp; 
+												Other</font> 
+												<input type="radio" name="orient" value="other" checked><i><br>
+													x</i>-calibration factor 
+												(for the given magnification) <i>
+												= calx</i> = <input type="text" size="10" name="xcal"><br>
+												maximum field of view (for the 
+												given magnification) = <i>interx</i> 
+												= <input type="text" size="10" name="ainterx"> 
+												µm<br>
+												one sigma uncertainty in a ruler 
+												measurement (for the given mag) 
+												=<i> &#963;<sub>xcal</sub></i> = <input type="text" size="10" name="sigmax"> 
+												µm<br>
+												resolution of the interferometer 
+												in the <i>x</i>-direction <i>= x<sub>res</sub></i> 
+												= <input type="text" size="10" name="xres"> 
+												µm<i><br>
+													z</i>-calibration factor 
+												(for the given magnification) <i>
+												= calz</i> = <input type="text" size="10" name="zcal"><br>
+												certified value of step height 
+												standard = <i>cert</i> = <input type="text" size="10" name="cert"> 
+												µm<i><br>
+												</i>standard deviation of step 
+												height measurements (on 
+												double-sided step height 
+												standard) =&nbsp;<i>&#963;<sub>zcal</sub></i> 
+												= <input type="text" size="10" name="sigmaz"> 
+												µm<br>
+												resolution of the interferometer 
+												in the <i>z</i>-direction = <i>z<sub>res</sub></i> 
+												= <input type="text" size="10" name="zres"> 
+												µm<br>
+												peak-to-valley roughness of a 
+												flat and leveled surface of the 
+												sample material calculated to be 
+												the average of three or more 
+												measurements, each measurement 
+												of which is taken from a 
+												different 2-D data trace =&nbsp;<i>R<sub>tave</sub></i> 
+												= <input type="text" size="10" name="Ra"> 
+												µm<br>
+												alignment ensured ?&nbsp;&nbsp; <font color="#000000">
+												Yes</font> <input type="radio" name="align" value="yes" onclick="aligny(this.form)">&nbsp;&nbsp;&nbsp;&nbsp; <font color="#000000">
+												No</font> <input type="radio" name="align" value="no" checked onclick="alignn(this.form)"><br>
+												data leveled ?&nbsp;&nbsp; <font color="#000000">
+												Yes <input type="radio" name="alevel" value="yes" onclick="alevely(this.form)">&nbsp;&nbsp;&nbsp;&nbsp; 
+												No <input type="radio" name="alevel" value="no" checked onclick="aleveln(this.form)"> </font><br>
+												Is this fixed-fixed beam 
+												exhibiting stiction ?<font color="black">&nbsp;&nbsp; 
+												Yes <input type="radio" name="stiction" value="yes">&nbsp;&nbsp;&nbsp;&nbsp; 
+												No <input type="radio" name="stiction" value="no" checked> </font><font color="blue"><br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="black"> 
+												If it is exhibiting stiction, do 
+												not fill out the remainder of 
+												this form.</font> <font color="black">
+													<hr>
+													<input type="button" value="Input Sample Data" onclick="sample(this.form)" style="background-color: #C0C0C0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="black"> <input type="reset" value="Reset this form" style="background-color: #C0C0C0"></font><br>
+												<br>
+												<font color="red">INPUTS 
+												(uncalibrated values from Trace 
+												&quot;a&quot; or &quot;e&quot;):</font><br>
+												<font color="blue">&nbsp;&nbsp;&nbsp; </font>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue"><i>x1</i><sub>max</sub> 
+												(i.e., <i>x1</i><sub>upper</sub>) 
+												= <input type="text" size="10" name="x1max"> 
+												µm<br>
+													<i>&nbsp;&nbsp;&nbsp;</i>&nbsp; <i>&nbsp;&nbsp;&nbsp;</i>&nbsp; <i>
+												&nbsp;&nbsp;&nbsp;</i> <i>x1</i><sub>min</sub> 
+												(i.e., <i>x1</i><sub>low</sub><sub>er</sub>)&nbsp; 
+												= <input type="text" size="10" name="x1min"><span style="font-family:Symbol"> </span>
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												(<i>x1</i><sub>min</sub> &gt; <i>x1</i><sub>max</sub>)</font><font color="blue"><br>
+													<i>&nbsp;&nbsp;&nbsp;</i>&nbsp; <i>&nbsp;&nbsp;&nbsp;</i>&nbsp; <i>
+												&nbsp;&nbsp;&nbsp;</i> <i>x2</i><sub>min</sub> 
+												(i.e., <i>x2</i><sub>low</sub><sub>er</sub>)&nbsp; 
+												= <input type="text" size="10" name="x2min"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="black">&nbsp;&nbsp;&nbsp; 
+												(<i>x2</i><sub>min</sub> &gt; <i>x1</i><sub>min</sub>)</font><font color="blue"><br>
+													<i>&nbsp;&nbsp;&nbsp;</i>&nbsp; <i>&nbsp;&nbsp;&nbsp;</i>&nbsp; <i>
+												&nbsp;&nbsp;&nbsp;</i> <i>x2</i><sub>max</sub> 
+												(i.e., <i>x2</i><sub>upp</sub><sub>er</sub>) 
+												= <input type="text" size="10" name="x2max"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="black">&nbsp;&nbsp; 
+												(<i>x2</i><sub>max</sub> &gt; <i>x2</i><sub>min</sub>)</font>
+												<p><font color="red">INPUTS 
+												(uncalibrated values from Trace 
+												&quot;b&quot;):</font><br>
+													<font color="black">&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>1F</sub></i> 
+												= <input type="text" size="10" name="x1Fb"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>1F</sub></i> 
+												= <input type="text" size="10" name="z1Fb"> 
+												µm&nbsp;&nbsp; (<i>x1</i><sub>ave</sub> <u>
+												&lt;</u> <i>x<sub>1F </sub></i>* <i>
+												calx</i>)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>2F</sub></i> 
+												= <input type="text" size="10" name="x2Fb"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>2F</sub></i> 
+												= <input type="text" size="10" name="z2Fb"> 
+												µm&nbsp;&nbsp; (inflection 
+												point)<br>
+													</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="black">
+												( <i>x<sub>1F</sub></i> &lt; <i>x<sub>2F</sub></i> 
+												&lt; <i>x<sub>3F </sub></i>)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>3F</sub></i> 
+												= <input type="text" size="10" name="x3Fb"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>3F</sub></i> 
+												= <input type="text" size="10" name="z3Fb"> 
+												µm&nbsp;&nbsp; (most deflected 
+												point)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( <i>
+												x<sub>1S</sub></i> = <i>x<sub>3F</sub></i> 
+												; <i>z</i></font><font color="#000000"><sub><i>1S</i></sub></font><font color="black"> 
+												= z<i><sub>3F </sub></i>)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>2S</sub></i> 
+												= <input type="text" size="10" name="x2Sb"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>2S</sub></i> 
+												= <input type="text" size="10" name="z2Sb"> 
+												µm&nbsp;&nbsp; (inflection 
+												point)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>3S</sub></i> 
+												= <input type="text" size="10" name="x3Sb"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>3S</sub></i> 
+												= <input type="text" size="10" name="z3Sb"> 
+												µm&nbsp;&nbsp; ( <i>x<sub>3S&nbsp;</sub></i>* <i>
+												calx</i> <u>&lt;</u> <i>x2</i><sub>ave </sub>
+												)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( <i>
+												x<sub>1S</sub></i> &lt; <i>x<sub>2S</sub></i> 
+												&lt; <i>x<sub>3S </sub></i>)</font></p>
+												<p><font color="red">INPUTS 
+												(uncalibrated values from Trace 
+												&quot;c&quot;):&nbsp;</font><br>
+													<font color="blue">&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>1F</sub></i> 
+												= <input type="text" size="10" name="x1Fc"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>1F</sub></i> 
+												= <input type="text" size="10" name="z1Fc"> 
+												µm&nbsp;&nbsp; (<i>x1</i><sub>ave</sub> <u>
+												&lt;</u> <i>x<sub>1F </sub></i>* <i>
+												calx</i>)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>2F</sub></i> 
+												= <input type="text" size="10" name="x2Fc"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>2F</sub></i> 
+												= <input type="text" size="10" name="z2Fc"> 
+												µm&nbsp;&nbsp; (inflection 
+												point)<br>
+													</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="blue">
+												( <i>x<sub>1F</sub></i> &lt; <i>x<sub>2F</sub></i> 
+												&lt; <i>x<sub>3F </sub></i>)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>3F</sub></i> 
+												= <input type="text" size="10" name="x3Fc"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>3F</sub></i> 
+												= <input type="text" size="10" name="z3Fc"> 
+												µm&nbsp;&nbsp; (most deflected 
+												point)<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#0000FF">
+												( <i>x<sub>1S</sub></i> = <i>x<sub>3F</sub></i> 
+												; <i>z</i><sub><i>1S</i></sub> = 
+												z<i><sub>3F </sub></i>)</font><font color="blue"><br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>2S</sub></i> 
+												= <input type="text" size="10" name="x2Sc"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>2S</sub></i> 
+												= <input type="text" size="10" name="z2Sc"> 
+												µm&nbsp;&nbsp; (inflection 
+												point)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>3S</sub></i> 
+												= <input type="text" size="10" name="x3Sc"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>3S</sub></i> 
+												= <input type="text" size="10" name="z3Sc"> 
+												µm&nbsp;&nbsp; ( <i>x<sub>3S&nbsp; </sub></i></font><font color="blue">
+												* <i>calx </i></font><font color="blue"><u>
+												&lt;</u> <i>x2</i><sub>ave </sub>)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( <i>
+												x<sub>1S</sub></i> &lt; <i>x<sub>2S</sub></i> 
+												&lt; <i>x<sub>3S </sub></i>)</font></p>
+												<p><font color="red">INPUTS 
+												(uncalibrated values from Trace 
+												&quot;d&quot;):&nbsp;</font><br>
+													<font color="black">&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>1F</sub></i> 
+												= <input type="text" size="10" name="x1Fd"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>1F</sub></i> 
+												= <input type="text" size="10" name="z1Fd"> 
+												µm&nbsp;&nbsp; (<i>x1</i><sub>ave</sub> <u>
+												&lt;</u> <i>x<sub>1F </sub></i>* <i>
+												calx</i>)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>2F</sub></i> 
+												= <input type="text" size="10" name="x2Fd"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>2F</sub></i> 
+												= <input type="text" size="10" name="z2Fd"> 
+												µm&nbsp;&nbsp; (inflection 
+												point)<br>
+													</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="black">
+												( <i>x<sub>1F</sub></i> &lt; <i>x<sub>2F</sub></i> 
+												&lt; <i>x<sub>3F </sub></i>)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>3F</sub></i> 
+												= <input type="text" size="10" name="x3Fd"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>3F</sub></i> 
+												= <input type="text" size="10" name="z3Fd"> 
+												µm&nbsp;&nbsp; (most deflected 
+												point)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">&nbsp;&nbsp;&nbsp;( <i>
+												x<sub>1S</sub></i> = <i>x<sub>3F</sub></i> 
+												; <i>z</i><sub><i>1S</i></sub> = 
+												z<i><sub>3F </sub></i>)</font><font color="black"><br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>2S</sub></i> 
+												= <input type="text" size="10" name="x2Sd"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>2S</sub></i> 
+												= <input type="text" size="10" name="z2Sd"> 
+												µm&nbsp;&nbsp; (inflection 
+												point)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x<sub>3S</sub></i> 
+												= <input type="text" size="10" name="x3Sd"> 
+												µm&nbsp;&nbsp;&nbsp; <i>z<sub>3S</sub></i> 
+												= <input type="text" size="10" name="z3Sd"> 
+												µm&nbsp;&nbsp; ( <i>x<sub>3S&nbsp; </sub></i>
+												* <i>calx </i><u>&lt;</u> <i>x2</i><sub>ave </sub>
+												)<br>
+														&nbsp;&nbsp;&nbsp; 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( <i>
+												x<sub>1S</sub></i> &lt; <i>x<sub>2S</sub></i> 
+												&lt; <i>x<sub>3S </sub></i>)</font></p>
+												<hr>
+												<input type="button" value="Calculate and Verify" onclick="strainall(this.form)" style="background-color: #C0C0C0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value="Clear Outputs" onclick="clearout(this.form)" style="background-color: #C0C0C0"><br>
+												<font color="red"><br>
+													OUTPUTS (calibrated values): </font><font color="red"><br>
+													&nbsp;&nbsp;&nbsp;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue"><i>x1</i><sub>ave</sub><i> </i>
+												=&nbsp;<i> </i><input type="text" "number" name="ansx1ave" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												x2</i><sub>ave</sub><i> </i>=&nbsp;<i> </i><input type="text" "number" name="ansx2ave" size="10"> 
+												µm<br>
+													<i>&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i>
+												=&nbsp;<i> </i><input type="text" "number" name="ansL" size="10"> 
+												µm<br>
+													&nbsp;</font><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												L</i><sub>max</sub> = ( <i>x2</i><sub>max</sub> </font><font color="black">
+												&#8722; </font><font color="#000000"><i>
+												x1</i><sub>max</sub> ) * <i>calx<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												L</i><sub>min</sub> = ( <i>x2</i><sub>min</sub> </font><font color="black">
+												&#8722; </font><font color="#000000"><i>
+												x1</i><sub>min</sub> ) * <i>calx</i></font><br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#000000"><i>
+												u<sub>LL</sub>&nbsp;&nbsp;</i>=&nbsp; ( <i>
+												L</i><sub>max</sub> </font><font color="black">
+												&#8722;</font> <font color="#000000"><i>
+												L</i><sub>min</sub> ) / 6 =&nbsp;<i> </i><input type="text" "number" name="ansucLold" size="10"> 
+												µm<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												u<sub>Lxcal</sub>&nbsp;&nbsp;</i>=&nbsp;( <i>&#963;<sub>xcal</sub></i> 
+												/ <i>interx</i> ) * ( <i>L</i> / <i>
+												calx </i>) =<i> </i><input type="text" "number" name="ansucLxcal" size="10"> 
+												µm</font><font color="#000000"><i><br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												u<sub>Lxres</sub>&nbsp;&nbsp;</i>= <i>x<sub>res</sub></i>* <i>
+												calx </i>/ 1.732 =&nbsp;<input type="text" "number" name="ansucLxres" size="10"> 
+												µm</font><i><font color="blue"><br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												u</font><font color="#0000FF"><sub>c</sub></font><font color="blue"><sub>L</sub>&nbsp;&nbsp; 
+												= </font></i><font color="blue">
+												&nbsp;SQRT[<i>u</i></font><font color="#0000FF"><i><sub>LL</sub></i><sup>2</sup></font><font color="blue"> 
+												+ <i>u</i></font><font color="#0000FF"><i><sub>Lxcal</sub></i><sup>2 </sup></font><font color="blue">
+												+ <i>u</i></font><font color="#0000FF"><i><sub>Lxres</sub></i><sup>2</sup></font><font color="blue">]&nbsp;</font><i><font color="blue"> 
+												=&nbsp;</font></i><font color="blue"><i> </i><input type="text" "number" name="ansucL" size="10"> 
+												µm<br>
+													<i>&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												s</i><sub>&nbsp;&nbsp;&nbsp;&nbsp;</sub><i>&nbsp;&nbsp;&nbsp; </i>
+												=&nbsp;<i> </i><input type="text" "number" name="signc" size="10">&nbsp;<span style="font-family: Symbol">&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;c&quot;<br>
+												</font><font color="black"><i>
+												&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												s</i> = 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												(for downward bending 
+												fixed-fixed beams)<br>
+													<i>&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												s</i> =</font> <font color="black">
+												&#8722;1&nbsp;&nbsp;&nbsp;&nbsp; (for 
+												upward bending fixed-fixed 
+												beams)</font>
+												<p><font color="black"><i>&nbsp;&nbsp;&nbsp; </i>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												A<sub>F</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="ansaFb" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from Trace &quot;b&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp; </i>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												w<sub>1F</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="answ1Fb" size="10"> 
+												&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="black">from 
+												Trace &quot;b&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												A<sub>S</sub>&nbsp;&nbsp; </i>=&nbsp; <input type="text" "number" name="ansaSb" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;b&quot;<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												w<sub>3S</sub> &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp;</span><input type="text" "number" name="answ3Sb" size="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;b&quot;</font><br>
+													<font color="black"><i>&nbsp;&nbsp;&nbsp; </i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												x<sub>eF</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="ansxeFb" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;b&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp; </i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												x<sub>eS</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="ansxeSb" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="black">
+												from Trace &quot;b&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="black"><i>
+												&#949;</i></font><font color="black"><sub><i>r0</i></sub><i>&nbsp;&nbsp;&nbsp; </i>
+												=&nbsp; <input type="text" "number" name="anser0b" size="10"> 
+												×&nbsp;10</font><font face="Symbol" color="black"><sup>-</sup></font><sup><font color="black">6</font></sup><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;b&quot;<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												&#949;<sub>r</sub>&nbsp;&nbsp;&nbsp;&nbsp; </i>
+												=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="anserb" size="10">&nbsp;×&nbsp;10</font><font face="Symbol" color="black"><sup>-</sup></font><font color="black"><sup>6</sup></font><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;b&quot;</font></p>
+												<p><font color="black"><i>&nbsp;&nbsp;&nbsp; </i>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i></font><font color="blue"><i>
+												A<sub>F</sub>&nbsp;&nbsp;&nbsp;</i></font><font color="blue">=&nbsp;<i> </i><input type="text" "number" name="ansaFc" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from Trace &quot;c&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp; </i>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												w<sub>1F</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="answ1Fc" size="10"> 
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from Trace &quot;c&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												A<sub>S</sub>&nbsp;&nbsp; </i>=&nbsp; <input type="text" "number" name="ansaSc" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;c&quot;<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												w<sub>3S</sub> &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp;</span><input type="text" "number" name="answ3Sc" size="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;c&quot;</font><br>
+													<font color="blue"><i>&nbsp;&nbsp;&nbsp; </i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												x<sub>eF</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="ansxeFc" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;c&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp; </i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												x<sub>eS</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="ansxeSc" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;c&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Symbol" color="blue"><i> </i></font><i><font color="blue">
+												&#949;</font><font color="blue"><sub>r0</sub>&nbsp;&nbsp;&nbsp;</font></i><font color="blue">=&nbsp; <input type="text" "number" name="anser0c" size="10"> 
+												×&nbsp;10</font><font face="Symbol" color="blue"><sup>-</sup></font><font color="blue"><sup>6</sup></font><font color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												Trace &quot;c&quot;<br>
+													</font><font color="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="red"><i>
+												&#949;</i></font><i><font color="red"><sub>r</sub>&nbsp; 
+												&nbsp;&nbsp;</font></i><font color="red">=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="anserc" size="10">&nbsp;×&nbsp;10</font><font face="Symbol" color="red"><sup>-</sup></font><font color="red"><sup>6</sup></font><font color="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												Trace &quot;c&quot;<br>
+													</font><i><font color="#0000FF">
+												&nbsp;&nbsp;</font><font color="#000000">&nbsp;</font></i><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												u<sub>samp</sub>&nbsp; &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="ansu1ptsamp" size="10">&nbsp;×&nbsp;10<sup><font face="Symbol" color="#000000">-</font>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												Trace &quot;c&quot;<i><br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												u<sub>W</sub>&nbsp; &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="ansuW" size="10">&nbsp;×&nbsp;10<sup><font face="Symbol" color="#000000">-</font>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from two or three traces<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												u<sub>xcal</sub>&nbsp; &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="ansucxcal" size="10">&nbsp;×&nbsp;10<sup><font face="Symbol" color="#000000">-</font>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												Trace &quot;c&quot;<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>u<sub>L</sub>&nbsp; 
+												&nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="ansuL" size="10">&nbsp;×&nbsp;10<sup><font face="Symbol" color="#000000">-</font>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;c&quot;<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												u<sub>zcal</sub>&nbsp; &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="ansu1ptint" size="10">&nbsp;×&nbsp;10<sup><font face="Symbol" color="#000000">-</font>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												Trace &quot;c&quot;<i><br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												u<sub>zres</sub>&nbsp; &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="ansuczres" size="10">&nbsp;×&nbsp;10<sup><font face="Symbol" color="#000000">-</font>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												Trace &quot;c&quot;<i><br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												u<sub>xres</sub>&nbsp; &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="ansucxres" size="10">&nbsp;×&nbsp;10<sup><font face="Symbol" color="#000000">-</font>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												Trace &quot;c&quot;<i><br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												u<sub>xresL</sub>&nbsp; &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="ansucxresL" size="10">&nbsp;×&nbsp;10<sup><font face="Symbol" color="#000000">-</font>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												Trace &quot;c&quot;</font><font color="red"><i><br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												u<sub>c</sub>&nbsp; &nbsp;&nbsp;</i>=&nbsp;SQRT[<i>u</i></font><font color="#FF0000"><i><sub>samp</sub></i><sup>2</sup></font><font color="red"> 
+												+ <i>u</i></font><font color="#FF0000"><i><sub>W</sub></i><sup>2</sup></font><font color="red"> 
+												+ <i>u</i></font><font color="#FF0000"><i><sub>xcal</sub></i><sup>2 </sup></font><font color="red">
+												+ <i>u</i></font><font color="#FF0000"><i><sub>L</sub></i><sup>2</sup></font><font color="red"> 
+												+ <i>u</i></font><font color="#FF0000"><i><sub>zcal</sub></i><sup>2 </sup></font><font color="red">
+												+ <i>u</i></font><font color="#FF0000"><i><sub>zres</sub></i><sup>2 </sup></font><font color="red">
+												+ <i>u</i></font><font color="#FF0000"><i><sub>xres</sub></i><sup>2 </sup></font><font color="red">
+												+ <i>u</i></font><font color="#FF0000"><i><sub>xresL</sub></i><sup>2</sup></font><font color="red">]<span style="background-color: #FFFF00"><br>
+														</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red"><i>
+												u<sub>c</sub>&nbsp; &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="ansuc" size="10">&nbsp;×&nbsp;10</font><font face="Symbol" color="red"><sup>-</sup></font><font color="red"><sup>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												two or three traces</font></p>
+												<p><font color="black"><i>&nbsp;&nbsp;&nbsp; </i>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												A<sub>F</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="ansaFd" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from Trace &quot;d&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp; </i>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												w<sub>1F</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="answ1Fd" size="10"> 
+												&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="black">from 
+												Trace &quot;d&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												A<sub>S</sub>&nbsp;&nbsp; </i>=&nbsp; <input type="text" "number" name="ansaSd" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;d&quot;<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												w<sub>3S</sub> &nbsp;&nbsp;</i>=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp;</span><input type="text" "number" name="answ3Sd" size="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;d&quot;</font><br>
+													<font color="black"><i>&nbsp;&nbsp;&nbsp; </i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												x<sub>eF</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="ansxeFd" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;d&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp; </i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												x<sub>eS</sub>&nbsp;&nbsp;&nbsp;</i>=&nbsp;<i> </i><input type="text" "number" name="ansxeSd" size="10"> 
+												µm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;d&quot;<br>
+														<i>&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												&#949;<sub>r0</sub>&nbsp;&nbsp;&nbsp; </i>
+												=&nbsp; <input type="text" "number" name="anser0d" size="10"> 
+												×&nbsp;10</font><font face="Symbol" color="black"><sup>-</sup></font><sup><font color="black">6</font></sup><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												from Trace &quot;d&quot;<br>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>
+												&#949;<sub>r</sub>&nbsp;&nbsp;&nbsp;&nbsp; </i>
+												=<span style="background-repeat: repeat; background-attachment: scroll; mso-highlight: silver; background-position: 0%">&nbsp;&nbsp; </span><input type="text" "number" name="anserd" size="10">&nbsp;×&nbsp;10</font><font face="Symbol" color="black"><sup>-</sup></font><font color="black"><sup>6</sup></font><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 
+												Trace &quot;d&quot;</font></p>
+												<p></p>
+												<hr>
+												<font color="black">Modify the 
+												input data, given the 
+												information supplied in any 
+												flagged statement below, if 
+												applicable, then recalculate:<br>
+													&nbsp;&nbsp;&nbsp; 1. <input type="text" name="anserror1" value="wait" size="5">&nbsp; 
+												Please fill out the entire form.<br>
+													&nbsp;&nbsp;&nbsp; 2. <input type="text" name="anserror2" size="5">&nbsp; 
+												The value for <i>t</i> should be 
+												between </font><font color="#000000">
+												0.000 </font><font color="black">
+												µm </font><font color="#000000">
+												and 10.000</font><font color="black"> 
+												µm.<br>
+													&nbsp;&nbsp;&nbsp; 3. <input type="text" name="anserror3" size="5">&nbsp; 
+												The value for the design length should be 
+												between </font><font color="#000000">
+												0 </font><font color="black">
+												µm </font><font color="#000000">
+												and 1000</font><font color="black"> 
+												µm.&nbsp;</font><br>
+												<font color="black">&nbsp;&nbsp;&nbsp; 
+												4. <input type="text" name="anserror4" size="5">&nbsp; 
+												The measured value for <i>L</i> 
+												is more than 3<i>u</i></font><i><font color="#000000"><sub>c</sub></font><sub><font color="#000000">L</font></sub></i><font color="black"> 
+												from the design length.<br>
+													&nbsp;&nbsp;&nbsp; 5. <input type="text" name="anserror5" size="5">&nbsp; 
+												Is the magnification appropriate 
+												given the design length ?<br>
+												</font>&nbsp;&nbsp;&nbsp; <font color="black">
+												6. <input type="text" name="anserror6" size="5">&nbsp; 
+												Magnifications at or less than</font><font color="#000000"> 
+												2.5× shall not be used.</font><br>
+												<font color="black">&nbsp;&nbsp;&nbsp;</font> <font color="black">
+												7. <input type="text" name="anserror7" size="5">&nbsp; 
+												Is 0.95 &lt; <i>calx</i> &lt; 1.05 but 
+												not equal to &quot;1&quot;?&nbsp; If not, 
+												recheck your <i>x</i>-calibration.<br>
+													&nbsp;&nbsp;&nbsp; 8. <input type="text" name="anserror8" size="5">&nbsp; 
+												The value fo</font><font color="#000000">r <i>
+												interx<sub> </sub></i>should be 
+												between 0 </font><font color="black">
+												µm </font><font color="#000000">
+												and 1500</font><font color="black"> 
+												µm.<br>
+													&nbsp;&nbsp;&nbsp; 9. <input type="text" name="anserror9" size="5">&nbsp; 
+												The value fo</font><font color="#000000">r <i>
+												&#963;<sub>xcal </sub></i>should be 
+												between 0 </font><font color="black">
+												µm </font><font color="#000000">
+												and 4</font><font color="black"> 
+												µm.<br>
+													&nbsp; 10. <input type="text" name="anserror10" size="5">&nbsp; 
+												The value fo</font><font color="#000000">r <i>
+												x<sub>res</sub><sub> </sub></i>
+												should be between 0 </font><font color="black">
+												µm </font><font color="#000000">
+												and 2.00</font> <font color="black">
+												µm.</font><br>
+												<font color="black">&nbsp; 11. <input type="text" name="anserror11" size="5">&nbsp; 
+												Is 0.95 &lt; <i>calz</i> &lt; 1.05 but 
+												not equal to &quot;1&quot; ?&nbsp; If not, 
+												recheck your <i>z</i>-calibration.<br>
+													&nbsp; 12. <input type="text" name="anserror12" size="5">&nbsp; 
+												The value fo</font><font color="#000000">r<i> 
+												&#963;<sub>z</sub><sub>cal </sub></i>
+												should be between 0 </font><font color="black">
+												µm </font><font color="#000000">
+												and 0.050</font> <font color="black">
+												µm.<br>
+													&nbsp; 13. <input type="text" name="anserror13" size="5">&nbsp; 
+												The value for <i>cert </i>should 
+												be greater than 0 µm and less 
+												than 25 µm.<br>
+													&nbsp; 14. <input type="text" name="anserror14" size="5">&nbsp; 
+												The value for <i>z<sub>res</sub></i> 
+												should be greater than 0 µm and 
+												less than or equal to 0.005 µm.<br>
+													&nbsp; 15. <input type="text" name="anserror15" size="5">&nbsp; 
+												The value fo</font><font color="#000000">r <i>
+												R<sub>tave </sub></i>should be 
+												between 0 </font><font color="black">
+												µm </font><font color="#000000">
+												and 0.100</font><font color="black"> 
+												µm.<br>
+													&nbsp; 16. <input type="text" name="anserror16" value="wait" size="5">&nbsp; 
+												Alignment has not been ensured.<br>
+													&nbsp; 17. <input type="text" name="anserror17" value="wait" size="5">&nbsp; 
+												Data has not been leveled.</font><br>
+												<font color="black">&nbsp;&nbsp;18. <input type="text" name="anserror18" size="5">&nbsp; <i>
+												x1</i><sub>min</sub> should be 
+												greater than <i>x1</i><sub>max</sub>.<br>
+													&nbsp;&nbsp;19. <input type="text" name="anserror19" size="5"> <i>
+												&nbsp;x2</i><sub>min</sub> should be 
+												greater than <i>x1</i><sub>min</sub>.<br>
+													&nbsp;&nbsp;20. <input type="text" name="anserror20" size="5"><i>&nbsp; 
+												x2</i><sub>max</sub> should be 
+												greater than <i>x2</i><sub>min</sub>.<br>
+													&nbsp;&nbsp;21. <input type="text" name="anserror21" size="5"><i>&nbsp; </i>
+												The calibrated values for <i>x1</i><sub>min</sub> 
+												and <i>x1</i><sub>max</sub> are 
+												greater than 10 µm apart.<br>
+													&nbsp;&nbsp;22. <input type="text" name="anserror22" size="5"><i>&nbsp; </i>
+												The calibrated values for <i>x2</i><sub>min</sub> 
+												and <i>x2</i><sub>max</sub> are 
+												greater than 10 µm apart.<br>
+													&nbsp;&nbsp;23. <input type="text" name="anserror23" size="5"><i>&nbsp; </i>
+												In Traces &quot;b,&quot; &quot;c,&quot; and &quot;d,&quot; the 
+												value for <i>s</i> is not the 
+												same.<br>
+													&nbsp; 24. <input type="text" name="anserror24" size="5"><i>&nbsp; 
+												x1</i><sub>ave</sub><i> </i>
+												should be <u>&lt;</u> (<i>x<sub>1F</sub></i> 
+												* <i>calx</i>) in all traces.<br>
+													&nbsp; 25. <input type="text" name="anserror25" size="5">&nbsp; 
+												(<i>x<sub>3S</sub></i> * <i>calx</i>) 
+												should be <u>&lt;</u> <i>x2</i><sub>ave</sub> 
+												in all traces.<br>
+													&nbsp; 26. <input type="text" name="anserror26" size="5"><i>&nbsp;</i>&nbsp;In 
+												all traces, make sure ( <i>x<sub>1F</sub></i> 
+												&lt; <i>x<sub>2F</sub></i> &lt; <i>x<sub>3F </sub></i>
+												).<br>
+													&nbsp; 27. <input type="text" name="anserror27" size="5"><i>&nbsp;&nbsp;</i>In 
+												all traces, make sure ( <i>x<sub>1S</sub></i> 
+												&lt; <i>x<sub>2S</sub></i> &lt; <i>x<sub>3S </sub></i>
+												).<br>
+													&nbsp; 28. <input type="text" name="anserror28" size="5"><i>&nbsp; </i>
+												For Trace &quot;b,&quot; | [(<i>x<sub>2F</sub></i>*<i>calx</i>) 
+												&#8722; <i>x<sub>eF</sub></i> ] | = <input type="text" name="diffFb" size="4"> 
+												µm.&nbsp; This<i> </i>should be 
+												&lt; 5 µm.<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												If it is not, choose (<i>x</i></font><font color="#000000"><sub><i>2F</i></sub></font><font color="black">, <i>
+												z</i></font><font color="#000000"><sub><i>2F</i></sub></font><font color="black">) 
+												such that (<i>x</i></font><font color="#000000"><sub><i>2F</i></sub></font> <font color="black">
+												* <i>calx</i>) is closer to <i>x</i></font><font color="#000000"><sub><i>eF</i></sub></font> <font color="black">
+												= <input type="text" "number" name="ansxeFb2" size="5"></font><font color="black"> 
+												µm</font><font color="black">.</font> <font color="black"><br>
+													&nbsp; 29. <input type="text" name="anserror29" size="5"><i>&nbsp; </i>
+												For Trace &quot;b,&quot; | [(<i>x<sub>2S</sub></i>*<i>calx</i>) 
+												&#8722;</font><font color="black"> <i>
+												x<sub>eS</sub></i> ] | =&nbsp;<input type="text" name="diffSb" size="4"> 
+												µm.&nbsp; This<i> </i>should be 
+												&lt; 5 µm.<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												If it is not, choose (<i>x</i></font><font color="#000000"><i><sub>2S</sub></i></font><font color="black">, <i>
+												z</i></font><font color="#000000"><i><sub>2S</sub></i></font><font color="black">) 
+												such that (<i>x</i></font><font color="#000000"><i><sub>2S</sub></i></font><font color="black"> 
+												* <i>calx</i>) is closer to <i>x</i></font><font color="#000000"><i><sub>eS</sub></i></font><font color="black"> 
+												= <input type="text" "number" name="ansxeSb2" size="5"> </font><font color="black">
+												µm</font><font color="black">.</font><font color="black"><br>
+													&nbsp; 30. <input type="text" name="anserror30" size="5"><i>&nbsp; </i>
+												For Trace &quot;c,&quot; | [(<i>x<sub>2F</sub></i>*<i>calx</i>) 
+												&#8722; <i>x<sub>eF</sub></i> ] | = <input type="text" name="diffFc" size="4"> 
+												µm.&nbsp; This<i> </i>should be 
+												&lt; 5 µm.<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												If it is not, choose (<i>x</i></font><font color="#000000"><sub><i>2F</i></sub></font><font color="black">, <i>
+												z</i></font><font color="#000000"><sub><i>2F</i></sub></font><font color="black">) 
+												such that (<i>x</i></font><font color="#000000"><sub><i>2F</i></sub></font> <font color="black">
+												* <i>calx</i>) is closer to <i>x</i></font><font color="#000000"><sub><i>eF</i></sub></font> <font color="black">
+												= </font><font color="blue"><input type="text" "number" name="ansxeFc2" size="5"> </font><font color="black">
+												µm</font><font color="black">. </font><font color="black"><br>
+													&nbsp; 31. <input type="text" name="anserror31" size="5"><i>&nbsp; </i>
+												For Trace &quot;c,&quot; | [(<i>x<sub>2S</sub></i>*<i>calx</i>) 
+												&#8722;</font><font color="black"> <i>
+												x<sub>eS</sub></i> ] | =&nbsp;<input type="text" name="diffSc" size="4"> 
+												µm.&nbsp; This<i> </i>should be 
+												&lt; 5 µm.<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												If it is not, choose (<i>x</i></font><font color="#000000"><i><sub>2S</sub></i></font><font color="black">, <i>
+												z</i></font><font color="#000000"><i><sub>2S</sub></i></font><font color="black">) 
+												such that (<i>x</i></font><font color="#000000"><i><sub>2S</sub></i></font> <font color="black">
+												* <i>calx</i>) is closer to <i>x</i></font><font color="#000000"><i><sub>eS</sub></i></font> <font color="black">
+												= </font><font color="blue"><input type="text" "number" name="ansxeSc2" size="5"> </font><font color="black">
+												µm</font><font color="black">. </font><font color="black"><br>
+													&nbsp; 32. <input type="text" name="anserror32" size="5"><i>&nbsp; </i>
+												For Trace &quot;d,&quot; | [(<i>x<sub>2F</sub></i>*<i>calx</i>) 
+												&#8722; <i>x<sub>eF</sub></i> ] | =&nbsp;<input type="text" name="diffFd" size="4"> 
+												µm.&nbsp; This<i> </i>should be 
+												&lt; 5 µm.<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												If it is not, choose (<i>x</i></font><font color="#000000"><sub><i>2F</i></sub></font><font color="black">, <i>
+												z</i></font><font color="#000000"><sub><i>2F</i></sub></font><font color="black">) 
+												such that (<i>x</i></font><font color="#000000"><sub><i>2F</i></sub></font> <font color="black">
+												* <i>calx</i>) is closer to <i>x</i></font><font color="#000000"><sub><i>eF</i></sub></font> <font color="black">
+												= <input type="text" "number" name="ansxeFd2" size="5"> </font><font color="black">
+												µm</font><font color="black">.</font> <font color="black"><br>
+													&nbsp; 33. <input type="text" name="anserror33" size="5"><i>&nbsp; </i>
+												For Trace &quot;d,&quot; | [(<i>x<sub>2S</sub></i>*<i>calx</i>) 
+												&#8722; <i>x<sub>eS</sub></i> ] | =&nbsp;<input type="text" name="diffSd" size="4"> 
+												µm.&nbsp; This<i> </i>should be 
+												&lt; 5 µm.<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+												If it is not, choose (<i>x</i></font><font color="#000000"><i><sub>2S</sub></i></font><font color="black">, <i>
+												z</i></font><font color="#000000"><i><sub>2S</sub></i></font><font color="black">) 
+												such that (<i>x</i></font><font color="#000000"><i><sub>2S</sub></i></font> <font color="black">
+												* <i>calx</i>) is closer to <i>x</i></font><font color="#000000"><i><sub>eS</sub></i></font> <font color="black">
+												= <input type="text" "number" name="ansxeSd2" size="5"> </font><font color="black">
+												µm</font><font color="black">.</font> <font color="black">
+													<hr>
+												</font>
+												<p><font color="black">Return to </font><a href="../MEMSCalculator.htm" target="_top"><font color="blue">
+												Main MEMS Calculator Page</font></a><font color="black">.</font></p>
+												<p>&nbsp;</p>
+												<p><font face="Arial,Helvetica,sans-serif" size="1" color="black"><a href="http://www.nist.gov/">
+												NIST</a> is an agency of the <a href="http://www.doc.gov/">
+												U.S. Commerce Department</a></font><br>
+													<font face="Arial,Helvetica,sans-serif" size="1" color="black">
+												The <a href="http://www.eeel.nist.gov/812/">
+												Semiconductor Electronics 
+												Division</a> is within the <a href="http://www.eeel.nist.gov/">
+												Electronics and Electrical 
+												Engineering Laboratory</a>.<br>
+														The <a href="http://www.eeel.nist.gov/812/MNT/index.html">
+												MNT Project</a> 
+												(http://www.eeel.nist.gov/812/MNT/index.html) 
+												is within the Enabling Devices 
+												and ICs Group.</font></p>
+												<p><font face="Arial,Helvetica,sans-serif" size="1" color="black">
+												Date created: 12/4/2000<br>
+														Last updated: 12/12/2008</font></p>
+											</div>
+											<p><font color="blue">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td valign="top" width="1" bgcolor="black"><img height="5" src="../index_files/black_1pix.gif" width="1" border="0"></td>
+					<td valign="top" width="200" bgcolor="#ffcc66">
+						<table cellspacing="0" cellpadding="0" width="95%" border="0">
+							<tbody>
+								<tr>
+									<td width="200"></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</body>
+
+	</html>
+

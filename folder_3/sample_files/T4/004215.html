@@ -1,0 +1,745 @@
+<html>
+
+<head>
+
+<title>Ocean Surface Topography from Space-Education</title>
+
+<META  NAME="keywords"  CONTENT="tutorial">
+<META  NAME="description" CONTENT="This tutorial will familiarize you with the TOPEX/Poseidon mission, science, and products that are available for Earth-related studies">
+
+<link rel="SHORTCUT ICON" href="../favicon.ico">
+
+<SCRIPT LANGUAGE="JavaScript">
+function new_window(url) {
+	var glossary =
+window.open(url,'glossary','toolbar=1,location=0,directories=0,status=0,menubar=yes,scrollbars=yes,resizable=yes,width=700,height=600');
+	glossary.focus();
+	glossary.focus();
+}
+</SCRIPT>
+
+<script language="JavaScript" src="../lastMod.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Hide from older browsers (C.Lawshe)
+if (document.images) {
+	button10on= new Image
+	button10on.src = "../images/l2-top-nav-01-on.gif"
+	button10off= new Image
+	button10off.src = "../images/l2-top-nav-01-off.gif"
+	button11on= new Image
+	button11on.src = "../images/l2-top-nav-02-on.gif"
+	button11off= new Image
+	button11off.src = "../images/l2-top-nav-02-off.gif"
+	button12on= new Image
+	button12on.src = "../images/l2-top-nav-03-on.gif"
+	button12off= new Image
+	button12off.src = "../images/l2-top-nav-03-off.gif"
+	button13on= new Image
+	button13on.src = "../images/l2-top-nav-04-on.gif"
+	button13off= new Image
+	button13off.src = "../images/l2-top-nav-04-off.gif"
+	button14on= new Image
+	button14on.src = "../images/l2-top-nav-05-on.gif"
+	button14off= new Image
+	button14off.src = "../images/l2-top-nav-05-off.gif"	
+}
+// Swap rollover buttons
+function buttonOn (imgName) {
+   	if (document.images) {
+   	  eval ("document [imgName].src = " + imgName + "on.src");
+   	}
+}
+function buttonOff (imgName) {
+   	if (document.images) {
+   	  eval ("document [imgName].src = " + imgName + "off.src");
+   	}
+}
+	
+// - END rollover buttons script -->
+</SCRIPT>
+
+<!-- Using a linked stylesheet -->
+   <LINK rel="STYLESHEET" type="text/css" href="../main.css">
+   <style type="text/css">
+      @import url( "../main.css" );
+  </style> 
+
+</head>
+
+<BODY bgcolor="#000000">
+<!-- Skip navigation link --><a href="#maincontent"><img src="../images/blank-space.gif" alt="Follow this link to skip to the main content" width="1" height="1" hspace="0" vspace="0" border="0" align="left"></a><!-- End skip navigation link -->
+
+<MAP NAME="title_map">
+<AREA ALT="NASA Home Page" COORDS="30,1,92,60" shape="rect" HREF="http://www.nasa.gov">
+<AREA ALT="JPL Home Page" COORDS="95,15,285,35" shape="rect" HREF="http://www.jpl.nasa.gov">
+<AREA ALT="Caltech Home Page" COORDS="95,36,285,51" shape="rect" HREF="http://www.caltech.edu">
+</MAP>
+
+<map name="functions">
+<area ALT="home" shape="rect" coords="1,1,50,17" href="../index.html">
+<area ALT="Sitemap" shape="rect" coords="52,1,125,17" href="../sitemap.html">
+<area ALT="Frequently Asked Questions" shape="rect" coords="126,1,184,17" href="../faq.html">
+<area ALT="Links" shape="rect" coords="185,1,250,17" href="../links.html">
+<area ALT="Glossary" shape="rect" coords="251,1,335,17" HREF="javascript:new_window('../glossary.html');">
+</map>
+
+
+<DIV ALIGN="center">
+<table border="0" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF">
+<TR>
+  <TD>
+
+<TABLE WIDTH="653" border="0" cellpadding="0" cellspacing="0">
+  <TR>
+    <TD><IMG SRC="../images/NASA-top-banner.gif" ALT="NASA - Jet Propulstion Laboratory" WIDTH="339" HEIGHT="65" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left" USEMAP="#title_map"></TD>
+    <TD bgcolor="#CCCCCC"><A HREF="http://www.nasa.gov" class="header">+ View the NASA Portal</A> </TD>
+    <TD bgcolor="#666666">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="../images/blank-space.gif" ALT="" WIDTH="339" HEIGHT="3" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+    <TD><IMG SRC="../images/blank-space.gif" ALT="" WIDTH="139" HEIGHT="3" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+    <TD><IMG SRC="../images/blank-space.gif" ALT="" WIDTH="175" HEIGHT="3" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH="653" border="0" cellpadding="0" cellspacing="0">
+  <TR>
+    <TD><A HREF="http://www.jpl.nasa.gov" onMouseOver="buttonOn('button10')" onMouseOut="buttonOff('button10')"><IMG name="button10" SRC="../images/l2-top-nav-01-off.gif" ALT="JPL Home" WIDTH="132" HEIGHT="23" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+    <TD><A HREF="http://www.jpl.nasa.gov/earth/" onMouseOver="buttonOn('button11')" onMouseOut="buttonOff('button11')"><IMG name="button11" SRC="../images/l2-top-nav-02-off.gif" ALT="JPL - Earth" WIDTH="131" HEIGHT="23" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+    <TD><A HREF="http://www.jpl.nasa.gov/solar_system/" onMouseOver="buttonOn('button12')" onMouseOut="buttonOff('button12')"><IMG name="button12" SRC="../images/l2-top-nav-03-off.gif" ALT="JPL - Solar System" WIDTH="131" HEIGHT="23" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+    <TD><A HREF="http://www.jpl.nasa.gov/stars_galaxies/" onMouseOver="buttonOn('button13')" onMouseOut="buttonOff('button13')"><IMG name="button13" SRC="../images/l2-top-nav-04-off.gif" ALT="JPL - Stars and Galaxies" WIDTH="131" HEIGHT="23" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+    <TD><A HREF="http://www.jpl.nasa.gov/technology/" onMouseOver="buttonOn('button14')" onMouseOut="buttonOff('button14')"><IMG name="button14" SRC="../images/l2-top-nav-05-off.gif" ALT="JPL - Technology" WIDTH="128" HEIGHT="23" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="../images/blank-space.gif" ALT="" WIDTH="1" HEIGHT="3" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+  </TR>
+</TABLE>  
+
+<TABLE border="0" WIDTH="653" cellpadding="0" cellspacing="0">
+  <TR>
+    <TD COLSPAN="3" VALIGN="TOP">
+      <A HREF="../index.html"><IMG SRC="../images/title.jpg" ALT="Ocean Surface Topography from Space" WIDTH="653" HEIGHT="95" BORDER="0"></A></TD>
+  </TR>
+  <TR>
+    <TD VALIGN="TOP"><IMG SRC="../images/top-nav-row3.gif" ALT="" WIDTH="84" HEIGHT="18" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+    <TD VALIGN="TOP"><IMG SRC="../images/l2-function-bar.gif" ALT="Sitemap, FAQ, Links, Glossary" WIDTH="405" HEIGHT="18" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left" USEMAP="#functions"></TD>
+    <TD><IMG SRC="../images/top-nav-row3-3.gif" ALT="" WIDTH="164" HEIGHT="18" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+  </TR>
+</TABLE>
+
+<TABLE border="0" WIDTH="653" cellpadding="0" cellspacing="0">
+  <TR>
+    <!-- Left Nav Bar -->
+    <TD VALIGN="TOP" BGCOLOR="#3366FF">
+      <TABLE border="0" WIDTH="125" cellpadding="0" cellspacing="0">
+        <TR>
+          <FORM NAME="SearchForm" METHOD="get" ACTION="/search/search.pl">
+          <TD>
+             <label for="search"><IMG SRC="../images/l2-search-text.gif" ALT="Search" WIDTH="125" HEIGHT="19" HSPACE="0" BORDER="0" ALIGN="left"></label>
+          </TD>
+        </TR>
+        <TR>
+            <TD ALIGN=CENTER WIDTH="125"> 
+			<INPUT TYPE="HIDDEN" NAME="Range" VALUE="All">
+			<INPUT TYPE="HIDDEN" NAME="Format" VALUE="Standard">
+			<INPUT TYPE="text" NAME="Terms" id="search" SIZE="9" MAXLENGTH="256" VALUE="">
+           <INPUT TYPE="image" SRC="../images/go-button.gif" NAME="Submit" VALUE="Go!" id="search" alt="Search" BORDER="0" ALIGN="absmiddle">
+           <SCRIPT LANGUAGE="JavaScript">
+           <!-- Script Hiding...
+             document.SearchForm.Terms.focus();
+           // End Hiding -->
+           </SCRIPT>      
+        </TD>         
+        </FORM>
+        </TR>
+        <TR>
+          <TD>
+          <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="1" HEIGHT="5" HSPACE="0" BORDER="0">
+          </TD>
+        </TR>
+        <TR>  
+          <TD>
+          
+          <B>
+          <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="30" HSPACE="0" BORDER="0">
+          <A HREF="../overview/overview.html" class="rollOverLink">OVERVIEW</A>
+          <P>
+           <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+          <A HREF="../science/science.html" class="rollOverLink">SCIENCE</A>
+          <P>
+          <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+          <A HREF="../technology/technology.html" class="rollOverLink">TECHNOLOGY</A>
+          <P>
+           <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+          <A HREF="../mission/mission.html" class="rollOverLink">MISSIONS</A>
+          <P>
+          <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+          <A HREF="../newsroom/newsroom.html" class="rollOverLink">NEWSROOM</A>
+          <BR><BR>
+          </B>
+          </FONT>
+          </TD>
+        </TR>
+        <TR>
+          <TD BGCOLOR="#0099FF">              
+          <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+          
+          <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+          <A HREF="education.html" class="rollOverLink"><FONT COLOR="#000066"><B>EDUCATION</B></FONT></A>
+          </FONT>
+          </TD>
+        </TR>
+        <TR>
+          <TD>  
+          <TABLE border="0" WIDTH="125" cellpadding="0" cellspacing="0" BGCOLOR="#0000CC">
+            <TR>
+              <TD>
+                <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+              </TD>
+              <TD VALIGN="TOP">
+               <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+               <A HREF="fun-activities.html" class="rollOverLink">-</A>
+              </TD>
+              <TD VALIGN="TOP">
+                <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="fun-activities.html" class="rollOverLink">Stuff for Kids</A>
+                </FONT>
+              </TD>
+            </TR>
+            <TR>
+              <TD>
+                <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+              </TD>
+              <TD VALIGN="TOP">
+               <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="altimeter-basics.html" class="rollOverLink">-</A>
+              </TD>
+              <TD VALIGN="TOP">
+                <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="altimeter-basics.html" class="rollOverLink">Altimeter Basics</A>
+                </FONT>
+              </TD>
+            </TR>
+            <TR>
+              <TD>
+                <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+              </TD>
+              <TD VALIGN="TOP">
+               <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="exhibits.html" class="rollOverLink">-</A> 
+              </TD>
+              <TD VALIGN="TOP">
+                <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="exhibits.html" class="rollOverLink">Visit Interactive Exhibits</A>
+                </FONT>
+              </TD>
+            </TR>
+            
+            <TR>
+              <TD>
+                <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+              </TD>
+              <TD VALIGN="TOP">
+               <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="poster.html" class="rollOverLink">-</A>
+              </TD>
+              <TD VALIGN="TOP">
+                <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="poster.html" class="rollOverLink">Posters, Brochures, CD's and Slides</A>
+                </FONT>
+              </TD>
+            </TR>
+            <TR>
+              <TD>
+                <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+              </TD>
+              <TD VALIGN="TOP">
+               <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="class-activities.html" class="rollOverLink">-</A>
+              </TD>
+              <TD VALIGN="TOP">
+                <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="class-activities.html" class="rollOverLink"><B>Class Activities</B></A>
+                </FONT>
+              </TD>
+            </TR>
+            <TR>
+              <TD>
+                <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+              </TD>
+              <TD VALIGN="TOP">
+               <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="bb.html" class="rollOverLink">-</A>
+              </TD>
+              <TD VALIGN="TOP">
+                <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="1">
+                <A HREF="bb.html" class="rollOverLink">Links and FAQs</A>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>  
+          </TD>
+        </TR>
+        <TR>
+          <TD> 
+          <p><BR> 
+          <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+          <B>
+          <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="5" HEIGHT="1" HSPACE="0" BORDER="0">
+          <A HREF="../gallery/gallery.html" class="rollOverLink">GALLERY</A>
+          <BR><BR>         
+          </B>
+          </FONT>
+          
+          </TD>
+        </TR>
+        
+      </TABLE>
+    </TD>
+    <TD>
+      <IMG SRC="../images/blank-space.gif" ALT="" WIDTH="20" HEIGHT="1" HSPACE="0" BORDER="0" ALIGN="left">
+    </TD>
+    <!-- Main Content --><!-- Skip navigation link --><a name="maincontent"></a>
+    <TD VALIGN="TOP">
+      <TABLE border="0" WIDTH="508" cellpadding="0" cellspacing="0">
+        <TR>
+          <TD><IMG SRC="../images/l2-main-content-top.gif" ALT="" WIDTH="508" HEIGHT="15" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+        </TR>
+        <TR>
+          <TD>
+            <FONT FACE="VERDANA,HELVETICA,ARIAL" COLOR="#000066">
+            <H3><A HREF="education.html" class="rollOverLink"><FONT COLOR="#000066">EDUCATION</FONT></A> - Class Activities</H3>
+            </FONT>
+            <P>
+           
+            <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+			<b><A HREF="tutorial.html">TOPEX/Poseidon On-line Tutorial</A> </b>
+			<p>
+			<a href="tutorial1.html">Part I.</a>| <b>Part II.</b> | <a href="tutorial3.html">Part III.</a>
+			<p>
+			Click on the links below to jump down to that topic.
+			<UL>
+				<LI><a href="#oceanheat">Ocean Heat Transport </a></LI>
+				<LI><a href="#oceaneddies">Ocean Eddies</a> </LI>
+				<LI><a href="#seaheight">What Factors Contribute to Sea Height? </a></LI>
+				<LI><a href="#earthgeoid">Earth's Geoid </a></LI>
+				<LI><a href="#earthrotation">How Earth's Rotation Affects Winds & Currents</a> </LI>
+				<LI><a href="#corioliseffect">The Coriolis Effect</a> </LI>
+				<LI><a href="#hillsvalleys">Hills & Valleys in the Ocean </a></LI>
+				<LI><a href="#dynamicoceantopo">Dynamic Ocean Topography</a> </LI>
+            </UL>
+			
+			<P>
+			<HR>
+			<P>
+			<b><a name="oceanheat">Ocean Heat Transport</a></b>
+			<p>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<TR>
+				<TD VALIGN="TOP">
+					<a href="images/oc_heat.gif"><img src="images/oc_heat-s.gif" width="160" height="98" alt="Ocean Heat Transport" hspace="8" vspace="8" border="0" align="left"></a>
+			
+				</TD>
+				<TD VALIGN="TOP">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>The "Global Conveyer Belt" shows how the oceans move energy from the tropics to the poles and back again in order to moderate Earth's climate. This is accomplished through long-term ocean circulation. </LI>
+					</UL>
+					<P>
+					</FONT>
+				</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD COLSPAN="2">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+					<LI>On this diagram, warm surface water is orange and the cold bottom water is purple. The ocean is generally divided up into 2 layers: a warm upper layer that is much thinner than the cold bottom layer. The cold bottom layer is important because it holds a great amount of nutrients that are basis for the marine food chain. </LI>
+					<LI>Why are nutrients concentrated in the cold, lower ocean layer? <a href="nutrients.html" onclick="window.open(this.href,'offworld','width=630,height=500,directories=yes,resizable=yes,status=yes,menubar=yes,location=yes,scrollbars=yes'); return false;" target="_blank">Find out the answer</a>. </LI>
+					<LI>Ocean water at the surface is warmed at the tropics, moves toward the poles where it loses heat, becomes saltier, denser, and sinks. </LI>
+					<LI>The cold bottom layer circulates through the oceans. It takes up to 1,000 years for water to completely circulate throughout the oceans. </LI>
+					<LI>How well this "conveyer belt" transports heat about the world oceans may actually control the global climate. </LI>
+			
+					</UL>
+					</FONT>
+				</TD>
+			</TR>
+			</TABLE>
+			
+			
+			
+			<P>
+			<HR>
+			<P>
+			
+			<b><a name="oceaneddies">Ocean Eddies</a></b>
+			<p>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<TR>
+				<TD VALIGN="TOP">
+					<a href="../gallery/science/gifs/P44075.jpg"><img src="images/eddies_s.gif" width="148" height="99" alt="Ocean Eddies" hspace="8" vspace="8" border="0" align="left"></a>
+			
+				</TD>
+				<TD VALIGN="TOP">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+					<LI>These T/P data show where ocean eddies occur. The colors on this image show sea surface height changes, up to 25 cm or 10 inches, associated with these swirling ocean features. </LI>
+					
+					</UL>
+					<P>
+					</FONT>
+				</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD COLSPAN="2">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+					<LI>Ocean eddies are often found near fast ocean currents. </LI>
+					<LI>Are eddies concentrated in certain parts of the Pacific and Atlantic Oceans? <a href="eddies.html" onclick="window.open(this.href,'offworld','width=630,height=500,directories=yes,resizable=yes,status=yes,menubar=yes,location=yes,scrollbars=yes'); return false;" target="_blank">Find out the answer.</a> </LI>
+					<LI>Ocean circulation extends over large areas (up to ocean basin-wide) and lasts over many years. Ocean eddies are usually 50 - 200 km across and are considered "mesoscale" or intermediate-sized features. Ocean eddies generally last a few months. </LI>
+					<LI>Ocean eddies are a type of ocean "weather." They play an important role in transporting heat in the oceans. Also, eddies bring nutrients from below to enhance the growth of the marine life. </LI>
+			
+					
+					
+					</UL>
+					</FONT>
+				</TD>
+			</TR>
+			</TABLE>
+			
+			
+			<p>
+			
+			
+			<P>
+			<HR>
+			<P>
+			
+			<b><a name="seaheight">What Factors Contribute to Sea Height?</a></b>
+			<p>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<TR>
+				<TD VALIGN="TOP">
+					<a href="images/sea_height.gif"><img src="images/sea_height_s.gif" width="160" height="107" alt="Sea Height" hspace="8" vspace="8" border="0" align="left"></a>		
+			
+				</TD>
+				<TD VALIGN="TOP">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>Many oceanographers are interested in how much the height of the sea surface changes over time. To do this, they measure the sea surface height relative to an imaginary surface called the "geoid."</LI> 
+					
+					</UL>
+					<P>
+					</FONT>
+				</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD COLSPAN="2">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>The "geoid" is the shape the sea surface would have if the ocean were not in motion and only influenced by gravity. </LI>
+						<LI>Other than gravity, what factors contribute to sea surface height? <a href="factors.html" onclick="window.open(this.href,'offworld','width=630,height=500,directories=yes,resizable=yes,status=yes,menubar=yes,location=yes,scrollbars=yes'); return false;" target="_blank">Answer </a></LI>
+						<LI>Which of these factors change over days or months? <a href="factor-change.html" onclick="window.open(this.href,'offworld','width=630,height=500,directories=yes,resizable=yes,status=yes,menubar=yes,location=yes,scrollbars=yes'); return false;" target="_blank">Answer</a> </LI>
+						<LI>Which of these factors depend on location in the ocean? <a href="factor-place.html" onclick="window.open(this.href,'offworld','width=630,height=500,directories=yes,resizable=yes,status=yes,menubar=yes,location=yes,scrollbars=yes'); return false;" target="_blank">Answer</a> </LI>
+						<LI>Can you guess the amount that some of these factors contribute to sea height? <a href="factor-height.html" onclick="window.open(this.href,'offworld','width=630,height=500,directories=yes,resizable=yes,status=yes,menubar=yes,location=yes,scrollbars=yes'); return false;" target="_blank">Answer </a></LI>
+					
+					</UL>
+					</FONT>
+				</TD>
+			</TR>
+			</TABLE>
+			
+			
+			<P>
+			<HR>
+			<P>
+			
+			<b><a name="earthgeoid">Earth's Geoid</a></b>
+			<p>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<TR>
+				<TD VALIGN="TOP">
+					<a href="images/geoid.gif"><img src="images/geoid_s.gif" width="160" height="98" alt="Earth Geoid" hspace="8" vspace="8" border="0" align="left"></a>
+			
+				</TD>
+				<TD VALIGN="TOP">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>Believe it not, the height Earth's oceans changes by about 150 meters (almost 500 feet) from the north Indian Ocean (off the south coast of India) and western Pacific Ocean (off of New Guinea)! </LI>
+					
+					</UL>
+					<P>
+					</FONT>
+				</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD COLSPAN="2">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>This "smoothed" map does not include the effect of seamounts, trenches, etc. on the ocean's surface height. </LI>
+						<LI>What do we call the influence of the Moon's gravity on Earth's oceans? <a href="tides.html" onclick="window.open(this.href,'offworld','width=630,height=500,directories=yes,resizable=yes,status=yes,menubar=yes,location=yes,scrollbars=yes'); return false;" target="_blank">Answer</a> </LI>
+						<LI>Earth's geoid is a calculated surface of equal gravitational potential energy and represents the shape the sea surface would be if the ocean were not in motion. How the "real" ocean surface differs from the geoid gives ocean currents. </LI>
+						<LI>To study the how various factors like ocean circulation and eddies affect the height of our oceans, oceanographers eliminate the height of sea surface caused by gravity. </LI>
+			
+						</UL>
+					</FONT>
+				</TD>
+			</TR>
+			</TABLE>
+			
+			
+			
+			
+			<P>
+			<HR>
+			<P>
+			
+			<b><a name="earthrotation">How Earth's Rotation Affects Winds &amp; Currents</a></b>
+			<p>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<TR>
+				<TD VALIGN="TOP">
+					<a href="images/wind_oc.gif"><img src="images/wind_oc-th.gif" width="145" height="145" border="0" alt="How Earth's Rotation Affects Winds &amp; Currents"></a>
+			
+				</TD>
+				<TD VALIGN="TOP">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>Our planet's rotation produces a force on all bodies moving relative to the Earth. </LI>
+						<LI>The force is greatest at the poles and least at the Equator. This is because of Earth's appoximately spherical shape. </LI>
+						<LI>The force, called the "Coriolis effect," causes the direction of winds and ocean currents to be deflected. </LI>
+				
+					</UL>
+					<P>
+					</FONT>
+				</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD COLSPAN="2">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>The "rule of thumb" is that in the Northern Hemisphere, wind and currents are deflected toward the right; in the Southern Hemisphere they are deflected to the left. </LI>
+			
+					</UL>
+					</FONT>
+				</TD>
+			</TR>
+			</TABLE>
+			
+			
+			<P>
+			<HR>
+			<P>
+			
+			
+			
+			<b><a name="corioliseffect">The Coriolis Effect</a></b>
+			<p>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<TR>
+				<TD VALIGN="TOP">
+					<a href="../gallery/tiffs/videos/coriolis.mov"><img src="images/coriolis.gif" width="156" height="119" border="0" alt="Coriolis Movie"></a>
+			
+				</TD>
+				<TD VALIGN="TOP">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+					<LI>Click on the image at left to see a movie created by the University of Illinois Department of Atmospheric Sciences. </LI>
+					<LI>It shows the path of ball being thrown from a view above the moving merry-go-round, and on the merry-go-round. </LI>
+			
+					
+					</UL>
+					<P>
+					</FONT>
+				</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD COLSPAN="2">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+					
+						<LI>From ABOVE the spinning merry-go-round the path the ball travels appears to be straight. </LI>
+						<LI>However, from the perspective ON the merry-go-round the ball appears to curve to the left as it moves from person-to-person. </LI>
+						<LI>Likewise, to a person sitting on the rotating Earth the path of moving objects appears to be deflected. </LI>
+						<LI>Which part of the merry-go-round is moving the fastest: the outside or the inside? <a href="coriolis.html" onclick="window.open(this.href,'offworld','width=630,height=500,directories=yes,resizable=yes,status=yes,menubar=yes,location=yes,scrollbars=yes'); return false;" target="_blank">Answer</a> </LI>
+						<LI>The velocity of the ball itself is constant as it moves from the outside to the inside of the merry-go-round. However, the velocity of the platform beneath the ball is changing as it moves from the outside of the merry-go-round, to the inside, and again. Overall, this makes the ball's path appear to deflect as it moves.</LI> 
+						<LI>The oceans and atmosphere are not rigidly attached to the Earth's surface and this makes their direction of motion very suseptible to apparent deflection by the "Coriolis" force. </LI>
+			
+				
+					</UL>
+					</FONT>
+				</TD>
+			</TR>
+			</TABLE>
+			
+			
+			<P>
+			<HR>
+			<P>
+			
+			<b><a name="hillsvalleys">Hills & Valleys in the Ocean</a></b>
+			<p>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<TR>
+				<TD VALIGN="TOP">
+					<a href="images/hills_vall.gif"><img src="images/hills_vall-th.gif" width="125" height="180" border="0" alt="Hills & Valleys in the Ocean"></a>
+			
+				</TD>
+				<TD VALIGN="TOP">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>The direction of ocean currents at the sea surface is related to wind forcing. However, the "Coriolis effect" also affects the motion of the ocean. </LI>
+						<LI>The "Coriolis effect" causes the movement of water in the uppermost wind-driven part of ocean (known as the "Ekman layer") to create hills and valleys in the ocean topography, or shape. </LI>
+						<LI>In the Northern Hemisphere, counterclockwise winds (black arrows, at top) cause surface ocean water to move to the right and away from a central point (grey arrows), causing a sea surface valley (bottom image). </LI>
+				
+					</UL>
+					<P>
+					</FONT>
+				</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD COLSPAN="2">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>The "side view" image (at bottom) shows how the slope of the sea surface creates currents that flow around these hills and valleys, "in" and "out" of the page -- known as "geostrophic currents." </LI>
+						<LI>In the Northern Hemisphere, clockwise winds cause surface ocean water to move to the right and toward a the central point, causing a sea surface hill. </LI>
+						<LI>"Geostrophic currents" flow around these high and low centers of water pressure, similar to how winds blow from high to low pressure. They are located below the wind-driven layer and their velocity is proportional to the slope of the sea surface. </LI>
+						<LI>These "hills" and "valleys" -- or ocean topography -- are measured by T/P and used to calculate "geostrophic" ocean currents, similarly to how meteorologists use atmospheric pressure maps to track winds and weather.</LI> 
+							
+					</UL>
+					</FONT>
+				</TD>
+			</TR>
+			</TABLE>
+			
+			
+			<P>
+			<HR>
+			<P>
+			
+			<b><a name="dynamicoceantopo">Dynamic Ocean Topography </a></b>
+			<p>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<TR>
+				<TD VALIGN="TOP">
+					<a href="images/dyn_topo_view.gif"><img src="images/dyn_topo_hemis.gif" width="161" height="186" alt="Dynamic Ocean Topography" hspace="8" vspace="8" border="0" align="left"></a>
+			
+				</TD>
+				<TD VALIGN="TOP">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						<LI>Ocean currents are mapped by studying the "hills" and "valleys" in maps of the height of the sea surface relative to the geoid. </LI>
+						<LI>This height is called "Dynamic Ocean Topography." </LI>
+						<LI>Currents move around ocean dynamic topography "hills" and "valleys" in a predictable way. </LI>
+						<LI>"Cool" colors such as purple and blue correspond to topographic valleys and that "warm" colors such as yellow and red correspond to topographic highs or hills. </LI>
+							
+					</UL>
+					<P>
+					</FONT>
+				</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD COLSPAN="2">
+					<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="2">
+					<UL>
+						
+						<LI>Note that a clockwise sense of rotation is found around "hills" in the Northern Hemisphere and "valleys" in the Southern Hemisphere. This is because of the "Coriolis effect."</LI> 
+						<LI>Conversely, a counterclockwise sense of rotation is found around "valleys" in the Northern Hemisphere and "hills" in the Southern Hemisphere. </LI>
+						<LI>In general, our major ocean currents are stable and so maps of dynamic ocean topography change very little over time. </LI>
+			
+					</UL>
+					</FONT>
+				</TD>
+			</TR>
+			</TABLE>
+
+
+
+           <p><br>
+           </FONT>
+          </TD>
+        </TR> 
+       <TR>
+          <TD>
+            <CENTER>
+              <IMG SRC="../images/bottom-line.gif" ALT="bottom line" WIDTH="495" HEIGHT="2" HSPACE="0" BORDER="0">
+            </CENTER>
+          </TD>
+        </TR>  
+        <TR>
+          <TD>
+            <DIV ALIGN="center">
+            <A HREF="../overview/overview.html" class="header">Overview</A> &nbsp;|&nbsp; 
+            <A HREF="../science/science.html" class="header">Science</A> &nbsp;|&nbsp;
+            <A HREF="../technology/technology.html" class="header">Technology</A> &nbsp;|&nbsp;
+            <A HREF="../mission/mission.html" class="header">Missions</A> &nbsp;|&nbsp;
+            <A HREF="../newsroom/newsroom.html" class="header">Newsroom</A> &nbsp;|&nbsp;
+            <A HREF="../education/education.html" class="header"><B>Education</B></A> &nbsp;|&nbsp;
+            <A HREF="../gallery/gallery.html" class="header">Gallery</A>
+            </DIV>
+            <BR><BR>
+          </TD>
+        </TR> 
+      </TABLE>
+    </TD>
+  </TR> 
+  
+</TABLE>
+
+<TABLE WIDTH="653" border="0" cellpadding="5" cellspacing="0" BGCOLOR="#FFFFFF">		
+<TR  bgcolor="#CCCCCC">
+   <TD><A HREF="http://www.firstgov.gov/" target="_blank"><IMG SRC="../images/firstgov.gif" ALT="link to First Gov" WIDTH="131" HEIGHT="46" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+   <TD><IMG SRC="../images/blank-space.gif" ALT="" WIDTH="138" HEIGHT="1" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+   <TD><A HREF="http://www.nasa.gov"><IMG SRC="../images/bottom-nasalogo.gif" ALT="NASA logo" WIDTH="54" HEIGHT="46" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+   <TD WIDTH="330" class="footer">
+    &nbsp;&nbsp;&nbsp;Site Manager: <A HREF="../feedback.cfm" class="header">Margaret Srinivasan</A><BR>
+    &nbsp;&nbsp;&nbsp;Webmaster: <A HREF="mailto:kawasaki@sdsio.jpl.nasa.gov" class="header">Kristy Kawasaki</A><BR>
+    &nbsp;&nbsp;&nbsp;Last Updated: <script>document.write( lastMod() );</script><BR>
+      &nbsp;&nbsp;&nbsp;JPL Clearance: CL01-1707
+      <script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? 
+		"https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + 
+		"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-4391123-6");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+		</script>
+    </TD>	 
+</TR>
+</TABLE>  
+</TD>
+ </TR>
+</TABLE> 
+
+</DIV>
+
+</BODY>
+
+</html>
+

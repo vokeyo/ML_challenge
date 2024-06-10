@@ -1,0 +1,185 @@
+<html>
+<head>
+    <title>JPL News</title>
+
+<cfset highlight = 'news_notes'>
+<cfset root.directory = '../'>
+<cfinclude template="../jpl_header.cfm">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">
+<cfinclude template="news_side2.cfm">
+</td>
+
+<td width="10"><img src="../images/spacer.gif" width="10" height="1"></td>
+<td width="540" valign="top"><font color="#0E69A7" size="4" face="arial, helvetica, verdana, sans serif"><b>News Notes</b></font>
+		<p>
+		<font size="2" face="arial, helvetica, verdana, sans serif">
+		<dl>
+		<dt><b>Earth:</b>
+		<ul type="disc">
+<li><font size="2" face="arial, helvetica, verdana, sans serif">7/16/2003 </font><a href="../earth/earth_news_notes.html"><b>Where Is La Ni&ntildea?</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">5/30/2003 </font><a href="../earth/earth_news_notes.html"><b>A Productive First Year for NASA's Aqua Satellite</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">5/16/2003 </font><a href="../earth/earth_news_notes.html"><b>Postcard from Space: U.S. and Canada</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">5/2/2003 </font><a href="../earth/earth_news_notes.html"><b>A Glacial Fairy Tale Unfolds in Alaska</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">4/15/2003 </font><a href="../earth/earth_news_notes.html"><b>Hasta La Vista, El Ni&ntildeo </b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">4/4/2003 </font><a href="../earth/earth_news_notes.html"><b>Smoke Over Baghdad</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">1/21/2003 </font><a href="../earth/earth_news_notes.html"><b>NASA Study Finds Solar Trend That Can Change Climate</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">1/14/2003 </font><a href="../earth/earth_news_notes.html"><b>El Ni&ntildeo's 'Child' Psychology</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">1/9/2003 </font><a href="../earth/earth_news_notes.html"><b>Earth Imitates Art in Space Imagery</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">1/7/2003 </font><a href="../earth/earth_news_notes.html"><b>L.A.'s Blustery Days</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/20/2002 </font><a href="../earth/earth_news_notes.html"><b>JPL Tapped for New Earth Studies</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/20/2002 </font><a href="../earth/earth_news_notes.html"><b>Wind Instrument Captures Guam Typhoon</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/12/2002 </font><a href="../earth/earth_news_notes.html"><b>El Ni&ntilde Continues to Grow</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">11/27/2002 </font><a href="../earth/earth_news_notes.html"><b>SeaWinds Instrument Ready for Launch</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">11/12/2002 </font><a href="../earth/earth_news_notes.html"><b>SeaWinds Instrument Ready for Flight</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">11/5/2002 </font><a href="../earth/earth_news_notes.html"><b>Burning Ozone Issues to Be Studied</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">10/18/2002 </font><a href="../earth/earth_news_notes.html"><b>A Heavenly View of 2002 World Series</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">9/30/2002 </font><a href="../earth/earth_news_notes.html"><b>NASA's QuikScat Monitors Increased Storm Activity</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">9/26/2002 </font><a href="../earth/earth_news_notes.html"><b>L.A. Area Wildfire Viewed by NASA Sensor</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">8/13/2002 </font><a href="../earth/earth_news_notes.html"><b>Latest View of the Pacific</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">6/21/2002 </font><a href="../earth/earth_news_notes.html"><b>Three Candles for QuikScat</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">5/22/2002 </font><a href="../earth/earth_news_notes.html"><b>Typhoon Season Spins Up Early</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">3/29/2002 </font><a href="../earth/earth_news_notes.html"><b>The Mighty Mississippi</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">3/21/2002 </font><a href="../earth/earth_news_notes.html"><b>Surfing Satellite Ocean Data</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">2/27/2002 </font><a href="../earth/earth_news_notes.html"><b>Satellite Helps Cut through Antarctic Waters</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">2/22/2002 </font><a href="../earth/earth_news_notes.html"><b>Grace Satellites Arrive in Russia</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">1/25/2002 </font><a href="../earth/earth_news_notes.html"><b>On the Double: Grace Readies for Launch</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">1/18/2002 </font><a href="../earth/earth_news_notes.html"><b>Study Casts Chill on Old Antarctic Theories</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">1/9/2002 </font><a href="../earth/earth_news_notes.html"><b>Smoke Blanket Sidney, Australia</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">1/9/2002 </font><a href="../earth/earth_news_notes.html"><b>Peruvian Volcano Towers Above City</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">1/3/2002 </font><a href="../earth/earth_news_notes.html"><b>JPL Instrument Aided Post-Sept. 11 Efforts</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">12/20/2001 </font><a href="../earth/earth_news_notes.html"><b>Christmas Mountains in Holiday Colors</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">12/3/2001 </font><a href="../earth/earth_news_notes.html"><b>Jason 1 Spacecraft at Launch Pad</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">11/01/2001 </font><a href="../earth/earth_news_notes.html"><b>Jason 1 Readies for December Launch</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">9/21/2001 </font><a href="../earth/earth_news_notes.html"><b>New York Smoke Observed from Space</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">8/16/2001 </font><a href="../earth/earth_news_notes.html"><b>A View High Above Argentina</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">7/19/2001 </font><a href="../earth/earth_news_notes.html"><b>New Image of Costa Rican Landscape</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">7/11/2001 </font><a href="../earth/earth_news_notes.html"><b>Spring Flooding on the Mississippi</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">7/6/2001 </font><a href="../earth/earth_news_notes.html"><b>New Network Helps Study Earthquakes</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">7/5/2001 </font><a href="../earth/earth_news_notes.html"><b>Russian Peninsula's Volcanic Peaks</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">6/22/2001 </font><a href="../earth/earth_news_notes.html"><b>A Peek at Andes Mountains</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">5/18/2001 </font><a href="../earth/earth_news_notes.html"><b>Early Detection for Dangerous Weather</b></a>
+		</ul>
+		<p>
+		<b>Solar System:</b>
+		<ul type="disc">
+<li><font size="2" face="arial, helvetica, verdana, sans serif">7/2/2003 </font><a href="../solar_system/solar_system_news_notes.html"><b>Cassini One Year Shy of Saturn</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">6/18/2003 </font><a href="../solar_system/solar_system_news_notes.html"><b>'Opportunity' Mars Rovers Nears Launch</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">6/5/2003 </font><a href="../solar_system/solar_system_news_notes.html"><b>Odyssey Thermal Data Reveals a Changing Mars</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">5/29/2003 </font><a href="../solar_system/solar_system_news_notes.html"><b>Mars Exploration Rovers Poised for Launch</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">4/17/2003 </font><a href="../solar_system/solar_system_news_notes.html"><b>Changing of the Guard</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">3/20/2003 </font><a href="../solar_system/solar_system_news_notes.html"><b>Gamma-Ray Burst Reveals Explosive Activity</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">2/25/2003 </font><a href="../solar_system/solar_system_news_notes.html"><b>Next Stop: Mars</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">1/15/2003 </font><a href="../solar_system/solar_system_news_notes.html"><b>Last Chance to Name a Rover</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">1/13/2003 </font><a href="../solar_system/solar_system_news_notes.html"><b>Three New Moons of Neptune Spotted</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/26/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>With the Wind at Their Wheels</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/20/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Deep Space 1: The Archeology Mission</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/19/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Clouds Seen at Saturn's Moon Titan</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/16/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>A Chance to See Saturn</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/13/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Global Surveyor Starts Third Year</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">11/25/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Mars Exploration: Then and Now</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">11/19/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Rover Preps: In the Lab and Field</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">10/30/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>A Spacey Trick or Treat</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">10/15/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Mars Exploration Rover Makes Progress</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">10/7/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Anniversary Portrait of Comet Borrelly</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">9/12/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Newfound Object Could be Leftover Apollo Rocket Stage</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">8/23/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Titan's Haze: A New Model</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">8/8/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Meteor Shower on Display This Weekend</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">7/24/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Asteroid Is No Reason for Concern</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">6/20/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Small Asteroid Passes Earth</b></a> 
+<li><font size="2" face="arial, helvetica, verdana, sans serif">6/18/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>European Dish Hears Stardust</b></a> 
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">6/7/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Solar Eclipse on June 10</b></a> 
+              <li><font size="2" face="arial, helvetica, verdana, sans serif">4/18/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Stardust Breaks Solar Record</b></a> 
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">3/27/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Need to Get Away to Someplace Exotic?</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">3/4/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Pioneer 10 Checks In</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">1/25/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Asteroid, Lumps and All</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">1/15/2002 </font><a href="../solar_system/solar_system_news_notes.html"><b>Scientists Eye Two Asteroids</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">12/6/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>JPLers Teach Students About Space</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">11/27/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Huygens Passes Test with Flying Colors</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">11/20/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Global Surveyor's 100,000th Image of Red Planet</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">11/19/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Big Honors for JPL Asteroid Navigators</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">11/15/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Huygens Probe Tested for Titan</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">10/29/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Students: Learn What's New Under the Sun</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">10/23/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>2001 Mars Odyssey: How Sweet It Is!</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">10/11/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Ulysses Flying High Above the Sun</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">10/8/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Stardust Spacecraft Breaks a Record</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">10/2/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Surprises in Store for Asteroid Mapping</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">10/2/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Noisy Ice May Tattle on Europa's Depths</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">7/24/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>July 24th's Fire in the Sky</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">7/20/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>25th Anniversary of Mars Landing</b></a>
+                <li><font size="2" face="arial, helvetica, verdana, sans serif">6/19/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Wake Up to a Planetary Show</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">6/18/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>JPL to Navigate First Mercury Orbiter</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">5/18/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Close Encounter with Mars</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">5/18/2001 </font><a href="../solar_system/solar_system_news_notes.html"><b>Genesis to Help Study Solar System Origins</b></a>
+		</ul>
+		<p>
+		<b>Stars &amp; Galaxies:</b> 
+		<ul type="disc">
+<li><font size="2" face="arial, helvetica, verdana, sans serif">7/3/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Celestial Fireworks</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">5/21/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Exotic Formations in Dying Star</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">5/1/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Hubble Image Captures Cosmic Wreck</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">4/24/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>A Perfect Storm of Turbulent Gases</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">4/18/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Galaxy Mission Launch Planned</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">4/18/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>NASA Delays Space Infrared Telescope Facility Launch</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">4/8/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>One Step Closer to Launch</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">2/27/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>New Galaxy Quest Readies for Launch</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">2/26/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Finishing Touches for Space Telescope</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">2/10/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Closeup of Dumbbell Nebula</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">2/7/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>JPL Expert Chosen for Space-Time Research</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">1/7/2003 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Distant Planet Boosts Planet Search</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/19/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>A Tiny Galaxy Is Born</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">12/12/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Galactic Dance of Destruction</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">11/19/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Clues from a Speeding Black Hole</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">11/7/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Old Star Gives Up the Ghost</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">10/16/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>JPL Detectors View Early Universe</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">10/3/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Odd Couple Separated by Time and Space </b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">9/17/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Supercomputer Boosts Planet Search</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">9/5/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Bullseye in Space</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">8/23/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>New Space Telescope to Lift Veil on Planet Formation</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">7/12/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Over 100 Planets Found and Counting</b></a>
+		
+<li><font size="2" face="arial, helvetica, verdana, sans serif">4/8/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>The Making of a Space Telescope</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">1/8/2002 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Star Formation Predates Existing Theories</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">10/24/2001 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Telescope Facility Dedicated for '02 Mission</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">10/5/2001 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>A Galactic Building Block Spotted</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">8/4/2001 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>'Cosmic Renaissance' Detected</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">7/25/2001 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Cosmic Fireworks in the Sky</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">7/10/2001 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Good Vibes for GALEX Mission</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">7/5/2001 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Galaxies Galore in the Coma Cluster</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">6/6/2001 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Mapping the Sky</b></a>
+		<li><font size="2" face="arial, helvetica, verdana, sans serif">5/18/2001 </font><a href="../stars_galaxies/stars_galaxies_news_notes.html"><b>Hot Starts in Dusty Nebula</b></a>
+		</ul>
+		<p>
+
+                <b>Technology:</b> 
+		<ul type="disc">
+<li><font size="2" face="arial, helvetica, verdana, sans serif">5/19/2003 </font><a href="../technology/technology_news_notes.html"><b>JPL Chosen for In-Space Propulsion Research</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">3/17/2003 </font><a href="../technology/technology_news_notes.html"><b>Student Engineers Get a Glimpse of Mars</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">3/3/2003 </font><a href="../technology/technology_news_notes.html"><b>Researchers Give Artificial Muscles a Human Touch</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">10/22/2002 </font><a href="../technology/technology_news_notes.html"><b>Got 'Bot? Sponsorships Now Available</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">9/26/2001 </font><a href="../technology/technology_news_notes.html"><b>Students Wanted for Robotics Competition</b></a>
+		
+                </ul>
+		<p>
+		<b>General:</b> 
+		<ul type="disc">
+<li><font size="2" face="arial, helvetica, verdana, sans serif">5/13/2003 </font><a href="general_news_notes.cfm"><b>Sneak a Peek at Upcoming Open House</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">3/21/2003 </font><a href="general_news_notes.cfm"><b>NASA Astronaut Visits Students in Los Angeles</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">2/14/2003 </font><a href="general_news_notes.cfm"><b>Implementing the NASA Vision</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">11/20/2002 </font><a href="general_news_notes.cfm"><b> Dr. Charles Elachi Accepts Takeda Award</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">10/28/2002 </font><a href="general_news_notes.cfm"><b>JPL Director Serves as Grand Marshal</b></a>
+<li><font size="2" face="arial, helvetica, verdana, sans serif">7/5/2002 </font><a href="general_news_notes.cfm"><b>JPL Adds Extra Tours for Summer</b></a>
+		
+                </ul>
+		<p>
+		</dl>
+		</font> 
+		</td>
+	</tr>
+</table>	
+
+<cfinclude template="#root.directory#jpl_footer.cfm">
+
+

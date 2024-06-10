@@ -1,0 +1,159 @@
+
+
+
+    nomfich='/poub/mercier/essais/2Q980420.02'		; 128 sec
+;   nomfich='/poub/mercier/essais/2I980420.02'		;  32 sec   
+;   nomfich='/disque6/pick/20april98/merciersoft/2i980420.02' ; 32 sec
+		; l'image de 10:13:07 est bonne pour mise au point
+		; evt complet : 10:05 a 10:25
+	t_deb   = [10,05,00,00]		; deb CME 20 avr (h,mn,sec,ms)
+	t_fin   = [10,25,06,98]		; fin -----------------------
+
+
+
+
+; CHOIX DU REPERTOIRE DE SORTIE POUR ECRIRE LES RESULTATS
+;   out_dir = '/disque4/mercier/bogod'	   ; output directory for fits files
+    out_dir = '/poub2/bouteill/dpatch'  ; output directory for fits files
+;   out_dir = getenv("DPATCH")
+
+
+
+
+; CHOIX DES FREQUENCES ET POLARISATION
+    sel_freq = ['Y', 'N', 'N', 'N', 'N',   'N', 'N', 'N', 'N', 'N']
+			; N no, Y yes. Let dimension 10 at the array. 
+    ipolar = 0		; (0) without Stokes_v, (1) with Stokes_v
+    DEF_STR_dp, str_dp
+; REMPLISSAGE EVENTUEL DU PAVE CENTRAL DES HARMONIQUES PAR INTERPOLATION
+			; Rem 1 (5 oct 01) : le remplissage du pave "desaliase"
+			;   nettement mieux mieux que le clean les sources com-
+			;   pactes (ou un ensemble de sources compactes) ou une
+			;   arche de CME, et aussi bien le soleil calme. Dans
+			;   ce dernier cas un eventuel CME sur le soleil calme
+			;   est nettement mieux desaliase avec le remplissage.
+			; Rem 2 (2 oct 01) : l'image avec pave lacunaire clea-
+			;   nee d'une arche de CME presente un artefact de rem-
+			;   plissage semblable a une condensation coronale in-
+			;   terne et concentrique (surtout visible sur l'image
+			;   centrale, moins sur les alias). 
+			;   Avec le remplissage du pave :
+			;   . cet effet est presque absent,
+			;   . le CME est beaucoup mieux desaliase.
+    str_dp.i_pave_plein = 1 ; interpolation dans la zone centrale des harmoniques
+			;   (-15 a +15 en EW et -23 a +23 en NS): 
+			;   0 sans, 1 interpolation cubic spline (recommand'e).
+; CARACTERISATION DU CHAMP DE CALCUL D'IMAGE ET UNITES DE BRILLANCE
+    str_dp.n_period = 1.0 ; Nbre de periodes (EW ET NS) sur lesquelles on calcule
+			;   l'image interferometrique. Usuel 1 (1.5 pour des
+			;   arches de CMEs).
+   str_dp. mode_interpol = 3 ; Mode d'interpolation pour passer de l'image interfe-
+			;   rometrique a l'image heliographique :
+			;    1 interpolation bi-lineaire  (  5 msec, mediocre)
+			;    2 ------------- cubic spline ( 60 ----, meilleur)
+			;    3 ------------- fft          (150 ----, parfait)
+			;   Rem : l'interpolation bilineaire suffit sauf s'il
+			;     existe des sources etroites (a peine plus larges
+			;     que le lobe theorique) sur le soleil. 
+    str_dp.np   = 128	; Number of pixels, in EW and NS in final heliographic
+			;   images (128 or 256) .  
+			; For a correct sampling of heliographic images obtai-
+			;   ned with antennsa E0 and E2, np should not be less
+			;   than 128, and larger if "larg" is larger than the
+			;   width of the interferometric field.
+    str_dp.larg = 6.	; Largeur (RS) du champ heliographique souhaite, cou-
+			;   vert par la grille a mailles carrees de np*np pts :
+			;   - 4 suffit usuellement (sauf cas de type IV mouvant
+			;	ou de CME).
+			;       La meme valeur etant adoptee pour toutes les 
+			;	frequences, le champ heliographique couvre 
+			;	alors environ la moitie du champ interferome-
+			;	trique a 164 MHz (qui est en general inutile-
+			;	ment grand), tout le champ a 327 MHz, et plus
+			;	du champ interferometrique a 410 et 432 MHz.
+			;   - 8 (qui couvre la totalite du champ interferome-
+			;	trique a 164 Mhz, et plus aux frequences plus
+			;	elevees) permet de voir les alias pour f<327,
+			;	alias qui ne sont que peu "desaliases" par les
+			;	harm de E0 (qui n'existent que sur l'axe EW).
+			; Rem : il n'est pas interdit de prendre larg > periode
+			;   de l'image interferometrique, mais il faudra alors
+			;   choisir plus bas n_period > 1, faute de quoi 
+			;   l'image heliographique sera nulle sur les bords.
+    str_dp.t_b    = 1	; unites image: 1 en sfu, 2 en Kelvins. Par suite d'une
+			;   fantaisie d'origine obscure il faut t_b=2 pour
+			;   calculer le flux en sfu dans NRH (!).
+
+    str_dp.mode_clean = 0	; mode du clean :
+			;   0 pas de clean 
+			;   1 pour clean normal sur champ entier,
+			;   2 pour nettoyer partout mais on evite que l'image 
+			;	finale soit ecrasee par un orage intense : on 
+			;	soustrait partout les composantes "sales" mais
+			;	on ne restitue sous forme synthetique que cel-
+			;	les qui sont exterieures a un domaine dom_c de-
+			;	fini par x_dom, y_dom, dr_dom.
+			;   3 pour retirer le pic et les lobes secondaires d'un
+			;       orage intense qui obscurcissent tout le reste
+			;	de l'image, se contentant d'une image sale
+			;	residuelle pour le reste : on soustrait les
+			;	les composantes sales interieures a dom_c.
+			;   4 pour obtenir rapidement une image d'un orage in-
+			;	tense interieur a dom_c, debarasse seulement de
+			;	ses propres secondaires : on restreint la re-
+			;	cherche des composantes a dom_c. Le reste n'est
+			;	pas nettoy'e et ajout'e a l'image synthetique 
+			;	partielle.
+
+; Appel des procedures de traitement
+
+
+    RH_DPATCHFITS_NRH,                                              $
+        nomfich, sel_freq, ipolar, t_deb, t_fin, out_dir,           $
+        str_dp
+
+;    print, 'Ouf, quel boulot ! Le travail a ete fait dans des boites ' + $
+;	'd''acces interdit.'  
+
+    end
+
+
+; Partie speciale Mercier (fichiers pour Bogod)
+;    nomfich='/cdrom/2i990519.01a'
+;    t_deb  = [08,36,00,00]
+;    t_fin  = [08,38,00,00]
+
+;    t_deb  = [08,42,40,00]
+;    t_fin  = [08,46,40,00]
+
+;    t_deb  = [08,51,00,00]
+;    t_fin  = [08,55,00,00]
+
+;    t_deb  = [08,59,40,00]
+;    t_fin  = [09,03,40,00]
+
+;    t_deb  = [09,08,00,00]
+;    t_fin  = [09,12,00,00]
+
+;    t_deb  = [09,16,30,00]
+;    t_fin  = [09,20,30,00]
+
+;    t_deb  = [09,25,00,00]
+;    t_fin  = [09,29,00,00]
+
+;    t_deb  = [09,33,30,00]
+;    t_fin  = [09,37,30,00]
+
+;    t_deb  = [09,42,00,00]
+;    t_fin  = [09,46,00,00]
+
+;    t_deb  = [09,50,30,00]
+;    t_fin  = [09,54,30,00]
+
+;    t_deb  = [09,59,00,00]
+;    t_fin  = [10,03,00,00]
+
+;  .size 60000 20000 
+; avant compilation pour avoir une "program code area" et une "symbol area"
+;  suffisantes.
+

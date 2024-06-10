@@ -1,0 +1,242 @@
+
+            <html>
+            <head>
+            <style type='text/css'>
+                body       { background: rgb(230,230,230); }
+                td.lineno  { background: rgb(150,150,150); border: ridge 7px;
+                             font-weight: bold; padding: 5px; }
+                td.normal  { background: rgb(230,230,230); font-family: monospace; }
+                td.nothing { background: rgb(200,200,200); font-family: monospace; }
+                td.deleted { background: rgb(255,150,150); font-family: monospace; }
+                td.changed { background: rgb(255,255,120); font-family: monospace; }
+                td.added   { background: rgb(150,255,150); font-family: monospace; }
+            </style>
+            <title>CVS diff for FountainWireProt.h between 1.23 and 1.17</title>
+            </head>
+            <body>
+            <h1>CVS diff for FountainWireProt.h between 1.23 and 1.17:</h1>
+            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+            <tr>
+                <th width='50%'>Revision 1.17</th>
+                <th width='50%'>Revision 1.23</th>
+            </tr><tr>
+                <td class='lineno'>Line 24</td>
+                <td class='lineno'>Line 24</td>
+                </tr><tr>
+            <td class='normal'>
+            <pre>//! noticed immediately during the call to select in FountainSocketHandlers::CheckConnections.&nbsp;<br />class FountainWireProt {&nbsp;<br />    public:&nbsp</pre>
+            </td><td class='normal'>
+            <pre>//! noticed immediately during the call to select in FountainSocketHandlers::CheckConnections.&nbsp;<br />class FountainWireProt {&nbsp;<br />    public:&nbsp</pre>
+            </td></tr><!-- ahi-alo=4, bhi-blo=9 --><tr>
+                         <td class='changed'>
+                         <pre>		//! \brief default constructor
+		//! Creates an unconnected wire protocol handler
+		//! \bug hack for temporary SSS_Protocols enum, get the real thing from FountainNOde::DEFAULT_NODE_PROTOCOL somehow
+		FountainWireProt(SSSWireProt* connection=NULL, SSS_Protocols prot=HTTP);&nbsp;</pre>
+                         </td><td class='changed'>
+                         <pre>		//! \brief Server socket constructor
+		//! Creates a connected wire protocol handler using the SSS wire protocol handler
+		//! @param connection A SSSWireProtocol connection already in place
+		FountainWireProt(SSSWireProt* connection);</pre>
+                         </td></tr><tr>
+                         <td class='nothing'>
+                         <pre>&nbsp;</pre>
+                         </td><td class='changed'>
+                         <pre>		
+		//! \brief Client socket constructor
+		//! Created an unconnected wire protocol handler ready to connect
+		//! @param prot The SSS wire protocol to use
+		FountainWireProt(SSS_Protocols prot);</pre>
+                         </td></tr><tr>
+            <td class='normal'>
+            <pre>    	&nbsp;<br />        //! \brief Destructor that will close the socket and remove the file descriptor from our vector of clientSockets&nbsp;<br />    	~FountainWireProt();&nbsp;<br />    	&nbsp;<br />    	//! \brief Connects to the specified host and port</pre>
+            </td><td class='normal'>
+            <pre>    	&nbsp;<br />        //! \brief Destructor that will close the socket and remove the file descriptor from our vector of clientSockets&nbsp;<br />    	~FountainWireProt();&nbsp;<br />    	&nbsp;<br />    	//! \brief Connects to the specified host and port</pre>
+            </td></tr><!-- ahi-alo=9, bhi-blo=1 --><tr>
+                         <td class='changed'>
+                         <pre>        //! @param Host - The hostname to connect to</pre>
+                         </td><td class='changed'>
+                         <pre>		//! @param node The NodeID of the host to connect to&nbsp;</pre>
+                         </td></tr><tr>
+                         <td class='changed'>
+                         <pre>        //! @param Port - The port on to connect to
+        //! @return SUCCESS if the connection was successful, or FAILURE if it was not
+        int connect(const char* Host, int Port);
+
+        //! \brief Same as the c-string equivalent function above
+        int connect(const string&amp; Host, int Port);
+		
+		//! \brief Same as calling connect(hostname, listenPort)</pre>
+                         </td><td class='nothing'>
+                         <pre>&nbsp;</pre>
+                         </td></tr><tr>
+            <td class='normal'>
+            <pre>		int connect(const NodeID&amp; node);&nbsp;<br />&nbsp;<br />        //! \brief Blocking send&nbsp;</pre>
+            </td><td class='normal'>
+            <pre>		int connect(const NodeID&amp; node);&nbsp;<br />&nbsp;<br />        //! \brief Blocking send&nbsp;</pre>
+            </td></tr><tr>
+            <td class='lineno'>Line 52</td>
+            <td class='lineno'>Line 49</td>
+            </tr><tr>
+            <td class='normal'>
+            <pre>        //! \brief Blocking receive&nbsp;<br />        //! @return A pointer to a ParseMsg object containing the received message&nbsp;<br />        FountainParseMessage* recvMessage();&nbsp;</pre>
+            </td><td class='normal'>
+            <pre>        //! \brief Blocking receive&nbsp;<br />        //! @return A pointer to a ParseMsg object containing the received message&nbsp;<br />        FountainParseMessage* recvMessage();&nbsp;</pre>
+            </td></tr><tr>
+                    <td class='nothing'>&nbsp;</td>
+                    <td class='added'>
+                    <pre>		
+		//! \brief Blocking receive
+		//! @return A pointer to a c-string array containing the received message
+		const char* recvMessage(int&amp; length);&nbsp;</pre>
+                    </td></tr><tr>
+            <td class='normal'>
+            <pre>        &nbsp;<br />		//! \brief Send a text message on the socket&nbsp;<br />		//! @return SUCCESS if sending the message was successful&nbsp;</pre>
+            </td><td class='normal'>
+            <pre>        &nbsp;<br />		//! \brief Send a text message on the socket&nbsp;<br />		//! @return SUCCESS if sending the message was successful&nbsp;</pre>
+            </td></tr><tr>
+            <td class='lineno'>Line 67</td>
+            <td class='lineno'>Line 68</td>
+            </tr><tr>
+            <td class='normal'>
+            <pre>		//! @param sleepTime The time in seconds to wait for data on this connection&nbsp;<br />		int CheckForData(int sleepTime=0);&nbsp;<br />		&nbsp;</pre>
+            </td><td class='normal'>
+            <pre>		//! @param sleepTime The time in seconds to wait for data on this connection&nbsp;<br />		int CheckForData(int sleepTime=0);&nbsp;<br />		&nbsp;</pre>
+            </td></tr><tr>
+                    <td class='nothing'>&nbsp;</td>
+                    <td class='added'>
+                    <pre>		//! @return get the hostname of the host this object is connected to
+		const std::string&amp; getHostname() const { return _hostname; };
+		&nbsp;</pre>
+                    </td></tr><tr>
+            <td class='normal'>
+            <pre>        //! The FountainSocketHandlers class needs to be a friend class so it&nbsp;<br />        //! has access to our static private sockets vector&nbsp;<br />        friend class FountainSocketHandlers;&nbsp;<br />        &nbsp;<br />    private:</pre>
+            </td><td class='normal'>
+            <pre>        //! The FountainSocketHandlers class needs to be a friend class so it&nbsp;<br />        //! has access to our static private sockets vector&nbsp;<br />        friend class FountainSocketHandlers;&nbsp;<br />        &nbsp;<br />    private:</pre>
+            </td></tr><!-- ahi-alo=1, bhi-blo=2 --><tr>
+                         <td class='changed'>
+                         <pre>		//! \enum FountainWireProtState&nbsp;</pre>
+                         </td><td class='changed'>
+                         <pre>		//! \enum FountainWireProtType</pre>
+                         </td></tr><tr>
+                         <td class='nothing'>
+                         <pre>&nbsp;</pre>
+                         </td><td class='changed'>
+                         <pre>		//! \brief Enumerated types to define client or server sockets</pre>
+                         </td></tr><tr>
+            <td class='normal'>
+            <pre>		enum FountainWireProtType {</pre>
+            </td><td class='normal'>
+            <pre>		enum FountainWireProtType {</pre>
+            </td></tr><!-- ahi-alo=1, bhi-blo=1 --><tr>
+                         <td class='changed'>
+                         <pre>			invalid=0,&nbsp;</pre>
+                         </td><td class='changed'>
+                         <pre>			invalidType=0,&nbsp;</pre>
+                         </td></tr><tr>
+            <td class='normal'>
+            <pre>			ClientSocket,&nbsp;<br />			ServerSocket,</pre>
+            </td><td class='normal'>
+            <pre>			ClientSocket,&nbsp;<br />			ServerSocket,</pre>
+            </td></tr><tr>
+                    <td class='nothing'>&nbsp;</td>
+                    <td class='added'>
+                    <pre>			numFountainWireProtTypes
+		};
+
+		//! \enum FountainWireProtState
+		//! \brief Enumerated types to define the state of a FountainWireProt object
+		enum FountainWireProtState {
+			invalidState=0,
+			notConnected,
+			connected,&nbsp;</pre>
+                    </td></tr><tr>
+            <td class='normal'>
+            <pre>			numFountainWireProtStates&nbsp;<br />		};&nbsp;<br />		&nbsp;</pre>
+            </td><td class='normal'>
+            <pre>			numFountainWireProtStates&nbsp;<br />		};&nbsp;<br />		&nbsp;</pre>
+            </td></tr><tr>
+            <td class='lineno'>Line 89</td>
+            <td class='lineno'>Line 103</td>
+            </tr><tr>
+            <td class='normal'>
+            <pre>		//! \brief This function is called by the FountainWireProt destructor&nbsp;<br />        void removeSocket();&nbsp;<br />		&nbsp;</pre>
+            </td><td class='normal'>
+            <pre>		//! \brief This function is called by the FountainWireProt destructor&nbsp;<br />        void removeSocket();&nbsp;<br />		&nbsp;</pre>
+            </td></tr><tr>
+                    <td class='nothing'>&nbsp;</td>
+                    <td class='added'>
+                    <pre>		//! \brief Looks up a hostname of a connected socket using the getpeername system call
+		void lookupHostname() throw(FountainException);
+&nbsp;</pre>
+                    </td></tr><tr>
+            <td class='normal'>
+            <pre>		//! \brief Convert a FountainWireProtType enumeration into a c-string&nbsp;<br />		static const char* fountain_convert(FountainWireProtType t);</pre>
+            </td><td class='normal'>
+            <pre>		//! \brief Convert a FountainWireProtType enumeration into a c-string&nbsp;<br />		static const char* fountain_convert(FountainWireProtType t);</pre>
+            </td></tr><!-- ahi-alo=1, bhi-blo=4 --><tr>
+                         <td class='changed'>
+                         <pre>		&nbsp;</pre>
+                         </td><td class='changed'>
+                         <pre></pre>
+                         </td></tr><tr>
+                         <td class='nothing'>
+                         <pre>&nbsp;</pre>
+                         </td><td class='changed'>
+                         <pre>		//! \brief Convert a FountainWireProtState enumeration into a c-string
+		static const char* fountain_convert(FountainWireProtState t);
+</pre>
+                         </td></tr><tr>
+            <td class='normal'>
+            <pre>		//! enumerated value to determine if we're a server or client socket&nbsp;<br />        FountainWireProtType socketType;&nbsp;<br />		</pre>
+            </td><td class='normal'>
+            <pre>		//! enumerated value to determine if we're a server or client socket&nbsp;<br />        FountainWireProtType socketType;&nbsp;<br />		</pre>
+            </td></tr><tr>
+                    <td class='nothing'>&nbsp;</td>
+                    <td class='added'>
+                    <pre>		//! enumerated value to determine our state
+		FountainWireProtState state;
+		&nbsp;</pre>
+                    </td></tr><tr>
+            <td class='normal'>
+            <pre>		//! The SSSWireProt handler for each FountainWireProt object&nbsp;<br />		SSSWireProt* _connection;</pre>
+            </td><td class='normal'>
+            <pre>		//! The SSSWireProt handler for each FountainWireProt object&nbsp;<br />		SSSWireProt* _connection;</pre>
+            </td></tr><tr>
+                    <td class='nothing'>&nbsp;</td>
+                    <td class='added'>
+                    <pre>		
+		//! The hostname of the host this FountainWireProt object is connected to
+		std::string _hostname;&nbsp;</pre>
+                    </td></tr><tr>
+            <td class='normal'>
+            <pre>		&nbsp;<br />		//! Vector of file descriptors for our existing open client sockets.  Both this vector and the serverSockets vector&nbsp;<br />		//! are static since they contain values needed by the FountainSocketHandlers class during it's system call&nbsp;</pre>
+            </td><td class='normal'>
+            <pre>		&nbsp;<br />		//! Vector of file descriptors for our existing open client sockets.  Both this vector and the serverSockets vector&nbsp;<br />		//! are static since they contain values needed by the FountainSocketHandlers class during it's system call&nbsp;</pre>
+            </td></tr><tr>
+            <td class='lineno'>Line 113</td>
+            <td class='lineno'>Line 139</td>
+            </tr><tr>
+            <td class='normal'>
+            <pre>&nbsp;<br />#endif&nbsp;<br />&nbsp;</pre>
+            </td><td class='normal'>
+            <pre>&nbsp;<br />#endif&nbsp;<br />&nbsp;</pre>
+            </td></tr>
+            </table>
+            <br /><br />
+            <table border='1' cellpadding='2'>
+            <tr><th colspan='2'>Legend</th></tr>
+            <tr>
+                <td class='deleted'>Lines deleted from 1.23</td>
+                <td class='nothing'>&nbsp;</td>
+            </tr><tr>
+                <td colspan='2' style='text-align:center' class='changed'>
+                    Lines Modified
+                </td>
+            </tr><tr>
+                <td class='nothing'>&nbsp;</td>
+                <td class='added'>Lines added in revision 1.17</td>
+            </tr>
+            </table>
+            </body>
+            </html>

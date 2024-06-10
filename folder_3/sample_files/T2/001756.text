@@ -1,0 +1,603 @@
+             DEPARTMENT OF HEALTH AND HUMAN SERVICES
+                      PUBLIC HEALTH SERVICE
+   FOOD AND DRUG ADMINISTRATION / CENTERS FOR DISEASE CONTROL
+
+         VACCINE ADVERSE EVENT REPORTING SYSTEM (VAERS)
+
+                      (revised June 2007)
+
+Contents:
+       ·Important information about VAERS
+       ·Brief Description of VAERS
+       ·VAERS Data Should be Interpreted with Caution
+       ·Description of Data Files
+       ·Definitions of Terms Used in Data Files
+       ·Commonly Used Symptom Text Abbreviations
+
+1.Important Information About the Vaccine Adverse Event Reporting System (VAERS)
+
+VAERS was created by the Food and Drug Administration (FDA) and Centers for Disease Control and Prevention (CDC) to receive reports about adverse events that may be associated with vaccines.  No prescription drug or biological product, such as a vaccine, is completely free from side effects.  Vaccines protect many people from dangerous illnesses, but vaccines, like drugs, can cause side effects, a small percentage of which may be serious.  VAERS is used to continually monitor reports to determine whether any vaccine or vaccine lot has a higher than expected rate of events.
+
+Doctors and other vaccine providers are encouraged to report adverse events, even if they are not certain that the vaccination was the cause.  Since it is difficult to distinguish a coincidental event from one truly caused by a vaccine, the VAERS database will contain events of both types.
+
+In addition, it is often the case that more than one vaccine was administered, making it difficult to know to which of the vaccines the event might be attributed.  In analyzing individual reports, researchers examine the medical information about the event, and obtain more specific information from the reporters whenever necessary.  Patterns of reporting associated with vaccines and vaccine lots are also analyzed.
+
+More than 80% of vaccine adverse event reports concern relatively minor events, such as fevers or redness and swelling at the injection site.  The remaining reports (less than 20%) describe serious events, such as hospitalizations, life-threatening illnesses, or deaths.  The reports of serious events are of greatest concern and receive the most careful scrutiny by VAERS staff.
+
+VAERS researchers apply procedures and methods of analysis to help us closely monitor the safety of vaccines. When a concern arises, action is taken. We hope that this brief explanation of the factors associated with vaccines and adverse events will assist you in understanding the data you are viewing.
+
+Requests for additional information should be addressed to:
+                   
+                       Freedom of Information Staff, HFI-35
+                           Food and Drug Administration
+                              5600 Fishers Lane
+                             Rockville, MD 20857
+ 
+2.Brief Description of VAERS
+
+The U.S. Department of Health and Human Services (DHHS) established the Vaccine Adverse Event Reporting System (VAERS), which is co-administered by the Food and Drug Administration (FDA) and the Centers for Disease Control (CDC), to accept all reports of suspected adverse events, in all age groups, after the administration of any U.S. licensed vaccine.  On November 1, 1990 VAERS replaced CDC's Monitoring System for Adverse Events Following Immunization (MSAEFI) for public sector reporting and FDA's Spontaneous Reporting System for private sector and manufacturer reporting.  The primary purpose for maintaining the database is to serve as an early warning or signaling system for adverse events not detected during pre-market testing. In addition, the National Childhood Vaccine Injury Act of 1986 (NCVIA) requires health care providers and vaccine manufacturers to report to the DHHS specific adverse events following the administration of those vaccines outlined in the Act.
+
+All reports are coded and entered into the VAERS database.  The adverse events described in each report were coded utilizing the FDA's Coding Symbols for a Thesaurus of Adverse Reaction Terms (COSTART) from November 1990 until January 16 2007.  On January 17 2007 the VAERS coding system was converted to an international coding system that is used worldwide.  This system is called the Medical Dictionary for Regulatory Activities (MedDRA). The MedDRA coding system uses key words representing the medical condition(s) described in the case report and converts them to standardized codes. An individual VAERS report in these files may include up to a total of 8 vaccines administered and 20 MedDRA terms describing the event. The MedDRA codes provided in the dataset are called the "Preferred Terms"; there are more than 17,000 Preferred Term codes in the MedDRA system. The MedDRA coding system is more detailed than the COSTART system, which is comprised of 5,817 codes.  Therefore the MedDRA system is not only standardized for international use, it is also able to code medical terms in a more exacting manner than the COSTART system design. All the COSTART codes that were used in the VAERS data prior to (January 17, 2007) have been converted to MedDRA coding terms. The MedDRA coding system is updated semi-annually, and terms may be added, deleted or changed with each new release. VAERS reports are coded using the MedDRA version in effect at the time the codes are entered; therefore, different terms may be used to describe similar events in reports coded at different times.
+
+If you desire more information about MedDRA, please visit the following web site: http://www.meddramsso.com/MSSOWeb/index.htm.
+ 
+
+3.VAERS Data Should be Interpreted with Caution
+
+       ·VAERS data are from a passive surveillance system and represent unverified reports of health events that occur after vaccination.  Such data are subject to limitations of under-reporting, simultaneous administration of multiple vaccine antigens, reporting bias, and lack of incidence rates in unvaccinated comparison groups. 
+       ·When reporting and evaluating data from VAERS, it is important to note that for any reported event, no cause and effect relationship has been established.  The event may have been related to an underlying disease or condition, to medications being taken concurrently, or may have occurred by chance.
+       ·A report often involves more than one vaccine and may involve more than one reported adverse event.
+       ·In certain cases VAERS requests additional information from reporters, healthcare providers and other parties. The status, event description and medical codes associated with a report are subject to change upon receipt of such additional information.
+       ·When multiple reports of a single case or event are received, only the first report received is included in the publicly accessible dataset. Subsequent reports may contain additional or conflicting data, and there is no assurance that the data provided in the public dataset is the most accurate or current available.
+       ·A given report may meet more than one criterion for classification as "serious."
+       ·Accumulations of events reported to a passive surveillance system do not allow incidence rate calculations due to the generally unknown extent of under-reporting as well as lack of information on the number of people being vaccinated.
+ 
+
+4.Description of Data Files
+
+VAERS data is accessible by two mechanisms: by downloading raw data in comma-separated value (CSV) files for import into a database, spreadsheet or text editing program, or by use of the CDC WONDER online search tool.
+
+The downloadable VAERS public data set consists of two separate data files.  These files are provided by calendar year beginning with the first VAERS reports reported in the latter part of 1990.  The public data set is updated on a monthly basis.  In the following tables, "Box" refers to the numbered items or "boxes" on the VAERS form.  Comma-separated-value (CSV) files are industry-standard text files compatible with most of the major database or statistical analysis products on the market.  Each data set is available for download in 2 formats: as a pair of CSV files, or as a compressed Zip file that contains the two CSV files listed for the specific year.
+
+CDC WONDER, developed by the Centers for Disease Control and Prevention (CDC), is an easy-to-use, menu-driven system requiring no computer expertise or special software, that provides access to a wide array of public health information. With CDC WONDER you can produce tables, maps, charts and data extracts showing the incidence of vaccine adverse events, and select specific event, vaccine and demographic criteria to produce cross-tabulated incidence measures. You can also limit and index your data by several variables. VAERS data is available on CDC WONDER at http://wonder.cdc.gov/vaers.html. Additional information about CDC WONDER is available at http://wonder.cdc.gov/wonder/help/vaers.html. 
+
+4.1 VAERSDATA.CSV
+
+The following table provides a detailed description of the data provided in each field of the VAERSDATA.CSV file.  Each row in the table refers to a separate field (or column) in the data.  The "Header" provides the field name or column "header."  "Type" describes the type of data contained in the data field.  The information in parenthesis specifies the data format or number of digits or characters contained in the field.  There are three data types: NUM = numeric data;  CHAR = text or "character" data; and DATE = date fields in mm/dd/yy format.  With the exception of the first two fields, each row in the table pertains to information recorded in (or derived from) the various numbered sections of the VAERS-1 form.  No data is provided that would allow identification of any individuals associated with these reports.
+
+
+Header	     Type	Description of Contents
+-----------------------------------------------------------------------------
+VAERS_ID       Num(6)		VAERS Identification Number
+RECVDATE       Date      	Date report was received
+STATE	         Char(2)	 	Box 1: State
+AGE_YRS        Num(xxx.x)	Box 4: Age in Years
+CAGE_YR        Num(xx)    	Age of patient in years calculated by (vax_date-birthdate) 
+CAGE_MO        Num(xx)		Age of patient in months calculated by (vax_date-birthdate)
+SEX	         Char(1)		Box 5: Sex
+RPT_DATE       Date		Box 6: Date Form Completed
+SYMPTOM_TEXT   Char(2048)	Box 7: Reported symptom text
+SYM_CNT	   Num(2)		MedDRA Symptom Count
+SYM01	         Char(100)	Box 7a: Adverse Event  Term #1
+SYM02	         Char(100)	Box 7b Adverse Event  MedDRA Term #2
+SYM03	         Char(100)	Box 7c Adverse Event  MedDRA Term #3
+SYM04	         Char(100)	Box 7d: Adverse Event MedDRA Term #4
+SYM05	         Char(100)	Box 7e: Adverse Event MedDRA Term #5
+SYM06	         Char(100)	Box 7f: Adverse Event MedDRA Term #6
+SYM07	         Char(100)	Box 7g: Adverse Event MedDRA Term #7
+SYM08	         Char(100)	Box 7h: Adverse Event MedDRA Term #8
+SYM09	         Char(100)	Box 7i: Adverse Event MedDRA Term #9
+SYM10	         Char(100)	Box 7j: Adverse Event MedDRA Term #10
+SYM11	         Char(100)	Box 7k: Adverse Event MedDRA Term #11
+SYM12	         Char(100)	Box 7l: Adverse Event MedDRA Term #12
+SYM13	         Char(100)	Box 7m: Adverse Event MedDRA Term #13
+SYM14	         Char(100)	Box 7n: Adverse Event MedDRA Term #14
+SYM15	         Char(100)	Box 7o: Adverse Event MedDRA Term #15
+SYM16	         Char(100)	Box 7p: Adverse Event  MedDRA Term #16
+SYM17	         Char(100)	Box 7q: Adverse Event  MedDRA Term #17
+SYM18	         Char(100)	Box 7r: Adverse Event  MedDRA Term #18
+SYM19	         Char(100)	Box 7s: Adverse Event MedDRA Term #19
+SYM20	         Char(100)	Box 7t: Adverse Event MedDRA Term #20
+DIED	         Char(1)		Box 8a1: Died ('Y' - Yes)
+DATEDIED       Date		Box 8a2: Date of Death
+L_THREAT       Char(1)		Box 8b: Life-Threatening Illness ('Y' - Yes)
+ER_VISIT       Char(1)		Box 8c: Emergency Room or Doctor Visit ('Y' - Yes)
+HOSPITAL       Char(1)		Box 8d1: Hospitalized ('Y' - Yes)
+HOSPDAYS       Num(3)		Box 8d2: Number of days Hospitalized
+X_STA          Char(1)		Box 8e: Prolonged Hospitalization ('Y' - Yes)
+DISABLE	   Char(1)		Box 8f: Disability ('Y' - Yes)
+RECOVD	   Char(1)		Box 9: Recovered ('Y' - Yes, 'N' - No, 'U' - Unknown)
+VAX_DATE       Date		Box 10: Vaccination Date
+ONSET_DATE     Date		Box 11: Adverse Event Onset Date
+NUMDAYS	   Num(5)		Number of days (Onset date - Vax. Date)
+LAB_DATA       Char(240)	Box 12: Diagnostic laboratory data
+VAX_CNT	   Num(2)		Box 13: Vaccine Count
+VAX1	         Char(6)		Box 13a: Administered Vaccine #1
+VAX2	         Char(6)		Box 13b: Administered Vaccine #2
+VAX3	         Char(6)		Box 13c: Administered Vaccine #3
+VAX4	         Char(6)		Box 13d: Administered Vaccine #4
+VAX5	         Char(6)		Box 13e: Administered Vaccine #5
+VAX6	         Char(6)		Box 13f: Administered Vaccine #6
+VAX7	         Char(6)		Box 13g: Administered Vaccine #7
+VAX8	         Char(6)		Box 13h: Administered Vaccine #8
+V_ADMINBY      Char(3)		Box 15: Vaccines Administered at (PUB=Public, PVT=Private,OTH=Other, MIL=Military) 
+V_FUNDBY       Char(3)		Box 16: Vaccines purchased with (PUB=Public, PVT=Private, OTH=Other, MIL=Military) funds
+OTHER_MEDS     Char(240)	Box 17: Other Medications
+CUR_ILL	   Char(128)	Box 18: Current Illnesses
+HISTORY	   Char(240)	Box 19: Pre-existing physician diagnosed allergies, birth defects, medical conditions
+PRIOR_VAX      Char(128)	Box 21: Prior Vaccination Event information
+SPLTTYPE       Char(25)		Box 24: Manufacturer Number
+
+4.2	VAERSVAX.CSV
+
+The fields described in this table provide the remaining vaccine information (e.g., vaccine name, manufacturer, lot number, route, site, and number of previous doses administered), for each of the vaccines listed in Box 13 of the VAERS form.  The VAX_TYPE field in this table should be linked to the VAX(#) field described in the VAERSDATA.CSV table in Section 4.1 above.  For each of the up to 8 vaccines listed in the VAERSDATA.CSV table, there is a matching record in this file, identified by VAERS_ID and VAX_TYPE.
+
+
+Header	     Type	Description of Contents
+--------------------------------------------------------------
+VAERS_ID     Num(6)	VAERS Identification Number
+VAX_TYPE     Char(6)	Administered Vaccine Type
+VAX_MANU     Char(16)	Vaccine Manufacturer
+VAX_LOT	 Char(15)	Manufacturer's Vaccine Lot
+VAX_DOSE     Char(2)	Number of previous doses administered
+VAX_ROUTE    Char(2)	Vaccination Route
+VAX_SITE     Char(2)	Vaccination Site
+VAX_NAME     Char(50)	Vaccination Name
+
+
+
+-------------------------------------------------------------------------------------
+5. Definitions of Terms Used in Data Files
+
+The following definitions pertain to the fields found in the VAERSDATA.CSV file described in section 4.1 above.
+
+1) VAERS Identification Number (VAERS_ID): A sequentially assigned number used for identification purposes.  
+
+2) Receive Date (RECVDATE):  The date the VAERS form information was received to our processing center.
+
+3) State (STATE):  The two-letter US Postal Service abbreviation for the home state of the vaccinee as noted in Box 1 on the VAERS form. Please note that all foreign reports are contained in a separate data file. 
+
+4) Age in Years (AGE_YRS):  The recorded vaccine recipient's age, in years, from Box 4 of the VAERS form.
+
+5) Age in Years(CAGE_YR): Age of patient in years calculated by (vax_date-birthdate)
+
+6) Age in Months(CAGE_MO): Age of patient in months calculated by (vax_date-birthdate)
+
+7) Sex (SEX):  Sex of the vaccine recipient from Box 5 of the VAERS form (M = Male, F = Female, Unknown = Blank).
+
+8) Date Form Completed (RPT_DATE): Date the VAERS forms was completed by the reporter, from Box 6 on the VAERS form.
+
+9) Reported Symptom Text (SYMPTOM_TEXT):  This is the symptom text recorded in Box 7.  MedDRA Terms are derived from this text.
+
+10) MedDRA Symptom Count (SYM_CNT):  The total number of MedDRA codes derived from the Box 7 symptom text 
+
+11) Adverse Event MedDRA Terms (SYM##):  While an unlimited number of MedDRA codes may be derived from the narrative text recorded in Box 7 of the VAERS form, a maximum of 20 MedDRA codes are made available in this file.  MedDRA terms are provided in alphabetical order; no significance is to be derived from the placement of the term in the list.  
+
+12) Patient Outcomes:  The reporter's assessment of the vaccine recipient outcome is recorded in Box 8 on the VAERS form.  Selections checked in Box 8 determine whether a report is considered to be a non-serious report, a serious report, or a death report.
+
+   Died (DIED):  If the vaccine recipient died, a "Y" is placed in Box 8a1.  Otherwise the field will be blank
+   Date of Death: (DATEDIED):  If the reporter checked that the vaccine recipient died, there is space in Box 8a2 to record the date of death.  Otherwise the field will be blank.
+   Life Threatening (L_THREAT):  If the vaccine recipient had a life-threatening event associated with the vaccination, a "Y" is placed in Box 8b.  Otherwise the field will be blank
+   Emergency Room (ER_VISIT):  If the vaccine recipient required an emergency room or doctor visit, a "Y" is placed in Box 8c.  Otherwise the field will be blank.  If this is the only Box 8 option checked, the report is not considered serious.
+   Hospitalized (HOSPITAL):  If the vaccine recipient was hospitalized as a result of the vaccination, a "Y" is placed in Box 8d1.  Otherwise the field will be blank
+   Days Hospitalized (HOSPDAYS):  If the reporter checked that the vaccine recipient was hospitalized, space is provided in Box 8d2 to record the number of days hospitalized. Otherwise the field will be blank.
+   Prolonged Hospitalization (X_STAY):  If a patient's hospitalization is prolonged as a result of the adverse event associated with the vaccination, a "Y" will be placed in Box 8e.  Otherwise the field will be blank.
+   Disability (DISABLE):  If the vaccine recipient was disabled as a result of the vaccination, a "Y" is placed in Box 8f.  Otherwise the field will be blank
+
+13) Recovered (RECOVD):  A "Y" is placed in the field if the reporter checked on Box 9 of the VAERS form that the vaccine recipient recovered from the adverse event.  "N" indicated that the vaccine has not recovered from the adverse event.  "U" or blank indicates that the vaccine recipient's recovery status is unknown.
+
+14) Vaccination Date (VAX_DATE):  The date of vaccination as recorded in Box 10 of the VAERS form.
+
+15) Onset Date (ONSET_DATE):  The date of the onset of adverse event symptoms associated with the vaccination as recorded in Box 11 of the VAERS form.
+
+16) Onset Interval (NUMDAYS):  The calculated interval (in days) from the vaccination date to the onset date.
+
+17) Relevant Diagnostic Tests/Laboratory Data (LAB_DATA):  This text field contains narrative about any relevant diagnostic tests or laboratory results as recorded in Box 12 on the VAERS form.
+
+18) Vaccine Count (VAX_CNT):  The total number of different vaccines administered as noted in Box 13 of the VAERS form.  This field does not include vaccines noted in Box 14 of the VAERS form.
+
+19) Administered Vaccines (VAX##):  The code associated with a maximum of eight vaccines recorded in Box 13 is provided in the next eight fields (Box 13a-13 f).  The following Table provides an interpretation of the vaccine codes. 
+
+     Abbrev    Vaccine Type
+     ---------------------------
+     6VAX-F    =  DTAP + IPV + HEPB + HIB 
+     ADEN      =  ADENOVIRUS VACCINE LIVE ORAL TYPE 7
+     ANTH      =  ANTHRAX VACCINE
+     BCG       =  BACILLUS CALMETTE-GUERIN VACCINE
+     CEE       =  CENTRAL EUROPEAN ENCEPHALITIS
+     CHOL      =  CHOLERA VACCINE
+     DPIPV     =  DIPHTHERIA/PERTUSSIS/INACTIVATED POLIO VIRUS
+     DPP       =  DIPHTHERIA/PERTUSSIS/POLIO (ORAL [LIVE OR INACTIVATED NOT NOTED])
+     DT        =  DIPHTHERIA AND TETANUS TOXOIDS, PEDIATRIC
+     DTAP      =  DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE
+     DTAPHEBIP =  DTAP + HEPB + IPV
+     DTIPV     =  DT-IPV COMBINED DT AND IPV VACCINE
+     DTOX      =  DIPHTHERIA TOXOID
+     DTP       =  DIPHTHERIA AND TETANUS TOXOIDS AND PERTUSSIS VACCINE
+     DTPH      =  DIPHTHERIA, TETANUS TOX, PERTUSSIS,& HAEMOPHILUS  
+     DTPHEP    =  DIPHTHERIA/TETANUS/PERTUSSIS/HEPATITIS B
+     DTPHIB    =  DTP + HIB     
+     DTPPHIB   =  DTP + IPV + ACT-HIB   
+     DTPIHI    =  DIPHTHERIA/TETANUS/WHOLE PERTUSSIS-INACTIVATED POLIO VIRUS-HAEMOPHILUS INFLUENZA B
+     DTPIPV    =  DTP-IPV COMBINED DTP AND IPV VACCINE
+     FLU       =  INFLUENZA VIRUS VACCINE
+     FLUN      =  INFLUENZA VIRUS VACCINE (NASAL SPRAY)
+     HBHEPB    =  HIBV + HEP
+     HBPV      =  HAEMOPHILUS B POLYSACCHARIDE VACCINE
+     HbVC      =  HEPATITIS B
+     HEP       =  HEPATITIS B VIRUS VACCINE
+     HEPA      =  HEPATITIS A
+     HEPAB     =  HEPATITIS A + HEPATITIS B
+     HIBV      =  HAEMOPHILUS B CONJUGATE VACCINE
+     HPV       =  HUMAN PAPILLOMAVIRUS
+     HPV4      =  HUMAN PAPILLOVAVIRUS QUADRIVALENT
+     IPV       =  POLIOVIRUS VACCINE INACTIVATED
+     JEV       =  JAPANESE ENCEPHALITIS VIRUS VACCINE
+     LYME      =  LYME DISEASE VACCINE
+     MEA       =  MEASLES
+     MEN       =  MENINGOCOCCAL POLYSACCHARIDE VACCINE
+     MER       =  MEASLES AND RUBELLA VIRUS VACCINE, LIVE
+     MM        =  MEASLES AND MUMPS VIRUS VACCINE, LIVE
+     MMR       =  MEASLES, MUMPS AND RUBELLA VIRUS VACCINE, LIVE
+     MMRV      =  MEASLES, MUMPS, ROUBELLA AND VARICELLA VACCINE LIVE
+     MNC       =  MENINGOCOCCAL CONJUGATE VACCINE
+     MNQ       =  MENINGOCOCCAL CONJUGATE VACCINE
+     MR        =  MEASLES AND RUBELLA VIRUS VACCINE, LIVE
+     MU        =  MUMPS VIRUS VACCINE, LIVE
+     MUR       =  MUMPS AND RUBELLA VIRUS VACCINE, LIVE
+     OPV       =  POLIOVIRUS VACCINE TRIVALENT, LIVE, ORAL
+     PER       =  PERTUSSIS VACCINE
+     PLAGUE    =  PLAGUE VACCINE
+     PNC       =  PNEUMOCOCCAL 7-VALENT CONJUCATE VACCINE
+     PPV       =  PNEUMOCOCCAL VACCINE, POLYVALENT
+     RAB       =  RABIES VIRUS VACCINE
+     ROT       =  ROTAVIRUS VACCINE
+     ROTHB5    =  ROTAVIRUS VACCINE
+     RUB       =  RUBELLA
+     RV        =  ROTAVIRUS 
+     SMALL     =  SMALLPOX VACCINE
+     SSEV      =  SPRING/SUMMER ENCEPHALITIS VACCINE
+     TBE       =  TICK-BORNE ENCEPHALITIS VACCINE
+     TD        =  TETANUS AND DIPHTHERIA TOXOIDS, ADULT
+     TDAP      =  TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE, ADSORBED
+     TTOX      =  TETANUS TOXOID
+     TYP       =  TYPHOID VACCINE
+     VARCEL    =  VARIVAX-VARICELLA VIRUS LIVE
+     VARZOS    =  VARICELLA-ZOSTER VACCINE
+     YF        =  YELLOW FEVER VACCINE
+
+20) Vaccine Administered at (V_ADMINBY):  The reporter may note in Box 15 the type of facility administering the vaccine (PUB=Public, PVT=Private, MIL=Military; OTH Other/unknown)
+
+21) Vaccine Purchased with (V_FUNDBY):  The reporter may note in Box 16 on the VAERS form which type of funds were used to purchase the vaccines administered in Box 13 (PUB=Public, PVT=Private, MIL=Military; OTH Other/unknown).
+
+22) Other Medications (OTHER_MEDS):  This text field contains narrative about any prescription or non-prescription drugs the vaccine recipient was taking at the time of vaccination as recorded in Box 17 of the VAERS form.
+
+23) Current Illnesses (CUR_ILL):  This text field contains narrative about any illnesses at the time of the vaccination as noted in Box 18 of the VAERS form.
+
+24) Pre-existing Conditions (HISTORY):  This text field contains narrative about any pre-existing physician-diagnosed allergies, birth defects, medical condition that existed at the time of vaccination as noted in Box 19 of the VAERS form.
+
+25) Prior Vaccination Event Information (PRIOR_VAX):  This field provides prior vaccination event information recorded in Box 21 on the VAERS form.
+
+26) Manufacturer Number (SPLTTYPE): Manufacturer number or Immunization Project number from Box 24.
+
+The following definitions pertain to the fields found in the VAERSVAX.CSV file described in section 4.2 above.
+
+27) Vaccine Type (VAX_TYPE):  The data in this field corresponds to the VAX[n] field from the VAERSDATA.CSV file described in Section 4.1 above (e.g., FLU, DTAP).
+
+28) Vaccine Manufacturer (VAX_MANU):  This field identifies the manufacturer of the each of the vaccines listed Box 13 of the VAERS form.
+
+29) Manufacturers Vaccine Lot (VAX_LOT):  This field identified the lot number of the vaccines listed in Box 13 of the VAERS form.
+
+30) Vaccine Dose (VAX_DOSE):  This field identifies the vaccine dose recorded in Box 13 of the VAERS form.
+
+31) Vaccination Route (VAX_ROUTE):  This field identifies the vaccine route of administration as noted in Box 13 of the VAERS form.
+
+32) Vaccination Site (VAX_SITE):  This field identified the anatomic site where the vaccination was administered as noted on Box 13 of the VAERS form.
+
+33) Vaccine Name (VAX_NAME):  This field provides the brand name of the vaccine administered in Box 13 of the VAERS form. 
+
+
+6. List of commonly used abbreviations used at the VAERS program
+
+Abbrev	 Explanation
+-------------------------------------------------------------------------
+a/	 Before
+abd	 Abdomen
+abn	 abnormal (i.e., abn behavior, abn lab values)
+addl	 Additional
+adm.	 admitted, admission
+ADR	 adverse drug reaction
+ADL	 activities of daily living
+AE	 Adverse Event
+afeb	 Afebrile
+AKA	 also known as
+alk phos alkaline phosphatase
+allerg	 allergy, allergic
+ALT	 serum glutamic pyruvic transaminase (also SGPT)
+AMA	 American Medical Association
+amb	 ambulance, ambulate
+amt	 Amount
+ANA	 antinuclear antibody
+ANAM	 acute motor axonal neuropathy
+APAP	 Acetaminophen
+approx	 Approximately
+appt	 Appointment
+ASA	 Aspirin
+assoc	 Associated
+AST	 serum glutamic oxaloacetic transaminase (also SGOT)
+ATB	 Antibiotics
+ax	 axillary (temperature)
+baso	 Basophils
+BC	 blood culture
+BID	 twice daily
+bilat	 Bilateral
+bili	 Bilirubin
+bm	 bowel movement
+BOM	 bilateral otitis media
+BP	 blood pressure
+BPM or b pm	beats per minute
+BUN	 blood urea nitrogen
+Bx	 biopsy, biopsies, biopsied
+Ca	 calcium
+CA	 cancer
+CBC	 complete blood count
+cc	 chief complaint
+CDC	 Centers for Disease Control and Prevention
+CHD	 congenital heart disease
+CHF	 congestive heart failure
+CHN	 community health nurse
+chr	 chronic
+cm	 centimeter
+CNS	 central nervous system
+c/o	 complained of
+COD	 cause of death
+cont	 continued
+convuls	 convulsion
+COPD	 chronic obstructive pulmonary disease
+CPK	 creatinine phosphokinase
+CPR	 cardiopulmonary resuscitation
+C&S	 culture & sensitivity
+CSF	 cerebrospinal fluid
+CT/CAT	 computerized axial tomography (i.e., CAT scan)
+ctr	 center
+CXR	 chest X?ray
+D	 diarrhea
+d/c	 discontinued
+dec	 decreased, diminished
+delt	 deltoid
+devel	 developed
+diam	 diameter
+diff	 differential blood count
+disch	 discharge
+DO	 Doctor of Osteopathy
+DPH	 diphenhydramine (Benadryl)
+DT	 diphtheria tetanus
+DTox	 diphtheria toxoid
+DTP	 diphtheria, tetanus, pertussis vaccine
+dtr	 deep tendon reflexes
+Dx	 diagnosis
+ECG/EKG	 electrocardiogram
+EEG	 electroencephalogram
+elev	 elevate or elevated
+EMT	 emergency medical technician
+eos	 eosinophils
+epi	 epinephrine
+ER	 emergency room
+esp	 especially
+ESR	 erythrocyte sedimentation rate
+eval	 evaluation
+exam	 examination
+exp	 experienced
+fam	 family
+FDA	 Food and Drug Administration
+feb	 febrile
+FH	 family history
+fr	 from
+FTR	 father
+f/u	 follow up
+fx	 fracture
+GBS	 Guillain Barre Syndrome
+gen	 general
+GI	 gastrointestinal
+gm	 gram
+GR-FR	 grandfather
+GR-MO	 grandmother
+gtt	 drop(s)
+h/a	 headache
+HBP	 high blood pressure
+hct	 hematocrit
+HEENT	 head, eyes, ears, nose, and throat
+hep	 hepatitis
+hgb	 hemoglobin
+hlth	 health
+HLV	 herpes-like virus
+h/o	 history of
+hosp	 hospital
+hr	 hour, hours
+HTN	 hypertension
+husb	 husband
+hx	 history
+ICU	 intensive care unit
+ID	 identification, identified
+Ig	 immunoglobulin
+IgG	 immunoglobulin G
+IM	 intramuscular
+immed	 immediately
+immun	 immunization
+imp	 improved
+inc	 increase
+inflam.	 inflammation
+infect	 infection
+inj	 injection
+intermit intermittent
+IPV 	 inactivated poliovirus vaccine
+ITP  	 idiopathic thrombocytopenic purpura.
+IV 	 intravenous
+K	 potassium
+kg	 kilogram
+L	 left or liter
+lab	 laboratory
+lb	 pound, pounds
+LDH	 lactic dehydrogenase
+LMP	 last menstrual period
+LOC	 level of consciousness or loss of consciousness
+LP	 lumbar puncture
+LPN/LVN	 Licensed practical or vocational nurse
+lt	 left
+LT	 Left Thigh
+LUA	 left upper arm
+lymphs	 lymphocytes
+lytes	 electrolytes (Na, K, Cl, etc)
+mbr	 member (of family)
+mcg	 microgram
+MD	 doctor, medical doctor
+med(s)	 medication(s)
+men	 meningitis
+MFR	 manufacturer
+mg	 milligram
+mgm	 alternative abbreviation for milligram
+min(s)	 minute(s)
+ml	 milliliter
+mm	 millimeter
+MMR	 measles, mumps, rubella vaccine (or individual components of M, M, or R)
+MN	 midnight
+mod	 moderate
+mon	 month, months
+mono	 monocytes, mononucleosis
+MTR	 mother
+n/a	 not applicable, not available
+neg	 negative
+neuro	 neurologic
+NKA	 no known allergies
+NKDA	 no known drug allergies
+nl	 normal
+#	 number
+noc	 night
+np	 nurse practicioner
+npo	 nothing by mouth (nil per os)
+NSAID(s) non-steroidal anti-inflammatory drug(s)
+N & V 	 nausea and vomiting
+N,V, D 	 nausea, vomiting, diarrhea
+O2	 oxygen
+ofc	 office
+Om	 otitis media
+OTC	 over the counter (medication)
+oth	 other
+oz	 ounce, ounces
+P	 pulse
+p/	 after
+PA	 physician's assistant
+PC/TC	 phone call or telephone call
+PCN	 Penicillin
+PDD	 Pervasive Developmental Delay 
+PE	 physical exam
+ped	 pediatrician
+peds	 pediatrics
+PERRL	 pupils equal, round, reactive to light
+PERRLA	 pupils equal, round, reactive to light and accommodation
+PET	 positron-emission tomography
+pH	 hydrogen ion concentration (acidity/alkalinity)
+pharm.	 pharmacy
+PharmD	 doctor of pharmacy
+phenobarbphenobarbital
+PHN	 public health nurse
+PMD	 private medical doctor
+PN	 practical nurse
+PNP	 pediatric nurse practitioner
+PO	 by mouth
+pos	 positive
+poss	 possible
+PPD	 purified protein derivative
+pr	 per rectum
+pred	 prednisone
+prev	 previous
+PRN	 as needed
+pt(s)	 patient, patients
+PT	 prothrombin. time
+PTT	 partial thromboplastin time
+PVT	 private
+q	 every
+QID	 four times a day
+qtr	 quarter
+R	 respiration or right
+RBC	 red blood cell
+recv	 received, receives, receive
+rehab	 rehabilitation
+resp	 respiratory
+RIG	 rabies immune globulin
+RN	 registered nurse
+r/o	 rule out
+ROM	 range of motion
+rpt	 report or reported
+rt	 right
+RT	 Right Thigh
+R/T	 related to
+RTC	 return to clinic
+RUA	 right upper arm
+rx	 therapy; treatment; medication (i.e., pt's rx = tylenol)
+rxn	 reaction, reactions
+SC	 subcutaneous
+sec	 second, seconds
+sed rate sedimentation rate
+SG	 specific gravity
+SGOT	 serum glutamic oxaloacetic transaminase (also AST)
+SGPT	 serum glutamic pyravic transaminase (also ALT)
+SHC	 state health coordinator
+sib	 sibling, siblings
+SIDS	 sudden infant death syndrome
+sl	 slight, slightly
+SMA	 sequential multiple analyzer (series of blood chemistries)
+SOB	 shortness of breath
+S & S	 signs & symptoms
+s/sx	 signs & symptoms
+stat	 immediately
+std	 standard
+Sx	 symptom, symptoms, sign, signs
+synd	 syndrome
+sz	 seizure, seized, seizures
+T	 temperature (Fahrenheit)
+tab	 tablet, tablets
+TB	 tuberculosis
+tbsp	 tablespoon, tablespoons
+TC/PC	 telephone call or phone call
+TD	 adult tetanus and diphtheria toxoid
+temp	 temperature
+TID	 three times a day
+TOPV	 trivalent oral polio vaccine
+tox	 toxic, toxoid, toxicology (as in toxicology screen)
+TPN	 total parenteral nutrition
+TPR	 temperature, pulse, respiration
+trach	 tracheostomy
+tsp	 teaspoon, teaspoons
+Ttox	 tetanus toxoid
+TTP	 thrombotic thrombocytopenic purpura
+tx	 treatment, treatments, treated
+u	 units, unit
+ur	 urine
+UA	 urinalysis
+unk	 unknown
+URI	 upper respiratory infection
+USP	 United States Pharmacopeia (standard)
+UTI	 urinary tract infection
+V	 vomiting
+vax	 vaccine, vaccines
+v fib	 ventricular fibrillation
+VS	 vital signs (temperature, pulse, resp, blood pressure)
+VSS	 vital signs stable
+v tach	 ventricular tachycardia
+VZIG	 varicella zoster immune globulin
+w/	 with
+w/o	 without
+w/u	 work up
+WBC	 white blood cell
+wk	 week, weeks
+WNL	 within normal limits
+wt	 weight
+x/	 except
+yr	 year, years
+@	 at
+&	 and
+->	 causes to , resulting in, showed, to the right, progressing toward
+<-	 resulting from, to the left 
+>	 greater than 
+<	 less than  

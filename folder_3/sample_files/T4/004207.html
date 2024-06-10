@@ -1,0 +1,101 @@
+<HTML>
+<BODY BGCOLOR=#FFFFFF TEXT=000000 LINK=#1D09D9 VLINK=#1D09D9 alink=#1D09D9>
+<BASEFONT FACE="arial">
+
+<CENTER>
+<H1>Future Areas of Development at NASA Langley</H1></CENTER>
+<h2>PATRAN to RadCAD</h2>
+There is no current capability with Patran to accomplish orbital analysis.
+The link from PATRAN to TRASYS, as it currently exists in the commercial
+package, is not usable for most programs. (TRASYS is a heritage software
+package sometimes used by NASA  for orbital flux analysis.) It would be useful 
+to have direct translation of a model from Patran to RadCAD available, so that orbital analysis directly on a model created in Patran from Pro/Engineer geometry could be accomplished.  It is hoped that at some time in the future this link can be achieved.
+<h2>PATRAN back to SHABP</h2>
+Another improvement underway is to implement the capability to export
+the deflected shape of a hypersonic or supersonic body from PATRAN/NASTRAN back
+to SHABP, so that the heat loads and pressure loading can be determined
+for the deflected shape.&nbsp; The current experts at LaRC will develop
+this improvement as time permits.
+
+<h2>Thermal Desktop links</h2>
+NASA Langley has an active interest in increasing the links available through Thermal Desktop, since Thermal Desktop is one of the most widely used thermal code within the Agency.  Some on-going efforts are to: 
+<ul>
+<li> Increase the geometry import capability
+<li> Improve the import of aeroheating data from external aero codes such as SHABP, MINIVER, ATAC3D, etc.
+<li> Create a tie to CMA, to allow fully-linked ablation modeling.
+</ul>
+
+<h2>ORCAD to Pro/ECAD to PATRAN</h2>
+A link that
+is only now beginning to be implemented here 
+is the link from OrCAD for electronic hardware.&nbsp; This link is functional
+as it stands, but there are tips and tricks for making that link work effectively,
+and providing an accurate analysis of the translated part in PATRAN.&nbsp;
+See <a href="Pro_ECAD_suggestions.html">suggestions for use of ORCAD file 
+imported through Pro/ECAD</a>
+
+<h2>Tool integration via 
+<a href="http://step.nasa.gov/" target="_blank">STEP</a></h2>
+The current tools are all set up to integrate easily with each other.&nbsp;
+Some links exist for translation to other tool sets such as CATIA, IDEAS
+and Unigraphics.&nbsp; Each of these other integration links has been utilized
+here at Langley, but not in a production sense.&nbsp; The current status
+of integration with any other tool package is on a case-by-case basis;
+there is not a fully documented process that will work for all integration
+needs.
+
+It is hoped that the 
+<a href="http://step.nasa.gov/" target="_blank">STEP</a> process, 
+which is currently in work by a
+combined team of US industry, government, and international participants,
+will eventually satisfy this need.&nbsp; STEP (ISO 10303) is an International 
+Standard for the computer-interpretable representation
+and exchange of product data. The objective is to provide a mechanism that 
+is capable of
+describing product data throughout the life cycle of a product, independent 
+from any particular
+system. The nature of this description makes it suitable not only for neutral 
+file exchange, but
+also as a basis for implementing and sharing product databases and archiving. 
+<p>
+STEP  comes out of <a href="http://www.larc.nasa.gov/cgi-bin/disclaimer.cgi?http://www.iso.org/iso/standards_development/technical_committees/list_of_iso_technical_committees/iso_technical_committee.htm?commid=54110" target="_blank">
+ISO  Technical  Committee  184 (external link)</a>, which has the
+title "Industrial  automation  systems and  integration".
+
+The  goal of STEP  is the  representation  of all  data  about  a
+product  in a  computer-sensible  format.  The STEP  standard  is
+formulated in a computer-parsable  information  modeling language
+called "EXPRESS".
+
+These EXPRESS information models (called "Application  Protocols"
+or AP's) can be thought of as defining sets of container  objects
+to put data into.  AP's define  containers for product data, such
+as CAD models, CAE models, and PDM data.
+
+<p>
+The STEP file format would basically do for the design and analysis community what
+IGES attempted to do for the design community. STEP is a standard 
+that allows
+all the geometric information about a part or assembly, and potentially analysis
+information and boundary conditions such as materials, orbit parameters,
+loads, temperatures, etc., to be captured in a standard format If
+all the software packages then implement that standard (in the same way
+that the major packages such as Pro/Engineer and PATRAN have implemented
+both IGES and STEP), 
+then no additional links or translators would be required.&nbsp;
+Each package would incorporate a translator to and from STEP, and integration
+with other tool packages would be accomplished via the STEP translator.&nbsp;
+<p>
+See also:
+<br><a href="http://www.larc.nasa.gov/cgi-bin/disclaimer.cgi?http://www.steptools.com/" target="_blank">Limited free STEP translation capability (external link)</a>, 
+
+
+
+<h2>Web Documentation</h2>
+Many of the translators that require knowledge beyond the associated
+commercial package have been documented on Web pages.&nbsp; 
+In order to broadcast information to as broad a customer base as possible,
+the Langley methods for implementing links are normally documented on the
+Web.
+
+</BODY>

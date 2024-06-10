@@ -1,0 +1,884 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><!-- #BeginTemplate "/Templates/wwwhtemp.dwt" --><HEAD><TITLE>Emergency Services</TITLE><!-- DW6 --><!-- #BeginEditable "doctitle" --><!-- #EndEditable -->
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<SCRIPT language=JavaScript>
+<!--
+
+function MM_reloadPage(init) {  //Updated by PVII. Reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function pviiW3Cbg(obj, pviiColor) { //v1.1 by Project VII
+	obj.style.backgroundColor=pviiColor
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function P7_hideDiv(evt) { //v1.3 by PVII
+ var b,relT,mT=false; 
+ if(document.layers){b=evt.target;if(b.p7aHide){
+  b.visibility="hidden";}else{routeEvent(evt);}
+ }else if(document.all&&!window.opera){b=event.srcElement;
+  while(b!=null){if(b.tagName=="DIV" && b.p7ahD){mT=true;break;}b=b.parentElement;}
+  if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+ }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+  while(relT!=null){if(b==relT){mT=true;break;}
+  relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function P7_autoHide() { //v1.3 by PVII
+ var i,g,args=P7_autoHide.arguments;
+ for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+  g.p7aHide=true;if(document.layers){
+  g.captureEvents(Event.MOUSEOUT);}g.onmouseout=P7_hideDiv;g.p7ahD=true;}}
+}
+
+function P7_autoLayers() { //v1.4 by PVII
+ var g,b,k,f,args=P7_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+ if(!document.p7setc){p7c=new Array();document.p7setc=true;for(var u=0;u<10;u++){
+ p7c[u]=new Array();}}for(k=0;k<p7c[a].length;k++){if((g=MM_findObj(p7c[a][k]))!=null){
+ b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+ if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+ for(var j=0;j<p7c[a].length;j++){if(args[k]==p7c[a][j]) {f=true;}}
+ if(!f){p7c[a][p7c[a].length++]=args[k];}}}
+}
+
+function P7_moveScroll(co,md,op,dy,cy) { //v2.9 by PVII
+ var g,d,dd,x,y,h,w,tt,ff,m=false,pa="";
+ op=parseInt(op);cy=parseInt(cy);dy=parseInt(dy);
+ if((parseInt(navigator.appVersion)>4 || navigator.userAgent.indexOf("MSIE")>-1)&& navigator.userAgent.indexOf("Opera")==-1){pa="px";}
+ if((g=MM_findObj(co))==null){return;}
+ if((d=MM_findObj(g.p7Scroll))==null){return;}
+ var sp=parseInt(sp=g.P7Ssp),fr=parseInt(g.P7Sfr),ff=fr;
+ if(op==2){g.p7sCycle=0;g.p7sCycDy=(dy>0)?dy:g.p7sCycDy;dy=0;op=3;}
+ if(op==3){g.p7sCycle+=sp;ff=fr;if(parseInt(g.p7sCycle)>cy){
+  op=2;g.p7sCycle=0;ff=g.p7sCycDy;}}g.P7Sop=op;if(dy>0){ff=dy;}
+ var ti="g.p7Magic=setTimeout(\"P7_moveScroll('"+co+"','"+md+"',"+op+",0,"+cy+")\","+ff+")";
+ if(op==2 || dy>0){clearTimeout(g.p7Magic);eval(ti);return;}
+ dd=(document.layers)?d:d.style;x=parseInt(dd.left);y=parseInt(dd.top);
+ if(document.all || document.getElementById){
+  h=parseInt(d.offsetHeight);w=parseInt(d.offsetWidth);
+  if(!h){h=parseInt(d.style.pixelHeight);w=parseInt(d.style.pixelWidth);}
+ }else if(document.layers){h=parseInt(d.clip.height);w=parseInt(d.clip.width);}
+ var st=0,rStart=parseInt(g.p7sStartLeft),tStart=parseInt(g.p7sStartTop);g.p7sH=h;g.p7sW=w;
+ if(md=="Down"){tt=y-sp;st=parseInt(g.p7sBot)-h-tStart;
+  if(tStart<0 && tt<tStart){dd.top=tStart+pa;
+  }else if(tStart>=0 && tt<st){dd.top=st+pa;}else{dd.top=tt+pa;m=true;}}
+ if(md=="Up"){tt=sp+y;var rEnd=tStart+h;if(tStart<0 && tt>rEnd){dd.top=rEnd+pa;
+  }else if(tStart>=0 && tt>tStart){dd.top=tStart+pa;}else{dd.top=tt+pa;m=true;}}
+ if(md=="Right"){tt=x-sp;st=parseInt(g.p7sRight)-w-rStart;
+  if(rStart<0 && tt<rStart){dd.left=rStart+pa;
+  }else if (rStart>=0 && tt<st){dd.left=st+pa;}else{dd.left=tt+pa;m=true;}}
+ if(md=="Left"){tt=x+sp;var rEnd=rStart+w;if(rStart<0 && tt>rEnd){dd.left=rEnd+pa;
+  }else if (rStart>=0 && tt>rStart){dd.left=rStart+pa;}else{dd.left=tt+pa;m=true;}}
+ if(m && g.toMove){eval(ti);}else{if(g.P7Sflip==1){clearTimeout(g.p7Magic);var tj=0;
+  eval("g.p7Magic=setTimeout(\"P7_runScroller('"+co+"','Reverse','Medium',0,0,0,1)\","+tj+")");
+ }else{if(op>0 && g.toMove){
+  g.p7sCycle=0;dd.top=g.p7sStartTop+pa;dd.left=g.p7sStartLeft+pa;eval(ti);}}}
+}
+
+function P7_runScroller(co,md,spd,op,dy,cy,flp) { //v2.9 by PVII
+ var g,d,dd,rl=0;rt=0;pa='',sp=2,fr=10,slw=true,kl=true;
+ if((parseInt(navigator.appVersion)>4 || navigator.userAgent.indexOf("MSIE")>-1)&& navigator.userAgent.indexOf("Opera")==-1){pa="px";}
+ if(navigator.userAgent.indexOf("NT")>-1 || navigator.userAgent.indexOf("Windows 2000")>-1 ){slw=false;}
+ if((g=MM_findObj(co))!=null){if(g.p7Scroll){
+ if((d=MM_findObj(g.p7Scroll))!=null){dd=(document.layers)?d:d.style;
+ if(md=="Resume" && g.P7Sspd){spd=g.P7Sspd;md=g.P7Smd;op=g.P7Sop;dy=0;cy=g.P7Scy;flp=g.P7Sflip;kl=false;}
+ if(md=="Reverse" && g.P7Sspd){spd=g.P7Sspd;md=g.P7Smd;op=g.P7Sop;flp=g.P7Sflip;dy=0;cy=g.P7Scy;kl=false;g.p7sCycle=0;
+  if(g.P7Smd == "Down"){md="Up";if(g.P7Sop>0){g.p7sStartTop=g.p7sStartTop-g.p7sH;}}
+  if(g.P7Smd == "Up"){md="Down";if(g.P7Sop>0){g.p7sStartTop=g.p7sStartTop+g.p7sH;}}
+  if(g.P7Smd == "Left"){md="Right";if(g.P7Sop>0){g.p7sStartLeft=g.p7sStartLeft+g.p7sW;}}
+  if(g.P7Smd == "Right"){md="Left";if(g.P7Sop>0){g.p7sStartLeft=g.p7sStartLeft-g.p7sW;}}}
+ if(spd=="Slow"){sp=(slw)?2:1;fr=(slw)?40:30;
+ }else if(spd=="Medium"){sp=(slw)?4:1;fr=(slw)?40:10;
+ }else{sp=(slw)?8:4;fr=(slw)?40:10;}
+ if(md=="Stop"){g.toMove=false;clearTimeout(g.p7Magic);}else if(md=="Reset"){
+  g.toMove=false;dd.top=g.p7sStartTop+pa;dd.left=g.p7sStartLeft+pa;
+ }else{if(kl){g.P7Ssp=sp;g.P7Sfr=fr;}if(md=="Speed"){return;}
+  g.toMove=true;clearTimeout(g.p7Magic);
+  g.P7Smd=md;g.P7Sspd=spd;g.P7Sop=op;g.P7Sdy=dy;g.P7Scy=cy;g.P7Sflip=flp;
+  eval("P7_moveScroll('"+co+"','"+md+"',"+op+","+dy+","+cy+")");}}}}
+}
+//-->
+</SCRIPT>
+<LINK href="wwwcgwst.css" type=text/css rel=stylesheet><LINK href="wwwcxx.css" 
+type=text/css rel=stylesheet>
+<STYLE type=text/css>
+#p7s1content1 {
+	position: absolute;
+	width: 276px;
+	z-index: 99;
+	left: 0px;
+	top: 326px;
+	visibility: visible;
+}
+</STYLE>
+
+<STYLE type=text/css>
+#p7s1content1 { position: absolute; width: 255px; z-index: 99; left: 0px; top: 326px; visibility: visible }
+</STYLE>
+
+<STYLE type=text/css>
+#p7s1content1 { position: absolute; width: 255px; z-index: 99; left: 0px; top: 326px; visibility: visible }
+</STYLE>
+<!-- #BeginEditable "head" -->
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</SCRIPT>
+<style type="text/css">
+<!--
+table.MsoTableGrid {
+border:solid black 1.0pt;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";
+}
+p.MsoNormal {
+margin:0in;
+margin-bottom:.0001pt;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";
+}
+-->
+</style>
+<!-- #EndEditable -->
+<META content="MSHTML 6.00.2900.3314" name=GENERATOR>
+</HEAD>
+<BODY text=#000000 bgColor=#ffffff leftMargin=0 topMargin=0 
+onload="P7_autoHide('flym1','flym3','flym2','flym4','flym5')" marginheight="0" 
+marginwidth="0">
+<TABLE height=100 cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD background=wwwjtopbg.jpg><A href="#start"><IMG height=5 
+      alt="Skip to navigation" src="wwwjtop1.jpg" width=720 border=0></A><BR><A 
+      href="wwwhmain.html"><IMG height=95 
+      alt=" Embassy of the United States In Manila 1201 Roxas Blvd. - Ermita Manila - The Philippines Hours of Operation: 7:30am - 4:30pm Manila Time (2330 - 0830 GMT) Tel: (63-2) 528-6300 Fax: (63-2) 522-4361" 
+      src="wwwjtop2.jpg" width=720 border=0></A></TD></TR></TBODY></TABLE>
+<DIV id=menTrig1 
+style="Z-INDEX: 1; LEFT: 24px; WIDTH: 124px; POSITION: absolute; TOP: 86px"><FONT 
+face="Trebuchet MS, Verdana, Arial" size=2><A onfocus=if(this.blur)this.blur() 
+onclick="P7_autoLayers(0,'flym1');return false" href="javascript:;"><IMG 
+height=33 alt="About the Embassy" src="wwwgmen2.gif" width=139 
+border=0></A></FONT></DIV>
+<DIV id=menTrig2 
+style="Z-INDEX: 1; LEFT: 164px; WIDTH: 181px; POSITION: absolute; TOP: 86px"><FONT 
+face="Trebuchet MS, Verdana, Arial" size=2><A onfocus=if(this.blur)this.blur() 
+onclick="P7_autoLayers(0,'flym2');return false" href="javascript:;"><IMG 
+height=33 alt="Consular &amp; Visa Services" src="Templates/../wwwgmen3.gif" 
+width=181 border=0></A></FONT></DIV>
+<DIV id=menTrig3 
+style="Z-INDEX: 1; LEFT: 346px; WIDTH: 166px; POSITION: absolute; TOP: 86px"><FONT 
+face="Trebuchet MS, Verdana, Arial" size=2><A onfocus=if(this.blur)this.blur() 
+onclick="P7_autoLayers(0,'flym3');return false" href="javascript:;"><IMG 
+height=33 alt="Press &amp; Public Releases" src="Templates/../wwwgmen4.gif" 
+width=166 border=0></A></FONT></DIV>
+<DIV id=menTrig4 
+style="Z-INDEX: 1; LEFT: 513px; WIDTH: 128px; POSITION: absolute; TOP: 86px"><FONT 
+face="Trebuchet MS, Verdana, Arial" size=2><A onfocus=if(this.blur)this.blur() 
+onclick="P7_autoLayers(0,'flym4');return false" href="javascript:;"><IMG 
+height=33 alt="Government Links" src="wwwgmen5.gif" width=128 
+border=0></A></FONT></DIV>
+<DIV id=menTrig5 
+style="Z-INDEX: 1; LEFT: 642px; WIDTH: 86px; POSITION: absolute; TOP: 86px"><FONT 
+face="Trebuchet MS, Verdana, Arial" size=2><A onfocus=if(this.blur)this.blur() 
+onclick="P7_autoLayers(0,'flym5');return false" href="javascript:;"><IMG 
+height=33 alt="Contact Us" src="wwwgmen6.gif" width=86 
+border=0></A></FONT></DIV>
+<DIV class=leftmenu id=flym1 
+style="Z-INDEX: 104; LEFT: 24px; VISIBILITY: hidden; WIDTH: 139px; POSITION: absolute; TOP: 80px; HEIGHT: 251px">
+<TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+  <TBODY>
+  <TR>
+    <TD><FONT face="Trebuchet MS, Verdana, Arial" size=2><IMG height=36 
+      alt="About Embassy" src="wwwgshim.gif" 
+width=150></FONT></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=139 border=0>
+  <TBODY>
+  <TR>
+    <TD bgColor=#333333>
+      <TABLE class=fontmenu cellSpacing=1 cellPadding=3 width=139 border=0>
+        <TBODY>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh002.html">About the U.S. 
+            Embassy </A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh003.html">Office of the 
+            Ambassador</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh004.html">Office of the 
+            DCM</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3051.html"><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1>Management 
+            Section</FONT></A></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3009.html">Economic 
+            Section</A> </FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3026.html">Political 
+            Section</A> </FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3007.html">Public Affairs 
+            Section</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3010.html">Other U.S. 
+            Government Agencies</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwhamb1.html">The American 
+            Residence in Baguio</A></FONT></TD></TR>
+        <TR>
+          <TD bgColor=#ffcc00><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" 
+        size=1>&nbsp;</FONT></TD></TR></TBODY></TABLE>
+    <TD></TD></TR></TBODY></TABLE></DIV>
+<DIV class=leftmenu id=flym3 
+style="Z-INDEX: 106; LEFT: 346px; VISIBILITY: hidden; WIDTH: 166px; POSITION: absolute; TOP: 80px">
+<TABLE cellSpacing=0 cellPadding=0 width=166 border=0>
+  <TBODY>
+  <TR>
+    <TD><FONT face="Trebuchet MS, Verdana, Arial" size=2><IMG height=24 
+      alt="Press and Public Release" src="Templates/../wwwgshim.gif" 
+      width=24></FONT></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=166 border=0>
+  <TBODY>
+  <TR>
+    <TD bgColor=#333333>
+      <TABLE cellSpacing=1 cellPadding=3 width=166 border=0>
+        <TBODY>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="Templates/../wwwhocm7.html">Speeches &amp; 
+          Remarks</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="Templates/../wwwh1002.html">Press Releases &amp; 
+            News</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="http://usinfo.state.gov/usinfo/products/washfile.html">The 
+            Washington File</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="http://usinfo.state.gov/journals/journals.htm">Electronic 
+            Journals</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="Templates/../wwwh3009.html#outlook">Philippine Economic 
+            Outlook</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="Templates/../wwwh5001.html">TJIC Dialogue 
+            (Newsletter)</A></FONT></TD></TR>
+        <TR>
+          <TD bgColor=#ffcc00><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" 
+        size=1>&nbsp;</FONT></TD></TR></TBODY></TABLE>
+    <TD></TD></TR></TBODY></TABLE></DIV>
+<DIV class=leftmenu id=flym2 
+style="Z-INDEX: 105; LEFT: 164px; VISIBILITY: hidden; WIDTH: 181px; POSITION: absolute; TOP: 80px">
+<TABLE cellSpacing=0 cellPadding=0 width=181 border=0>
+  <TBODY>
+  <TR>
+    <TD><FONT face="Trebuchet MS, Verdana, Arial" size=2><IMG height=36 
+      alt="Consular and Visa" src="wwwgshim.gif" 
+width=150></FONT></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=181 border=0>
+  <TBODY>
+  <TR>
+    <TD bgColor=#333333>
+      <TABLE cellSpacing=1 cellPadding=3 width=181 border=0>
+        <TBODY>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3005.html"><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1>About the 
+            Consular Section</FONT></A></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3050.html">Key Consular 
+            Officers</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3029.html">Contact the 
+            Consular Section</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3004.html">American 
+            Citizens Services</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3023.html">Immigrant Visa 
+            Information</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="http://travel.state.gov/visa/frvi/bulletin/bulletin_1360.html">Immigrant 
+            Visa Priority Dates</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwh3024.html">Non-Immigrant 
+            Visa Information</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="http://travel.state.gov/visa/immigrants/types/types_1309.html">National 
+            Visa Center</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="http://www.delbros.com/">Track Your 
+        Passport/Visa</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="wwwhappo.html">Visa 
+            Appointment Date</A></FONT></TD></TR>
+        <TR>
+          <TD bgColor=#ffcc00><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" 
+        size=1>&nbsp;</FONT></TD></TR></TBODY></TABLE>
+    <TD></TD></TR></TBODY></TABLE></DIV>
+<DIV class=leftmenu id=flym4 
+style="Z-INDEX: 107; LEFT: 513px; VISIBILITY: hidden; WIDTH: 128px; POSITION: absolute; TOP: 80px">
+<TABLE cellSpacing=0 cellPadding=0 width=118 border=0>
+  <TBODY>
+  <TR>
+    <TD><IMG height=24 alt="Government Links" src="Templates/../wwwgshim.gif" 
+      width=24></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=128 border=0>
+  <TBODY>
+  <TR>
+    <TD bgColor=#333333>
+      <TABLE cellSpacing=1 cellPadding=3 width=128 border=0>
+        <TBODY>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() href="http://www.loc.gov/">Library 
+            of Congress</A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="http://www.firstgov.gov/">First Gov</A> </FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><A 
+            onfocus=if(this.blur)this.blur() 
+            href="http://lcweb.loc.gov/global/executive/fed.html"><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1>Official US 
+            Executive Branch Web Sites</FONT></A></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="http://www.uscourts.gov/index.html"><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1>Judiciary Branch 
+            </FONT></A></FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="http://thomas.loc.gov/home/legbranch/legbranch.html"><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1>Legislative 
+            Branch</FONT></A> </FONT></TD></TR>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1><A 
+            onfocus=if(this.blur)this.blur() 
+            href="Templates/../wwwh3001.html">US Mission to the Asian 
+            Development Bank</A></FONT></TD></TR>
+        <TR>
+          <TD bgColor=#ffcc00><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" 
+        size=1>&nbsp;</FONT></TD></TR></TBODY></TABLE>
+    <TD></TD></TR></TBODY></TABLE></DIV>
+<DIV class=leftmenu id=flym5 
+style="Z-INDEX: 108; LEFT: 642px; VISIBILITY: hidden; WIDTH: 86px; POSITION: absolute; TOP: 80px">
+<TABLE cellSpacing=0 cellPadding=0 width=86 border=0>
+  <TBODY>
+  <TR>
+    <TD><IMG height=24 alt="Contact Us" src="wwwgshim.gif" 
+  width=24></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=86 border=0>
+  <TBODY>
+  <TR>
+    <TD width=85 bgColor=#333333>
+      <TABLE cellSpacing=1 cellPadding=3 width=86 border=0>
+        <TBODY>
+        <TR>
+          <TD onmouseover="pviiW3Cbg(this, '#CCCCCC')" 
+          onmouseout="pviiW3Cbg(this, '#FFFFFF')" bgColor=#ffffff><A 
+            onfocus=if(this.blur)this.blur() 
+            href="Templates/../wwwhcont.html"><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=1>Contact the US 
+            Embassy</FONT></A></TD></TR>
+        <TR>
+          <TD bgColor=#ffcc00><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" 
+        size=1>&nbsp;</FONT></TD></TR></TBODY></TABLE>
+    <TD width=86></TD></TR></TBODY></TABLE></DIV><BR>
+<TABLE cellSpacing=5 cellPadding=0 width=720 border=0>
+  <TBODY>
+  <TR vAlign=top><A name=start></A><!-- #BeginEditable "top_title" -->
+    <TD colSpan=2>
+      <H3>American Citizen Services</H3></TD><!-- #EndEditable --></TR>
+  <TR vAlign=top><!-- #BeginEditable "Main Body" -->
+    <TD width=160><!-- #BeginLibraryItem "/Library/acsmenu.lbi" -->
+      <TABLE cellSpacing=4 cellPadding=0 width=224 border=0>
+        <TBODY>
+        <TR vAlign=top align=left bgColor=#0000ff>
+          <TD colSpan=2>
+            <DIV align=center><STRONG><FONT 
+            color=#ffffff>SERVICES</FONT></STRONG></DIV></TD></TR>
+        <TR vAlign=top align=left>
+          <TD vAlign=center width=14 height=20><A href="wwwha020.html"><FONT 
+            color=#0000ff><B><B><FONT 
+            color=#0000ff><B></B></FONT></B></B></FONT></A><A 
+            href="wwwha020.html"><FONT color=#0000ff><B><B><FONT 
+            color=#0000ff><B><B><IMG height=13 alt=Bullet src="wwwgarrw.gif" 
+            width=13 border=0></B></B></FONT></B></B></FONT></A></TD>
+          <TD width=198><A href="wwwha020.html"><STRONG>REGISTER WITH U.S. 
+            EMBASSY</STRONG></A> <FONT 
+          color=#ff0000><STRONG>NEW!</STRONG></FONT></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><B><B><A href="wwwha010.html">TAX 
+          ASSISTANCE</A></B></B></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><A href="wwwha008.html">NOTICES - Safety, Security, Travel 
+            ...</A></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><A href="wwwha017.html">EMERGENCY SERVICES</A></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><A href="wwwhppt.html">PASSPORTS, BIRTHS, AND 
+            CITIZENSHIP</A></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><B><A href="wwwha005.html">NOTARY SERVICES</A></B></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><B><A href="wwwha009.html">MARRIAGE</A></B></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><B><A href="wwwha019.html">DEATHS</A></B></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><B><A href="wwwha007.html">CHILD CUSTODY 
+          DISPUTES</A></B></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><A href="wwwha012.html"><STRONG>VOTING</STRONG></A></TD></TR>
+        <TR vAlign=top align=left bgColor=#0000ff>
+          <TD colSpan=2>
+            <DIV align=center><FONT color=#0000ff><B><B><B><B><STRONG><FONT 
+            color=#ffffff>U</FONT><FONT color=#ffffff>SEFUL 
+            </FONT></STRONG></B><FONT 
+            color=#ffffff><STRONG>INFORMATION</STRONG></FONT></B></B></B></FONT></DIV></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><B><B><A href="wwwha006.html">LIVING AND WORKING IN THE 
+            PHILIPPINES</A></B></B></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><A href="wwwha016.html">PHILIPPINE PUBLIC 
+        DOCUMENTS</A></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><A href="wwwha011.html">EDUCATION</A></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><A href="wwwharst.html">ARREST/IMPRISONMENT</A></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><A href="wwwha004.html">LEGAL 
+ASSISTANCE/LAWYERS</A></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><B><B><B><B><A 
+            href="wwwhemer.html">HOSPITALS/DOCTORS</A></B></B></B></B></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><B><B><A href="wwwhadop.html">ADOPTION</A></B></B></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><B><B><B><A href="wwwha013.html">FEDERAL 
+            BENEFITS</A></B></B></B></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD><FONT color=#0000ff><B><B><FONT color=#0000ff><B><B><IMG 
+            height=13 alt=Bullet src="wwwgarrw.gif" width=13 
+            border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><B><A href="wwwha014.html">US GOVERNMENT LINKS</A></B></TD></TR>
+        <TR vAlign=top align=left>
+          <TD height=47><FONT color=#0000ff><B><B><FONT 
+            color=#0000ff><B><B><IMG height=13 alt=Bullet src="wwwgarrw.gif" 
+            width=13 border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><A href="wwwha003.html#locating"><STRONG>LOCATING FRIENDS AND 
+            RELATIVES IN THE UNITED STATES</STRONG></A></TD></TR>
+        <TR vAlign=top align=left>
+          <TD height=47><FONT color=#0000ff><B><B><FONT 
+            color=#0000ff><B><B><IMG height=13 alt=Bullet src="wwwgarrw.gif" 
+            width=13 border=0></B></B></FONT></B></B></FONT></TD>
+          <TD><A 
+            href="Library/travel.state.gov/travel/travel_1744.html"><STRONG>GENERAL 
+            INFORMATION FOR AMERICAN CITIZENS LIVING ABROAD</STRONG></A></TD></TR>
+        <TR vAlign=top align=left>
+          <TD bgColor=#0000ff colSpan=2>&nbsp;</TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD>
+      <CENTER><B><A name=Emergency></A>Emergency Services</B> </CENTER>
+      <UL>
+        <LI><A href="#Obtaining">Obtaining Funds in an Emergency</A> 
+        <LI><A href="#Inexpensive">Inexpensive Temporary Lodging in Manila</A> 
+        <LI><A href="wwwharst.html">Arrests</A> 
+        <LI><A href="#Missing">Missing Persons</A> 
+        <LI><A href="wwwhemer.html">Hospitalization and Medical Emergencies in 
+        the Philippines</A><BR>&nbsp; </LI></UL>
+      <CENTER><A name=Obtaining></A><B>Obtaining Funds in an Emergency</B> 
+      </CENTER>
+      <P>Americans traveling abroad sometimes run out of funds either because of 
+      imprudence, robbery or other unforeseen circumstances. Destitute citizens 
+      may be entitled to financial assistance, but they must demonstrate that 
+      they have no other sources of income and are unable to receive financial 
+      assistance from friends or relatives. In the limited circumstances under 
+      which the Embassy can entertain a loan application, the repayment 
+      guidelines are strict and applicants cannot obtain a US passport again 
+      until the loan is repaid. Frequently, individuals may feel they are 
+      destitute when in fact they are simply low on cash. Remember that credit 
+      cards, debit cards and ATM cards may also be used to obtain cash or pay 
+      bills. Family or friends in the U.S. can send funds through the procedures 
+      described below. The role of the Embassy in such cases is to help the 
+      person contact others in the U.S. who will be able to send funds to the 
+      person in distress. 
+      <P>The Embassy is not able to loan cash to individuals except under 
+      certain conditions. Americans seeking financial assistance must exhaust 
+      all other options first. We will ask an American to first make collect 
+      telephone calls to relatives or friends in the United States requesting 
+      funds to be transferred to Manila. Money transfers may be accomplished 
+      through the following means:&nbsp; 
+      <P>Funds may be transferred directly to the destitute person through 
+      Western Union.&nbsp; 
+      <P>-or-&nbsp; 
+      <P>Funds may be transferred to Manila through the Department of State's <A 
+      onclick="MM_openBrWindow('http://travel.state.gov/overseas_citizens.html','','')" 
+      href="javascript:;">Overseas Citizens Services</A>:&nbsp; 
+      <P>The following are instructions for sending money via the State 
+      Department's Office of Overseas Citizen Services to a U.S. citizen with a 
+      financial emergency abroad. When you use this service, a Department of 
+      State (DOS) trust account is established in the recipient's name in order 
+      to forward funds overseas. There is a $30.00 processing fee. Personal 
+      checks are not accepted. Your money order or cashier's check must be made 
+      payable to the Department of State. Upon receipt, we send a telegram to 
+      the appropriate U.S. Embassy or Consulate abroad authorizing next workday 
+      disbursement. The recipient must contact the Embassy or Consulate to 
+      arrange receipt. The forwarding of funds will be delayed if you fail to 
+      provide the recipient's overseas location. Funds are normally disbursed in 
+      the foreign country's currency and not in U.S. dollars.&nbsp; 
+      <P><B>WESTERN UNION:</B> If you have a major credit card, you may 
+      telephone Western Union at 1-800-325-6000 or 4176. Otherwise, tell your 
+      local Western Union agent that you wish to purchase a money order for the 
+      desired amount plus $30.00 (for the Department of State fee) and made 
+      payable to the Department of State. A message with your name, address, and 
+      telephone number, as well as the name and overseas location of the 
+      recipient, must accompany the money order. Western Union charges a fee 
+      based on the amount sent. The money order and message are sent to: 
+      Overseas Citizens Services (OCS), Department of State, Washington, D.C. 
+      20520. Funds are normally received electronically in OCS within several 
+      hours. We have a Western Union checkwriter in our office. 
+      <P><B>BANKWIRE:</B> It may take 1 to 3 days to process a bankwire 
+      transaction. If you choose this option, tell your bank that you want to 
+      wire the desired amount plus $42 to Bank of America, Department of State 
+      Branch, 2201 C St. NW, Washington, D.C. 20520 at 202-624-4750 via ABA 
+      number: 114000653; Account Number: 7476363838; Account Name: PUPID State 
+      Department; Special instructions: OCS/Trust for benefit of (recipient's 
+      name), U.S. Embassy/Consulate (City, Country); and include your name and 
+      telephone number. The wire instructions must include the recipient's full 
+      name and overseas location. Bank of America notifies our office when funds 
+      are received. The $42 fee includes the $30 Department of State fee and 
+      Bank of America's $12 wire fee.&nbsp; 
+      <P><B>OVERNIGHT/REGULAR MAIL:</B> Obtain cashiers check or money order for 
+      the desired amount plus $30 (Department Of State fee), made payable to the 
+      Department of State. Attach a letter with your name, address, and 
+      telephone number, as well as the name and location of the overseas 
+      recipient. Mail to: Overseas Citizens Services, CA/OCS, Room 4811, 
+      Department of State, 2201 C St. NW, Washington, D.C. 20520. Regular mail 
+      can take 7 to 10 workdays to reach CA/OCS, and even overnight mail may not 
+      reach our office for several days.&nbsp; <A href="#Emergency">BACK TO 
+      TOP</A><BR>&nbsp; <BR>&nbsp; <BR><BR>
+      <CENTER>
+      <P><A name=Inexpensive></A><B>Inexpensive Lodging in Manila</B> 
+      <p align="center"><strong>LIST OF PENSION HOUSES IN  METRO MANILA</strong></p>
+      <p align="center"><strong>DAILY RATES/FEATURES</strong>      </p>
+      </CENTER>
+      <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;">
+        <tr>
+          <td width="193" valign="top" style="width:144.9pt;border:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">MABINI    MANSION              </span></strong><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">A. Mabini St., Manila       </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Tel.: 521-4776              </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Fax : 521-1646              <strong></strong></span></p></td>
+          <td width="264" valign="top" style="width:2.75in;border:solid black 1.0pt;border-left:none;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    1,670</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (standard room, w/ </span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">aircon, t.v., private t&amp;b with    breakfast) </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    2,150</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (deluxe room, w/ aircon, t.v. </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">private t&amp;b with breakfast)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    2,880</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (Suite Room, w/ aircon, t.v.</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">private t&amp;b, w/ internet and    breakfast)<strong></strong></span></p></td>
+        </tr>
+        <tr>
+          <td width="193" valign="top" style="width:144.9pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">MALATE    PENSIONNE     </span></strong><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">1771 M. Adriatico</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Manila        </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Tel.: 523-8304       </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Fax : 522-6626       <strong></strong></span></p></td>
+          <td width="264" valign="top" style="width:2.75in;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    350</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (dorm for female/8 pax, </span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">dorm for male/3 pax, fan)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    1,100</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (standard room, fan, private</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">t&amp;b)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    1,400</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (deluxe room w/ aircon, t.v.,</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">private t&amp;b)<strong></strong></span></p></td>
+        </tr>
+        <tr>
+          <td width="193" valign="top" style="width:144.9pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">ERMITA    TOURIST INN</span></strong><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">1549 A. Mabini St.</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">cor. Soldado St.     </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Ermita, Manila       </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Tel.: 521-8770</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Fax. No. 521-8773<strong></strong></span></p></td>
+          <td width="264" valign="top" style="width:2.75in;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    850</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (standard room w/ aircon,</span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">private t&amp;b)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    950</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (standard room w/ aircon,</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">private t&amp;b, cable t.v.)<strong></strong></span></p></td>
+        </tr>
+        <tr>
+          <td width="193" valign="top" style="width:144.9pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">PENSION    NATIVIDAD</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; ">    </span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">1690 M.H. del Pilar  </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Ermita, Manila              </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Tel.: 521-0524; 524-0811</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">526-0992                    </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Fax : 522-3759              <strong></strong></span></p></td>
+          <td width="264" valign="top" style="width:2.75in;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    400</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (dorm for men/10 pax, dorm for</span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">female/16 pax, fan)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    900</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (fan room, common t&amp;b)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    1,000</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (fan room, private t&amp;b inside)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    1,400</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (aircon room with private t&amp;b)<strong></strong></span></p></td>
+        </tr>
+        <tr>
+          <td width="193" valign="top" style="width:144.9pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">TRAVELLERS    INN</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; ">              </span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">7880 Makati Avenue   </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Makati, Metro Manila</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Tel.: 895-7061</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Fax : 896-2144<strong></strong></span></p></td>
+          <td width="264" valign="top" style="width:2.75in;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    1,900</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (aircon room w/ kitchen,</span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">t.v., private t&amp;b)<strong></strong></span></p></td>
+        </tr>
+        <tr>
+          <td width="193" valign="top" style="width:144.9pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">YASMIN    PENSION HOUSE</span></strong><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">453 Arquiza Street   </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Mabini, Manila</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Telefax: 524-5134<strong></strong></span></p></td>
+          <td width="264" valign="top" style="width:2.75in;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    950</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (aircon room, t.v., </span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">private t&amp;b)<strong></strong></span></p></td>
+        </tr>
+        <tr>
+          <td width="193" valign="top" style="width:144.9pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">HOTEL    JULIANO        </span></strong><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">1171 L.M. Guerrero St.</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Ermita, Manila              </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Tel.: 521-1296              </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Fax : 522-3820       <strong></strong></span></p></td>
+          <td width="264" valign="top" style="width:2.75in;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    800</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (single bed, aircon, private</span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">t&amp;b)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    900</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (double bed, aircon, private </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">t&amp;b)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    1,000</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (queen size bed, aircon, </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">private t&amp;b, t.v.)<strong></strong></span></p></td>
+        </tr>
+        <tr>
+          <td width="193" valign="top" style="width:144.9pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">SANTOS    PENSION HOUSE </span></strong><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">1540 A. Mabini Street       </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Ermita, Manila              </span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Tel: 523-4896</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><span style="font-family:'Courier New'; font-size:9.0pt; ">Fax: 525-4991<strong></strong></span></p></td>
+          <td width="264" valign="top" style="width:2.75in;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;"><p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    655</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (aircon, private t&amp;b)</span><span style="font-size:9.0pt; "> </span></p>
+              <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    455</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (fan, private t&amp;b)</span><span style="font-size:9.0pt; "> </span></p>
+            <p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:9.0pt; ">Pesos    375</span></strong><span style="font-family:'Courier New'; font-size:9.0pt; "> (fan, common t&amp;b)<strong></strong></span></p></td>
+        </tr>
+      </table>
+      <P>As of August 8, 2008
+      <P>Rates Are Subject to Change Without Notice. <A href="#Emergency">BACK 
+      TO TOP</A><BR>&nbsp; <BR>
+      <CENTER>
+      <P><A name=Missing></A><B>Missing Persons:Welfare and Whereabouts</B> 
+      </CENTER>
+      <P>If you are concerned about the welfare or whereabouts of an American 
+      citizen in the Philippines, we may be able to provide information. If you 
+      are in the United States, you may call the Department of State's <A 
+      onclick="MM_openBrWindow('http://travel.state.gov/overseas_citizens.html','','')" 
+      href="travel.state.gov/travel/travel_1744.html">Overseas Citizens 
+      Services</A> (OCS) toll-free hotline at (888)407-4747 during the hours 
+      8:00 a.m. to 8:00 p.m. (EST) Monday through Friday. At all other times, 
+      call the duty officer twenty-four hours a day at 202-647-4000. You may 
+      also contact the American Citizens Services Branch of the Embassy at (02) 
+      301-2000. Please give the office as many particulars as you can about the 
+      individual - physical description, where seen last, itinerary, interests, 
+      etc. The Embassy will attempt to contact the missing individual and advise 
+      them of your concern.&nbsp; 
+      <P>If you wish to locate a Filipino citizen in the United States, please 
+      contact a <A href="wwwfesta.pdf">Philippine Consulate in the U.S.</A> 
+      <P>If you wish to locate a child believed to be missing in the United 
+      States, please contact the National Center for <A 
+      onclick="MM_openBrWindow('http://missingkids.com','','')" 
+      href="javascript:;">Missing and Exploited Children (NCMEC)</A>.&nbsp; 
+      <P>If the missing child is an American citizen and is believed to be in 
+      the Philippines, please contact the <A onclick="MM_openBrWindow('','','')" 
+      href="javascript:;">Office of American Citizen's Services</A> in the 
+      Department of State (202-736-7000) or the American Citizens Services 
+      Branch in the U.S. Embassy.&nbsp; 
+      <P>If you are searching for information regarding the location of an 
+      active or former member of the U.S. military, please consult the <A 
+      onclick="MM_openBrWindow('http://www.pueblo.gsa.gov/call/locating_individuals.htm','','')" 
+      href="javascript:;">Military Locator Service</A>.&nbsp; 
+      <P>However, <A 
+      onclick="MM_openBrWindow('http://www.usdoj.gov/04foia/privstat.htm','','')" 
+      href="javascript:;">Privacy Act</A> restrictions prohibit the Embassy from 
+      releasing information to you about the missing person without his/her 
+      consent. <A href="#Emergency">BACK TO TOP</A><BR>&nbsp; 
+      <P>
+      <HR>
+      <BR><A href="wwwh3004.html">Return to American Citizen Services Main 
+      Page</A> 
+      <P></P></TD><!-- #EndEditable --></TR>
+  <TR vAlign=top>
+    <TD width=209><A href="wwwhmain.html"><IMG height=16 alt="Back to Main" 
+      src="wwwgbakm.gif" width=80 border=0></A></TD>
+    <TD width=496>
+      <DIV align=right><FONT face="Arial, Helvetica, sans-serif" size=1>Last 
+      Update :: <!-- #BeginDate format:Am3 -->08/08/2008<!-- #EndDate --> 
+      </FONT></DIV></TD></TR>
+  <TR vAlign=top>
+    <TD colSpan=2>
+      <HR noShade SIZE=1>
+
+      <DIV align=center><I class=infoctxtpt1>In order to view PDF files, you 
+      must have a version of Adobe Acrobat Reader.<BR>Follow the link to 
+      download the latest version. <A 
+      href="http://www.adobe.com/downloads/">Adobe Acrobat Reader </A><BR>This 
+      site is produced and maintained by the Public Affairs Section of the U.S. 
+      Embassy Manila. <BR>Links to other Internet sites should not be construed 
+      as an endorsement of the views contained therein. <BR><A 
+      href="Templates/wwwhdisc.html">Privacy Notice and Disclaimer</A> 
+    </I></DIV></TD></TR></TBODY></TABLE><!-- #EndTemplate --></BODY></HTML>

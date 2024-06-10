@@ -1,0 +1,3399 @@
+Title  : NSF 94-12 - 2nd National Conference on Diversity in the Scientific and
+         Technological Workforce (Part 3)
+Type   : Report
+NSF Org: EHR
+Date   : June 8, 1994
+File   : nsf9412c
+
+
+
+
+
+
+
+                              NOTE:
+REFER TO PRINTED COPY FOR FULL EQUATIONS, TABLES AND FIGURES
+THIS ELECTRONIC VERSION DOES NOT INCLUDE EQUATIONS, TABLES, FIGURES
+AND PHOTOGRAPHS!!
+
+
+
+STUDENT RESEARCH COMPETITION
+AWARD WINNING PAPERS
+
+
+PRECOLLEGE AWARD
+
+Stephanie Danielle Kindle, Junior
+Gateway High School, St. Louis, Missouri
+
+Comprehensive Regional Centers for Minorities Project
+Principal Investigator, Harvest Collier
+
+A STUDY OF PI USING BUFFON'S EXPERIMENT
+
+Abstract: The purpose of this experiment is to recreate a famous
+needle problem done by the mathematician Comte de Buffon, using a
+different formula to determine Pi. It was hypothesized that the
+approximation resulting from this experiment will be close to
+3.14159 . . ., the most common approximation of Pi. The experiment
+requires a needle and a horizontal surface ruled by a grid of
+parallel equidistant lines. The distance "h" between the lines and
+the length "1" of the needle must satisfy the relation "1less
+thanh." The experiment is done by tossing the needle above the
+surface from a height of 50-60 cm. After each toss, a record is
+made of whether the needle does or does not intersect one of the
+parallel lines. The frequency of such intersections is also
+calculated and recorded. After experimentation, the results show
+that the approximation of Pi, which was 3.14925 . . ., is near the
+commonly-used approximation of Pi.
+
+STATEMENT OF THE PROBLEM
+
+The purpose of this study is to give a brief history and show an
+experimental method of approximating the irrational number Pi using
+Georges Louis Lechere, Comte de Buffon's experiment.
+
+On a table are drawn parallel lines of "d" intervals. A needle of
+length "1" smaller than "d" is thrown at random on the table. What
+is the probability that the needle will touch one of the parallels?
+This remarkable problem comes from G.L.L. Buffon, who was the first
+man to clothe probability problems in geometric form.
+
+The probability of an event is commonly understood to mean the
+ratio of the number of cases favoring an event to the total number
+of possible cases.
+
+INTRODUCTION
+
+Circles are important geometrical figures in mathematics. There are
+examples of them in everyday life such as wheels on cars, bicycles,
+the circular disk of record albums, the laser disks which make up
+CD-ROMS for computers and musical records. Finding the area of a
+circle involves a number that was calculated by the Egyptians in
+approximately 3000 B.C., thousands of years before the
+Babylonians, the Greeks and the Chinese; the number is Pi(pi).
+
+There are numbers in mathematics that have the ability to spring
+out all of the time in the most unexpected places. Perhaps the most
+remarkable of them is pi equals 3.14159265 . . ., which is "the
+ratio of the length of a circle's circumference to its diameter."
+It is a surprise to find it (Pi) in the expression of the
+proportion of co-primes among all pairs of integers (equal to
+6/pi), or to find it as the probability that a randomly tossed
+needle will intersect a line in a grid of parallel lines.
+
+The history of pi was greatly influenced by the ancient problem of
+"squaring the circle" which is using a compass and a ruler to
+construct a square equal in area to a given circle. The efforts to
+solve this problem have resulted in an even greater accuracy in
+determining the number pi. For almost 2,000 years the main tool
+used to arrive at a value for pi was a method invented by
+Archimedes.
+
+In his famous treatise Measurement of the Circle, Archimedes (ca.
+287-212 B.C.), the greatest mathematicians of antiquity, gave the
+following approximation for the value of pi:
+
+3 1071 less thanpiless than3 1070
+
+or in decimals: 3.14084507 less than pi less than 3.14285714. (The
+correct value of pi to eight decimals is 3.141592265.)
+
+He created the classic and maybe the most natural method for
+computing pi: because it is the length for a circle with a diameter
+of 1 unit, this number can be estimated by the perimeters Pn and Qn
+for regular n-sided polygons inscribed in and circumscribed about
+this circumference. As the number of n sides increases, the
+polygons approach a circle, and their perimeters slowly approach
+pi. To obtain his approximation, that remained unsurpassed for many
+centuries, Archimedes had to compute the perimeters of inscribed
+and circumscribed 96-gons.
+
+Many years later, in 1654, an unexpected result was discovered by
+the great Dutch scientists and mathematician, Christian Huygens. He
+found that to get the precision Archimedes had attained in
+computing pi, regular 12-gons would be enough. This result was
+published in his treatise On the Discovered Size of the Circle.
+Huygens achieved his results only by improving the technique for
+calculating the perimeters of regular polygons. Huygens work was
+based on new ideas, which were further developed in present time.
+
+To tackle the problem of estimating the number pi correctly, one
+must start with a definition of pi. The most common definition of
+pi is the "ratio of the circumference of a circle to its diameter."
+This definition requires a justification which is, a proof that
+this ratio is the same for all circles. One question that may be
+asked because of that statement is: What's the length of a
+circumference? The question has a standard answer: it is the value
+approached by the sequence of perimeters Pn of regular n-sided
+polygons inscribed in the circle as n approaches infinity; meaning,
+the limit of this sequence. Particularly, for a circle of diameter
+1 unit, this limit equals pi.
+
+Is there an experimental way to determine the value of pi. Yes,
+take a thread, measure the circumference of a circle with a known
+diameter, and divide that amount by the diameter, there is also a
+completely different way. We can get an approximate value of pi by
+using a needle . . . and a little of probability theory. This
+approach was invented by the French naturalist G.L.L. Buffon
+(1701-1788). In later years Buffon's original experiment was
+repeated time and again to confirm or refute some conclusions of
+probability theory and its applicability.
+
+To do Buffon's experiment one needs a horizontal surface ruled by
+a grid of parallel equidistant lines. The distance "d" between the
+lines and the length "1" of the needle must satisfy the relation
+1less thand. Toss the needle above the surface, each time giving it
+a little flip so that it falls freely from a height of about 50-60
+cm and lands at random angles relative to the lines. After each
+toss is completed write down whether the needle does or does not
+intersect one of the parallel lines and calculate the frequency of
+"crossings," that means, the ratio of the number of throws "m"
+resulting in intersection to the total number of throws "n." One
+will soon see that as the number of tosses in the experiment
+increases, the frequency changes. Not only that, but if one
+performs many trials consisting of many tosses, the frequency of
+"crossing" is approximately the same for each trial.
+
+REVIEW OF LITERATURE
+
+Archimedes' "Measurement of a Circle," is a treatise containing
+only three propositions. The treatise as it has come down to us is
+not in its original form and may be only a fragment of a larger
+discussion. Around 150 A.D., the first notable value for pi after
+that of Archimedes was given by Claudis Ptolemy of Alexandria in
+his famous Syntaxis Mathematica (more popularly known by its
+Arabian title of the Almagest), the greatest ancient Greek work on
+astronomy. In this work, pi is given 377/120 or 3.1416. It may have
+come from some earlier Greek source or, maybe from calculating the
+perimeter of a regular inscribed polygon of 384 sides. In 1593,
+Adriaen Van Roomen of the Netherlands, found pi correct to 15
+decimal places by the classical method, using polygons with 2
+sides. A few years later in 1610, Ludolph Van Leulen of Germany
+spent a large part of his life on this task and his achievement was
+considered so extraordinary that the number was engraved on his
+tombstone, and to present day it is sometimes referred to in
+Germany as "The Ludolphine Number." More than a century and a half
+later, Comte de Buffon devised his famous needle problem by which
+pi may be determined by probability methods. Suppose a number of
+parallel lines, h distance apart, are ruled on a horizontal plane,
+and suppose a homogeneous uniform rod of length 1less thanh is
+dropped at random onto the plane. Buffon showed that the
+probability, P, that the rod will fall across one of the lines in
+the plan is given by P equals (2/pi)(1/h).
+
+By actually performing this experiment a given large number of
+times "n" and noting the number of successful cases "m," thus
+obtaining an empirical value for P, (namely, Pequalsm/n), we may
+use the above formula to compute an approximation for pi. The best
+result obtained in this way was given by the Italian, Lazzerini, in
+1901. From only 3408 tosses of the rod he found pi correct to 6
+decimal places. His result is so much better than those obtained by
+experiments that it is sometimes regarded with suspicion. There are
+other probability methods for computing pi. Among the curiosities
+connected with pi are various mnemonics that have been devised for
+the purpose of remembering pi to a large number of decimal places.
+The following by A.C. Orr, appeared in the Literary Digest. One has
+merely to replace each word by the number of letters it contains to
+obtain pi correct to 30 decimal places.
+
+Now I even I, would celebrate
+In rhymes, unapt, the great
+Immortal syracusar, revaled nevermore,
+Who in his wondrous love,
+Passed on before,
+Left men his guidance
+How to circle mensurate.
+
+Most recently, in 1934, a great many college and public libraries
+throughout the United States have received, from the obliging
+author, complimentary copies of a thick book devoted to the
+demonstration that pi equals 3 13/81. And then there is House Bill
+No. 246 of the Indiana State Legislature which attempted, in 1897,
+to determine the value of pi by legislation. In section I of the
+bill we read: "Be it enacted by the General Assembly of the State
+of Indiana: It has been found that a circular area is to the square
+on a line equal to the quadrant of the circumference, as the area
+of one side . . ." The bill passed the House, but, because of some
+newspaper ridicule, was shelved by the Senate, in spite of the
+energetic backing of the State Superintendent of Public
+Instruction. There is more to the calculation of pi to a large
+number decimal places than just the challenge involved. One reason
+is to secure statistical information concerning the "normalcy" of
+pi.
+
+PROCEDURAL ANALYSIS
+
+To complete this experiment, the first step was to design a grid by
+drawing horizontal lines "h" cm apart from one another on a board.
+Then drop a needle "1" centimeter long 50-60 centimeters from the
+board "n" numbers of times. The distance between the lines on the
+grid and the total number of times the needle was tossed were
+picked at random.
+
+The next step was to mark each time that the needle crosses any
+line as an "intersection" and each time that it does not cross any
+line as a "toss." Then by using these numbers, make a tally of the
+tosses and intersections ("m" equals number of intersections) and
+record the data.
+
+The final step used in this experiment was to use the formula:
+pi (approx equal) 21h ;pd nm to calculate an estimate of Pi.
+
+RESULTS
+
+The results of this experiment were found to be less than the
+margin of error. By using the formula:
+
+pi (approx equal) 21h ;pd nm
+
+the end result was 3.149259261 which was off by 0.007 of the actual
+estimate of Pi which is 3.1415927. . . .
+
+Also, in this experiment a tally was used to calculate the number
+of tosses and intersections. The final numbers from that method
+were used in the formula above.
+
+Tosses (n)               Intersections (m)
+1265                     414
+Length of needle (1)     Distance between lines (h)
+2.926 cm                 7.62 cm
+Mathematical constant Pi (pi)
+Pi equals 3.141592654 . . .
+
+Pi can be calculated in this manner, however, this method is
+extremely slow and somewhat prone to error. In order to evaluate Pi
+to an accuracy of just 0.01 decimal place, one would have to take
+approximately 500-1000 more tosses.
+
+Calculated Results of Pi
+
+                              No. of    Experimental
+Name                Year      Tosses    Value of Pi
+
+Wolf                1850      5000      3.1596
+
+Smith               1855      3204      3.1553
+
+Fox                 1894      1120      3.1419
+
+Lazzarini           1901      3408      3.1415929
+
+This Experiment
+ (the average of
+ three trials)      1993      1268      3.1492592
+
+True value of Pi to the seventh decimal place: 3.1415927
+
+
+CONCLUSION
+
+In conclusion, it was proven that the original hypothesis was
+correct; because the end result was 3.149259261 which was only off
+by 0.007 of the actual estimate of Pi.
+
+Some of the most interesting phenomena found in conducting this
+experiment include the following: First, the accuracy of the
+measurement--to obtain the precise value of pi from the equation,
+one must be able to precisely measure h and 1. This can be done
+only by actually measuring both values. Errors in measurement will
+definitely affect the accuracy of pi. Making use of more
+sophisticated instrumentation, one can measure all the lengths to
+an accuracy of 0.01 mm. At this point, it has reached the practical
+limit, and it is nearly impossible to reduce the error to 0.001 mm
+because a variation in the needle's or the surface's temperature of
+only 1 or 2 degrees results in variation of about 0.001 mm in the
+measured distances. Deformation of the needle caused by its
+collision with the surface, wear at its tips, deformation of the
+surface itself--all these factors make it quite unreasonable to try
+to achieve a level of experimental error of 0.001 mm. This means
+that with conventional measuring devices the best that one can
+expect to obtain is pi equals 3.141 + 0.006. By writing all the
+decimal places obtained; the accuracy of the experiment can be
+overrated and thereby report a misleading result.
+
+ACKNOWLEDGEMENTS
+
+This researcher would like to thank the following people for their
+hard work and dedication in helping me complete this project; but
+first I thank God for giving me strength and will power to perform
+my daily tasks. I would also like to thank Mr. N. Nevels for his
+guidance and patience during the project; and I would also like to
+thank Mr. Edward C. Haynie for introducing me to this project and
+giving me the motivation to do this project.
+
+BIBLIOGRAPHY
+
+Eves, Howard, An Introduction to the History of Mathematics, 3rd
+Edition, March/April 1950, p. 89-106.
+
+Vavilou, Valery, Calculating pi, Quantum, May/June 1992, p. 45-50.
+
+Zaydel, A.N., Delusion or Fraud?, Quantum, Sept./Oct 1990, pp. 6-9.
+
+
+
+
+PRECOLLEGE AWARD
+
+Ralph Osif, Freshman
+Powell Jr. High School, Mesa, Arizona
+
+Comprehensive Regional Centers for Minorities Project
+Principal Investigator, Alfredo G. de los Santos, Jr.
+
+THE EFFECTS OF CEDAR SMOKE ON RADISH SEEDLINGS
+
+Abstract: The purpose of this study was to determine if smoke will
+effect radish seedlings as measured by leaf and stomata coloration,
+and condition of stems. The study involved three groups: two
+experimental and one control. Growing conditions were kept
+consistent across all three groups. Plants were kept in three
+inverted aquariums. Treatments: Group 1--Control--no smoke; Group
+2--Smoke from 20 ml of burning cedar chips twice a day for four
+days; Group 3--Smoke from 80 ml of burning cedar chips twice a day
+for four days. Experimental plants were wilted and the leaves were
+paler green than those in the control group. In addition, when
+stomata were compared, 82% of Group 3's stomata were discolored,
+48% of Group 2's, and 0% of the control. Conclusion: Based on the
+data collected from this study, it appears that smoke is harmful to
+the general health of radish seedlings.
+
+INTRODUCTION
+
+The purpose of this experiment was to determine if radish seedlings
+would be effected from exposure to smoke produced from burning
+cedar chips.
+
+The rise in air pollution, either from man-made causes or natural
+causes, is known to have many different impacts on our quality of
+life. Is it also having an impact on the plants around us?
+
+BACKGROUND INFORMATION
+
+Smoke is a mixture of solid particles and gases suspended in air.
+The make up of smoke depends on the substance that is burned. There
+are hydrocarbon particles and carbon monoxide gases in smoke that
+comes from burning wood.
+
+There are varied sources of environmental smoke or pollution. Wood
+fires, automobile and truck exhaust, factories, and utility
+companies all contribute to pollution in the atmosphere. Some of
+the specific types of pollution that are frequently measured to
+determine air quality are:
+
+
+Pollutant                Source
+
+carbon dioxide           Naturally occurring from animal
+                         respiration; Other sources: burning of
+                         forests, volcanic activity, natural
+                         decay; major cause of greenhouse effect
+
+carbon monoxide          major source: automobile exhaust, fossil
+                         fuel combustion, home kerosene heaters,
+                         cigarette smoke
+
+lead                     Major source: Older cars using regular
+                         gasoline
+
+nitrogen dioxide         major source: automobile exhaust
+
+particulate matter       natural sources include: soil dust,
+                         pollen, bacteria, and volcanic dust;
+                         man-made sources include dust, soot, and
+                         ashes from combustion and incineration.
+
+sulfur dioxide           produced by combustion of coal, fuel oil,
+                         and gasoline; primary cause of acid rain
+
+smog                     a combination of smoke and fog
+
+smoke                    major source: forest fires, wood stoves,
+                         fireplaces, coal
+
+(Sandak, 1990).
+
+
+In March 1991, the Environmental Protection Agency Journal reported
+that over 84 million people breathe air violating at least one
+federal standard. In fact, 67 million live in countries which
+exceeded the smog level standards; 34 million live in countries
+exceeding the carbon monoxide level standards; and 27 million live
+in countries exceeding the particulate level standards. The World
+Health Organization estimates that worldwide nearly 1 billion urban
+dwellers--almost one out of every five people on Earth--are being
+exposed to health hazards from air pollutants (Tyler, 1992).
+
+There is often more smoke pollution in the summer than in the
+winter due to the larger number of brush and forest fires during
+the drier summer months. Almost 3,000 acres were destroyed from a
+recent forest fire which occurred in Boise National Forest. It cost
+$2.8 million dollars to extinguish the fire. (Petranek, 1993).
+However, in colder regions such as Denver, Colorado, the
+combination of wood smoke and automobile exhaust also creates
+serious air pollution problems during winter periods when there is
+little wind (Sandak, 1990). Adding to this problem is the fact that
+the Environmental Protection Agency has classified microscopic
+particles of incompletely burned wood as being carcinogenic
+(Sandak, 1990).
+
+HYPOTHESIS
+
+If radish seedling are exposed to smoke from burning cedar chips,
+the health of the seedlings will be effected, as seen in the color
+of their leaves, condition of their stomata, and presence of
+wilting.
+
+METHOD
+
+Materials
+
+The materials for this experiment included approximately three
+hundred radish seedlings placed in common potting soil. The
+seedlings had germinated within the week preceding the treatments.
+The radish seedlings were germinated in germination trays that were
+placed in a tray which had a clear plastic lid.
+
+Materials for the experimental treatments included:
+
+     3         ten gallon aquariums
+     3         ceramic evaporating dishes
+     400ml     Cedar chips
+     3         alcohol thermometers
+     1         glass rod
+     8         matches
+
+Procedures
+
+The radish seeds for this experiment were germinated and grown in
+plastic containers of equal size, and shape. The same amount and
+type of potting soil was used for the planting of the seeds, and
+all of the seeds were from the same lot. Each of the three groups
+were exposed to the same light source, and temperature, and
+received the same amount of water. One week after the radish seeds
+had been planted, the seedlings were divided into three equal
+groups: one control, and two experimental. Each group of seedlings
+was then placed under an individual, inverted ten gallon aquarium.
+
+The two experimental groups (Group 2 and 3), were exposed to cedar
+smoke, and the control group (Group 1) was not exposed to any
+smoke. The procedure for exposing the seedlings to the smoke was as
+follows:
+
+o measure out specified amount of cedar chips
+
+o place cedar chips into an evaporating dish
+
+o ignite the cedar chips with a match
+
+o stir the chips while they are burning to ensure all chips are
+ignited
+
+o when flames have died out and the chips have started to produce
+smoke, place into the inverted aquarium
+
+o remove evaporating dish when all smoking has stopped
+
+Group 2 was exposed to 20 ml of burning cedar chips and Group 3 was
+exposed to 80 ml of burning cedar chips. Five minutes after the
+smoking wood chips were placed in the aquarium, the inside
+temperature of each aquarium was recorded. The cedar chips were
+placed in the aquariums at 8:30 a.m. and again at 4:30 p.m. This
+procedure was repeated twice a day for four consecutive days.
+
+Initial recordings were taken from each group of plants. These
+recordings included the color of their leaves, condition of their
+stomata, and presence of wilting. At the conclusion of the four-day
+experiment these recordings were taken again. The following
+procedure was used for determining the condition of the stomata.
+Sample leaves were taken from each of the three groups. These
+leaves were examined with the aid of a microscope set to high
+power. The total number of stomata that were in the viewing area of
+the microscope were counted. Then the number of stomata that
+appeared darkened were counted. These two figures were used to
+calculate the percentage of darkened stomata.
+
+RESULTS
+
+There were differences in the three groups of radish seedlings when
+looking at the resulting leaf color, condition of stomata, and
+presence of wilting. The results of this experiment can be seen
+below.
+
+Table 1
+Results of Radish Seedlings Being Exposed to Cedar Smoke
+
+Groups            Group 1               Group 2       Group 3
+
+Indicators:    Before    After     Before    After  Before  After
+
+% of Darkened
+ Stomata       0%        0%        0%        48%    0%      82%
+
+Leaf Color     Green     Green     Green     Pale   Green   Yellow
+                                             Green          to Pale
+                                                            Green
+
+Presence of
+ Wilting       No        No        No         Yes      No   Yes
+
+
+Group 3, which had been exposed to the largest amount of smoking
+cedar chips (80 ml) had the largest effects. The overall appearance
+of the leaves on the seedlings in Group 3 was changed from the
+initial appearance. The leaves initially were bright green, and
+after being exposed to 80 ml of smoke twice a day for four days,
+the leaves had changed from bright green to yellow or pale
+yellow-green. There was no presence of wilting at the onset of the
+experiment, however, at the conclusion the seedlings were wilted.
+The initial condition of the stomata was that all were clear bright
+green. After being exposed to the smoke, 82% of the stomata became
+darkened.
+
+Similar results were present for the seedlings in Group 2, however,
+not as prominent. Again, the leaves initially were bright green,
+and after being exposed to 20 ml of smoke twice a day for four
+days, the leaves had changed from bright green to pale yellow-green
+or pale green. There was also no presence of wilting at the onset
+of the experiment, however, at the conclusion the seedlings were
+slightly wilted. The stomata in Group 2 were initially clear, but
+at the end of the experiment, 48% had become darkened.
+
+Group 1's initial recordings showed that all the plants were not
+wilted, had green leaves and the stomata were clear. At the end of
+the four days, there were no noticeable changes to the seedlings in
+Group 1.
+
+CONCLUSION
+
+Based on the data collected in this study, it appears that smoke is
+harmful to the growth of plants. The plants which had been exposed
+to smoke lost the color in their leaves, were wilted and had
+stomata which were discolored. In other words, smoke proved to be
+harmful to the plants. We need plants to survive in our world, and
+the pollution that is being generated by our society could possibly
+effect the ability of plants to survive, which in turn effect our
+ability to survive. With this information, I believe we should help
+out our environment by finding ways to decrease the amount of smoke
+pollution which enters our atmosphere.
+
+REFERENCES
+
+"New Report Shows Progress in Air Quality." EPA Journal, March
+1991.
+
+Petranek, S. (September, 1993). The force of nature. Life, pp.
+31-37.
+
+Sandak, C. R. (1990).  A reference guide to clean air. Enslow
+Publishers: Hillsdale, NJ.
+
+Tyler, M. G. (1992). Living in the environment,  Wadsworth
+Publishing Company: Belmont, CA.
+
+
+
+
+
+UNDERGRADUATE AWARD
+
+Peter Cabauy, Freshman
+Department of Chemistry, Florida International University
+Alliances for Minority Participation Project
+Principal Investigator, Kenneth G. Furton
+
+A STRAIGHTFORWARD INEXPENSIVE METHOD FOR DETERMINING CRITICAL
+MICELLE CONCENTRATIONS IN UNDERGRADUATE LABORATORIES
+
+Abstract: A new method has been developed for determining the
+critical micelle concentration (CMC) of aqueous surfactant
+solutions. This method is accurate, straightforward, and is very
+inexpensive compared with existing methods used for determining
+CMCs. In addition, the method developed allows students to
+visualize the concept of surface tension without having to use
+expensive instrumentation. The method is based on the rapid drop in
+water droplet size as the CMC is approached followed by a more
+uniform droplet size above the CMC.
+
+INTRODUCTION
+Surface active agents (surfactants) are used in a variety of areas,
+including chemical kinetics and as membrane mimics in biochemistry.
+Surfactants are encountered in a diverse range of consumer products
+including motor oils, pharmaceuticals, soaps, and detergents.
+Surfactants are amphilic substances consisting of a long-chain
+hydrocarbon "tail" and a polar (often ionic) "head". One unique
+property of surfactant is that at sufficiently high concentrations
+the surfactant molecules begin to form into molecular assemblies
+known as micelles. The concentration at which this occurs is known
+as the critical micelle concentration (CMC). Normal micelles are
+those in which the surfactant molecules orient themselves into
+spherical or elliptical structures with their lipophilic tails
+oriented toward the center and their hydrophilic heads oriented
+toward the surrounding water. The structure of these micelles will
+vary according to temperature, polarity of the solution, and the
+concentrations of surfactant molecules in solution. One of the most
+common types of aqueous surfactant in consumer chemistry are the
+linear alkylbenzenesulfonates (LAS) which are anionic surfactant
+present in the majority of home laundry detergents. A two
+dimensional representation of how a typical spherical micelle might
+look in solution is shown in Figure 1. Micelles should be
+visualized not as static objects, but as molecular assemblies in
+constant motion with exchanges of amphiles occurring between
+micelles and between bulk aqueous solution and the micelle.
+
+There are several methods for determining the CMC of a surfactant
+solution. CMC is determined by physiochemical properties of the
+surfactant solution as the concentration of the amphile (surfactant
+molecule) is increased. Some of the physical properties that have
+been studied for this purpose include the solution detergency,
+viscosity, density, conductivity, surface tension, osmotic
+pressure, interfacial tension, refractive index, and light
+scattering. Other more sophisticated techniques that can be
+employed include X-ray diffraction, electron spin resonance
+techniques, potentiometric techniques, fluorescence emission
+spectroscopy. For a more detailed discussion of micelles, their
+uses, and the determination of CMC, readers are directed to
+references 1-5.
+
+Recently developed methods for use in undergraduate experiments
+make use of additives to indicate the formation of the micelles and
+determine the CMC of aqueous solutions by studying the change in
+uv-vis absorbance or fluorescence emission. In a typical such
+experiment a constant amount of organic compound (usually a dye) is
+added in solutions containing increasing concentrations of
+surfactants. The percentage change or emission is plotted against
+the surfactant's concentration. The midpoint of the transition of
+the sigmoidal curve obtained is taken to be the CMC. Reference 6
+and 7 are recent undergraduate experiments using these methods.
+
+WHY ANOTHER METHOD?
+
+The uv-vis absorption and spectrofluorometric methods provide a
+reasonable estimate of the CMC but pose several problems when
+applied to an undergraduate experiment. First, the data
+manipulation required may reduce the accuracy of the technique
+(e.g., 18-39% Relative Average Deviation from Ref. 6) and may cause
+confusion as to what is actually happening at the CMC (e.g.,
+determining the midpoint of the transition of the sigmoidal curve
+for the percentage change in measurements). Second, these methods
+require relatively costly instrumental techniques that may not be
+available at the undergraduate level (particularly
+spectrofluorometric instrumentation). Thirdly, the presence of
+organic compounds, including dyes, used in fluorescence emission
+and spectroscopy can significantly affect the observed value of the
+CMC. Polar organic molecules can cause a marked depression of the
+CMC in aqueous media, even at very low bulk phase concentrations.
+The degree of CMC depression is related to the polarity of the
+additive, the degree of branching, and the locus of solubilization.
+
+Due to problems with additives in surfactant solutions, surface
+tension is one of the most used techniques for measuring CMC;
+however the instruments used are not cost effective for
+undergraduate laboratories. The most common test for measuring
+surface tension is the use of a torsion balance along with a metal
+ring that is placed at the surface of the solution. The degree of
+surface tension measured by the balance to draw up the metal ring
+from the solution is measured and the surface tension is then
+calculated and plotted against the concentration of surfactant in
+solution. Difficulties that are encountered in an undergraduate
+experiment are costs and level of cleanliness. The degree of
+cleanliness in experiments with surface tension is very important
+because surface tension can be affected by any other electrolytes
+present in solution.
+
+Presently, we will describe an inexpensive, noninterfering
+technique suitable for determining accurate CMC's in an
+undergraduate experiment. The technique we have developed is based
+on the relatively linear decrease of surface tension up to the CMC
+where the surface tension remains relatively constant. To have an
+understanding of how this technique works some knowledge of surface
+tension is required, readers are directed to references 3&8, but
+for all practical purposes we will try to give a brief summary
+related to the experiment at hand. Surface Tension can be described
+as the interactions of the surface molecules of a solution with the
+bulk solution and its interfaces. The interfaces in question are
+usually glass and air. Surfactant molecules tend to travel to the
+interfaces and accumulate there. Keeping in mind that they do not
+remain fixed at the interfaces one can understand that the
+concentration of amphiles in solution disturb the normal adhesive
+properties that water has on glass. The alleviation of surface
+tension on the solution gives a great deal of emulsifying power to
+regularly immiscible solutions. The amphillic properties of the
+micelles give headway to both solutions to emulsify one into
+another. The linear decrease of surface tension before reaching the
+CMC can be described by visualizing an increased concentration of
+amphiles at the solutions interface. After the CMC has been reached
+the micellization that occurs does not affect the area because the
+interface has already been saturated with amphiles and can no
+longer make a significant difference in the surface tension. As the
+micelles form they take on a three-dimensional spherical,
+elliptical, or rod-like form. The form will depend on the
+concentration of the surfactant solution and the space between
+micelles at the interface.
+
+The experiment that has been developed uses the simple concept of
+a medicine dropper. Water or solution droplets are formed because
+of surface tension. If it were not for this phenomena a steady
+stream would flow from the opening of the glass capillary.
+Differences in surface tension will affect the drop size.
+Furthermore, one can use a variety of measurements, such as:
+constant volume plotted against number of drops, weight of drops
+plotted against concentrations, and or constant drops giving
+different volumes plotted against concentrations. As long as the
+right variables are held constant an accurate CMC can be
+determined.
+
+Although the idea of a medicine dropper forming drops of liquid may
+seem like a consistent unit in any other experiment in a chemistry
+lab, there is a large percentage of error. In our endeavors we had
+to invent an inexpensive, consistent water/solution dropper (Figure
+2). Using some facts of pressure from physics we were able to make
+a simple system that uses the following: burette valve, disposable
+pipette, and a common bulb from a medicine dropper. Assembled as in
+figure 2 and using a consistent procedure we can attain pure water
+drops that weigh approximately 0.0250 g with a variation of plus or
+minus 0.0003 grams. Now, that drops are reasonably consistent we
+can determine the weight of each drop on a scientific balance.
+
+PROCEDURE
+
+1. Prepare 10 solutions with various concentrations of LAS from 0
+to 2.8x10E-3M. Our solutions were made up in 100ml volumetric
+flasks.
+
+2. Assemble dropper (Fig. 2) providing consistent drops which will
+be weighed with an analytical balance.
+
+3. Transfer solutions into small vials.
+
+4. Open valve and draw up water solution from vials using the bulb.
+Close valve and remove bulb then calibrate dropper to make a drop
+roughly every ten seconds. When this is achieved make a calibration
+mark on the valve in order to achieve same opening in later steps.
+
+5. Draw up a water solution once more and open the valve to
+calibration mark and remove the bulb. Re-zero scale after each
+drop. Wait for 5-7 drops checking consistency in drop weight. If
+three drops are reasonably consistent after the first 5 drops
+record the weight.
+
+6. Repeat procedure for different solutions keeping in mind that
+the pipette has to be rinsed with water after each solution. For
+practical purposes draw up water and release twice after each
+solution, this will clean the dropper and keep its consistency.
+Each solution should be drawn up more or less to the same vicinity
+as all the other solutions. The Bulb should always return to its
+original relaxed position.
+
+Once the weight has been obtained it should be plotted against the
+concentration. The concentration should be the independent variable
+and the weight of the drops should be the dependent variable. Once
+we have plotted the data points, we perform a linear least squares
+regression analysis of the points on the y-axis with the greatest
+differences versus the points with the least change (where the
+drops size remains constant). The point where the lines intersect
+is the CMC (Refer to Figure 3). Alternatively, we have also
+determined the number of drops required to reach a volume of 1.0 ml
+on a graduated cylinder with the number of drops required
+increasing suddenly, then leveling off above the CMC. These methods
+represent affordable ways in which students in undergraduate labs
+can work with surfactants, and open new ideas and methods to use
+surface tension in the determination of CMCs.
+
+CONCLUSIONS
+
+The method proposed here is a straightforward, extremely
+inexpensive, and accurate technique for determining the CMC of
+aqueous surfactant solutions. The advantages of this method over
+the previous dye absorption methods are three-fold. First, the
+method can be used without costly instrumentation. Second, since no
+additives are used, this method prevents any possible CMC
+depression caused when additives are present. Finally, the
+information generated is accurate and easily interpreted by novice
+analysts. The formation of more constant-sized droplets (volume and
+weight) corresponds with the formation of micelles and pinpoints
+the CMC. Below the CMC, the droplet size consistently increases
+with the largest droplets observed for pure water.
+
+ACKNOWLEDGEMENTS
+
+The author would like to thank Arold Norelus and Mike Sarkees for
+useful suggestions and assistance in developing these experiments.
+I would also like to thank Dr. Efrain J. Ferrer for giving me the
+opportunity to participate in the FGAMP program. And finally, I
+would like to thank Prof. Kenneth G. Furton, my mentor and
+supervising scientist for allowing me to develop these experiments
+in his laboratory.
+
+LITERATURE CITED
+
+1. Lindman, B. and Wennerstrom, H. Micelles: Amphile Aggregation in
+Aqueous Solution; Springer-Verlag, Berlin, 1980.
+
+2. Fendler, J.H. and Fendler, E.J. Catalysis in Micellar and
+Macromolecular Systems; Academic Press, New York, 1975.
+
+3. Rosen, M.J. Surfactants and Interfacial Phenomenon; John Wiley
+& Sons, New York, 1978.
+
+4. Love, L.J.C., Habarta, J.G, and Dorsey, J.G., Anal. Chem., 1984,
+56, 1132A.
+
+5. Furton, K.G. and Norelus, A. J. Chem. Ed., 1993, 70, 254.
+
+6. Rujimethabhas, M. and Wilairat, P. J. Chem. Ed., 1978, 55, 342.
+
+7. Sawyer, D.T.; Heineman, W.R. and Beebe, J.M. Chemistry
+Experiments for Instrumental Analysis; John Wiley & Sons, New York,
+1984, Experiment 10-4 "Critical Micelle Concentration of
+Surfactants", p. 283.
+
+8. Eicke, H.-F. and Parfitt, G.D. Interfacial Phenomena in Apolar
+Media; Marcel Dekker, New York, 1987.
+
+
+
+
+UNDERGRADUATE AWARD
+Jonathan Hill, Junior
+Department of Civil and Construction Engineering, Iowa State
+University
+Research Careers for Minority Scholars Project
+Principal Investigator, Loren Zachary
+
+DESIGN METHODOLOGY FOR CORRUGATED METAL PIPE TIEDOWNS
+
+Abstract: Corrugated metal pipes (CMP), which are pipes that run
+underneath roads to permit water flow, have a tendency to uplift.
+Several transportation agencies around the U.S. and Canada have
+used different types of tiedowns to overcome the problem, however
+there is no agreement in the magnitude of hold force. This paper
+describes research in progress for the development of a rational
+and economical approach to designing tiedown structures for
+flexible pipes. To acquire more knowledge on the longitudinal
+stiffness, three pipes were tested in the laboratory. Since pipes
+are covered by soil, a field test was used to determine how the
+soil affected the stiffness of the pipe. The results of the field
+test were used to create a finite model of the uplifting situation
+which led to the calculation of the force required for the tiedown.
+The force obtained was a conservative value of 37.5 kips which is
+approximately 9.3 yd(sup)3 of concrete.
+
+INTRODUCTION
+
+Problem
+
+In the mid 1970s both the Iowa Department of Transportation and the
+Federal Highway Administration recognized that corrugated metal
+pipe (CMP) culverts were experiencing uplift failures at an
+unacceptable rate and that for pipes over 4 ft in diameter
+provision should be made for tiedowns at the inlets. In a national
+survey of 60 state and provincial Department of
+Transportations(DOT) (Klaiber et al., 1993) it was revealed that 26
+agencies used some form of restraint to overcome the uplifting. The
+resistance force of the restraints were compared with the pipe
+diameters and then graphed to see the relationship. The
+relationship was either linear (Fig. 1) or exponential (Fig. 2)
+curves. Also shown in the figures is the conservative relationship
+resulting from the rational analysis of Austin et al (1990). The
+fact that uplift failures are still occurring plus the wide
+variation in tiedown forces being required by various agencies
+(Fig. 1 and Fig. 2) indicates the need for a rational design method
+for safe economical CMP tiedowns.
+
+Objectives
+
+The primary objective of the research is the development of a
+rational method to design the restraint system a given CMP needs to
+prevent uplift failures. Due to the elaborate scope of this
+project, the study is divided up into two phases with specific
+objectives in each phase. Phase I has been completed and summarized
+in past reports; it consisted of surveying design standards of
+other state DOTs, determining the longitudinal stiffness, and
+beginning to obtain experimental data on soil-CMP interaction.
+Phase two which is presently in progress consists of completing the
+collection of the soil-CMP interaction data, incorporating the
+water depth computations of Austin et al (1990) into an integrated
+program, and synthesizing all of the data into a rational design
+procedure. This procedure will lead to development of software and
+finally to the development of a design standard for corrugated
+metal pipe tiedowns.
+
+Previous studies
+
+Very little has been published in the open literature on CMP uplift
+failure. The most recent and definite research has been sponsored
+by the Iowa DOT in the projects HR-306 (Austin et al., 1990) and
+HR-332 (Klaiber et al., 1993).
+
+Austin et al. (1990) had the objective of determining the magnitude
+of the problem. Computer programs were developed for computing the
+depth of water flow within the conduits for a variety of flow
+conditions. Statical analysis was also done on the CMP neglecting
+the pipe flexibility and shearing resistance of the soil. The CMPs
+were assumed to be plugged in most of the analyses so the only
+resistance to uplift was provided by the pipe weight, weight of
+overlying soil, and resisting force provided by inlet tiedowns. The
+static analysis and the analyses of two CMP failures demonstrated
+that the pore pressure distribution beneath the pipes creates force
+of sufficient magnitudes to cause uplift failure if resistance by
+tiedowns is not provided.
+
+Klaiber et al. (1993) addressed the "longitudinal bending
+stiffness" of the CMPs. Using the equation:
+
+EI equals "Longitudinal Bending Stiffness"   (1)
+
+
+Moment of Inertia(I) is a function of the shape of an object and
+Modulus of Elasticity(E) is constant for a given metal. So the
+Moment of Inertia was determined experimentally by testing three
+CMPs (4 ft, 6 ft, and 8 ft in diameter). Since these three tests do
+not represent all the different types and sizes of CMPs, a
+theoretical model was developed from the experimental results. The
+following formula was developed to determine the stiffness for a
+variety of CMPs with different corrugation geometries, gages,
+diameters, etc.
+
+EIequalsEpiScrt4 KG 31+3 K2G rt6+KG L3T sin;gu cos;gu12 dc+KR2 (2)
+
+CMP Uplift Test
+
+To obtain data on soil-structure interaction one CMP (10 ft in
+diameter) was tested with a minimum soil cover of 2 ft. The results
+from this test were used to calibrate a finite element model.
+
+Experimental Test Set-Up
+
+The galvanized, steel CMP used for the field test was received in
+two separate parts. The two parts were joined together by a 10 in.
+"hugger band" to form a 52 ft long pipe. The pipe was 10 ft in
+diameter with 3 by 1 helical corrugations.
+
+The site for the test was an existing embankment of undisturbed
+glacial till at Iowa State University Spangler Geotechnical
+Laboratory. The soil was excavated to fit the CMP and best simulate
+ideal conditions (Fig. 3).
+
+To simulate the pore pressure, which creates the uplifting force as
+explained in Austin et al (1990), two load points at 5 ft and 15 ft
+from one end were used. Obviously, it is very difficult to subject
+the pipe to forces which closely approximate pore pressures. At
+these load points uplift was created by a set of four hollow core
+hydraulic cylinders supported on a sturdy load frame. A beam-girder
+system was used to transmit the hydraulic cylinder forces to four
+supporting columns (Fig. 4). Data from the two loading points will
+be used to calculate the finite element model of the system.
+
+INSTRUMENTATION
+
+Data was read and recorded from the instruments by a Data
+Acquisition System (DAS) which was placed inside the laboratory.
+Strain gages used to measure longitudinal and hoop strains were
+placed at six longitudinal sections of the pipe shown in Fig. 5.
+Lightweight rods with Direct-Current Displacement Transducers
+(DCDT's) appropriately attached were connected to the inside walls
+of the CMP near the same sections as the strain gages. These were
+used to measure vertical and horizontal diameter changes in the
+pipe (Fig. 6).
+
+Soil pressure cells were placed in the soil around the pipe as
+shown in Fig. 7. Vertical deflections of the pipe were measured
+with vertical steel rods which were attached to the top of the CMP
+and extended above the soil at several locations shown in (see Fig.
+8).
+
+ANALYSES
+
+Experimental Analysis of Data
+
+In order to simplify the evaluation of the overall behavior of the
+CMP-soil system, each component of the problem was separated and
+analyzed independently. The components of the problem are the
+weight of the soil (Ws), the weight of the pipe (Wp), the uplifting
+force (Wu), and the stiffness of the CMP (EI). Two of these
+components (Wp and Wu), are already known. The Wp was given by the
+manufacturer. The Wu is calculated using load cells. Analysis of
+the experimental data was conducted to better understand the values
+of Ws and EI.
+
+As mentioned earlier, the two unknown components are the soil load
+(Ws) and the overall longitudinal stiffness (EI). The following
+briefly describes the steps that were performed to approximate the
+soil response and CMP stiffness:
+1) A displacement function was derived from the deflection data
+obtained in the experiment.
+
+2) The first derivative of the displacement function was evaluated
+to obtain the slope of the deflected shape.
+
+3) From the evaluation of Steps (1) and (2) the point where both
+the deflection and slope were zero was found. From this point to
+the inlet of the pipe, the structure was assumed to act like a
+cantilever beam.
+
+4) The information about the slope and the displacement was used in
+two standard engineering mechanic beam theorems (Zachary, 1989).
+The two unknowns Ws and I were calculated from the theorems by
+using extensive numeric integration. The results are: I equals 1008
+in(sup)4, Ws equals 5.61 k/ft
+
+Theoretical Analysis of Soil Load (Ws)
+The magnitude of soil load acting on the upper region of the CMP is
+dependent on the area of soil that the pipe activates as it is
+uplifted. Unfortunately, there was no instrumentation used to
+measure this load. However, two models do exist that describe the
+pattern the portion of soil takes due to the uplift. They are the
+Vertical Slip Surface model and the Frustrum model (Matyus et al.,
+1983).
+
+Intuitively, the Vertical Slip model is probably the best estimator
+for shallow fill cases while the Frustrum model more accurately
+predicts the failure for CMP under high fill conditions. In the
+Vertical Slip Surface model, soil failure is assumed to take place
+along the vertical surfaces extending up from the outer edges of
+the pipe. Using this model a value of 5.34 k/ft is obtained for Ws.
+
+Theoretical Analysis of Longitudinal Stiffness(EI)
+
+The theoretical model for longitudinal stiffness (equation 2) was
+discussed in Klaiber et al (1990). To get a theoretical value for
+"I" in reference to the uplifting test, the appropriate values were
+applied in the equation and a moment of inertia of 611 in(sup)4 was
+obtained. Note that E(Modulus of Elasticity) is a constant.
+
+COMPARISON OF EXPERIMENTAL TO THEORETICAL RESULTS
+
+Soil Component (Ws)
+
+The soil component approximated in the experimental analysis was
+compared to the value obtained in the analytical model. The results
+were very close which shows that the Vertical Slip Surface model
+was an excellent assumption.
+
+Vertical Slip Surface Model
+     Ws equals 5.39 k/ft
+Experimental Analysis
+     Ws equals 5.61 k/ft
+
+Longitudinal Stiffness (EI)
+
+The longitudinal stiffness predicted by the experimental analysis
+was slightly greater than the value determined using Equation 2
+(Klaiber et al., 1993) as shown below:
+
+Analytical Model
+     I equals 611 in(sup)4
+Experimental Analysis
+     I equals 1008 in(sup)4
+
+The difference between the two models is not a surprise because the
+CMP's overall stiffness should be greater in the experimental
+analysis due to the presence of soil in the corrugations. Since the
+CMP experienced soil interaction in the uplift test, the analytical
+model (Klaiber et al., 1993) was modified slightly to incorporate
+a new stress ratio; all other values remained the same. Using the
+new stress ratio value the moment of inertia was calculated to be
+966 in(sup)4.
+
+Finite Element Analysis
+
+As a means of determining the behavior of the entire structure
+during uplift, a finite element model was created using ANSYS
+software. As a result of the experimental analysis, all of the
+external loads are known as shown in Fig. 9. These loads and many
+other properties were put into the program to create the model. A
+detailed description of the elements and load data can be found in
+McCurnin (1993).
+
+Results of Finite Element Analysis
+
+The behavior indicated by the finite element analysis was similar
+to what was observed during the field test. The deflected shape of
+the CMP was similar to the shape indicated by the experimental
+deflection data recorded during the uplifting test. A plot
+comparing the two is shown in Fig. 10.
+
+Tiedown Methodology for CMP
+
+Now that a model has been created of the uplifting that occurs on
+the CMPs, this model can be used to figure the amount of force that
+a tiedown will need to apply. This was done by taking the most
+conservative value of all the external loads as shown in Fig. 8.
+All loads resisting the uplift were made conservatively small while
+the uplifting force was conservatively large. The results of these
+conservative forces will give a very conservative restraint (R) or
+tiedown force (Fig. 11). For more details of the ANSYS coding
+required see Appendix B and Appendix C of McCurnin (1993).
+
+The tiedown force (R) obtained was 37.5 kips which is approximated
+9.3 yd(sup)3 of concrete.
+
+SUMMARY AND CONCLUSIONS
+
+The purpose of this report was to describe research which
+eventually will lead to a rational design method for CMP tiedowns.
+Keep in mind that the force obtained for the tiedown was taken from
+only one experimental test. Future plans for two or three more
+field tests and an incorporation of Austin et al. (1990) study on
+water depth will confirm or enhance the value obtained in this
+report.
+
+ACKNOWLEDGEMENTS
+
+This paper summarizes a portion of the work done on CMP uplift
+failures by the Iowa State University Engineering Research
+Institute. The research has been sponsored by the Iowa DOT.
+Significant assistance was received by Brian McCurnin (Graduate
+Student, Iowa State University) and F. Wayne Klaiber (Professor of
+Civil Engineering, Iowa State University). The opinions, findings,
+and conclusions expressed in this publication are those of the
+authors and not necessarily those of the Iowa Department of
+Transportation.
+
+REFERENCES
+
+Austin, T. A., Lohnes, R. A., Klaiber, F. W. (1990). "Investigation
+of Uplift Failures in Flexible Pipe Culverts," ISU-ERI-Ames 90227.
+Engineering Research Institute, Iowa State University, Ames, IA.
+Klaiber, F. W., Lohnes, R. A., Zachary, L. W., Austin, T. A.,
+Havens, B. T., McCurnin, B. T. (1993). "Design Methodology for
+Corrugated Metal Pipe Tiedowns: Phase I," ISU-ERI-Ames-93409.
+Engineering Research Institute, Iowa State University, Ames, IA.
+Matyas, E. L. and David, J. B. (1983). "Prediction of Vertical
+Earth Loads on Rigid Pipes," Journal of Geotechnical Engineering,
+ASCE, Vol. 109, No. 2, pp. 190-201.
+
+McCurnin, B. T. (1993). "Investigation of Soil-Structure
+Interaction of Corrugated Metal Pipes," ISU Thesis. Engineering
+Research Institute, Iowa State University, Ames, IA.
+Riley, W. F. and Zachary, L. W. (1989). "Introduction to Mechanics
+of Materials," John Wiley and Sons, New York, NY.
+
+NOTATIONS
+
+The following symbols are used in this paper:
+
+dc = corrugation depth
+E = modulus of elasticity
+I = moment of inertia
+LT = corrugation tangent length
+R = restraint load
+r = radius
+t = thickness of pipe walls
+Wp = pipe load
+Ws = soil load
+Wu = uplift load
+
+
+Figures are not a part of this electronic version; refer to the
+printed version for figures and equations.
+
+FIGURE 1
+Linear relationship between force and pipe diameter according to
+various agencies.
+
+FIGURE 2
+Exponential relationship between resisting force and pipe diameter
+according to various agencies.
+
+FIGURE 3
+Soil excavation details: cross section.
+
+FIGURE 4
+Load frame description.
+
+FIGURE 5
+Strain gages.
+
+FIGURE 6
+Instrumentation to measure diameter changes.
+
+FIGURE 7
+Soil pressure cell locations.
+
+FIGURE 8
+Vertical deflection rods.
+
+FIGURE 9
+Location and direction of external loads.
+
+FIGURE 10
+Comparison of deflection curves for the ANSYS finite model and the
+experimental uplift test.
+
+FIGURE 11
+External loads plus tiedown force (R).
+
+
+
+
+UNDERGRADUATE AWARD
+
+Lennard Perez, Jr., Senior
+Department of Engineering, St. Mary's University
+
+Research Improvenment in Minority Institutions Project
+Principal Investigator, Mehran Abdolsalami
+
+
+CALCULATIONS OF ELECTRON-N2 CROSS SECTIONS
+USING RIGID-ROTOR APPROXIMATION
+
+Abstract: Previous theoretical studies of electron-N2 collisions
+have shown cross sections which were found to be converged to
+within one percent accuracy. However, our preliminary scattering
+calculations of electron-N2 collisional cross sections led to
+significantly different values at certain energies compared to the
+previously published results. These differences required further
+convergence tests for a broad range of energies to ensure the
+accuracy of the results. Subsequent extensive convergence tests
+resulted in a new set of values for cross sections at particular
+energies. The most critical energies in our studies were near
+threshold and resonance, at which convergence required considerable
+deviation from the scattering parameters used in earlier
+calculations. We present a detailed comparison of the results we
+have calculated for the electron-N2 cross sections and previously
+published results, exhibiting discrepancies of as much as
+one-hundred percent.
+
+INTRODUCTION
+
+For years, researchers have studied the behavior of nitrogen in
+various scattering processes, one of which is electron-N2
+scattering. The importance of low-energy electron-N2 collisional
+cross sections is seen in such areas as gas discharge physics, the
+physics of planetary atmospheres, and laser kinetic modeling.1
+There are two widely used methods for calculating electron-molecule
+cross sections, Lab-Frame Close-Coupling (LFCC)2-5 and
+Adiabatic-Nuclei (AN).6 In the LFCC method, the dynamical
+interaction between the motions of the nuclei and scattering
+electron is fully taken into account, thus giving very accurate
+cross sections. However, this method is only feasible for simple
+molecular structures (e.g. H2). The AN theory simplifies LFCC with
+two underlying approximations: the Born-Oppenheimer7 separation of
+the nuclear and scattering electron dynamical motion, and
+target-state degeneracy, i.e. the scattering electron energy
+remains the same at both the entrance and exit channels. Thus, this
+method has a considerable conceptual and computational advantage
+over the LFCC method. However, the AN method is expected to
+breakdown near the threshold and resonance energy ranges8,9.
+
+Since the AN method is based on the Body-Frame/Fixed-Nuclei10,11
+(BF-FN) approximation, we present this formulation for the
+electron-molecule scattering problem. Furthermore, we discuss the
+relevance of the interaction potential (static, polarization,
+exchange) and its implementation in our electron-molecule
+scattering calculations. We conclude the paper by describing our
+present convergence studies of electron-N2 collisional cross
+sections, which have shown large percent difference compared to
+previously published results.12
+
+SCATTERING THEORY
+
+To apply the AN theory to scattering calculations, we use the
+(BF-FN) formulation. In this method, the time-independent
+Schrodinger equation for the system wavefunction is written in the
+body-fixed8,13 reference frame, with the orientation of the nuclei
+(z along this axis) frozen during the collision. Furthermore, we
+use the rigid-rotor approximation which fixes the internuclear
+separation of the target at equilibrium value. The resulting BF-FN
+Schrodinger equation is written as14
+
+[Te - 2Vsp(r) - 2Vex(r) + k2]F^(r) = 0  (1)
+
+where ^ is the orbital angular momentum of the projectile along the
+internuclear axis, F^ is the scattering electron wavefunction at
+position r from the molecule's center of mass, k is the energy of
+the scattering electron in Rydbergs, Te is the kinetic energy of
+the scattering electron, Vsp is the static and polarization
+potential, and Vex is a non-local exchange interaction. The
+exchange effect is only important near the target region (e.g. 0
+less than r less than 6 Bohr for N2). Far from the target, however,
+long range polarization potential becomes important. We will now
+give a brief explanation of these three effects.
+
+The polarization potential is the change in total energy of the
+system due to the scattering electron's distortion of the target
+charge distribution. We use a polarization potential developed by
+Morrison and Gibson15 which is determined from self-consistent
+field calculations based on a near Hartree-Fock16 (HF)
+representation of the electron wavefunction for the occupied
+molecular orbitals of the X1E+g (ground) electronic state of N2 .
+In this potential, the non-adiabatic effects are incorporated using
+Temkin's non-penetrating approximation17 which results in a "Better
+Than Adiabatic Dipole" (BTAD)12 polarization potential.
+Furthermore, the BTAD polarization potential asymptotically reduces
+to the form
+
+vpol^(r) = - a0(R)2r4 - a2(R)2r4 P2cos0,  (2)
+
+where a0 and a2 are the spherical and non-spherical components of
+the polarizability. With the internuclear separation fixed at
+equilibrium (R = 2.068a0), the values determined for these
+components from this asymptotic form are12 a0(R) equals 11.42a30
+and a2(R) equals 3.37a30.
+
+The static effects arise essentially from the Coulomb forces
+between the scattering electron and constituent electrons and
+nuclei of the target. These effects are computed by averaging the
+Coulomb potential energy over the X1S+g electronic state of N2. The
+static potential asymptotically reduces to a form defined by
+permanent moments of the molecule. At equilibrium the moments
+determined from this asymptotic form are12 c2(R) equals
+(minus)0.91ea20, c;i4(R) equals (minus)7.41ea40, and c;i6(R) equals
+(minus)20.68ea60.In this work, both the polarization and static
+components are expressed in a complete set of Legendre projections
+as18
+
+Vsp(r) = E ^spE(r)PEcos(0r),  (3)
+
+where 0r is the angle between r and the internuclear axis.
+We treat exchange exactly in the scattering calculations. This
+amounts to explicit consideration of the pairwise interchange of
+the scattering electron with each of the target electrons. This
+non-local effect gives rise to coupled integro-differential
+equations which are evaluated as14
+
+Vex(-12]r)F^(-12]r) = K^(-12]r, -12]r /)F^(-12]r /)d-12]r /,  (4)
+
+with the exchange kernel given by
+
+K^(-12]r, -12]r /) = Ni=1;gfsup. ital. i(-12]r);vb-12]r (minus)
+-12]r /;vb(-)1;gFi2]*2](-12]r /),  (5)
+
+where ;gfsup. ital. i(r) is an occupied molecular orbital of N2 and
+N is the number of occupied orbitals.
+
+To solve equation (1), a partial wave expansion of the scattering
+wavefunction is invoked using spherical harmonics, i.e.
+
+F^(-12]r) equals 1r 2]l2]maxlfl^(r)Yl^(2]=Tr).  (6)
+
+Substituting this partial wave expansion into the Schrodinger
+equation and integrating over the angular variables results in the
+set of coupled radial differential equations12
+
+d2dr2 (minus) l(l + 1)r2 + k2 f^ll2]02](r) equals 22]l2]maxl' V^ll
+2]/2] (r)f^l'l2]0(r)(7)
++ 2l2]ex2]2]max2]l" K^ll" (r, r')f^l"l2]02](r')dr',
+
+with
+
+(8)
+V^ll'(r) equals 2l' + 12l +
+11/22]E2]maxEequals0^E(r)C(l'El;^0)C(l'El;00),
+
+and
+
+(9)
+K^ll'(r, r') equals (minus)2]E2]maxEequals0 rEless thanrE+1more
+than l2]MO2]2]max2]2]l"l;tp2] N2]occ2]2]iequals1gE(ll'l"l;tp;^^i)
+;gFil"^2]i2](r') ;gFil;tp^2]i2](r').
+
+Here, C is the Clebsch-Gordan coefficient,19,20 rmore thanless than
+equals maxmin {r, r'} and gE is a product of four vector coupling
+coefficients.21
+
+We use the linear algebraic method14 to solve the coupled radial
+differential equations (7). In this approach, the differential
+equations are first converted into integral form. This is
+accomplished by incorporating boundary conditions using a
+free-particle Green's function. The resulting integrals are then
+transformed into a set of linear algebraic equations by using
+Gaussian quadratures and solved using applicable linear algebraic
+routines. The BF-FN K-matrix is found by imposing boundary
+conditions on these solutions as
+
+(10)
+f^llo(r) equals 2]6]=T6]jl(kr) + K^llo 2]=Tnl(kr)   as r;ul;in,
+
+where 2]6]=T6]jl and nl are the Ricatti-Bessel and Ricatti-Neumann
+functions, respectively. At large values of r the exchange
+contribution becomes negligible. Therefore, for r more than 6.0a;i0
+we venture from the linear algebraic method and use the efficient
+R-matrix propagation scheme22 to propagate the wavefunction to its
+maximum radius, rmax.
+
+CONVERGENCE PARAMETERS OF THE SCATTERING CALCULATIONS
+There are four limits on the various summations in the radial
+scattering equations (7-9) for the electron-molecule system. We
+truncate these limits to give results which are within one percent
+accuracy. ^max, lmax, lexmax, lMOmax, along with the maximum radius
+at which K matrix is extracted from the wavefunction, rmax,
+constitute the five convergence parameters used in the scattering
+calculations. Proper values for each of these parameters must be
+determined in order to assure the convergence of the electron-N2
+cross sections. The relevance of these parameters in the scattering
+calculations is as follows:
+
+1. ^max: the maximum order Legendre projections included in the
+expansion of the potential in equation (8).
+
+2. lmax: the maximum order of partial waves included in the BF-FN
+scattering function of equation (7).
+
+3. lexmax: the maximum order of partial waves included in the
+exchange term of equation (7).
+
+4. lMOmax: the maximum order of partial waves included in the
+expansion of the bound molecular orbitals.
+
+5. rmax: the maximum radius at which the K matrix is extracted.
+
+We performed extensive convergence studies on electron-N2 cross
+sections for the four lowest BF-FN electron-molecule symmetries (E
+g, E u, II g, II u) at energies up to 1.0Ry. These results were
+converged to within one percent accuracy at all energies. We now
+discuss the convergence studies which determined the final values
+of the scattering parameters used in the calculations.
+
+Our first convergence study involved the radius at which we
+extracted the K-matrix, rmax. In previously published electron-N2
+results,12 propagation up to 85.0a0 was determined to be sufficient
+for accuracy. We found this not to be the case near threshold
+(;sl0.0007Ry). Our studies indicate that we must integrate the
+coupled equations much further. The most significant deviation was
+in the II g symmetry, where the wavefunction needed to propagate as
+high as 900.0a0 to give cross sections which were accurate to
+within one percent. Differences of up to 100% were observed between
+our results and previously published results.12 Using a value so
+high for rmax was not a problem in our scattering calculations,
+since beyond r = 6.0a0 we used R-matrix propagation, which was
+efficient and required no additional computer memory. At energies
+above threshold, rmax does not have to be nearly as high for one
+percent accuracy in the cross sections.
+
+To determine the Gaussian mesh and the number of points, we started
+with the mesh used by Morrison and Saha12 in their calculation of
+the electron-N2 cross sections. Their mesh consisted of 50 points:
+10 points from 0.0 to 0.7a0, 24 points from 0.7 to 1.5a0, 10 points
+from 1.5 to 2.5a0, and 6 points from 2.5 to 6.0a0. Using this as a
+foundation, we began our convergence study on the number of points
+by simply using more points in these meshes and calculating the
+cross sections. These preliminary tests showed considerable percent
+change when additional points were added, especially in the E g
+symmetry near threshold and II g symmetry near resonance energies.
+We then performed extensive convergence studies at these energies,
+varying the meshes and the total number of points. We concluded
+that 133 points (with the exception of II g between 0.1500Ry and
+0.2500Ry) were needed to obtain converged cross sections in the E
+g, E u, II g, and II u symmetries for energies up to 1.0Ry. Seven
+meshes were used to constitute the 133 points: 26 points from 0.0
+to 0.9a0, 19 points from 0.9 to 1.035a0, 17 points from 1.035 to
+1.2a0, 20 points from 1.2 to 1.5a0, 22 points from 1.5 to 2.0a0, 16
+points from 2.0 to 3.0a0, and 13 points from 3.0 to 6.0a0. For the
+II g symmetry near 0.2Ry, however, we needed up to 271 points to
+get 1% accuracy in the cross sections. These results differed by as
+much as fifty percent compared to the previously published
+results.12 It is interesting to note that to get an accurate
+representation of the analytic nuclear part of the static potential
+we need to have at least 30 points in the region near 1.0a0, where
+the potential is known to have a cusp if the rigid-rotor
+approximation is invoked. This is obvious from Figure 1 where this
+potential is plotted for ^ = 72 using 24 points for 0.7 less than
+r less than 1.5a0 and 30 points for 0.9 less than r less than
+1.2a0.
+
+INSERT FIGURE 1
+FIGURE 1
+
+Analytic nuclear static potential for ^ = 72 with mesh consisting
+of 24 points for 0.7 less than r less than 1.5a0 (dotted) and mesh
+consisting of two regions (0.9 to 1.035a0 and 1.035 to 1.2a0)
+containing 15 points in each region (solid).
+
+As far as lmax is concerned, we concluded that 30 channels were
+needed for convergence in the E g(lmax = 58) and E u(lmax = 59)
+symmetries, and 16 channels in the II g(lmax = 32) and II u(lmax =
+31) symmetries, with ^max set to the corresponding values.
+
+Finally, since lexmax and lMOmax have a big impact on the CPU time,
+it is important to minimize the two values as much as possible
+while maintaining one percent accuracy in the cross sections. Our
+studies over a range of energies found that the final values of
+lesmax are: 22 for E g, 21 for E u, 20 for II g, and 11 for II u.
+Furthermore, lMOmax = 10 was determined to be sufficient for one
+percent accuracy.
+
+RESULTS AND CONCLUSION
+
+Table I shows a comparison of the partial cross sections we have
+calculated for the E g, E u, II g, and II u symmetries and results
+previously published12 at a range of energies up to 1.0Ry. The
+total cross sections, obtained from the sum of the four symmetries,
+are also shown. From this data, it is obvious that the largest
+deviations occur near the threshold and resonance energy ranges.
+Graphs of these cross sections are shown in Figure 2. It is obvious
+from Figure 2(c) that the energy at which the cross section is
+maximum is shifted from 0.15Ry in the previous results to 0.2Ry.
+
+From the results we have discussed, it is evident that the values
+used for the scattering parameters play an important role in the
+convergence of the electron-N2 cross sections. When these
+parameters are determined, a broad range of energies must be
+tested. Without proper choice of energies, misleading convergence
+could be obtained for the cross sections. The critical energies
+used in our studies were near threshold and resonance, where
+considerable deviation from the previously used scattering
+parameters12 was needed for convergence.
+
+TABLE 1:  Electron-N2 partial and total cross sections at R =
+2.068a0. Column (1) is the result of our calculations and column
+(2) the previously published (Morrison and Saha) results, followed
+by the percent difference between the two results
+((new-old)/new*100). The total cross section is the sum of the
+partial cross sections, i.e. E g + E u + II g + II u. (All energies
+are in Rydberg and cross sections are in square Bohr)
+
+
+
+[SEE PRINTED VERSION FOR EQUATIONS, FIGURES AND TABLES]
+
+
+
+Insert Figure 2
+FIGURE 2
+
+Plots of our results (solid) versus previous (Morrison, Saha)
+results (dashed) for low-energy electron-N2 cross sections at R =
+2.068a0. These figures contain the cross section for (a) E g, (b)
+E u, (c) II g, (d) II u, and (e) the total cross section (E g + E
+u + II g + II u).
+
+
+ACKNOWLEDGMENT
+
+This research is supported by Grant No. RII-9014116 from the
+National Science Foundation to whom we are most grateful. We would
+also like to thank St. Mary's University for their support during
+the completion of this work.
+
+BIBLIOGRAPHY
+
+  1. A.V. Pheleps, Electron-Molecule Scattering (Wiley, New York,
+1979).
+
+  2. A.M. Arthurs and A. Dalgarno, Proc. Roy. Soc. London Ser A
+256, 540 (1960).
+
+  3. O.H. Crawford and A. Dalgarno, J. Phys. B 4, 494 (1971).
+
+  4. N.F. Lane and S.Geltman, Phys. Rev. 160, 53 (1967).
+
+  5. R.J.W. Henry and N.F. Lane, Phys. Rev. 183, 221 (1969).
+
+  6. D.M. Chase, Phys. Rev. A 104, 838 (1956).
+
+  7. M. Born and J.R. Oppenheimer, Ann. Phys. 84, 457 (1927).
+
+  8. N.F. Lane, Rev. Mod. Phys. 52, 29 (1980).
+
+  9. E.S. Chang and A. Temkin, J. Phys. Soc. Jpn. 29, 172 (1970).
+
+10. A. Temkin and K. V. Vasavada, Phys. Rev. 160, 190 (1967).
+
+11. A. Temkin, K.V. Vasavada, E.S. Chang, and A. Silver, Phys. Rev.
+186, 57 (1969).
+
+12. M.A. Morrison, B.C. Saha, and T.L. Gibson, Phys. Rev. A 36,
+3682 (1987).
+
+13. S. Hara, J. Phys. Soc. Jpn. 27, 1262 (1969).
+
+14. L.A. Collins and B.I. Schneider, Phys. Rev. A 24, 2387 (1981).
+
+15. T.L. Gibson and M.A. Morrison, J. Phys. B 15, L221, (1982).
+
+16. M.A. Morrison, T.L. Estle, and N.F. Lane, Quantum States of
+Atoms, Molecules, and Solids (Prentice Hall, New Jersey, 1976).
+
+17. A. Temkin, Phys. Rev. 107, 1004 (1957).
+
+18. M.A. Morrison, Comput. Phys. Commun. 21, 63 (1980).
+
+19. M.E. Rose, Elementary Theory of Angular Momentum (Wiley, New
+York, 1957).
+
+20. M.A. Morrison and G.A. Parker, Aust. J. Phys. 40, 465 (1987).
+
+21. M.A. Morrison and L.A. Collins, Phys. Rev. A 17, 918 (1978).
+
+22. J. Light and R.B. Walker, J. Chem. Phys. 65, 4272 (1976).
+
+
+
+
+
+GRADUATE AWARD
+
+Karen L. Butler, Ph.D. Candidate,
+Department of Electrical Engineering, Howard University,
+Washington, D. C.
+
+Research Improvement in Minority Institutions Project
+Principal Investigator, James A. Momoh
+
+NEURAL NETWORK-BASED DETECTION AND IDENTIFICATION OF ARCING FAULTS
+IN DELTA-DELTA CONNECTED POWER DISTRIBUTION SYSTEMS
+
+Abstract: Several artificial neural network schemes10,12 exist for
+detecting line faults in power distribution systems. They are
+limited in their ability to detect the presence of the arcing
+phenomenon or burst in signals and to provide security against
+false alarms due to transients induced by normal system operations.
+
+In this paper, the author presents a new clustering-based scheme
+which detects the presence of arcing faults, and identifies the
+fault type and the faulted phase. The paper discusses the
+theoretical development, test procedures and demonstrations of the
+network capabilities using laboratory-generated faulty signals.
+
+Also a feature extraction preprocessing methodology is introduced
+which computes phase current statistics to use as input to the
+neural network.
+
+
+INTRODUCTION
+
+A.  Background
+
+Electric power utilities continue to search for methods to
+comprehensively detect line faults in a power distribution system.
+Some success has been achieved in detecting the arcing type fault,
+but further efforts are required to devise an automated, efficient
+method which can detect and classify this intermittent phenomenon
+in which the faulted current wave forms convey fault
+characteristics that occur randomly in time and have an
+unsymmetrical shape in each cycle.
+
+Researchers have proposed several detection schemes over the past
+ten years to detect line faults utilizing various detection
+criteria. One of the most successful methods(sup)1 utilizes changes
+in the computed energy content of the phase currents to detect the
+presence of a line fault. This method is able to detect the fault
+with high probability, but could achieve better performance if the
+method were able to adapt to the environmental influences. Another
+method uses changes in the amplitude of the second harmonic
+component of the phase currents(sup)2 as a detection criteria. An
+additional method(sup)3 uses changes in the magnitude of the third
+harmonic component of the phase currents and the phase angle of the
+third harmonic currents with respect to the system voltage to
+detect the presence of arcing faults. These two methods have
+demonstrated fairly effective detection rates but tend to have an
+unacceptable amount of false alarms because various normal system
+and load operations also induce changes in the second and third
+order harmonics that make the phase currents appear fault-like.
+
+Two other methods4,5 which have shown great results in detecting
+line faults, use characteristics describing the system's unbalance
+conveyed by statistics computed from various harmonic components of
+the phase voltages and currents as decision criteria. The drawback
+of these methods is that they tend to be computationally intensive.
+
+In 1989, Kim and Russell(sup)6 concluded that even though various
+techniques to detect high-impedance faults had been proposed and
+much progress had been made, no reliable and flexible solution had
+been found. Hence, researchers began to introduce expert
+system-based methods to provide options not available with the
+algorithmic-type methods discussed above. For example, expert
+system approaches permit the use of larger databases of detection
+parameters and allow the adjustment of decision criteria.
+
+One expert system approach(sup)6 synthesizes multiple detection
+parameters and a learning detection system to identify the system's
+fault status. An additional expert system approach(sup)7 uses high
+frequency components of the phase currents as detection parameters.
+Another method(sup)8 uses experience compiled by dispatchers over
+time to generate detection rules, and a third expert system
+approach(sup)9 uses detection rules generated from results derived
+by a simulation program which uses the symmetrical components
+technique to model faults. The fundamental limitation of these
+approaches is, however, that a priori rules must be formulated
+which describe the behavior of the faults.
+
+Since expert systems have not been able to provide the level of
+adaptability needed to sufficiently detect the arcing faults,
+researchers have begun to propose neural network approaches for
+fault detection. One neural network-based method(sup)1(sup)0 has
+been developed in which the neural network is configured and
+trained with parameters developed from phase current parameters
+derived using the Electromagnetic Transients Program
+(EMTP).(sup)1(sup)1 In addition, a multilayer perceptron
+method(sup)1(sup)2 has been developed which operates on the raw
+data to detect the presence of arcing faults. The use of neural
+network based schemes for arcing fault detection is only in its
+early stages, but they show great promise in providing the
+adaptability necessary to sufficiently detect arcing faults.
+
+The goal of this paper is to provide preliminary results from the
+application of a new neural network scheme for single line fault
+detection in delta-delta connected distribution systems.
+
+B.  Problem Definition
+
+The major problem addressed in this work was defined by the Los
+Angeles Department of Water and Power (LADWP) in their request for
+an economical method which could detect and identify the four most
+prevalent fault types that occur in their distribution systems. In
+addition, the method must identify the faulted feeder and faulted
+phase. A typical LADWP distribution station has approximately 4-5
+delta-delta connected, 35kV/4.8kV transformer banks.
+
+The four fault types to be identified are variations of a single
+line fault and broken conductor faults. Fault type 1 is the classic
+single line-to-ground type in which a grounded conductor or foreign
+object touches one of the phase conductors. The second and third
+fault types are broken conductor faults with different ends
+touching ground. Fault type 4 is a broken conductor fault with
+neither end touching the ground. The four fault types are
+illustrated in Fig. 1.
+
+
+
+Insert Figure 1
+
+FIGURE 1
+
+Four distribution fault types under study
+
+
+
+In this paper, the proposed artificial neural network-based
+approach detects and identifies the arcing phenomenon by exploiting
+the ability of the neural network to perform well for this type of
+system which is poorly understood and difficult to describe by a
+set of rules or equations. The neural network was implemented using
+a clustering analysis approach. During training, the neural network
+partitions the decision space into regions representing the various
+classes of normal and fault types with their respective faulted
+phase. Then in the recall mode, it attempts to match the phase
+current waveform input pattern with the most similar class in the
+decision space.
+
+In addition, a feature extraction scheme was developed as a
+preprocessor methodology for the neural network. A statistically
+derived set of features results from the preprocessor which is a
+more robust approach than some of the heuristically derived
+features that have been proposed in earlier works. The features
+describe the magnitude and phase angle variations of the phase
+current waveforms. After extracting these features from the phase
+and neutral current measurements, they become the input set to the
+neural network during training and normal pattern classification
+operations.
+
+
+
+MODEL OF DISTRIBUTION PHASE CURRENTS
+
+In power distribution systems, a neutral and a set of phase
+currents and a neutral and a set of phase voltages can be measured
+at the substation for each feeder. These measurements for a
+balanced, unfaulted network can be defined as shown in equations
+(1) and (2) where ip(t) and vp(t) generally represent a selected
+phase or neutral value of current and voltage. The fundamental
+frequency, f, for these expressions is generally 60 Hertz for the
+power systems in United States where ;gv equals 2pif. Also, imax,
+vmax, ;gQV, and ;gQI are deterministic values. For balanced,
+unfaulted systems, there is a 120o difference between values for
+each of the phase currents, Ia, Ib, Ic. Likewise there is a 120o
+difference between ;gQV values for each of the phase voltages, Va,
+Vb, Vc.
+
+[NOTE: SEE PRINTED VERSION FOR EQUATIONS]
+
+(1)
+ip(t) equals imax sin (wt + ;gQI)
+
+(2)
+vp(t) equals vmax sin (wt + ;gQV)
+
+When a line fault disturbance occurs in the distribution system,
+the faulted phase current waveform becomes distorted. Essentially,
+the phase current waveform on which the fault has occurred can be
+represented as shown in (3).
+
+(3)
+if'(t) equals i sin(wt + ;gQ)
+
+The amplitude, i, and the phase, ;gQ, are random variables which
+depend on the location and type of faults, which, of course, are
+random in nature.
+
+The faulted phase voltage waveform does not convey similar
+distinguishable behavior as the faulted current waveform. Thus, to
+efficiently perform the fault detection and identification, the
+phase currents are analyzed. It is extremely difficult to derive
+time domain characteristics from the faulted waveform that can
+fully describe the arcing fault behavior. However, if a frequency
+spectral analysis is performed on the faulted phase current data,
+hidden periodicities or close spectral peaks can be revealed,
+thereby making spectral characteristics better candidates for
+describing the faulted behavior. Hence, features which convey
+statistical information about the waveform's frequency spectrum
+were used for fault classification.
+
+The neural network module which performs fault identification is
+composed of a filter, a preprocessor which computes statistics to
+describe the characteristics of the phase currents, and a
+clustering neural network pattern classifier.
+
+
+
+PREPROCESSING
+
+Before the data is input to the neural network, it is filtered to
+remove the fundamental frequency component of the phase currents
+that dominates the faulted characteristics. One of the fundamental
+problems in pattern classification is to determine which features
+should be employed for the best classification result. So the goal
+of a feature extractor is to retain only a small number of "useful"
+or "good" features from the input data necessary to ensure that
+minimum computations, cost, and measurement complexity are required
+to implement the pattern classifier. The filtering procedure and
+feature extractor used as a preprocessor to the neural network are
+described in the sections below.
+
+
+A.  Filtering of Dominant Data
+
+In earlier studies(sup)1(sup)3 performed by the author, the phase
+current measurements were sent directly into the feature extractor.
+However, researchers(sup)1(sup)4 have found that during arcing
+fault activity, there may be little or no perceptual change in the
+60 Hertz phase current components. By removing the dominant and
+consistent 60 Hertz phase current component before the feature
+extraction was performed, distinguishable characteristics in the
+remaining data can more easily be recognized. Hence, a 60 Hertz
+notch filter was placed before the feature extractor and then the
+remaining data was amplified and analyzed. The system function,
+H(z),(sup)1(sup)5 for the notch filter is shown in (4) which has
+two complex-conjugate zeros, z1,2 equals e2]”+•j;gv2]0, on the unit
+circle at angle w;i0, and two complex-conjugate poles at p1,2
+equals re2]”+•j;gv2]0. Also, w;i0 is pi/3 and the pole radius, r,
+is 0.95. The effect of the zeros is to create the null in the
+frequency response of the filter at the frequency w;i0. The effect
+of the poles is to introduce a resonance in the vicinity of the
+null and thus to reduce the bandwidth of the notch.
+
+(4)
+H(z) equals 1 (minus) 2 cos;gv;i0z;s-(sup)1 + z;s-(sup)21 (minus)
+2r cos;gv;i0z;s-(sup)1 + r(sup)2z;s-(sup)2
+
+Fig. 2 shows the frequency response of the notch filter. It can be
+observed that all data passes through except the 60 Hertz
+component.
+
+
+Insert Fig. 2
+FIGURE 2
+Frequency response of 60 Hertz notch filter
+
+
+After the measurements were passed through the notch filter, the
+filtered data was sent to a preprocessing unit. In the
+preprocessing unit, statistics and energy variables were extracted
+to form an input feature vector for input to the neural network.
+
+
+B.  2nd Order Statistics: Reflection Coefficient Matrices
+
+The objective of the feature extractor in this phase of the work
+was to develop a method which can estimate the second order
+statistics directly from the phase currents. In 1978,
+Morf(sup)1(sup)6 showed that a sequence of reflection coefficient
+matrices, estimated from a normalized Levinson, Wiggins, and
+Robinson (LWR) algorithm(sup)1(sup)7 have a one-to-one
+correspondence with positive definite covariance matrix
+sequences--second order statistics. Consider, a discrete vector, X,
+defined to represent an array of sensors placed at each feeder to
+measure the phase currents and neutral current simultaneously. The
+array is represented by a vector of four time series, each of
+length K, where K represents the number of samples in an analysis
+snapshot. For the time index t, the vector process is represented
+by a 4 by 1 column vector xt, as shown in (5), where xt is a sample
+of the filtered phase and neutral currents. Hence, a normalized
+matrix reflection coefficient sequence is estimated directly from
+the composite vector of measurements of phase currents.
+
+(5)
+-12]xt equals 14]4]xatxbtxctxnt
+
+This work utilizes a 4-channel square-root normalized
+LWR(sup)1(sup)8 implementation which can compute a 4x4 matrix,
+2]6]=T6]Sx(f), which defines the maximum entropy estimate of the
+composite power spectrum of the vector process. But, a single
+sequence of the matrix-valued reflection coefficients, {K;i1, K;i2,
+. . .}, which have singular values less than or equal to unity in
+magnitude, are extracted before the method fully computes the power
+spectrum.
+
+This normalized LWR method was developed based on a maximum entropy
+method, (MEM), developed by Burg(sup)1(sup)9 which avoids some of
+the pitfalls of conventional linear spectral density estimation
+techniques. The conventional linear techniques, which utilize the
+Fourier transform within their procedure to obtain an estimate of
+the spectral density function, convey information about the
+distribution of the power among its frequency components.
+Unfortunately these methods impose two assumptions about the nature
+of the remaining data which usually results in some form of error
+in the representation of the data in the frequency domain. First,
+the methods assume that the rest of the data is zero through the
+use of windowing functions. Second, the methods, through the use of
+the Fourier Transform, assume that the rest of the data is
+periodic. Burg avoids these "end-effect" problems by not making any
+assumptions about the unmeasured data.
+
+The fundamental question to be answered when implementing the LWR
+method is to determine the required number of reflection
+coefficients to achieve sufficient separability between classes to
+make the pattern classification process practical. The
+transformation from the current measurement time series to the
+reflection coefficients is highly nonlinear and concentrates the
+dominant information in the low-order coefficients. In general,
+high-order coefficients contain not only less information but are
+estimated using fewer data samples. Hence, their variance is
+greater and their individual separability is quite low. They are
+also computed based on residuals from earlier stages, and therefore
+tend to be more sensitive to measurement noise. Finally, the choice
+of the number of coefficients is problem specific based on the
+number of classes to be defined and the complexity of those
+classes.
+
+Many of the classes required to describe the different types of
+faults and normal situations are complex shapes that thread their
+way through the feature space. During simulation studies, eight
+reflection coefficients were found to be adequate to provide the
+necessary separability.
+
+
+C.  3rd and 4th Moments: Skewness and Kurtosis
+
+In the computation of 2nd order statistics, phase relations between
+frequency components are suppressed. Since a faulted current
+waveform is not Gaussian, the analysis process must go beyond 2nd
+order statistics to higher order statistics which give information
+regarding the deviations from Gaussian distribution and the
+presence of phase relations. Therefore, a 3rd and a 4th order
+statistic(sup)2(sup)0 for each phase current was computed. In
+general, the 3rd order statistic, skewness, gives a measure of the
+asymmetry of a distribution around its mean. On the other hand, the
+4th order statistic, kurtosis, gives a measure of how peaky or flat
+a distribution is with respect to a Gaussian distribution.
+
+Before the skewness and kurtosis coefficients are computed,
+however, to reduce possible arbitrariness inherent in the samples,
+the sample mean was subtracted from the magnitude of each sample to
+make the result a zero mean value. That result was normalized by
+the sample mean to define a new time series, r(k), as shown in (7)
+where the magnitude of each sample of the filtered data, xmag(k),
+was computed as shown in (6). The skewness was computed as shown in
+(8) and the kurtosis was computed from the magnitude of the phase
+and neutral current observations, {r(k)}, as shown in (9).
+
+(6)
+xmag(k) equals Re{x(k)}(sup)2 + Im{x(k)}(sup)2
+
+
+where x(k) is the kth sample of filtered data, {k equals 0, 1, . .
+., K (minus) 1}, and K is the total number of samples in a
+snapshot.
+
+(7)
+r(k) equals xmag(k) (minus) E(xmag(k))E(xmag(k))
+
+
+where {k equals 0, 1, . . ., K (minus) 1}, K is the total number of
+samples in a snapshot, and E( ) denotes the statistical expectation
+operator.
+
+(8)
+Skew equals 1K Kkequals1r(sup)3(k)
+
+
+where {k equals 0, 1, . . ., K (minus) 1} and K is the total number
+of samples in a snapshot.
+
+(9)
+Kurt equals 1K Kkequals1r(sup)4(k) (minus) 31K Kk equals
+1r(sup)2(k)2
+
+
+where {k equals 0, 1, . . ., K (minus) 1} and K is the total number
+of samples in a snapshot.
+
+
+D.  Signal Power Variables
+
+There are two additional features which are computed to give
+information about the signal's power for each phase. The first
+feature is Pave which conveys information about the energy of the
+signal; it was computed as shown in (10). Lastly, Pnvar was
+computed to convey information about the variation of the amplitude
+of the signal and is computed as shown in (11).
+
+(10)
+Pave equals 1K Ktequals1 -12]xt -12]x*t
+
+
+where xt is the tth vector of X and K is the total number of
+samples in a snapshot.
+
+(11)
+Pnvar equals E((xmag(k) (minus) -12]xmag(k))(sup)2)E(xmag(k))(sup)2
+
+
+where xmag(k) is computed using expression (8), xmag(k) is the
+sample mean of xmag(k), and E( ) denotes the statistical
+expectation operator.
+
+
+NEURAL NETWORK PATTERN CLASSIFIER
+
+Many of the conventional methods mentioned in the introduction have
+the inability to adjust to the dynamic nature of arcing faults
+thereby making them somewhat ineffective in detecting the presence
+of the faults and classifying the fault type. This fault
+classification problem is basically one of recognizing the
+distinguishing characteristic patterns of a particular fault type
+when a fault has occurred.
+
+Neural networks convey four major properties(sup)2(sup)1 that make
+them ideal for detecting the dynamic characteristics of an arcing
+fault. First, neural networks are adaptable in that they take data
+and learn from it. Second, neural networks generalize in that they
+can correctly process data they were trained on originally.
+Similarly, they can handle imperfect or incomplete data, providing
+a measure of fault tolerance. Their nonlinearities can capture
+complex interactions among the input variables in a system.
+Finally, neural networks are highly parallel interconnections of
+processing units which perform identical, independent operations
+that can be executed simultaneously.
+
+There are many types of neural networks which can perform pattern
+classification. In earlier work,(sup)1(sup)3 this author
+demonstrated the validity of several of the input features, which
+were discussed in section III, using a basic back-propagation
+neural network. Since then, however, a clustering algorithm has
+been implemented to serve as the pattern classifier. The feature
+extractor in combination with this two-stage supervised clustering
+method performs the neural network pattern classification in a
+manner similar to a counterpropagation neural network.(sup)2(sup)2
+A counterpropagation neural network is a two-layer, bi-directional
+mapping network that combines two separate neural network paradigms
+into one system: a Kohonen self-organizing map learning technique
+and a Grossberg OutStar learning strategy.
+
+The proposed neural network pattern classifier utilizes a two-stage
+clustering-based learning algorithm. This algorithm uses the
+training data to generate a set of clusters which represents the
+various fault and normal classes existing in the feature space.
+
+At the lower stage of the algorithm, an unsupervised clustering
+methodology is used to train the neural network to generate a
+natural set of clusters which partition the feature patterns into
+decision regions within the feature space. Then the upper level,
+which operates in a supervised mode, imposes the constraint that
+all clusters must be homogeneous in that each cluster should
+contain only feature patterns representative of the same membership
+class. Utilizing these two strategies, the algorithm continuously
+executes through the two stages until all patterns are placed in
+homogeneous clusters.
+
+Each of the resulting clusters, Ck, was defined by a center vector,
+bj, a spherical radius, ;grj, the number of patterns contained in
+the cluster, nj, the membership class of the cluster, classj, and
+the cluster probability, probj. The metrics used to generate the
+clusters were Euclidean distance and spherical radius. The
+spherical radius was defined as the distance from the center of a
+cluster to the outer boundary of the cluster, and Euclidean
+distance was defined as the vector distance between two points.
+
+In the testing/recall mode, inputs are presented to the neural
+network which then attempts to find a class that matches the input
+using the metrics of the network. If the neural network determines
+that a match has been made, the output implies that (i) the minimum
+distance between the pattern and the center of the selected cluster
+is less than the spherical radius defined in the network, and (ii)
+the label of the input pattern and the cluster are equal.
+
+If, however, the neural network does not find a match, one of two
+actions may be imposed on the system. The first possibility is that
+the network should give up and state that a conclusion could not be
+drawn. The second and more viable possibility is to utilize a
+voting procedure to find the closest cluster using a weighting
+scheme.
+
+
+SIMULATIONS/RESULT
+
+A.  Experimental Data
+
+Experimental data generated during in-house low-voltage laboratory
+experiments was utilized to train the neural network and test the
+performance of the feature extraction procedure and the pattern
+classification neural network. In the experiments, a
+delta-connected transformer and a constant load were connected to
+simulate a simple distribution system. Arcing and solid line faults
+of each of the four fault types were staged. The phase current
+waveforms were measured during the laboratory experiments, sampled,
+and digitally stored on a PC-compatible computer using LABPC, a
+hardware and software data acquisition system developed by National
+Instruments.
+
+Fig. 3 illustrates a phase current waveform measured during the
+staging of a type 1 single line-to-ground arcing faults.
+
+Insert Fig. 3FIGURE 3
+
+Arcing fault phase current wave form
+
+From this current waveform, it can be observed that the arcing is
+depicted by the random spikes that occur over time. Hence, the
+experimental results concur with the expected conjecture that the
+arcing occurs randomly in time. It can also be observed that the
+arcing persists only for a few cycles at a time. Whereas, for line
+faults in grounded distribution systems at actual distribution
+voltages, the arcing tends to persist for longer bursts One
+possible explanation for this difference is that the arcing in
+these laboratory staged faults were crisper and self-extinguishing
+because there was no inductive reactance on the lines which would
+inhibit quick transitions to zero valued line current.
+
+
+
+B.  Simulation Studies
+
+The feature extraction process reduced a snapshot of a 1041-point
+raw experimental data input vector measured for a phase current to
+an input features vector which has 156 points. A condensed
+representation of the 156-point features vector computed during
+preprocessing is shown in (12).
+
+(12)
+(K;i1 K;i2 K;i3 K;i4 K;i5 K;i6 K;i7 K;i8 Skew Kurt Pave Pnvar)
+
+
+Ki represents the ith reflection coefficient matrix computed from
+the phase and neutral currents composite spectrum; Skew represents
+the four-point vector of skewness coefficients computed from the a,
+b, and c phases and neutral currents; Kurt represents the
+four-point vector of kurtosis coefficients computed from the a, b,
+and c phases and neutral currents; Pave, represents the four-point
+vector of average power values computed from the a, b, and c phases
+and neutral currents; and Pnvar, represents the four-point vector
+of normalized variance of the individual samples computed from the
+a, b, and c phases and neutral currents.
+
+Once the features extraction technique and the neural network
+technique were integrated, studies were conducted to analyze the
+performance of the overall arcing fault identification scheme.
+Several issues must be determined. First, the most efficient order
+of the presentation of training patterns must be derived through
+experimentation. Also, the optimal features vector must be
+determined through an exhaustive investigation of each feature's
+impact on the neural network's performance. Then other enhancements
+must be made until the neural network meets the desired
+performance.
+
+All evaluations of the neural network's training performance were
+conducted using a three-fold cross-validation procedure which
+yields a moderately pessimistically-biased error estimate.
+
+The error estimate was computed as the total number of
+misclassified samples divided by the total number of samples. The
+average rate was computed as the sum of the error rates of each
+block of evaluation data divided by the total number of blocks of
+evaluation data. The average error rate represents the training
+performance of the neural network for a particular training case.
+
+One of the design parameters which was determined through a trial
+and error procedure was the order of presentation of the training
+data. Fig. 4 shows the average error rates for 24 different
+permutations of orderings of the training data. The y-axis
+represents the average error percentages and the represents the
+number of the number of clusters. Also, it is noted on the x-axis,
+in parenthesis, that four test cases resulted in 18 clusters, seven
+cases resulted in 16 clusters, and 13 cases resulted in 17
+clusters. The average error rate ranged from a low of 45.8 percent
+to a high of 64.6 percent. From Fig. 4, it can be observed that the
+larger amount of clusters generated the smallest error rates.
+Hence, there appears to exist a tradeoff during the training
+process between minimizing the number of clusters and minimizing
+the error rate.
+
+
+Insert Fig. 4FIGURE 4
+
+Neural network training/evaluation results with various ordering of
+input patterns
+
+Utilizing the permutation of training data that conveyed the best
+error rate using the least amount of clusters, the neural network
+was trained. Table 1 shows the trained neural network's performance
+when a set of test data never seen by the neural network was
+presented to it. The second column of the table shows the desired
+output for a given test case. A match was achieved if the
+classification output of the neural network was the same as the
+desired output. The neural network shows an average test error rate
+of 0.25.
+
+TABLE 1:
+
+NEURAL NETWORK TESTING RESULTS
+
+
+[NOTE: REFER TO PRINTED VERSION FOR TABLE 1]
+
+
+Next, simulations were performed to validate the individual
+necessity of each feature in the classification process. From that
+study, the reflection coefficients 1 and 6 seemed to be the most
+salient features. On the other hand, the reflection coefficients 2
+and 3 seemed to be the least salient. However, the improvement or
+reduction in the average error rate was only about 5 percent from
+removing the least or most salient feature. This percentage change
+is relatively insignificant which implies that all of the chosen
+features are individually important.
+
+Then, simulation studies were conducted to determine the
+combinational impact of the features in the classification process.
+In these test cases, the features that were determined not to be
+individually salient in the previous simulation study were combined
+together in various ways. Their joint saliency was determined. In
+general, no combination was salient. The average error rate was
+improved by as much as 10 percent when reflection coefficients 2
+and 3 and average power were removed as features. One might
+conclude that this combination of features should not be used in
+the features vector, but further training using data from other
+types of systems must be performed before that conclusion can be
+drawn.
+
+Using the ordering of features that gave the best performance in
+Fig. 4 and a feature vector that included all features except the
+reflection coefficients 2 and 3 and the average power, all training
+data was presented to the neural network. The number of clusters
+generated during this training session was greater than the number
+generated when all features were used, but the error rate was
+improved to 37.5 percent. Once again, one might note that there is
+a tradeoff between minimizing the number of clusters and minimizing
+the error rate.
+
+Finally, a voting procedure was added to the matching phase of the
+supervised learning algorithm. The voting scheme picks the
+k-nearest clusters and allows each cluster to vote on the
+classification of the input pattern. Then the decision of the
+majority vote is assigned as the classification of the pattern.
+
+Also, enhancements were made to the final set of clusters generated
+by the supervised learning phase. The radius of the clusters were
+tightened to the value of the distance of the farthest pattern from
+the cluster center plus some ;ge;i1. In addition, clusters whose
+centers were closer than some ;ge;i2 distance and of the same
+membership class, were merged together.
+
+Thus, the final simulation studies were performed to test the
+implementation of a voting procedure and the enhancements to the
+supervised learning. Fig. 5 shows the results of the studies. It
+can be noted that the lowest error rate was still only the 37.5
+percent found in the previous study. However, five clusters were
+generated during this training procedure. This scenario seems to
+imply that it is possible to minimize the number of clusters and
+the average error rate simultaneously.
+
+The training and test results have shown improvement with the
+various enhancements. Since the three-fold cross-validation
+procedure being used in the evaluation process is moderately
+pessimistic, the authors hope to improve the average error rate to
+the 15-20 percent range. Thus, further enhancements are being made
+to reach that error rate.
+
+
+
+Insert Fig. 5FIGURE 5
+
+Neural network training/evaluation results utilizing enhanced
+neural network
+
+
+
+CONCLUSIONS
+
+A new neural network based approach was presented for detecting and
+identifying arcing fault types and faulted phase. The neural
+network was implemented using an innovative combined supervised /
+unsupervised clustering algorithm.
+
+Also, a new feature extraction scheme was presented which computes
+a set of 2nd, 3rd, and 4th order spectral statistics and power
+signal strength features for use as inputs to the neural network.
+The uniqueness of the statistics is that they are not
+system-specific features. Also, the uniqueness of the use of
+reflection coefficients as the 2nd order statistics is that they
+are composite spectral statistics which convey information about
+the interrelationship between the phase currents.
+
+The results were encouraging with 75-100 percent success rates
+having been achieved during during the various training evaluations
+and tests performed using laboratory generated data.
+
+
+
+ONGOING WORK
+
+Additional enhancements are being made to the neural network to
+further improve its performance. Most importantly, training
+evaluations and tests will be performed utilizing data generated
+during arcing field tests.
+
+
+
+ACKNOWLEDGMENTS
+
+The author would like to acknowledge NASA Jet Propulsion
+Laboratory, the National Science Foundation RIMI grant
+#HRD-9253055, and the Los Angeles Department of Water and Power for
+their support of this research. The assistance of the researchers
+at the Center for Energy Systems and Control at Howard University
+is also acknowledged.
+
+
+
+REFERENCES
+
+  1. B. Don Russell, Ketan Mehta, and Ram Chinchali, "An Arcing
+Fault Detection Technique Using Low Frequency Current
+Components--Performance Evaluation Using Recorded Field Data," IEEE
+Trans. on Power Delivery, Vol. 3, No. 4, Oct. 1988, pp. 1493-1500.
+
+  2. C. Huang, H. Chu, M. Chen, "Algorithm Comparison for High
+Impedance Fault Detection Based on Staged Fault Test," IEEE Trans.
+on Power Delivery, Vol. 3, No. 4, Oct. 1988, pp. 1427-1434.
+
+  3. P. I. Jeerings and J. R. Linders, "A Practical Protective
+Relay for Down-Conductor Faults,"IEEE Trans. on Power Delivery,
+Vol. 6, No. 2, April 1991, pp. 565-574.
+
+  4. S. J. Balser, K. A. Clements, and D. J. Lawrence, "A
+Microprocessor-Based Technique for Detection of High Impedance
+Faults," IEEE Trans. on Power Delivery, Vol. PWRD-1, No. 3, July
+1986.
+
+  5. W. Kwon, G. Lee, et al., "High Impedance Fault Detection
+Utilizing Incremental Variance of Normalized Even Order Harmonic
+Power," IEEE Trans. on Power Delivery, Vol. 6, No. 2, April 1991,
+pp. 557-564.
+
+  6. C. J. Kim and B. D. Russell, "A Learning Method for Use in
+Intelligent Computer Relays for High Impedance Faults," IEEE Trans.
+on Power Delivery, Vol. 6, No. 1, Jan. 1991, pp. 109-115.
+
+  7. B. D. Russell and K. Watson, "Power Substation Automation
+Using a Knowledge Based System -- Justification and Preliminary
+Field Experiments," IEEE on Trans. on Power Delivery, Vol. 2, No.
+4, Oct. 1987, pp. 1090-1097.
+
+  8. Yuan-Yik Hsu, F. C. Lu, and et al., "An Expert System for
+Locating Distribution System Faults," IEEE Trans. on Power
+Delivery, Vol. 6, No. 1, Jan. 1991, pp. 366-371.
+
+  9. J. A. Momoh et al., "Rule-Based Decision Support for
+Single-line Faults in a Delta-Delta Connected Distribution System,"
+presented at the Power Industry Computer Application Conference,
+May, 1993.
+
+10. S. Ebron, D. Lubkeman, and M. White, "A Neural Network Approach
+to the Detection of Incipient Faults on Power Distribution
+Feeders," IEEE Trans. on Power Delivery, Vol. 5, No. 2, April 1990,
+pp. 905-914.
+
+11. "EMTP Book--Version 1.0," EPRI Report EL-4541, Vols. 1-2,
+prepared by Systems Control, Inc., 1986.
+
+12. A. F. Sultan, G. W. Swift, and D. J. Fedirchuk, "Detection of
+High Impedance Arcing Faults Using a Multi-Layer Perceptron," IEEE
+Trans. on Power Delivery, Vol. 7, No. 4, Oct. 1992, pp. 1871-1877.
+
+13. K. L. Butler and J. A. Momoh, "Robust Features Selection Scheme
+for Fault Diagnosis in an Electric Power Distribution System,"
+presented at the Canadian Conference on Computer and Electrical
+Engineering, Sept. 1993.
+
+14. M. Aucoin and B. D. Russell, "Detection of Distribution High
+Impedance Faults Using Burst Noise Signals near 60 Hz," IEEE Trans.
+on Power Delivery, Vol PWRD-2, No. 2, April 1987, pp. 342-348.
+
+15. J. Proakis and D. Manolakis, Introduction to Digital Signal
+Processing, New York: Macmillan, 1988.
+
+16. M. Morf, et al, "Covariance Characterization by Partial
+Autocorrelation Matrices," Annals of Statistics, May 1978.
+
+17. M. Morf, A. Vieira, D. T. Lee, and T. Kailath, "Recursive
+Multichannel Maximum Entropy Spectral Estimation," IEEE Trans. on
+Geoscience Electronics, vol. GE-16, no. 2, April 1978, pp. 85-94.
+
+18. R. A. Wiggins and E. A. Robinson, "Recursive Solution to the
+Multichannel Filtering Problem," J. Geophs. Res., vol. 70, pp.
+1885-1891, 1965.
+
+19. J. Burg, "A New Analysis Technique for Time Series Data," NATO
+Advanced Study Institute on Signal Processing with Emphasis on
+Underwater Acoustics, Aug. 12-23, 1968.
+
+20. A. M. Mood et al, Introduction to the Theory of Statistics, New
+York: McGraw-Hill, 1974.
+
+21. D. Hammerstrom, "Neural Networks at Work," IEEE Spectrum, June
+1993, pp. 26-32.
+
+22. R. Hecht-Nielsen, "Counter-Propagation Networks," IEEE First
+International Conference on Neural Networks, vol II, 1987, pp.
+19-32.
+
+
+
+SYMPOSIUM A: ALLIANCES FOR MINORITY PARTICIPATION (AMP)
+
+Moderator
+Yvonne Harris
+Tuskegee University
+Department of Biology, Sophmore
+
+Presenters
+
+Fitzgerald B. Bramwell, Ph.D.
+Professor
+Dean of Graduate Studies and Research
+Brooklyn College, City University of New York
+
+
+CRYSTAL AND MOLECULAR STRUCTURES OF THE ADDUCTS OF TRI-p-TOLYLTIN
+CHLORIDE, BROMIDE AND IODIDE WITH 4,4'-BIPYRIDINE
+
+The structures of the three adducts
+((p-toly);i3SnX);i2-4,4'-bipyridine (X equals Cl, Br, I), have been
+established by X-ray diffraction techniques. The complexes are
+monoclinic, space group P2;i1/c and Z equals 2. The cell parameters
+are: a equals 13.262(2), b equals 11.382(2), c equals 17.029(2)
+;apA and ;gb equals 110.050(11)(sup)0 for X equals Cl; a equals
+13.10(3), b equals 11.351(2), c equals 17.607(4) ;apA and ;gb
+equals 110.050(16)o for X equals Br; a equals 12.867(3), b equals
+11.389(4), c equals 18.496(4) ;apA and ;gb equals 110.050(11)(sup)0
+for X equals I. The complexes are binuclear with a bridging
+4,4'-bipyridine. The tin is in a trigonal bipyramidal environment
+with the p-tolyl groups on the equator and the X atom and an N of
+the bipyridine on the axis. The Sn-N bond distances are 2.668(3),
+2.653(3) and 2.655(7) ;apA, for X equals Cl, Br and I,
+respectively. The Sn-X bond distances are 2.452(2), 2.691(1) and
+2.830(1) ;apA,. for X equals Cl, Br, and I, respectively.
+
+Carmen S. Menoni, Ph.D.
+Assistant Professor
+Department of Electrical Engineering
+Colorado State University
+
+CHARACTERIZATION OF SEMICONDUCTOR LASERS AND MATERIALS USING
+ULTRAHIGH PRESSURE
+
+The engineering and design of efficient semiconductor lasers
+requires a knowledge of the band structure and band alignment of
+the heterostructure materials composing the device. The relative
+band alignment between the active and cladding layer as well as the
+separation between the different energy bands in semiconductor
+materials results in the presence of different loss mechanisms
+which deteriorate the laser performance. Results are presented on
+the identification of the dominant loss mechanisms in 1.3 ;gmm
+semiconductor lasers from pressure dependent measurements of the
+laser threshold current, and differential quantum efficiency. The
+use of high hydrostatic pressure to study the behavior of
+semiconductor lasers offers the unique possibility of modifying the
+band structure in a single device in a way which resembles the
+changes that take place when the band structure is varied by
+varying the composition. Optical characterization of the
+modifications of the band structure of the active and cladding
+layers with pressure also allows the determination of the
+heterostructure band offsets which control the leakage currents.
+
+Eloy Rodriguez, Ph.D.
+Professor
+Department of Developmental and Cell Biology
+University of California at Irvine
+
+CHEMISTRY OF AMAZONIAN AND AFRICAN MEDICINAL PLANTS
+
+USED BY WILD ANIMALS
+
+In recent years investigators at Harvard University and the
+University of California, Irvine have elucidated the chemical
+structures of various products present in tropical rainforest
+plants used by nonhuman primates for medicinal purposes. The
+structures range from simple dithiopolyacetylenes to complex
+hexapolycyclic peptides. Investigation of wild monkeys, birds, and
+other animals in Amazon and Atlantic rainforest suggests a wider
+array of bioactive constituents than other tropical rainforests of
+the world. In this presentation, the chemistry of
+bioactive/medicinal constituents from the Amazon, Atlantic
+rainforest and African rainforest are presented and possible modes
+of action were discussed.
+
+R.H. Sullivan, Ph.D.
+Professor
+Department of Chemistry
+Jackson State University
+
+Ab Initio STUDY OF THE STRUCTURE AND ENERGIES OF BIURET AND ITS
+SULFUR ANALOGS
+
+The calculations for biuret (B) and its two sulfur analogs,
+thiobiuret (TB) and dithiobiuret (DTB), were carried out using the
+ab initio LCAO-MO method at the Hartree-Fock level. The molecular
+structure of B was fully optimized using standard 3-21G and 6-31G
+basis sets, while geometry optimizations of the TB's and DTB's were
+performed at the 3-21G* and 6-31G* levels. Only trans isomers were
+found to be minimum structures on the HF/3-21G* potential energy
+surfaces, whereas cis forms are the first-order transition
+structures. The relative energies of the cis conformers at
+MP2/6-31G**//HF/6-31G* + 0.9 Zero-point energy (ZPE) level are
+equal to 47.4, 51.7, and 59.7 kJ mol(minus)1 for TB, B, and DTB,
+respectively. Because of relatively large dipole moments for the
+cis conformers are predicted to be more stabilized than the
+trans-conformers in polar solvents.
+
+
+
+
+
+SYMPOSIUM B: RESEARCH CAREERS FOR MINORITY SCHOLARS (RCMS)
+
+Moderator
+Joseph Rascon
+University of Texas at El Paso
+Department of Electrical Engineering, Senior
+
+Presenters
+
+D. Bagayoko, Ph.D.
+Professor
+Timbuktu Academy
+Department of Physics
+Southern University and A&M College
+
+MAGNETISM AND Al;i1;i8Fe
+
+Until recently, 3d metal impurities in aluminum were believed to
+have non-magnetic ground states described by the Anderson model.
+The recent experimental results of Hauser et al., and the
+theoretical ones of Bagayoko et al., established the existence of
+a local moment, between 1 and 2 Bhor magnetons, on substitutional
+Mn impurities in fcc aluminum at an atomic concentration of five
+percent. Even though experiments have yet to detect a local moment
+on dilute iron purities in Aluminum, some earlier theoretical
+studies reported large moments on this impurity in aluminum. In
+particular, Deutz et al., found a local moment of 1.75 Bhor
+magnetons on a substitutional Fe impurity in fcc aluminum.
+Guenzburger and Ellis recently calculated smaller local moments on
+iron impurities in fcc aluminum (ie. 0.96 Bhor magneton for a
+lattice constant around 7.635 a.u.) that vanish when relaxation is
+taken into account.
+
+Sheppard, a scholar of the RCMS-Timbuktu Academy, reported a
+Kondo-like behavior of Al;i1;i8Fe for lattice constants between
+7.035 and 8.235 a.u. The local moments on Fe range from 0.04 to
+0.69 Bohr magnetons respectively, while the cluster moments remain
+identically zero. Magnetic moments smaller than 0.1 may be due to
+imperfections of the Mulliken population analysis that is utilized
+to compute the moment; the ones over 0.2 are believed to represent
+actual moments on the impurity. The above exact compensation of the
+local moment on the Fe impurity by the polarization of the
+surrounding is the essence of the Kondo effect. The decrease of the
+local moment with the lattice constant, expected from the
+corresponding increase of the interatomic Coulomb and exchange
+interactions as the lattice constant decreases, agrees with the
+findings of Guenzburger and Ellis.
+
+Omnia El-Hakim, Ph.D.
+Associate Professor
+College of Engineering
+
+Fort Lewis College & Colorado State Univeresity
+
+EDUCATION, RESEARCH AND TRAINING MODEL FOR NATIVE AMERICANS
+
+Regions facing problems in management of irrigated agriculture
+include the Indian reservations of the western United States. A
+system sharing many of the cultural distinctions of the
+reservations and enjoying a measure of economic success is the
+Navajo Agricultural Products Industry (NAPI), south of Farmington,
+New Mexico.
+
+This paper describes an effective working model (Minority
+Engineering and Science Project) which utilizes an existing
+commercial farm such as NAPI to achieve the following objectives in
+the education of Native American students:
+
+o    Increase the understanding and effectiveness of
+     problem-solving, information processing, and decision-making
+     analysis related to water,land, human resources, and
+     environmental protection for irrigated agricultural systems;
+
+o    Train and encourage minority students to complete
+     undergraduate work in scienced and engineering and pursue
+     graduate careers in the development and application of
+     technology to improve resource management;
+
+o    Implement a teamwork learning environment that includes
+     undergraduate students, graduate students, faculty, community
+     members, and professionals from an outside corporation (NAPI);
+     and
+
+o    Implement outreach summer enrichment programs and conferences
+     for high school and community college students to motivate and
+     interest them in science, math and engineering.
+
+J.D. Fan, Ph.D. and Y.M. Malozovsky, Ph.D.
+Department of Physics
+Southern University and A&M College
+
+MECHANISM OF HIGH TEMPERATURE SUPERCONDUCTIVITY IN COPPER-OXIDE
+(Cu-O) CONDUCTORS
+
+We present an electron pair interaction potential with a negative
+part within a certain range of action due to electron (hole)
+correlations in a layered two-dimensional (2D) Cu-O) compounds.
+Based on this potential, we have obtained a diagram of the phase
+transitions from a normal metal to a superconductor and then from
+a superconductor to an insulator, and found a smooth crossover of
+temperature in transition from the weak coupling (Cooper-paired),
+Tc ;sl;gvcexp((minus)1/;gleff), to the strong coupling, Tc;slns/m*,
+with the decrease of the carriers (doping) density. Both
+expressions of Tc have been verified by experiments. It is
+therefore concluded that the dependence of transition temperature
+on doping in Cu-O compounds is related to the pairing mechanism
+caused by electron correlations in the layered 2D structure.
+
+Karan Watson, Ph.D.
+Associate Professor
+College of Engineering
+Texas A&M University
+
+NEURAL NETWORKS APPLIED FOR HIF DETECTION
+
+Artificial Neural Network (ANN) research is an attempt to achieve
+pattern recognition by utilizing the computing techniques used by
+natural neural networks in the brain. The High Impedance Faulty
+(HIF) detection problem shows many characteristics of a complex
+pattern recognition task. Thus ANN techniques can play an important
+role in finding a solution for this. High Impedance Faults (HIFs)
+are a type of fault that can be seen in power distribution feeders.
+These faults do not draw sufficient fault current to be detected by
+conventional protective devices such as current relays.
+Nevertheless, these faults are hazardous to property and to the
+public. The architecture of a neural network has a significant
+influence on the type of features extracted by the network. Hence,
+it is necessary to select appropriate ANN architectures and
+topologies to extract useful features from the problem domain. This
+is consistent with what has been found in the human brain. The
+objective of this research was to study the performances of three
+ANN architectures, namely Multi-Layer Perceptron (MLP), Time-Delay
+Neural Network (TDNN) and Simple Recurrent Network (SRN), to
+extract features important to HIF detection. Another goal was the
+investigation for the features focused upon by these networks by
+analyzing the internal encodings of the networks.
+
+
+
+SYMPOSIUM C: RESEARCH IMPROVEMENT IN MINORITY INSTITUTIONS (RIMI)
+
+Moderator
+Arturo Bronson
+NSF Program Director
+RIMI
+
+Presenters
+
+Mukul C. Datta, Ph.D.
+Professor
+Department of Chemistry
+Tuskegee University
+Tuskegee, AL
+
+STUDIES ON THE MECHANISM OF REVERSING HEMOGLOBIN PROPORTIONS IN
+ADULT RATS
+
+The objective of the research was to study the importance of
+concurrent prostaglandin synthesis during changes in hemoglobin
+proportions toward newborn values in adult rats. The rat has no
+specifically fetal hemoglobin like humans, but rats and humans
+share a number of similarities in hemoglobin switching during
+ontogeny and differentiation. Knowledge of control mechanism
+affecting the proportions of hemoglobin components in rats would be
+useful for pharmacologic manipulation of fetal hemoglobin synthesis
+for sickle cell anemia and thalassemia. The effects of two chemical
+agents (5-azacytidine and hydroxyurea) were found to change adult
+hemoglobin proportions to newborn proportions in adult rats.
+Results revealed that both the chemical agents and the
+bleeding-induced acute anemia were independently capable of
+switching hemoglobin components toward newborn values. However, the
+switching effect of these drugs and of the bleeding-induced anemia
+were totally lost if aspirin was simultaneously administered to the
+rats, reflecting the need for concurrent prostaglandin synthesis.
+
+M.A. Ebadian, Ph.D.
+Professor and Chairman
+Department of Mechanical Engineering
+Florida International University
+
+THE EFFECT OF SURFACE TENSION ON DOUBLE DIFFUSIVE CONVECTION IN A
+TRAPEZOIDAL ENCLOSURE
+
+A numerical study of double diffusive convection was conducted for
+a trapezoidal enclosure with aspect ratios of Ar equals 2. The
+solutions were obtained by solving the conservation equations of
+mass, momentum, energy, and concentration of heavier species by
+applying the boundary-fitted coordinate system. The buoyancy forces
+were approximated by Boussinesq assumptions. Prandtl and Lewis
+number of 7 and 100, respectively, were used to simulate the double
+diffusive convection of salt water. The effects of the Marangoni
+number in the range of 0-10 on the flow, heat, and mass transfer
+were also investigated. The surface tension at the free surface
+drives the counterclockwise vortex flow located over a clockwise
+unicell flow for pure thermal convection. The greater the Marangoni
+number, the stronger the flow at the top, with a greater portion of
+the trapezoidal enclosure being occupied. Therefore, the flow
+induced by buoyancy forces is pushed down by the flow driven by
+surface tension. The local Nusselt and Sherwood number
+distributions on the left and right sidewalls are enhanced by the
+Marangoni convection, which are presented in the present study. The
+significant influence of the Marangoni number is observed at the
+top of the enclosure.
+
+Ishrat M. Khan, Ph.D.
+Professor
+Department of Chemistry
+Clark Atlanta University
+Atlanta, GA
+
+MIXED (IONIC AND ELECTRONIC) AND IONIC CONDUCTIVE POLYMERS
+
+The preparation, characterization, and properties of diblock
+copolymers containing an electronic and an ionic conductive block
+were studied. Poly (;gv-methoxyocta-(oxyethylene)
+methacrylate-block-4-vinylpyridine), abbreviated as P(MG8-4VP),
+diblock copolymers were prepared by the anionic living
+polymerization technique. In these diblock copolymers, the
+oligooxyethylene blocks were doped with LiClO;i4 to obtain an ionic
+conductive phase, and the 4-vinylpyridine blocks (after
+quaternization) were doped with tetracyanoquinodimethane to obtain
+an electronic conductive phase. The electronic and ionic
+conductivities of the compositions have P(3MT-4VP) block copolymers
+with appropriately doped compositions have bulk electronic
+conductivities as high as 1 x 10(minus)3 S cm(minus)1 and bulk
+ionic conductivities as high as 6.6 x 10(minus)7 S cm(minus)1 at
+30oC. Scanning electron microscopic (SEM) examination of the
+internal structure of the blends shows the presence of a two phase
+microstructure, most likely, stabilized by the emulsifying effect
+of the salt.
+
+Hassan Mahfux, Ph.D.
+Professor
+Department of Mechanical Engineering
+Materials Research Laboratory
+Tuskegee University
+Tuskegee, AL
+
+TENSILE AND FLEXURAL RESPONSE OF HIGH TEMPERATURE COMPOSITES: A
+COMBINED EXPERIMENTAL AND FINITE ELEMENT STUDY
+
+The fracture and flexural behavior of monolithic SiC and
+SiC-whisker reinforced SiC composites (SICw/SiC) were investigated
+at 23 oC, 800 oC and 1200 oC. Flexural and fracture tests were
+conducted in a four-point beam configuration to study the effects
+of whisker reinforcements on the mechanical properties and thermal
+stability. Post failure analyses with the scanning electron
+microscope (SEM) found the formation of a glass phase at the
+whisker/matrix interface. The crack growth was also shifted from
+intergranular to transgranular with the rise in temperature.
+Ultrasonic velocity measurements have been performed through the
+thickness of the untested and fractured specimen, and the variation
+in the sonic velocities are discussed. Combined experimental and
+finite element analyses were conducted to determine the failure
+mechanisms in SiC coated Carbon-Carbon (C/C) composites at room and
+elevated temperatures under flexural loading. Large deformation
+behavior considered in the finite element analysis corroborate the
+experimental findings, and a comparison in respect to displacement
+and stress-strain behavior test the accuracy of the finite element
+analysis (FEA).
+
+Hylton G. McWhinney, Ph.D.
+Professor
+Department of Chemistry
+Prairie View A&M University
+Prairie View, TX
+
+DIFFUSION OF LITHIUM (6) ISOTOPE IN LITHIUM ALUMINATE CERAMICS
+USING NEUTRON DEPTH PROFILING
+
+Lithium aluminate ceramics offer significant potential in
+contributing to the production of tritium ((sup)3H) for fusion
+power reactors, although the application of the ceramics will
+depend greatly on the diffusion properties of the Li(6) within the
+matrix. Consequently, diffusion of Li(6) in the aluminates is an
+important requirement in the continued development of the
+technology. In this investigation, the neutron depth profile (NDP)
+technique was applied to the study of concentration profiles of
+Li(6) in lithium aluminates, doped with 1.8%, 50%, and 95% Li(6)
+isotopic concentrations. Specimen for analysis were prepared at
+Battelle (PNL) as pellet discs. Samples for diffusion studies were
+arranged as diffusion couples consisting of 1.8% Li(6) disc/95%
+Li(6) powder. Experiments were performed at the Texas A&M Nuclear
+Science Center, utilizing 1MW equivalent thermal neutron fluxes
+(3.0 x 1012 n/s). The depth probed by the technique is
+approximately 15;gmm. Diffusion coefficients were determined to
+range from 2.1 x 10(minus)12 m(sup)2s(minus)1 to 7.0 x 10(minus)11
+m(sup)2s(minus)1 for 1.8% Li(6) doped ceramics annealed at 1200 oC
+and 1400 oC, respectively.
+
+Mohamed A. Seif, Ph.D.
+Professor
+Department of Mechanical Engineering
+Tuskegee University
+Tuskegee, AL
+
+FAST DETECTION OF FLAWS AND RESIDUAL STRESSES IN COMPOSITE
+MATERIALS BY A REAL-TIME NONDESTRUCTIVE LASER TECHNIQUE
+
+The pre-existing flaws and/or stress concentrations, often caused
+by the fabrication and/or installation process, induce
+microcracking and residual stresses in composite materials. The
+application of repeated loads or a combination of loads and
+in-service environmental conditions (humidity and temperature) can
+cause microcracking with time. An automated non-destructive
+evaluation (NDE) technique using laser speckle shearing
+interferometry is capable of rapidly determining the initial
+development of microcracking and its subsequent propagation.
+Moreover, a laser speckle technique was employed to investigate the
+sliding contact frictional problem, to determine residual stresses
+in plastic pipes, and to measure deformation and warping in
+magnetic tapes subjected to tension.
+
+
+
+
+SYMPOSIUM D: MINORITY RESEARCH CENTERS OF EXCELLENCE (MRCE)
+
+
+Multidisciplinary Research in Science
+
+Moderator
+A. Ramona Brown
+Executive Director
+National Alliance of Research Centers of Excellence (NARCE)
+
+Presenters
+
+Warren W. Buck, Ph.D.
+Professor of Physics
+and Director
+Nuclear/High Energy Physics
+Research Center of Excellence
+Hampton University
+
+THE RESEARCH PROGRAM OF THE NUCLEAR/HIGH ENERGY PHYSICS (NuHEP)
+RESEARCH CENTER OF EXCELLENCE
+
+The Experimental and Theoretical Programs in Nuclear/High Energy
+Physics will be presented. These programs include topics such as:
+Electromagnetic Form Factors, Hypernuclear Spectroscopy, Knock Out
+Reactions, Spin Structure and Covariant Formalism. Also, explicit
+connections to research at the Continuous Electron Beam Accelerator
+Facility (CEBAF) are presented.
+
+Juan G. Gonzalez, Ph.D.
+Professor of Oceanography
+and Director
+Center of Excellence in Tropical & Caribbean Research
+University of Puerto Rico at Mayaguez
+
+THE PUERTO RICO MINORITY RESEARCH CENTER OF EXCELLENCE IN TROPICAL
+& CARIBBEAN RESEARCH
+
+The focus of the Puerto Rico Center of Excellence is on Tropical
+Caribbean Research. Ours is, therefore, a diverse center which
+includes four distinct research components including: Marine
+Natural Products, Terrestrial Ecology, Caribbean Geology, and
+Natural Hazards Mitigation.
+
+The focus of the Marine Natural Products Division is the
+investigation of cuguatoxins in fish, red algae as response
+regulators of mallalian inflammation and in antibiotic compounds,
+and sponges as anti-tumor agents. The Terrestrial Ecology Division
+has been researching factors controlling primary productivity along
+an altitudinal gradient of tropical forests. The Caribbean Geology
+Division is studying the effects of the Atlantic plate sliding
+beneath the Caribbean plate, as well as, the formation of various
+Caribbean islands. Finally, the Natural Hazards Mitigation Division
+concentrates its efforts on alarm systems for flash flooding,the
+vulnerability of wood structures to extreme winds, strong motion
+instrumentation for the determination of damage caused by
+earthquakes to various structures, and the display and referencing
+of data for natural hazards and environmental studies through the
+use of Remote Sensing.
+
+M.F. Lima, Ph.D.
+Professor
+Department of Microbiology
+Meharry Medical College
+
+EPIDERMAL GROWTH FACTOR MODULATES GROWTH OF TRYPANOSOMA CRUZI
+
+The mechanisms controlling the establishment and intracellular
+multiplication of Trypanosoma cruzi are not well defined. Most
+factors have been shown to participate in this process by allowing
+the establishment of infection or delivering nutritional components
+necessary for parasite growth intracellularly. In this work, we
+have found evidence that Epidermal Growth Factor (EGF) plays a role
+in the growth of T. cruzi axenically or inside host cells.
+
+We found that an addition of physiological concentrations of EFG
+increase amastigote growth as evidenced by an increase in
+(sup)3H-thymidine incorporation and number of parasites.
+Amastigotes were also found in increased numbers when T.
+cruzi-infected Vero cells were supplemented with EFG after an
+infection was established. Presence of receptors for EFG on
+amastigotes was investigated by immunofluorescence and
+ligand-binding studies. Amastigotes specifically bind EFG in a
+ligand receptor interaction manner. Scatchard analysis indicates
+that amastigotes have one type of receptors for EGF present at 1 x
+10(sup)3 receptors per parasite with a Kd of 2.0 nM. The presence
+of receptors of EFG in T. cruzi is restricted to the amastigote
+dividing form of the parasite.
+
+Alfred Z. Msezane, Ph.D.
+Professor of Physics
+and Director
+Center for Theoretical Studies of Physical Systems
+Clark Atlanta University
+
+INTERDISCIPLINARY RESEARCH IN PHYSICS, CHEMISTRY AND MATHEMATICS
+
+The Center for Theoretical Studies of Physical Systems (CTSPS), one
+of the two most recent NSF Minority Research Centers of Excellence,
+has made considerable progress in the understanding of important
+problems in physics, chemistry, and mathematics. Research at CTSPS
+is carried out through dynamic interdisciplinary research clusters.
+Below are some of their accomplishments.
+
+Atomic and Molecular Theory. Rigorous bounds on the momentum
+transfer squared have been used to construct, for the first time,
+a universal function to extrapolate the GOS to the optical
+oscillator strength and to prove, unambiguously, the Lassettre
+Limit Theorem regardless of the energy impact. Also, new methods
+have been developed to calculate optical oscillator strengths from
+differential cross sections, using Type II Pade Approximants to
+numerically calculate the charge transfer matrix elements,
+important in the understanding of charge exchange processes.
+Extensive C1 target wave functions have been used to obtain both
+integral and differential cross sections for
+photon/electron-atom/ion interactions.
+
+Condensed Matter. In collaboration with the condensed matter group
+at Ames Laboratory, we have published a series of papers concerning
+the stability of large fullerences such as C76 and C84. We have
+also studied the vibrational spectrum of C60, which is useful for
+understanding the superconductivity mechanism in alkali-metal doped
+fullerides. In the study of superfluid-insulator transition, we
+have proposed that the universal behavior in two-dimensional
+superfluid-insulator transitions is closely connected with the
+universal behavior of the interger quantum Hall system, which for
+the first time provides a consistent description of experimentally
+observed universal critic resistance and associated critical
+behavior. Using molecular dynamics simulation, we have studied the
+structure and dynamics of several reconstructed surfaces of noble
+metals. This kind of large-scale molecular dynamics study yielded
+important information on the nature of complicated structural
+phases and the anomalous surface vibrations.
+
+Chemistry. The understanding of the structural evolution of ceramic
+precursors leading to ceramic materials is of tremendous interest
+for the improvement of the processing, technology of ceramic
+materials via polymer pyrolysis. In light of this interest, we have
+investigated recently a family of polymeric precursors for SiNC
+ceramics by CP/Nas and 1R spectroscopy, and have shown that the
+standard evolution involves SiC;i2 N;i2, SiHN;i2C, SiCN;i2
+tetrahedra, and a free carbon phase as SiCN ceramics are formed by
+chemical transformations. This effort is one of the few recent
+studies in this field.
+
+Mathematical Physics. The development of effective nonperturbative
+methods for calculating accurate quantum eigenergies of singular
+systems continues through recent refinements in the EMM theory. The
+analysis of the quantum three body problem, particularly for the
+case of co-equal masses, is underway.
+
+Signal/Image Processing. Important applications on the use of
+continuous, multidimensional, wavelet transforms for studying fluid
+turbulence, and image processing are being developed.
+
+Applied Mathematics. A significant and unprecedented achievement in
+non-autonomous control problems has been the completion of the
+bound state problem for hereditary control problems. In the area of
+noise filtering analysis, new Type II Pade Approximants have been
+developed and are currently being tested.
+
+Emmanuel S. Onaivi, Ph.D.
+Assistant Professor
+Department of Pharmacology
+Meharry Medical College
+
+ARE THERE SUBTYPES OF MARIJUANA RECEPTORS?
+
+For many decades research on the molecular and neurobiological
+basis of the myriad of effects of marijuana use, was hampered by
+the lack of specific research tools and technology. The situation
+has started to change with the introduction and availability of
+molecular probes and other recombinant molecules. Marijuana and its
+psychoactive cannabinoids influence the CNS probability through the
+cloned marijuana receptor found in the rat and human. Recently,
+anandamide, an endogenous compound that interacts specifically with
+the cannabinoid receptors and inhibits adenylate cyclase was
+isolated from the porcine brain. In the present studies a battery
+of behavioral effects of ;gD(sup)9-THC, the major psychoactive
+constituent in marijuana were studied in C57/BL6, DBA/2 and ICR
+mouse strains following intraperitoneal administration. The data
+obtained indicated that some behavioral changes following
+;gD(sup)9-THC administration may be attributed to genetic
+differences. Furthermore, in ICR mice stereotaxic surgical
+approaches were utilized for the microinjection of ;gD(sup)9-THC
+and other analogs in the nucleus accumbens (ACB) and the central
+nucleus of amygdala (ACE). The results of the behavioral assessment
+demonstrated that the mesolimbic ACB, but not ACE, may be an
+important brain site contributing to the modification of motor
+activity and induction of catalepsy by some cannabinoids.
+
+Putcha Venkateswarlu, Ph.D.
+Professor
+Department of Physics
+Alabama A&M University
+
+ENERGY UPCONVERSION FLUORSCENCE IN LAf;i3 DOPED WITH Nd, Pr and Eu
+IONS
+
+Two ions, A and B excited to energy levels ;gn;i1 and ;gn;i2 may
+cooperatively exchange their energies in such a way that A goes up
+to energy level at ;gn;i1 + ;gn;i2 while B relaxes to the ground
+state. Fluorescence at frequency (;gn;i1 + ;gn;i2)cm (minus) 1 may
+be observed. This upconversion process enables one to convert
+infrared radiation to the visible and the visible radiation to
+ultraviolet. The upconverted fluoresconance using suitable optical
+resonator arrangement will give laser action.
+
+Infrared (1R) upconverted fluroscence has been observed in
+LaF;i3:Nd3+ and LaF;i3:Pr3+ single crystals. By exciting with a
+Ti:Sapphire laser at 806nm, upconverted fluorescence was observed
+in the region 360-760 nm in both the crystals. It was seen that in
+LaF;i3:Nd3+, the level S at 12,569 cm(minus)1 is first reached,
+then the ion relaxes to the R level at 11,592 cm(minus)1 from where
+the second pump photon takes the ion to the I level at 23,470
+cm(minus)1 associated with a suitable phonon level. From there the
+excited ion relaxes to the E level at 19,152 cm(minus)1 which gives
+strong fluorescence at 657 and 589 nm corresponding to the
+transition E-X and E-Y respectively. In LaF;i3:Pr3+ crystal a
+stepwise two photon process along with suitable relaxation take the
+ion to the level (sup)3PO at 20,927 cm(minus)1. From here the ion
+goes down to the (sup)3H;i5 level giving strong fluorescence at 540
+nm. These fluorescence transitions in Na3+ and Pr3+ could very
+likely give lasting action with suitable optical resonator
+arrangement.
+
+Upconverted fluorescence has also been observed in LaF;i3:Eu3+ in
+the region 415.6-558.4 nm by exciting with Ar+ laser pumped dye
+laser at 575 nm (17,380 cm(minus)1) and 595 nm (16,800 cm(minus)1).
+It is found that the (sup)5D;i0 level at 17,293 cm(minus)1 is first
+reached by excitation with the first photon, and by a simultaneous
+excitiontion with a second photon along with suitable relaxation
+the levels (sup)5D;i4, (sup)5D;i3, (sup)5D;i2 and (sup)5D;i1 are
+reached giving upconverted fluorescence. Among these the group
+involving the transition (sup)55D;i2;ul(sup)7F;i3 being the
+strongest and most suitable for laser action. The regular stokes
+fluorescence from (sup)5D;i0 is of course strong.
+
+
+
+
+SYMPOSIUM E: MINORITY RESEARCH CENTERS OF EXCELLENCE (MRCE)
+
+Advanced Materials Research
+Moderator
+Samuel P. Williamson
+NSF Program Director
+MRCE
+
+Presenters
+
+Daniel Akins, Ph.D.
+Professor of Chemistry
+and Director
+Center for Analysis of Structures and Interfaces (CASI)
+Department of Chemistry
+The City College of New York
+
+AGGREGATION OF WATER-SOLUBLE TETRA-KIS-(p-SULFONATOPHENYL)
+PORPHYRIN
+
+Aggregation of tetra-kis-(p-sulfonatopnenyl) (TSPP), a typical
+water-soluble porphyrin, has been studied by a combination of
+optical absorption and Raman measurements. The aggregation of TSPP
+in aqqueous solution is confirmed by the appearance of a sharp
+absorption at 490 nm accompanied by a broader band at 422 nm. The
+optical absorption measurement reveals also that aggregation takes
+place only in solution at pH less than 5 and can be promoted by
+increasing ionic strength. Temporal, as well as, ionic strength
+dependence of the absorption spectrum indicate that the TSPP
+aggregation proceeds via TSPP protonation. Such protonation leads
+to the formation of diacidic TSPP, characterized by a red-shifted
+absorption band at 706 nm and by the quasi-coplanar orientation of
+the perphyral phenyl substituents with respect to the plane of
+porphyrinato macrocycle. The Raman spectral data of TSPP in aqueous
+solution of pH less than 5 convincingly indicate that aggregated
+TSPP assumes the diacidic form that has a quasi-planar
+conformation, but the pyrrolic rings in the prophyrinato macrocycle
+are alternately offset. Based on the Raman spectra it is deduced
+that TSPP forms both J and H aggregates.
+
+R.B. Lai, Ph.D.
+Professor
+Department of Physics
+Alabama A&M University
+
+GROWTH OF LARGE MAP:MNA AND OTHER ORGANIC CRYSTALS FOR NONLINEAR
+OPTICAL APPLICATIONS
+
+Large single crystals (8x8x80mm3) of mixed
+methyl-(2,4-nitrophenyl)-amino-propanoate (MAP):
+2-methyl-4-nitroaniline (MNA) have been grown by a novel solution
+crystal growth technique. In this technique, the seed crystal is
+pulled upwards from its growth solution at a controlled rate along
+with a decrease in the solution temperature to create a desired
+supersaturation. MAP was synthesized by the method described by
+Oudar and Hierle and was purified by repeated crystallization in
+methanol. Commercially available MNA was purified twice by physical
+vapor transport (PVT) using argon as a carrier gas. The solubility
+of MAP:MNA mixture was determined in different compositions of
+ethyl acetate and ethanol. A suitable volume percentage of ethyl
+acetate for growing large crystals of MAP:MNA was found to be
+between 20% and 80%. The key to solution crystal growth is the
+proper choice of solvent for growing crystals of the desired
+morphology. The conventional solution crystal growth apparatus was
+modified to grow large organic crystals using organic solvents. By
+using this new technique, a severe problem of parasite crystallite
+growth at the sides of the seed crystals was greatly reduced and
+the yield of the crystal along (010) direction was considerably
+increased. The grown crystal shows better mechanical properties
+compared to MAP and MNA crystals and demonstrated frequency
+doubling at the Nd:YAG laser wavelength of 1064nm. Also preliminary
+results of the growth by solution and by Bridgman techniques of
+another organic crystal 3-methoxy-4-hydroxy-benzaldehyde (MHBA) are
+described.
+
+Lawrence E. Murr, Ph.D.
+Professor of Metallurgical Engineering
+and Director
+Materials Research Center of Excellence
+University of Texas at El Paso
+
+BUILDING AN ADVANCED MATERIALS RESEARCH INFRASTRUCTURE
+
+The National Science Foundation MRCE Program established at the
+University of Texas at El Paso (UTEP) in the Fall of 1988 is the
+University's capstone program to attract minority students to study
+science, mathematics and engineering. Emphasizing interdisciplinary
+research opportunities for the region's minorities, the center
+objectives are:
+
+o    To strengthen the role of UTEP as a doctoral-level institution
+     in Materials Science and Engineering;
+
+o    To increase the rate and quality of research activities in
+     Materials Science and Engineering;
+
+o    To increase access of minorities and women to careers in
+     science and engineering.
+
+During its first five years, MRCE-UTEP has built its capacity to
+conduct state-of-the art research in Materials Science and
+Engineering from roughly 9 faculty involved in 3 core research
+project areas to 27 associate faculty involved in 9 core materials
+research project areas. The single most significant outcome over
+the first five years has been UTEP's leveraging of NSF's investment
+to secure State of Texas approval for a new multidisciplinary Ph.D.
+program in Materials Science and Engineering and the creation of a
+Materials Research Institute to administer the degree program and
+coordinate and promote materials research on the UTEP campus, and
+industrial outreach in a partnership with other UTEP colleges,
+departments, and administrative units. Research publications by
+faculty associates of MRCE-UTEP have increased from approximately
+15 in 1988 to more than 100 in 1992; with students involved in more
+than half of these publications. Currently 6 minority students are
+enrolled in the multi-disciplinary Ph.D. program in Materials
+Science and Engineering, including students who became involved in
+NSF-MRCE, other NSF-HRD, and related Federal minority research
+programs as undergraduates, and received B.S. and M.S. degrees from
+UTEP. This is a testament to the success of NSF-HRD pipelining at
+UTEP, and bodes significant potential for the Nation with the
+prospect of achieving Hispanic Ph.D. recipients in the next few
+years which would more than double the trend of the past decade of
+graduating less than two Hispanic Ph.D. recipients in Materials
+Science and Engineering annually. MRCE-UTEP has been instrumental
+in developing a Cooperative Materials Laboratory Network on the
+UTEP campus which will serve the continued growth of materials
+research and provide outreach to regional industry. UTEP campus,
+including RIMI, MARC, CRCM, and AMP programs, is also creating
+effective linkages between MRCE-UTEP, industry, and Federal
+laboratories. As the "gateway" to the Materials Corridor into
+Mexico, UTEP and MRCE-UTEP will serve as a crucial link between
+U.S. and Mexico materials technology transfer and cooperation;
+supporting manufacturing and North American Free Trade.
+
+Keith Pannell, Ph.D.
+Professor
+Department of Chemistry
+University of Texas at El Paso
+
+GROUP 14 COMPLEXES AND MATERIALS
+
+Hydrocarbons, poly-silanes and -germanes, oligo-stannanes and
+-plumbanes are well established systems which use as fuels,
+fabrication materials, photoresists, perceramics, etc. Studies in
+our laboratories have focused upon the incorporation of transition
+metals into such systems and the presentation reviews our activity.
+Topics discussed include new transition metal catalyst systems for
+the isomerization of oligosilanes and new thermal ring opening of
+silyl-and germyl-ferrocenophanes to produce electroactive high
+molecular weight polymers with both Si(Ge) and Fe atoms in the
+backbone chain.
+
+The synthesis and characterization via NMR and single crystal X-ray
+analysis of Me;i3CMe;i2SiMe;i2GeMe;i3Sn and Me;i3CM;i2GePh;i3Sn,
+the first examples of such inter-group 14 catenated molecules will
+also be presented.
+
+Michael G. Spencer, Ph.D.
+Professor of Engineering
+and Director
+Materials Science Research Center of Excellence
+School of Engineering
+Howard University
+
+WIDE BANDGAP SEMICONDUCTORS OF EMERGING AREAS
+
+Technology requirements have pushed the capabilities of traditional
+semiconductors such as Si and GaAs. Specifically, systems are
+sought which can operate at high temperatures or in radioactive
+environments. Additionally, information stage issues are
+stimulating blue/UV laser development. In order to address the
+aforementioned issues, there has been an emerging interest in wide
+bandgap semiconductor materials such as SiC and III-V nitrides.
+Silicon carbide is a material which is a very attractive for high
+temperature applications, while the III-V nitrides (ll direct
+bandgap) are attractive for UV opto-electronics. In this talk, we
+will review the status of the field with emphasis placed on
+highlights of the new work to be presented at the upcoming 5th
+International Conference on Silicon Carbide and Related Materials
+sponsored by Howard University.
+
+Maria C. Tamargo, Ph.D.
+Professor
+Department of Chemistry
+The City College of New York
+
+MOLECULAR BEAM EPITAXIAL GROWTH OF WIDE BANDGAP II-VI
+SEMICONDUCTORS
+
+State-of-the-art photonic and optoelectronic devices are based
+primarily on semiconductor multilayered structures or
+heterostructures. Presently, these devices are based on III-V
+compounds such as GaAs and InP. These materials possess bandgaps
+for device operation in the infrared region of the optical
+spectrum, of particular interest in light transmission applications
+through optical fibers. However, new technologies, such as optical
+recording and xerograph, require the development of materials which
+span other regions of the spectrum, and which possess novel
+physical properties, II-VI semiconductors are direct bandgap
+materials that encompass a very wide range of bandgaps, from the uv
+to the far infrared and are, thus, very attractive candidates for
+optoelectronic device applications. Wide bandgap II-VI's are also
+highly resistive and can be used as insulator layers in device
+structures. Additionally, a subset of the II-VI alloys which
+contain magnetic atoms are known as dilute magnetic semiconductors
+(DMS) and exhibit unique magnetic properties, of potential
+applications in magneto-optical and magnetic memory devices, among
+others. Finally, these materials exhibit strong electro-optic and
+non-linear optical effects.
+
+
+--------
+
+Figure titles and captions (note: figure, tables and equations are
+not included in this electronic version.)
+
+
+Order of Selected Countries Ranked by Mean Percent of Mathematics
+Test Items Correct for the First and Second IEA International
+Studies
+
+Note: The values for the second mathematics and science studies are
+much higher than in the first studies because a different set of
+items was used. The items in the second studies were easier for
+students in all countries. Only large differences, of 4 percentage
+points or more, between countries are statistically significant;
+thus, the exact rank orders of countries with similar results are
+not detectable.
+
+Sources: National Center for Educational Statistics, Digest of
+Education Statistics (Washington, DC: US Department of Education,
+1989); E.A. Medrich and J.E. Griffith, International Sciences and
+Mathematics Assessments: What Have We Learned? NCES 92-011
+(Washington, DC: US Department of Education, 1992).
+
+First StudySecond Study
+
+Order of Selected Countries Ranked by Mean Percent of Science
+Test Items Correct for the First and Second IEA International
+Studies
+
+Note: The values for the second mathematics and science studies are
+much higher than in the first studies because a different set of
+items was used. The items in the second studies were easier for
+students in all countries. Only large differences, of 4 percentage
+points or more, between countries are statistically significant;
+thus, the exact rank orders of countries with similar results are
+not detectable.
+
+Sources: National Center for Educational Statistics, Digest of
+Education Statistics (Washington, DC: US Department of Education,
+1989); E.A. Medrich and J.E. Griffith, International Sciences and
+Mathematics Assessments: What Have We Learned? NCES 92-011
+(Washington, DC: US Department of Education, 1992).
+
+First StudySecond Study
+
+Percent of Public High School Seniors Who Completed Selected
+
+Mathematics Courses: 1980 to 1990
+
+Student/Teacher Ratio, 9-12, Chemistry: 1991
+
+Student/Teacher Ratio, 9-12, Physics: 1991
+
+Source: State Indicators of Science and Mathematics Education 1993,
+CCSSO 1993.
+
+Percent of Grade 8 Students At or Above Basic
+
+Mathematics Achievement Levels: 1992
+
+
+

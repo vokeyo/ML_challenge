@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Guided Data Capture (GDC) Software (http://www.trc.nist.gov)-->
+<DataReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.trc.nist.gov/ThermoML.xsd">
+  <Version>
+    <nVersionMajor>2</nVersionMajor>
+    <nVersionMinor>0</nVersionMinor>
+  </Version>
+  <Citation>
+    <TRCRefID>
+      <yrYrPub>2005</yrYrPub>
+      <sAuthor1>nem</sAuthor1>
+      <sAuthor2>heg</sAuthor2>
+      <nAuthorn>0</nAuthorn>
+    </TRCRefID>
+    <eType>journal</eType>
+    <eSourceType>Original</eSourceType>
+    <sAuthor>Nemet, Z.[Zoltan]</sAuthor>
+    <sAuthor>Hegedus, B.[Bela]</sAuthor>
+    <sAuthor>Szantay, C., Jr.[Csaba, Jr.]</sAuthor>
+    <sAuthor>Sztatisz, J.</sAuthor>
+    <sAuthor>Pokol, G.[Gyorgy]</sAuthor>
+    <sPubName>Thermochim. Acta</sPubName>
+    <yrPubYr>2005</yrPubYr>
+    <dateCit>2005-06-16</dateCit>
+    <sTitle>Pressurization effects on the polymorphic forms of famotidine</sTitle>
+    <sAbstract>The effects of high static pressure on the polymorphic modifications A and B of famotidine were examined by differential scanning calorimetry, infrared and Raman spectroscopy, and X-ray powder diffractometry. The obtained effects appeared to differ significantly depending on whether they were monitored by DSC or any of the other above techniques. In particular, DSC measurements tend to deceptively amplify a tendency of the pure modification B to turn into the more stable form A under pressurization, while the spectroscopic methods and XRPD exhibit no essential change in the crystal structure of the metastable form B. The apparent morphological transformation in the pressed samples stems from the nature of the DSC method itself.</sAbstract>
+    <sKeyword>Famotidine</sKeyword>
+    <sKeyword>Polymorphism</sKeyword>
+    <sKeyword>Pressurization</sKeyword>
+    <sKeyword>Differential scanning calorimetry</sKeyword>
+    <sKeyword>Complex analytical approach</sKeyword>
+    <sVol>430</sVol>
+    <sPage>35-41</sPage>
+  </Citation>
+  <Compound>
+    <RegNum>
+      <nOrgNum>1</nOrgNum>
+    </RegNum>
+    <sCommonName>Famotidine</sCommonName>
+    <sFormulaMolec>C8H15N7O2S3</sFormulaMolec>
+    <Sample>
+      <nSampleNm>1</nSampleNm>
+      <eSource>Commercial source</eSource>
+      <purity>
+        <nStep>1</nStep>
+        <nPurityMass>99.5</nPurityMass>
+        <nPurityMassDigits>3</nPurityMassDigits>
+        <eAnalMeth>HPLC</eAnalMeth>
+      </purity>
+    </Sample>
+  </Compound>
+  <PureOrMixtureData>
+    <Component>
+      <RegNum>
+        <nOrgNum>1</nOrgNum>
+      </RegNum>
+      <nSampleNm>1</nSampleNm>
+    </Component>
+    <eExpPurpose>Principal objective of the work</eExpPurpose>
+    <sCompiler>XML</sCompiler>
+    <sContributor>XML</sContributor>
+    <dateDateAdded>1/5/2005</dateDateAdded>
+    <Property>
+      <nPropNumber>1</nPropNumber>
+      <Property-MethodID>
+        <PropertyGroup>
+          <PhaseTransition>
+            <ePropName>Molar enthalpy of transition or fusion, kJ/mol</ePropName>
+            <eMethodName>DSC/DTA</eMethodName>
+          </PhaseTransition>
+        </PropertyGroup>
+      </Property-MethodID>
+      <PropPhaseID>
+        <ePropPhase>Metastable crystal</ePropPhase>
+      </PropPhaseID>
+      <ePresentation>Direct value, X</ePresentation>
+      <PropRepeatability>
+        <sRepeatEvaluator>Author</sRepeatEvaluator>
+        <eRepeatMethod>Standard deviation of the mean</eRepeatMethod>
+      </PropRepeatability>
+    </Property>
+    <PhaseID>
+      <ePhase>Metastable crystal</ePhase>
+    </PhaseID>
+    <PhaseID>
+      <ePhase>Liquid</ePhase>
+    </PhaseID>
+    <PhaseID>
+      <ePhase>Air at 1 atmosphere</ePhase>
+    </PhaseID>
+    <NumValues>
+      <PropertyValue>
+        <nPropNumber>1</nPropNumber>
+        <nPropValue>51.190964756</nPropValue>
+        <nPropDigits>4</nPropDigits>
+        <PropRepeatability>
+          <nPropRepeatValue>1.552263928</nPropRepeatValue>
+          <nRepetitions>4</nRepetitions>
+        </PropRepeatability>
+      </PropertyValue>
+    </NumValues>
+  </PureOrMixtureData>
+  <PureOrMixtureData>
+    <Component>
+      <RegNum>
+        <nOrgNum>1</nOrgNum>
+      </RegNum>
+      <nSampleNm>1</nSampleNm>
+    </Component>
+    <eExpPurpose>Principal objective of the work</eExpPurpose>
+    <sCompiler>XML</sCompiler>
+    <sContributor>XML</sContributor>
+    <dateDateAdded>1/5/2005</dateDateAdded>
+    <Property>
+      <nPropNumber>1</nPropNumber>
+      <Property-MethodID>
+        <PropertyGroup>
+          <PhaseTransition>
+            <ePropName>Normal melting temperature, K</ePropName>
+            <eMethodName>DSC/DTA</eMethodName>
+          </PhaseTransition>
+        </PropertyGroup>
+      </Property-MethodID>
+      <PropPhaseID>
+        <ePropPhase>Metastable crystal</ePropPhase>
+      </PropPhaseID>
+      <ePresentation>Direct value, X</ePresentation>
+      <PropRepeatability>
+        <sRepeatEvaluator>Author</sRepeatEvaluator>
+        <eRepeatMethod>Standard deviation of the mean</eRepeatMethod>
+      </PropRepeatability>
+    </Property>
+    <PhaseID>
+      <ePhase>Metastable crystal</ePhase>
+    </PhaseID>
+    <PhaseID>
+      <ePhase>Liquid</ePhase>
+    </PhaseID>
+    <PhaseID>
+      <ePhase>Air at 1 atmosphere</ePhase>
+    </PhaseID>
+    <NumValues>
+      <PropertyValue>
+        <nPropNumber>1</nPropNumber>
+        <nPropValue>436.05</nPropValue>
+        <nPropDigits>4</nPropDigits>
+        <PropRepeatability>
+          <nPropRepeatValue>.300000000000011</nPropRepeatValue>
+          <nRepetitions>4</nRepetitions>
+        </PropRepeatability>
+      </PropertyValue>
+    </NumValues>
+  </PureOrMixtureData>
+  <PureOrMixtureData>
+    <Component>
+      <RegNum>
+        <nOrgNum>1</nOrgNum>
+      </RegNum>
+      <nSampleNm>1</nSampleNm>
+    </Component>
+    <eExpPurpose>Principal objective of the work</eExpPurpose>
+    <sCompiler>XML</sCompiler>
+    <sContributor>XML</sContributor>
+    <dateDateAdded>1/5/2005</dateDateAdded>
+    <Property>
+      <nPropNumber>1</nPropNumber>
+      <Property-MethodID>
+        <PropertyGroup>
+          <PhaseTransition>
+            <ePropName>Molar enthalpy of transition or fusion, kJ/mol</ePropName>
+            <eMethodName>DSC/DTA</eMethodName>
+          </PhaseTransition>
+        </PropertyGroup>
+      </Property-MethodID>
+      <PropPhaseID>
+        <ePropPhase>Crystal 1</ePropPhase>
+      </PropPhaseID>
+      <ePresentation>Direct value, X</ePresentation>
+      <PropRepeatability>
+        <sRepeatEvaluator>Author</sRepeatEvaluator>
+        <eRepeatMethod>Standard deviation of the mean</eRepeatMethod>
+      </PropRepeatability>
+    </Property>
+    <PhaseID>
+      <ePhase>Crystal 1</ePhase>
+    </PhaseID>
+    <PhaseID>
+      <ePhase>Liquid</ePhase>
+    </PhaseID>
+    <PhaseID>
+      <ePhase>Air at 1 atmosphere</ePhase>
+    </PhaseID>
+    <NumValues>
+      <PropertyValue>
+        <nPropNumber>1</nPropNumber>
+        <nPropValue>55.409073256</nPropValue>
+        <nPropDigits>4</nPropDigits>
+        <PropRepeatability>
+          <nPropRepeatValue>.67489736</nPropRepeatValue>
+          <nRepetitions>4</nRepetitions>
+        </PropRepeatability>
+      </PropertyValue>
+    </NumValues>
+  </PureOrMixtureData>
+  <PureOrMixtureData>
+    <Component>
+      <RegNum>
+        <nOrgNum>1</nOrgNum>
+      </RegNum>
+      <nSampleNm>1</nSampleNm>
+    </Component>
+    <eExpPurpose>Principal objective of the work</eExpPurpose>
+    <sCompiler>XML</sCompiler>
+    <sContributor>XML</sContributor>
+    <dateDateAdded>1/5/2005</dateDateAdded>
+    <Property>
+      <nPropNumber>1</nPropNumber>
+      <Property-MethodID>
+        <PropertyGroup>
+          <PhaseTransition>
+            <ePropName>Normal melting temperature, K</ePropName>
+            <eMethodName>DSC/DTA</eMethodName>
+          </PhaseTransition>
+        </PropertyGroup>
+      </Property-MethodID>
+      <PropPhaseID>
+        <ePropPhase>Crystal 1</ePropPhase>
+      </PropPhaseID>
+      <ePresentation>Direct value, X</ePresentation>
+      <PropRepeatability>
+        <sRepeatEvaluator>Author</sRepeatEvaluator>
+        <eRepeatMethod>Standard deviation of the mean</eRepeatMethod>
+      </PropRepeatability>
+    </Property>
+    <PhaseID>
+      <ePhase>Crystal 1</ePhase>
+    </PhaseID>
+    <PhaseID>
+      <ePhase>Liquid</ePhase>
+    </PhaseID>
+    <PhaseID>
+      <ePhase>Air at 1 atmosphere</ePhase>
+    </PhaseID>
+    <NumValues>
+      <PropertyValue>
+        <nPropNumber>1</nPropNumber>
+        <nPropValue>443.75</nPropValue>
+        <nPropDigits>4</nPropDigits>
+        <PropRepeatability>
+          <nPropRepeatValue>.199999999999989</nPropRepeatValue>
+          <nRepetitions>4</nRepetitions>
+        </PropRepeatability>
+      </PropertyValue>
+    </NumValues>
+  </PureOrMixtureData>
+</DataReport>

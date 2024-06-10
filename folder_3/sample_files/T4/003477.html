@@ -1,0 +1,294 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.5.1556">
+    <meta name="RSISYM" content="False">
+    <meta name="TEMPLATEBASE" content="DynHTML">
+    <meta name="LASTUPDATED" content="03/06/07 15:49:44">
+    <title>Overview of Extracting and Analyzing Image Shapes</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" />
+  </head>
+
+  <body text="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellpadding="0" cellspacing="0" width="98%" bgcolor="#E2E2E2" valign="bottom" >
+  <tr> 
+    <td width="10%">
+<a href="Extracting_and_Analyzing_Shapes.html"><img src="images/prev.gif" border="0" alt="Previous"></a>    </td>
+    <td width="80%" align="center">
+<font size=-1><i>Image Processing </i>: <a href="Extracting_and_Analyzing_Shapes.html">Extracting and Analyzing Shapes</a></font>    </td>
+    <td width="10%" align="right">
+<a href="Determining_Structuring_Element_Shapes_and_Sizes.html"><img src="images/next.gif" border="0" alt="Next"></a>    </td>
+  </tr>
+</table>
+
+<a name="wp1021469"> </a><h2 class="pHeading1">
+Overview of Extracting and Analyzing Image Shapes
+</h2>  
+
+<a name="wp1036388"> </a><p class="pBody">
+Morphological image processing operations reveal the underlying structures and shapes within binary and grayscale images, clarifying basic image features. While individual morphological operations perform simple functions, they can be combined to extract specific information from an image. Morphological operations often precede more advanced pattern recognition and image analysis operations such as segmentation. Shape recognition routines commonly include image thresholding or stretching to separate foreground and background image features. See <a href="Determining_Intensity_Values_for_Threshold_and_Stretch.html">Determining Intensity Values for Threshold and Stretch</a> for tips on how to produce the desired results. 
+</p>  
+
+<a name="wp1044895"> </a><p class="pBody">
+This chapter also provides examples of more advanced image analysis routines that return information about specific image elements. One example identifies unique regions within an image and the other finds the area of a specific image feature. See <a href="Analyzing_Image_Shapes.html">Analyzing Image Shapes</a> for more information.
+</p>  
+
+
+<a name="wp1048096"> </a><br />
+<table border="0" bgcolor="#E2E2E2" cellpadding="5" width="98%">
+   <tr><td><b>Note</b><br />
+   In this book, Direct Graphics examples are provided by default. Object Graphics examples are provided in cases where significantly different methods are required.</td></tr>
+</table>
+<br />  
+
+
+<a name="wp1044900"> </a><h3 class="pHeading2">
+Applying a Morphological Structuring Element to an Image 
+</h3>  
+
+
+<a name="wp1033034"> </a><p class="pBody">
+Morphological operations apply a <i>structuring element</i> or <i>morphological mask</i> to an image. A structuring element that is applied to an image must be 2 dimensional, having the same number of dimensions as the array to which it is applied. A morphological operation passes the structuring element, of an empirically determined size and shape, over an image. The operation compares the structuring element to the underlying image and generates an output pixel based upon the function of the morphological operation. The size and shape of the structuring element determines what is extracted or deleted from an image. In general, smaller structuring elements preserve finer details within an image than larger elements. For more information on selecting and creating a structuring element, see <a href="Determining_Structuring_Element_Shapes_and_Sizes.html">Determining Structuring Element Shapes and Sizes</a>.
+</p>  
+
+<a name="wp1022266"> </a><p class="pBody">
+Morphological operations can be applied to either binary or grayscale images. When applied to a binary image, the operation returns pixels that are either black, having a logical value of 0, or white, having a logical value of 1. Each image pixel and its neighboring pixels are compared against the structuring element to determine the pixel's value in the output image. With grayscale images, pixel values are determined by taking a neighborhood minimum or neighborhood maximum value (as required by the morphological process). The structuring element provides the definition of the shape of the neighborhood. 
+</p>  
+
+<a name="wp1043809"> </a><p class="pBody">
+The following table introduces image processing tasks and associated IDL image processing routines covered in this chapter. 
+  </p>
+<div>
+<P class="Ignore"><I><FONT SIZE=-1><CENTER>
+<a name="wp1043959"> </a><div class="pTableTitle">
+Table 9-1: Shape Extraction and Analysis Tasks and Routines&#160;
+</div>  
+
+</CENTER></FONT></I></P>
+<table border="0" cellpadding="2" cellspacing="1" id="wp1043959table1043810">
+  <caption><a name="wp1043959"> </a><div class="pTableTitle">
+Table 9-1: Shape Extraction and Analysis Tasks and Routines&#160;
+</div>  
+
+</caption>
+  <tr bgcolor="#D5D5DE" align="center">    <th><a name="wp1043812"> </a><div class="pCellHeading">
+Task
+</div>  
+
+</th>
+    <th><a name="wp1043814"> </a><div class="pCellHeading">
+Routine(s)
+</div>  
+
+</th>
+    <th><a name="wp1043816"> </a><div class="pCellHeading">
+Description
+</div>  
+
+</th>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td colspan="1" rowspan="2"><a name="wp1043820"> </a><div class="pCellBody">
+ <a href="Eroding_and_Dilating_Image_Objects.html">Eroding and Dilating Image Objects</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043826"> </a><div class="pCellBody">
+<a href="ERODE.html">ERODE</a>
+</div>  
+
+</td>
+    <td><a name="wp1043828"> </a><div class="pCellBody">
+Reduce the size of objects in relation to their background.
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043835"> </a><div class="pCellBody">
+<a href="DILATE.html">DILATE</a>
+</div>  
+
+</td>
+    <td><a name="wp1043837"> </a><div class="pCellBody">
+Expand the size of objects in relation to their background.
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043841"> </a><div class="pCellBody">
+ <a href="Smoothing_with_MORPH_OPEN.html">Smoothing with MORPH_OPEN</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043847"> </a><div class="pCellBody">
+<a href="MORPH_OPEN.html">MORPH_OPEN</a>
+</div>  
+
+</td>
+    <td><a name="wp1043849"> </a><div class="pCellBody">
+Apply an erosion operation followed by a dilation operation to a binary or grayscale image.
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043853"> </a><div class="pCellBody">
+ <a href="Smoothing_with_MORPH_CLOSE.html">Smoothing with MORPH_CLOSE</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043859"> </a><div class="pCellBody">
+<a href="MORPH_CLOSE.html">MORPH_CLOSE</a>
+</div>  
+
+</td>
+    <td><a name="wp1043861"> </a><div class="pCellBody">
+Apply a dilation operation followed by an erosion operation to a binary or grayscale image. 
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043865"> </a><div class="pCellBody">
+ <a href="Detecting_Peaks_of_Brightness.html">Detecting Peaks of Brightness</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043871"> </a><div class="pCellBody">
+<a href="MORPH_TOPHAT.html">MORPH_TOPHAT</a>
+</div>  
+
+</td>
+    <td><a name="wp1043873"> </a><div class="pCellBody">
+Retain only the brightest pixels within a grayscale image.
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043877"> </a><div class="pCellBody">
+ <a href="Creating_Image_Object_Boundaries.html">Creating Image Object Boundaries</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043883"> </a><div class="pCellBody">
+<a href="WATERSHED.html">WATERSHED</a>
+</div>  
+
+</td>
+    <td><a name="wp1043885"> </a><div class="pCellBody">
+Detect boundaries between similar regions in a grayscale image.
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043889"> </a><div class="pCellBody">
+<a href="Selecting_Specific_Image_Objects.html">Selecting Specific Image Objects</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043895"> </a><div class="pCellBody">
+<a href="MORPH_HITORMISS.html">MORPH_HITORMISS</a>
+</div>  
+
+</td>
+    <td><a name="wp1043897"> </a><div class="pCellBody">
+Use &quot;hit&quot; and &quot;miss&quot; structures to identify image elements that meet the specified conditions. 
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043901"> </a><div class="pCellBody">
+<a href="Detecting_Edges_of_Image_Objects.html">Detecting Edges of Image Objects</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043907"> </a><div class="pCellBody">
+<a href="MORPH_GRADIENT.html">MORPH_GRADIENT</a>
+</div>  
+
+</td>
+    <td><a name="wp1043909"> </a><div class="pCellBody">
+Subtract an eroded version of a grayscale image from a dilated version of the image, highlighting edges.
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043913"> </a><div class="pCellBody">
+ <a href="Creating_Distance_Maps.html">Creating Distance Maps</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043919"> </a><div class="pCellBody">
+<a href="MORPH_DISTANCE.html">MORPH_DISTANCE</a>
+</div>  
+
+</td>
+    <td><a name="wp1043921"> </a><div class="pCellBody">
+Estimate for each binary foreground pixel the distance to the nearest background pixel, using a given norm. 
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043925"> </a><div class="pCellBody">
+ <a href="Thinning_Image_Objects.html">Thinning Image Objects</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043931"> </a><div class="pCellBody">
+<a href="MORPH_THIN.html">MORPH_THIN</a>
+</div>  
+
+</td>
+    <td><a name="wp1043933"> </a><div class="pCellBody">
+Subtract hit-or-miss results from a binary image. Repeated thinning results in pixel-wide linear representations of image objects.
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td colspan="1" rowspan="2"><a name="wp1043937"> </a><div class="pCellBody">
+ <a href="Analyzing_Image_Shapes.html">Analyzing Image Shapes</a>.
+</div>  
+
+</td>
+    <td><a name="wp1043943"> </a><div class="pCellBody">
+<a href="LABEL_REGION.html">LABEL_REGION</a>
+</div>  
+
+</td>
+    <td><a name="wp1043945"> </a><div class="pCellBody">
+Identify and assign index numbers to discrete regions within a binary image.
+</div>  
+
+</td>
+</tr>
+  <tr bgcolor="#E2E2E2">    <td><a name="wp1043952"> </a><div class="pCellBody">
+<a href="CONTOUR.html">CONTOUR</a>
+</div>  
+
+</td>
+    <td><a name="wp1043954"> </a><div class="pCellBody">
+Create a contour plot and extract information about specific contours.
+</div>  
+
+</td>
+</tr>
+</table>
+</div>
+<p class="pBody">
+
+</p>  
+
+
+<a name="wp1043964"> </a><br />
+<table border="0" bgcolor="#E2E2E2" cellpadding="5" width="98%">
+   <tr><td><b>Note</b><br />
+   For an example that uses a combination of morphological operations to remove bridges from the waterways of New York, see <a href="Combining_Morphological_Operations.html">Combining Morphological Operations</a>.</td></tr>
+</table>
+<br />
+
+<P></P>
+<P></P>
+<P><FONT COLOR="gray" SIZE="-3">&nbsp;&nbsp;IDL Online Help (March 06, 2007)</FONT></P>
+  </body>
+</html>

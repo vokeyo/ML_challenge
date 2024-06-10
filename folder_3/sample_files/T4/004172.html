@@ -1,0 +1,757 @@
+
+<html>
+<head>
+        <title>PDS Data Set Profile</title>
+        <META  NAME="keywords"  CONTENT="Planetary Data System">
+
+        <META  NAME="description" CONTENT="This website serves as a mechanism for searching the PDS planetary
+archives.">
+<link href="http://pds.jpl.nasa.gov/css/pds_style.css" rel="stylesheet" type="text/css">
+
+
+<SCRIPT LANGUAGE="JavaScript">
+function popup(newpage) {
+window.open(newpage,'window1','toolbar=0,location=1,directories=0,status=0,menubar=0,scrollbars=yes,resizable=yes,width=640,height=480');
+}
+
+function popup_sm(newpage) {
+window.open(newpage,'window2','toolbar=0,location=1,directories=0,status=0,menubar=0,scrollbars=yes,resizable=yes,width=400,height=300');
+}
+
+function submitQuick()
+{
+	document.postForm.action = "/pds/index.jsp";
+	document.postForm.submit();
+}
+
+function submitAdvanced()
+{
+    document.postForm.action = "/pds/advanced.jsp";
+    document.postForm.submit();
+}
+
+function submitPower()
+{
+    document.postForm.action = "/pds/power.jsp";
+    document.postForm.submit();
+}
+
+function submitText()
+{
+    document.postForm.action  = '/search/index.jsp';
+    document.postForm.submit();
+}
+
+function isParamSelected(param)
+{
+  var len = param.options.length;
+  var selected = false;
+  for (var i=0; i<len; i++) {
+     if (param.options[i].selected &&
+         param.options[i].value != "All") {
+         selected = true;
+         break;
+     }
+  }
+  return selected;
+}
+
+var selectionChanged = false;
+
+function selectAll( selobj)
+{
+  var len = selobj.options.length;
+  for (var i=0; i<len; i++)
+     selobj.options[i].selected = true;
+}
+
+function applyMultiSelect( selobj)
+{
+  if (isParamSelected( selobj))
+    changeSearchSpec();
+  else alert('Please make one or more selection first');
+}
+
+// called when user switches from quick<->advanced page
+function switchPage( idx)
+{
+  // if page was called with parameters
+  // or user made changes to multiple selection
+  if (document.postForm.hasParams.value=='1' || selectionChanged) {
+
+   var msnname_sel = isParamSelected(document.postForm.msnname)
+   var msn = document.postForm.msnname;
+   var j = 0;
+   var a = 0;
+   if (msnname_sel) {
+      for  (j=0; j<msn.options.length;j++) {
+         if (msn.options[j].selected) {
+                   document.postForm.msntext[a++].value=msn.options[j].text;
+         }
+       }
+    } 
+    else {
+       for (j=0; j<msn.options.length;j++) {
+                  document.postForm.msntext[a++].value=msn.options[j].text;
+       }
+    }
+
+
+    if (idx==0) {
+      // when switching to quick page, select all msnname & instname
+      //selectAll( document.postForm.msnname);
+      //selectAll( document.postForm.instname);
+      submitQuick();
+    }
+    else if (idx==1) submitAdvanced();
+    else if (idx==2) submitPower();
+    else submitText();
+  }
+  else {
+    // page not called with parameters, just load new page
+    if (idx==0) window.location.href = '/pds/index.jsp';
+    else if (idx==1) window.location.href = '/pds/advanced.jsp';
+    else if (idx==2) window.location.href = '/pds/power.jsp';
+    else window.location.href = '/search/index.jsp';
+  }
+}
+
+// replace leading and trailing space
+function trim( str)
+{
+  str.replace( /^\s*/, '');
+  str.replace( /\s*$/, '');
+  return str;
+}
+
+   function newImage(arg) {
+   	if (document.images) {
+   		rslt = new Image();
+   		rslt.src = arg;
+   		return rslt;
+   	}
+   }
+   
+   function changeImages() {
+   	if (document.images && (preloadFlag == true)) {
+   		for (var i=0; i<changeImages.arguments.length; i+=2) {
+   			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+   		}
+   	}
+   }
+   
+   var preloadFlag = false;
+   function preloadImages() {
+   	if (document.images) {
+		nav_home_over = newImage("/pds/images/nav_home_on.gif");
+		nav_dataservices_over = newImage("/pds/images/nav_dataservices_on.gif");
+		nav_tools_over = newImage("/pds/images/nav_tools_on.gif");
+		nav_documents_over = newImage("/pds/images/nav_documents_on.gif");
+		nav_relatedsites_over = newImage("/pds/images/nav_relatedsites_on.gif");
+		nav_aboutpds_over = newImage("/pds/images/nav_aboutpds_on.gif");
+		nav_sitemap_over = newImage("/pds/images/nav_sitemap_on.gif");
+   		preloadFlag = true;
+   	}
+   }
+
+function lastMod()
+{
+	var monthNames = new Array( 'Jan','Feb','Mar','Apr','May','Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' );
+
+	var zeroPad = "";
+	var lastDate = new Date( document.lastModified );
+	year = y2kYear( lastDate );
+	month = lastDate.getMonth();
+	day = lastDate.getDate();
+	if( day < 10 )
+	{
+		zeroPad = "0";
+	}
+	
+	printDate = zeroPad + day + " " + monthNames[ month ] + " " + year;
+
+	return printDate;
+}
+
+function y2kYear( theDate )
+{
+        wrongYear = theDate.getYear();
+        var rightYear = wrongYear % 100;
+        rightYear += (rightYear < 38) ? 2000 : 1900;
+        return rightYear;
+}
+
+</SCRIPT>
+</head>
+
+<body BGCOLOR="#000000">
+
+
+
+
+<table align="center" bgColor="#FFFFFF" BORDER="0" CELLPADDING="10" CELLSPACING="0">
+  <tr>
+    <td>
+      			<script language="JavaScript" src="http://pds.jpl.nasa.gov/js/overlib.js"></script>
+			<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+			<!-- nasa header begin -->
+			<table bgcolor="#cccccc" width="760" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="middle" width="571"><a href="http://www.nasa.gov/"><img border="0" alt="NASA - National Aeronautics and Space Administration" height="60" width="280" src="http://pds.jpl.nasa.gov/images/head_nasa.gif"></a></td>
+					<td valign="middle" width="189">
+						<table width="189" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td bgcolor="#666666" width="1"><img border="0" alt="" height="45" width="1" src="http://pds.jpl.nasa.gov/images/spacer.gif"></td>
+								<td width="19"><img border="0" alt="" height="1" width="1" src="http://pds.jpl.nasa.gov/images/spacer.gif"></td>
+								<td width="170"><a href="#maincontent"><img border="0" alt="Follow this link to skip to the main content" height="1" width="1" src="http://pds.jpl.nasa.gov/images/spacer.gif"></a><br>
+									<a class="headerLnk" href="http://www.nasa.gov/">+ NASA Homepage</a><br>
+									<a class="headerLnk" href="http://www.nasa.gov/about/highlights/En_Espanol.html">+ NASA en Espa&ntilde;ol</a><br>
+									<a href="http://www.nasa.gov/about/contact/index.html" class="headerLnk">+ Contact NASA</a><br>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><a href="http://pds.jpl.nasa.gov/"><img src="http://pds.jpl.nasa.gov/images/l2_top_banner.jpg" alt="Planetary Data System Banner" width="760" height="100" border="0"></a></td>
+				</tr>
+			</table>
+			<!-- nasa header end -->
+			<table width="760" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><a href="http://pds.jpl.nasa.gov/index.html"
+						onMouseOver="changeImages('nav_home','http://pds.jpl.nasa.gov/images/nav_home_on.gif');"
+         				onMouseOut="changeImages('nav_home','http://pds.jpl.nasa.gov/images/nav_home_off.gif');">
+						<img src="http://pds.jpl.nasa.gov/images/nav_home_off.gif" alt="Home" name="nav_home" width="82" height="22" border="0"></a></td>
+					<td><a href="http://pds.jpl.nasa.gov/data_services/"
+						onMouseOver="changeImages('nav_dataservices','http://pds.jpl.nasa.gov/images/nav_dataservices_on.gif');return overlib('<b>Data Services:</b> Provides information about how to find data at PDS and the nodes, and how to submit data.', CENTER, OFFSETY, 18);"
+         				onMouseOut="changeImages('nav_dataservices','http://pds.jpl.nasa.gov/images/nav_dataservices_on.gif');return nd();">
+						<img src="http://pds.jpl.nasa.gov/images/nav_dataservices_on.gif" alt="Data Services" name="nav_dataservices" width="140" height="22" border="0"></a></td>
+					<td><a href="http://pds.jpl.nasa.gov/tools/"
+						onMouseOver="changeImages('nav_tools','http://pds.jpl.nasa.gov/images/nav_tools_on.gif');return overlib('<b>Tools:</b> Links to tools for PDS phonebook, Data Dictionary and References.', CENTER, OFFSETY, 18);"
+         				onMouseOut="changeImages('nav_tools','http://pds.jpl.nasa.gov/images/nav_tools_off.gif');return nd();">
+						<img src="http://pds.jpl.nasa.gov/images/nav_tools_off.gif" alt="Tools" name="nav_tools" width="72" height="22" border="0"></a></td>
+					<td><a href="http://pds.jpl.nasa.gov/documents/"
+						onMouseOver="changeImages('nav_documents','http://pds.jpl.nasa.gov/images/nav_documents_on.gif');return overlib('<b>Documents:</b> Provides links to PDS documentation and manuals.', CENTER, OFFSETY, 18);"
+         				onMouseOut="changeImages('nav_documents','http://pds.jpl.nasa.gov/images/nav_documents_off.gif');return nd();">
+						<img src="http://pds.jpl.nasa.gov/images/nav_documents_off.gif" alt="Documents" name="nav_documents" width="122" height="22" border="0"></a></td>
+					<td><a href="http://pds.jpl.nasa.gov/relatedsites.html"
+						onMouseOver="changeImages('nav_relatedsites','http://pds.jpl.nasa.gov/images/nav_relatedsites_on.gif');return overlib('<b>Related Sites:</b> Links to other related information.', CENTER, OFFSETY, 18);"
+         				onMouseOut="changeImages('nav_relatedsites','http://pds.jpl.nasa.gov/images/nav_relatedsites_off.gif');return nd();">
+						<img src="http://pds.jpl.nasa.gov/images/nav_relatedsites_off.gif" alt="Related Sites" name="nav_relatedsites" width="134" height="22" border="0"></a></td>
+					<td><a href="http://pds.jpl.nasa.gov/aboutpds.html"
+						onMouseOver="changeImages('nav_aboutpds','http://pds.jpl.nasa.gov/images/nav_aboutpds_on.gif');return overlib('<b>About PDS:</b> Provides an overview of PDS, and information about the nodes.', CENTER, OFFSETY, 18);"
+         				onMouseOut="changeImages('nav_aboutpds','http://pds.jpl.nasa.gov/images/nav_aboutpds_off.gif');return nd();">
+						<img src="http://pds.jpl.nasa.gov/images/nav_aboutpds_off.gif" alt="About PDS" name="nav_aboutpds" width="114" height="22" border="0"></a></td>
+					<td><a href="http://pds.jpl.nasa.gov/sitemap.html"
+						onMouseOver="changeImages('nav_sitemap','http://pds.jpl.nasa.gov/images/nav_sitemap_on.gif');return overlib('<b>Sitemap:</b> Directory of this site.', CENTER, OFFSETY, 18);"
+         				onMouseOut="changeImages('nav_sitemap','http://pds.jpl.nasa.gov/images/nav_sitemap_off.gif');return nd();">
+						<img src="http://pds.jpl.nasa.gov/images/nav_sitemap_off.gif" alt="Sitemap" name="nav_sitemap" width="96" height="22" border="0"></a></td>
+
+				</tr>
+			</table>
+
+
+      <table width="760" border="0" cellspacing="3" cellpadding="2">
+
+
+        <tr valign="TOP">
+                <td valign="TOP" colspan="2" class="pageTitle">
+                        <br><FONT color="#6F4D0E"><b>Data Set Information</b></font><br><br>
+                </td>
+        </tr>
+
+      
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>DATA_SET_NAME</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      ULYSSES JUPITER HISCALE DEFLECTED ELECTRONS COUNTS<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>DATA_SET_ID</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      ULY-J-HISCALE-4-SUMM-DE-V1.0<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>NSSDC_DATA_SET_ID</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      90-090B-00C<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>DATA_SET_TERSE_DESCRIPTION</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      ULYSSES JUPITER HISCALE DEFLECTED ELECTRONS COUNTS<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>DATASET_DESCRIPTION</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      <pre><tt> 
+ 
+ 
+    Data Set Overview
+    =================
+      This data set consists of HISCALE Deflected Electron (DE)
+      measurements taken during the Ulysses Jupiter encounter
+      1991-12-31 to 1992-02-16. This includes 1 hour averaged
+      inbound cruise data (1991-12-31 to 1992-02-01), and 15
+      minute averaged encounter data (1992-02-02 to 1992-02-16).
+ 
+      The Heliosphere Instrument for Spectra, Composition, and
+      Anisotropy at Low Energies is designed to make measurements of
+      interplanetary ions and electrons throughout the entire
+      Ulysses mission.
+ 
+      The ions (Ei &gt; 50 keV) and electrons (Ee &gt; 30 keV) are
+      identified uniquely and detected by five separate solid-state
+      detector telescopes that are oriented to give nearly complete
+      pitch-angle coverage from the spinning spacecraft.
+ 
+      Ion elemental abundances are determined by a del E vs E
+      telescope using a thin 5 micrometer front solid state detector
+      element in a three element telescope.  Experiment operation is
+      controlled by a microprocessor-based data system.
+ 
+      Inflight calibration is provided by radioactive sources
+      mounted on telescope covers which can be closed for
+      calibration purposes and for radiation protection during the
+      course of the mission.
+ 
+      Ion and electron spectral information is determined using both
+      broad-energy-range rate channels and a 32 channel pulse-height
+      analyses (channels spaced logarithmically) for more detailed
+      spectra.
+ 
+      About DE (Deflected Electrons)
+ 
+      The Deflected Electron measurements are made using special
+      logic of the LEMS30 detector system.
+ 
+      DE1     30-50   keV  electrons
+      DE2     50-90   keV  electrons
+      DE3     90-165  keV  electrons
+      DE4     165-300 keV  electrons
+ 
+      HISCALE References (cited in [ARMSTRONG&amp;SAHI1996])
+ 
+      Curtis, D.W., ISPM/Ulysses LAN Data Processing Software
+      Status, Dec. 1986.
+ 
+      Gold R.E., LAN Accelerator Calibration Test Plan, August 1991.
+ 
+      Guynn D.R. Jr., LAN Experiment Data System Performance and
+      Interface Specification, June 1992.
+ 
+      Kohl, J.W., J.H. Crawford, Calibration of Solar Polar Energy
+      Model LAN-2B Detector Head at GSFC Low Energy Accelerator,
+      July 1986.
+ 
+      Simnett, G.M., R.E. Gold, The RTG Background in the LAN
+      Experiment and the Shielding Required to Control It, April
+      1980.
+ 
+      Tappin, S.J., HSIO-HiScale I/O Library, June 1991.
+ 
+      Ximenez de Ferran S., Ulysses Spin Reference Pulse, May 1985.
+ 
+                </tt></pre>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>DATA_SET_RELEASE_DATE</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      1998-05-01<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>RESOURCE_LINK</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                        <a href="http://www.igpp.ucla.edu/cgi-bin/ditdos?dataset=ULY-J-HISCALE-4-SUMM-DE-V1.0" target="_blank">http://www.igpp.ucla.edu/cgi-bin/ditdos?dataset=ULY-J-HISCALE-4-SUMM-DE-V1.0<br></a>
+        
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>DATA_OBJECT_TYPE</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      TIME SERIES<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>START_TIME</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      1991-12-31T00:00:00.000<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>STOP_TIME</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      1992-02-16T23:45:00.000<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>MISSION_NAME</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                        <a href="/pds/viewMissionProfile.jsp?MISSION_NAME=ULYSSES"  target="_blank">ULYSSES<br></a>
+			
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>MISSION_START_DATE</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      1990-10-06<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>MISSION_STOP_DATE</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      NULL<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>TARGET_NAME</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+							JUPITER<br>
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>TARGET_TYPE</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      PLANET<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>INSTRUMENT_HOST_ID</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      <a href="/pds/viewHostProfile.jsp?INSTRUMENT_HOST_ID=ULY"  target="_blank">ULY<br></a>
+
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>INSTRUMENT_NAME</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      HELIOSPHERIC INST-SPECTRA,COMPOSITION,ANISOTROPY AT LOW ENER<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>INSTRUMENT_ID</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      <a href="/pds/viewInstrumentProfile.jsp?INSTRUMENT_ID=HISCALE&INSTRUMENT_HOST_ID=ULY"  target="_blank">HISCALE<br></a>
+            
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>INSTRUMENT_TYPE</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      CHARGED PARTICLE ANALYZER<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>NODE_NAME</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      PLANETARY PLASMA INTERACTIONS - UCLA<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>ARCHIVE_STATUS</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      ARCHIVED<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>CONFIDENCE_LEVEL_NOTE</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                       <br>
+             
+                       <br>
+             
+                          Confidence Level Overview<br>
+             
+                          =========================<br>
+             
+                            None provided. For more information regarding the confidence<br>
+             
+                            level of this data set please contact:<br>
+             
+                       <br>
+             
+                              THOMAS P. ARMSTRONG<br>
+             
+                              Dept. of Physics and Astronomy<br>
+             
+                              University of Kansas<br>
+             
+                              Lawrence, KS 66045<br>
+             
+                              USA<br>
+             
+                              Phone: 1-913-864-4726  Fax: 1-913-864-5262<br>
+             
+                              Internet: armstrong@kuphsx.phsx.ukans.edu<br>
+             
+                       <br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>CITATION_DESCRIPTION</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      Citation TBD<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>ABSTRACT_TEXT</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      This data set consists of HISCALE Deflected Electron (DE) measurements 
+taken during the Ulysses Jupiter encounter 1991-12-31 to 1992-02-16. 
+This includes 1 hour averaged inbound cruise data (1991-12-31 to 
+1992-02-01), and 15 minute averaged encounter data (1992-02-02 to 
+1992-02-16).<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>FULL_NAME</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      STEVEN P. JOY<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>TELEPHONE_NUMBER</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                      3106223462<br>
+             
+                </td>
+             
+               </TR>
+         
+
+               <TR>
+                 <td bgcolor="#F0EFEF" width=200 valign=top>RESOURCES</td> 
+                 <td bgcolor="#F0EFEF" valign=top>
+
+              
+                   </td>   
+
+         
+               </TR>
+         
+        			<table width="760" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                        <td><img src="http://pds.jpl.nasa.gov/images/spacer.gif" width="157" height="5" alt="" border="0"></td>
+                                        <td><img src="http://pds.jpl.nasa.gov/images/spacer.gif" width="12" height="1" alt="" border="0"></td>
+                                        <td><img src="http://pds.jpl.nasa.gov/images/spacer.gif" width="395" height="1" alt="" border="0"></td>
+                                        <td><img src="http://pds.jpl.nasa.gov/images/spacer.gif" width="6" height="1" alt="" border="0"></td>
+                                        <td><img src="http://pds.jpl.nasa.gov/images/spacer.gif" width="190" height="1" alt="" border="0"></td>
+                                </tr>
+                        </table>
+                                            
+                        <table width="760" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                        <td><img src="http://pds.jpl.nasa.gov/images/spacer.gif" width="5" height="5" border="0"></td>
+                                </tr>
+                                <tr>
+                                        <td><a href="http://www.nasa.gov/about/highlights/HP_Privacy.html"><img src="http://pds.jpl.nasa.gov/images/navfoot_nasapriv.gif" alt="NASA Privacy Statement" width="200" height="22" border="0"></a><a href="http://www.jpl.nasa.gov/images/policy/"><img src="http://pds.jpl.nasa.gov/images/navfoot_copyright.gif" alt="Copyright" width="128" height="22" border="0"></a><a href="http://pds.jpl.nasa.gov/feedback.cfm"><img src="http://pds.jpl.nasa.gov/images/navfoot_feedback.gif" alt="Feedback" width="134" height="22" border="0"></a><a href="http://pds.jpl.nasa.gov/sitemap.html"><img src="http://pds.jpl.nasa.gov/images/navfoot_sitemap.gif" alt="Sitemap" width="116" height="22" border="0"></a><a href="http://pds.jpl.nasa.gov/system_requirements.html"><img src="http://pds.jpl.nasa.gov/images/navfoot_system_requirements.gif" width="182" height="22" border="0" alt="System Requirements"></a></td>
+                                </tr>
+                        </table>
+
+			<!-- nasa footer begin -->
+			<table border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+                <tr>
+
+               		<td width="170" align="left" valign="top"><a href="http://www.firstgov.gov/"><img src="http://pds.jpl.nasa.gov/images/foot_first_gov.gif" width="140" height="50" alt="FirstGov Logo" border="0"></a></td>
+					<td width="340" align="left" valign="top">
+						<table border="0" cellpadding="8" cellspacing="0">
+							<tr>
+								<td>
+									<a href="http://www.hq.nasa.gov/office/pao/FOIA/" class="footerLnk">+ Freedom of Information Act</a><br>
+									<a href="http://www.nasa.gov/pdf/1968main_strategi.pdf" class="footerLnk">+ NASA 2003 Strategic Plan</a><br>
+									<a href="http://www.nasa.gov/about/highlights/HP_Privacy.html" class="footerLnk">+ NASA Privacy Statement, Disclaimer, and<br>
+
+									&nbsp;&nbsp;&nbsp;Accessiblity Certification</a><br>
+									<a href="http://www.jpl.nasa.gov/images/policy/" class="footerLnk">+ Copyright/Image Use Policy</a></td>
+							</tr>
+						</table></td>
+					<td width="50" align="left" valign="top"><a href="http://www.nasa.gov/"><img src="http://pds.jpl.nasa.gov/images/foot_nasa.gif" width="50" height="50" alt="NASA Logo" border="0"></a></td>
+					<td width="200" align="left" valign="top">
+						<table border="0" cellpadding="8" cellspacing="0">
+							<tr>
+
+								<td class="light">
+									Curator: <a href="mailto:Emily.S.Law@jpl.nasa.gov" class="footerLnk">Emily S. Law</a>
+									<br>
+									Webmaster: Maryia Sauchanka-Davis
+									<br>
+									NASA Official: William Knopf
+									<br>
+									Last Updated: 
+									<script>document.write( lastMod() );</script>
+
+									<br>
+									<a href="mailto:pds_operator@jpl.nasa.gov" class="footerLnk">+ Comments and Questions</a></td>
+							</tr>
+						</table></td>
+				</tr>
+			</table>
+			<!-- nasa footer end -->
+
+        </table>
+
+    </td>
+  </tr>
+</table>
+
+</BODY>
+</HTML>
+

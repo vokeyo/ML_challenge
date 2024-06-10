@@ -1,0 +1,970 @@
+----------------------------------------------------------------
+Genaral Example of FGDC Metadata for all drainage basin datasets.
+----------------------------------------------------------------
+
+The information in this file is from the Delaware River basin (DELA18)
+dataset for named streams in Pennsylvania.  Information contained in
+this file is representative of the metatdata found for each of the files
+of drainage basain boundary datasets.  Examples used and particular
+references to an area of Pennsylvania will vary from dataset to dataset.
+
+This metadata file has been produced using the Arcinfo DOCUMENT command.
+
+Scott A. Hoffman
+July 15, 1996
+
+
+ 
+Identification_Information:
+  Citation:
+    Originator: Hoffman, Scott A. and Kernan, James T.
+    Publication_Date: July 1, 1996 
+    Publication_Time: 
+    Title: Digital drainage basin boundaries of named streams in Pennsylvania
+    Edition: 1.0
+    Geospatial_Data_Presentation_Form: map
+    Series_Information: Open_file Report, 96-354
+      Series_Name: 
+      Issue_Identification: 1
+    Publication_Information:
+      Publication_Place: 
+      Publisher: 
+    Other_Citation_Details: 
+    Online_Linkage: 
+    Larger_Work_Citation: 
+    Scale_Denominator: 24,000
+ 
+  Description: 
+    Abstract:
+ 
+ In 1989, the Pennsylvania Department of Environmental Resources (PaDER),
+ in cooperation with the U.S. Geological Survey, Water Resources Division (USGS
+ published the Pennsylvania (PA) Gazetter of Streams.  This publication contains
+ information related to named streams in Pennsylvania.  Drainage basin boundaries
+ are delineated on the 7.5-minute series topographic paper quadrangle maps for PA
+ and parts of the bordering states of New York, Maryland, Ohio, West Virginia,
+ and Delaware.  These boundaries enclose catchment areas for named streams off-
+ icially recognized by the Board on Geographic Names and other unofficially
+ named streams that flow through named hollows, using the hollow name, e.g.
+ "Smith Hollow".  This was done in an effort to name as many of the 64,000
+ streams as possible.
+ In 1991, work began by USGS to put these drainage basin boundaries into
+ digital form for use in a geographic information system (GIS).  Digitizing
+ started with USGS in Lemoyne, PA., but expanded with assistance by PaDER and
+ the Natural Resource Conservation Service (NRCS), formerly the U.S Department
+ of Agriculture, Soil Conservation Service (SCS). USGS performed all editing,
+ attributing, and edgemetching.
+
+ There are 878, 7.5-minute quadrangle maps in PA.  This documentation
+ applies to only those maps in the Delaware River basin (164).  Parts of the
+ Delaware River drainage originate outside the PA border.  At this time, no
+ effort is being made by USGS to include those named stream basins.
+ 
+    Keywords:
+ 
+    basins
+    watersheds
+    catchments
+    drainage basin
+ 
+ 
+    Purpose:
+ 
+ Any application involving the need for digitial drainage basin data.
+ It can be used for spatial data layer extractions, clipping, cartographic,
+ and illustrative displays.
+ 
+ 
+    Supplemental_Information:
+ 
+      Procedures_Used:
+ 
+   Due to the nature of this data set, i.e., digitized, edited, etc. by various
+   people and in many workareas, only a listing of the major commands used through-
+   out the entire processing are listed and separated by ArcInfo Module:
+ 
+   Arc: BUILD, CLEAN, RENODE, CREATELABELS, LABELERRORS, NODEERRORS, MAPJOIN,
+   ELININATE, PROJECT, PRECISION, CREATE, INTERSECTERR.
+ 
+   Arcedit: DUPLICATEARCS, NODESNAP, ARCSNAP, WEEDTOLERANCE, SNAPCOVER, ADD,
+
+   METHOD OVERVIEW
+ 
+   Basin were delineated on 7.5-minute paper topographic quadrangles by a
+   qualified USGS surface-water specialist.
+   Using the ArcInfo, Revision 6.1.1, and GRASS, Revion 4.0, GIS software,
+   the drainage basins were digitized using a 5-phase plan:
+
+   Phase 1 -- Digitize, edit, and attribute all 7.5-minute quads in PA.
+ 
+   Phase 2 -- Using a tiling scheme based on National Mapping Division's (NMD)
+   30 by 60 minute series maps, published at a scale of 1:100,000, edgematched
+   within these boundaries.  The following 1:100,000-scale map names have some
+   or all of the 7.5-minute quads in PA.  The 100K name appears first followed
+   by the number of 7.5-minute quads in parentheses: Reading (32), Allen-
+   town (31), Scranton (26), Honesdale (26), Sunbury (10), Middletown, NY,
+   Harrisburg, Wilmington, DE (10), and Trenton, NJ (9).
+ 
+   Phase 3 -- Edgematch all 1:100,000-scale boundaries and the data is
+   convertered from North American Datum (NAD) of 1927 to NAD83.
+ 
+   Phase 4 -- USGS technical review and approval of the data for distribu-
+   tion.
+ 
+   Phase 5 -- This phase will be done in Revision 2.0 of this data set.  An
+   overlay of a digital hydrography layer that includes double-lined stream
+   lakes, ponds, and reservoirs is used to delineate areas that do not
+   represent a land surface.  For example, the Delaware River is wide
+   enough to be shown as a double-lined stream on a 1:24,000-scale map and
+   therefore, is not a land surface.
+ 
+   DIGITIZING
+
+   All 7.5-minute paper quads were hand digitized.  The digitizers used by
+   USGS were and Altek, Model AC40 Datatab Controller and a Tektronix 4958 digit-
+   izing tablet.  The internal resolution of both are .001 inches.  The digitizer
+   used by NRCS is an Altek AC30 with an internal resolution of .001 inches.
+   The digitizing operating mode is a point mode, meaning a coordinate pair is
+   generated on each depression of the cursor button.  This allows the operator
+   greater control in maintaining the accuracy and integrity of the drainage basin
+   line.  Double precision is used to digitize all quads.  Precision is the term
+   used to refer to the number of significant digits used to store numbers for
+   each coordinate value.  For double precision data sets, 15 significant digits
+   define each coordinate pair.
+   Digitizing is done directly into the Universal Transverse Mercator (UTM)
+   coordinate system.  PA is divided into two UTM zones.  The western section of
+   the state from the Ohio border eastward to 78 degrees longitude is in Zone 17
+   and the eastern section, from 78 degrees longitude eastward to the Delaware
+   River, is in Zone 18.  The tic registration error, or route mean square error
+   (RMSE) for all quads was to be no more than .006 inch or 3.66 meters when
+   digitizing directly into UTM.  RMSE is a calculation showing the difference
+   between original and new registration locations and the lower the error, the
+   more accurate the digitizing or transformation into real-world coordinates,
+   e.g. UTM.  Some of the RMSE exceeded .006-inch limit, due to the condition
+   of the paper maps with respect to heat and humidity over time. Repeated attemps
+   to get the registration below .006 inch failed for these quads so the lowest
+   attainable RMSE was used.  These quads are listed below with the RMSE in
+   inches:
+ 
+      Trenton East (.007)             Lansdale (.012)
+      Germantown (.009)
+ 
+   The datum used for digitizing is NAD27.  Most of the quads were made before
+   1983 and therefore did not have the NAD83 adjustment and those maps made after
+   1983, still have a NAD27 reference.  Conversion to NAD83 occurs in Phase 3.
+   The snapping tolerance used for lines and nodes is 12 meters.  This
+   distance moves the digitized line or node to coincide exactly with another
+   line or node.  The minimum distance between vertices, or weed tolerance, is
+   one meter.  If a digitized vertex is within the weed tolerance of the pre-
+   viously digitized vertex, it is not used in defining the shape of the digit-
+   ized line.  Nodes are digitized at the registration tics at the corners
+   of the 7.5-minute quads, at all neatline and drainage line intersections, at
+   each drainage basin line intersection, at the intersection of a drainage
+   basin line and stream mouth, at the intersection of a drainage basin line and
+   hydrography feature and at the intersection of a drainage basin line and USGS
+   gaging station.  To guard against inadvertently digitizing the same drainage
+   line twice, a duplicatearcs function was used.  This function specifies that
+   no two lines will share the same nodes.
+ 
+   Once digitizing was completed, topology was built using a dangling line
+   tolerance of 10 meters and a fuzzy tolerance of one meter.  Topology is the
+   term used to define spatial properties of a data set.  Those properties are
+   length, area, connectivity, adjacency, and direction.  A dangle length of 10
+   meters is used to remove an unconnected line, called a dangle, less than or
+   equal to 10 meters in length.  A distance of one meter for the fuzzy tolerance
+   is used as the smallest distance between all line coordinates and is used to
+   resolve intersections not well defined due to computer precision limitations.
+   This data set has both line and polygon topology.  Check plots were
+   produced and compared to the digitized map in an effort to verify the integrity
+   of the digitized lines.  Errors on the check plots include undigitized lines,
+   misshaped lines, and excessive node placement.  Further editing is done to
+   eliminate sliver polygons, connectivity errors, polygon label errors, and
+   node placement errors.  Once the editing of the digitized quads were complete,
+   topology was re-built.
+ 
+   EDGEMATCHING and DATUM CONVERSION
+ 
+   Edgematching is a procedure used to edit digital data sets ensuring that
+   all features crossing adjacent quadrangle borders have the same locations.
+   Edgematching of the drainage basin lines began with joining all 7.5-minute
+   quads within the 1:100,000-scale boundaries.  Typically, mapjoining half of
+   these quads within a selected 100K boundary in a checkerboard pattern was
+   used.  Joined maps are adjusted to a data set of state-wide tic locations with
+   identity links established at the tic location.  An identity link is used to
+   nail-down a known location so that it does not move during any position
+   adjusting procedures.  Once both halves of the checkerboard 100K quad have been
+   adjusted, they are mapjoined together into a single data set for the 100K.  Due
+   to the age of the quads and differences in individual quad contour interpre-
+   tations, edgematching across borders was a time-consuming procedure.  Nodes
+   across boundaries are adjusted to the respective midpoint between nodes.
+   There is no attribute in the arc attribute table showing which lines are
+   move from the original digitizing in the edgematching procedure.  These same
+   steps are used in the edgematching of the 100,000-scale boundaries.
+ 
+   Datums are used in defining parameters of a particular coordinate system
+   with control points of known geometric relationships.  One element that
+   defines a datum is a spheroid, which is used to approximate the shape of the
+   earth. Defining the shape of the earth in NAD27 is the Clarke spheroid of 1866
+   Since 1927, technological advances in surveying and geodesy, (the science of
+   determing the size and shape of the earth), forced the issue of defining a new
+   datum.  Using these advances, NAD83 uses the GRS80 spheroid which caused some
+   adjustments to be made in topographic maps made before 1984.  Most of the
+   quad maps used for the drainage basin digitizing were made before 1986 and
+   did not have the NAD83 corrections located near the neatline corners of the
+   map.  Therefore, all digitizing was done in NAD27.  Conversion from NAD27 to
+   NAD83 is conducted by using the NADCON tranformation program from the National
+   Oceanic and Atmospheric Administration.  NADCON is the abbreviation of North
+   American Datum Conversion.
+ 
+   USGS REVIEW AND APPROVAL
+ 
+   The final phase for release of this data set to the public is USGS review
+   and approval.  Criteria used in the review process include positional accuracy
+   and precision with repsect to source, contextual accuracy, attribute accuracy
+   topological consistency, and the data set must have the appropriate metadata
+   which is descriptive information about the data set and travels with the data
+   electronically.  Evaluation of positional accuracy may include source material
+   comparisons, deductive estimate based on errors introduced at each processing
+   step, and comparisons to stable-base material, if available.  Contextual
+   accuracy compares the data set to other similar spatial data sets with respect
+   to time, scale, and aerial extent.  Attribute accuracy is verification of the
+   descriptive data for the spatial features and may include verification against
+   source maps.  Topological consistency, e.g. no dangling lines exist in a
+   data set with only polygon topology, must be maintained throughout the data
+   to insure integrity.  Information about projection, points, and lines, as well
+   as, row and column information for raster data sets are checked.
+ 
+   Revisions made to data
+ 
+   This geo_data set is Revison 1.0.  The next Revision, 2.0., will
+   have a water/land component.  Some of the larger streams are depicted at the
+   1:24,000-scale as have two sides, or banks.  The initial digitizing of the
+   drainage basins did not account for these features, so a water-surface area
+   does not exist in Revision 1.0.  By combining the drainage basin data set
+   with a selected hydrography data set, land-surface areas may be more accurately
+   measured.  Selected hydrography features include double-lined streams, ponds,
+   lakes, and reservoirs. Wetlands will not be included.
+ 
+   Reviews applied to data
+ 
+   Peer review, 1/25/96, Andy Cohen, GIS-Specialist, USGS-WRD, Troy, NY
+   ______________________________________________________________________
+
+   Scott supplied me with 15 original material, 1:24,000-scale, topo quad-
+   drangles, a statewide index to topo maps, a copy of Pennsylvania Gazet-
+   teer of Streams, a copy of WRD Memo 94.34, and 1:100,000-scale digital
+   hydrography data for 10 separate areas of eastern Pennsylvania.  Using
+   these materials and my own copy of 1:500,000-scale HUC map for Pennsyl-
+   vania, I was able tp perform a fairly detailed peer review of the sub-
+   ject data set.
+
+   I used approximately 6 hours for this task and generally found the sub-
+   ject data set to be accurate and complete, faithfully reproducing those
+   drainage areas described in the associated metadata.
+   To check for positional and contextual accuracy, I selected 5 of the 15
+   quadrangles, fairly well distributed around the basin, and produced paper
+   plot overlays, including hydrography.  Attribute accuracy and topological
+   consistency were checked on-screen using ArcEdit for the same quads.  Two
+   polygons per quad were checked.  A complete metadata statement was also pro-
+   duced using the Arc DOCUMENT command and checked for completeness.
+
+   below are my findings:
+ 
+   1.  Positional Accuracy:  I found no missing linework.  My plots did not
+   exactly overlay on the original quad probably because these originals
+   are paper (not scale-stable material), some of which dated back to the
+   1950s.  These paper quads have seen a lot of use in terms of paper
+   wrinkling and general warpage.  Only slight shifting of the overlay plot
+   was needed to verify that all the digitized linework for each of the
+   selected quads was accurate and complete.  There were some instances
+   where edgematching between quads was kind of rough, noteably on the
+   Milford Square and Edgemere quadrangles.
+
+   2. Contextual Accuracy:  I found no errors when comparing the digitized
+   linework to original printed hydrography on the source maps.  However,
+   on the Milford Square quad I found several large discrepancies between
+   printed hydrography on the quad and the digitized 1:100,000-scale hydro-
+   graphy.  I realize that this is not a valid comparison for contextual
+   accuracy but it does raise some questions as to the timeliness of the
+   hydrography.  Has the hydrography changed between the published date of
+   the Milford Square quad (1957) and the date of the 1:100,000-scale digital
+   hydrography (19??)?
+
+   3. Attribute Accuracy:  Attributes were checked for 10 polygons (2 in each
+   Quad).  Only 1 erroneaous WRDS# was detected - DELAWARE-ID = 137 (Edge-
+   mere quad) WRDS# should be 5382.  However, 7 out of 10 polygons had in-
+   correct SQM data.  I think this may have come about by not recalculating
+   this attribute subsequent to one of more BUILD commands.  SQM for the
+   entire data set needs to be recalculated.
+
+   4.  Topological Consistency: There were no labelerrors in the data set.
+   However, 4 dangling arcs were discovered, 1 each in the Auburn and Frank-
+   ford quads and 2 in the Orwigsburg quad.  These dangling arcs should be
+   removed.
+
+   The metadata, as produced by the Arc DOCUMENT command, was also reviewed. The
+   numbering scheme for the different parts of the metadata seemed to be only
+   partially available, i.e., parts 1-4 were completed but not numbered as such.
+   Parts 5-7 included their respective numbers.  Parts 8 and 9 were missing their
+   numbers.  Other comments are noted.
+
+   It is my opinion that this data set is a valuable, probably long-awaited com-
+   pliment to the digital hydrology of Pennsylvania.  The authors can be proud
+   to offer GIS users this high-quality product.
+ 
+   Response to peer review by Andy Cohen, Scott A. Hoffman, USGS-WRD,
+   Lemoyne, PA., 4/22/96:
+   -------------------------------------------------------------------------------
+   Item 1, Positional Accuracy: Resolved, edgematching was checked and corrected
+   for the entire data set.
+ 
+   Item 2, Contextual Accuracy: Hydrography in the Milford Square 7.5-minute
+   quadrangle was not further investigated because it is outside the scope of this
+   data set.
+ 
+   Item 3, Attribute Accuracy: Resolved, Edgemere error corrected and SQM item
+   recalculated.
+ 
+   Item 4, Topological Consistency: Resolved, dangling arcs removed.
+ 
+   Item 5, Metadata:  Typos, numbering scheme, and missed lines corrected.
+
+   ===============================================================================
+ 
+   Peer review, Michele Winowitch, GIS research technician, Pennsylvania State
+   University, Environmental Resources Research Institute, University Park, PA.,
+   letter to Scott A. Hoffman
+   -----------------------------------------------------------------------------
+ 
+   I have reviewd the Delaware River watershed boundary Arc/Info coverage as
+   you requested.  Using the PennDOT 1994 stream coverages as a background,
+   one county at a time, I checked to make sure the streams fell inside the
+   watersehd boundaries.  I also checked, to the best of my ability, that the
+   boundaries made sense.  I found a few errors that I thought you might want
+   to look at:  (see enclosed map)
+
+   1.  4 dangling arcs, 2 major ones.
+
+   2.  This boundary has a straight vertical line running down the western
+   half.
+ 
+   3.  These are small boundaries that to me look out of place, especially
+   the ones in Chester County.  There are no new streams/tributaries to
+   justify a new boundary.
+
+   The final thing I noticed is that there is no boundary along the Delaware
+   River dividing Pennsylvania from New Jersey.  I unfortunately don't have
+   a copy of the standards the USGS used when delineating these boundaries, so
+   I'm not sure if this is the norm or not.
+ 
+   Other than these minor observations, I feel this coverage is a good repre-
+   sentation of the watershed boundaries for the Delaware River basin and we
+   plan to use it for many projects.
+ 
+   ----------------------------------------------------------------------------
+   Response to peer review by Michele Winowitch, 4-22-96, Scott A. Hoffman,
+   USGS-WRD, Lemoyne, PA.:
+   ----------------------------------------------------------------------------
+   Item 1: Resolved, dangling arcs corrected.
+ 
+   Item 2: Resolved, line deleated.
+ 
+   Item 3: Smaller boundaries tend to be project sites within the PA District,
+   therefore, no corrections are necessary.
+ 
+   Item 4: Resolved, state boundary added from the PennDOT county boundary file.
+ 
+ 
+   =============================================================================
+ 
+   Related spatial and tabular data sets and programs
+ 
+   GAZ.DAT is related to the .PAT of each data set with a relate named
+   DELA.REL.
+ 
+   RELATION NAME:     dela18.rel
+   TABLE IDENTIFIER:  gaz.dat
+   DATABASE NAME:     INFO
+   INFO ITEM:         WRDS#
+   RELATE COLUMN:     WRDS#
+   RELATE TYPE:       ordered
+   RELATE ACCESS:     RW
+
+ 
+   Revisions:
+ 
+   None.
+ 
+   References_Cited:
+ 
+   Environmental Systems Research Institute, Inc., 1992, Understanding GIS:
+   The Arc/Info method: Redlands, California, p. xxvii-xxiii, 5-1-5-4.
+ 
+   ---, 1991, Arc/Info Users Guide: Map projections and coordinate management,
+   p. C-1, C-2.
+ 
+   Pennsylvania Department of Environmental Resources, 1989, Pennsylvania
+   gazetteer of streams, 324 p.
+ 
+   Nebert, Douglas D., 1989, Review of edgematching procedures for digital
+   cartographic data used in geographic information systems (GIS): U.S.
+   Geological Survey Open-File Report 89-579, Portland, Oregon.
+ 
+   Seaber, Paul R., Kapinos, F. Paul, Knapp, George L., 1987, State hydrologic
+   unit maps: U.S. Geological Survey Open-File Report 84-708, 216 p.
+
+   Snyder, John P., and Voxland, Philip M., An album of map projections: U.S.
+   Geological Survey Professional Paper 1453, p. 12, 13, 100,101.
+ 
+   Notes:
+ 
+   Without the following individuals, the lengthy and time-consuming
+   processes of digitizing, editing, and attributing could not have been
+   timely and efficiently done:
+
+   Naomi Weisbeker (USGS, hydrologic technician)
+   Amanda Hasemeier (NRCS, physical scientist)
+ 
+   Currentness_Reference:
+ 
+   Maintenance_and_Update_Frequency:
+ 
+   Unknown: Dependent on available funding.
+ 
+   Access_Constraints:
+ 
+   None.
+ 
+   Data_Set_Credit:
+ 
+   Veronica Kasi, PA Dept. of Natural Resources
+   Provided labor in the form of college student interns.
+ 
+   Cheryl Johnson, Natural Resources Conservation Service
+   Provided labor.
+ 
+   Kevin Breen, USGS, WRD, LSUS NAWQA chief
+   Provided the initial funding to get the state digitized for his
+   study unit.
+ 
+   Completeness_Report:
+ 
+   Horizontal_Positional_Accuracy_Report:
+ 
+   Due to the nature of this data set, it is difficult to determine a true
+   positional accuracy.  This data set is an interpretation of an interpreta-
+   tion...a photogramatrist interpretated the contour lines from an aerial
+   photo and a USGS hydrologist determined the drainage basin line.  Therefore
+   within the scope of the delineation of the drainage basin lines, these data
+   are accurate within 1:24,000-scale guidelines.
+ 
+   Vertical_Positional_Accuracy_Report:
+ 
+ 
+   Cloud_Cover:
+ 
+ 
+ 
+ 
+   Reviews_Applied_to_Data:
+   Related_Spatial_and_Tabular_Data_Sets:
+   Other_References_Cited:
+   Notes:
+  Time_Period_of_Content:
+    Range_of_Dates/Times:
+      Beginning_Date: 10/94
+      Ending_Date: 4/19/96
+    Currentness_Reference:
+  Status:
+    Progress:  In review
+    Maintenance_and_Update_Frequency:
+  Spatial_Domain:
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -76.4304
+      East_Bounding_Coordinate: -74.6865
+      North_Bounding_Coordinate: 42.0007
+      South_Bounding_Coordinate: 39.7151
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus:  none
+      Theme_Keyword:  Delaware River drainage basin boundaries in Pennsylvania
+    Place:
+      Place_Keyword_Thesaurus:  none
+      Place_Keyword:  Eastern Pennsylvania, Delaware River basin
+    Stratum:
+      Stratum_Keyword_Thesaurus:  none
+      Stratum_Keyword:
+    Temporal:
+      Temporal_Keyword_Thesaurus:  none
+      Temporal_Keyword:
+  Access_Constraints:
+  Use_Constraints:
+ 
+  These data were digitized from 7.5-minute paper topographic quadrangles,
+  therefore, edgematching inconsistencies resulted along the map borders which
+  are caused by the expansion and contraction of paper due to heat and humidity
+  In order to maintain polygon topology, a midpoint edgematching scheme was use
+  to resolve the border conflicts and may have altered the original digitizing.
+  This is a dynamic data set, meaning it is in a constant state of change
+  in part, to mans continual reshaping of the earths surface.  Many surface
+  feature changes in areas of high or continually developing land use are not
+  shown.  Surface-mining drainage area changes started after 1986 are not depicted
+  on any of the maps.  Showing land-use change over each quad and reflecting the
+  change in the drainage basin data set varies from quad to quad.  Some of the
+  maps digitized are from the early 1950's.
+  Drainage boundaries delineated in areas of large urban expanse are highly
+  questionable due to the network of underground drainage systems.  These basins
+  are based soley on the contour lines on the map and have not been field
+  checked to insure accuracy for drainage into any particular named stream.
+ 
+ 
+  Point_of_Contact:
+  Data_Set_Credit:
+  Security_Information:
+    Security_Classification_System: None
+    Security_Classification:  UNCLASSIFIED
+    Security_Handling_Description: None
+  Native_Data_Set_Environment: dgux, 5.4R3.10, AViiON UNIX, ARC/INFO version 7.0.3
+  Cross_Reference:
+    Originator: Hoffman, Scott A. and Kernan, James T.
+    Publication_Date: 
+    Publication_Time: 
+    Title: Digital drainage basin boundaries of named streams in PA., Delaware River
+    Edition: 1.0
+    Geospatial_Data_Presentation_Form: map
+    Series_Information:
+      Series_Name: Open-File
+      Issue_Identification: xx
+    Publication_Information:
+      Publication_Place: 
+      Publisher: 
+    Other_Citation_Details: 
+    Online_Linkage: 
+    Larger_Work_Citation: 
+ 
+Data_Quality_Information:
+  Attribute_Accuracy:
+    Attribute_Accuracy_Report:  See Entity_Attribute_Information
+    Quantitative_Attribute_Accuracy_Assessment:
+      Attribute_Accuracy_Value:  See Explanation
+      Attribute_Accuracy_Explanation:
+        Attribute accuracy is described, where present, with each
+        attribute defined in the Entity and Attribute Section.
+  Logical_Consistency_Report:  Polygon and chain-node topology present.
+  Completeness_Report:
+ 
+  Positional_Accuracy:
+    Horizontal_Positional_Accuracy:
+      Horizontal_Positional_Accuracy_Report:
+      Quantitative_Horizontal_Positional_Accuracy_Assessment:
+        Horizontal_Positional_Accuracy_Value: 3.66 meters
+        Horizontal_Positional_Accuracy_Explanation:  Resolution as reported
+    Vertical_Positional_Accuracy:
+      Vertical_Positional_Accuracy_Report:
+  Lineage: See also Supplemental_Information:
+    Process_Step:
+      Process_Description: SHOFFMAN ARCEDIT /GIS1/SHOFFMAN/REVIEW/DELAWARE
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960418 
+      Process_Time:  1608
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN BUILD DELAWARE POLY
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960418 
+      Process_Time:  1617
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN CREATELABELS DELAWARE
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960418 
+      Process_Time:  1617
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN IDEDIT DELAWARE
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960418 
+      Process_Time:  1618
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN ARCEDIT /GIS1/SHOFFMAN/REVIEW/DELAWARE
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960418 
+      Process_Time:  1627
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN RENODE DELAWARE
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960418 
+      Process_Time:  1629
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN LABELERRORS DELAWARE
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960418 
+      Process_Time:  1629
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN NODEERRORS DELAWARE
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960418 
+      Process_Time:  1630
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+     Process_Description: SHOFFMAN PROJECT COVER DELAWARE D83 /PAGIS/PROJECTIONS/UTM27.UTM83
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960418 
+      Process_Time:  1645
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN BUILD D83 POLY
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1108
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN ARCEDIT /GIS1/SHOFFMAN/REVIEW/D83
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1208
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN ARCEDIT /GIS1/SHOFFMAN/REVIEW/D83
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1212
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN ARCEDIT /GIS1/SHOFFMAN/REVIEW/D83
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1243
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN BUILD D83 POLY
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1245
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN IDEDIT D83
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1303
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN RENODE D83
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1304
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN NODEERRORS D83 DANGLES
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1304
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN LABELERRORS D83
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1304
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN RENAME D83 DELA18
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1308
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN EXPORT COVER DELA18 DELA18.E00
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960419 
+      Process_Time:  1314
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN BUILD DELA18 POLY
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960422 
+      Process_Time:   937
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN EXPORT COVER DELA18 DELA18.E00
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960422 
+      Process_Time:  1020
+      Source_Produced_Citation_Abbreviation: None
+    Process_Step:
+      Process_Description: SHOFFMAN IMPORT COVER DELA18.E00 DELA18
+      Source_Used_Citation_Abbreviation:None
+      Process_Date:  19960702 
+      Process_Time:  1636
+      Source_Produced_Citation_Abbreviation: None
+  Cloud_Cover:
+ 
+Spatial_Data_Organization_Information:
+  Direct_Spatial_Reference_Method:  Vector
+  Point_and_Vector_Object_Information:
+    SDTS_Terms_Description:
+      SDTS_Point_and_Vector_Object_Type:  Point
+      Point_and_Vector_Object_Count:  1239
+      SDTS_Point_and_Vector_Object_Type:  String
+      Point_and_Vector_Object_Count:  7087
+      SDTS_Point_and_Vector_Object_Type:  GT-polygon composed of chains
+      Point_and_Vector_Object_Count:  1240
+ 
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Planar
+      Grid_Coordinate_System
+        Grid_Coordinate_System_Name:
+        Universal_Transverse_Mercator (UTM)
+          Zone_Number: 18
+        Planar_Distance_Units: METERS
+    Geodetic Model
+      Horizontal_Datum_Name: North American Datum of 1983
+      Ellipsoid_Name:  GRS1980
+ 
+Entity_and_Attribute_Information:
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label:  DELA18.PAT
+      Entity_Type_Definition:  Polygon attribute table for named streams
+      Entity_Type_Definition_Source:  PA Gazetteer of Streams and USGS OFR 84-708
+    Attribute:
+      Attribute_Label:  -
+      Attribute_Definition:  Polygon attribute table for named streams
+      Attribute_Definition_Source:  PA Gazetteer of Streams and USGS OFR 84-708
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  -
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  AREA
+      Attribute_Definition:  Area of poly/region in square coverage units
+      Attribute_Definition_Source:  Computed
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Positive real numbers
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  PERIMETER
+      Attribute_Definition:  Perimeter of poly/region in coverage units
+      Attribute_Definition_Source:  Computed
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Positive real numbers
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  DELA18#
+      Attribute_Definition:  Internal feature number
+      Attribute_Definition_Source:  Computed
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Sequential unique positive integer
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  DELA18-ID
+      Attribute_Definition:  User-assigned feature number
+      Attribute_Definition_Source:  User-defined
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Integer
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  SQM
+      Attribute_Definition:  Polygon area in square miles
+      Attribute_Definition_Source:  Calculated:  AREA item multiplied by .0000003861
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Any positive number greater than 0
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  WRDS#
+      Attribute_Definition:  PA Dept. of Natural Resources stream code number
+      Attribute_Definition_Source:  PA Gazetteer of Streams
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Number range from 0 to 99999
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  HUC
+      Attribute_Definition:  USGS Hydrologic Unit Code (HUC) number
+      Attribute_Definition_Source:  USGS OFR 84-708
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Numbers range from 02040101 to 02040205
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Entity_Type:
+      Entity_Type_Label:  DELA18.AAT
+      Entity_Type_Definition:  Line attribute table
+      Entity_Type_Definition_Source:  Default items created by ArcInfo software
+    Attribute:
+      Attribute_Label:  -
+      Attribute_Definition:  Line attribute table
+      Attribute_Definition_Source:  Default items created by ArcInfo software
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  -
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  FNODE#
+      Attribute_Definition:  Internal number of from-node
+      Attribute_Definition_Source:  Computed
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Sequential unique positive integer
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  TNODE#
+      Attribute_Definition:  Internal number of to-node
+      Attribute_Definition_Source:  Computed
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Sequential unique positive integer
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  LPOLY#
+      Attribute_Definition:  Internal number of poly to left of arc
+      Attribute_Definition_Source:  Computed
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Sequential unique positive integer
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  RPOLY#
+      Attribute_Definition:  Internal number of poly to right of arc
+      Attribute_Definition_Source:  Computed
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Sequential unique positive integer
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  LENGTH
+      Attribute_Definition:  Length of arc in coverage units
+      Attribute_Definition_Source:  Computed
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Positive real numbers
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  DELA18#
+      Attribute_Definition:  Internal feature number
+      Attribute_Definition_Source:  Computed
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Sequential unique positive integer
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+    Attribute:
+      Attribute_Label:  DELA18-ID
+      Attribute_Definition:  User-assigned feature number
+      Attribute_Definition_Source:  User-defined
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value:  Integer
+          Enumerated_Domain_Value_Definition:
+          Enumerated_Domain_Value_Definition_Source:
+  Overview_Description:
+    Entity_and_Attribute_Overview:
+ 
+    LINE ATTRIBUTE TABLE
+ 
+    There are no added items to this table.  All items have been generatd
+    by the ArcInfo GIS software for line topology.
+ 
+    POLYGON ATTRIBUTE TABLE
+ 
+    Three attributes have been added to the polygon attribute table:
+    WRDS#, HUC, and SQM.
+    SQM is abbreviated from SQUARE MILES and is calculated by multiplying
+    the item AREA by .0000003861.  This item is defined as a floating-point
+    number with and input value of four and an output value of 12.
+    WRDS# is the stream code number of the Water Resources Data System
+    database for PaDER and is defined as an integer with and input and output
+    value of six.  For example, the WRDS# 00833 is the Schuylkill River.  The
+    attribute is used by PaDER bureau databases to reference streams for any
+    activity related to streams, e.g. water-quality sampling, water-use
+    surface-water withdrawals.  A separate INFO file, taken from an ASCII
+    data file used to produce the Pennsylvania Gazetteer of Streams called
+    GAZ.DAT, can be included with the drainage basins.  This file contains
+    the WRDS#, drainage area, and stream name with locational information
+    about the stream mouth: county, 7.5-minute quad name, latitude, and
+    longitude.
+    HUC is the USGS hydrologic unit code number and is defined as a
+    numeric value with an input and output of eight.  This attribute has
+    been approved for use by all Federal agencies as a Federal Information
+    Processing Standard (FIPS).  The 8-digit HUC number has four specific
+    codes within it: region, subregion, accounting unit, and cataloging
+    unit.  For example, the HUC number 02040106 is translated as: 02 =
+    Mid Atlantic region, 04 = Delaware River Basin subregion, 03 = Upper
+    Delaware accounting unit, and 04 = Lehigh River cataloging unit.
+    By name, this example HUC is all drainage basins in the Lehigh River
+    drainage basin.
+ 
+    VALID CODES
+ 
+   SQM   - any positive number greater than 0
+ 
+    WRDS# - Delaware River, 00002 - 06666
+ 
+    *** NOTE ***
+ 
+    In some cases, there are gaps in the numbering scheme, i.e,
+    some streams were overlooked or a new name was assigned at
+    a later date.
+    Within each of these groups shown above, there might be addition
+    numbers used to code the streams.  Most of these numbers start
+    from 63000.  For example, Egypt Creek in the Lackawaxen River
+    drainage basin is coded 63274, the Lackawaxen River is coded
+    05449.
+ 
+    There are some imbedded WRDS# equal to zero (0).  Once PaDEP
+    assigns a value, the number will be added to the polygon attribute
+    table.
+ 
+    UPPER DELAWARE
+    HUC  - 02040101 (Upper Delaware)
+    02040102 (East Branch Delaware)
+    02040103 (Lackawaxen)
+    02040104 (Middle Delaware-Mongaup-Brodhead)
+    02040105 (Middle Delaware-Musconetcong)
+    02040106 (Lehigh)
+ 
+    LOWER DELAWARE
+    HUC  - 02040201 (Crosswicks-Neshaminy)
+    02040202 (Lower Delaware)
+    02040203 (Schuylkill)
+    02040204 (Delaware Bay)
+    02040205 (Brandywine-Christina)
+ 
+ 
+ 
+    Entity_and_Attribute_Detail_Citation: Not Available
+ 
+Distribution_Information:
+Metadata_Reference_Section:
+  Metadata_Date: 19960422
+  Metadata_Contact: shoffman
+  Metadata_Standard_Name: FGDC Content Standards for Digital Geospatial Metadata
+  Metadata_Standard_Version:  19940608
+  Metadata_Time_Convention:  Local Time
+  Metadata_Security_Information:
+    Metadata_Security_Classification_System:  None
+    Metadata_Security_Classification:  UNCLASSIFIED
+    Metadata_Security_Handling_Description:  None
+/* end

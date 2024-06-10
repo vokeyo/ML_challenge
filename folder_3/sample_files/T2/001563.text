@@ -1,0 +1,185 @@
+;+
+; Project     : SOHO - LASCO/EIT
+;                   
+; Name        : EIT_DAILY
+;               
+; Purpose     : Get a list of EIT images on a selected date and then create 
+;               a postscript file of a wavelength sequence of 4.
+;               
+; Explanation : creates a database query to get a list of files for a single day and
+;               then brings up a list widget to select the desired files and they
+;               will then be scaled and output to a postscript file
+;               
+; Use         : EIT_DAILY
+;
+;
+;    
+; Inputs      : none:  program will ask a date to be typed in
+;
+; Keywords    :  bw is set to create a black and white output
+;               
+; Outputs     : None:  program creates a postscript file
+;               
+; Calls       : EIT_DAILY
+;
+; Restrictions: Uses data in NRL archive
+;               
+; Side effects: Creates postscript file in current working directory
+;               
+; Category    : Image Display.
+;               
+; Written     : Ken Dere  September 1996.
+;               
+; Modified    : Ken Dere, Dec. 1996 to include black and white output
+;
+; Version     : 
+;-            
+ 
+;______________________________________________________________________________________
+;
+pro EIT_DAILY,out,bw=bw
+;
+common colors,r_orig,g_orig,b_orig,r_curr,g_curr,b_curr
+;
+;
+eit_lister,list
+;
+print,' selected files:  '
+nlist=n_elements(list)
+for i=0,nlist-1 do  print,list(i)
+;
+hdr=headfits(list(0))
+dateobs=strtrim(fxpar(hdr,'date-obs'),2)
+utc=anytim2utc(dateobs)
+outdate=anytim2cal(utc,form=10,/date)
+
+remchar,dateobs,'/'
+timeobs=strtrim(fxpar(hdr,'time-obs'),2)
+iper=strpos(timeobs,'.')
+timeobs=strmid(timeobs,0,iper)
+remchar,timeobs,':'
+
+fname='eit_daily_'+dateobs+'_'+timeobs
+if keyword_set(bw) then fname=fname+'_bw'
+
+openw,luo,fname+'.txt',/get_lun
+;
+print,' ps file name = ',fname
+set_plot,'ps'
+device,filename=fname+'.ps'
+device,bits_per_pixel=8,yoffset=3.,ysize=20.
+device,xoffset=2.54,xsize=6.5*2.54
+device,/times,/bold,font_size=24,/isolatin1
+if not keyword_set(bw) then device,/color
+
+ximsize=0.5*!d.x_size
+   xmargin=10
+   ymargin=100
+yimsize=ximsize*(512.+ymargin)/(512.+2*xmargin)
+;
+nlist=n_elements(list)<4
+wlist=['304A','171A','195A','284A']
+ang=string(197b)
+ion=['He II 304'+ang,'Fe IX/X 171'+ang,'Fe XII 195'+ang,'Fe XV 284'+ang]
+colorwave=['171A','195A','284A','304A']
+;
+xyouts,0.5,0.003,'EIT  '+outdate,/normal,align=0.5,font=0
+;
+;
+timeout=strarr(4)
+lpos=0
+for ilist=0,nlist-1 do begin
+;
+   a=l_rdfts(list(ilist),ahdr)
+   a=eit_degridn(a,ahdr)
+
+   eit_scale,a,sa,ahdr,/logscl
+
+   asize=size(a)
+   asiz1=asize(1)
+   asiz2=asize(2)
+   if asiz1 gt asiz2 and asiz1 lt 512 then begin
+	outsiz=asiz1
+   endif else if asiz2 gt asiz1 and asiz2 lt 512 then begin
+        outsiz=asiz2
+   endif else begin
+	outsiz=512
+	sa=rebin(sa,512,512)
+   endelse
+;
+   dateobs=strtrim(fxpar(ahdr,'date-obs'),2)
+   timeobs=strtrim(fxpar(ahdr,'time-obs'),2)
+   filter=strtrim(fxpar(ahdr,'filter'),2)
+   wave=strtrim(fxpar(ahdr,'sector'),2)
+   exptime=strtrim(fxpar(ahdr,'exptime'),2)
+   printf,luo,list(ilist)+'  '+dateobs+'  '+timeobs+'  '+wave+'  '+filter
+   ipos=where(wave eq wlist)
+   lpos=[lpos,ipos(0)]
+;   print,' wave = ',wave, ' ipos = ',ipos
+;
+   colon=str_index(timeobs,':')
+   timeout(ipos(0))=strmid(timeobs,0,colon(1))
+;
+;
+;     next step is because of difference between full disk scaling
+;
+   if outsiz ge 512 then eit_transfer,tr,wave else eit_transfer,tr,''
+   if keyword_set(bw) then wave = 'bw'
+   eit_ct,r,g,b,wave  
+   tvlct,r,g,b
+
+   out=replicate(255,outsiz+2*xmargin,outsiz+ymargin)
+   out(xmargin,ymargin)=tr(sa)
+
+;
+;   for j_wave = 0, 3 do if wave eq colorwave(j_wave) then i_wave = j_wave
+;   loadct,42 + i_wave,file=getenv('coloreit')
+;
+   tv,out,ipos(0),xsize=ximsize,ysize=yimsize
+endfor
+;
+lpos=lpos(1:*)
+;
+;  put on subtitles
+;
+for ilist=0,nlist-1 do begin
+   dx=2
+   ddx=ximsize/!d.x_size
+;
+   iy=lpos(ilist)/dx
+   ix=(lpos(ilist)-iy*dx)
+   xyouts,(ix+0.5)*ddx,1.02-(iy)*(yimsize/!d.y_size),ion(lpos(ilist))  $
+   ,/normal,align=0.5,font=0
+;
+endfor
+;
+;  put on times
+;
+device,/times,font_size=12,/isolatin1
+;
+for ilist=0,nlist-1 do begin
+   dx=2
+   ddx=ximsize/!d.x_size
+;
+   iy=lpos(ilist)/dx
+   ix=(lpos(ilist)-iy*dx)
+   xyouts,(ix+1.0)*ddx,1.05-(iy+1)*(yimsize/!d.y_size),timeout(lpos(ilist))  $
+   ,/normal,align=1.0,font=0
+;
+endfor
+;
+;  lz data or quicklook data
+;
+ck=grep('lz',list(0))
+if ck ne '' then src='lz' else src='qkl'
+;
+device,/times,font_size=12,/isolatin1
+xyouts,1.,0.003,src,font=0,align=1.,/normal
+;
+;
+device,/close
+set_plot,'x'
+;
+free_lun,luo
+
+end

@@ -1,0 +1,1203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> <!-- Content Copyright Eunice Kennedy Shriver National Institute of Child Health and Human Development -->
+<!-- Page generated 2009-02-05 17:40:38 by CommonSpot Version 4.0 SP3 (Release Candidate 3) (2005-05-09 10:00:00) -->
+<!-- JavaScript & DHTML Code Copyright 1998-2004 PaperThin, Inc.  All rights reserved --> <head> <title>Behavioral, biobehavioral, and social science research</title> <meta name="Description" id="Description" content="Behavioral, biobehavioral, and social science research" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Keywords" id="Keywords" content="" />
+<meta name="Generator" id="Generator" content="CommonSpot Content Server Version 4.0 SP3 (Release Candidate 3)" />
+ 
+<meta name="Keywords" id="Keywords" content="Mental Retardation & Developmental Disabilities (MRDD) Branch, MRDD"> 
+<link rel="stylesheet" href="/style/nichdwww.css" type="text/css" /><style type="text/css">
+	.mw { color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none; }
+	a.mw:link	{color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+	a.mw:visited	{color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+	a.mw:hover	{color:#0000FF;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+</style> <script type="text/javascript" language="JavaScript">
+	var gMenuControlID=0;
+	var menus_included = 0;
+	var jsPageAuthorMode = 0;
+	var jsSessionPreviewON = 1;
+	var jsDlgLoader = '/about/org/cdbpm/mrdd/prog_behbiobehss/loader.cfm';
+	var jsSiteID = 8;
+	var jsSubSiteID = 170;
+	var kurrentPageID = 3934;
+</script><script  src="/commonspot/nw-lame.js" type="text/javascript" language="JavaScript"></script> <link rel="stylesheet" href="/commonspot/commonspot.css" type="text/css" /> </head><body lang="en" class="CS_Document"><script type="text/javascript" language="JavaScript">
+document.CS_StaticURL = "http://www.nichd.nih.gov/";
+document.CS_DynamicURL = "http://www.nichd.nih.gov/";
+</script><a name="__topdoc__"></a><script type="text/javascript" language="JavaScript">
+		// always-include-ie.js  Copyright 1998-2004 PaperThin, Inc. All rights reserved.
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+var bCanRollover=0
+if (bName == "Netscape")
+{
+	if(bVer >= 3)
+		bCanRollover=1;
+}
+else if (bName == "Microsoft Internet Explorer")
+{
+	if(bVer >= 4)
+		bCanRollover=1;
+}
+function ImageSet(imgID,newTarget)
+{
+	if (bCanRollover)
+		document[imgID].src=newTarget;
+}
+function clearStatus()
+{
+	window.status = "";
+}
+function setStatbar(statbar)
+{
+	var strStatbar=unescape(statbar);
+	window.status=strStatbar;
+}
+function onLoadComplete()
+{
+	if( menus_included == 1 )
+		document.onmouseover = document_mouseover;	// defined in menu_ie.js
+}
+function HandleLink(parentID,link,displaylink) 
+{
+	// links are in one of the following formats:
+	// 		cpe_60_0,CP___PAGEID=100
+	// 		CPNEWWIN:WindowName^params@CP___
+	// 			CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2.cfm,1
+	// displaylink is the server relative URL or fully qualified URL
+	if( jsPageAuthorMode == 0 )
+	{
+		windowname = "";
+		windowparams = "";
+		// "CPNEWWIN:" & NewWindowName & "^" & params & "@" & linkStruct.LinkURL; 
+		pos = link.indexOf("CPNEWWIN:");
+		if (pos != -1)
+		{
+			pos1 = link.indexOf ("^");
+			windowname = link.substring (pos+9, pos1);
+			pos2 = link.indexOf ("@");
+			windowparams = link.substring (pos1 + 1, pos2);
+			link = link.substring (pos2 + 1, link.length);
+		}
+		
+		if( displaylink && displaylink != "" )
+		{		
+			if (windowname == "")
+				window.location = displaylink;
+			else
+			{
+				windowparams = FormatWindowParams(windowparams);
+				// window.open (displaylink, windowname, windowparams);
+				// replace the above with the following:
+				woodbournewin = window.open (displaylink, windowname, windowparams);
+				if ( woodbournewin )
+					woodbournewin.focus();
+			}
+		}
+		else
+		{
+			targetLink = link;
+			if (link.indexOf ("CP___") != -1)
+			{
+				httpPos = -1;
+				commaPos = link.indexOf(",");
+				if (commaPos != -1)
+				{
+					targetUrl = link.substr(commaPos + 1);
+					if (targetUrl.indexOf("://") != -1 || targetUrl.indexOf("/") == 0)
+					{
+							httpPos = commaPos + 1;
+					}		
+				}
+		
+				if (httpPos != -1)
+					targetLink = link.substr(httpPos);
+				else
+					targetLink = jsDlgLoader + "?url=/commonspot/utilities/handle-link.cfm&thelink=" + link;
+				
+				if (windowname == "")
+					window.location = targetLink;
+				else
+				{
+					windowparams = FormatWindowParams(windowparams);
+					// window.open (targetLink, windowname, windowparams);
+					// replace the above with the following:
+					woodbournewin = window.open (targetLink, windowname, windowparams);
+					if ( woodbournewin )
+						woodbournewin.focus();
+				}
+			}
+			else
+			{
+				if (windowname == "")
+					window.location = link;
+				else
+				{
+					windowparams = FormatWindowParams(windowparams);
+					// window.open (link, windowname, windowparams);
+					// replace the above with the following:
+					woodbournewin = window.open (link, windowname, windowparams);
+					if ( woodbournewin )
+						woodbournewin.focus();
+				}
+			}
+		}
+	}
+	else if( jsSessionPreviewON == 1 )
+	{
+		previewLink(link);
+	}
+	else
+	{
+		if( document.all[parentID] )
+			document.all[parentID].click();
+	}
+}
+function doWindowOpen(href,name,params)
+{
+	// window.open (href, name, params);
+	// replace the above with the following:
+	woodbournewin = window.open (href, name, params);	
+	if ( woodbournewin )
+		woodbournewin.focus();
+}
+// 	CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2.cfm,1
+function FormatWindowParams(windowparams)
+{
+	if( windowparams.indexOf(":loc=") != -1 || windowparams.indexOf(":ww=") != -1 || windowparams.indexOf(":hh=") != -1 || 
+	    windowparams.indexOf(":left=") != -1 || windowparams.indexOf(":top=") != -1 )
+	{
+		windowparams = substringReplace(windowparams,':left=',',left=');
+		windowparams = substringReplace(windowparams,'left=','left=');
+		windowparams = substringReplace(windowparams,':ww=',',width=');
+		windowparams = substringReplace(windowparams,'ww=','width=');		
+		windowparams = substringReplace(windowparams,':hh=',',height=');
+		windowparams = substringReplace(windowparams,'hh=','height=');
+		windowparams = substringReplace(windowparams,':loc=',',location=');
+		windowparams = substringReplace(windowparams,'loc=','location=');
+		windowparams = substringReplace(windowparams,':dir=',',directories=');
+		windowparams = substringReplace(windowparams,'dir=','directories=');
+		windowparams = substringReplace(windowparams,':tb=',',toolbar=');
+		windowparams = substringReplace(windowparams,'tb=','toolbar=');
+		windowparams = substringReplace(windowparams,':stat=',',status=');
+		windowparams = substringReplace(windowparams,':mb=',',menubar=');
+		windowparams = substringReplace(windowparams,':sb=',',scrollbars=');
+		windowparams = substringReplace(windowparams,':rs=',',resizable=');
+	}
+	return windowparams;
+}
+function substringReplace(source,pattern,replacement)
+{
+	var pos = 0;
+	var target="";
+	while ((pos = source.indexOf(pattern)) != (-1))
+	{
+		target = target + source.substring(0,pos) + replacement;
+		source = source.substring(pos+pattern.length);
+		pos = source.indexOf(pattern);
+	}
+	return (target + source);
+}
+// handle scheduled element links
+function show_sched_element(eid)
+{
+	evalCol = String(self.element_collection);
+	dispFlag = false;
+	ua = navigator.userAgent.toLowerCase();
+	if (bName == "Netscape" || ua.indexOf('aol') >= 0)
+	{
+		// cloned from always-include-ns.js
+		str = self.location.search;
+		
+		arrCtrls = new Array;
+		for (i=0;i < self.element_collection.length;i++){
+			sitem = self.element_collection[i];
+			if (sitem.id == eid)
+				arrCtrls[arrCtrls.length] = sitem.ctrl + "-" + eid;
+		}
+		dispFlag = arrCtrls.length != 0;
+		// Look for the existing forceElement array		
+		if (str != ""){
+			qArray = str.split("&");
+			forceElement = new Array();
+			forceElementIndex = -1;
+			for(i=0; i < qArray.length; i++)
+			{
+				el = qArray[i];
+				qel = el.split('=');
+				if  (qel.length == 1)
+					qel[1] = '';
+				if  (qel[0] == 'forceElement' || qel[0] == '?forceElement'){
+					forceElement = qel[1].split(",");					
+					forceElementIndex = i;
+					break;
+				}
+			}	
+			
+			if (0 == forceElement.length)
+				newLocation = str + "&forceElement=" + arrCtrls.join(",");
+			else{	// There is a forceElement
+				arrCtrlsCnt = arrCtrls.length;
+				for (i=0;i < forceElement.length;i++){				// Loop over the existing elements
+					iel = forceElement[i].split("-");
+					for (j=0;j < arrCtrlsCnt;j++){
+						jel = arrCtrls[j].split("-");
+						if (jel[0] == iel[0])									// Is it the same control
+							break;
+					}
+					if (j == arrCtrls.length)								// We reached the end  and did not find the control
+						arrCtrls[arrCtrls.length] = forceElement[i];
+				}
+				qel = qArray[forceElementIndex].split("=");
+				qArray[forceElementIndex] = qel[0] + "=" + arrCtrls.join(",");
+				newLocation = qArray.join("&");
+			}
+		}
+		else
+			newLocation = "?forceElement=" + arrCtrls.join(",");
+			
+		self.location.search = newLocation;
+		if  (!dispFlag)
+			alert("You do not have access to the requested element.");
+	
+	}
+	else
+	{
+		if ( evalCol != 'undefined' )
+		{		
+			for(i=0;i<self.element_collection.length;i++)
+			{
+				sitem = self.element_collection[i];
+				sp = 'sched_elements_' + sitem.ctrl + '_' + sitem.id;
+				obj = document.all.item(sp);
+				if ( sitem.id == eid && obj != null)
+				{
+					dispFlag = true;
+					if ( obj.length >= 0 )
+					{
+						for(z=0;z<obj.length;z++)
+						{
+							obj(z).style.display = 'block';
+						}
+					}
+					else 
+						document.all(sp).style.display = 'block';
+					
+					for (j=0;j < self.element_collection.length;j++){
+						if (sitem.ctrl == self.element_collection[j].ctrl && i != j){
+							sp = 'sched_elements_' + self.element_collection[j].ctrl + '_' + self.element_collection[j].id;
+							obj = document.all.item(sp);
+							if ( obj != null )
+							{
+								if ( obj.length >= 0 )
+								{	
+									for(z=0;z<obj.length;z++)
+									{
+										obj(z).style.display = 'none';
+									}
+								}
+								else
+									document.all(sp).style.display = 'none';
+							}
+						}
+					}
+				}
+			}
+		}
+		if ( !dispFlag )
+			alert("You do not have access to the requested element.")
+	}
+}
+		</script>
+	<script type="text/javascript" language="JavaScript">
+	function glblLinkHandler(lobj, attr, val)
+	{
+	
+		return;
+	
+	}
+	function onLoadFinished()
+	{
+		onLoadComplete();
+	
+	}
+	var js_gvPageID = 3934;
+	function gotoDiffLang(url)
+	{
+		window.location = url + '&amp;pageid=3934';
+	}
+	</script><!-- showPageModeUI not set --><script type="text/javascript" language="JavaScript">
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+
+var bCanRollover=0
+if (bName == "Netscape")
+{
+	if(bVer >= 3)
+		bCanRollover=1;
+}
+else if (bName == "Microsoft Internet Explorer")
+{
+	if(bVer >= 4)
+		bCanRollover=1;
+}
+
+function ImageSet(imgID,newTarget)
+{
+	if (bCanRollover)
+		document[imgID].src=newTarget;
+}
+</script><!-- -->
+<table border="0" cellpadding="0" cellspacing="0" width="744" summary="Top header graphic and site navigation">
+<tr>
+	<td>
+	<div class="CS_Element_CustomCF"><div id="CS_CCF_3934_961">
+<!-- googleoff: index -->
+<!-- BEGIN HEADER -->
+<!-- Add accessible code here to allow users to "Skip" over the navigation bar -->
+<p class="skip"><a href="#skip">Skip Navigation</a></p>
+<!-- ONLY CHANGE REQUIRED FOR EXTERNAL HEADER/FOOTER -->
+<script type="text/javascript" language="JavaScript">
+<!-- //
+var gExternalSite = ""; // without trailing "/" 
+// -->
+</script>
+<script src="/jsscripts/cookies.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+<!--// KPB //-->
+<script src="/jsscripts/style_sheet_nichdwww.js"></script>
+		<script src="/jsscripts/browser.js"></script>
+		<script src="/jsscripts/wopen.js"></script>
+		<script src="/jsscripts/rotate_banner.js"></script>
+		<script src="/jsscripts/js_Common.js"></script>
+		<script src="/jsscripts/js_htmlCodeCheck.js"></script>
+		<script src="/jsscripts/js_checkandsubmitHeaderSearch.js"></script>
+		<script language="JavaScript">
+			function openWin(URL){
+				aWindow=window.open(URL,"thewindow","width=550,height=380");
+				aWindow.focus();
+			}
+			/*
+			
+			*/
+		</script>
+		<table width="744" cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<!-- BANNER IMAGE SECTION -->
+			<td><a href="/"><script language="JavaScript">changeBanner('/about/org/cdbpm/mrdd/prog_behbiobehss/');</script><noscript><img name="bannerImage" src="/images/header/NICHD_banner1.jpg" alt="Eunice Kennedy Shriver National Institute of Child Health and Human Development" border="0" width="744" height="94" usemap="#bannerMap"></noscript></a></td>
+		</tr>
+		<map name="bannerMap">
+		<area shape="rect" coords="1,1,400,29" href="http://www.nih.gov" target="_blank" alt="National Institutes of Health" title="National Institutes of Health"></area>
+		<area shape="rect" coords="1,29,400,90" href="/" alt="Eunice Kennedy Shriver National Institute of Child Health and Human Development" title="Eunice Kennedy Shriver National Institute of Child Health and Human Development"></area>
+		</map>
+		<form name="nichd_header_search_form" onSubmit="return checkandsubmitHeader(this);" action="/search.cfm" method="get">
+		<tr >
+			<td background="/images/header/topnav_bg.gif" nowrap>
+				
+				<div class="header">
+					<div class="menu">
+					<ul>
+						<li><a href="/health/">Health Information<!--[if IE 7]><!--></a><!--<![endif]-->
+						<table class="headertable"><tr><td>
+							<ul>
+								<li><a href="/health/topics/" title="A to Z health &amp; human development topics">A to Z health &amp; human development topics</a></li>
+								<li><a href="/health/clinicalresearch/" title="Clinical research &amp; clinical trials">Clinical research &amp; clinical trials</a></li>
+								<li><a href="/health/education/" title="Health education">Health education</a></li>
+								<li><a href="/publications/pubs.cfm" title="Publications &amp; materials">Publications &amp; materials</a></li>
+							</ul>
+						</td></tr></table>
+						<!--[if lte IE 6]></a><![endif]-->
+						</li>
+						<li><a href="/research/">Research<!--[if IE 7]><!--></a><!--<![endif]-->
+						<table class="headertable"><tr><td>
+							<ul>
+								<li><a href="/research/org/conducted_at.cfm" title="Research Conducted at the NICHD">Research Conducted at the NICHD</a></li>
+								<li><a href="/research/org/supported_by.cfm" title="Research Supported by the NICHD">Research Supported by the NICHD</a></li>
+								<li><a href="/research/resources/" title="Resources for researchers">Resources for researchers</a></li>
+								<li><a href="/research/supported/" title="Supported research networks &amp; more">Supported research networks &amp; more</a></li>
+								<li><a href="/about/staff/index.cfm?directory_by=spec" title="Who can I talk to about my research?">Who can I talk to about my research?</a></li>
+							</ul>
+						</td></tr></table>
+						<!--[if lte IE 6]></a><![endif]-->
+						</li>
+						<li><a href="/funding/">Funding<!--[if IE 7]><!--></a><!--<![endif]-->
+						<table class="headertable"><tr><td>
+							<ul>
+								
+								<li><a href="/funding/foa/" title="Active Funding Opportunity Announcements (FOAs)">Active Funding Opportunity Announcements (FOAs)</a></li>
+								<li><a href="/funding/research.cfm" title="Funding for Research">Funding for Research</a></li>
+								<li><a href="/funding/training_career.cfm" title="Funding for Training, Education, &amp; Career Development">Funding for Training, Education, &amp; Career Development</a></li>
+								<li><a href="/funding/newsflash/" title="Funding News Flashes">Funding News Flashes</a></li>
+								<li><a href="/funding/policies/" title="Funding Policies and Peer Review">Funding Policies and Peer Review</a></li>
+								<li><a href="/funding/resources.cfm" title="Funding Resources">Funding Resources</a></li>
+							</ul>
+						</td></tr></table>
+						<!--[if lte IE 6]></a><![endif]-->
+						</li>
+						<li><a href="/news/">News & Media<!--[if IE 7]><!--></a><!--<![endif]-->
+						<table class="headertable"><tr><td>
+							<ul>
+								<li><a href="/news/contacts/" title="Media contacts">Media contacts</a></li>
+								<li><a href="/news/resources/" title="Media resources">Media resources</a></li>
+								<li><a href="/news/interview/" title="Need an interview with an NICHD scientist?">Need an interview with an NICHD scientist?</a></li>
+								<li><a href="/news/releases/news.cfm" title="Search news releases">Search news releases</a></li>
+							</ul>
+						</td></tr></table>
+						<!--[if lte IE 6]></a><![endif]-->
+						</li>
+						<li><div class="menu_on"><a href="/about/">About NICHD<!--[if IE 7]><!--></a></div><!--<![endif]-->
+						<table class="headertable"><tr><td>
+							<ul>
+								<li><a href="/about/overview/" title="Institute overview">Institute overview</a></li>
+								<li><a href="/about/staff/" title="Looking for an NICHD staff person?">Looking for an NICHD staff person?</a></li>
+								<li><a href="/about/org/" title="Organization">Organization</a></li>
+								<li><a href="/about/meetings/" title="Scientific meetings, conferences &amp; events">Scientific meetings, conferences &amp; events</a></li>
+								<li><a href="/about/jobs/" title="Working at NICHD">Working at NICHD</a></li>
+							</ul>
+						</td></tr></table>
+						<!--[if lte IE 6]></a><![endif]-->
+						</li>
+					</ul>
+					</div>
+					<div style="display: none"><label for="search_string">Search:</label></div><div class="search"><input type="text" title="Enter search string to search the NICHD Website" name="search_string" id="search_string" value="" class="headerSearchBox" style="vertical-align: bottom;">&nbsp;<input name="submitbtn" type="submit" class="headerSearchBtn" value="Search" style="vertical-align : bottom;"></div>
+				</div>
+				
+			</td>
+		</tr>
+		</form>
+		<tr>
+			<td bgcolor="#3366CC"><img src="/images/spacer.gif" height="3" width="744" alt="" border="0" /></td>
+		</tr>
+		</table>
+	
+<!-- END HEADER -->
+<!-- googleon: index -->
+</div></div>
+	</td>
+</tr>
+<tr>
+	<td bgcolor="#FFFFFF"><img src="/images/spacer.gif" height="10" width="744" alt="" border="0" /></td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="744" summary="Main table containing left side navigation and main content body">
+<tr>
+	<td width="150" valign="top">
+	<div class="CS_Element_CustomCF"><div id="CS_CCF_3934_962">
+<!-- googleoff: index -->
+	<div class="leftnav">
+	
+		
+		
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+							
+				<ul class="leftnav_L0">
+					<li><a href="/about/"  title="About NICHD">About NICHD</a></li>
+				</ul>				
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+				<ul class="leftnav_L1">
+					<li><a href="/about/overview/"  title="Institute overview">Institute overview</a></li>
+				</ul>
+							
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+				<ul class="leftnav_L1">
+					<li><a href="/about/staff/"  title="Looking for an NICHD staff person?">Looking for an NICHD staff person?</a></li>
+				</ul>
+							
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+				<ul class="leftnav_L1on">
+					<li><a href="/about/org/"  title="Organization">Organization</a></li>
+				</ul>
+							
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+				
+					<ul class="leftnav_L2">
+						<li >
+							<a href="/about/org/orgchart/"  title="Organization Chart">Organization Chart</a>
+						</li>
+					</ul>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+				
+					<ul class="leftnav_L2">
+						<li >
+							<a href="/about/org/od/"  title="Office of the Director (OD)">Office of the Director (OD)</a>
+						</li>
+					</ul>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+					<div class="leftnav_L2on">
+						<a href="/about/org/cdbpm/"  title="Center for Developmental Biology & Perinatal Medicine (CDBPM)">Center for Developmental Biology & Perinatal Medicine (CDBPM)</a>
+					</div>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+				<ul class="leftnav_L3">
+					<li ><a href="/about/org/cdbpm/dbgt"  title="Developmental Biology, Genetics & Teratology (DBGT) Branch">Developmental Biology, Genetics & Teratology (DBGT) Branch</a></li>
+				</ul>
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+				<ul class="leftnav_L3">
+					<li class="leftnav_L3on" ><a href="/about/org/cdbpm/mrdd/"  title="Mental Retardation & Developmental Disabilities (MRDD) Branch">Mental Retardation & Developmental Disabilities (MRDD) Branch</a></li>
+				</ul>
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+				<ul class="leftnav_L3">
+					<li style="border-bottom: #666 1px solid; width:150px; "><a href="/about/org/cdbpm/pp/"  title="Pregnancy & Perinatology (PP) Branch">Pregnancy & Perinatology (PP) Branch</a></li>
+				</ul>
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+				
+					<ul class="leftnav_L2">
+						<li >
+							<a href="/about/org/cpr/"  title="Center for Population Research (CPR)">Center for Population Research (CPR)</a>
+						</li>
+					</ul>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+				
+					<ul class="leftnav_L2">
+						<li >
+							<a href="/about/org/crmc/"  title="Center for Research for Mothers & Children (CRMC)">Center for Research for Mothers & Children (CRMC)</a>
+						</li>
+					</ul>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+				
+					<ul class="leftnav_L2">
+						<li >
+							<a href="/about/org/despr/"  title="Division of Epidemiology, Statistics & Prevention Research (DESPR)">Division of Epidemiology, Statistics & Prevention Research (DESPR)</a>
+						</li>
+					</ul>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+				
+					<ul class="leftnav_L2">
+						<li >
+							<a href="http://dir2.nichd.nih.gov/"  target="_blank" title="Division of Intramural Research (DIR)">Division of Intramural Research (DIR)</a>
+						</li>
+					</ul>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+				
+					<ul class="leftnav_L2">
+						<li >
+							<a href="/about/org/dsr/"  title="Division of Scientific Review (DSR)">Division of Scientific Review (DSR)</a>
+						</li>
+					</ul>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+				
+					<ul class="leftnav_L2">
+						<li >
+							<a href="/about/org/dsp/"  title="Division of Special Populations (DSP)">Division of Special Populations (DSP)</a>
+						</li>
+					</ul>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+			
+			<!-- *| LEVEL 2 |* -->
+				
+					<ul class="leftnav_L2">
+						<li style="border-bottom: #999 1px solid; width:144px; ">
+							<a href="/about/org/ncmrr/"  title="National Center for Medical Rehabilitation Research (NCMRR)">National Center for Medical Rehabilitation Research (NCMRR)</a>
+						</li>
+					</ul>				
+				
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+				<ul class="leftnav_L1">
+					<li><a href="/about/meetings/"  title="Scientific meetings, conferences & events">Scientific meetings, conferences & events</a></li>
+				</ul>
+							
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+			
+			<!-- *| LEVEL 0 |* -->
+			
+			
+			<!-- *| LEVEL 1 |* -->
+			
+				<ul class="leftnav_L1">
+					<li><a href="/about/jobs/"  title="Working at NICHD">Working at NICHD</a></li>
+				</ul>
+							
+			
+			
+			<!-- *| LEVEL 2 |* -->
+			
+			
+			<!-- *| LEVEL 3 |* -->
+			
+			<!-- *| LEVEL 4 |* -->
+			
+		<img src="/images/about_leftnav_footer.jpg" width="150" height="164" border="0" alt="about image">
+		
+		
+		
+		
+	</div>
+<!-- googleon: index -->
+</div></div>
+	</td>
+	
+	<!-- from template-standard-page.cfm -->
+	<td width="444" valign="top">
+		<table width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+<div class="CS_Element_Layout"><table id="idLayout963" cellpadding="0" cellspacing="0" class="CS_Layout_Table" width="100%" summary=""><tr class="CS_Layout_TR"><td id="idCell963x1x1" class="CS_Layout_TD"><div class="CS_Element_CustomCF"><div id="CS_CCF_3934_5510">
+	<!-- googleoff: all -->
+	<!-- begin print/email icons -->
+	
+	<div style="margin:4px 0px 0px 0px;"><!-- this style is passed in via the customcf element in the template -->  </div>
+	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><!-- the table attributes can be passed via the customcf element in the template -->
+		
+<script>
+	function FormatURL(url, file_name) {
+		/* 
+		ensures that if: 
+			- we're passing in a file_name it's inserted in the proper location and 
+			- that there is a ? mark present
+		*/
+		var qmark, leading, trailing, i;
+		qmark = "?"; 
+		
+		if (url == "") 
+			return url;
+		// insert file_name before the ?
+		i = url.indexOf(qmark);
+		if ( i > -1) {
+			leading = url.substring(0, i);
+			trailing = url.substring(i, url.length);
+			url = leading + file_name + trailing;
+		}
+		else {
+			url = url + file_name + qmark;
+		}
+		return url;
+	}
+	
+	function renderFor(render_option,file_name){
+		myDate = new Date(); // allows to open more than one excel spreatsheets or print docs 
+		if (file_name)
+			filename = '/' + myDate.getSeconds() + file_name;
+		else
+			filename = "";
+			
+		var thepage = "/about/org/cdbpm/mrdd/prog_behbiobehss/index.cfm" + filename + "?renderfor" + render_option + "=1" ;
+		var theform = eval("document.RenderForForm");
+		theform.action = thepage;	
+		theform.submit();
+	}
+	function renderForOtherPage(render_option, theurl, file_name){
+		// properly format theurl so we can add it to the form's action
+		if (file_name)
+			filename = '/' + file_name;
+		else
+			filename = "";
+		theurl = FormatURL(theurl, filename);
+		var thepage = theurl + "&renderfor" + render_option + "=1" ;
+		var theform = eval("document.RenderForForm");
+		theform.action = thepage;
+		// alert("theform.action: " + theform.action);
+		theform.submit();
+	}
+</script>
+<form action="/about/org/cdbpm/mrdd/prog_behbiobehss/index.cfm" method="post" name="RenderForForm" target="RenderForFormTarget">
+	
+	
+</form>
+		
+		<tr>
+			<td class="template_icons" align="left">Last Update: 01/28/2009</td>
+			
+			<td class="template_icons" align="right">
+				
+				<a href="javascript:renderFor('print');"><img src="/images/printer-friendly.gif" border="0" alt="Printer Friendly" width="20" height="15" align="absmiddle"></a>&nbsp;<a href="javascript:renderFor('print');">Printer Friendly</a>
+				&nbsp;
+				
+					<a href="/email-this-page.cfm" target="_blank"><img src="/images/email-this-page.gif" border="0" alt="Email This Page" width="18" height="15" align="absmiddle"></a>&nbsp;<a href="/email-this-page.cfm" target="_blank">Email This Page</a>
+					&nbsp;
+				
+				
+			</td>
+		</tr>
+	</table>
+	
+	
+	
+	
+	
+	
+	<!-- end print/email icons -->
+	
+	<!-- Add accessible code here to allow users to "Skip" over the navigation bar -->
+	<p class="skip">
+	<a name="skip" id="skip" tabindex="1"><!--skip anchor--></a>
+	</p>
+	
+	<!-- googleon: all -->
+	</div></div><font size="1"><br /></font><div class="CS_Element_Textblock"><div class="pageTitle">Behavioral, biobehavioral, and social science research</div><div class="bodyText"><p><strong>Learning, Cognition and Memory in Mental Retardation and Developmental Disabilities</strong>--The Branch supports neuroanatomic, neurophysiologic, structural and functional imaging, and neuropsychologic studies of the processes involved. Studies of attention, executive function, working memory, problem solving, and self-awareness are especially encouraged. Also needed is research on the effect of teratogens, such as parental alcohol or drug use on cognitive and behavioral development. Elucidation of critical periods in development across the lifespan is needed.</p><p><strong>Family and Community Relationships in Mental Retardation and Developmental Disabilities</strong>--Because of the national movement to provide home and family care rather than institutionalization for persons with mental retardation or other developmental disabilities, research on family and community variables is of special interest. Research on the processes of mutual influence between persons with mental retardation or other developmental disabilities and other members of their families or communities is encouraged. Studies of racial and ethnic influences on family adaptation and community acceptance and on differential access to health care are needed.</p><p><strong>Communication and Language in Mental Retardation and Developmental Disabilities</strong>--The impact of motor and sensory limitations on communicative ability in mental retardation and other developmental disabilities needs to be addressed. Research on verbal and nonverbal communication is of major interest. Studies of precursors of language and of the transition from prelinguistic to linguistic communication are of special interest. Research is needed on the development of nonverbal communication and on the communicative functions of aberrant behavior.</p><p><strong>Social and Effective Development in Mental Retardation and Developmental Disabilities</strong>--Recent advances in understanding the neurobiology of social and emotional behavior make this an important area for research. Human and animal studies are needed of the psychobiological and behavioral factors and processes that influence social and emotional development and expression in mental retardation and other developmental disorders. Treatment studies are also needed.</p><p><strong>Self-Injurious Behavior</strong>--A significant percentage of people with mental retardation exhibit some form of SIB, which often leads to social isolation and restrictive treatments. SIB is among the most damaging of all behavior problems exhibited by people with mental retardation, autism, and related developmental disorders. There is an urgent need for studies into the pathophysiology and behavioral deficits associated with SIB and other repetitive behaviors (including animal models), and into the development of therapeutic strategies.</p><p><strong>Autism and Autism Spectrum Disorders (ASDs</strong>)--Autism is a complex neurodevelopmental disability affecting communication, social functioning, and adaptive behavior. Human and animal research including genetic, neuroanatomic, neurophysiologic, immunologic, neurochemical, and neuropsychologic studies are needed to elucidate the etiology and pathophysiology of this disorder. Research on early diagnosis and identification of co-morbid conditions is also encouraged as are studies of effective behavioral and psychopharmacologic interventions. To learn more about the NICHD's efforts in autism research, visit the <a href="http://www.nichd.nih.gov/autism">Autism Research at the NICHD</a> Web site.</p></div></div><font size="1"><br /></font><div class="CS_Element_CustomCF"><div id="CS_CCF_3934_1284"></div></div></td></tr>
+	</table>	</div>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<!-- from template-standard-page.cfm -->
+	<td width="150" valign="top">
+	<div class="CS_Element_CustomCF"><div id="CS_CCF_3934_1114">
+<!-- googleoff: index -->
+<table width="158" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="8">&nbsp;</td>
+		<td width="150">
+		
+		
+<table width="158" class="rightSideBarBorderTop" cellspacing="0" cellpadding="0">
+<tr>
+	<td class="rightSideBarBG"><div class="rightSideBarTitle">For More Information:</div></td>
+</tr>
+</table>
+<table width="158" class="rightSideBarBorderMiddle" cellspacing="0" cellpadding="0">
+	
+	<tr>
+		<td>
+		
+<div class="rightSideBarSectionHeading">Funding Opportunities</div>
+	<ul class="rightSideBarSectionElement">
+		
+		<li><a href="/funding/foa/foa.cfm">All NICHD Funding Opportunities</a></li>
+	</ul>
+</div>
+<div class="rightSideBarBottomMargin"></div>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td>
+		
+<div class="rightSideBarSectionHeading">News Releases</div>
+ 
+	<ul class="rightSideBarSectionElement">
+		
+			<li><a  href="/news/releases/may302008_rett_syndrome_gene.cfm">NIH Researchers Find That Rett Syndrome Gene is Full of Surprises</a></li>
+		
+	</ul>
+<div class="rightSideBarMoreLinkIndent">
+	<div class="rightSideBarMoreLink">
+	
+		<a  href="/news/releases/news.cfm?org_title=HNT53&org_term=HNT53&topic_term=0&searchtype=keyword">All Related News</a>
+	
+	</div>
+</div>
+<div class="rightSideBarBottomMargin"></div>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td>
+		
+<div class="rightSideBarSectionHeading">Publications/Materials</div>
+	 
+		<ul class="rightSideBarSectionElement">
+		
+			<li style="list-style-image: url(/images/science_pub.gif)"><a href="/publications/pubs_details.cfm?from=&pubs_id=5695">National Institutes of Health (NIH) Research Plan on Down Syndrome</a></li>
+			
+			<li style="list-style-image: url(/images/science_pub.gif)"><a href="/publications/pubs_details.cfm?from=&pubs_id=5694">Neuroscience Research Support at the NICHD</a></li>
+			
+		</ul>
+	
+		<div style="margin: 0px 0px 0px 1px;">
+			<div class="rightSideBarMoreLink">
+				(<img src="/images/science_pub.gif" align="absbottom" border="0" alt="Scientific Icon" width="15" height="11">=<img src="/images/spacer.gif" border="0" alt="" width="2" height="1">Scientific Publication)
+			</div>
+		</div>
+	 
+	<div class="rightSideBarMoreLinkIndent">
+		<div class="rightSideBarMoreLink">
+		
+			<a href="/publications/pubs.cfm?org_title=HNT53&org_term=HNT53&topic_term=0&searchtype=keyword&ttp=5695,5694&listFirst=RP&listorder=date&startrow=1">All Related Publications</a>
+		
+		</div>
+	</div>
+<div class="rightSideBarBottomMargin"></div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		
+<div class="rightSideBarSectionHeading">Research Resources</div>
+	<ul class="rightSideBarSectionElement">
+		
+			<li><a href="http://www.nichd.nih.gov/cochrane/default.cfm"  >Cochrane Neonatal Collaborative Review Group</a></li>
+		
+	</ul>
+<div class="rightSideBarMoreLinkIndent">
+	<div class="rightSideBarMoreLink">
+	
+	</div>
+</div>
+<div class="rightSideBarBottomMargin"></div>
+		</td>
+	</tr>
+	
+		
+		<tr>
+			<td>
+			
+	<div class="rightSideBarSectionHeading">Meetings/Conferences</div>
+		<ul class="rightSideBarSectionElement">
+			<li><a href="/about/meetings/all-related-meetings.cfm?org_title=HNT53&topic_term=0&org_term=HNT53&timeframe=past&display_location=all_related">Past meetings</a></li>
+		</ul>
+	
+<div class="rightSideBarBottomMargin"></div>
+			</td>
+		</tr>
+		
+</table>
+<table width="158" class="rightSideBarBorderBottom" cellspacing="0" cellpadding="0">
+<tr>
+	<td class="rightSideBarBG">
+	
+<div class="rightSideBarTitle">Contact Information:</div>
+	
+	<div class="rightSideBarSectionElement">
+	Dr               Melissa Parisi, MD<BR> Address:<br>6100 Executive Blvd Room 4B09, MSC 7510<BR> Rockville, MD 20852<BR>For FedEx use:<BR>Rockville Md 20852<BR>Phone: 301-496-1383<br>E-mail:<br><a title=parisima@mail.nih.gov class=bodyTextSmall href=mailto:parisima@mail.nih.gov>parisima@ mail.nih.gov</a> 
+	</div>
+<div class="rightSideBarBottomMargin"></div>
+ 
+	<div class="rightSideBarMoreLinkIndent">
+		<div class="rightSideBarMoreLink">
+			
+				<a href="/about/staff/contact_index.cfm?directory_by=bcdl&org='HNT53'&topic_id=0&from=0014194143">All Contacts</a>
+			
+		</div>
+	</div>
+<div class="rightSideBarBottomMargin"></div>
+	</td>
+</tr>
+</table>
+		
+		
+		</td>
+	</tr>
+</table>
+<!-- googleon: index -->
+</div></div>
+	</td>
+		
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="744" summary="Bottom footer site navigation">
+<tr>
+	<td>
+	<div class="CS_Element_CustomCF"><div id="CS_CCF_3934_566">
+	<!-- googleoff: index -->
+	<!-- BEGIN FOOTER -->
+	
+		<table width="744" border="0" cellpadding="0" cellspacing="0" >
+			<tr>
+				<td bgcolor="#FFFFFF" height="20">&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" valign="middle">
+					<div class="footer">
+					
+					<a href="/">NICHD Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/accessibility.cfm">Accessibility</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/contact.cfm">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/disclaimer.cfm">Disclaimer</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about/overview/foia/index.cfm">FOIA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://www.nih.gov/" target="_blank"><img src="/images/footer/footer-nih.gif" border="0" alt="National Institutes of Health" align="middle" width="46" height="31"></a><a href="http://www.nih.gov/" target="_blank">NIH Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://www.dhhs.gov/" target="_blank"><img src="/images/footer/footer-dhhs.gif" border="0" alt="Department of Health and Human Services" align="middle" width="39" height="31"></a><a href="http://www.dhhs.gov/" target="_blank">DHHS Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://www.usa.gov/" target="_blank"><img src="/images/footer/footer-firstgov.gif" border="0" alt="The U.S. government's official web portal" align="middle" width="135" height="37"></a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
+	<!-- END FOOTER -->
+	<!-- googleon: index -->
+	</div></div>
+	</td>
+</tr>
+</table>
+</body></html>

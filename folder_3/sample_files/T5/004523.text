@@ -1,0 +1,149 @@
+<body>
+<pre>
+Enstore primary report for December 17, 2004
+
+There've been no off-hours pages.
+
+
+                Monday
+                ------
+STK   Node stkensrv2 rebooted itself again, like it did last Monday about
+      1:03 PM -- The tarit cron job starts at 1:00.  The system rebooted
+      Tuesday and Wednesday, too.  We were ready with a replacement system
+      Thursday so it stayed up.  Perhaps Friday; or we'll have a downtime
+      next week to replace the dying machine.
+
+      The 63rd file on VO6835 reported a CRC ENCP MISMATCH.  Tested fine.
+      This was slightly complicated by encp's reporting "filesize larger
+      than filesystem allows" on all but the newest systems.
+
+      Had to reboot stkensrv0 because /pnfs/eaMigrA and /pnfs/eaMigrB were
+      removed and we forgot to dismount them everywhere first.  df commands
+      and tarit jobs were hanging.  /etc/fstab was cleaned up everywhere.
+
+      A long-standing complaint from Theory/Patriot about group file
+      permissions has been resolved with the suggestion of alias/functions.
+
+      /auger was exported to augerd1.
+
+      STK continues to ask for information in their ACSLS investigation.
+
+CDF   There was a write error on tape IA7715 in drive 9940B28.  There were
+      dismount failure messages in the logs and mt commands wouldn't work.
+      Rebooting cleared up the problem.
+
+SDSS  Tape JL0860 had a READ_VOL1_READ_ERR on its first attempt to be read.
+      The label was checked, the tape put back into service, and it was
+      successfully processed.
+
+
+                Tuesday
+                -------
+STK   stkensrv[34] had to be rebooted also because of /pnfs/eaMigr[AB]
+
+      /e907 was exported to e907ana[123].
+
+      stkendca4a had 4 "device or resource busy: write() system call stuck
+      inside kernel too long" errors.  No indication of hardware problems.
+
+      A missing /var/log/lastlog file was created on stkendca3a.  Probably
+      related, log files in /var/log on stkendca3a weren't getting rotated.
+      Used chkconfig to set up anacron, which was then run manually.  Had
+      to create smmsp entry in the password file.  Will need to check next
+      Monday that the files get rolled properly.
+
+      Inquisitor reported exceptions.KeyError "file_family INQSRVWT:
+      serve_forever continuing".  A semper fi mystery.
+
+      30 or so SDSS tapes went missing by hiding in the import bins, due
+      operator error.  A couple of 'insert' commands fixed the problem.
+
+      DLT movers DE3E and DG4B went offline due to "dismount failures"
+      which were actually mount failures of the AWOL SDSS tapes.
+
+D0    D0mino caused exceptions.NameError in udpClient.eval_reply with a
+      string of 128 Xs.  The cause remains a mystery.
+
+      There were 2 encp conflict errors reported.
+
+
+                Wednesday
+                ---------
+STK   Tape VO6792 was stuck in drive 994051.  STK extricated the undamaged
+      tape and replaced the drive.
+
+      While the 994051 drive is out of commission, a line shows up once per
+      minute in the log:
+        stkenmvr5a.fnal.gov 026517 root E BE51MV  status should be 2-tuple,
+        is ('ERROR', 9998, '0,0,10,8 online in use      VO6792     T9940A',
+        '', 'MOUNT 9998: Drive 0,0,10,8 is not empty =>. mount VO4932
+        0,0,10,8 => ok,0,0,10,8 online      in use      VO6792     T9940A')
+
+      A 2U replacement machine for stkensrv2 was prepared, put in place,
+      and set to running diagnostics.
+
+      To try to get the pnfs database conversions done before the holidays
+      an attempt is being made to reschedule the late, large ones of SDSS
+      KTeV.  SDSS is agreeable.  KTeV is still up in the air.
+
+      A strange new error showed up in the ACSLS logs.  Added to the
+      information sent to STK.
+      2004-12-15 04:45:59 CSI[0]: ONC RPC: csi_ipcdisp(): status:
+        STATUS_IPC_FAILURE; failed: cl_ipc_read()
+      2004-12-15 04:45:59 ACSSA[0]: IPC failure on socket PIDOmaq.A.
+
+      All the remaining blank 9940 tapes (except CMS's) have been moved
+      back into the blank pool.  The VOLSRV COMMON BLANK POOL LOW alarm
+      count doesn't agree with the figure on the Quota and Usage page.
+
+D0    D0 areas exported to d0mino0{1,2,3}
+
+SDSS  Recommendations sent about a new server
+
+
+                Thursday
+                --------
+STK   Tape VO6794 was stuck in the replacement drive 994051.  STK extricated
+      the undamaged tape and will replace the drive tomorrow.  The tape will
+      remain inaccessible in the interim due to ACSLS limitations.
+
+      Tape VO4328 was recycled.
+
+      Crontabs were cleaned up on stkenmvr{23,24,25,26,28,29,30,31}a.  They
+      had been cloned from stkenmvr5a and were trying to run too many jobs.
+
+CMS   A new round U320 scsi cable was put in place of the flat one, and the
+      U160 terminator replaced with an official U320 model, not that it
+      seemed to be causing any trouble for cmspnfs1.  When rebooted, pnfs
+      didn't come up.  Vladimir looked at it and recommended rebooting.
+      Everything came up fine the second time except /pnfs/cms had to be
+      mounted manually.
+
+      Castorgrid at cern was down for a while.  We weren't sure how that
+      affected us.  Or Polluxgrid.
+
+
+                Friday
+                ------
+STK   Stkensrv1 had frequent alarms about too many processes this week,
+      but that's probably due to the pnfs database transition.
+
+
+                Cron jobs
+                ---------
+STK   tarit locked up on stkensrv[034] due to the removal of the
+        eaMigrA and eaMigrB databases
+      copy_ran_file locked up for several days for the same reason
+      pnfsFastBackup had errors during pnfs conversions, unsurprisingly
+      pageDcacheCmsDccp failed during cmspnfs1 maintenance
+
+CDF   rdist-log ran long (20-25 minutes instead of the usual 5-25
+        seconds) for the 7:50 AM runs on the 10th through 14th.
+        The same pattern happened in November and variations have
+        occurred in earlier months.  It's peculiar but benign.
+      pageDcacheDccp ran long several times.  Due to high CDF load?
+
+D0    copy_ran_file ran long several times (almost 4 hours once)
+        probably due to a tape's being busy.  Why no ACT status?
+</pre>
+</body>

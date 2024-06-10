@@ -1,0 +1,486 @@
+      subroutine ADJUST(dls, tjloc, acp6, acpr, pnew, tnew, rnew, 
+     &                  tadj, radj)
+
+!-----------------------------------------------------------------------
+!
+!     ADJUST handles all of the adjustments due to condensation. the 
+!     computations are not done in the hole. the final adjusted 
+!     temperature and moisture are put into "tnew" and "rnew". the 
+!     actual tendencys produced are stored for diagnostic purposes 
+!     "tadj" and radj".
+!
+!-----------------------------------------------------------------------
+
+      use allocate_mod
+
+      include 'RESOLUTION.h'
+      include 'PARAMETERS.h'
+      include 'STDUNITS.h'
+
+      include 'AREAS.h'
+      include 'BKINFO.h'
+      include 'CONSLEV.h'
+      include 'CLCLE.h'
+      include 'ESTAB.h'
+      include 'GDINFO.h'
+      include 'FLAGS.h'
+      include 'LIMIT.h'
+      include 'QLOGS.h'
+      include 'SET.h'
+      include 'STORJ.h'
+      include 'TIME.h'
+      include 'CONVEC.h'
+
+!-----------------------------------------------------------------------
+!     user interface variables
+!-----------------------------------------------------------------------
+
+      real, intent (in)   , dimension     (ibeg:iend) :: dls
+      real, intent (in)   , dimension     (ibeg:iend) :: tjloc
+      real, intent (inout), dimension     (ibeg:iend) :: acp6
+      real, intent (inout), dimension     (ibeg:iend) :: acpr
+      real, intent (in)   , dimension     (ibeg:iend) :: pnew
+      real, intent (inout), dimension(kmax,ibeg:iend) :: tnew
+      real, intent (inout), dimension(kmax,ibeg:iend) :: rnew
+      real, intent (out)  , dimension(kmax,ibeg:iend) :: tadj
+      real, intent (out)  , dimension(kmax,ibeg:iend) :: radj
+
+!-----------------------------------------------------------------------
+!     internal variables
+!-----------------------------------------------------------------------
+
+      integer, dimension(kmax,imx) :: it
+      integer, dimension(kmax,imx) :: iwk1
+      integer, dimension(kmax,imx) :: iwk2
+      integer, dimension(kmax,imx) :: iwk3
+
+      real, dimension(kmax,imx) :: alrm
+      real, dimension(kmax,imx) :: es
+      real, dimension(kmax,imx) :: esd
+      real, dimension(kmax,imx) :: esp
+      real, dimension(kmax,imx) :: espd
+      real, dimension(kmax,imx) :: h
+      real, dimension(kmax,imx) :: hd
+      real, dimension(kmax,imx) :: pnewd
+      real, dimension(kmax,imx) :: psq
+      real, dimension(kmax,imx) :: psqd
+      real, dimension(kmax,imx) :: psqm
+      real, dimension(kmax,imx) :: ra
+      real, dimension(kmax,imx) :: rad
+      real, dimension(kmax,imx) :: rmew
+      real, dimension(kmax,imx) :: rs
+      real, dimension(kmax,imx) :: rsd
+      real, dimension(kmax,imx) :: ta
+      real, dimension(kmax,imx) :: tad
+      real, dimension(kmax,imx) :: tav
+      real, dimension(kmax,imx) :: tk
+      real, dimension(kmax,imx) :: tkfrac
+      real, dimension(kmax,imx) :: tmew
+      real, dimension(kmax,imx) :: w2d
+      real, dimension(kmax,imx) :: w3d
+      real, dimension(kmax,imx) :: w4d
+      real, dimension(kmax,imx) :: w5d
+      real, dimension(kmax,imx) :: wk1
+      real, dimension(kmax,imx) :: wk2
+      real, dimension(kmax,imx) :: wk3
+      real, dimension(kmax,imx) :: wk4
+      real, dimension(kmax,imx) :: wk5
+      real, dimension(kmax,imx) :: wk6
+      real, dimension(kmax,imx) :: wk7
+      real, dimension(kmax,imx) :: wk8
+      real, dimension(kmax,imx) :: wk9
+      real, dimension(kmax,imx) :: wk10
+      real, dimension(kmax,imx) :: wk11
+      real, dimension(kmax,imx) :: wk12
+
+      real, dimension(imx)       :: ttlprc
+
+!-----------------------------------------------------------------------
+!     code
+!-----------------------------------------------------------------------
+
+      epsln = 1.0e-20
+      tbat  = 3.0e+02
+
+      if(ttime(ngd) .EQ. 0.0) tbat = deltat
+      j = IFIX(tjloc(i1))
+      if(iacp .EQ. 0 .AND. l .EQ. 1) then
+        if(j .EQ. 1 .AND. ngd .EQ. 1) write(stdout,10) nstep
+10    format(' PRECIPITATION RESET AT TIME STEP (NSTEP) = ', i5)
+        do i = i1,i2
+          acp6(i) = 0.0
+        enddo
+      endif
+
+!-----------------------------------------------------------------------
+!     initialize arrays
+!-----------------------------------------------------------------------
+
+      do i = i1,i2
+        do k = 1,kmax
+          ta  (k,i) = tnew(k,i)
+          ra  (k,i) = rnew(k,i)
+          tmew(k,i) = tnew(k,i)
+          rmew(k,i) = rnew(k,i)
+        enddo
+      enddo
+      do i = i1,i2
+        do k = 1,kmax
+          pnewd(k,i) = pnew(i)
+          psq  (k,i) = pnew(i)*qv (k,i)
+          psqm (k,i) = pnew(i)*qmd(k,i)
+        enddo
+      enddo
+
+!----------------------------------------------------------------------- 
+!     check that temperature range does not exceed estab range
+!-----------------------------------------------------------------------
+
+      do i = i1,i2
+        do k = 1,kmax
+          if(ta(k,i) .GT. 375.1) go to 30
+        enddo
+      enddo
+      do i = i1,i2
+        do k = 1,kmax
+          if(ta(k,i) .LT. 173.2) go to 30
+        enddo
+      enddo
+      go to 50
+
+30    continue
+      write(stdout,35) k, i
+35    format(' TEMPERATURE POINT IN "ADJUST" AT POINT (K,I) OUT OF RANGE 
+     & ', 2(I5,2X))
+
+      write(stdout,40) j, ngd, ((tnew(k,i),k=1,kmax),i = i1,i2)
+40    format(' TEMPERATURES BAD IN ROW ', I5,' GRID NUMBER ', I5, /,
+     &(4X,10E11.4))
+
+      stop
+
+50    continue
+
+!----------------------------------------------------------------------- 
+!     only do convective adjustment during corrector step
+!----------------------------------------------------------------------- 
+
+      if(itr .EQ. 0 .AND. l .EQ. 0) go to 420
+
+!----------------------------------------------------------------------- 
+!     calculate h, rs, and es
+!----------------------------------------------------------------------- 
+
+      do i = i1,i2
+        do k = 1,kmax
+          tk    (k,i) = ta(k,i) - 153.16
+          it    (k,i) = tk(k,i)
+          tkfrac(k,i) = tk(k,i) - FLOAT(it(k,i))
+        enddo
+      enddo
+      do i = i1,i2
+        do k = 1,kmax
+          wk3(k,i) = tab  (it(k,i) + 1)
+          wk4(k,i) = tab  (it(k,i) + 2)
+          wk5(k,i) = table(it(k,i) + 1)
+          wk6(k,i) = table(it(k,i) + 2)
+        enddo
+      enddo
+      do i = i1,i2
+        do k = 1,kmax
+          es (k,i) = wk3(k,i) + tkfrac(k,i)*wk5(k,i)
+          esp(k,i) = wk4(k,i) + tkfrac(k,i)*wk6(k,i)
+        enddo
+      enddo
+
+!-----------------------------------------------------------------------
+!     having just obtained the saturated vapor pressure, we will now
+!     obtain the value of saturated mixing ratio "rs" at the current
+!     temperature. using this we will compute the humidity "h".
+!-----------------------------------------------------------------------
+
+      do i = i1,i2
+        do k = 1,kmax
+          rs(k,i) = .622*es(k,i)/(psq(k,i) - es(k,i))
+          h (k,i) = ra(k,i)/rs(k,i)
+        enddo
+      enddo
+      do i = i1,i2
+        do k = 1,kmax
+          h(k,i) = AMAX1(h(k,i),.001)
+          enddo
+      enddo
+
+
+!-----------------------------------------------------------------------
+!     large scale condensation will be done on those points with a
+!     humidity greater than 100 percent
+!-----------------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!     computation of large scale condensation processes
+!-----------------------------------------------------------------------
+
+
+      call largeh (h, rs, es, esp, ta, ra, psq)
+
+      do k = 1,kmax
+        do i = i1,i2
+          tmew(k,i) = ta(k,i)
+          rmew(k,i) = ra(k,i)
+        enddo
+      enddo
+
+!-----------------------------------------------------------------------
+!     ends code for large scale condensation
+!-----------------------------------------------------------------------
+
+      do i = i1,i2
+        do k = 1,kmax-1
+          w2d (k,i) = w2 (k+1,i)
+          w3d (k,i) = w3 (k+1,i)
+          w4d (k,i) = w4 (k+1,i)
+          w5d (k,i) = w5 (k+1,i)
+          tad (k,i) = ta (k+1,i)
+          rad (k,i) = ra (k+1,i)
+          psqd(k,i) = psq(k+1,i)
+          esd (k,i) = es (k+1,i)
+          espd(k,i) = esp(k+1,i)
+          rsd (k,i) = rs (k+1,i)
+          hd  (k,i) = h  (k+1,i)
+        enddo
+      enddo
+      do i = i1,i2
+        w2d (kmax,i) = w2 (kmax,i)
+        w3d (kmax,i) = w3 (kmax,i)
+        w4d (kmax,i) = w4 (kmax,i)
+        w5d (kmax,i) = w5 (kmax,i)
+        tad (kmax,i) = ta (kmax,i)
+        rad (kmax,i) = ra (kmax,i)
+        psqd(kmax,i) = psq(kmax,i)
+        esd (kmax,i) = es (kmax,i)
+        espd(kmax,i) = esp(kmax,i)
+        rsd (kmax,i) = rs (kmax,i)
+        hd  (kmax,i) = h  (kmax,i)
+      enddo
+
+!----------------------------------------------------------------------- 
+!     moist convective adjustment
+!-----------------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!     this first requires a check as to whether the lapse rate of
+!     the environment is greater than a modified moist adiabatic 
+!     lapse rate (with entrainment included)
+!-----------------------------------------------------------------------
+
+      do i = i1,i2
+        do k = 1,kmax
+          tav (k,i) = 0.5*(tad(k,i) + ta(k,i))
+          wk4 (k,i) = tav(k,i) - 153.16
+          wk5 (k,i) = tav(k,i) - 153.16 + .5
+          wk6 (k,i) = tav(k,i) - 153.16 - .5
+          iwk1(k,i) = IFIX(wk4(k,i))
+          iwk2(k,i) = IFIX(wk5(k,i))
+          iwk3(k,i) = IFIX(wk6(k,i))
+          wk4 (k,i) = wk4(k,i) - FLOAT(iwk1(k,i))
+          wk5 (k,i) = wk5(k,i) - FLOAT(iwk2(k,i))
+          wk6 (k,i) = wk6(k,i) - FLOAT(iwk3(k,i))
+        enddo
+      enddo
+      do i = i1,i2
+        do k = 1,kmax
+          wk7 (k,i) = tab  (iwk1(k,i) + 1)
+          wk8 (k,i) = tab  (iwk2(k,i) + 1)
+          wk9 (k,i) = tab  (iwk3(k,i) + 1)
+          wk10(k,i) = table(iwk1(k,i) + 1)
+          wk11(k,i) = table(iwk2(k,i) + 1)
+          wk12(k,i) = table(iwk3(k,i) + 1)
+        enddo
+      enddo
+      do i = i1,i2
+        do k = 1,kmax
+          wk1(k,i) = wk7(k,i) + wk4(k,i)*wk10(k,i)
+          wk2(k,i) = wk8(k,i) + wk5(k,i)*wk11(k,i)
+          wk3(k,i) = wk9(k,i) + wk6(k,i)*wk12(k,i)
+        enddo
+      enddo
+      do i = i1,i2
+        do k = 1,kmax
+        wk2 (k,i) = wk2(k,i) - wk3(k,i)
+        wk3 (k,i) = ta(k,i)*qqlogv(k,i) + tad(k,i)*qqlogd(k,i)
+        wk4 (k,i) = psqm(k,i) + ala6*wk1(k,i)/tav(k,i)
+        wk5 (k,i) = psqm(k,i) + alcp6*wk2(k,i)
+        alrm(k,i) = arcppp*wk3(k,i)*wk4(k,i)/wk5(k,i)
+        wk1 (k,i) = tad(k,i) - ta(k,i) - alrm(k,i)
+        wk4 (k,i) = 0.622*(espd(k,i) - esd(k,i))/psqd(k,i)
+        wk5 (k,i) = arga*wk3(k,i)*alll/(cppp + alll*wk4(k,i))
+        wk3 (k,i) = alp1d(k,i)*SQRT(hd(k,i))
+        wk4 (k,i) = (rs(k,i) - ra(k,i))*w2d(k,i) + (rsd(k,i) - 
+     &              rad(k,i))*w3d(k,i)
+        wk2 (k,i) = (wk3(k,i)*wk1(k,i) - wk5(k,i)*wk4(k,i))/(wk3(k,i)*
+     &               w5d(k,i) + wk5(k,i)*w4d(k,i))
+        enddo
+      enddo
+
+!-----------------------------------------------------------------------
+!     the array "wk2" is the difference between the environment and the 
+!     cloud lapse rate. if this value is greater than 0.05 in any 
+!     vertical level of a column, we assume that the column is
+!     convectively unstable and adjustment must be done. this 
+!     condition is tested in the UNSTBL.  if no column in this row is 
+!     unstable, we will then return from UNSTBL. otherwise, adjustment 
+!     will be done until every column in the row has been made neutral.
+!-----------------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!     now test and do the moist convective adjustment
+!-----------------------------------------------------------------------
+
+      call UNSTBL (ta, ra, psq, psqm, wk2, h, i1, i2, j)
+
+!-----------------------------------------------------------------------
+!     the new temperature and mixing ratio is not instantly adjusted
+!     to the new stable state. rather, the adjustment is spread over a
+!     certain relaxation time "tbat"
+!-----------------------------------------------------------------------
+
+      do i = i1,i2
+        do k = 1,kmax
+          ta(k,i) = tmew(k,i) + (ta(k,i) - tmew(k,i))*deltat/tbat
+          ra(k,i) = rmew(k,i) + (ra(k,i) - rmew(k,i))*deltat/tbat
+        enddo
+      enddo
+
+!-----------------------------------------------------------------------
+!     final check of supersaturation
+!-----------------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!     the humidity for the new adjusted temperature will now be 
+!     obtained. this will be used to determine whether the new state has 
+!     any points that are super-saturated. if so, the excess moisture 
+!     will be rained out
+!-----------------------------------------------------------------------
+
+      do i = i1,i2
+        do k = 1,kmax
+          tk(k,i) = ta(k,i) - 153.16
+          it(k,i) = tk(k,i)
+        enddo
+      enddo
+       do i = i1,i2
+         do k = 1,kmax
+           wk3(k,i) = tab  (it(k,i) + 1)
+           wk5(k,i) = table(it(k,i) + 1)
+         enddo
+      enddo
+      do i = i1,i2
+        do k = 1,kmax
+          es(k,i) = wk3(k,i) + (tk(k,i) - FLOAT(it(k,i)))*wk5(k,i)
+          rs(k,i) = .622*es(k,i)/(psq(k,i) - es(k,i))
+          h (k,i) = AMAX1(ra(k,i)/rs(k,i),.001)
+        enddo
+      enddo
+
+!-----------------------------------------------------------------------
+!     computation of large scale condensation processes
+!-----------------------------------------------------------------------
+
+
+      call largeh (h, rs, es, esp, ta, ra, psq)
+!-----------------------------------------------------------------------
+!     ends code for large scale condensation
+!-----------------------------------------------------------------------
+!-----------------------------------------------------------------------
+!     we have just returned from testing whether any points were
+!     super-saturated. if so, we 'rained out' the excess moisture
+!-----------------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!     estimate precipitation during deltat(delt)
+!-----------------------------------------------------------------------
+
+      if(l .EQ. 0) go to 420
+      do i = i1,i2
+        ttlprc(i) = 0.0
+      enddo
+      do k = 1,kmax
+        do i = i1,i2
+          ttlprc(i) = ttlprc(i) + (rnew(k,i) - ra(k,i))*dqv(k,i)
+        enddo
+      enddo
+      factr = rdeltx*deltat/ggg
+      do i = i1,i2
+        ttlprc(i) = ttlprc(i)*pnew(i)*factr
+        acp6  (i) = acp6(i) + ttlprc(i)
+        acpr  (i) = acpr(i) + ttlprc(i)
+      enddo
+      if(mxmflg .NE. 0) then
+        do i = i1,i2,inc
+          if(j .GT. js .AND. j .LT. jn .AND. 
+     &       i .GT. iw .AND. i .LT. ie) ttlprc(i) = 0.
+          if(j .GT. js .AND. j .LT. jn .AND. 
+     &       i .GT. iw .AND. i .LT. ie) then
+          else
+            ttlp(i,j) = ttlprc(i)/dstp
+          endif
+        enddo
+      endif
+      if(intflg .NE. 0) then
+        do i = i1,i2,inc
+          if(j .GT. js .AND. j .LT. jn .AND. 
+     &       i .GT. iw .AND. i .LT. ie) then
+          else
+            areams(i,j,6,ngd) = areams(i,j,6,ngd) + ttlprc(i)*dls(i)*
+     &                          deltat/dstp
+            endif
+        enddo
+      endif
+
+!----------------------------------------------------------------------- 
+!     negative mixing ratio adjustments
+!-----------------------------------------------------------------------
+
+420   continue
+      do i = i1,i2
+        do k = 1,kmax - 2
+          if(ra(k,i) .LE. epsln) then
+            ra(k+1,i) = ra(k+1,i) - ddqk(i,k)*(epsln - ra(k,i))
+            ra(k+2,i) = ra(k+2,i) - ddqk(i,k)*(epsln - ra(k,i))
+            ra(k,i)   = epsln
+          endif
+        enddo
+      enddo
+
+!-----------------------------------------------------------------------
+!     at the kmax-1 level negative mixing ratios can only be borrowed
+!     from the kmax level
+!-----------------------------------------------------------------------
+
+      do i = i1,i2
+        if(ra(kmax-1,i) .LE. epsln) then
+          ra(kmax,i)  = ra(kmax,i) - ddqk(i,kmax-1)*
+     &                  (epsln - ra(kmax-1,i))
+          ra(kmax-1,i) = epsln
+        endif
+        if(ra(kmax,i) .LE. epsln) then
+          ra(kmax,i) = epsln
+        endif
+      enddo
+
+!-----------------------------------------------------------------------
+!     estimate tendency of pstar*t and pstar*r due to adjustment
+!-----------------------------------------------------------------------
+
+      do i = i1,i2
+        do k = 1,kmax
+          tadj(k,i) = (ta(k,i) - tnew(k,i))*pnewd(k,i)*rdeltx
+          radj(k,i) = (ra(k,i) - rnew(k,i))*pnewd(k,i)*rdeltx
+          tnew(k,i) = ta(k,i)
+          rnew(k,i) = ra(k,i)
+        enddo
+      enddo
+
+      return
+      end subroutine ADJUST

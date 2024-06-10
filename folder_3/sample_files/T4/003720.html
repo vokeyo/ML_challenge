@@ -1,0 +1,207 @@
+<!--     My recommended file name is: hy-design-p10.html     -->
+<html>
+<head>
+<title>Design: 04.02.04.01/P10</title>
+</head>
+<body>
+<h2>Design: 04.02.04.01/P10</h2>
+This is an abstract, language-independent design.  Grim
+details may be found in the <a href="hy-fort-p10.html">
+corresponding source code</a>.
+You may return to the
+<a href="hy-doc.html#p10">documentation
+for the module</a> containing this program design, or to the
+entire <a href="http://www.nist.gov/itl/div894/vvrg/cugini/pvt/hy-module.html">hierarchical table of
+topics covered by the PVT</a>.
+<P><hr><pre>
+PROGRAM 10: Annotation style
+
+CHARACTERISTICS: ynny
+
+OPERATOR SCRIPT:
+
+Throughout this program, when an annotation text primitive is
+displayed, its reference point is marked with an asterisk
+polymarker, and its annotation point with a circle polymarker.
+
+ANNOTATION STYLE 1: This screen should display several examples
+of annotation style #1 (reference point unconnected to annotation
+point), and one example of a different style.  Identify the
+distinct style.
+
+UNSUPPORTED ANNOTATION STYLES: As above, for ANNOTATION STYLE 1.
+
+ANNOTATION STYLE 2: This screen should display several examples
+of annotation style #2 (reference point connected to annotation
+point), and one example of a different style.  Identify the
+distinct style.
+
+NON-MANDATORY REGISTERED ANNOTATION STYLES: This screen displays
+a sample of supported registered annotation styles (at most 8).
+For each displayed style, look up its annotation style identifier
+in the ISO register and verify that the actual appearance of the
+style agrees with the ISO specification.
+
+IMPLEMENTOR DEFINED ANNOTATION STYLES: This screen displays a
+sample of implementor defined annotation styles (at most 8).  For
+each displayed style, look up its annotation style identifier in
+the implementor's documentation and verify that the actual
+appearance of the style agrees with the specification.
+
+COMPLETE DOCUMENTATION FOR IMPLEMENTOR ANNOTATION STYLES: No
+associated picture.  Verify that all the entries in the list of
+available annotation styles for this workstation type are
+documented by the implementor.  The list may be a subset of the
+documented annotation styles.
+
+DESIGN:
+
+use &lt;inquire annotation facilities&gt; to determine:
+  numas  = number of available annotation styles
+  lavsas = list of available standard annotation styles
+  lavras = list of available registered (non-mandatory) annotation styles
+  lavias = list of available implementor-defined annotation styles
+
+<a href = "hy-fort-p10.html#tc01">TEST:</a> <a name="tc01">#SR</a> <a href="hy-doc.html#sr77">77</A>
+      "The list of available annotation styles returned by
+       &lt;inquire annotation facilities&gt; should include styles
+       number 1 and 2."
+pass/fail depending on (lavsas includes styles 1 and 2)
+
+message to operator: throughout this program, annotation text
+  reference point is marked with asterisk polymarker, annotation
+  point with circle polymarker.
+
+if (annotation style #1 not available) then
+   message: skipping tests for style #1
+   goto end_style_1
+endif
+
+*** *** ***   style #1 (unconnected)   *** *** ***
+
+set up perm to randomize order
+ngstyl = random integer from 1 to 3
+display interspersed 3 actual and 3 simulated examples of style #1,
+  with actual #ngstyl done incorrectly (use style #2)
+
+<a href = "hy-fort-p10.html#tc02">TEST:</a> <a name="tc02">#SR</a> <a href="hy-doc.html#sr01">1</A> <a href="hy-doc.html#sr02">2</A> <a href="hy-doc.html#sr05">5</A> <a href="hy-doc.html#sr75">75</A> <a href="hy-doc.html#sr76">76</A> <a href="hy-doc.html#sr78">78</A> <a href="hy-doc.html#sr80">80</A>
+      "The mandatory annotation style number 1 should leave the
+       reference point and the annotation point of the annotation
+       text primitive unconnected."
+
+OPQA/ANNOTATION STYLE 1: Which annotation style is different?
+pass/fail depending on (operator correctly identifies primitive
+  with style #2)
+
+if (2 not available) then
+   goto end_style_1
+endif
+
+lunsup = list of (mostly) unsupported annotation styles, contains:
+  a negative unsupported type (&lt; minimum in lavias)
+  a positive unsupported type (&gt; maximum in lavras)
+  1,
+  2, if supported (the only non-#1 style)
+  0, if not in lavias
+
+Display in random order annotation styles from lunsup
+
+<a href = "hy-fort-p10.html#tc03">TEST:</a> <a name="tc03">#SR</a> <a href="hy-doc.html#sr05">5</A> <a href="hy-doc.html#sr75">75</A> <a href="hy-doc.html#sr76">76</A> <a href="hy-doc.html#sr78">78</A> <a href="hy-doc.html#sr79">79</A> <a href="hy-doc.html#sr80">80</A>
+      "Unavailable annotation styles should be displayed as
+       annotation style number 1."
+
+OPQA/UNSUPPORTED ANNOTATION STYLES: Which annotation style is
+  different?
+pass/fail depending on (the #2 annotation style selected)
+
+end_style_1:
+
+*** *** ***   style #2 (connected)   *** *** ***
+
+if (annotation style #2 not available) then
+   message: skipping tests for style #2
+   goto end_style_2
+endif
+
+set up perm to randomize order
+ngstyl = random integer from 1 to 3
+display interspersed 3 actual and 3 simulated examples of style #2,
+  with actual #ngstyl done incorrectly (use style #1)
+
+<a href = "hy-fort-p10.html#tc04">TEST:</a> <a name="tc04">#SR</a> <a href="hy-doc.html#sr01">1</A> <a href="hy-doc.html#sr02">2</A> <a href="hy-doc.html#sr05">5</A> <a href="hy-doc.html#sr75">75</A> <a href="hy-doc.html#sr76">76</A> <a href="hy-doc.html#sr78">78</A> <a href="hy-doc.html#sr80">80</A>
+      "The mandatory annotation style number 2 should connect
+       the reference point and annotation point with a polyline,
+       using the current attributes."
+
+OPQA/ANNOTATION STYLE 2: Which annotation style is different?
+pass/fail depending on (operator correctly identifies primitive
+  with style #2)
+
+end_style_2:
+
+*** *** ***   registered styles   *** *** ***
+
+regdx = size of lavras
+if regdx &lt; 1 skip to neg_type, with message
+
+if regdx &lt; 9
+   stydis = styles to be displayed = all annotation styles in lavras
+else
+   stydis = styles to be displayed = 8 annotation styles randomly
+                                     selected from lavras
+endif
+
+display in order and label all annotation styles in stydis
+
+<a href = "hy-fort-p10.html#tc05">TEST:</a> <a name="tc05">#SR</a> <a href="hy-doc.html#sr05">5</A> <a href="hy-doc.html#sr75">75</A> <a href="hy-doc.html#sr76">76</A> <a href="hy-doc.html#sr78">78</A> <a href="hy-doc.html#sr81">81</A>
+      "The registered non-mandatory annotation styles (&gt; 2) should
+       agree with their registered description."
+
+OPQA/NON-MANDATORY REGISTERED ANNOTATION STYLES: Is each
+  annotation style depicted according to its numeric identifier's
+  specification in the ISO register?
+pass/fail depending on (operator responds "yes")
+
+neg_type:
+
+*** *** ***   implementor-defined styles   *** *** ***
+
+impdx = size of lavias
+if impdx &lt; 1 goto end_annotation_style, with message
+
+if impdx&lt; 9
+   stydis = styles to be displayed = all annotation styles in lavias
+else
+   stydis = styles to be displayed = 8 annotation styles randomly
+                                     selected from lavias
+endif
+
+display in order and label all annotation styles in stydis
+
+<a href = "hy-fort-p10.html#tc06">TEST:</a> <a name="tc06">#SR</a> <a href="hy-doc.html#sr05">5</A> <a href="hy-doc.html#sr75">75</A> <a href="hy-doc.html#sr76">76</A> <a href="hy-doc.html#sr78">78</A> <a href="hy-doc.html#sr82">82</A>
+      "Implementor-defined annotation styles (&lt; 1) should agree
+       with the descriptions supplied by the implementor."
+
+OPQA/IMPLEMENTOR DEFINED ANNOTATION STYLES: Is each annotation
+  style depicted according to its numeric identifier's
+  specification in the implementor documentation?
+pass/fail depending on (operator responds "yes")
+
+if (impdx &lt;= 8) then
+   all implementor annotation styles already shown - skip test
+   goto end_annotation_style
+endif
+
+<a href = "hy-fort-p10.html#tc07">TEST:</a> <a name="tc07">#SR</a> <a href="hy-doc.html#sr82">82</A>
+      "All reported implementor-defined annotation styles
+       available for a given workstation type should be
+       documented by the implementor."
+
+OPQA/COMPLETE DOCUMENTATION FOR IMPLEMENTOR ANNOTATION STYLES:
+  Are all these reportedly available annotation styles documented
+  by the implementor &lt;lavias&gt; ?
+pass/fail depending on (operator responds "yes")
+
+end_annotation_style:
+
+END PROGRAM 10

@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Expires" content="31 December 1990">
+<title>2001 S.C. Code of Laws Title 31 Chapter 15  Dwellings Unfit For Human Habitation  - www.scstatehouse.net-LPITS</title><link rel="stylesheet" href="maincode.css" media="screen">
+<link rel="stylesheet" href="print.css" media="print">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=ISO-8859-1">
+<LINK REL="SHORTCUT ICON" HREF="/jpeg/stateflagsmall.ico">
+<link rel="icon" href="/jpeg/stateflagsmall.ico" type="image/ico">
+<link rel="stylesheet" href="/main.css" media="all">
+<link rel="stylesheet" href="/print.css" media="print">
+<script language="JavaScript" type="text/javascript" src="/html-pages/logon_lits.js"></script>
+<!--<script language="JavaScript" type="text/javascript" src="/html-pages/submit_shn.js"></script>-->
+<script type="text/javascript">
+
+var sinediemessage = '';
+sinediemessage = 'The 1st regular session of the 118th South Carolina General Assembly will convene January 13, 2009.';
+housemessage = 'The 1st regular session of the 118th South Carolina General Assembly will convene January 13, 2009.';
+senatemessage = 'The 1st regular session of the 118th South Carolina General Assembly will convene January 13, 2009.';
+var sinediefeed = 'sinedie';		// sinedie
+var housemsg = 'housemessage';		// housemessage
+var senatemsg = 'senatemessage';	// senatemessage
+var activesenatefeed = 'Senate'; 	// Senate
+var activesenateccfeed = 'Senatecc'; 	// Senatecc
+var activehousefeed = 'House';	// House
+var activehouseccfeed = 'Housecc';	// Housecc
+var activescchannelfeed = 'SCChannel';	// SCChannel
+var allowrealmedia = true;
+var allowwinmedia = true;
+
+function setLayerDisplay(layerName, toggle)
+{
+	var theLayer = document.getElementById(layerName);
+
+	if(toggle)
+	{
+		theLayer.style.display = "inline";
+	}
+	else
+	{
+		theLayer.style.display = "none";
+	}
+}
+
+function toggleLayerDisplay(layerName)
+{
+	var theLayer = document.getElementById(layerName);
+
+	if(theLayer.style.display == "inline")
+		theLayer.style.display = "none";
+	else
+		theLayer.style.display = "inline";
+}
+
+function setLayerText(layerName, text)
+{
+	var theLayer = document.getElementById(layerName);
+	
+	//alert(text);
+	
+	theLayer.innerHTML = text;
+}
+
+function setSearchCookie(name, myPref, extratime)
+{
+	if(parseInt(extratime) != 0)
+	{
+		var today = new Date();
+		today.setTime(today.getTime() + parseInt(extratime));
+		document.cookie = name + "=" + escape(myPref) + ";expires=" + today.toGMTString();
+	}
+	else
+	{
+		document.cookie = name + "=" + escape(myPref);
+	}
+}
+
+function doGoSubmit(form2, form3, form4)
+{
+	var checked = findChecked(form2.category);
+	
+	if (form2.querytext.value.length<1)
+	{
+		alert("Search value can NOT be null.");
+		return false;
+	}
+	else if ((form2.category[checked].value == 'Bill') && (form2.querytext.value.length>4))
+	{
+		alert("Bill Number can be no more than 4 digits.");
+		return false;
+	}
+
+	setSearchCookie('searchcookie', form2.category[checked].value, 0);
+
+	if(form2.category[checked].value == 'Full')
+	{
+		form3.p_mainsearch.value = form2.querytext.value;
+		form3.submit();
+	}	
+	else if(form2.category[checked].value == 'Bill')
+	{
+		form4.bill1.value = form2.querytext.value;
+		form4.submit();
+	}
+	else
+	{
+		form2.submit();
+	}
+}
+
+function findChecked(buttonGroup)
+{
+	for (var i=0; i<buttonGroup.length; i++)
+	{
+		if (buttonGroup[i].checked)
+		{
+			return i;
+		}
+	}
+}
+function tracking_logon(){
+var thiswindow=window.open ('/cgi-bin/web_logon.exe?first=FIRST','display1Window','left=0,right=0,width=790,height=570,scrollbars=yes,menubar=no');
+thiswindow.focus();}
+
+function launchPlayer(feed, media)
+{
+	if(feed=='sinedie')
+	{
+		alert(sinediemessage);
+	}
+	else if(feed=='housemessage')
+	{
+		alert(housemsg);
+	}
+	else if(feed=='senatemessage')
+	{
+		alert(senatemsg);
+	}
+	else if(allowrealmedia && media=='ram')
+	{
+		if(feed==activehousefeed && media=='ram')
+			location.href = 'http://74.254.75.204:80/ramgen/broadcast/house1.rm';
+
+		else if(feed==activehouseccfeed && media=='ram')
+			location.href = 'http://74.254.75.204:80/ramgen/broadcast/housecc.rm';
+
+		else if(feed=='HouseAudio' && media=='ram')
+			location.href = 'rtsp://74.254.75.204:80/broadcast/houseaudio.rm';
+
+		else if(feed==activesenatefeed && media=='ram')
+			location.href = 'http://74.254.75.204:80/ramgen/broadcast/senate1.rm';
+
+		else if(feed==activesenateccfeed && media=='ram')
+			location.href = 'http://74.254.75.204:80/ramgen/broadcast/senatecc.rm';
+
+		else if(feed==activescchannelfeed && media=='ram')
+			location.href = 'http://74.254.75.204:80/ramgen/broadcast/etv.rm';
+
+		else
+			alert('This feed is temporarily disabled.');
+	}
+	else if(allowwinmedia && media=='asf')
+	{
+		if(feed=='House' && media=='asf')
+			location.href = 'http://74.254.75.214/house';
+
+		else if(feed==activesenatefeed && media=='asf')	
+			location.href = 'http://74.254.75.214/senate';
+
+		else
+			alert('This feed is temporarily disabled.');
+	}
+	else
+	{
+		alert('This feed is temporarily disabled.');
+	}
+}
+</script>
+
+<STYLE type=text/css>
+#font_size {
+	Z-INDEX: 3; FONT: 13px Times New Roman; FONT-WEIGHT: bold; COLOR: white;
+}
+#font_size1 {
+	Z-INDEX: 3; FONT: 15px Times New Roman; FONT-WEIGHT: normal;
+}
+#font_size1b {
+	Z-INDEX: 3; FONT: 15px Times New Roman; FONT-WEIGHT: bold;
+}
+#font_size2 {
+	Z-INDEX: 3; FONT: 11px Times New Roman;
+}
+#form1 {
+	Z-INDEX: 3; LEFT: 400px; FONT: 12px sans-serif; OVERFLOW: hidden; WIDTH: 379px; POSITION: absolute; TOP: 0px; HEIGHT: 60px;
+}
+#small {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px;
+}
+
+font	{FONT-FAMILY: "Times New Roman", serif; FONT-SIZE: 16;}
+font.bill {FONT-FAMILY: "Courier New", serif; FONT-SIZE: 14;}
+font.number {FONT-FAMILY: "Courier New", serif; FONT-SIZE: 16;}
+font.size11 {FONT-SIZE: 11;}
+font.size13white {FONT-SIZE: 13; COLOR: white;}
+font.size15 {FONT-SIZE: 15;}
+font.size16 {FONT-SIZE: 16;}
+font.size24 {FONT-SIZE: 24;}
+font.size24red {FONT-SIZE: 24; COLOR:"#FF0000";}
+font.size32 {FONT-SIZE: 32;}
+</STYLE>
+
+
+<style type="text/css">
+	#searchbox { display: none; }
+	#quicksearchheader {display: none; }
+	#legsearch { display: none; }
+	#legsearchheader {display: none; }
+</style>
+</head>
+<body bgcolor="#FFFFFF"><table width=100% cellpadding =0 cellspacing=0 border=0>
+<tbody>
+<tr>
+	<div id="header" align=center>
+		<div id="topspacer" class=\"nodisplay\" style="position:absolute; height:0px;"><A class="hidenav" href="#skipleftnav">Skip ALL Navigation</A> <A class="hidenav" href="#skipcategory">Skip Category Navigation</A></div>
+		<table width=100% cellpadding=0 cellspacing=0 border=0>
+			<tr class="nodisplay" style="height:0px;"><td></td></tr>
+			<tr><td><div id="headertop" class="nodisplay" align="left"><table width="100%" border=0 cellpadding=0 cellspacing=0><tr><td align="center" valign="middle"><img border=0 src="/jpeg/pagetitle8.jpg" alt="Welcome to the South Carolina Legislature Online"></td></tr></table></div></td></tr>
+			<tr class="nodisplay"><td><div id="headerbottom">
+				<div class="tabstyle" align=center><table width="100%" height=20 border=0 cellpadding=0 cellspacing=0><tr><td class="topbutton"><a class="tab" href="/index.html">HOME</a></td><td class="topbutton"><a class="tab" href="/html-pages/house2.html">HOUSE</a></td><td class="topbutton"><a class="tab" href="/html-pages/senate2.html">SENATE</a></td><td class="topbutton"><a class="tab" style="font-weight:bold" href="/html-pages/legpage.html">CURRENT&nbsp;LEGISLATION</a></td><td class="topbutton"><a class="tab" style="font-weight:bold" href="/html-pages/research.html">RESEARCH</a></td><td class="topbutton"><a class="tab" style="font-weight:bold" href="/html-pages/publications.html">PUBLICATIONS</a></td><td class="topbutton"><a class="tab" style="font-weight:bold" href="/html-pages/citizen.html">CITIZENS'&nbsp;INTEREST</a></td><td class="topbutton"><a class="tab" style="font-weight:bold" href="/html-pages/archives.html">ARCHIVES</a></td></tr></table></div>
+			</div></td></tr>
+			<tr class="nodisplay"><td><div id="topspacer2">&nbsp;</div></td></tr>
+		</table>
+		<div class="printdisplay"><img border=0 src="/jpeg/pagetitleprint.jpg" alt="" title=""><br><hr><br></div>
+		<a name="skipcategory"></a>
+	</div>
+</td></tr>
+	<tr><td>
+<div id="tablecontent">
+	<table width="100%" border=0 cellpadding=0 cellspacing=0><tr>
+		<td width=200 valign=top class="leftbar nodisplay">
+						<div class="menuboxleft" align=left>
+				<div class="nodisplay" style="position:absolute; height:0px; left:-200px;"><A class="hidenav" href="#skipleftnav">Skip Sidebar Navigation</A></div>
+<!--				<div class="headertext" align=center><b>Coming&nbsp;Soon</b></div>
+				<div class="boxstyle">
+					<div id="webstore" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="https://www1.scstatehouse.net/cgi-bin/webstore.exe">Purchase&nbsp;Manuals&nbsp;Online</a><br />
+					</div>
+				</div>
+-->
+<!--				<div class="headertext" style="font-weight: bold;" align=center>What's&nbsp;New?</div>
+				<div class="boxstyle">
+					<div id="webstore" class="leftbarclick">
+						<table><tr><td>&nbsp;<IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"></td>
+<td><A class="thistab" href="https://www1.scstatehouse.net/cgi-bin/webstore.exe">Purchase&nbsp;Legislative Manuals&nbsp;Online</a></td></tr></table>
+					</div>
+					<div id="statehousenetwork" class="leftbarclick">
+					&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="#" onClick="alert('This application is undergoing maintenance and will be back in approximately one hour (6:30PM).  We sincerely apologize for any inconvenience this downtime has caused.'); return false;">Remote&nbsp;Staff&nbsp;Services</a><br /> 
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="#" onClick="shnwindow();">Remote&nbsp;Staff&nbsp;Services</a><br />
+					</div>
+				</div>
+				<br><hr color="#FFFFFF" width="90%" align="center" /><br />
+-->
+
+<!--				<div class="headertext" align=center>What's&nbsp;New?</div>
+				<div class="boxstyle">
+					<div id="PDAFriendly" class="leftbarclick">
+						&nbsp;<IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="/html-pages/PDAFriendlySite.html">PDA-Friendly Web Site</a>
+					</div>
+					<div id="Multisavesearch" class="leftbarclick">
+						&nbsp;<IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="/html-pages/multisearchsave.html">Multi-Search Save</a>
+					</div>
+					</div>
+-->
+				<!--<br><hr color="#FFFFFF" width="90%" align="center" />-->
+
+
+				<div class="boxstyle">
+				<div class="headertext">
+
+				<div id="whatsnew" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="/html-pages/whatsnew.html"><b>What's&nbsp;New?</b></a>
+				</div>
+
+
+<!--				<div id="webstore2" class="leftbarclick">
+					<table><tr><td>&nbsp;<IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"></td>
+					<td><a class="thistab"  href="https://www1.scstatehouse.net/cgi-bin/webstore.exe">Purchase Legislative Manuals Online</a></td></tr></table>
+				</div>
+					<div id="findyourlegislator" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="/cgi-bin/zipcodesearch.exe">Find&nbsp;Your&nbsp;Legislator</a>
+					</div>
+-->
+
+<hr color="#FFFFFF" width="90%" align="center" />
+
+				<div id="homesearch">
+					<div class="headertext" align=center>Quick&nbsp;Links</div>
+					<div class="boxstyle">
+						<div id="search">
+							&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="javascript:void(0);" onClick="toggleLayerDisplay('searchbox');">Quick&nbsp;Search</a><br />
+						</div>
+					</div>
+										<div id="searchbox">
+						<div id="quicksearchheader" class="headertext" align=center>Quick&nbsp;Search</div>
+						<div class="nodisplay" style="position:absolute; left:-2000px">Select radio button to choose category, enter query text in edit box, then click SEARCH button to submit query.</div>
+						<div class="boxstyle" align=center>
+							<table cellpadding=0 cellspacing=0 border=0><tr><td class="searchboxstyle" align=left>
+								<FORM name="lform2" action="/cgi-bin/query.exe" method="POST">
+									<INPUT type="hidden" name="first" value="HOMESEARCH">
+									Category:<br />
+									<input type="radio" name="category" id="l1" value=Bill><label for="l1">Bill&nbsp;Number</label><br>
+									<input type="radio" name="category" id="l2" value=Legislation checked><label for="l2">Legislation</label><br>
+									<input type="radio" name="category" id="l3" value=Budget><label for="l3">Budget</label><br>
+									<input type="radio" name="category" id="l4" value=Code><label for="l4">Code&nbsp;of&nbsp;Laws</label><br>
+									<input type="radio" name="category" id="l5" value=Regs><label for="l5">Code&nbsp;of&nbsp;Regulations</label><br>
+									<input type="radio" name="category" id="l6" value=Constitution><label for="l6">Constitution</label><br>
+									<input type="radio" name="category" id="l7" value=House><label for="l7">House&nbsp;Journals</label><br>
+									<input type="radio" name="category" id="l8" value=Senate><label for="l8">Senate&nbsp;Journals</label><br>
+									<input type="radio" name="category" id="l9" value=Summary><label for="l9">LPITS&nbsp;Bill&nbsp;Summary</label><br>
+									<input type="radio" name="category" id="l10" value=Full><label for="l10">Full&nbsp;Site&nbsp;Search</label><br><br>
+									<label for="lquerytext">Search for:</label><br>
+									<INPUT id="lquerytext" maxLength="149" size=20 name=querytext><br>
+									<INPUT type=hidden value=0000 name=conid> 
+									<INPUT type=hidden value=0 name=result_pos>
+									<input name="searchbutton" type="button" Value="Search" onClick="doGoSubmit(document.lform2, document.lform3, document.lform4);"><input name="resetbutton"type="reset">
+								</FORM>
+									
+								<FORM name="lform3" action="http://ultrasearch.scstatehouse.net:5620/ultrasearch/query/search.jsp" method=post>
+									<input type="hidden" name="usearch_nextview" value="Submit">
+									<input type="hidden" name="usearch_startnum" value="">
+									<input type="hidden" name="usearch_endnum" value="">
+									<input type="hidden" name="usearch.p_attrows" value="">
+									<input type="hidden" name="usearch.p_mode" value="Basic">
+									<input type="hidden" maxlength="2000" name="p_mainsearch">
+								</FORM>
+									
+								<form name="lform4" method=POST action="/cgi-bin/web_bh10.exe">
+									<input type=hidden name="bill1" maxlength="4">
+									<input type=hidden name="session" value="118">
+									<input type=hidden name="summary" size=1 value="T">
+								</form><br />
+							</td></tr></table>
+						</div>
+					</div>
+					<br><hr color="#FFFFFF" width="90%" align="center" />
+				</div>
+
+				<div class="headertext" align=left>Legislative&nbsp;Resources</div>
+				<div class="boxstyle">
+
+					<div id="webstore2" class="leftbarclick">
+					<table><tr><td>&nbsp;<IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"></td>
+					<td><a class="thistab"  href="https://www1.scstatehouse.net/cgi-bin/webstore.exe">Purchase Legislative Manuals Online</a></td></tr></table>
+					</div>
+				
+					<div id="findyourlegislator" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="/cgi-bin/zipcodesearch.exe">Find&nbsp;Your&nbsp;Legislator</a>
+					</div>
+
+					<div id="trackingsystem" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="javascript:litswindow();">Bill&nbsp;Tracking&nbsp;&&nbsp;Reports</a>
+					</div>
+					<div id="multisearch" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="#" onclick="multisearchwindow('INTROMANUAL');">Multi-Criteria&nbsp;Search</a>
+					</div>
+					<div id="legislativemanual" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="/man08/manual08.html">View Legislative&nbsp;Manual</a>
+					</div>
+					<div id="communicators" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="/html-pages/handheldexternal.htm">Handheld&nbsp;Devices</a>
+					</div>
+					<div id="wirelessnetwork" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="/html-pages/wireless.html">Wireless&nbsp;Network</a>
+					</div>
+					<div id="studentspage" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <a class="thistab" href="/html-pages/student.html">Student's&nbsp;Page</a>
+					</div>
+					<div id="statehousenetwork2" class="leftbarclick">
+<!--						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="#" onClick="alert('This application is undergoing maintenance and will be back in approximately one hour (6:30PM).  We sincerely apologize for any inconvenience this downtime has caused.'); return false;">Remote&nbsp;Staff&nbsp;Services</a> -->
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="#" onClick="shnwindow();">Remote&nbsp;Staff&nbsp;Services</a>
+					</div>
+<!--					<div id="webstore2" class="leftbarclick">
+						<table><tr><td>&nbsp;<IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"></td>
+<td><A class="thistab" href="https://www1.scstatehouse.net/cgi-bin/webstore.exe">Purchase&nbsp;Legislative Manuals&nbsp;Online</a></td></tr></table>
+					</div>
+-->
+				</div>
+				<br><hr color="#FFFFFF" width="90%" align="center" />
+				<div class="headertext" align=left><b>SC&nbsp;Code&nbsp;of&nbsp;Laws</b></div>
+				<div class="boxstyle">
+					<div id="fulltextcodesearch" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="/cgi-bin/query.exe?first=FIRST&querytext=&category=Code">Search&nbsp;Full&nbsp;Text</a><br />
+					</div>
+					<div id="titlechapterlist" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="/code/statmast.htm">Title/Chapter&nbsp;List</a><br />
+					</div>
+				</div>
+				<br><hr color="#FFFFFF" width="90%" align="center" />
+				<div class="headertext" align=left><b>SC&nbsp;Code&nbsp;of&nbsp;Regulations</b></div>
+				<div class="boxstyle">
+					<div id="fulltextregsearch" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="/cgi-bin/query.exe?first=FIRST&querytext=&category=Regs">Search&nbsp;Full&nbsp;Text</a><br />
+					</div>
+					<div id="chapterlist" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="/coderegs/statmast.htm">Chapter&nbsp;List</a><br />
+					</div>
+				</div>
+				<br><hr color="#FFFFFF" width="90%" align="center" />
+				<div class="headertext" align=left><b>SC&nbsp;Constitution</b></div>
+				<div class="boxstyle">
+					<div id="fulltextconstitutionsearch" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="/cgi-bin/query.exe?first=FIRST&querytext=&category=Constitution">Search&nbsp;Full&nbsp;Text</a><br />
+					</div>
+					<div id="articlelist" class="leftbarclick">
+						&nbsp; <IMG alt="" title="" border=0 width=6 height=6 src="/jpeg/whitebullet.jpg"> <A class="thistab" href="/scconstitution/scconst.htm">Article&nbsp;List</a><br />
+					</div>
+				</div>
+				<a name="skipleftnav"></a>
+			</div>
+		</td>
+		<td align=center valign=top class="content">
+		<div class="menuboxcontent" align=left>
+			<table border=0 cellpadding=0 cellspacing=0>
+				<tr><td valign=top>
+					<div class="freestyle" align=left>
+
+<span class="boxstyleblack"><a href="/html-pages/archives.html">Archives</a> &gt; <a href="/archives/CodeofLaws.html">South Carolina Code of Laws - Previous Versions</a> &gt; <a href="/archives/CodeofLaws2001/statmast.htm" >2001 Session</a> &gt; <a href="titl31.htm">Title 31</a></span><br /><br />
+
+<div class="sansSerifNormal">
+<div style="margin: 0px 5px 0px 5px">
+	<div align="center"><strong>South Carolina Code of Laws<br />
+	(Unannotated)<br />
+	Current through the end of the 2001 Session</strong></div>
+
+
+
+</p>
+<p align="left">
+<strong><div align="center">Copyright and Disclaimer</div>
+ </p>
+<p align="left">
+</strong> The State of South Carolina owns the copyright to the Code of Laws of South Carolina, 1976, as contained herein.  Any use of the text, section headings, or catchlines of the 1976 Code is subject to the terms of federal copyright and other applicable laws and such text, section headings, or catchlines may not be reproduced in whole or in part in any form or for inclusion in any material which is offered for sale or lease without the express written permission of the Chairman of the South Carolina Legislative Council or the Code Commissioner of South Carolina.
+</p>
+<p align="left">
+This statutory database is current through the 2001 Regular Session and the 2001 Extra Session of the South Carolina General Assembly.  Changes to the statutes enacted by the 2002 General Assembly, which will convene in January 2002, will be incorporated as soon as possible.  Some changes enacted by the 2002 General Assembly may take immediate effect.  The State of South Carolina and the South Carolina Legislative Council make no warranty as to the accuracy of the data, and users rely on the data entirely at their own risk.
+</p>
+<p align="left">
+The Legislative Council by law is charged with compiling and publishing the 1976 Code and it is maintained in a database which may be accessed for commercial purposes by contacting the Legislative Council or the office of Legislative Printing, Information and Technology Systems.</p>
+<div align="center"><strong>Title 31 - Housing and Redevelopment</strong></div>
+<p align="left">
+<div align="center">
+CHAPTER 15.</div>
+</p>
+<p align="left">
+<div align="center"> DWELLINGS UNFIT FOR HUMAN HABITATION</div>
+</p>
+<p align="left">
+<div align="center">ARTICLE 1.</div>
+</p>
+<p align="left">
+<div align="center"> IN MUNICIPALITIES OF OVER 1,000</div>
+</p>
+<p align="left">
+<strong>SECTION 31-15-10.</strong>  Definitions. 
+</p>
+<p align="left">
+The following terms whenever used or referred to in this article shall have the following respective meanings for the purposes of this article, unless a different meaning clearly appears from the context: 
+</p>
+<p align="left">
+(1) &quot;Municipality&quot; shall mean any city or town regardless of population; 
+</p>
+<p align="left">
+(2) &quot;Governing body&quot; shall mean the council or other legislative body charged with governing a municipality; 
+</p>
+<p align="left">
+(3) &quot;Public officer&quot; shall mean the officer or officers who are authorized by ordinances adopted hereunder to exercise the powers prescribed by such ordinances and by this article; 
+</p>
+<p align="left">
+(4) &quot;Public authority&quot; shall mean any housing authority or any officer who is in charge of any department or branch of the government of the municipality or State relating to health, fire or building regulations or to other activities concerning dwellings in the municipality; 
+</p>
+<p align="left">
+(5) &quot;Owner&quot; shall mean the holder of the title in fee simple and every mortgagee of record; 
+</p>
+<p align="left">
+(6) &quot;Parties in interest&quot; shall mean all individuals, associations, corporations and others who have interests of record in a dwelling and any who are in possession thereof;  and 
+</p>
+<p align="left">
+(7) &quot;Dwelling&quot; shall mean any building or structure, or part thereof, used and occupied for human habitation or intended to be so used and includes any outhouses and appurtenances belonging thereto or usually enjoyed therewith. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-20.</strong>  Repairing, closing or demolishing unfit dwellings. 
+</p>
+<p align="left">
+Whenever any municipality of this State finds that there exist in such municipality dwellings which are unfit for human habitation due to (a) dilapidation, (b) defects increasing the hazards of fire, accidents or other calamities, (c) lack of ventilation, light or sanitary facilities or (d) other conditions rendering such dwellings unsafe or insanitary, dangerous or detrimental to the health, safety or morals or otherwise inimical to the welfare of the residents of such municipality, such municipality may exercise its police powers to repair, close or demolish any such dwelling in the manner herein provided. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-30.</strong>  Provisions permitted to be included in ordinances relating to unfit dwellings. 
+</p>
+<p align="left">
+Upon the adoption of an ordinance finding that dwelling conditions of the character described in Section 31-15-20 exist within a municipality, the governing body of such municipality may adopt ordinances relating to the dwellings within such municipality which are unfit for human habitation.  Such ordinances may include the following provisions: 
+</p>
+<p align="left">
+(1) That a public officer be designated or appointed to exercise the powers prescribed by the ordinances; 
+</p>
+<p align="left">
+(2) That whenever a petition is filed with the public officer by a public authority or by at least five residents of the municipality charging that any dwelling is unfit for human habitation or whenever it appears to the public officer (on his own motion) that any dwelling is unfit for human habitation, the public officer shall, if his preliminary investigation discloses a basis for such charges, issue and cause to be served upon the owner of and all parties in interest in such dwelling a complaint stating the charges in that respect and containing a notice that a hearing will be held before the public officer or his designated agent at a place therein fixed not less than ten days nor more than thirty days after the serving of such complaint;  that the owner and parties in interest shall be given the right to file an answer to the complaint and to appear in person or otherwise and give testimony at the place and time fixed in the complaint;  and that the rules of evidence prevailing in courts of law or equity shall not be controlling in hearings before the public officer; 
+</p>
+<p align="left">
+(3) That if, after such notice and hearing, the public officer determines that the dwelling under consideration is unfit for human habitation he shall state in writing his findings of fact in support of such determination and shall issue and cause to be served upon the owner thereof an order 
+</p>
+<p align="left">
+(a) if the repair, alteration or improvement of the dwelling can be made at a reasonable cost in relation to the value of the dwelling (the ordinance of the municipality may fix a certain percentage of such cost as being reasonable for such purpose), requiring the owner, within the time specified in the order, to repair, alter or improve such dwelling to render it fit for human habitation or to vacate and close the dwelling as a human habitation or 
+</p>
+<p align="left">
+(b) if the repair, alteration or improvement of the dwelling cannot be made at a reasonable cost in relation to the value of the dwelling (the ordinance of the municipality may fix a certain percentage of such cost as being reasonable for such purpose), requiring the owner, within the time specified in the order, to remove or demolish such dwelling; 
+</p>
+<p align="left">
+(4) That, if the owner fails to comply with an order to repair, alter or improve or to vacate and close the dwelling, the public officer may cause such dwelling to be repaired, altered or improved or to be vacated and closed;  that the public officer may cause to be posted on the main entrance of any dwelling so closed, a placard with the following words:  &quot;This building is unfit for human habitation;  the use or occupation of this building for human habitation is prohibited and unlawful&quot;; 
+</p>
+<p align="left">
+(5) That, if the owner fails to comply with an order to remove or demolish the dwelling, the public officer may cause such dwelling to be removed or demolished;  and 
+</p>
+<p align="left">
+(6) That the amount of the cost of such repairs, alterations or improvements, vacating and closing, or removal or demolition by the public officer shall be a lien against the real property upon which such cost was incurred and shall be collectible in the same manner as municipal taxes. 
+</p>
+<p align="left">
+(7) If a municipality in demolishing unfit dwellings as permitted by this article contracts with a third party not employed by the municipality to do the work, it must bid the work in conformity with the procurement code applicable to the municipality. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-40.</strong>  Power of municipality to declare nuisances not impaired. 
+</p>
+<p align="left">
+Nothing in Section 31-15-30 shall be construed to impair or limit in any way the power of a municipality to define and declare nuisances and to cause their removal or abatement by summary proceedings or otherwise. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-50.</strong>  Standards in ordinances for determining fitness of dwelling for human habitation. 
+</p>
+<p align="left">
+An ordinance adopted by a municipality under this article shall provide that a public officer may determine that a dwelling is unfit for human habitation if he finds that conditions exist in such dwelling which are dangerous or injurious to the health, safety or morals of the occupants of such dwelling, the occupants of neighboring dwellings or other residents of such municipality.  Such conditions may include the following (without limiting the generality of the foregoing):  Defects therein increasing the hazards of fire, accident or other calamities;  lack of adequate ventilation, light or sanitary facilities;  dilapidation;  disrepair;  structural defects;  uncleanliness.  The ordinance may provide additional standards to guide the public officer or his agents in determining the fitness of a dwelling for human habitation. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-60.</strong>  Service of complaints or orders;  posting and filing copies. 
+</p>
+<p align="left">
+Complaints or orders issued by a public officer pursuant to an ordinance adopted under this article shall be served upon persons either personally or by registered mail, but if the whereabouts of such persons is unknown and cannot be ascertained by the public officer in the exercise of reasonable diligence and the public officer shall make an affidavit to that effect, then the serving of such complaint or order upon such persons may be made by publishing it once each week for two consecutive weeks in a newspaper printed and published in the municipality or, in the absence of such newspaper, in one printed and published in the county and circulating in the municipality in which the dwellings are located.  A copy of such complaint or order shall be posted in a conspicuous place on the premises affected by the complaint or order.  A copy of such complaint or order shall also be filed with the clerk of the county in which the dwelling is located and such filing of the complaint or order shall have the same force and effect as other lis pendens notices provided by law. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-70.</strong>  Rights of persons affected by orders. 
+</p>
+<p align="left">
+Any person affected by an order issued by a public officer may within sixty days after the posting and service of the order petition the circuit court for an injunction restraining the public officer from carrying out the provisions of the order and the court may, upon such petition, issue a temporary injunction restraining the public officer pending the final disposition of the cause.  Hearings shall be had by the court on such petitions within twenty days or as soon thereafter as possible and shall be given preference over other matters on the court's calendar.  The court shall hear and determine the issues raised and shall enter such final order or decree as law and justice may require.  In all such proceedings the findings of the public officer as to facts, if supported by evidence, shall be conclusive.  Costs shall be in the discretion of the court.  The remedies herein provided shall be exclusive remedies and no person affected by an order of the public officer shall be entitled to recover any damages for action taken pursuant to any order of the public officer or because of compliance by such person with any order of the public officer. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-80.</strong>  Provisions in ordinances with respect to powers of public officer. 
+</p>
+<p align="left">
+An ordinance adopted by the governing body of a municipality may authorize a public officer to exercise such powers as may be necessary or convenient to carry out and effectuate the purposes and provisions of this article, including the following powers in addition to others herein granted: 
+</p>
+<p align="left">
+(1) To investigate the dwelling conditions in the municipality in order to determine which dwellings therein are unfit for human habitation; 
+</p>
+<p align="left">
+(2) To administer oaths and affirmations, examine witnesses and receive evidence; 
+</p>
+<p align="left">
+(3) To enter upon premises for the purpose of making examinations, provided such entries be made in such manner as to cause the least possible inconvenience to the persons in possession; 
+</p>
+<p align="left">
+(4) To appoint and fix the duties of such officers, agents and employees as he deems necessary to carry out the purposes of the ordinances;  and 
+</p>
+<p align="left">
+(5) To delegate any of his functions and powers under the ordinances to such officers and agents as he may designate. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-90.</strong>  Sale of materials of removed or demolished dwelling. 
+</p>
+<p align="left">
+If a dwelling is removed or demolished by a public officer he shall sell the materials of such dwelling and shall credit the proceeds of such sale against the cost of the removal or demolition and any balance remaining shall be deposited in the circuit court by the public officer, shall be secured in such manner as may be directed by such court and shall be disbursed by such court to the persons found to be entitled thereto by final order or decree of such court. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-100.</strong>  Funds for enforcement;  estimate of amount needed. 
+</p>
+<p align="left">
+The governing body of any municipality adopting an ordinance under this article shall as soon as possible thereafter prepare an estimate of the annual expenses or costs to provide the equipment, personnel and supplies necessary for periodic examinations and investigations of the dwellings in such municipality for the purpose of determining the fitness of such dwellings for human habitation and for the enforcement and administration of its ordinances adopted under this article.  Any such municipality may make such appropriations from its revenues as it may deem necessary for this purpose and may accept and apply grants or donations to assist it in carrying out the provisions of such ordinances. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-110.</strong>  Establishment by municipality of commission to exercise powers of public officer. 
+</p>
+<p align="left">
+Any municipality adopting an ordinance under the provisions of this article may establish a commission composed of not less than three nor more than seven duly qualified electors of such municipality, to exercise any of the powers authorized to be granted to the public officer by the terms of this article.  The members of this commission shall be appointed by the mayor with approval of a majority of the council or governing body of the municipality and shall serve for such term and compensation as designated by the ordinance.  The commission shall exercise the powers prescribed by the ordinance and formulate the rules of procedure before it;   provided,  that a majority of the members thereof must be present for the conduct of its business, and decisions must be by majority vote of the members present. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-120.</strong>  Article provisions are cumulative. 
+</p>
+<p align="left">
+Nothing in this article shall be construed to abrogate or impair the powers of the courts or of any department of any municipality to enforce any provisions of its charter or its ordinances or regulations, or to prevent or punish violations thereof and the powers conferred by this article shall be in addition and supplemental to the powers conferred by any other law. 
+</p>
+<p align="left">
+<div align="center">ARTICLE 3.</div>
+</p>
+<p align="left">
+<div align="center"> IN COUNTIES</div>
+</p>
+<p align="left">
+<strong>SECTION 31-15-310.</strong>  Definitions. 
+</p>
+<p align="left">
+For the purposes of this article: 
+</p>
+<p align="left">
+(1) &quot;County&quot; shall mean that area comprising the county other than municipalities; 
+</p>
+<p align="left">
+(2) &quot;Public officer&quot; shall mean the officer or officers who are authorized by ordinances adopted hereunder to exercise the powers prescribed by such ordinances; 
+</p>
+<p align="left">
+(3) &quot;Owner&quot; shall mean the holder of the title in fee simple and every mortgagee of record; 
+</p>
+<p align="left">
+(4) &quot;Parties in interest&quot; shall mean all individuals, associations, corporations and others who have interests of record in a dwelling and any who are in possession thereof;  and 
+</p>
+<p align="left">
+(5) &quot;Dwelling&quot; shall mean any building or structure, or part thereof, used and occupied for human habitation or intended to be so used and includes any outhouses and appurtenances belonging thereto or usually enjoyed therewith. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-320.</strong>  Repairing, closing or demolishing unfit dwellings. 
+</p>
+<p align="left">
+Whenever the governing body of any county of this State finds that there exist in the county dwellings which are unfit for human habitation due to (a) dilapidation, (b) defects increasing the hazards of fire, accidents or other calamities, (c) lack of ventilation, light or sanitary facilities or (d) other conditions rendering such dwellings unsafe or insanitary, dangerous or detrimental to the health, safety or morals or otherwise inimical to the welfare of the residents of the county, such county may, upon the approval of a majority of the resident members of the county legislative delegation which the members represent, exercise its police powers to repair, close or demolish any such dwelling. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-330.</strong>  Provisions permitted to be included in ordinances relating to unfit dwellings. 
+</p>
+<p align="left">
+Upon the adoption of an ordinance finding that dwelling conditions of the character described in Section 31-15-320 exist within the county, the county governing body may adopt ordinances relating to the dwellings within the county which are unfit for human habitation.  Such ordinances may include the following provisions: 
+</p>
+<p align="left">
+(1) That a public officer be designated or appointed to exercise the powers prescribed by the ordinances; 
+</p>
+<p align="left">
+(2) That whenever a petition is filed with the public officer by at least five residents of the county charging that any dwelling is unfit for human habitation or whenever it appears to the public officer (on his own motion) that any dwelling is unfit for human habitation, the public officer shall, if his preliminary investigation discloses a basis for such charges, issue and cause to be served upon the owner of and all parties in interest in such dwelling a complaint stating the charges in that respect and containing a notice that a hearing will be held before the public officer or his designated agent at a place therein fixed not less than ten days nor more than thirty days after the serving of such complaint;  that the owner and parties in interest shall be given the right to file an answer to the complaint and to appear in person or otherwise and give testimony at the place and time fixed in the complaint;  and that the rules of evidence prevailing in courts of law or equity shall not be controlling in hearings before the public officer; 
+</p>
+<p align="left">
+(3) That if, after such notice and hearing, the public officer determines that the dwelling under consideration is unfit for human habitation he shall state in writing his findings of fact in support of such determination and shall issue and cause to be served upon the owner thereof an order 
+</p>
+<p align="left">
+(a) If the repair, alteration, or improvement of the dwelling can be made at a reasonable cost in relation to the value of the dwelling (the ordinance of the county may fix a certain percentage of such cost as being reasonable for such purpose), requiring the owner, within the time specified in the order, to repair, alter or improve such dwelling to render it fit for human habitation or to vacate and close the dwelling as a human habitation or 
+</p>
+<p align="left">
+(b) If the repair, alteration or improvement of the dwelling cannot be made at a reasonable cost in relation to the value of the dwelling (the ordinance of the county may fix a certain percentage of such cost as being reasonable for such purpose), requiring the owner, within the time specified in the order, to remove or demolish such dwelling; 
+</p>
+<p align="left">
+(4) That, if the owner fails to comply with an order to repair, alter or improve or to vacate and close the dwelling, the public officer may cause such dwelling to be repaired, altered or improved or to be vacated and closed;  that the public officer may cause to be posted on the main entrance of any dwelling so closed, a placard with the following words:  &quot;This building is unfit for human habitation;  the use or occupation of this building for human habitation is prohibited and unlawful&quot;; 
+</p>
+<p align="left">
+(5) That, if the owner fails to comply with an order to remove or demolish the dwelling, the public officer may cause such dwelling to be removed or demolished;  and 
+</p>
+<p align="left">
+(6) That the amount of the cost of such repairs, alterations or improvements, vacating and closing, or removal or demolition by the public officer shall be a lien against the real property upon which such cost was incurred and shall be collectible in the same manner as county taxes. 
+</p>
+<p align="left">
+(7) If a county in demolishing unfit dwellings as permitted by this article contracts with a third party not employed by the county to do the work, it must bid the work in conformity with the Procurement Code applicable to the county. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-340.</strong>  Power of county to declare nuisances not impaired. 
+</p>
+<p align="left">
+Nothing in Section 31-15-330 shall be construed to impair or limit in any way the power of a county to define and declare nuisances and to cause their removal or abatement by summary proceedings or otherwise. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-350.</strong>  Standards in ordinances for determining fitness of dwelling for human habitation. 
+</p>
+<p align="left">
+An ordinance adopted by the county governing body under this article shall provide that a public officer may determine that a dwelling is unfit for human habitation if he finds that conditions exist in such dwelling which are dangerous or injurious to the health, safety or morals of the occupants of such dwelling, the occupants of neighboring dwellings or other residents in the county.  Such conditions may include the following (without limiting the generality of the foregoing):  Defects therein increasing the hazards of fire, accidents or other calamities;  lack of adequate ventilation, light or sanitary facilities;  dilapidation;  disrepair;  structural defects;  uncleanliness.  The ordinance may provide additional standards to guide the public officer or his agents in determining the fitness of a dwelling for human habitation. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-360.</strong>  Service of complaints or orders;  posting and filing copies. 
+</p>
+<p align="left">
+Complaints or orders issued by a public officer pursuant to an ordinance adopted under this article shall be served upon persons either personally or by registered mail, but if the whereabouts of such persons is unknown and cannot be ascertained by the public officer in the exercise of reasonable diligence and the public officer shall make an affidavit to that effect, then the serving of such complaint or order upon such persons may be made by publishing it once each week for two consecutive weeks in a newspaper printed and published in the county or, in the absence of such newspaper, in one printed and published in the municipality and circulating in the county.  A copy of such complaint or order shall be posted in a conspicuous place on the premises affected by the complaint or order.  A copy of such complaint or order shall also be filed with the clerk of court of the county in which the dwelling is located and such filing of the complaint or order shall have the same force and effect as other lis pendens notices provided by law. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-370.</strong>  Rights of persons affected by orders. 
+</p>
+<p align="left">
+Any person affected by an order issued by a public officer may within sixty days after the posting and service of the order petition the circuit court for an injunction restraining the public officer from carrying out the provisions of the order and the court may, upon such petition, issue a temporary injunction restraining the public officer pending the final disposition of the cause.  Hearings shall be had by the court on such petitions within twenty days or as soon thereafter as possible and shall be given preference over other matters on the court's calendar.  The court shall hear and determine the issues raised and shall enter such final order or decree as law and justice may require.  In all such proceedings the findings of the public officer as to facts, if supported by evidence, shall be conclusive.  Costs shall be in the discretion of the court.  The remedies herein provided shall be exclusive remedies and no person affected by an order of the public officer shall be entitled to recover any damages for action taken pursuant to any order of the public officer or because of compliance by such person with any order of the public officer. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-380.</strong>  Provisions in ordinances with respect to powers of public officer. 
+</p>
+<p align="left">
+An ordinance adopted by the county governing body may authorize a public officer to exercise such powers as may be necessary or convenient to carry out and effectuate the purposes and provisions of this article, including the following powers in addition to others herein granted: 
+</p>
+<p align="left">
+(1) To investigate the dwelling conditions in the county in order to determine which dwellings therein are unfit for human habitation; 
+</p>
+<p align="left">
+(2) To administer oaths and affirmations, examine witnesses and receive evidence; 
+</p>
+<p align="left">
+(3) To enter upon premises for the purpose of making examinations, provided such entries be made in such manner as to cause the least possible inconvenience to the persons in possession; 
+</p>
+<p align="left">
+(4) To appoint and fix the duties of such officers, agents and employees as he deems necessary to carry out the purposes of the ordinances;  and 
+</p>
+<p align="left">
+(5) To delegate any of his functions and powers under the ordinances to such officers and agents as he may designate. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-390.</strong>  Sale of materials of removed or demolished dwelling. 
+</p>
+<p align="left">
+If a dwelling is removed or demolished by a public officer he shall sell the materials of such dwelling and shall credit the proceeds of such sale against the cost of the removal or demolition and any balance remaining shall be deposited in the circuit court by the public officer, shall be secured in such manner as may be directed by such court and shall be disbursed by such court to the persons found to be entitled thereto by final order or decree of such court. 
+</p>
+<p align="left">
+<strong>SECTION 31-15-400.</strong>  Article provisions are cumulative. 
+</p>
+<p align="left">
+Nothing in this article shall be construed to abrogate or impair the powers of the courts or of any department of any municipality in the county to enforce any provisions of its charter or its ordinances or regulations, or to prevent or punish violations thereof and the powers conferred by this article shall be in addition and supplemental to the powers conferred by any other law. 
+</p>
+</div>
+</div>
+</div>
+</table>
+</div>
+</td>
+</table>
+<div id="footer" class="nodisplay" align=center><A class="footertab" href="/html-pages/disclaimer.html">Website Policies</A> | <A class="footertab" href="/html-pages/accessibility.html">Accessibility</A> | <A class="footertab" href="/html-pages/contact.html">Contact Us</A></div>
+
+<div id="printfooter" class="printdisplay serifNormal" align=center style="font-size: 8pt;"><br><br><hr>Legislative Printing, Information and Technology Systems<br>h t t p : / / w w w . s c s t a t e h o u s e . g o v</div>
+
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+

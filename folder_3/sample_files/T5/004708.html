@@ -1,0 +1,466 @@
+<HTML>
+	<HEAD>
+		<TITLE>
+			EO1 LEISA Atmospheric Corrector
+		</TITLE>
+		<META NAME="description" CONTENT="EO1 LEISA Atmospheric Corrector is . . .">
+		<META name="keywords" content="EO1 LEISA Atmospheric Corrector, EFF, technology, EO-1,EO1, eo1, Earth Observing Mission, New Millennium, New Millennium Program, Code 490, spacecraft">
+
+<!-- menu rollover script -->
+<!-- NOTE: editted by s.sabia to NOT unhighlite I+T on rollOUT -->
+<script language="JavaScript">
+<!-- hide this script from non-javascript-enabled browsers
+if (document.images) {
+InewBannerFireworks_02_03 = new Image(55, 16);InewBannerFireworks_02_03.src = '../images/rollImages/home.gif';
+InewBannerFireworks_02_03o = new Image(55, 16);InewBannerFireworks_02_03o.src = '../images/rollImages/home_over.gif';
+InewBannerFireworks_02_04 = new Image(53, 16);InewBannerFireworks_02_04.src = '../images/rollImages/news.gif';
+InewBannerFireworks_02_04o = new Image(53, 16);InewBannerFireworks_02_04o.src = '../images/rollImages/news_over.gif';
+InewBannerFireworks_02_05 = new Image(67, 16);InewBannerFireworks_02_05.src = '../images/rollImages/intranet.gif';
+InewBannerFireworks_02_05o = new Image(67, 16);InewBannerFireworks_02_05o.src = '../images/rollImages/intranet_over.gif';
+InewBannerFireworks_02_06 = new Image(66, 16);InewBannerFireworks_02_06.src = '../images/rollImages/search.gif';
+InewBannerFireworks_02_06o = new Image(66, 16);InewBannerFireworks_02_06o.src = '../images/rollImages/search_over.gif';
+InewBannerFireworks_04_01 = new Image(127, 18);InewBannerFireworks_04_01.src = '../images/rollImages/mission.gif';
+InewBannerFireworks_04_01o = new Image(127, 18);InewBannerFireworks_04_01o.src = '../images/rollImages/mission_over.gif';
+InewBannerFireworks_05_01 = new Image(127, 18);InewBannerFireworks_05_01.src = '../images/rollImages/spacecraft.gif';
+InewBannerFireworks_05_01o = new Image(127, 18);InewBannerFireworks_05_01o.src = '../images/rollImages/spacecraft_over.gif';
+InewBannerFireworks_06_01 = new Image(127, 30);InewBannerFireworks_06_01.src = '../images/rollImages/instrumentsAndTech.gif';
+InewBannerFireworks_06_01o = new Image(127, 30);InewBannerFireworks_06_01o.src = '../images/rollImages/instrumentsAndTech_over.gif';
+InewBannerFireworks_07_01 = new Image(127, 20);InewBannerFireworks_07_01.src = '../images/rollImages/science.gif';
+InewBannerFireworks_07_01o = new Image(127, 20);InewBannerFireworks_07_01o.src = '../images/rollImages/science_over.gif';
+InewBannerFireworks_08_01 = new Image(127, 17);InewBannerFireworks_08_01.src = '../images/rollImages/launch.gif';
+InewBannerFireworks_08_01o = new Image(127, 17);InewBannerFireworks_08_01o.src = '../images/rollImages/launch_over.gif';
+InewBannerFireworks_09_01 = new Image(127, 19);InewBannerFireworks_09_01.src = '../images/rollImages/education.gif';
+InewBannerFireworks_09_01o = new Image(127, 19);InewBannerFireworks_09_01o.src = '../images/rollImages/education_over.gif';
+}
+function di(id,name){
+  if (document.images) {document.images[id].src=eval(name+".src"); }
+}
+
+// function that displays status bar message
+
+function dm(msgStr) {
+  document.returnValue = false;
+  if (document.images) { 
+     window.status = msgStr;
+     document.returnValue = true;
+  }
+}
+var showMsg = navigator.userAgent != "Mozilla/4.0 (compatible; MSIE 4.0; Mac_PowerPC)";
+function dmim(msgStr) {
+  document.returnValue = false;
+  if (showMsg) { 
+    window.status = msgStr;
+    document.returnValue = true;
+  }
+}
+
+// code to run the SHORTCUTS Menu
+var myChoice, mySelection;
+
+function goShortCut(){
+
+myChoice = document.shortCutForm.shortCutMenu.selectedIndex;
+
+/* This line of code assigns the highlighted item in the list menu to a variable.
+Make sure you refer to the right form name and to the right List/Menu name. */
+
+mySelection=document.shortCutForm.shortCutMenu.options[myChoice].value;
+
+/* This line of code assigns the dynamically choosen option to a variable. */
+
+location=mySelection;
+}
+
+
+// stop hiding -->
+</script>
+
+</HEAD>
+<body marginHeight="0" topMargin="0" LINK="#0000cc" ALINK="#cc0000" VLINK="#666666" bgcolor="#ffffff">
+	
+<!-- FORM for NAV SHORTCUTS - place this at the outer most section of the page within body tags-->
+<form method="post" action="" name="shortCutForm">
+
+	
+<DIV ALIGN="center"><!-- centers page in browser window -->
+<A NAME="Top"></A><!-- used by page internal nav -->
+
+	<TABLE BORDER="0" width="605" CELLSPACING="0" CELLPADDING="0" >
+
+	<!-- Banner Art Row -->
+	<!-- CAUTION - be sure there are NO embedded spaces or returns within TD tags or you'll get lines between banner and menu images! -->
+	<TR >
+      <TD VALIGN="top" align = "Left" colspan="4"><IMG src="../images/banners/shortBanner.gif" lowsrc="../images/banners/shortBannerLowSrc.gif" ALT="eo1 banner art" ALIGN=BOTTOM WIDTH="601" HEIGHT="59" BORDER="0"></TD>
+	</TR>
+
+	<!-- Sidebar and Content row -->
+	<TR>
+		
+      <TD VALIGN="top" ALIGN="left" rowspan=2 WIDTH="127"> <!-- MAIN MENU AREA: -------------------------------------------------------------------------------
+NOTE: if this page is nested lower than one level from the main pages, you will have to update the 
+      relative paths here. Probably from ../pageDir/page.html to ../../pageDir/page.html 
+NOTE: this is compressed so that images will but cleanly - DO NOT INTRODUCE SPACES/RETURNS BETWEEN TAGS --> 
+        <p><img src="../images/rollImages/menuTop.gif" width="127" height="34" border="0"><a 
+href="../overview/eo1Overview.html"
+onmouseout="di('NnewBannerFireworks_04_01','InewBannerFireworks_04_01');return false;"
+onmouseover="di('NnewBannerFireworks_04_01','InewBannerFireworks_04_01o');return false;"><img
+name="NnewBannerFireworks_04_01" src="../images/rollImages/mission.gif" width="127" height="18"
+border="0"></a><a href="../Spacecraft/eo1Spacecraft.html"
+onmouseout="di('NnewBannerFireworks_05_01','InewBannerFireworks_05_01');return false;"
+onmouseover="di('NnewBannerFireworks_05_01','InewBannerFireworks_05_01o');return false;"><img
+name="NnewBannerFireworks_05_01" src="../images/rollImages/spacecraft.gif" width="127" height="18"
+border="0"></a><a href="eo1Technology.html"
+onmouseout="di('NnewBannerFireworks_06_01','InewBannerFireworks_06_01');return false;"
+onmouseover="di('NnewBannerFireworks_06_01','InewBannerFireworks_06_01o');return false;"><img
+name="NnewBannerFireworks_06_01" src="../images/rollImages/instrumentsAndTech.gif" width="127"
+height="30" border="0"></a><a href="../Science/index.html"
+onmouseout="di('NnewBannerFireworks_07_01','InewBannerFireworks_07_01');return false;"
+onmouseover="di('NnewBannerFireworks_07_01','InewBannerFireworks_07_01o');return false;"><img
+name="NnewBannerFireworks_07_01" src="../images/rollImages/science.gif" width="127" height="20"
+border="0"></a><a href="../miscPages/launch.html"
+onmouseout="di('NnewBannerFireworks_08_01','InewBannerFireworks_08_01');return false;"
+onmouseover="di('NnewBannerFireworks_08_01','InewBannerFireworks_08_01o');return false;"><img
+name="NnewBannerFireworks_08_01" src="../images/rollImages/launch.gif" width="127" height="17"
+border="0"></a><a href="../Education/eo1Education.html"
+onmouseout="di('NnewBannerFireworks_09_01','InewBannerFireworks_09_01');return false;"
+onmouseover="di('NnewBannerFireworks_09_01','InewBannerFireworks_09_01o');return false;"><img
+name="NnewBannerFireworks_09_01" src="../images/rollImages/education.gif" width="127" height="19"
+border="0"></a>
+
+<!-- HOUSEKEEPER MENU -->
+<!-- spacer between content links and housekeeper links -->
+<br>
+
+<!-- ##ShortCuts Snip 3 this is the REPOSITIONED housekeeper menu with an indent - remove the old one -->
+<!-- this spacer indents housekeeper link grfx  
+NOTE: NO Spaces BETWEEN these tags! or the compact alignment will be ruined -->
+<IMG SRC="../images/misc/whitePixel.gif" HEIGHT="80" WIDTH="24" ALIGN="left" BORDER="0"><A HREF="../miscPages/home.html" ONMOUSEOUT="di('NnewBannerFireworks_02_03',
+'InewBannerFireworks_02_03');return false;" ONMOUSEOVER="di('NnewBannerFireworks_02_03',
+'InewBannerFireworks_02_03o');return false;"><IMG NAME="NnewBannerFireworks_02_03" SRC="../images/rollImages/home.gif" WIDTH="59" HEIGHT="20" BORDER="0"></A><A HREF="../News/NewsEvents.html" ONMOUSEOUT="di('NnewBannerFireworks_02_04',
+'InewBannerFireworks_02_04');return false;" ONMOUSEOVER="di('NnewBannerFireworks_02_04',
+'InewBannerFireworks_02_04o');return false;"><IMG NAME="NnewBannerFireworks_02_04" SRC="../images/rollImages/news.gif" WIDTH="57" HEIGHT="20" BORDER="0"></A>
+<A HREF="../Project/Project.html" ONMOUSEOUT="di('NnewBannerFireworks_02_05',
+'InewBannerFireworks_02_05');return false;" ONMOUSEOVER="di('NnewBannerFireworks_02_05',
+'InewBannerFireworks_02_05o');return false;"><IMG NAME="NnewBannerFireworks_02_05" SRC="../images/rollImages/intranet.gif" WIDTH="84" HEIGHT="20" BORDER="0"></A><br>
+<!-- ##ShortCuts Snip 3 -->
+
+ <!-- SIDEBAR TABLE:  -------------------------------------------------------------------------------
+allows the region to dynamically size to content
+Add New Areas and Links as Needed --> 
+
+<!-- LAST UPDATE ------> <br>
+         <div align="center">
+<font face="Arial, helvetica, San Serif" size="-1" color="#DC9E1F">Last Update: 11/19/02</font><br><br>
+</div>
+					
+		<table border=0 WIDTH="100%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff">
+				<tr>
+					
+            <td colspan=2 valign="top"> <FONT FACE="helvetica,Arial" SIZE="3" COLOR="#333333"> 
+              <B> More Info</B></FONT> </td>
+				</tr>
+				<tr>
+					<td width=4>
+						<!-- indent -->
+						<img src="../images/misc/whitePixel.gif" alt="spacer image for layout" height=1 width=4 >
+					</td>
+					
+            <td> <FONT FACE="helvetica,Arial" SIZE="2" ><a href="Documents/AC-description.PDF">Technology 
+              Description</a><br>
+              <br>
+              <a href="Documents/AC-ValPlan.PDF">Validation Plan</a><br>
+              <br>
+			  <a href="../../miscPages/references.html">References</a><br>
+              </font></td>
+					</tr>
+					<!--end more info links-->
+					<!--****RELATEDWEBSITES****-->
+					<tr>
+						<td colspan=2 valign="top">
+							<FONT FACE="helvetica,Arial" SIZE="3" COLOR="#333333">
+								<BR>
+              <B> Related Sites</B></FONT> </td>
+					</tr>
+					<tr>
+						<td width=4>
+							<!-- indent -->
+							<img src="../images/misc/whitePixel.gif" alt="spacer image for layout" height=1 width=4>
+						</td>
+						<!--indent for links -->
+						
+            <td> <!-- RELATED SITE LINKS HERE --> <FONT FACE="helvetica,Arial" SIZE="2" > 
+              <A HREF="http://fdd.gsfc.nasa.gov/missions/eo-1.html" target="_new"> 
+              </A><BR>
+							</FONT>
+						</td>
+					</tr>
+					<!--end more info links-->
+					<!--****CREDITS****-->
+					<tr>
+						<td colspan=2 valign="top">
+							<FONT FACE="helvetica,Arial" SIZE="3" COLOR="#333333">
+								<BR>
+              <B> Credits</B></FONT> </td>
+					</tr>
+					<tr>
+						<td width=4>
+							<!-- indent -->
+							<img src="../images/misc/whitePixel.gif" alt="spacer image for layout" height=1 width=4 >
+						</td>
+						<!--indent for links -->
+						<td>
+							<!--CREDIT LINKS HERE -->
+							<FONT FACE="Times New Roman" SIZE="2">
+								NASA Official/Author: 
+								<I>
+									<A HREF="mailto:Nicholas.J.Speciale.1@gsfc.nasa.gov">
+										Nick Speciale 
+									</A>
+								</I>
+								<BR>
+								<BR>
+								Curator: <br>
+								<I>
+									<A HREF="mailto:trish.johnson@gsfc.nasa.gov">
+										Trish Johnson 
+									</A>
+								</I>
+								
+								<br>
+								<I>
+									<A HREF="mailto:lallen@pop400.gsfc.nasa.gov">
+										Leslie Allen
+									</A>
+								</I>
+								<BR>
+								<BR>
+								<I>
+									<A HREF="../miscPages/Credits.html">
+										Development Credits 
+									</A>
+								</I>
+								<BR>
+								<BR>
+								Official Notice: 
+								<I>
+									<A HREF="../miscPages/privacy.html">
+										Privacy Statement 
+									</A>
+								</I>
+								<BR>
+								<br>
+								<br>
+							</FONT>
+						</td>
+					</tr>
+					<!--end credit info links-->
+				</table>
+			</TD>
+			<!-- end sidebar column in main page table -->
+
+			<!-- gutter between sidebar and poge title -->
+			<TD WIDTH="10" rowspan=2 >
+				<IMG SRC="../images/misc/whitePixel.gif" alt="spacer image for layout" ALIGN=BOTTOM WIDTH="10" HEIGHT="1" BORDER="0">
+			</TD>
+			
+<!-- TITLE/Housekeeper AREA ------------------------------------------------------------------------------- -->
+			<TD COLSPAN=2 VALIGN="top" ALIGN="Left">
+
+<!-- ##ShortCuts Snip 4 - this is the OLD housekeeper stuff commented out here but can be removed. Move the DIv tag around
+                          the shortcut menu -->
+                          
+<!-- HOUSEKEEPTER MENU AREA -------------------------------------------------------------------------------		
+NOTE: DO NOT PUT SPACES OR RETURNS BETWEEN TAGS - they be compressed to but must but cleanly -->
+				
+
+<!-- NAV SHORTCUT --> 
+          <DIV ALIGN=RIGHT>             
+          <select name="shortCutMenu" onChange="goShortCut()" >
+              <option value="#">I+T Navigation ShortCuts</option>
+              <option value="ALIhome1.htm">Advanced 
+              Land Imager (ALI)</option>
+              <option value="ALIsilicon.htm">&nbsp;ALI-Silicon 
+              Carbide Optics</option>
+              <option value="ALIwideField.htm">&nbsp;ALI-Wide 
+              Field of View Optics</option>
+              <option value="ALImultispectral.htm">&nbsp;ALI-Multispectral 
+              Imaging</option>
+              <option value="AtmosCorr.htm">Atmospheric 
+              Corrector</option>
+              <option value="CCrad.html">Carbon-Carbon 
+              Radiator</option>
+              <option value="FormFly.html">Enhanced 
+              Formation Flying</option>
+              <option value="FibOpt.html">Fiber 
+              Optic Data Bus</option>
+              <option value="lfsa.html">Lightweight 
+              Flexible Solar Array</option>
+              <option value="Hyperion.html" >Hyperion 
+              Hyperspectral Imager</option>
+              <option value="PPT.htm">Pulsed 
+              Plasma Thruster</option>
+              <option value="WBrec.html">Wideband 
+              Advanced Recorder</option>
+              <option value="xpaa.htm">X-Band 
+              Phased Array Antenna</option>
+            </select>
+          </DIV>
+
+						
+         <!-- PAGE TITLE  insert custom page title image here --> 
+         <!-- title/banner SPACER --><img src="../images/misc/whitePixel.gif" alt="spacer image for layout" width="1" height="15"><br>
+        <img src="../images/titles/PageAtmosCor_01_01.gif" alt="Atmospheric Corrector Instrument" width="350" height="30"><br>
+          <!-- link SPACER --> <IMG SRC="../images/misc/whitePixel.gif" alt="spacer image for layout" ALIGN=BOTTOM WIDTH="1" HEIGHT="10" BORDER="0"><br> 
+        </td></tr>
+		
+		<tr>
+			<td width=20 > <!-- gutter between title indent gutter and BODY AREA -->
+			<!-- gutter SPACER --><IMG SRC="../images/misc/whitePixel.gif" ALT="spacer image for layout" ALIGN=BOTTOM WIDTH="20" HEIGHT="1" BORDER="0">
+			</td>
+			
+      <td> <!-- INSERT BODY CONTENT HERE --> <font face="Helvetica, Arial" size ="-1"><a href="#Summary">Summary</a>&nbsp;&nbsp;&nbsp;<a href="#Overview">Overview</a> 
+        &nbsp;&nbsp;&nbsp; <a href="#Benefits">Benefits</a> &nbsp;&nbsp;&nbsp; 
+        <a href="#Contacts">Contacts</a> 
+       </font> <!-- END LINKS --> 
+	   
+	   <!-- Subtitle SPACER --><br>
+         <A NAME="Summary"></A> <IMG SRC="../images/misc/whitePixel.gif" alt="spacer image for layout" ALIGN=BOTTOM WIDTH="1" HEIGHT="25" BORDER="0">
+            <br><img src="../images/titles/instrumentSummary.gif"  width="190" height="36"> <br>
+              
+              
+              <!-- Insert SUMMARY here --> Earth imagery is degraded by atmospheric 
+              absorption and scattering. The New Millennium Program's Earth Observing-1 
+              Mission (EO-1) is providing the first space-based test of an Atmospheric 
+
+           <!-- INSERT Technology **THUMBNAIL**IMAGE HERE - to bleed into next section -->
+           <a href="Images/AC.jpg"><img src="Images/AC_small.jpg" alt="Atmospheric Corrector Photo" width="200" height="169" align="right" border=0></a>
+
+              Corrector (AC) for increasing the accuracy of surface reflectance 
+              estimates. 
+              
+    
+           <!-- bot margin --> <br><Img Src="../images/misc/whitePixel.gif" Alt="spacer image for layout" Width="1" Height="25"> 
+            
+        <!-- ************************ --> 
+        <A NAME="Overview"></A> <!-- used by page internal nav --> 
+        <br><img src="../images/titles/instrumentOverview.gif" width="190" height="36"><BR>
+        The Atmospheric Corrector (AC) provides the following capabilities via 
+        a compact and simple bolt on design for future Earth Science, land imaging 
+        missions: 
+        <ul>
+          <li>High spectral, moderate spatial resolution hyperspectral imager 
+            using a wedge filter technology. 
+            <p> 
+          <li>Spectral coverage of .89-1.58 &#181;m. Bands were selected for optimal 
+            correction of high spatial resolution images. 
+            <p> 
+          <li>Correction of surface imagery for atmospheric variability (primarily 
+            water vapor). <!-- END OVERVIEW --> <!-- PAGE NAV TABLE --> 
+        </ul>
+        <Table width="100%" Border="0" CellSpacing="0" CellPadding="0" >
+          <Tr> 
+            <Td > <!-- top margin --> <Img Src="../images/misc/whitePixel.gif" Alt="spacer image for layout" Width="1" Height="8"> 
+            </Td>
+          </Tr>
+          <Tr> 
+            <Td ALIGN="right"> <!-- INSERT/DELETE NAV IMAGES/LINKS as needed. NOTE: links are RELATIVE and you may have to update them here NOTE: You WILL have to update the ANCHORS that MORE points to should be next section in page.--> 
+              <A HREF="#Benefits"><IMG SRC="../images/navImages/More.gif" ALT="More Info Link" ALIGN=Bottom WIDTH="60" HEIGHT="25" BORDER="0"></A> 
+              <A HREF="#Top"><IMG SRC="../images/navImages/Top.gif" ALIGN=BOTTOM WIDTH="60" Alt="Top of Page" HEIGHT="25" BORDER="0"></A>
+              <A HREF="../Technology/eo1Technology.html"><IMG SRC="../images/navImages/IandT.gif" ALT="Instruments and Technologies page link" ALIGN=BOTTOM WIDTH="57" HEIGHT="25" BORDER="0"></A> 
+            </Td>
+          </Tr>
+          <Tr> 
+            <Td> <!-- bot margin --> <Img Src="../images/misc/whitePixel.gif" Alt="spacer image for layout" Width="1" Height="8"> 
+            </Td>
+          </Tr>
+        </Table>
+        <!-- ************************ --> <A NAME="Benefits"></A><!-- used by page internal nav --> 
+        <IMG SRC="../images/titles/benefits.gif" ALT="section title : benefits" ALIGN=BOTTOM WIDTH="89" HEIGHT="36" BORDER="0"> 
+        <br>
+        <!-- INSERT BENEFITS here --> The Atmospheric Corrector is applicable 
+        to any scientific or commercial Earth remote sensing mission where atmospheric 
+        absorption due to water vapor or aerosols degrades surface reflectance 
+        measurements. Using the Atmospheric Corrector, instrument measurements 
+        of actual rather than modeled absorption values enables more precise 
+        predictive models to be constructed for remote sensing applications.
+		The algorithms developed will enable more accurate 
+          measurement and classification of land resources and better models for 
+          land management in the future. <!-- END ** BENEFITS ** here --> <!-- PAGE NAV TABLE --> 
+        <Table width="100%" Border="0" CellSpacing="0" CellPadding="0" >
+          <Tr> 
+            <Td > <!-- top margin --> <Img Src="../images/misc/whitePixel.gif" Alt="spacer image for layout" Width="1" Height="8"> 
+            </Td>
+          </Tr>
+          <Tr> 
+            <Td ALIGN="right"> <!-- INSERT/DELETE NAV IMAGES/LINKS as needed. NOTE: links are RELATIVE and you may have to update them here NOTE: You WILL have to update the ANCHORS that MORE points to should be next section in page.--> 
+              <A HREF="#Status"><IMG SRC="../images/navImages/More.gif" ALT="More Info Link" ALIGN=Bottom WIDTH="60" HEIGHT="25" BORDER="0"></A> 
+              <A HREF="#Top"><IMG SRC="../images/navImages/Top.gif" ALIGN=BOTTOM WIDTH="60" Alt="Top of Page" HEIGHT="25" BORDER="0"></A><A HREF="../Technology/eo1Technology.html"><IMG SRC="../images/navImages/IandT.gif" ALT="Instruments and Technologies page link" ALIGN=BOTTOM WIDTH="57" HEIGHT="25" BORDER="0"></A> 
+            </Td>
+          </Tr>
+          <Tr> 
+            <Td> <!-- bot margin --> <Img Src="../images/misc/whitePixel.gif" Alt="spacer image for layout" Width="1" Height="8"> 
+            </Td>
+          </Tr>
+        </Table>
+        <!-- ************************ --> 
+ <!-- END of ****** STATUS ****** here --> 
+        <!-- PAGE NAV TABLE --> 
+        <Table width="100%" Border="0" CellSpacing="0" CellPadding="0" >
+          <Tr> 
+            <Td > <!-- top margin --> <Img Src="../images/misc/whitePixel.gif" Alt="spacer image for layout" Width="1" Height="8"> 
+            </Td>
+          </Tr>
+          <Tr> 
+            <Td ALIGN="right"> <!-- INSERT/DELETE NAV IMAGES/LINKS as needed. NOTE: links are RELATIVE and you may have to update them here NOTE: You WILL have to update the ANCHORS that MORE points to should be next section in page.--> 
+              <A HREF="#Contacts"><IMG SRC="../images/navImages/More.gif" ALT="More Info Link" ALIGN=Bottom WIDTH="60" HEIGHT="25" BORDER="0"></A> 
+              <A HREF="#Top"><IMG SRC="../images/navImages/Top.gif" ALIGN=BOTTOM WIDTH="60" Alt="Top of Page" HEIGHT="25" BORDER="0"></A><A HREF="../Technology/eo1Technology.html"><IMG SRC="../images/navImages/IandT.gif" ALT="Instruments and Technologies page link" ALIGN=BOTTOM WIDTH="57" HEIGHT="25" BORDER="0"></A> 
+            </Td>
+          </Tr>
+          <Tr> 
+            <Td> <!-- bot margin --> <Img Src="../images/misc/whitePixel.gif" Alt="spacer image for layout" Width="1" Height="8"> 
+            </Td>
+          </Tr>
+        </Table>
+        <!-- ************************ --> 
+        <p><A NAME="Contacts"></A><!-- used by page internal nav --> <IMG SRC="../images/titles/contact.gif" ALT="section title: information contacts" ALIGN=BOTTOM WIDTH="87" HEIGHT="36" BORDER="0"> 
+          <br>
+          <br>
+          <!-- INSERT Technology CONTACT here --> <B> Dennis Reuter</B> <br>
+          EO-1 LEISA Atmospheric Corrector Principal Investigator <br>
+          NASA's Goddard Space Flight Center<br>
+          Mail Code: 693<br>
+          Phone: (301) 286-2042 <br>
+          Email: <a href="mailto:Dennis.C.Reuter.1@gsfc.nasa.gov">Dennis.C.Reuter.1@gsfc.nasa.gov</a> 
+          <br>
+        </p>
+        <p> <b>Nick Speciale</b><br>
+          EO-1 Mission Technologist <br>
+          NASA's Goddard Space Flight Center<br>
+          Mail Code: 490<br>
+          Phone (301) 286-8704 <br>
+          Email: <a href="mailto:Nicholas.J.Speciale.1@gsfc.nasa.gov">Nicholas.J.Speciale.1@gsfc.nasa.gov</a> 
+          <!-- PAGE NAV TABLE --> </p>
+        <Table width="100%" Border="0" CellSpacing="0" CellPadding="0" >
+          <Tr> 
+            <Td > <!-- top margin --> <Img Src="../images/misc/whitePixel.gif" Alt="spacer image for layout" Width="1" Height="8"> 
+            </Td>
+          </Tr>
+          <Tr> 
+            <Td ALIGN="right"> <!-- INSERT/DELETE NAV IMAGES/LINKS as needed. NOTE: links are RELATIVE and you may have to update them here NOTE: You WILL have to update the ANCHORS that MORE points to should be next section in page.--> 
+              <A HREF="#Top"><IMG SRC="../images/navImages/Top.gif" ALIGN=BOTTOM WIDTH="60" Alt="Top of Page" HEIGHT="25" BORDER="0"></A>
+              <a href="../Technology/eo1Technology.html"><img src="../images/navImages/IandT.gif" alt="Instruments and Technologies page link" align=BOTTOM width="57" height="25" border="0"></a> 
+               
+            </Td>
+          </Tr>
+          <Tr> 
+            <Td> <!-- bot margin --> <Img Src="../images/misc/whitePixel.gif" Alt="spacer image for layout" Width="1" Height="25"> 
+            </Td>
+          </Tr>
+        </Table>
+      </td>
+    </tr></table><!-- ****** END CONTENT ********* -->
+			
+			</DIV>
+			</form>
+		</BODY>
+	</HTML>

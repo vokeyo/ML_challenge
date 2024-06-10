@@ -1,0 +1,127 @@
+Digital Geospatial Metadata                                    
+Report Date: 29-Sep-1997                                       
+                                                               
+Data Set Name:                                                 1991 Upper Mississippi River Land Cover/Use
+                                                               
+1 Identification Information                                   
+1.1 Citation Information:                                      
+        8.1 Originator:                                        Environmental Management Technical Center
+        8.2 Publication Date:                                  19931001
+        8.4 Title:
+            1991 Upper Mississippi River Land Cover/Use
+        8.5 Edition:                                           Final
+        8.6 Data Presentation Form:                            Map
+        8.9 Other Citation Details:
+            White, B.M., and T.W. Owens. 1991. Geographic information system pilot project for the Upper Mississippi River System. Report by the U.S. Fish and Wildlife Service, National Ecology Research Center, and TGS Technology, Inc., Fort Collins, Colorado, for the U.S. Fish and Wildlife Service, Environmental Management Technical Center, Onalaska, Wisconsin, June 1991.  EMTC 91-05.  48 pp.  (NTIS # PB91-218172)
+        8.10 Online Linkage:                                   http:/www.emtc.nbs.gov/http_data/emtc_spatial/umrsys/umrsys.html
+1.2 Description                                                
+    1.2.1 Abstract:
+            Land over/land use databases were developed from 1991 color infrared aerial photography for pools within the Upper Mississippi River System.  Photos were interpreted, and line work was transferred to mylar overlays registered to USGS 7.5' quadrangle enlargements at a scale of 1:15,000 before being manually digitized.
+    1.2.2 Purpose:
+            To produce a detailed map of terresterial and aquatic land cover and land use of the Upper Mississippi River floodplain for trend analysis.
+    1.2.3 Supplemental Information:
+            Aerial photography was collected for the entire Upper Mississippi River in 1991 and several pools have been similarily mapped with a goal of creating a systemic database of land cover/use.
+1.4 Status                                                     
+    1.4.1 Progress:                                            Complete
+    1.4.2 Maintenance and Update Frequency:                    As Needed
+    1.5.2.1 West Bounding Coordinate:                          -91.3196
+    1.5.2.2 East Bounding Coordinate:                          -91.1956
+    1.5.2.3 North Bounding Coordinate:                         43.8836
+    1.5.2.4 South Bounding Coordinate:                         43.5718
+1.6 Keywords                                                   
+    1.6.1.1 Theme Keyword Thesaurus:                           None
+        1.6.1.2 Theme Keyword:                                 land cover/use
+        1.6.1.2 Theme Keyword:                                 vegetation
+        1.6.1.2 Theme Keyword:                                 wetland
+    1.6.2.1 Place Keyword Thesaurus:                           None
+        1.6.2.2 Place Keyword:                                 Minnesota
+        1.6.2.2 Place Keyword:                                 Pool 8
+        1.6.2.2 Place Keyword:                                 Lagrange Pool
+    1.6.3.1 Stratum Keyword Thesaurus:                         None
+    1.6.4.1 Temporal Keyword Thesaurus:                        None
+        1.6.4.2 Temporal Keyword:                              late summer
+1.8 Access Constraints:
+            None
+1.9 Use Constraints:
+            None
+                                                               
+2 Data Quality Information                                     
+    2.5.3 Process Step                                         
+    2.5.3.1 Process Description:
+            Scale of photography was 1:15,000. Photo interpretation was performed with a Bausch and Lomb 240 zoom stereoscope at 6X magnification using 4x0 drafting pens on clear acetate overlays registered to photo transparencies.  The minimum mapping unit was 1 acre(approximately 4000 mý).  Extensive ground truthing was performed along with the interpretation. Data were transferred from photo overlays to mylar overlays registered to USGS 7.5'  quadrangle enlargements at a scale of 1:15,000, using a Bausch & Lomb zoom transfer scope.  All data were transferred and were digitized into ARC/INFO on Altek digitizing tables (absolute accuracy 0.001 inch up to +/- 0.003 inch).  No data reduction or generalization intransferring or digitizing took place.
+    2.5.3.3 Process Date:                                      19931001
+    2.5.3.6 Process Contact:                                   
+                                                               
+3 Spatial Data Organization Information                        
+3.2 Direct Spatial Reference Method:                           Vector
+3.3 Point and Vector Object Information                        
+    3.3.1.1 SDTS Point and Vector Object Type:                 Label Point
+                                                               
+4 Spatial Reference Information                                
+4.1 Horizontal Coordinate System Definition                    
+4.1.2 Planar                                                   
+    4.1.2.2.1 Grid Coordinate System Name:                     Universal Transverse Mercator(UTM)
+    4.1.2.2.2.1 UTM Zone Number:                               15
+    4.1.4.1 Horizontal Datum Name:                             North American Datum of 1927
+                                                               
+5 Entity and Attribute Information                             
+5.2 Overview Description                                       
+    5.2.1 Entity and Attribute Overview:
+            The different attributes represent the data in a generalized and specific manner.  The most specific attributes describe the vegetation to the genus level of classification. The specific genus levels have also been categorized into 13 general vegetation classes.  The attributes contain numerical codes and descriptors. Modifiers exist which represent percent of vegetation cover and tree height.
+                                                               
+6 Distribution Information                                     
+6.1 Distributor                                                
+        10.1 Contact Person Primary                            
+        10.1.1 Contact Person:                                 Lynne Arndt
+        10.1.2 Contact Organization:                           Environmental Management Technical Center (EMTC)
+        10.3 Contact Position:                                 GIS Project Coordinator
+        10.4 Contact Address                                   
+            10.4.1 Address Type:                               Physical Address
+            10.4.3 City:                                       Onalaska
+            10.4.4 State or Province:                          Wisconsin
+            10.4.5 Postal Code:                                54650
+        10.4 Contact Address                                   
+            10.4.1 Address Type:                               Mailing and Physical Address
+            10.4.3 City:                                       Onalaska
+            10.4.4 State or Province:                          Wisconsin
+            10.4.5 Postal Code:                                54650-8552
+            10.4.6 Country:                                    USA
+                10.4.2 Address:                                575 Lester Avenue
+                10.4.2 Address:                                575 Lester Avenue
+        10.5 Contact Voice Telephone:                          (608) 783-7550, ext. 30
+        10.6 Contact TDD/TTY Telephone:                        Unavailable
+        10.7 Contact Facsimile Telephone:                      (608) 783-8058
+        10.8 Contact Electronic Mail:                          Lynne_Arndt@nbs.gov
+        10.9 Hours of Service:                                 8:00 a.m. to 4:00 p.m. Monday Through Friday
+        10.10 Contact Instructions:                            NONE
+6.4 Standard Order Process                                     
+    6.4.2 Digital Form                                         
+        6.4.2.1.1 Format Name:                                 ARC/INFO
+        6.4.2.1.2 Format Version Number:                       version 7.1
+    6.4.2.2 Digital Transfer Option                            
+                                                               
+7 Metadata Reference Information                               
+7.4 Metadata Contact:                                          
+        10.1 Contact Person Primary                            
+        10.1.1 Contact Person:                                 Lynne Arndt
+        10.1.2 Contact Organization:                           Environmental Management Technical Center (EMTC)
+        10.3 Contact Position:                                 GIS Project Coordinator
+        10.4 Contact Address                                   
+            10.4.1 Address Type:                               Physical Address
+            10.4.3 City:                                       Onalaska
+            10.4.4 State or Province:                          Wisconsin
+            10.4.5 Postal Code:                                54650
+        10.4 Contact Address                                   
+            10.4.1 Address Type:                               Mailing and Physical Address
+            10.4.3 City:                                       Onalaska
+            10.4.4 State or Province:                          Wisconsin
+            10.4.5 Postal Code:                                54650-8552
+            10.4.6 Country:                                    USA
+                10.4.2 Address:                                575 Lester Avenue
+                10.4.2 Address:                                575 Lester Avenue
+        10.5 Contact Voice Telephone:                          (608) 783-7550, ext. 30
+        10.6 Contact TDD/TTY Telephone:                        Unavailable
+        10.7 Contact Facsimile Telephone:                      (608) 783-8058
+        10.8 Contact Electronic Mail:                          Lynne_Arndt@nbs.gov
+        10.9 Hours of Service:                                 8:00 a.m. to 4:00 p.m. Monday Through Friday
+        10.10 Contact Instructions:                            NONE

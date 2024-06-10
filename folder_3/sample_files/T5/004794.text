@@ -1,0 +1,222 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: Steven S. Intelmann
+      Publication_Date: 2005
+      Title: hab108_0201_south.tif -- Side scan sonar image (South mosaic) from survey effort HMPR-108-2002-01 in the Olympic 
+         Coast national marine sanctuary.
+      Geospatial_Data_Presentation_Form: remote-sensing image
+      Series_Information:
+        Series_Name: HMPR-108-2002-01
+      Publication_Information:
+        Publication_Place: Port Angeles, WA
+        Publisher: NOAA -- Olympic Coast National Marine Sanctuary
+      Online_Linkage: \\Acoustics2\DATA\hmpr-108-2002-01\Catalog\Sonar\hab108_0201_south.tif
+  Description:
+    Abstract: The side scan sonar image of the sea floor (120-350 m water depths) was mosaiced from data collected in 2002.  
+       An Edgetech DF1000 side scan system was used for geophysical surveying using only the 100Khz data.  A Trimble DSM212H 
+       differential GPS was used for positioning.  Navigation from the GPS and Gyro were logged in Hypack version 005B (Coastal 
+       Oceanographics). Isis Sonar (Triton Imaging) was used to log the digital sonar packets and cable counter data.  Data were 
+       captured at an 300m range scale setting.
+    Purpose: These data are intended for science researchers, students, policy makers, and the general public.  The data can be 
+       used with geographic information systems (GIS) software to display benthic information.
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Single_Date/Time:
+        Calendar_Date: 20051013
+    Currentness_Reference: ground condition
+  Status:
+    Progress: Complete
+    Maintenance_and_Update_Frequency: As needed
+  Spatial_Domain:
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -125.090068
+      East_Bounding_Coordinate: -125.022158
+      North_Bounding_Coordinate: 48.238397
+      South_Bounding_Coordinate: 48.066814
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus: None
+      Theme_Keyword: Coastal Geology
+      Theme_Keyword: Marine Geology
+      Theme_Keyword: Side scan sonar
+      Theme_Keyword: Remote Sensing Image
+      Theme_Keyword: Edgetech
+      Theme_Keyword: Isis
+    Place:
+      Place_Keyword_Thesaurus: None
+      Place_Keyword: Washington
+      Place_Keyword: Olympic Coast
+      Place_Keyword: Juan de Fuca
+  Access_Constraints: None
+  Use_Constraints: Please recognize OCNMS as the source of this information.
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Steven S. Intelmann
+        Contact_Organization: NOAA -- Olympic Coast National Marine Sanctuary
+      Contact_Position: Habitat Mapping Specialist
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: 115 E. Railroad Avenue
+        Address: Suite 301
+        City: Port Angeles
+        State_or_Province: WA
+        Postal_Code: 98362
+        Country: USA
+      Contact_Voice_Telephone: 360-457-6622
+      Contact_Voice_Telephone: Ext. 22
+      Contact_Facsimile_Telephone: 360-457-8496
+      Contact_Electronic_Mail_Address: steve.intelmann@noaa.gov
+      Hours_of_Service: 8am to 5pm
+  Data_Set_Credit: Steven S. Intelmann
+  Native_Data_Set_Environment: Microsoft Windows 2000 Version 5.0 (Build 2195) Service Pack 4; ESRI ArcCatalog 9.1.0.722
+Data_Quality_Information:
+  Logical_Consistency_Report: Not Tested
+  Completeness_Report: Unknown
+  Positional_Accuracy:
+    Horizontal_Positional_Accuracy:
+      Horizontal_Positional_Accuracy_Report: Accuracy of the horizontal coordinates is on the order of 10-30m based on the uncertainty 
+        in position of side scan sonar towfish relative to ships gps position.  Horizontal layback is more accurate than lateral 
+        offsets since any lateral offset in the towfish position (due to side currents) is unaccounted for in the layback calculations.
+  Lineage:
+    Process_Step:
+      Process_Description: Isis Sonar. Data logged as XTF format.  Horizontal layback was calculated from logged cable out and depth 
+          sensor data.
+      Process_Date: 2002
+    Process_Step:
+      Process_Description: Isis Sonar.  Bottom track.
+      Process_Date: 2003
+    Process_Step:
+      Process_Description: Isis Sonar.  Apply duration of 282m.
+      Process_Date: 2003
+    Process_Step:
+      Process_Description: Mosaic.  Apply custom TVG curve to lines 1 and 3 using -7 + 0.109 +(-13); to line 2 using -3 + 0.03 +(-4); 
+          to lines 4,5,6,6b,7,8 using -6 + 0.109 +(-13), starting at first return.
+      Process_Date: 2003
+    Process_Step:
+      Process_Description: Isis Sonar.  Calculate and apply beam angle compensation.  For line 6b also added 4 degree across 
+          track angle corrector.
+      Process_Date: 2003
+    Process_Step:
+      Process_Description: Isis Sonar.  Smooth navigation data using moving window filter.  Mosaic individual lines at 1m pixel 
+          resolution and apply lackback calculation from cable out and depth sensor data.
+      Process_Date: 2003
+    Process_Step:
+      Process_Description: Delph Map.  Merge individual lines with overlay.
+      Process_Date: 2003
+    Process_Step:
+      Process_Description: Delph Map.  Export merged mosaic as Geotiff.
+      Process_Date: 2003
+    Process_Step:
+      Process_Description: Metadata imported.
+      Source_Used_Citation_Abbreviation: C:\DOCUME~1\intels\LOCALS~1\Temp\xml307.tmp
+Spatial_Data_Organization_Information:
+  Direct_Spatial_Reference_Method: Raster
+  Raster_Object_Information:
+    Raster_Object_Type: Pixel
+    Row_Count: 18962
+    Column_Count: 4547
+    Vertical_Count: 1
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Planar:
+      Grid_Coordinate_System:
+        Grid_Coordinate_System_Name: Universal Transverse Mercator
+        Universal_Transverse_Mercator:
+          UTM_Zone_Number: 10
+          Transverse_Mercator:
+            Scale_Factor_at_Central_Meridian: 0.999600
+            Longitude_of_Central_Meridian: -123.000000
+            Latitude_of_Projection_Origin: 0.000000
+            False_Easting: 500000.000000
+            False_Northing: 0.000000
+      Planar_Coordinate_Information:
+        Planar_Coordinate_Encoding_Method: row and column
+        Coordinate_Representation:
+          Abscissa_Resolution: 1.000000
+          Ordinate_Resolution: 1.000000
+        Planar_Distance_Units: meters
+    Geodetic_Model:
+      Horizontal_Datum_Name: D_WGS_1984
+      Ellipsoid_Name: WGS_1984
+      Semi-major_Axis: 6378137.000000
+      Denominator_of_Flattening_Ratio: 298.257224
+Entity_and_Attribute_Information:
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: Band_1
+    Attribute:
+      Attribute_Label: ObjectID
+      Attribute_Definition: Internal feature number.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Sequential unique whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: Value
+    Attribute:
+      Attribute_Label: Red
+    Attribute:
+      Attribute_Label: Green
+    Attribute:
+      Attribute_Label: Blue
+Distribution_Information:
+  Distributor:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Steven S. Intelmann
+        Contact_Organization: NOAA -- Olympic Coast national marine sanctuary
+      Contact_Position: Habitat Mapping Specialist
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: 115 E. Railroad Avenue
+        Address: Suite 301
+        City: Port Angeles
+        State_or_Province: WA
+        Postal_Code: 98362
+        Country: USA
+      Contact_Voice_Telephone: 360-457-6622
+      Contact_Voice_Telephone: Ext. 22
+      Contact_Facsimile_Telephone: 360-457-8496
+      Contact_Electronic_Mail_Address: steve.intelmann@noaa.gov
+  Resource_Description: Downloadable Data
+  Distribution_Liability: Please recognize the Olympic Coast national marine sanctuary (OCNMS) as the source of these data. 
+     The Olympic Coast National Marine Sanctuary nor any of their employees, make any warranty, express or implied, including 
+     the warranties of merchantability and fitness for a particular purpose, or assumes any legal liability or responsibility 
+     for the accuracy, completeness, or usefulness of any information, apparatus, product or process disclosed, or represents 
+     that its use would not infringe privately owned rights. Original data elements may have been compiled from various sources. 
+     Spatial nformation may not meet National Mapping Accuracy Standards. This information may be updated, corrected, or otherwise 
+     modified without notification. For additional information about this data contact the Olympic Coast national marine sanctuary.
+  Standard_Order_Process:
+    Digital_Form:
+      Digital_Transfer_Information:
+        Transfer_Size: 0.000
+Metadata_Reference_Information:
+  Metadata_Date: 20051017
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: NOAA -- Olympic Coast national marine sanctuary
+        Contact_Person: Steven S. Intelmann
+      Contact_Position: Habitat Mapping Specialist
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: 115 E. Railroad Avenue
+        Address: Ext. 22
+        City: Port Angeles
+        State_or_Province: WA
+        Postal_Code: 98362
+        Country: USA
+      Contact_Voice_Telephone: 360-457-6622
+      Contact_Voice_Telephone: Ext. 22
+      Contact_Facsimile_Telephone: 360-457-8496
+      Contact_Electronic_Mail_Address: steve.intelmann@noaa.gov
+  Metadata_Standard_Name: FGDC Content Standards for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+  Metadata_Time_Convention: local time
+  Metadata_Extensions:
+    Profile_Name: ESRI Metadata Profile
+  Metadata_Extensions:
+    Online_Linkage: http://www.esri.com/metadata/esriprof80.html
+    Profile_Name: ESRI Metadata Profile
+  

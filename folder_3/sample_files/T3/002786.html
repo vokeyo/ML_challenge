@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en">
+<head>
+<title>Development and Testing of Microchemical Separations
+ (Liquid-Liquid Separations)
+
+</title>
+<link rel="stylesheet" href="/microcats/microcats.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF">
+<img src="/microcats/images/microsub.gif" alt="micro-cats title bar">
+<h1 align=center>Development and Testing of Microchemical Separations<br>
+ (Liquid-Liquid Separations)
+</h1>
+
+<p><strong>Ward E. TeGrotenhuis</strong>
+
+<h2>Project Description</h2>
+
+<p>Microchemical separations systems are built upon microcontactor technology, where mass transfer occurs between two immiscible fluids brought into intimate contact as thin films separated by a microporous contactor plate.  By taking advantage of uniform flow distribution in channels that are on the order of 100 microns deep, heat and mass transfer can occur very rapidly, resulting in very low residence times, high throughputs, and extremely compact hardware.  In addition, reduced equipment size and enhanced mass transport can improve energy efficiency and reduce capital and operating costs over conventional chemical processes.  Markets in which the advantages of microchemical separations can be leveraged include DOE-EM, in support of tank waste disposal and environmental restoration activities, and DOE-EE (OIT), for developing technologies with greater energy efficiency and for point-of-use manufacturing of toxic and hazardous chemicals.</P>
+
+<P>The objectives of the project are to develop capabilities for fabricating specialized micro-machined contactors; for designing, buildin, and characterizing test devices; and for predicting device performance.  Mass transfer models are developed to support enhancements in device design and for evaluating full-scale applications.  Device design and testing will target liquid-liquid contacting for solvent extraction applications.
+</p>
+
+ 
+<h2>Technical Accomplishments</h2>
+<P>The microchannel architecture to be used for solvent extraction consists of thin channels separated by porous contactor plates.  Two immiscible fluids come into contact as they flow co-currently or counter-currently through the channels, transferring solute from one to the other.  Reducing the thickness of the channels minimizes mass transfer resistance.  In addition, the decreasing thickness, increasing porosity, and reducing tortuosity of the plate also improve mass transfer.  By reducing length scales to 10-100 mm, the residence time can be reduced to seconds, improving throughput per unit volume by orders of magnitude over conventional equipment.</P>
+
+<P>Technical progress has been made in contactor fabrication, device design and performance, and theoretical modeling.  In addition, engineering design principles were developed that support estimating hardware size and performance for specific applications.</P>
+
+<P>Efforts in contactor fabrication focused on wettability.  Four different methods of applying hydrophobic Teflon coatings to Kapton contactor plates were tried and tested.  These techniques were successful in initially establishing large contact angles and high breakthrough pressures.  However, over time and with exposure to solvents such as 1,1,2-trichloroethane and cyclohexane, hydrophobicity decreased and rendered the contactor plates unusable for solvent extraction testing.  Future contactor plate fabrica-tion efforts will target other substrate materials including hydrophobic films and composites materials.</P>
+
+<P><table align=left width=320 cellpadding=10><tr><td><img src="/microcats/aboutus/research/separations1fig1.gif" width="309" height="226" alt="Figure 1."><br><font size=-1><strong>Figure 1.</strong> Device performance as raffinate concentration normalized by feed concentration as a function of raffinate flow rate at constant feed flow rate for co-current flow (<img src="/microcats/images/blacksquare.gif" width="8 height="8" alt="black square">) compared to theoretical prediction (&#151;) and for counter-current flow (<img src="/microcats/images/blackdiamond.gif" width="12" height="12" alt="blackdiamond">) compared to theoretical prediction (- -).</font></td></tr></table>Advances in device design focused on improvements in flow distribution.  Extraction of acetone from water using 1,1,2-trichloroethane as the solvent was adopted as the system for testing device performance.  This system has an equilibrium distribution coefficient of approximately 2.1 on a molar basis, a surface tension of 47 dyne/cm, and minimal solubility of the solvent in the raffinate.  Adopting a system with a higher distribution coefficient provides a greater driving force for mass transfer, and subsequently better removal efficiency.  Figure 1 shows performance of a device that has 240-micron channels that are 0.5 cm wide by 8 cm long and contains a 180-micron-thick contactor plate.  The co-current results show an asymptote to one theoretical stage as the raffinate flow rate is decreased.  The performance shown by Figure 1 demonstrates that microchannel contactors are capable of more than one theoretical stage in a single device when operated in counter-current mode.</P>
+
+
+
+
+
+<P>A mass transfer model predicting device performance in co-current flow was extended to counter-current flow.  Whereas co-current operation can be solved as an initial value problem, the convective-diffusion equations with boundary conditions become a two-dimensional boun-dary value problem in counter-current flow.  The problem is solved in three domains, two for the flow channels and one for the contactor plate, coupled by boundary conditions.  The model accounts for convec-tion only in the flow direction and diffusion in the transverse direction, and is solved using finite dif-ferences.  Figure 1 includes theoretical performance curves obtained from the predictive models for both co-current and counter-current flow. Comparing experi-mental results with theoretical performance shows reasonable agreement, but measured performance generally lags expected performance.</P>
+
+<P>Design principles were also developed for microchannel contactors for solvent extraction applications.  The three important design considerations are pressure drop down the channels, mass transfer, and residence time.  A given contactor plate is able to withstand a maximum pressure difference across the plate, referred to as the break-through pressure, for a given system.  In counter-current flow, the sum of the pressure drops in each of the channels must be less than the breakthrough pressure to preclude convective flow through the contactor plate.  Therefore, pressure drop in the channels is a critical design constraint.  For Pouiseille flow in a rectangular channel, pressure drop follows the relationship</P>
+
+<p><img src="/microcats/aboutus/research/separations1_1.gif" width="82" height="44" alt="equation"></P>
+
+<P>where <EM>L</EM> is the channel length, Q is the volumetric flow rate, w is the channel width, and h is the channel depth.  Mass transfer effectiveness is characterized by the mass transfer Peclet number, which scales by the relationship</P>
+
+<p><img src="/microcats/aboutus/research/separations1_2.gif" width="102" height="46" alt="equation"></P>
+
+<P>where Ds is the diffusivity of the solute.  Finally, residence time is used as a metric for the size of the hardware required for a given application.  For a given channel, the residence time is given by
+
+<p><img src="/microcats/aboutus/research/separations1_3.gif" width="82" height="44" alt="equation"></P>
+
+</P>
+
+<P>The combination of scaling relationships for pressure drop, Peclet number, and residence time are used to design and size a microchannel system for a given application.  For example, given the breakthrough pressure for a given contactor plate for a given applica-tion, varying the flow rate and channel length inversely while maintaining the other dimensions can generate constant pressure drop performance curves.  Choosing the flow rate and channel length that satisfies the design objectives, the device can be further miniaturized while maintaining a constant pressure drop and mass transfer Peclet number.  This can be accomplished by reducing the channel height, flow rate, and square of the channel proportionally.  By this approach, pressure drop and separation requirements are satisfied and hardware size optimized.</P>
+
+<P>This approach was used for comparing the projected size of microchannel solvent extraction hardware with con-ventional technologies.  For acetone extraction from water using 1,1,2-trichloroethane as the solvent, the predicted residence time per theoretical stage, a measure of hardware size, is projected to be an order of magni-tude smaller than structure packing columns and up to two orders of magnitude smaller than conventional sieve tray columns.</P>
+
+<h2>Publications</h2>
+
+<P>TeGrotenhuis WE, RJ Cameron, MG Butcher, PM Martin, and RS Wegeng.  1999.  "Micro-Channel Devices for Efficient Contact of Liquids in Solvent Extraction." <EM>Separation Science and Technology</EM> <STRONG>34</STRONG>(6-7):951-974. </P>
+
+<H2>Presentations
+</H2>
+<P>TeGrotenhuis WE, RJ Cameron, VViswanathan, and RS Wegeng.  April 1999.  "Advances in Microchannel Contactors for Chemical Separations."  <EM>3<SUP>rd</SUP> International Conference in Microreactor Technology, DECHEMA</EM>, Frankfurt.</P>
+
+<P>TeGrotenhuis WE, RJ Cameron, MG Butcher, and RS Wegeng.  November 1998.  "Advances in Microchannel Contactors for Chemical Separations."  <EM>AIChE 1998 National Meeting</EM>, Miami.</P>
+
+
+<p><hr>
+
+<table width=100%><tr><td><p class="menu">
+  | <a href="/microcats/aboutus/awards.html">Awards</a> | 
+
+<a href="/microcats/apps/buildings/">Buildings</a> | 
+<a href="/microcats/aboutus/capabilities.html">Capabilities</a> |
+<a href="/microcats/apps/carbon/">Carbon Management</a> | 
+<a href="/microcats/aboutus/conferences.html">Conferences</a> |
+<a href="/microcats/aboutus/business.html">Doing Business With Us</a>  | <br> |
+<a href="/microcats/apps/envrest/">Environmental Restoration</a> |
+ 
+<a href="/microcats/apps/indchem/">Industrial Chemical Processing</a> | 
+<a href="/microcats/fullmenu/">Microtechnology Menu</a> | 
+
+<a href="/microcats/apps/military/">Military</a> |<br> 
+ | <a href="/microcats/aboutus/contactus.html">More Information</a> |
+ <a href="/microcats/clients/index.html">Our Clients</a> |
+
+<a href="/microcats/aboutus/publications.html">Publications</a> |
+ 
+<a href="/microcats/websites/">Related Websites</a> | 
+<a href="/microcats/aboutus/research.html">Research Projects</a> | 
+<a href="/microcats/apps/space/">Space Exploration</a> | 
+ <br> | 
+<a href="/microcats/aboutus/contacts.html">Technical Staff</a> |
+<a href="/microcats/apps/transport/">Transportation</a> | 
+<a href="/microcats/whatnew/">What's New</a> | <a href="/microcats/aboutus/techfocus.html">Why Microtechnology?</a> |
+<a href="/microcats/aboutus/gbook.html">Your Questions</a> |  
+ </p>
+
+</td></tr>
+</table>
+<hr>
+<table width="100%">
+<tr><td valign="top" width="220">
+<P class="footer">Contact: <a href="mailto:dr.b@pnl.gov">David Brenchley</a><br>
+Pagemaster: <a href="mailto:amanda.kissire@pnl.gov">Amanda Kissire</a><br>
+Updated: December 18, 2002</P>
+</td>
+
+
+<td align="right" valign="top">
+<a href="/microcats/"><img src="/microcats/images/micrologo.gif" border=0 alt="microcats home" align="right"></a>
+</td></tr></table>
+
+</body></html>
+

@@ -1,0 +1,231 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Mozilla/4.7 [en] (X11; I; HP-UX B.10.20 9000/735) [Netscape]">
+<title> Current status of the Assembly QA </title>
+</head>
+
+<body bgcolor="FFFFFF">
+<font size=5>
+<hr size=5>
+<center>
+<h1> Si+MCM Assembly QA 
+</h1>
+<hr size=5>
+<p>
+</center>
+
+<p><h2>
+The QA procedure</h2>
+<p>
+<b> 1. </b>
+Carefully put the assembly on the detector mount on the laser station.
+<p>
+<b> 2. </b>
+Slide in the conductive rubber under the kapton cable where 
+the small pad is ,which the bias tab will be connected to. Clamp down the kapton
+cable and the conductive rubber onto the copper surface of the detector mount for
+the Si-bias connection. 
+<p> 
+<b> 3. </b>Shield the whole things with the steel box.
+<p>
+<b> 4. </b>Turn on everything.<br> 
+<ul>
+<li>
+motherboard : from the low voltage distribution module(+-5V)
+<li>
+MCM : from two separate stand alone supply(LAMDA LPD 421, HP 6205C)
+<li>
+Si bias : ~40.0 V from a stand alone supply(HP E3612A)
+<li>
+laser bias : ~33.0 V from a stan alone supply(KEITHLEY 487)
+<li>
+water cooling for the laser : outside of the clean tent
+<li>
+MCM test board : ~6.0V from a supply under the laser station
+<li>
+CAMAC crate : used to handle the LVL-1 delay
+<li>
+stepping motor controller, a cooling fan for the MCM, etc 
+</ul>
+<p>
+<b> 5. </b>Start MCM control softwares(<a href="pcbmcm.gif">pcb_mcm</a>
+, <a href="mcmread.gif">mcm_read</a>, <a href="mvdmain.gif">mvd_main</a>
+) on mvdonl5(a Pentium-PC for the assembly QA). The mcm_read user interface
+has a button to pop up <a href="mm3k.gif">a panel for stepping motor 
+controlling</a>, which is named as 'MM3000'. Its usage is very simple.
+Using this panel, you can move the laser anywhere you want and monitor
+the current position.
+<p>
+<b> 6.</b> Find the first ch of the Si-strip by manualy moving 
+the laser. 
+<p>
+<b> 7.</b> Move the laser at the position where the first channel
+ shows the biggest ADC value. 
+Reset the stepping motor controller.
+<p>
+<b> 8.</b> Start the automatic scan moving 100 steps at a time.
+(Approximately 100steps correspond 
+to the strip pitch. <a href="resol.gif">Look here.</a>)
+It takes about 2 hours to 
+scan whole 256 strip with 10 times trigger on each strip. 
+Automatic scan can be done
+by <a href="http://p25ext.lanl.gov/people/hubert/talks/chain/mcm/menu.html">
+running a script in MVD MCM software.</a> I have added new commands to control 
+stepping motor in MCM software.
+<p>
+<center>
+<table border=2 cellpadding=7 cellspacing=6 width=90%>
+<thead>
+	<tr><th>code<th>command<th>arguments<th>function, note</tr>
+</thead>
+<tbody>
+	<tr><td align=center>126<td align=center>init-stepper
+        <td align=center>-<td align=center>initialize the stepping motor
+	<tr><td align=center>127<td align=center>move
+	<td align=center>dir steps
+	<td align=center>motion in 'dir' direction by 'steps' steps
+	<tr><td align=center>128<td align=center>xhome
+	<td align=center>-<td align=center>x home search
+	<tr><td align=center>129<td align=center>yhome
+	<td align=center>-<td align=center>y home search
+	<tr><td align=center>130<td align=center>read-pos
+	<td align=center>-<td align=center>read the current position of the laser
+</tbody>
+</table>
+</center>
+<p>
+<b> 9.</b> Take the pedestal data with keeping everything on and moving the
+       laser away from Si-strip.
+<p>
+<b> 10.</b>Analysis using ROOT. Simple ROOT macro files 
+c:\mvd\histos\root\pedestal.c 
+and c:\mvd\histos\root\run.c on 
+mvdonl5.lanl.gov, the Pentium PC dedicated to the laser station, do this job.
+Recheck bad channels with manual scan around those channels.
+<p>
+<b> 11.</b> I recommand not to scan the whole channels at a time. Sometimes unexpected bad things can happen. For example, the laser spot can go into the readout strip during the scan, which reflect the laser. Therefore, divide the whole scanning process over 4 runs or so. 
+<hr size=5>
+<center>
+<h1> Summary of Test Results
+</h1>
+<p>
+</center>
+<p>
+Assemblies with evaluation lot MCM's:
+<p>
+<center>
+<table border=2 cellspacing=6 cellpadding=7 width=100%>
+<thead>
+     <tr><th>Assembly #<th>QA result<th>picture shows the result
+     <th>MCM #,grade 
+     <th>Note</tr> 
+</thead>
+<tbody>
+     <tr><td align=center>OB-06<td align=center>4 dead(60,95,97,197)
+         <td align=center><a href="ob06.html">click</a>
+         <td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm103">
+         103,B</a>
+         <td align=center> - </tr>
+     <tr><td align=center>OB-11<td align=center>56
+         <td align=center><a href="ob11.html">click</a>
+         <td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm112">
+         112,D</a>
+         <td align=center>overflow on 32 ch's of 4th group. ALM problem on the 2nd group?</tr>
+     <tr><td align=center>OB-14<td align=center>2 dead(4,6) + 6th block failed
+         <td align=center><a href="ob14.html">click</a>
+         <td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm118">118,A?</a>
+         <td align=center> retested in November 99, turned out 
+         6th block of 32 ch's
+	 have always overflow adc value.</tr>
+     <tr><td align=center>IB-02<td align=center>9 dead(15-23)+one block
+         of very noisy ch's 
+         <td align=center><a href="ib02.html">click</a>
+         <td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm116">116,C?</a>
+         <td align=center>group 5 very noisy</tr>
+     <tr><td align=center>IB-07<td align=center>0 dead
+         <td align=center><a href="ib07.html">click</a>
+         <td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm121">121,A?</a>
+         <td align=center>this assembly had been degraded to F because of the 
+	 broken Si bias and bias return traces on the kapton cable. Toshi 
+         repaired these broken traces by dropping a bead of soldering 
+         lead onto them.
+	 Now this assembly is working good again.
+	 </tr>
+</table>
+</center>
+<p>
+
+<p>
+First batch(?):
+<p>
+<center>
+<table border=2 cellspacing=6 cellpadding=7 width=100%>
+<thead>
+     <tr><th>Assembly #<th>MCM#,grade<th>QA result<th>Note</tr>
+</thead>
+<tbody>
+        <tr><td align=center>IM-05
+        <td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm186">186,A</a>
+        <td align=center>No problems seen
+        <td align=center>-</tr>
+        <tr><td align=center>IT-13
+        <td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm188">188,A</a>
+        <td align=center>No problems seen
+	<td align=center>-</tr>
+        <tr><td align=center>IB-03
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm189">189,A</a>
+	<td align=center>2 dead channels(193,254)
+        <td align=center>shining the laser on dead channels, there is a big
+        crosstalk between dead channels and adjacent channels.
+        <a href="ib_03.html">details here.</a></tr>
+	<tr><td align=center>IB-04
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm184">184,A</a>
+	<td align=center>6 dead(92-97),1 bad(87)
+        <td align=center>87 works sporadically.<a href="ib_04.html">details here.</a></tr>
+	<tr><td align=center>IB-05
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm142">142,A</a>
+        <td align=center>1 dead(144)<td align=center>144 is dead on MCM.</tr>
+	<tr><td align=center>IB-06
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm185">185,A</a>
+	<td align=center>not tested yet<td align=center>looks unstable.</tr>
+        <tr><td align=center>IB-10
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm211">211,A</a>
+        <td align=center>4 dead(24,65,76,80)<td align=center>24,65 dead on MCM.
+        <a href="ib_10.html">details here.</a></tr>
+        <tr><td align=center>IB-17
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm187">187,A</a>
+        <td align=center>10 dead(245-252,255,256)
+        <td align=center>shining the laser on dead channels push up the ADC value of 
+        adjacent channels.<a href="ib_17.html">details here.</a></tr>
+        <tr><td align=center>OB-01
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm101">101,A</a>
+        <td align=center>15 dead(58,94,176-187,209)<td align=center>-</tr>
+        <tr><td align=center>OB-08
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm199">199,A</a>
+        <td align=center>5 dead(62-64,249,250)<td align=center>-</tr>
+        <tr><td align=center>OB-12
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm119">119,A</a>
+        <td align=center>9 dead(57-63,175,252)<td align=center>-</tr>
+        <tr><td align=center>OB-18
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm213">213,A</a>
+        <td align=center>13 dead(1-8,48,97,98,99,198)<td align=center>-</tr>
+        <tr><td align=center>OB-19
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm210">210,A</a>
+        <td align=center>5 dead(97-101)<td align=center>-</tr>
+        <tr><td align=center>OB-24
+	<td align=center><a href="http://p25ext.lanl.gov/phenix/mvd/elect/mcmtest/tested_mcms.html#mcm231">231,A</a>
+        <td align=center>55 dead<a href="deadlist.html">(84-91,111,117,...,249-256)</a><td align=center>-</tr>
+
+</tbody>
+</table>
+</center>
+<p>
+<hr size=5>
+<center><i> last update: 3 Jan 2000 <br>
+            Younggook Kim(ygkim@p2hp2.lanl.gov)</i></center> 
+<hr size=5>
+<p>
+</html>
+
+

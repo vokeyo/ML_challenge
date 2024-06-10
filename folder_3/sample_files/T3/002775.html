@@ -1,0 +1,3021 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<head>
+
+<title>Geosciences</title>
+
+<meta name="review" content="31 Jul 2002">
+
+<meta name="filename" content="saltfing.htm">
+
+<meta name="subject" content="Monitored Natural Attenuation">
+
+<meta name="sandia.approval_type" content="formal">
+
+<meta name="sandia.approved" content="SAND98-2839">
+
+<meta name="sandia.create_date" content="11/26/96">
+
+<link rel="schema.sandia" href="http://www.sandia.gov/html_schema.htm">
+
+<link rev="owns" title="Henry Westrich" href="mailto:hrwestr@sandia.gov">
+
+<link rev="made" title="Henry Westrich" href="mailto:hrwestr@sandia.gov">
+
+<meta name="Description" content="Monitored Natural Attenuation">
+
+<meta name="keywords" content="geochemisty, contaminants, remediation, toolbox">
+
+</head>
+
+<BODY>
+<a name="TOP"></a>
+
+
+<H1 ALIGN=CENTER>Practical Application of Lattice-Gas and Lattice Boltzmann
+
+Methods to Dispersion Problems</H1>
+
+
+
+<CENTER><P>Harlan W. Stockman, <I>Sandia National Laboratories, Albuquerque,
+
+NM</I> (<TT><A HREF="mailto:hwstock@swcp.com">hwstock@swcp.com</A></TT>)</P></CENTER>
+
+
+
+<CENTER><P>Clay Cooper, <I>Desert Research Institute, Reno, NV</I> (<TT><A HREF="mailto:clay@maxey.dri.edu">clay@maxey.dri.edu</A></TT>)</P></CENTER>
+
+
+
+<CENTER><P>Chunhong Li, <I>Intera, Albuquerque, NM </I>(<TT><A HREF="mailto:cli@sandia.gov">cli@sandia.gov</A></TT>)</P></CENTER>
+
+
+
+<CENTER><P>Sally J. Perea-Reeves, <I>University of New Mexico, Albuquerque,
+
+NM</I></P></CENTER>
+
+
+
+<H2 ALIGN=CENTER>Abstract</H2>
+
+
+
+<P>We compare lattice-gas and lattice Boltzmann techniques for the quantitative
+
+study of dispersion in natural systems. The principal advantage of lattice
+
+gases is speed (computational efficiency), and the ability to dilute boundary
+
+errors by using large numbers of sites; however, with large numbers of
+
+sites, viscous equilibration time can severely limit the practicality of
+
+the method. The principal advantage of lattice Boltzmann is the tunability
+
+of the transport coefficients, allowing simulations in narrow channels;
+
+however, errors in boundary conditions appear to be more serious for dispersion
+
+phenomena, than for the widely studied bulk flow (single-component) problems,
+
+and these errors may prevent the use of very small channels. Despite these
+
+problems, agreement with experimental results is often quite good, and
+
+the experimental error for dispersion measurements will often swamp the
+
+errors inherent in the numerical methods. For modeling double-diffusive
+
+fingering (salt fingering), the lattice Boltzmann method is clearly superior.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR VALIGN=TOP>
+
+<TD>
+
+<CENTER><P><B><FONT SIZE=+1>Contents</FONT></B></P></CENTER>
+
+</TD>
+
+
+
+<TD>
+
+<CENTER><P><B><FONT SIZE=+1>Movie (mpeg</FONT></B>) <B><FONT SIZE=+1>quick
+
+access</FONT></B></P></CENTER>
+
+</TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD>
+
+<DT><A HREF="#Introduction">Introduction</A></DT>
+
+
+
+<DT><A HREF="#Background">Background</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#LGA methods.">LGA Methods</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#LB_methods">LB Methods</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#Relative_Efficiency">Relative Efficiency</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#Coding_Consid_LGA">Coding Considerations:
+
+LGA</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#Coding_Consid_LB">Coding Considerations:
+
+LB</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#Galilean">Galilean Invariance and
+
+LGA</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#Accurate Boundary Conditions.">Accurate
+
+Boundary Conditions</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#Achievable Peclet">Achievable Peclet
+
+Numbers</A></DT>
+
+
+
+<DT><A HREF="#Examples">Examples</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#Example_1">Fracture Mixing</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#Example_2">Dispersion in Alveolated
+
+Channels</A></DT>
+
+
+
+<DT>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#Example_3">Double-Diffusive Fingering</A></DT>
+
+
+
+<DT><A HREF="#Conclusions">Conclusions</A></DT>
+
+
+
+<DT><A HREF="#Acknowledg">Acknowledgments</A></DT>
+
+
+
+<DT><A HREF="#References">References</A></DT>
+
+</TD>
+
+
+
+<TD VALIGN=TOP>
+
+<DT><A HREF="Tiny.mpg">LGA Particle Motions [LGA, 571 kB]</A></DT>
+
+
+
+<DT><A HREF="E.mpg">Thunderbird Dispersion [LGA, 92kB]</A></DT>
+
+
+
+<DT><A HREF="B.mpg">Rayleigh-Taylor Immiscible [LGA, 81 kB]</A></DT>
+
+
+
+<DT><A HREF="Cbahr00.mpg">Viscous Fingering #1 [LGA, 1916 kB]</A></DT>
+
+
+
+<DT><A HREF="Cbahr03.mpg">Viscous Fingering #2 [LGA, 2163 kB]</A></DT>
+
+
+
+<DT><A HREF="Cbuoy.mpg">Poiseiulle / Buoyancy [LGA, 159 kB]</A></DT>
+
+
+
+<DT><A HREF="Lb2.mpg">Rayleigh-Taylor Miscible [<B>LB</B>, 162 kB]</A></DT>
+
+
+
+<DT><A HREF="tsuda496.mpg">Alveolated Channels [<B>LB</B>, 146 kB]</A></DT>
+
+
+
+<DT><A HREF="Lb2719.mpg">Double-Diffusive Fingers [<B>LB</B>, 157 kB]</A></DT>
+
+
+
+<CENTER><P><FONT COLOR="#FF0000"><FONT SIZE=+1><A HREF="#MPEG_HELP">MPEG
+
+&nbsp;HELP</A></FONT></FONT></P></CENTER>
+
+</TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<H1><A NAME="Introduction"></A>Introduction</H1>
+
+
+
+<P>When lattice-gas automata (LGA) were introduced by <A HREF="saltfing.htm#Frisch_etal_1986">Frisch,
+
+Hasslacher and Pomeau (1986)</A> as a means to solve the Navier-Stokes
+
+equations, the technique was first envisioned as a &quot;numerical wind
+
+tunnel&quot; to study high-speed, complex flows bounded by geometrically
+
+simple solid barriers. However, <A HREF="saltfing.htm#Rothman_1988">Rothman
+
+(1988)</A> noted that LGA were powerful tools for modeling &quot;slow&quot;
+
+flows (Reynolds number &lt; 100) in complex porous and geological media.
+
+&nbsp;The method was quickly extended to immiscible liquids (<A HREF="saltfing.htm#Rothman_Kell_1988">Rothman
+
+and Keller, 1988</A>). Early models were two-dimensional, or restricted
+
+to single-component flows; but the advance of supercomputing, and the development
+
+of the lattice Boltzmann (LB) technique, allowed full 3D calculation of
+
+flow in porous media, with realistic representations of immiscible liquids
+
+in petroleum-bearing sandstones (<A HREF="saltfing.htm#Martys_Chen_1996">Martys
+
+and Chen, 1996</A>). &nbsp;The adoption of the Bhatnagar-Gross-Krook (BGK)
+
+collision operator (<A HREF="saltfing.htm#Qian_etal_1992">Qian et al.,
+
+1992</A>) simplified LB calculations, and now multi-component LB calculations
+
+of complex media are practical on single-CPU computers.</P>
+
+
+
+<P>If a tracer is injected into a flowing fluid, it is dispersed -- that
+
+is, spread and stretched by a combination of flow and molecular diffusion
+
+(<A HREF="saltfing.htm#Aris_1956">Aris, 1956</A>). &nbsp;For example, the
+
+tracer might be smoke in air, or a dye or solute in water. When influenced
+
+by buoyancy, multiple diffusion coefficients, or constraint in convoluted
+
+channels, the process can be remarkably complex.&nbsp;&nbsp;LGA and LB
+
+techniques are well-suited to modeling dispersion, particularly in the
+
+intermediate <A HREF="#Peclet_definition">Peclet number</A> range, where
+
+neither diffusion nor fluid flow dominates the spreading of solute. &nbsp;<A HREF="saltfing.htm#Baudet_etal_1989">Baudet
+
+et al. (1989)</A> were apparently the first to apply LGA techniques to
+
+dispersion in planar channels, and more complex geometries were considered
+
+by <A HREF="saltfing.htm#Gutfraind_etal_1995">Gutfraind et al. (1995)</A>
+
+and <A HREF="saltfing.htm#Perea-Reeves_Stock_1997">Perea-Reeves and Stockman
+
+(1997)</A>.&nbsp;&nbsp;The principal advantage of LGA and LB is that they
+
+handle complicated boundary and initial conditions very well, free from
+
+many &quot;gridding&quot; and stability constraints that plague conventional
+
+numerical methods.</P>
+
+
+
+<P>In this note, we examine several applications of LGA and LB to dispersion
+
+problems in the natural sciences, and compare the relative advantages of
+
+each technique. &nbsp;We focus on oft-neglected, practical aspects of the
+
+calculations: errors associated with boundary conditions, accuracy required
+
+for meaningful comparisons with experimental data, computer coding, and
+
+the factors that dictate problem size and run time. &nbsp;All the examples
+
+are 2D or quasi-3D, and can be run on single-CPU personal computers or
+
+workstations.</P>
+
+
+
+<H1><A NAME="Background"></A><B><FONT SIZE=+2>Background</FONT></B></H1>
+
+
+
+<P><A NAME="LGA methods."></A><B><U>LGA methods.</U></B> &nbsp;LGA are
+
+collections of discrete particles constrained to move on fixed, geometric
+
+lattices. <A HREF="#fig1_LGA_step_gif">Figure&nbsp;1</A> shows a &quot;microscopic&quot;
+
+view of the stages in a single LGA time step, for particles near a solid
+
+wall; <A HREF="#fig2_LGA_tiny_mpeg">figure&nbsp;2</A> follows the process
+
+through many time steps. There is a translation or &quot;streaming&quot;
+
+step in which particles move from site to site on the grid, then a collision
+
+step. &nbsp;Both figures depict the 2D hexagonal &quot;FHP&quot; lattice
+
+(<A HREF="saltfing.htm#Frisch_etal_1986">Frisch et al., 1986</A>), which
+
+has only 6 possible particle velocities, and one particle speed. &nbsp;Collisions
+
+in the fluid conserve momentum and particle number; collisions with walls
+
+are typically &quot;bounce-back&quot;, that is, particle directions are
+
+simply reversed.&nbsp; In modeling multi-component systems, the particles
+
+are often described as having &quot;colors&quot; that follow the particles
+
+and give rise to diffusion. &nbsp;In computer memory, the particles are
+
+represented by individual bits; the translation and collision steps are
+
+carried out entirely with simple integer operations.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><A HREF="LGA_step.gif"><IMG SRC="LGA_step.gif" BORDER=0 HEIGHT=363 WIDTH=181 ALIGN=CENTER></A></TD>
+
+
+
+<TD><A NAME="fig1_LGA_step_gif"></A><FONT COLOR="#800080">Figure 1. &nbsp;Three
+
+stages of a single time step for a 2D hexagonal lattice near a solid wall
+
+(brick pattern). &nbsp;This is a &quot;microscopic&quot; view, containing
+
+11 particles over ca. 15 fluid sites and 5 wall sites. &nbsp;A typical
+
+simulation uses 10<SUP>6</SUP> sites and 2&#183;10<SUP>6</SUP> particles.
+
+&nbsp;Collisions in the fluid conserve momentum and particle number. &nbsp;At
+
+the walls, particles undergo bounce-back collisions, which simply reverse
+
+particle direction. <A HREF="LGA_step.gif">Click on thumbnail</A> for a
+
+larger image.</FONT></TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD><FONT COLOR="#800080"><A HREF="Tiny.mpg">mpeg movie [571 kB]</A></FONT></TD>
+
+
+
+<TD><A NAME="fig2_LGA_tiny_mpeg"></A><FONT COLOR="#800080">Figure 2. &nbsp;A
+
+<A HREF="Tiny.mpg">movie of particle motions</A> in 8x8 sites near a solid
+
+object (denoted by green dots). &nbsp;This simulation was part of a much
+
+larger calculation with two components, represented by the blue- and red-colored
+
+arrows, so particles can leave and enter from outside the viewfield. &nbsp;You
+
+may wish to single-step through the movie.</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P>Momentum and particle averages for these simple systems, taken over
+
+many sites or many time steps, obey the equations:</P>
+
+
+
+<P><A NAME="eqn1_Navier_Stokes"></A><IMG SRC="navier.gif" HEIGHT=53 WIDTH=479 ALIGN=CENTER>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)</P>
+
+
+
+<P>and</P>
+
+
+
+<P><A NAME="eqn2_Advection_Diffusion"></A><IMG SRC="advect_d.gif" HEIGHT=44 WIDTH=258 ALIGN=CENTER>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)</P>
+
+
+
+<P>where<I> <FONT SIZE=+1>t</FONT></I> is time, <IMG SRC="u_arrow.gif" HEIGHT=17 WIDTH=14 ALIGN=ABSCENTER>&nbsp;is
+
+the fluid velocity (<I><FONT SIZE=+1>u</FONT></I><SUB>x </SUB><I>,&nbsp;<FONT SIZE=+1>u</FONT></I><SUB>y
+
+</SUB><I>,&nbsp;<FONT SIZE=+1>u</FONT></I><SUB>z</SUB>), <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSCENTER>&nbsp;is
+
+the density in particles/site, <I>P</I> is pressure, <IMG SRC="F_arrow.gif" HEIGHT=18 WIDTH=14>&nbsp;is
+
+a body force (e.g. gravity), <IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSBOTTOM>&nbsp;is
+
+the kinematic viscosity, <I>C</I> is the concentration of a tracer dispersed
+
+through the system, and <I>D<SUB>m</SUB></I> is the molecular diffusion
+
+coefficient. &nbsp;<A HREF="#eqn1_Navier_Stokes">Equation (1)</A> is very
+
+similar to the Navier-Stokes equation, and <A HREF="#eqn2_Advection_Diffusion">equation
+
+(2)</A> is the advection-diffusion equation. &nbsp;For steady-state flow,
+
+the <IMG SRC="g_of_rho.gif" HEIGHT=19 WIDTH=35 ALIGN=TEXTTOP>&nbsp;term
+
+can be adsorbed into the viscosity, pressure and force terms, making <A HREF="#eqn1_Navier_Stokes">equation
+
+(1)</A> effectively equivalent to Navier-Stokes, subject to constraints
+
+<A HREF="#Galilean">discussed below</A>. &nbsp;The inclusion of simple
+
+rules for nearest-neighbor interactions (<A HREF="saltfing.htm#Rothman_Kell_1988">Rothman
+
+and Keller, 1988</A>) gives rise to immiscibility that obeys the LaPlace
+
+equation for bubble pressure, and Langmuir sorption and buoyancy are added
+
+easily.</P>
+
+
+
+<P>The following mpeg movies illustrate the complexity of problems that
+
+can be handled by LGA; you may wish to set your mpeg viewer to &quot;loop&quot;
+
+mode.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><FONT COLOR="#800080"><A HREF="E.mpg">ThunderBird dispersion [92 kB]</A></FONT></TD>
+
+
+
+<TD><A NAME="fig3"></A><FONT COLOR="#800080">Figure 3. shows dispersion
+
+of a thunderbird-shaped solute slug around a set of solid obstacles. This
+
+calculation, with 1024x512 sites, took ca. 1 hour on a 486 PC.</FONT></TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD><FONT COLOR="#800080"><A HREF="B.mpg">Rayleigh-Taylor instability [81
+
+kB]</A></FONT></TD>
+
+
+
+<TD><A NAME="fig4_rayleigh_immisc"></A><FONT COLOR="#800080">Figure 4.
+
+illustrates the Rayleigh-Taylor instability, with two <B><I>immiscible</I></B>
+
+fluids; the red fluid is denser than the blue fluid.</FONT></TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD><FONT COLOR="#800080"><A HREF="Cbahr00.mpg">Viscous fingering #1 &nbsp;[1916
+
+kB]</A></FONT> 
+
+<P><FONT COLOR="#800080"><A HREF="Cbahr03.mpg">Viscous fingering #2 &nbsp;[2163
+
+kB]</A></FONT></P>
+
+</TD>
+
+
+
+<TD><A NAME="fig5_visc_finger"></A><FONT COLOR="#800080">Figure 5a. is
+
+an example of viscous fingering (<A HREF="saltfing.htm#Holme_Roth_1992">Holme
+
+and Rothman, 1992</A>); both fluids have the same density, but the red
+
+fluid is 8 times more viscous than the blue. &nbsp;The white specks represent
+
+solids, and give the automaton the properties of a porous medium. &nbsp;As
+
+blue fluid displaces the red, the interface becomes unstable, forming fingers
+
+that split and rejoin with time (if the more viscous fluid were displacing
+
+the less viscous, the fingers would not form). &nbsp;The inherent noise
+
+in the automaton produces the small disturbances that initiate fingering.
+
+&nbsp;This calculation used ca. 2&#183;10<SUP>6 </SUP>sites<SUP> </SUP>and<SUP>
+
+</SUP>6&#183;10<SUP>6</SUP> particles, and ran for ca. 12 hours on a
+
+90 MHz Pentium&#174; PC. &nbsp;The second example (5b) has a more uniform
+
+porous medium, and fingering is initiated by a bump in the interface, so
+
+the pattern is more regular.</FONT></TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD><FONT COLOR="#800080"><A HREF="Cbuoy.mpg">Poiseiulle flow dispersion
+
+and buoyancy &nbsp;[159 kB]</A></FONT></TD>
+
+
+
+<TD><A NAME="fig6_buoy_Poiseuille"></A><FONT COLOR="#800080">Figure 6.
+
+shows dispersion of a slug of solute in Poiseiulle flow between two parallel
+
+plates, viewed from the side. &nbsp;The run begins with dispersion in the
+
+absence of buoyancy, then shows the behavior when there is a ca. 1% density
+
+difference between the initial slug and the carrier fluid.</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P>Apart from generating &quot;pretty pictures&quot; of physical phenomena,
+
+LGA can also be used for quantitative tests and predictions. &nbsp;They
+
+are particularly useful for investigating the effects of buoyancy and scaling
+
+on dispersion in small-scale laboratory tests, as aides to experimental
+
+design and interpretation. While LB methods have nearly supplanted LGA
+
+in the literature, LGA are still useful for a surprising number of applications,
+
+and have the advantages of rigorous particle conservation and high computational
+
+speed.</P>
+
+
+
+<P>As noted, LGA calculations require &quot;averaging&quot; to recover
+
+the macroscopic equations (1) and (2). &nbsp;In general, the averaging
+
+process poses a much more severe constraint on velocity field calculations
+
+than on dispersion modeling. &nbsp;For example, we found it necessary to
+
+average over <IMG SRC="approx.gif" HEIGHT=16 WIDTH=13 ALIGN=ABSCENTER>10<SUP>5</SUP>
+
+steps to resolve recirculation zones at Reynolds numbers (<I>Re</I>) of
+
+50, in the modeling of flow through rough fractures (<A HREF="saltfing.htm#Brown_etal_1995">Brown
+
+et al., 1995</A>).&nbsp;&nbsp;With such long averaging times, the LGA technique
+
+is often restricted to slowly varying or steady-state flows. &nbsp;Even
+
+with tight coding (e.g., assembly language), the averaging process can
+
+be the most time-consuming part of a flow calculation; this limitation
+
+is rarely mentioned, and must temper enthusiastic reports of LGA computational
+
+performance.&nbsp;&nbsp;On the other extreme, <A HREF="saltfing.htm#Perea-Reeves_Stock_1997">Perea-Reeves
+
+and Stockman (1997)</A> found concentration averages over just 4 to 64
+
+steps were adequate for dispersion measurements at a Peclet number (<I>Pe</I>)
+
+of 50.</P>
+
+
+
+<P><A NAME="LB_methods"></A><B><U>Lattice Boltzmann methods.&nbsp;</U></B>
+
+The lattice Boltzmann technique is described in detail by <A HREF="saltfing.htm#Martys_Chen_1996">Martys
+
+and Chen (1996)</A>. Here we consider only LB methods with the simple BGK
+
+collision operator (<A HREF="saltfing.htm#Qian_etal_1992">Qian et al.,
+
+1992</A>). &nbsp;The principal difference between LGA and LB is that the
+
+latter uses probabilistic particle distributions, rather than discrete
+
+particles; thus it is a floating-point method. The LB equation is written:</P>
+
+
+
+<P><A NAME="eqn3_LB_update"></A><IMG SRC="lb_eqn3.gif" HEIGHT=56 WIDTH=449 ALIGN=ABSCENTER>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)</P>
+
+
+
+<P>where the <I>f</I><SUB>i</SUB> represent the particle distribution functions
+
+for each vector direction <I><FONT SIZE=+1>i</FONT></I>,<I><FONT SIZE=+1>
+
+t</FONT></I> is time, <IMG SRC="x_arrow.gif" HEIGHT=21 WIDTH=13 ALIGN=ABSCENTER>&nbsp;is
+
+an (<I>x,y,z</I>) position in the lattice, <IMG SRC="e_arrow.gif" HEIGHT=24 WIDTH=15 ALIGN=ABSCENTER>&nbsp;is
+
+the velocity in the <I><FONT SIZE=+1>i</FONT></I>th direction, &nbsp;<I>f<SUB>i</SUB><SUP>eq</SUP></I>
+
+&nbsp;is the equilibrium particle distribution, and <IMG SRC="tau.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER>&nbsp;is
+
+a relaxation parameter. &nbsp;The left side of the equation is analogous
+
+to the &quot;translation&quot; stage in LGA, and the right to the &quot;collision&quot;
+
+stage. For example, in the two-dimensional &quot;D2Q9&quot; model of <A HREF="saltfing.htm#Qian_etal_1992">Qian
+
+et al</A>., there are 9 velocities (<IMG SRC="e_arrow.gif" HEIGHT=24 WIDTH=15 ALIGN=ABSCENTER>)
+
+on a square lattice: one has speed=0 and corresponds to a &quot;rest&quot;
+
+particle; four have speed=1 and are at 0, 90, 180 and 270 degrees; and
+
+four have speed=<IMG SRC="sqrt2.gif" HEIGHT=23 WIDTH=24 ALIGN=ABSCENTER>&nbsp;at
+
+45, 135, 225 and 315 degrees (<A HREF="saltfing.htm#fig7_LB_sites">figure
+
+7</A>).</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><A HREF="lb_sites.gif"><IMG SRC="lb_sites.gif" BORDER=0 HEIGHT=205 WIDTH=196 ALIGN=ABSCENTER></A></TD>
+
+
+
+<TD><A NAME="fig7_LB_sites"></A><FONT COLOR="#800080">Figure 7. &nbsp;Schematic
+
+2D lattice Boltzmann calculation on a square lattice, after the translation
+
+step. Shown are 6 fluid sites and 3 wall sites (the wall is shown with
+
+a brick pattern). &nbsp;The rest particle is denoted by f<SUB>0</SUB>.
+
+<A HREF="lb_sites.gif">Click on the thumbnail</A> to view a larger image.</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P>Through careful choice of the equilibrium distribution, LB momentum
+
+and concentration obey the Navier-Stokes and advection-diffusion equations,
+
+and are Galilean-invariant. The equilibrium distribution is a simple function
+
+of the particle speed <IMG SRC="u_arrow.gif" HEIGHT=17 WIDTH=14 ALIGN=ABSCENTER>&nbsp;and
+
+density <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSCENTER>&nbsp;at
+
+each site, e.g. for the <A HREF="saltfing.htm#Qian_etal_1992">Qian et al.
+
+(1992)</A> D2Q9 model:</P>
+
+
+
+<P><IMG SRC="eqn4.gif" HEIGHT=287 WIDTH=504></P>
+
+
+
+<P>Where <I>Q<SUB>i</SUB></I> = 1/9 for i = 1,3,5 and 7, and <I>Q<SUB>i</SUB></I>
+
+= 1/36 for i = 2,4,6 and 8.</P>
+
+
+
+<P>Other distributions are given by <A HREF="saltfing.htm#Noble_etal_1996">Noble
+
+et al. (1996)</A>. The <IMG SRC="tau.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER>determines
+
+the viscosity and diffusion coefficients of the system; in the Qian et
+
+al. model, for example, the kinematic viscosity <IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER>&nbsp;=&nbsp;(<IMG SRC="tau.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSBOTTOM>&nbsp;<FONT SIZE=+1>-&nbsp;</FONT>0<B>.</B>5)&nbsp;<I>/&nbsp;</I>3.</P>
+
+
+
+<P>There are several methods for including dispersion in an LB calculation
+
+(<A HREF="saltfing.htm#Martys_Chen_1996">Martys and Chen, 1996</A>; <A HREF="saltfing.htm#Flekkøy_1993">Flekk&oslash;y,
+
+1993</A>). &nbsp;The Flekk&oslash;y method is perhaps the simplest; a carrier
+
+fluid following equations 3 and 4 produces a velocity field, and tracers
+
+(held in separate arrays) are advected by the carrier. &nbsp;The concentrations
+
+of tracers at each (<I>x,y,z</I>) can be used to calculate a buoyancy force
+
+that feeds back into the <IMG SRC="u_arrow.gif" HEIGHT=17 WIDTH=14 ALIGN=ABSCENTER>&nbsp;in
+
+equations 4a-4d (<A HREF="saltfing.htm#Martys_Chen_1996">Martys and Chen,
+
+1996</A>). &nbsp;Each tracer is characterized by its own <IMG SRC="tau.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSBOTTOM><SUB>s</SUB>,
+
+and the molecular diffusion coefficient of each tracer is given by <I>D<SUB>m&nbsp;</SUB></I>=&nbsp;(<IMG SRC="tau.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSBOTTOM><SUB>s&nbsp;</SUB><FONT SIZE=+1>-&nbsp;</FONT>0<B>.</B>5)&nbsp;<I>/&nbsp;</I>3
+
+(for the square lattice in <A HREF="#fig7_LB_sites">figure 7</A>).</P>
+
+
+
+<P>Because the LB method is floating point-based, it is inherently much
+
+less noisy than the LGA method; in general, there is no need to take momentum
+
+and particle averages to obtain meaningful velocities or concentrations
+
+at each (<I>x,y,z</I>). &nbsp;Furthermore, the diffusion coefficients,
+
+which depend on <IMG SRC="tau.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSBOTTOM>,
+
+can be made much smaller than the LGA diffusion coefficients. &nbsp;The
+
+consequences of these differences are apparent in this example of the <A HREF="Lb2.mpg">Rayleigh-Taylor
+
+instability for <B><I>miscible</I></B> fluids</A> (mpeg movie, 162 kB),
+
+which can be compared with <A HREF="#fig4_rayleigh_immisc">figure 4</A>,
+
+the LGA calculation for <B><I>immiscible</I></B> liquids. &nbsp;Each frame
+
+in the LB calculation is taken from a single time step, with no averaging.
+
+&nbsp;With only 128x128 sites, fine whorls of &quot;smoke&quot; are resolved,
+
+and the interfaces are less random-looking than in the LGA example. &nbsp;With
+
+LGA, it is hard to get a diffusion coefficient <I>D<SUB>m</SUB></I> &lt;
+
+0.3, so it is hard to model miscible Rayleigh-Taylor or fingering displacements
+
+without making the simulation very large (<A HREF="saltfing.htm#Holme_Roth_1992">Holme
+
+and Rothman, 1992</A>).</P>
+
+
+
+<P><A NAME="Relative_Efficiency"></A><B><U>Relative efficiency.</U></B>&nbsp;&nbsp;&nbsp;<A HREF="#fig_mups">Figure
+
+8</A> plots the MUPs, or millions (of site) updates per second, achievable
+
+on single-CPU computers against the year each CPU became widely available.
+
+&nbsp;While LGA methods are still substantially faster on a per-site basis,
+
+the gap between the methods is narrowing. Although LGA use much less memory
+
+per site, they have a rather high ratio of memory to arithmetic operations,
+
+so the speed of LGA calculations is more bound by memory throughput, typically
+
+in the translation step. For LB on single-CPU systems, the speed of floating-point
+
+computations is generally the limitation; with our LB algorithms, the memory-intensive
+
+translation step rarely consumes more than 10 to 20% of the total computation
+
+time. As we will shortly show, there are other considerations that can
+
+make LB calculations effectively much faster than LGA. On parallel machines
+
+like the CM-5, the LB translation step must be handled carefully, else
+
+it will become the rate-limiting factor in performance (<A HREF="saltfing.htm#Noble_etal_1995">Noble
+
+et al., 1995</A>, <A HREF="saltfing.htm#Noble_etal_1996">1996</A>). &nbsp;The
+
+wide variation in CM-5 throughput results partly from the range of boundary
+
+conditions implemented with each algorithm. Modern single-CPU computers
+
+have begun to overlap the CM-5 range, but we expect the advances in single-CPU
+
+technology will soon be reflected in performance gains for parallel systems.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><A HREF="mups.gif"><IMG SRC="mups.gif" HEIGHT=247 WIDTH=238 ALIGN=CENTER></A></TD>
+
+
+
+<TD><A NAME="fig_mups"></A><FONT COLOR="#800080">Figure 8. &nbsp;Increase
+
+in performance of LB and LGA with time. &nbsp;LGA algorithms are multi-site
+
+coded in x86 assembly language; LB algorithms are in C or HPF. &nbsp;For
+
+the 21164a (DEC alpha), HWS refers to our general version of the code,
+
+and RJH refers to Robert J. Harley's specialized version. <A HREF="mups.gif">Click
+
+on thumbnail</A> for larger image. The dashed red lines refer to 64-node
+
+(256 vector processor) CM-5 systems; upper value is estimated from <A HREF="saltfing.htm#Muders_thesis_1995">Muders
+
+(1995)</A> for single-phase, D2Q9 flow (Muders actually used a D3Q15 model),
+
+and lower is from <A HREF="#Noble_etal_1995">Noble et al. (1995)</A>.</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P><A NAME="Coding_Consid_LGA"></A><B><U>Coding considerations: LGA.</U></B>
+
+&nbsp;The two basic approaches to LGA coding have been referred to as &quot;multi-spin&quot;
+
+(in analogy with Ising models) and &quot;multi-site&quot; (<A HREF="saltfing.htm#Kohring_1991">Kohring,
+
+1991</A>; <A HREF="saltfing.htm#Brosa_Stau_1989">Brosa and Stauffer, 1989</A>).
+
+Both approaches represent the <B><I>absence or presence</I></B> of a particle,
+
+with a particular velocity at a site (<I>x,y,z)</I>, <B><I>with a single
+
+bit</I></B>; 0 for absent, 1 for present. The multi-spin method packs all
+
+bits corresponding to a given lattice direction into a single array. Thus
+
+for the FHP model (<A HREF="saltfing.htm#fig1_LGA_step_gif">figure 1</A>),
+
+there are 6 arrays corresponding to the 0&#176;, 60&#176;, 120&#176;, 180&#176;,
+
+240&#176; and 300&#176; velocities, plus an array for the rest particle (if
+
+used), and an array to denote the presence of solids at the site. Within
+
+each multi-spin array, each machine word holds the particle information
+
+for 32 or 64 consecutive sites. The multi-spin method greatly speeds up
+
+the translation step, at the expense of making the collision step more
+
+complicated. While very high LGA update speeds can be achieved with the
+
+&quot;multi-spin&quot; coding technique, such models are generally restricted
+
+to single-component flow. In contrast, the multi-site method packs all
+
+the velocity bits for a site together in adjacent memory locations; with
+
+the FHP model, typically 6 velocity bits plus one solid bit (representing
+
+absence or presence of a solid wall) are packed into a byte, and 4 to 8
+
+bytes packed per machine word. With multi-site, the translation step is
+
+more complicated, involving arithmetic ANDs and ORs to isolate and translate
+
+the individual velocity bits, operating on 4 to 8 sites in parallel. The
+
+multi-site collision step is simple, typically accomplished with look-up
+
+tables. Multiple components are most easily handled with separate arrays
+
+for &quot;red&quot; vs. &quot;blue&quot; vs. &quot;green&quot; components,
+
+though the size of the collision tables can increase rapidly as components
+
+are added.</P>
+
+
+
+<P>We used the multi-site method, and hand-coded the translation, collision,
+
+immiscibility and averaging steps in 80x86 assembly language for speed.
+
+&nbsp;To keep the look-up tables compact, we used a 6-velocity FHP model.
+
+&nbsp;The diffusion algorithm was based on <A HREF="saltfing.htm#McNamara_1990">McNamara
+
+(1990)</A>, with a few added collisions to reduce the diffusion coefficient;
+
+extensive testing showed that the &quot;molecular&quot; diffusion coefficient
+
+did not change with flow speeds up to 0.2 lu/ts (lattice units per time
+
+step). &nbsp;The immiscibilty algorithm was modified after <A HREF="saltfing.htm#Rothman_Kell_1988">Rothman
+
+and Keller (1988)</A>. On a 90 MHz Pentium&#174;, this method achieves 4
+
+million site updates per second for one-component flow, 2 million/second
+
+for two-component flow, and 1.x million/second with immiscibility. As a
+
+practical comparison, for the <A HREF="saltfing.htm#fig5_visc_finger">viscous
+
+fingering example</A> (mpeg, 1916 kB), a 90 MHz Pentium&#174; achieved ~30%
+
+of the site update speed reported by <A HREF="saltfing.htm#Lutsko_etal_1992">Lutsko
+
+et al. (1992)</A> for a 400 node Transputer network. However, on single-processor
+
+80x86 systems, the multi-site method is somewhat memory-bound, and is &quot;running
+
+out of steam&quot; with each advance in CPU technology. &nbsp;The current
+
+generation of microprocessors (such as the Intel MMX&#174;, Sun Sparclite&#174;,
+
+and DEC 21164pc&#174;) may obtain some speed increment through the use of
+
+&quot;multi-media&quot; instructions. Typically these instructions alias
+
+the floating point registers to represent 8 packed integer bytes; all bytes
+
+in a register can be acted on in parallel, not just by the traditional
+
+AND and OR instructions, but by integer multiplication, division and addition
+
+as well. It is doubtful, though, that such instructions would improve performance
+
+by more than a factor of two.</P>
+
+
+
+<P><A NAME="Coding_Consid_LB"></A><B><U>Coding considerations: LB.</U></B>
+
+&nbsp;We coded our LB algorithms in C, since C compilers are widely available,
+
+generally inexpensive, and are typically supplied with advanced development
+
+environments. &nbsp;The simple dynamic allocation features of C/C++ are
+
+particularly useful, though dynamic allocation is now available in FORTRAN
+
+90 as well. &nbsp;In our 2D LB codes, we have declared arrays in two ways.
+
+The first is:</P>
+
+
+
+<P><TT>float ****F;</TT></P>
+
+
+
+<P>with the array elements <TT>F[s][i][y][x]</TT>, indexed so that <TT>s</TT>
+
+selects the component of a multicomponent system, <TT>i </TT>selects the
+
+vector direction (<TT>i</TT> = 0 to 8 for the D2Q9 model), and <TT>y</TT>
+
+and <TT>x</TT> are the Cartesian spatial positions. The advantage of this
+
+order is that it allows much of the translation step to be accomplished
+
+with pointer swaps and efficient block moves. In the collision step, the
+
+<TT>F[s][i][y][x]</TT> for a given <TT>s, y</TT> and <TT>x</TT> are copied
+
+to a local array <TT>f[i]</TT> for floating-point manipulations; this copy
+
+step removes nearly all the aliasing problems of C (relative to FORTRAN).
+
+&nbsp;The second method is:</P>
+
+
+
+<P><TT>typedef float site[NVELOC]; &nbsp;&nbsp;&nbsp;&nbsp;/* NVELOC =
+
+9 for 2D */</TT></P>
+
+
+
+<P><TT>site ***F;</TT></P>
+
+
+
+<P>which avoids one level of indirection, and is presumably more efficient,
+
+holding all vectors in adjacent memory locations. &nbsp;However, this approach
+
+makes the translation stage more complicated, and requires buffering (that
+
+is, copying data to temporary buffers to void overwriting existing sites).&nbsp;
+
+Our timings found the second method slightly slower than the first.</P>
+
+
+
+<P>It is possible to achieve much higher speeds for LB algorithms, for
+
+somewhat specialized circumstances, by careful attention to processor architecture.
+
+Robert Harley of INRIA (denoted RJH on <A HREF="#fig_mups">figure 8</A>)
+
+modified our code to achieve 912000 site updates per second for 2D, two
+
+component flow on a 500 MHz DEC alpha 21164a processor, with the combination
+
+of <A HREF="saltfing.htm#Ziegler_1993">Ziegler</A> and no-flux boundary
+
+conditions <A HREF="saltfing.htm#fig_simple_boundary_Ziegler">described
+
+below</A>. We estimate Harley's code could achieve ca. 1.8 to 2.0 MUPs
+
+for single component flow. This speed was obtained by copying all the <TT>F[][][][]</TT>
+
+variables for a given x,y, and for each component, to local register variables;
+
+by factoring algebraic expressions to reduce the number of additions and
+
+multiplications; and by inlining critical functions (e.g functions describing
+
+wall collisions). Some of this speed would be lost in moving to 3D, where
+
+it would be hard to hold all variables in registers, or if one used more
+
+complicated boundary collisions and more than two components. &nbsp;However,
+
+this example shows that substantial speed gains can be obtained without
+
+resorting to assembly language coding or complicated logic.</P>
+
+
+
+<P>The most striking contrast between LGA and LB coding is the simplicity
+
+of the latter. While the basic translation and collision steps of LGA are
+
+very simple, code for application of an unbiased body force, buoyancy,
+
+Hele-Shaw drag forces, and sorption can be extremely complicated in LGA.
+
+For example, the application of unbiased body force required approximately
+
+100 lines of C code for LGA, and 1 line for LB.</P>
+
+
+
+<P><A NAME="Galilean"></A><B><U>Galilean Invariance and LGA.</U></B> &nbsp;&nbsp;A
+
+well-known problem with conventional LGA is the lack of Galilean invariance.
+
+The LGA bulk flow <A HREF="saltfing.htm#eqn1_Navier_Stokes">equation (1)</A>
+
+contains the <IMG SRC="g_of_rho.gif" HEIGHT=19 WIDTH=35 ALIGN=TEXTTOP>&nbsp;term,
+
+which is exactly 1 in the Navier-Stokes equation. &nbsp;For the FHP automaton,
+
+<IMG SRC="g_of_rho.gif" HEIGHT=19 WIDTH=35 ALIGN=TEXTTOP>&nbsp;=&nbsp;<IMG SRC="3rho6rho.gif" HEIGHT=20 WIDTH=90 ALIGN=TEXTTOP>,
+
+so that <IMG SRC="g_rho_limits.gif" HEIGHT=17 WIDTH=119 ALIGN=TEXTTOP>.
+
+&nbsp;When <IMG SRC="g_of_rho.gif" HEIGHT=19 WIDTH=35 ALIGN=TEXTTOP><IMG SRC="not_eq.gif" HEIGHT=15 WIDTH=15 ALIGN=TEXTTOP>1,
+
+the advection of vorticity does not obey the Galilean transforms. &nbsp;For
+
+single component flow, Galilean invariance can be restored by adsorbing
+
+the <IMG SRC="g_of_rho.gif" HEIGHT=19 WIDTH=35 ALIGN=TEXTTOP>&nbsp;term
+
+in the velocity, pressure and force terms of equation (1), such that <IMG SRC="u_g_rho.gif" HEIGHT=21 WIDTH=97 ALIGN=TEXTTOP>,
+
+etc. &nbsp;However, this method decouples the Navier-Stokes equation from
+
+the <A HREF="#eqn2_Advection_Diffusion">advection-diffusion equation (2)</A>,
+
+such that solutes do not advect at the same rate as bulk flow. </P>
+
+
+
+<P>For many dispersion problems, there is a better method to regain the
+
+Navier-Stokes equation.&nbsp; Often we are interested in measuring dispersion
+
+of a passive tracer in a system with steady-state bulk flow; i.e for the
+
+case where <IMG SRC="du_dt_0.gif" HEIGHT=18 WIDTH=79 ALIGN=TEXTTOP>. If
+
+0&nbsp;&lt;&nbsp;<IMG SRC="g_of_rho.gif" HEIGHT=19 WIDTH=35 ALIGN=ABSBOTTOM>&lt;&nbsp;3,
+
+the <IMG SRC="g_of_rho.gif" HEIGHT=19 WIDTH=35 ALIGN=TEXTTOP>&nbsp;term
+
+can be adsorbed in the viscosity, pressure and force, such that <IMG SRC="nu_g_rho.gif" HEIGHT=22 WIDTH=101 ALIGN=TEXTTOP>,
+
+etc. &nbsp;This latter approach does not decouple the Navier-Stokes and
+
+<A HREF="saltfing.htm#eqn2_Advection_Diffusion">advection-dispersion equations</A>.
+
+</P>
+
+
+
+<P>However, sometimes one must model dispersion in a system that is not
+
+at steady-state flow; for example, a system affected by buoyancy. &nbsp;One
+
+recourse is to set <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSBOTTOM>=3,
+
+so that <IMG SRC="g_of_rho.gif" HEIGHT=19 WIDTH=35 ALIGN=ABSCENTER>=0.
+
+&nbsp;That is, we force the inertial term in <A HREF="saltfing.htm#eqn1_Navier_Stokes">equation
+
+(1)</A> to zero, modeling Stokesian flow. &nbsp;For many natural systems,
+
+Stokesian flow is quite reasonable; diffusion coefficients of solutes in
+
+water are typically 3 orders of magnitude lower than the viscosity of water,
+
+so <I>Pe</I> = 100 corresponds to <I>Re</I> = 0.1. &nbsp;In addition, we
+
+often must compare against analytical solutions derived on the assumption
+
+of no inertial forces.</P>
+
+
+
+<P><A NAME="Accurate Boundary Conditions."></A><B><U>Accurate Boundary
+
+Conditions.</U></B> &nbsp;We may distinguish three types of boundary errors
+
+associated with dispersion calculations. The first applies to most numerical
+
+methods, and involves the choice of inlet conditions to represent, with
+
+a minimal number of sites or nodes, a process that properly occurs on a
+
+much larger scale. This first type of error was discussed by <A HREF="#Stockman_etal_1997">Stockman
+
+et al. (1997)</A>, and is also implicit in the discussion of <A HREF="#viscous equilibrium">viscous
+
+equilibrium</A> below. The second concerns &quot;pixelation&quot; error,
+
+or the manner of representing smooth surfaces with the LB or LGA grid;
+
+a similar problem occurs in finite difference calculations, and elegant
+
+LB solutions have been suggested by <A HREF="#Noble_etal_1995">Noble et
+
+al. (1995)</A> and <A HREF="#Ginzbourg_d'Hum_1996">Ginzbourg and d'Humi&egrave;res
+
+(1996)</A>. The third<I>,</I> discussed in this section, concerns the manner
+
+of representing particle collisions at solid-fluid boundaries, and is mainly
+
+restricted to LB and LGA. </P>
+
+
+
+<P>In the early days of LGA, the bounce-back collision was considered sufficiently
+
+accurate to describe the interface between a solid wall and a fluid. &nbsp;The
+
+acceptance of bounce-back was easy with LGA, because the efficiency of
+
+LGA admitted use of wide channels, which diluted the error, and the noisiness
+
+of the method made it hard to discern errors in fluid velocity near a wall.
+
+With the advent of noiseless but computationally-intensive LB methods,
+
+and the corresponding need to decrease channel width, bounce-back was examined
+
+more carefully. <A HREF="saltfing.htm#Cornubert_etal_1991">Cornubert et
+
+al. (1991)</A> showed for flow parallel to a wall, bounce-back placed the
+
+effective (zero-velocity) wall position 1/2 row into the fluid from the
+
+wall solid nodes. It is now known that if the wall position is simply &quot;reinterpreted&quot;
+
+to the 1/2 position, bulk-flow velocity fields calculated with bounce-back
+
+can be quite accurate, at least for slow flows (<A HREF="#Chen_etal_1996">Chen
+
+et al., 1996</A>). However, with the exception of the study by <A HREF="#McNamara_etal_1995">McNamara
+
+et al. (1995)</A>, little has been done with boundaries for tracer transport
+
+and dispersion, for which the lack of accuracy is potentially more serious.</P>
+
+
+
+<P>To understand the boundary dilemma, we examine the LB calculation after
+
+the translation step. &nbsp;At this stage, particle vectors on the solid-fluid
+
+interface point into the wall, but not out from the wall (<A HREF="saltfing.htm#fig7_LB_sites">figure
+
+7</A>). The bounce-back method is a simple solution to this problem; when
+
+the LB or LGA collision algorithm detects a wall node, the particle directions
+
+are reversed, sending the particles back into the fluid. This method seemed
+
+very natural for LGA, and has been used in many LB codes. </P>
+
+
+
+<P>Simple application of the &quot;reinterpreted&quot; bounce-back to tracers
+
+causes an obvious problem; though the effective wall position for zero
+
+flow is 1/2 lu out, tracer can still get &quot;behind&quot; the 1/2 position,
+
+and reside on the real wall. There is a second shortcoming of the bounce-back
+
+method: it does not allow the fluid at the wall to inherit the diffusion
+
+and viscosity coefficients of the bulk fluid; in LB, bounce-back skips
+
+the relaxation process, with its characteristic <IMG SRC="tau.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSBOTTOM>.
+
+If one wishes to use the relaxation process, bounce-back has to be replaced
+
+with a method that specifies the &quot;unknown&quot; particle distributions
+
+that point into the fluid. <A NAME="fig_simple_boundary_Ziegler"></A><A HREF="saltfing.htm#fig_Simple_boundary">Figure
+
+9</A> shows two simple methods for bulk flow and dispersion. We emphasize
+
+that better solutions are available, especially for flow (<A HREF="#Noble_etal_1995">Noble
+
+et al., 1995</A>, <A HREF="saltfing.htm#Ginzbourg_d'Hum_1996">Ginzbourg
+
+and d'Humi&egrave;res, 1996</A>); we use these simple methods to illustrate
+
+the problem. The top part of the figure shows the <A HREF="saltfing.htm#Ziegler_1993">Ziegler
+
+(1993)</A> method; a similar approach was used by <A HREF="saltfing.htm#Martys_Chen_1996">Martys
+
+and Chen (1996)</A>. For bulk flow, this method places a zero-velocity
+
+boundary on or near the wall. The Ziegler method is inappropriate for dispersion
+
+of <A HREF="#Flekkøy_1993">Flekk&oslash;y</A>-type tracers, since it smears
+
+any distribution of tracer tangential to the wall. At the bottom of the
+
+figure is a simple method to preserve concentration gradients along a &quot;no-flux&quot;
+
+wall; this second method is applied only to the tracers. With both, the
+
+contrived particle distribution is sent through the normal collision-relaxation
+
+process (<A HREF="#eqn3_LB_update">equation 3</A>). </P>
+
+
+
+<P><IMG SRC="no-flux.gif" HEIGHT=350 WIDTH=609 ALIGN=CENTER></P>
+
+
+
+<P><A NAME="fig_Simple_boundary"></A><FONT COLOR="#800080">Figure 9. Simple
+
+boundary conditions near a solid wall, after the translation step; initial
+
+<B><I>known</I></B> particle distributions are pink, and <B><I>contrived</I></B>
+
+particle distributions are orange and green. Top: <A HREF="saltfing.htm#Ziegler_1993">Ziegler
+
+(1993)</A> condition for fluid velocity (carrier fluid); the out-going
+
+particle distributions in directions 2,3 and 4 are inverses of the incoming
+
+distributions 6,7 and 8, respectively; 5=1= weighted average(6,7,8). &nbsp;Bottom:
+
+no-flux condition for tracers; particles are allowed to stream along walls,
+
+and 2,3 and 4 are mirror reflections of 8,7 and 6, respectively. &nbsp;Both
+
+subsequently go through the relaxation step</FONT>.</P>
+
+
+
+<P>If we place a slug of solute in a 5 lu-wide channel, with the true <I>D<SUB>m</SUB>
+
+</I>= 0.05, and <B><I>no flow </I></B>(<I>Pe</I>=0), we can measure the
+
+apparent diffusion coefficient by the relaxation method. Under these conditions,
+
+the reinterpreted bounce-back gives an apparent diffusion coefficient ~98%
+
+of the true value, whereas the method shown in <A HREF="#fig_Simple_boundary">figure
+
+9</A> gives back ~99.9999% of the true value. However, for <I>Pe</I>&gt;0,
+
+the error can be substantially worse.</P>
+
+
+
+<P><A HREF="saltfing.htm#fig_T-A_geom">Figure 10</A> and <A HREF="saltfing.htm#fig_T-A_err">figure
+
+11</A> show how the choice of boundary method affects the accuracy of a
+
+simple dispersion calculation at <I>Pe </I>~ 20. The basic geometry of
+
+the &quot;experiment&quot; is shown in <A HREF="#fig_T-A_geom">figure 10</A>:
+
+a slug of solute is injected into a flow between two parallel plates, and
+
+is stretched laterally by both advection and dispersion (similar to the
+
+previous <A HREF="Cbuoy.mpg">Poiseiulle flow</A> [mpeg] example). The distribution
+
+of solute, projected onto the x-axis, quickly becomes Gaussian, and is
+
+characterized by its standard deviation <IMG SRC="sigma.gif" HEIGHT=15 WIDTH=13 ALIGN=ABSBOTTOM>.</P>
+
+
+
+<P>The effective diffusion coefficient <I>D*</I> (also called the dispersion
+
+coefficient) in the numerical &quot;experiment&quot; can be measured by
+
+the method of moments:</P>
+
+
+
+<P><A NAME="eqn_D* =  ½ · dm2 / dt"></A><I>D*&nbsp;</I>=&nbsp;0<B>.</B>5&nbsp;&#183;&nbsp;<I>dm</I><SUB>2&nbsp;</SUB>/&nbsp;<I>dt&nbsp;&nbsp;</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)</P>
+
+
+
+<P>where <I>m</I><SUB>2</SUB> is the second moment of the solute distribution
+
+-- that is, the variance, or <IMG SRC="sigma.gif" HEIGHT=15 WIDTH=13 ALIGN=ABSCENTER><SUP>2</SUP>.</P>
+
+
+
+<P>According to the Taylor-Aris theory (<A HREF="saltfing.htm#Aris_1956">Aris,
+
+1956</A>), the real solution (after several diffusion times, described
+
+below) should be:</P>
+
+
+
+<P><A NAME="eqn_D*/Dm = 1 + Pe2 /"></A><I>D*/D<SUB>m&nbsp;</SUB></I>=&nbsp;1&nbsp;+&nbsp;<I>Pe</I><SUP>2&nbsp;</SUP>/&nbsp;210,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6)</P>
+
+
+
+<P>where <I>Pe&nbsp;</I>=&nbsp;<I>W&#183;U&nbsp;/&nbsp;D<SUB>m</SUB>
+
+</I>, <I>W</I> is the channel width, and <I>U</I> is the average flow speed
+
+through the channel.</P>
+
+
+
+<P><A HREF="saltfing.htm#fig_T-A_err">Figure 11</A> plots the discrepancy
+
+between these two equations, i.e.:</P>
+
+
+
+<P><A NAME="eqn_[(D*/Dm)measured"></A>[(<I>D*/D<SUB>m</SUB></I>)<I><SUB>measured&nbsp;</SUB></I><FONT SIZE=+1>-&nbsp;</FONT>(<I>D*/D<SUB>m</SUB></I>)<I><SUB>Taylor</SUB></I>]&nbsp;<I>/&nbsp;</I>(<I>D*/D<SUB>m</SUB></I>)<I><SUB>Taylor</SUB></I>
+
+,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7)</P>
+
+
+
+<P>as a function of the channel width <I>W</I>. For this analysis, we kept
+
+flow speed <I>U</I> constant at either 0.05 or 0.01 l.u./timestep, and
+
+varied <I>D<SUB>m</SUB></I> to maintain a constant <I>Pe</I> = 20. We allowed
+
+the dispersion to complete 4 characteristic diffusion times (<I>W&nbsp;</I><SUP>2&nbsp;</SUP><I>/&nbsp;D<SUB>m</SUB></I>);
+
+plots of <I>m</I><SUB>2</SUB> vs. timestep were linear with correlation
+
+coefficient <I>R&nbsp;</I><SUP>2</SUP> = 0.999999 to 0.9999999999. At low
+
+W, the bounce-back method is actually more accurate, possibly because the
+
+sources of error cancel. However, the accuracy of the bounce-back method
+
+apparently improves first-order in <I>W</I>, while the no-flux method shows
+
+~ second-order improvement in the range considered.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><A HREF="T-A_geom.gif"><IMG SRC="T-A_geom.gif" HEIGHT=178 WIDTH=376 ALIGN=CENTER></A></TD>
+
+
+
+<TD><A NAME="fig_T-A_geom"></A><FONT COLOR="#800080">Figure 10. Geometry
+
+for Taylor-Aris dispersion. <A HREF="T-A_geom.gif">Click on thumbnail</A>
+
+for larger image.</FONT></TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD><A HREF="T-A_err.gif"><IMG SRC="T-A_err.gif" HEIGHT=240 WIDTH=309></A></TD>
+
+
+
+<TD><A NAME="fig_T-A_err"></A><FONT COLOR="#800080">Figure 11. Fractional
+
+error (<A HREF="saltfing.htm#eqn_[(D*/Dm)measured">equation 7</A>) in the
+
+dispersion coefficient for flow between parallel plates (figure 10), for
+
+the &quot;reinterpreted&quot; bounce-back method, and for the combination
+
+of no-flux and Ziegler methods (<A HREF="#fig_Simple_boundary">figure 9</A>),
+
+as a function of the channel width <I>W</I>. <A HREF="T-A_err.gif">Click
+
+on thumbnail</A> for larger image.</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P>One way to deal with this uncertainty is to make the channels wide,
+
+diluting the effect of the walls; here LGA seem to have an advantage, since
+
+the method is roughly 30 times faster than LB per node. However, for many
+
+dispersion problems, there are serious penalties for making the system
+
+larger. Unless the system is very simple, we will generally not know the
+
+equilibrium velocity distribution <I>a priori</I>; the normal approach
+
+is to start with a quiescent fluid, and apply a body force to accelerate
+
+the particles, until a steady-state flow distribution is reached. The number
+
+of calculation timesteps required for this &quot;<A NAME="viscous equilibrium"></A>viscous
+
+equilibrium&quot; is <I>W </I><SUP>2</SUP><I>/<IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER></I>.&nbsp;&nbsp;In
+
+a 2D calculation, the clock time per time step also goes as <I>W </I><SUP>2</SUP>,
+
+so the net clock time to achieve viscous equilibrium goes as <I>W </I><SUP>4</SUP>.
+
+&nbsp;For calculations that follow a slug of solute through a channel,
+
+the channel length <I>L</I> must accommodate several characteristic diffusion
+
+lengths <I>U&#183;</I>(<I>W&nbsp;</I><SUP>2</SUP><I>/&nbsp;D<SUB>m</SUB></I>),
+
+so the total number of sites must be proportional to <I>Pe&#183;W </I><SUP>2</SUP>,
+
+ultimately resulting in a similar <I>W </I><SUP>4</SUP> clock time constraint.
+
+Therefore simply making the channels 10 times wider may exact a severe
+
+penalty.</P>
+
+
+
+<P>Ironically, the dispersion boundary problem is often less severe for
+
+flow through &quot;rough&quot;, convoluted, or alveolated channels. For
+
+these more complicated geometries, much of the interface between the fluid
+
+and solid occurs in stagnant pockets on the side of the channel, where
+
+local <I>Pe </I>~ 0, and the error in the measured diffusion coefficient
+
+is small.</P>
+
+
+
+<P><A NAME="Achievable Peclet"></A><B><U>Achievable Peclet numbers.</U></B>
+
+&nbsp;The LGA approach is constrained by the limited choice in diffusion
+
+coefficients. In general, we wish to match the Peclet number <A NAME="Peclet_definition"></A><I>Pe</I>
+
+for an experiment, typically defined as <I>W&#183;U&nbsp;/&nbsp;D<SUB>m</SUB></I>,
+
+where <I>W</I> is some characteristic width (for example, the width of
+
+a channel or fracture), <I>U</I> is a fluid speed averaged across the channel,
+
+and <I>D<SUB>m</SUB></I> is the molecular diffusion coefficient. For LGA
+
+diffusion, we use a modification of the <A HREF="saltfing.htm#McNamara_1990">McNamara
+
+(1990)</A> method, which gives a <I>D<SUB>m</SUB></I> of 0.277 lu<SUP>2</SUP>/ts
+
+at <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSCENTER>= 3.0 particle/site.
+
+Some variation in <I>D<SUB>m</SUB></I> can be obtained by varying <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSCENTER>,
+
+but for practical values of <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSCENTER>,
+
+the range is a factor of ~2. Thus, to vary <I>Pe</I>, one is really restricted
+
+to varying <I>W</I> or <I>U</I>. &nbsp;For the 2-D hexagonal LGA, the practical
+
+<I>U</I> range is from about 0.001 to 0.1 lu/ts; lower values require inordinately
+
+long averaging times to overcome statistical noise, and higher <I>U</I>
+
+(higher Mach numbers) cause errors due to Galilean non-invariance (<A HREF="saltfing.htm#Hayot_1987">Hayot,
+
+1987</A>). With the LB method, <I>D<SUB>m</SUB></I> as low as 10<SUP><FONT SIZE=+1>-</FONT>4</SUP>
+
+can be achieved (<A HREF="saltfing.htm#Flekkøy_1993">Flekk&oslash;y, 1993</A>)
+
+with 32-bit floating point, simply by varying the relaxation parameter
+
+<IMG SRC="tau.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSBOTTOM><SUB>s</SUB> &nbsp;for
+
+the tracer species. However, in our experience, it is not always possible
+
+to vary independently the <I>U</I>, <I>W</I>, <IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSBOTTOM>and
+
+<I>D<SUB>m</SUB></I> in LB systems, and maintain numerical stability. In
+
+the fracture-mixing problem to be described shortly, it was necessary to
+
+keep <I>U</I> ~0.02 lu/ts for <I>W</I> = 40, <IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER>=
+
+0.033 and <I>D<SUB>m</SUB></I> = 0.00033 lu<SUP>2</SUP>/ts. For the fracture-mixing
+
+geometry, higher fluid speeds produced negative concentrations that grew
+
+and eventually &quot;infected&quot; the entire simulation. &nbsp;<A HREF="saltfing.htm#Flekkøy_1993">Flekk&oslash;y</A>
+
+noticed similar, transient negative concentrations at the start of his
+
+Hele-Shaw simulations.</P>
+
+
+
+<H1><A NAME="Examples"></A>Examples</H1>
+
+
+
+<P>Background for examples 1 and 2 can be found in <A HREF="saltfing.htm#Stockman_etal_1997">Stockman
+
+et al. (1997)</A>, <A HREF="#Li_thesis_1995">Li (1995)</A>, and <A HREF="saltfing.htm#Perea-Reeves_Stock_1997">Perea-Reeves
+
+and Stockman (1997)</A>; here we focus on practical aspects of the calculations
+
+not covered in prior publications, and new LB results. Example 3 reflects
+
+ongoing research, and the laboratory experiments are described by <A HREF="#Cooper_etal_1997">Cooper
+
+et al. (1997)</A>.</P>
+
+
+
+<P><A NAME="Example_1"></A><B><U>Example 1: Mixing at Fracture Intersections.</U></B>
+
+&nbsp;The fracture mixing problem (<A HREF="saltfing.htm#fig_frac_X_geom">figure
+
+12</A>) illustrates the limitations of both methods, though in this case,
+
+LB seems a clear winner. &nbsp;Our intent is to determine the extent of
+
+solute mixing when two streams of fluid meet at a fracture junction; the
+
+answer is significant for modeling the advance of gaseous or dissolved
+
+pollutants through fractured rock.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><A HREF="frac_x.gif"><IMG SRC="frac_x.gif" HEIGHT=223 WIDTH=222 ALIGN=CENTER></A></TD>
+
+
+
+<TD><A NAME="fig_frac_X_geom"></A><FONT COLOR="#800080">Figure 12. Geometry
+
+for fracture mixing problem (<A HREF="frac_x.gif">Click on thumbnail</A>
+
+for larger image). Fluid containing &quot;black&quot; tracer enters via
+
+channel 1; fluid with &quot;white&quot; tracer enters via channel 2. The
+
+two streams partially mix by diffusion, so some &quot;gray&quot; fluid
+
+exits via channels 3 and 4. The analysis domain is (2&#183;L + W) &#183;
+
+(2&#183;L + W).</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P>Typically, fractures in rocks are roughly 0.0001 to 0.1 cm wide, but
+
+the junctions are 10<SUP>1</SUP> to 10<SUP>3</SUP> cm apart. Large-scale
+
+transport codes usually treat the fractured system as a network, applying
+
+an empirical mixing rule at the junctions, but they do not explicitly model
+
+the flow and solute distribution within each fracture. There are two end
+
+member assumptions about the mixing rule: (<B>A</B>) complete mixing, appropriate
+
+for low <I>Pe</I>; and (<B>B</B>) streamline routing, appropriate for high
+
+<I>Pe</I> (for this problem, the <I>Pe </I>is traditionally defined as
+
+<I>W&#183;U / </I>(<I>D<SUB>m</SUB></I>&#183;<IMG SRC="sqrt2.gif" HEIGHT=23 WIDTH=24 ALIGN=ABSCENTER>)
+
+). The process is described by the mixing ratio:</P>
+
+
+
+<P><A NAME="eqn_Mr"></A><I>M<SUB>r&nbsp;</SUB>=&nbsp;J</I><SUB>3 </SUB><I>/&nbsp;</I>(<I>J</I><SUB>3&nbsp;</SUB><I>+&nbsp;J</I><SUB>4</SUB>)&nbsp;&nbsp;~&nbsp;&nbsp;<I>C</I><SUB>3
+
+</SUB><I>/&nbsp;</I>(<I>C</I><SUB>3&nbsp;</SUB><I>+&nbsp;C</I><SUB>4</SUB>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(8)</P>
+
+
+
+<P>where the solute fluxes (<I>J</I>) and concentrations (<I>C</I>) are
+
+measured in the outlet legs.</P>
+
+
+
+<P>For the &quot;even flow&quot; case, where the average flow velocities
+
+<I>U</I> into channels 1 and 2 are equal, assumption (<B>A</B>) predicts
+
+half the solute goes down each of legs 3 and 4 (<I>M<SUB>r&nbsp;</SUB></I>=&nbsp;0<B>.</B>5),
+
+and assumption (<B>B</B>) predicts it all exits through leg 4 (<I>M<SUB>r&nbsp;</SUB></I>=&nbsp;0).
+
+The problem is how one deals with &quot;intermediate&quot; <I>Pe</I>, where
+
+neither method is accurate, or how one determines the <I>Pe</I> where the
+
+transition from one method to the next is appropriate. Here we will consider
+
+modeling the problem with both LGA and LB, emphasizing calculations with
+
+&quot;high&quot; <I>Pe</I>.</P>
+
+
+
+<P><A HREF="#fig_frac_X_Mr_vs_Pe">Figure 13</A> compares the LB and LGA
+
+calculations for <I>M<SUB>r</SUB></I>, as a function of <I>Pe</I>, with
+
+experiments performed by Chunhong <A HREF="#Li_thesis_1995">Li (1995)</A>.
+
+The agreement is reasonably good, especially considering that the location
+
+of the <I>M<SUB>r</SUB></I> = 0.25 cross-over point was previously uncertain
+
+to about two orders of magnitude in <I>Pe. </I>The scatter in the experimental
+
+data is notable, and indicates that LB or LGA calculations need not be
+
+extremely accurate to provide useful models for this physical process.
+
+Experiments of this nature, which require careful control of pump rates
+
+at very low fluid velocities, and non-intrusive measurement of solute concentration
+
+in minute quantities of fluid, are extremely difficult; the scatter in
+
+Li's data is remarkably small given these difficulties.</P>
+
+
+
+<P>It is worthwhile to compare the calculation times required by the fracture
+
+mixing problem, for LB and LGA. The highest <I>Pe</I> number reachable
+
+with LGA was 221; the calculation required channels 572 lu wide, and took
+
+~70 hours on a 200 MHz Pentium&#174; Pro computer. The LB equivalent used
+
+channels 40 lu wide and took 1-2 hours. The wide channels were necessary
+
+for LGA, because the<I> <A HREF="saltfing.htm#Achievable Peclet">D<SUB>m</SUB></A></I><A HREF="saltfing.htm#Achievable Peclet">
+
+was fixed at 0.277</A>; consequently, the <A HREF="saltfing.htm#viscous equilibrium">viscous
+
+equilibrium time</A> became the main determinant of run time. Perhaps the
+
+only advantages of LGA for this problem are: the LGA method is well-understood,
+
+stable, and can be tested for exact conservation of particles and momentum;
+
+and it is relatively easy to force <A HREF="#Galilean">Stokesian flow (zero
+
+inertial term)</A> by setting <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSBOTTOM>=3.0,
+
+so the results can be compared with other Stokesian calculations.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><A HREF="frac_MrPe.gif"><IMG SRC="frac_MrPe.gif" HEIGHT=242 WIDTH=255 ALIGN=LEFT></A></TD>
+
+
+
+<TD><A NAME="fig_frac_X_Mr_vs_Pe"></A><FONT COLOR="#800080">Figure 13.
+
+The solute mixing ratio <A HREF="#eqn_Mr">(equation 8)</A> for the geometry
+
+in <A HREF="#fig_frac_X_geom">figure 12</A>&nbsp;(<A HREF="frac_MrPe.gif">Click
+
+on the thumbnail</A> for a larger image). The experiments performed by
+
+Li measured the mixing of NaCl and KCl solutions in a plexiglas &quot;fracture
+
+junction&quot;.</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P><A NAME="Example_2"></A><B><U>Example 2: Dispersion in Alveolated Channels.</U></B>
+
+&nbsp;An example that shows LGA in a reasonably good light, is the modeling
+
+of gas dispersion in &quot;alveolated&quot; or pocketed channels. &nbsp;Dispersion
+
+experiments, meant to approximate behavior in the human lung, were performed
+
+by <A HREF="#Tsuda_etal_1991">Tsuda et al. (1991)</A>; the basic geometry
+
+is shown in <A HREF="#fig_tsuda_geom_gif">figure 14</A> and <A HREF="#fig_tsuda_mpeg">figure
+
+15</A>. &nbsp;For a lung to be effective, the <I>Pe</I> for gaseous dispersion
+
+must be modest; this is equivalent to saying that there is an optimum breathing
+
+rate. &nbsp;Tsuda et al. emphasized 0.1&nbsp;&lt;&nbsp;<I>Pe&nbsp;</I>&lt;&nbsp;100,
+
+and this range is achievable by LGA. The experiments used a quasi-2D geometry,
+
+with two parallel aluminum plates faced with a hexagonal honeycomb pattern
+
+to represent the alveoli; tracer gas containing several mole percent helium
+
+or sulfur hexafluoride was introduced at one end. &nbsp;The effective diffusion
+
+coefficient (<A HREF="#eqn_D* =  ½ · dm2 / dt">equation 5</A>) describes
+
+the lateral (<I>x</I>-direction) spreading of a slug of tracer gas as it
+
+is pushed between the pocketed plates. Because we wish to keep the fins
+
+of the honeycomb thin to match the experiment, and because <I>D*/D<SUB>m</SUB></I>
+
+is typically proportional to <I>W</I><SUP>2</SUP> at higher <I>Pe</I>,
+
+any uncertainty in the location of the boundaries is undesirable; thus
+
+we used channels ~100 to 200 lu wide to keep the relative error to a few
+
+%. In addition, the numerical experiment must be followed for several characteristic
+
+distances, <I>x</I><SUB>c&nbsp;</SUB>= <I>U&#183;W</I><SUP>2</SUP>/<I>D<SUB>m</SUB></I>;
+
+at the higher <I>Pe</I> numbers, this requirement translates into channels
+
+up to 200 lu by 10<SUP>4</SUP> lu. The LGA calculation required 6 MB of
+
+memory, including arrays to hold running averages of particle velocity
+
+and concentration. The LB equivalents used narrower channels, but took
+
+approximately the same amount of calculation time.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><A HREF="tsuda_ge.gif"><IMG SRC="tsuda_ge.gif" HEIGHT=60 WIDTH=291 ALIGN=CENTER></A></TD>
+
+
+
+<TD><A NAME="fig_tsuda_geom_gif"></A><FONT COLOR="#800080">Figure 14. Dispersion
+
+of a slug of solute in flow through an alveolated channel (this is a small
+
+portion of the geometry; at high <I>Pe</I>, channels lengths were 100 times
+
+the channel width). The channel consists of two horizontal, planar plates,
+
+with small vertical septa protruding into the flow. This is a snapshot
+
+of the mpeg below. <A HREF="tsuda_ge.gif">Click on thumbnail</A> for larger
+
+image.</FONT></TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD><FONT COLOR="#800080"><A HREF="tsuda496.mpg">mpeg movie (146 kB) of
+
+above</A></FONT></TD>
+
+
+
+<TD><A NAME="fig_tsuda_mpeg"></A><FONT COLOR="#800080">Figure 15. A movie
+
+of dispersion in a small portion of an alveolated channel. The colors scale
+
+to the maximum solute concentration in the view, so as the slug leaves
+
+the right side, the solute lagging in the side pockets &quot;lights up&quot;
+
+and becomes more visible. This is an LB calculation, and is less &quot;noisy&quot;
+
+than the similar LGA calculation in <A HREF="#fig6_buoy_Poiseuille">figure
+
+6</A>.</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P><A HREF="#fig_tsuda_LB_LGA_results">Figure 16</A> compares the LGA and
+
+LB calculations with experimental results and the &quot;stagnant pocket
+
+theory&quot; derived by <A HREF="#Tsuda_etal_1991">Tsuda et al. (1991)</A>
+
+:</P>
+
+
+
+<P><A NAME="eqn_D*/Dm=1/(1+beta)+"></A><I>D*/D<SUB>m</SUB>&nbsp;</I>=&nbsp;1/(1&nbsp;+&nbsp;<I>&szlig;</I>)&nbsp;+&nbsp;(<I>Pe</I>/(1&nbsp;+&nbsp;<I>&szlig;</I>))<SUP>2&nbsp;</SUP>&#183;&nbsp;((35<I>&szlig;</I><SUP>2</SUP>
+
++&nbsp;16<I>&szlig;&nbsp;</I>+&nbsp;2),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(9)</P>
+
+
+
+<P>where <I>&szlig;</I> is the ratio of pocket volume to central channel
+
+volume. In <A HREF="#fig_tsuda_LB_LGA_results">figure 16</A>, we use <I>&szlig;</I>=0.73
+
+to 0.75; this choice is motivated by the need to keep the central channel
+
+relatively wide, to minimize the uncertainty in location of the solid boundaries,
+
+yet keep the total number of sites relatively small for a comparison with
+
+LB. For <I>Pe </I>&gt; 1, the pockets enhance the dispersion coefficient
+
+by up to a factor of 6 compared to simple Taylor-Aris dispersion in a channel
+
+with planar walls of similar separation. The cause of the increase is illustrated
+
+in the <A HREF="tsuda496.mpg">mpeg of the dispersion process</A>; some
+
+solute gets trapped in the pockets, where the <I>x</I>-direction flow velocity
+
+is small, and thus lags behind the main solute pulse and increases the
+
+variance of the solute distribution (<I>m</I><SUB>2</SUB>). However, for
+
+very low <I>Pe&nbsp;</I>&lt;&nbsp;1, the pockets diminish the dispersion
+
+coefficient by up to a factor of 2, because when the flow is very slow,
+
+the walls of the alveoli inhibit lateral spreading. The hardest problems
+
+to model are those at high (&gt;20) and low (&lt;1) <I>Pe</I>. At high
+
+<I>Pe</I>, the number of sites has to be large to keep the solute slug
+
+from running off the end; at low <I>Pe</I>, we must worry about solute
+
+diffusing off the ends, especially since we are looking at a subtle effect
+
+(<I>D*/D<SUB>m</SUB></I> tends to be only slightly different from 1); with
+
+the LGA method, it is very hard to obtain accurate measurements of the
+
+very low required particle speeds. Give these difficulties, the agreement
+
+between LB and LGA is quite good. The slight disagreement with experiments
+
+at higher <I>Pe</I> partly reflects the difference in the way we and Tsuda
+
+defined the channel velocity used for the calculation of <I>Pe</I>. We
+
+used the average channel speed, in the spirit of Aris' original derivation,
+
+while Tsuda et al. used the experimentally measurable bulk flow speed.
+
+We transformed the latter to our definition, but the transformation required
+
+assumptions about the velocity field. Once again, we note the uncertainties
+
+in controlling and monitoring diffusion experiments can dwarf the errors
+
+in LB or LGA calculations.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><A HREF="tsuda_LB.gif"><IMG SRC="tsuda_LB.gif" HEIGHT=228 WIDTH=276 ALIGN=LEFT></A></TD>
+
+
+
+<TD>&nbsp;<A NAME="fig_tsuda_LB_LGA_results"></A><FONT COLOR="#800080">Figure
+
+16. Comparison of LGA and LB calculations with experimental data from <A HREF="#Tsuda_etal_1991">Tsuda
+
+et al. (1991)</A>, the <A HREF="#eqn_D*/Dm=1/(1+beta)+">stagnant pocket
+
+equation (9)</A> derived by those authors, and the <A HREF="#eqn_D*/Dm = 1 + Pe2 /">Taylor-Aris
+
+equation (6)</A> in a channel with the same width. <A HREF="tsuda_LB.gif">Click
+
+on thumbnail</A> for a larger image.</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P>The real strength of LGA and LB lies in the ability to model more subtle
+
+experimental artifacts, such as the effect of buoyancy (<A HREF="#fig6_buoy_Poiseuille">figure
+
+6</A>, mpeg, 159 kB), which are unapproachable with conventional numerical
+
+methods. <A HREF="#Reejhsinghani_etal_1966">Reejhsinghani et al. (1966)</A>
+
+showed that remarkably small density differences, between the solute slug
+
+and the carrier fluid, could large errors in the measured dispersion coefficient,
+
+even for horizontal tubes. Since the tracer gases used by <A HREF="#Tsuda_etal_1991">Tsuda
+
+et al</A>. were several % denser or lighter than the carrier gas, it is
+
+reasonable to ask if the results would be affected by buoyancy. From our
+
+LGA simulations, we estimated that the maximum effect for the geometry
+
+used by Tsuda et al. would be &lt; 6% for a thin slug of solute, and &lt;
+
+25% for a step change source, which is not large compared to other experimental
+
+uncertainties. It seems that with the alveolated channel, the rough surfaces
+
+actually ameliorate the effects of buoyancy contrast.</P>
+
+
+
+<P><A NAME="Example_3"></A><B><U>Example 3: Double-Diffusive Fingering.</U></B>
+
+Double-diffusive fingering is responsible for a variety of natural phenomena,
+
+and affects the transport of materials and heat in metals casting (<A HREF="#Chen_Lu_1992">Chen
+
+and Lu, 1992</A>) and the evolution of stars (<A HREF="#Grossman_taam_1996">Grossman
+
+and Taam, 1996</A>), and the transport of solutes around salt domes, saline
+
+basins, sea-floor vents and hydrothermal systems, and contaminated soils
+
+(<A HREF="#Sarkar_Phil_1992">Sarkar and Phillips, 1992</A>). Perhaps the
+
+best known example of the phenomenon is &quot;salt-fingering&quot;, which
+
+occurs when a layer of warm salt water overlies colder, fresher water as
+
+in the Mediterranean outflow (<A HREF="#Holyer_1984">Holyer, 1984</A>).&nbsp;
+
+The juxtaposition is initially gravitationally stable; however, heat diffuses
+
+approximately 100 times faster than salt, and as the fresh water warms
+
+near the interface, it becomes more buoyant and begins to &quot;finger&quot;
+
+upward through the salty water. Modeling this phenomenon in the lab is
+
+difficult, since it is hard to make a &quot;no-flux&quot; heat boundary.
+
+Consequently, researchers often use layered salt and sugar solutions instead,
+
+with the salt solution on the bottom; the salt diffusion coefficient is
+
+about three times higher than the sucrose value. Often the solutions are
+
+placed in a thin Hele-Shaw cell, so the progress of the experiment is easily
+
+observed and the composition of the solutions can be monitored by absorption
+
+spectroscopy; in addition, the Hele-Shaw apparatus approximates the behavior
+
+of solutes in fractures or porous media, and the cell can be tipped about
+
+a horizontal axis to vary the effective permeability.</P>
+
+
+
+<P><A HREF="#fig_exper_clay_jpg">Figure 17</A> shows the progress of a
+
+laboratory salt-sugar experiment with false color representing the concentration
+
+of NaCl; each frame is approximately 2 cm wide. This is a very small window
+
+into the cell, which is 31 cm high, 17 cm wide, and 0.05 cm thick. The
+
+&quot;red&quot; salt solution (initially 0.18696 molal, 1.00618 g/cm<SUP>3</SUP><SUB>
+
+</SUB>at 20&#176;C) is placed in the lower half of the cell, then a thin
+
+plexiglas divider strip is placed in the slot above the solution (the slot
+
+is visible slightly above the midpoint of each frame). Then the sugar solution
+
+(initially 0.0404 molal, 1.003548 g/cm<SUP>3</SUP><SUB> </SUB>at 20&#176;C)
+
+is poured above the strip and allowed to settle. When the strip is withdrawn,
+
+there is an unavoidable oscillation of the surface; it is expected that
+
+the magnitude of the initial oscillation affects the onset, rate, and type
+
+of fingering, but there is some difficulty in characterizing the magnitude
+
+of the disturbance for modeling purposes. The wake of the strip is probably
+
+turbulent, so the solutes become somewhat mixed; furthermore, since the
+
+peaks and troughs of the oscillation are gravitationally unstable, they
+
+initially flatten rather rapidly, which may cause a Taylor-Aris spreading
+
+of the interface. While we can't match these initial conditions exactly
+
+with the LB method, we can attempt to resolve the importance of each factor.
+
+<A HREF="#fig_exper_clay_jpg">Figure 17</A> begins after the strip has
+
+been withdrawn and the initial, rapid mixing has occurred.</P>
+
+
+
+<TABLE BORDER=1 >
+
+<TR>
+
+<TD><A HREF="exp_Clay.jpg"><IMG SRC="exp^Clay.jpg" BORDER=0 HEIGHT=114 WIDTH=173 ALIGN=LEFT></A>&nbsp;</TD>
+
+
+
+<TD>&nbsp;<A NAME="fig_exper_clay_jpg"></A><FONT COLOR="#800080">Figure
+
+17. Double-diffusive fingering <B><I>experiment</I></B> (<A HREF="exp_Clay.jpg">Click
+
+on thumbnail</A> for larger image). Each frame is ca. 2 cm wide, representing
+
+a small window into the larger Hele-Shaw cell. Red represents the NaCl
+
+solution, and blue the sucrose (sugar) solution; initially the NaCl solution
+
+is denser. Total time between 1st and last frame is ca. 56 minutes.</FONT></TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD><A HREF="lb_clay.jpg"><IMG SRC="lb^clay.jpg" BORDER=0 HEIGHT=114 WIDTH=172 ALIGN=LEFT></A></TD>
+
+
+
+<TD><FONT COLOR="#800080">&nbsp;<A NAME="fig_clay_LB_calc_jpg"></A>Figure
+
+18. Double-diffusive fingering <B><I>lattice Boltzmann calculation</I></B>
+
+(<A HREF="lb_clay.jpg">Click on thumbnail</A> for larger image). Each frame
+
+is ca. 2 cm wide, representing a small window into the larger Hele-Shaw
+
+cell. Colors same as above.</FONT></TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD><FONT COLOR="#800080"><A HREF="Lb2719.mpg">Movie (mpeg, 157 kB)</A>
+
+</FONT></TD>
+
+
+
+<TD><A NAME="fig_clay_LB_calc_MPEG"></A><FONT COLOR="#800080">Figure 19.
+
+LB calculation depicted in figure 18, as mpeg movie.</FONT></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+<P><FONT COLOR="#000000">The experiment is characterized by solutal Rayleigh
+
+numbers; for the jth component:</FONT></P>
+
+
+
+<P><A NAME="eqn_Raj"></A><I>Ra<SUB>j</SUB> = B<SUB>j&nbsp;</SUB>&#183;&nbsp;C<SUB>j&nbsp;</SUB>&#183;&nbsp;(g&#183;sin&Oslash;&nbsp;&#183;&nbsp;</I>(<I>h</I><SUP>2</SUP><I>/</I>12)&#183;<I>L
+
+/ (D<SUB>mj&nbsp;</SUB>&#183;<IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER>)</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(10)</P>
+
+
+
+<P>where <I>C<SUB>j</SUB></I><SUB> </SUB>is the concentration, <I>B<SUB>j&nbsp;</SUB></I>=&nbsp;<I>d<IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSCENTER>&nbsp;/&nbsp;dC<SUB>j</SUB></I>
+
+is the molar expansivity of the jth component, <I>g</I> is the gravitational
+
+acceleration, <I>&Oslash; </I>is the angle of the Hele-Shaw cell with respect
+
+to horizontal, <I>h</I> is the cell plate separation, and <I>L</I> is a
+
+characteristic length scale for the initial &quot;disturbance&quot; of
+
+the interface (theoretically 0 for a perfectly sharp and smooth interface).
+
+It may be desirable to match the Prandtl number <I>Pr</I> =<IMG SRC="nu.gif" HEIGHT=18 WIDTH=13>/&nbsp;<I>D<SUB>m</SUB>
+
+</I>, though since the flow is generally slow and Stokesian, <I>Pr</I>
+
+is largely ignored in much of the literature for double-diffusive convection.</P>
+
+
+
+<P><FONT COLOR="#000000">Our LB model for this process is modified after
+
+methods developed by <A HREF="#Flekkøy_1993">Flekk&oslash;y's (1993)</A>
+
+and <A HREF="#Flekkøy_etal_1995">Flekk</A></FONT><A HREF="#Flekkøy_etal_1995">&oslash;y
+
+et al. (1995)</A><FONT COLOR="#000000">, which in turn use the Hele-Shaw
+
+drag term tested by <A HREF="#Holme_Roth_1992">Holme and Rothman (1992)</A>.
+
+The LB method is 2D, but emulates 3D by specifying a fictitious cell thickness
+
+<I>h</I>, which is perpendicular to the page in <A HREF="#fig_clay_LB_calc_jpg">figure
+
+18</A>. The drag force is then:</FONT></P>
+
+
+
+<P><IMG SRC="drag_HS.gif" HEIGHT=26 WIDTH=145 ALIGN=ABSBOTTOM>&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(11)</P>
+
+
+
+<P>It is somewhat difficult to match the <I>Ra<SUB>j</SUB></I> for the
+
+experiments with LB. We could make <I>h</I> and <I>L</I> large, but that
+
+implies using a large number of sites, thus long run times. To obtain high
+
+<I>Ra<SUB>j</SUB></I> without using very large numbers of sites, we can
+
+use either large <I>g&#183;sin&Oslash;</I> or small <I>D<SUB>mj&nbsp;</SUB>&#183;<IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER></I>.
+
+We can't make the diffusion coefficients arbitrarily small (especially
+
+in a 32-bit model), so adjusting the &quot;gravity&quot; is the principal
+
+option. If the viscosity is made small, we risk not matching the <I>Pr</I>
+
+(though the significance of this match is not clear at low Reynolds number
+
+<I>Re</I>). Though we wish to model essentially incompressible fluids,
+
+the LB fluids are numerically compressible, so very high gravity will cause
+
+artifacts by inducing non-physical density gradients along the model cell.
+
+Ultimately, it is barely possible to match <I>Ra<SUB>j</SUB></I> = 5000
+
+for a 256x64 site automaton, if the carrier fluid is water and the solutes
+
+have <I>D<SUB>m</SUB></I> ca. 10<SUP><FONT SIZE=+1>-</FONT>5</SUP> cm<SUP>2</SUP>/sec.</P>
+
+
+
+<P>The effect of the LB &quot;compressibility&quot; is lessened somewhat
+
+by the manner of calculating the buoyancy force. The density at a given
+
+(<I>x,y</I>) is calculated via:</P>
+
+
+
+<P><IMG SRC="buoy_eqn.gif" HEIGHT=26 WIDTH=275 ALIGN=ABSCENTER>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(12)</P>
+
+
+
+<P>where the concentration differences are calculated relative to a reference
+
+value, corresponding to <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSBOTTOM><SUB>0</SUB>.
+
+If we choose the reference carefully, and calculate buoyancy proportional
+
+to <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSBOTTOM>&nbsp;<FONT SIZE=+1>-<IMG SRC="rho.gif" HEIGHT=14 WIDTH=13 ALIGN=ABSBOTTOM></FONT><SUB>0
+
+</SUB>, the total force across the automaton is lessened, even though the
+
+relative buoyancy is maintained.</P>
+
+
+
+<P>Ironically, it would really be much easier to model salt-heat diffusion
+
+with LB than salt-sugar diffusion. When the diffusion coefficient is much
+
+larger for one component than the other, it is most important to match
+
+the <I>D<SUB>m </SUB>/<IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER></I>
+
+for the faster diffusing component. For the salt-sugar experiment, the
+
+<I>D<SUB>m&nbsp;</SUB>/<IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER></I>&nbsp;~&nbsp;10<SUP><FONT SIZE=+1>-</FONT>3</SUP>,
+
+which is hard to achieve in a 32-bit LB; for true salt fingering, <I>D<SUB>m
+
+</SUB>/<IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER></I>&nbsp;~
+
+3&#183;10<SUP><FONT SIZE=+1>-</FONT>2</SUP>.</P>
+
+
+
+<P>While this quasi-3D LB is adequate for most Hele-Shaw salt-sugar experiments,
+
+it fails when the fingers begin to move rapidly. In a Hele-Shaw cell, the
+
+<I>Pe</I> defined relative to the cell thickness is &nbsp;<I>h&nbsp;&#183;U&nbsp;</I>/&nbsp;<I>D<SUB>m</SUB></I>
+
+. From the <A HREF="#eqn_D*/Dm = 1 + Pe2 /">Taylor-Aris equation</A>, we
+
+see that for <I>Pe&nbsp;</I>&gt;&nbsp;(210)<SUP>0<B>. </B>5&nbsp;</SUP>~&nbsp;14.5,
+
+the effective diffusion coefficient <I>D*</I> will be more than twice the
+
+<I>D<SUB>m </SUB></I>; for our experiments, this condition occurs when
+
+the mean finger speed exceeds ~&nbsp;3&#183;10<SUP><FONT SIZE=+1>-</FONT>3</SUP>
+
+cm/csec. From <A HREF="#fig_exper_clay_jpg">figure 17</A>, the average
+
+finger speed appears to be ~1.4&#183;10<SUP><FONT SIZE=+1>-</FONT>3</SUP>,
+
+perilously close to the point where advective dispersion, from the narrow
+
+plate gap, begins to dominate plain molecular diffusion. </P>
+
+
+
+<P>We have experimented with approximate methods to model the effect of
+
+Taylor-Aris dispersion in our quasi-3D LB, by using an effective <I>D*<SUB>j</SUB>
+
+&nbsp;</I>that is a function of fluid velocity. We note that the <I>D*<SUB>j</SUB>
+
+</I>in a moving finger is <B><I>anisotropic</I></B>; a method for calculating
+
+such an anisotropic <I>D*<SUB>j</SUB> </I>has been suggested by <A HREF="#Maillot_Main_1996">Maillot
+
+and Main</A> (1996). We have tested this method, but it has the constraint
+
+that <I>D*<SUB>j</SUB> /D<SUB>mj </SUB></I>must be &lt; 6 for the D2Q9
+
+lattice, and so far it appears to introduce numerical instability. Eventually
+
+it will be necessary to use a true 3D LB to model higher-speed finger motions.</P>
+
+
+
+<P>Though Taylor-Aris dispersion can affect the spreading of fingers, it
+
+probably has a much more profound effect on the initial condition of the
+
+experiments and LB calculation. It is apparent from <A HREF="#fig_clay_LB_calc_MPEG">figure
+
+19</A> (mpeg) that the initial step disturbance of the interface relaxes
+
+very quickly, since it is gravitationally unstable; during this relaxation
+
+stage, the fluid speeds are actually much greater than any achieved through
+
+fingering itself. Consequently, Taylor-Aris dispersion is unavoidable at
+
+the early stage, and greatly smears out the interface. Thus the initial,
+
+sharp interface used in our LB calculations might appropriately be replaced
+
+with a smeared concentration distribution.</P>
+
+
+
+<P>Could this experiment have been modeled with LGA? &nbsp;The answer depends
+
+on what we believe to be the most important dimensionless parameters, and
+
+how willing we are to make significant changes to the algorithms. &nbsp;With
+
+conventional LGA, it is hard to make the viscosity very different from
+
+the diffusion coefficient, so matching the experimental <I>D<SUB>m </SUB>/<IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSCENTER></I>&nbsp;is
+
+unlikely; however, if we force Stokesian flow by setting <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13>=3,
+
+this point may be moot. &nbsp;With the McNamara-type diffusion coefficient,
+
+and some selectivity in the rules, it is reasonable to design a system
+
+where <I>D<SUB>m1&nbsp;</SUB>/&nbsp;D<SUB>m2&nbsp;</SUB></I>=&nbsp;3; it
+
+is not easy to design a system where <I>D<SUB>m1&nbsp;</SUB>/&nbsp;D<SUB>m2</SUB></I>
+
+= 100, so modeling real salt fingering is probably out of the question
+
+with LGA. The minimum LGA viscosity will be on the order 0.1 lu/ts, and
+
+the diffusion coefficients will be ~0.25 and 0.75, so the denominator in
+
+the <A HREF="#eqn_Raj">solutal Rayleigh number</A> will be ~10<SUP>3</SUP>
+
+times larger than we can achieve with the LB model. The easiest way to
+
+compensate for this difference would be to make the<I> h</I><SUP>2</SUP>&#183;<I>L</I>
+
+term in the numerator 10<SUP>3</SUP> times larger; ultimately, this means
+
+that we must increase the <I>x</I> and <I>y</I> LGA spatial dimensions
+
+by a factor of ten. The time scale, 12&#183;<I>L</I>&#183;<IMG SRC="nu.gif" HEIGHT=18 WIDTH=13 ALIGN=ABSBOTTOM>/
+
+(<I>h</I><SUP>2</SUP>&#183;<I>g</I>), would be approximately the same
+
+for both LB and LGA methods, since the LGA will accept about a ten times
+
+smaller <I>g</I> per site per time step. &nbsp;The LGA would require about
+
+10<SUP>2</SUP> times as many sites, but the LGA codes run about 30 times
+
+as fast as the LB codes per site, so in summary the LGA calculation might
+
+take ~3 times as long. However, the real limitation of the LGA method would
+
+be the lack of tunabilty; the<I> D<SUB>m1 </SUB>/ D<SUB>m2</SUB></I> for
+
+the model would be a function of <IMG SRC="rho.gif" HEIGHT=14 WIDTH=13>&nbsp;alone,
+
+and would be fixed for the <A HREF="#Galilean">Stokesian case</A> (<IMG SRC="rho.gif" HEIGHT=14 WIDTH=13>=3
+
+in the 6-velocity model). Developing the 3-color collision tables and debugging
+
+the Hele-Shaw perturbation model could be especially tedious, and there
+
+would be no simple way to add a Taylor-Aris function to dynamically change
+
+the diffusion coefficient as a function of fluid speed.</P>
+
+
+
+<H1><A NAME="Conclusions"></A>Conclusions</H1>
+
+
+
+<P>We have shown LB and LGA can be used for <B><I>quantitative</I></B>
+
+dispersion models, and facilitate the analysis of laboratory experiments.
+
+The uncertainties in laboratory dispersion studies are often larger than
+
+the uncertainties inherent in modeling the systems with discrete velocity
+
+methods. While a great deal of effort has gone into developing accurate
+
+LB boundary conditions for bulk flow, boundaries have a more serious effect
+
+on the accuracy of LB dispersion calculations. However, the variability
+
+in initial and boundary conditions of lab experiments (illustrated with
+
+the double-diffusive fingering problem) may swamp the errors in LB and
+
+LGA boundaries.</P>
+
+
+
+<P>It is apparent that LB methods will supplant LGA for experiments that
+
+require tunable transport coefficients, particularly when the system is
+
+characterized by multiple diffusion coefficients that vary by orders of
+
+magnitude. The principal advantages of LGA are the low memory use and high
+
+speed per site; when it is necessary to match the exact geometry of an
+
+experiment (by using many sites to define solid-fluid boundaries), or it
+
+is necessary to minimize boundary errors by &quot;dilution&quot;, these
+
+are legitimate advantages. However, the rapid increase in the speed of
+
+floating point hardware, the drop in computer memory prices, and the advent
+
+of accurate boundary methods will make LB methods even more attractive
+
+in the near future.</P>
+
+
+
+<H2><A NAME="Acknowledg"></A>Acknowledgments </H2>
+
+
+
+<P><FONT SIZE=+1>This work was supported by the U.S. Dept. of Energy, Office
+
+of Basic Energy Sciences, Geosciences Research Program under contract #
+
+DE-AC04-94AL85000, and by the Sandia LDRD Office. Additional support was
+
+provided by the National Science Foundation, Grant No. EAR-9405837.</FONT></P>
+
+
+
+<P><FONT SIZE=+1>We thank Joanne Fredrich, Ruaidhri O'Connor, John Wilson
+
+and Bob Glass for support and helpful discussions, Eirik Flekk&oslash;y
+
+and Dan Rothman for advice on anisotropic Hele-Shaw models, Robert J. Harley
+
+for his optimization strategies, and David Noble for advice on boundary
+
+conditions. Akira Tsuda generously made his dispersion data available for
+
+analysis, and provided us with details of the experimental set-up.</FONT></P>
+
+
+
+<H1><A NAME="References"></A>References</H1>
+
+
+
+<P><A NAME="Aris_1956"></A>Aris, R. (1956) &nbsp;On the dispersion of a
+
+solute in a fluid flowing through a tube, <B><I>Proc. Royal Soc.</I> 235A</B>,
+
+67-77.</P>
+
+
+
+<P><A NAME="Baudet_etal_1989"></A>Baudet, C.; Hulin, J.P.; Lallemand, P.
+
+and d’Humi&egrave;res, D. (1989) &nbsp;Lattice-gas automata: a model for
+
+the simulation of dispersion phenomena, <B><I>Phys. Fluids A</I> 1</B>,
+
+507-512.</P>
+
+
+
+<P><A NAME="Brosa_Stau_1989"></A>Brosa, U. and Stauffer, D. (1989) Vectorized
+
+multisite coding for hydrodynamic cellular automata, <B><I>Jour. Stat.
+
+Phys</I>. 57</B>, 399-403.</P>
+
+
+
+<P><A NAME="Brown_etal_1995"></A>Brown, S.R.; Stockman, H.W. and Reeves,
+
+S.J. (1995) &nbsp;Applicability of the Reynolds equation for modeling fluid
+
+flow between rough surfaces, <B><I>Geophys. Res. Lett.</I> 22</B>, 2537-2540.</P>
+
+
+
+<P><A NAME="Chen_Lu_1992"></A>Chen, F. and Lu, J.W. (1992) Onset of salt-finger
+
+convection in anisotropic and inhomogeneous porous media, <B><I>Int. Jour.
+
+Heat Mass Transfer</I> 35</B>, 3451-3464.</P>
+
+
+
+<P><A NAME="Chen_etal_1996"></A>Chen, S.J.; Mart&iacute;nez, D. and Mei,
+
+R. (1996) &nbsp;On boundary conditions in lattice Boltzmann methods, <B><I>Phys.
+
+Fluids</I> 8</B>, 2527-2535.</P>
+
+
+
+<P><A NAME="Cooper_etal_1997"></A>Cooper, C.; Glass, R.J. and Tyler, S.
+
+(1997) &nbsp;Experimental investigation of the stability boundary for double-diffusive
+
+finger convection in a Hele-Shaw cell, <B><I>Water Resources Res</I>. 33</B>,
+
+517-526.</P>
+
+
+
+<P><A NAME="Cornubert_etal_1991"></A>Cornubert, R.; d'Humi&egrave;res,
+
+D. and Levermore, D. (1991) &nbsp;A Knudsen layer theory for lattice gases,
+
+<B><I>Physica D</I> 47</B>, 241-259.</P>
+
+
+
+<P><A NAME="Flekkøy_1993"></A>Flekk&oslash;y, E.G. (1993) &nbsp;Lattice
+
+Bhatnagar-Gross-Krook models for miscible fluids, <B><I>Phys. Rev. E</I>
+
+47(6)</B>, 4247-4257.</P>
+
+
+
+<P><A NAME="Flekkøy_etal_1995"></A>Flekk&oslash;y, E.G.; Oxaal, U.; Feder,
+
+J. and J&oslash;ssang, T. (1995) &nbsp;Hydrodynamic dispersion at stagnation
+
+points: simulations and experiments, <B><I>Phys. Rev. E</I> 52</B>, 4952-4962.</P>
+
+
+
+<P><A NAME="Frisch_etal_1986"></A>Frisch, U.; Hasslacher, B. and Pomeau,
+
+Y. (1986) &nbsp;Lattice-gas automata for the Navier-Stokes equation, <B><I>Phys.
+
+Rev. Lett.</I> 56</B>, 1505-1508.</P>
+
+
+
+<P><A NAME="Ginzbourg_d'Hum_1996"></A>Ginzbourg, L. and d'Humi&egrave;res,
+
+D. (1996) &nbsp;Local second-order boundary methods for lattice Boltzmann
+
+models, <B><I>Jour. Stat. Phys.</I> 84</B>, 927-971.</P>
+
+
+
+<P><A NAME="Grossman_taam_1996"></A>Grossman S.A. and Taam, R.E. (1996)
+
+&nbsp;Double-diffusive mixing-length theory, semiconvection and massive
+
+star evolution, <B><I>Monthly Notices Royal Astro. Soc.</I> 283(#4)</B>
+
+1165-1178.</P>
+
+
+
+<P><A NAME="Gutfraind_etal_1995"></A>Gutfraind, R.; Ippolito, I. and Hansen,
+
+A. (1995) &nbsp;Study of tracer dispersion in self-affine fractures using
+
+lattice-gas automata, <B><I>Phys. Fluids</I></B> <B>7</B>, 1938-1948.</P>
+
+
+
+<P><A NAME="Hayot_1987"></A>Hayot, F. (1987) The effect of Galilean non-invariance
+
+in lattice gas automaton one-dimensional flow, <B><I>Complex Systems</I>
+
+1</B>, 753-761.</P>
+
+
+
+<P><A NAME="Holme_Roth_1992"></A>Holme, R. and Rothman, D.H. (1992) &nbsp;Lattice-gas
+
+and lattice-Boltzmann models of miscible fluids, <B><I>Jour. Stat. Phys</I>.
+
+68</B>, 409-429. </P>
+
+
+
+<P><A NAME="Holyer_1984"></A>Holyer, J.Y. (1984) The stability of long,
+
+steady, two-dimensional salt fingers, <B><I>Jour. Fluid Mech</I>. 147</B>,
+
+169-185.</P>
+
+
+
+<P><A NAME="Kohring_1991"></A>Kohring, G.A. (1991) Parallelization of short-
+
+and long-range cellular automata on scalar, vector, SIMD and MIMD machines,
+
+<B><I>Inter. Jour. Modern Phys.</I> 2</B>, 755-772.</P>
+
+
+
+<P><A NAME="Li_thesis_1995"></A>Li, C. (1995) &nbsp;<B><I>Low Peclet Number
+
+Mixing Behavior at Fracture Junctions</I></B>, Ph.D. thesis, 172 pp., New
+
+Mexico Institute of Mining and Technology. </P>
+
+
+
+<P><A NAME="Lutsko_etal_1992"></A>Lutsko, J.F.; Boon, J.P. and Somers,
+
+J.A. (1992) &nbsp;Lattice gas automata simulations of viscous fingering
+
+in a porous medium, in: T.M.M. Verheggen (ed.) <B><I>Numerical Methods
+
+for the Simulation of Multi-Phase and Complex Flow</I></B>, Springer-Verlag,
+
+Berlin, 124-135.</P>
+
+
+
+<P><A NAME="Maillot_Main_1996"></A>Maillot, B. and Main, I.G. (1996) &nbsp;A
+
+lattice BGK model for the diffusion of pore fluid pressure, including anisotropy,
+
+heterogeneity, and gravity effects, <B><I>Geophys. Res. Lett.</I> 23</B>,
+
+13-16.</P>
+
+
+
+<P><A NAME="Martys_Chen_1996"></A>Martys, N. and Chen, H. (1996) &nbsp;Simulation
+
+of multicomponent fluids in complex three-dimensional geometries by the
+
+lattice Boltzmann method, <B><I>Phys. Rev. E</I> &nbsp;53</B>, 743-750.</P>
+
+
+
+<P><A NAME="McNamara_1990"></A>McNamara, G.R. (1990) &nbsp;Diffusion in
+
+a lattice gas automaton, <B><I>Europhys. Lett.</I> 12</B>, 329-334.</P>
+
+
+
+<P><A NAME="McNamara_etal_1995"></A>McNamara, G.R.; Garcia, A.L. and Alder,
+
+B.J. (1995) &nbsp;Stabilization of thermal lattice Boltzmann methods, <B><I>Jour.
+
+Stat. Phys.</I> 81</B>, 395-408.</P>
+
+
+
+<P><A NAME="Muders_thesis_1995"></A>Muders, D. (1995) &nbsp;<B><I>Three-Dimensional
+
+Parallel Lattice Boltzmann Hydrodynamic Simulations of Turbulent Flows
+
+in Interstellar Dark Clouds,</I></B> Ph.D. thesis, 81 pp., Universit&auml;t
+
+Bonn. (available on www)</P>
+
+
+
+<P><A NAME="Noble_etal_1995"></A>Noble, D.R.; Georgiadis, J.G. and Buckius,
+
+R.O. (1995) &nbsp;Direct assessment of lattice Boltzmann hydrodynamics
+
+and boundary conditions for recirculating flows, <B><I>Jour. Stat. Phys.</I>
+
+81</B>, 17-33.</P>
+
+
+
+<P><A NAME="Noble_etal_1996"></A>Noble, D.R.; Georgiadis, J.G. and Buckius,
+
+R.O. (1996) &nbsp;Comparison of accuracy for lattice Boltzmann and finite
+
+difference simulations of steady viscous flow, <B><I>Inter. Jour. Numerical
+
+Meth. Fluids</I> 23</B>, 1-18. </P>
+
+
+
+<P><A NAME="Perea-Reeves_Stock_1997"></A>Perea-Reeves, S.J. and Stockman
+
+H.W. (1997)&nbsp; A lattice-gas study of dispersion in alveolated channels,
+
+i<I>n press</I> <B><I>Chem. Eng. Sci.</I></B></P>
+
+
+
+<P><A NAME="Qian_etal_1992"></A>Qian, Y.H.; d’Humi&egrave;res, D. and Lallemand,
+
+P. (1992) &nbsp;Lattice BGK models for Navier-Stokes equation, <B><I>Europhys.
+
+Lett.</I> 17(6 BIS)</B>, 479-484.</P>
+
+
+
+<P><A NAME="Reejhsinghani_etal_1966"></A>Reejhsinghani, N.S.; Gill, W.N.
+
+and Barduhn, A.J. (1966) &nbsp;Part III. Experiments in horizontal tubes
+
+including observations on natural convection effects, <B><I>A.I.Ch.E. Jour.</I>
+
+12</B>, 916-921.</P>
+
+
+
+<P><A NAME="Rothman_1988"></A>Rothman, D.H. (1988) &nbsp;Cellular-automaton
+
+fluids: a model for flow in porous media, <B><I>Geophysics</I> 53</B>,
+
+509-518.</P>
+
+
+
+<P><A NAME="Rothman_Kell_1988"></A>Rothman, D.H. and Keller, J.M. (1988)
+
+&nbsp;Immiscible cellular-automaton fluids, <B><I>Jour. Stat. Phys.</I>
+
+52</B>, 1119-1127. </P>
+
+
+
+<P><A NAME="Sarkar_Phil_1992"></A>Sarkar, A. and Phillips, O.M. (1992)
+
+Effects of horizontal gradients on thermohaline instabilities in a thick
+
+porous layer, <B><I>Phys. Fluids A</I> 4</B>, 1165-1175.</P>
+
+
+
+<P><A NAME="Stockman_etal_1997"></A>Stockman, H.W.; Li, C. and Wilson,
+
+J.L. (1997) &nbsp;A lattice-gas and lattice Boltzmann study of mixing at
+
+continuous fracture junctions: importance of boundary conditions, <I>in
+
+press</I> <B><I>Geophys. Res. Lett.</I></B></P>
+
+
+
+<P><A NAME="Tsuda_etal_1991"></A>Tsuda, A.; Federspiel, W.J.; Grant, P.A.
+
+Jr. and Fredberg, J.J. (1991) &nbsp;Axial dispersion of inert species in
+
+alveolated channels, <B><I>Chem. Eng. Sci</I>. 46</B>, 1419-1426.</P>
+
+
+
+<P><A NAME="Ziegler_1993"></A>Ziegler, D.P. (1993)&nbsp; Boundary conditions
+
+for lattice Boltzmann simulations. <B><I>Jour. Stat. Phys. </I>71</B>,
+
+1171-1177.</P>
+
+
+
+<P>
+
+<HR WIDTH="100%"><A NAME="MPEG_HELP"></A><B><FONT SIZE=+2>MPEG HELP</FONT></B></P>
+
+
+
+<P>Modern Unix systems typically come configured with mpeg viewers. The
+
+SGI (ca. 1996) mpeg viewers will handle all the movies in the article,
+
+though they are sluggish on 100 MHz R4000 systems.</P>
+
+
+
+<P>Microsoft Windows&#174; and Apple Macintosh&#174; systems are typically<B><I>
+
+not </I></B>supplied with mpeg viewers. Here are some popular viewers,
+
+and associated problems and strengths relevant to this article (comments
+
+by H.W. Stockman). At the time of this writing (April 1997), these programs
+
+were widely available for download via the www. After downloading and installing
+
+the viewer, it is usually necessary to register the program as a helper
+
+application in the browser (e.g., via the : <TT><U>Options | General Preferences
+
+| Helpers</U></TT> dialogue in Netscape&#174;.)</P>
+
+
+
+<P>These comments do not constitute endorsements of any programs.</P>
+
+
+
+<P><B><FONT SIZE=+2>For MS Windows &#174;:</FONT></B></P>
+
+
+
+<P><TT><FONT SIZE=+2><B><FONT COLOR="#008000">vmpegwin.exe:</FONT></B>
+
+</FONT></TT>The &quot;lite&quot; version 1.7 is freeware, and can handle
+
+the largest mpegs in this report (2.1 MB). The viewer has good single-step,
+
+loop and size control, and is very fast. However, the way the program handles
+
+successive invocations is unusual; it will not automatically play a second
+
+mpeg after it is invoked by the browser-- it must be shut down between
+
+invocations. The shutdown can be handled automatically if the <TT>/close</TT>
+
+argument is added to the command line (when the program is registered in
+
+the browser as a &quot;helper&quot; application).</P>
+
+
+
+<P><FONT SIZE=+2><B><TT><FONT COLOR="#008000">mpegplay.exe:</FONT></TT></B>
+
+</FONT>The shareware version will not play the largest files in this document.
+
+The viewer ocassionally trips up on some 24-bit color files, but <B><I>will</I></B>
+
+handle successive invocations easily. Allows loop and single-step.</P>
+
+
+
+<P><TT><FONT SIZE=+2><B><FONT COLOR="#008000">InterVU:</FONT></B> </FONT></TT>Freeware
+
+versions are available for both Mac and Windows (PC). The viewer is highly
+
+integrated with the browser and will play very large files, but the freeware
+
+version has no easy loop or single-step capability.</P>
+
+
+
+<P><TT><FONT SIZE=+2><B><FONT COLOR="#008000">NetTOOB:</FONT></B> </FONT></TT>The
+
+tested version did not correctly play many of the larger mpegs, and oddly
+
+distorted others.</P>
+
+
+
+<P><TT><FONT COLOR="#008000"><FONT SIZE=+2><B>Microsoft mplayer</B> <B>(with
+
+active movie)</B></FONT></FONT></TT><B><FONT COLOR="#008000"><FONT SIZE=+2>:</FONT></FONT></B><TT>
+
+</TT>The tested version tended to make colors blocky and would not play
+
+many of the larger files.</P>
+
+
+
+<P><B><FONT SIZE=+2><FONT COLOR="#000000">For the Macintosh &#174;:</FONT>
+
+</FONT></B></P>
+
+
+
+<P>I don't use Macintosh computers very often, so I can't offer authoritative
+
+information. Maynard Handley's <FONT SIZE=+1><B><TT><FONT COLOR="#008000">Sparkle</FONT></TT></B>
+
+</FONT>plays mpegs, is widely available on the net, and seems very capable
+
+for turning mpegs into QuickTime. <B><TT><FONT COLOR="#008000"><FONT SIZE=+1>InterVU</FONT></FONT></TT></B>
+
+(described above) has a free version for the Macintosh, and <B><TT><FONT COLOR="#008000"><FONT SIZE=+1>MacZilla</FONT></FONT></TT></B>
+
+is another popular Mac mpeg/avi/Quicktime viewer.
+</center>
+<hr>
+<font size="1">Contact:  <a href="mailto:hrwestr@sandia.gov">Henry Westrich</a></font>
+<br>
+<font size="1"><a href="#TOP">Back to top of page</a> || 
+<a href="http://www.sandia.gov/feedback.htm">Questions and Comments</a> || 
+<a href="http://www.sandia.gov/dis.htm">Acknowledgment and Disclaimer</a></font>
+</body>
+</html>
+

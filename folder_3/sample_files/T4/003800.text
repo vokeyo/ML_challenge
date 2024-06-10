@@ -1,0 +1,236 @@
+
+MARCH 1998
+U.S. BUREAU OF THE CENSUS
+Statistical Area TIGER/Line
+
+Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.
+
+WHAT'S NEW
+
+The Statistical Area TIGER/Line files include updates from the Redistricting Data Program,
+Phase I, the Block Boundary Suggestion Program (BBSP), the 1997 Boundary and Annexation
+Survey, and other Census Bureau programs that update the TIGER data base. It is important to
+note that even though each TIGER/Line file represents a whole county, all new features in existence 
+may not have been added in this release. The extent of updates in any given county will vary by 
+program, number of participants, type of participant, time of participation, and a  participant's 
+degree of participation in a program. 
+
+USING THIS CD-ROM
+
+The Statistical Area TIGER/Line CD-ROMs contain digital cartographic data files and related
+documentation. The files include the counties, parishes, boroughs, census geographic areas, and
+equivalent entities for each state (or territory).  
+
+The data is organized in subdirectories by county (or county equivalent) within a state. Each
+state subdirectory is named using the two-digit FIPS code and the Post Office abbreviation for
+the state (ex. 02_AK for Alaska). Within the state subdirectory each county file has the name
+TGRssccc.ZIP, where the "ss" is the FIPS state code and "ccc" is the county FIPS code.  
+
+The data for each county is stored in this single compressed file that when decompressed results
+in up to 17 separate files representing each of the TIGER/Line record types that exist for that
+county.  Some counties did not require all of the 17 record types and therefore will have less than
+17 files. 
+
+If the types of data contained in record types 4, 6, 7, 8, 9 and Z are not appropriate for a given
+county then the files for those record types will not be included.  The name of each of these files
+uses a modification of the above convention (TGRssccc.RTx) where "x" is the Record Type. 
+Appendix A of the documentation provides a list of counties and their FIPS codes by state.   
+
+Information on the content of each record type can be found in Chapter 6 of the TIGER/Line
+documentation.  Information on decompressing the data files is found below under the heading
+DATA DECOMPRESSION.  
+
+The files use the TIGER/Line record formats as described in the accompanying
+documentation.  When decompressed they are fixed length ASCII with record separators (carriage
+return, line feed).  The CD-ROM is in ISO 9660 format.  Users with PCS will require Microsoft
+CD-ROM Extensions Version 2.0 or higher.
+
+This CD-ROM does not contain software to display or generate maps.  Nor is the data on this
+CD-ROM in the form of a map image.  To create maps with the data on this CD-ROM, one
+would typically use a Geographic Information System package or other mapping software.  For
+information on how to use the TIGER/Line data with a specific package contact the company that produced the package. For information on companies that sell products that use
+TIGER/Line data or that provide various TIGER/Line-related services refer to the "Vendor's
+List" on the TIGER Page at the Census Bureau's World Wide Web site described below.
+
+ADDITIONAL CONTENTS OF THE CD-ROM:
+
+COUNTSss.TXT
+
+Each CD-ROM contains COUNTSss.TXT files in the subdirectory for each state under the
+TIGER directory.  The COUNTSss.TXT files show record type file record counts by county 
+for all states that are included on the compact disk.  Note that all counties are listed for a given
+state.  The layout of COUNTSss.TXT is  as follows:
+
+FIPS state code         16:17
+FIPS county code       20:22
+Creation date            25:30
+Record type               33:33
+Record Count             36:43
+
+README.TXT
+
+The document that you are presently reading.
+
+WHERE.TXT
+
+This file describes a variety of places from where one can download software to decompress the
+TIGER/Line data files on this disk.  Software exists for a variety of platforms including DOS,
+Windows, Macintosh, and UNIX.
+
+DOCUMENTATION
+
+The documentation for the TIGER/Line files is contained in the DOC subdirectory.  The file
+name is TIGER97B.PDF and is provided in the PDF format which requires the ADOBE(TM)
+Acrobat 3.0 reader.  We are including the installation software for both the Windows 3.1 (16bit)
+and the Windows 95 (32bit) versions of the reader.  They are included in the "WIN31" and
+"WIN95" subdirectories under the "DOC/ADOBE" directory. 
+
+To install one of these versions, copy the software from the appropriate subdirectory on the
+CD-ROM on to a subdirectory on your hard drive (which you named ADOBE or some other
+name).  This program will install the ADOBE Acrobat reader on the hard drive of your computer. 
+When the installation is complete you can view the TIGER/Line documentation by running the
+ADOBE reader and selecting the TIGER97B.pdf file from the "Open" menu.
+
+PARTICIPANT STATISTICAL AREAS PROGRAM GUIDELINES
+
+The documentation for the Participant Statistical Areas Program guidelines is contained in the
+DOC subdirectory.  The file name for the guidelines is PSAPGUIDE.txt.  The guidelines provide
+participants with detailed instructions and assistance in submitting specific statistical areas as
+part of the Census 2000 Participant Statistical Areas Program. Please review all guidelines for
+which you are interested in submitting plans.  Please note that chapters 9 & 10 of the guidelines
+include specific instructions on creating, and transmitting a polygon equivalency file to the
+Census Bureau.
+
+DATA COMPRESSION
+
+The TIGER/Line data on this disk has been compressed into an archive file to save space and
+reduce the number of disks required for the data.  If the files were not compressed it would
+require over 40 CD-ROM disks to hold the data needed to cover the entire United States.  Use
+software compatible with PK-ZIP 1.93A or higher to decompress the data.
+
+Info-ZIP's software (Zip, Unzip and related utilities) are examples of packages that can be used. 
+The Info-ZIP software is free and can be obtained as source code or executables from various
+bulletin boards and on line services software archive sites such as those listed in the
+WHERE.TXT file on this disk.
+
+KNOWN PROBLEMS AND ANOMALIES WITH THIS TIGER/LINE DATA SET:
+
+MISSING ZIP+4 RECORDS
+
+In the current release of the TIGER/Line 1997 files, data users may note a significant reduction
+in the number of ZIP+4 Add On Codes in Record Type Z (ZIP4L and ZIP4R fields) for some
+areas.  This reduction occurs as a result of operations to update the TIGER data base in
+preparation for Census 2000.  These operations may replace address ranges or change the 5-digit
+ZIP Code, but do not automatically update or transfer the ZIP+4 codes to the new ranges. 
+Because the Add On codes are valid for specific 5-digit ZIP Codes and address ranges, the
+previous Add On codes may no longer apply to the new address ranges.
+
+In nearly all situations, an automated match between the Census TIGER data base and the USPS
+ZIP+4 file is the source of ZIP+4 Add On Codes in TIGER products.  With update operations
+for Census 2000 underway for large portions of the nation, we have not yet performed this
+automated match to refresh these codes.  Future releases of TIGER/Line will contain refreshed
+codes that will reflect a more current USPS ZIP+4 file for the address range improvements that
+we are now making.
+
+ADDRESS ANOMALIES IN PUERTO RICO AND QUEENS COUNTY, N.Y.
+
+The TIGER/Line files contain some address range coverage for Puerto Rico.  However, use of this
+information for geocoding purposes may be problematic and the data user should proceed with
+caution.  These address ranges are preliminary attempts at using Puerto Rico address ranges in
+Census Bureau files.  Due to the lack of software or resources to handle some of the more unique
+aspects of addressing in Puerto Rico, the address ranges were entered without the standard edits
+and quality checks used in other parts of the United States.  Improvements in software and
+address standardization for Puerto Rico are expected in the future.  At present,  there are 
+inconsistencies, overlaps, and duplication of address ranges.  Address ranges may lack alpha
+character prefixes or have hyphenated prefixes. The files also lack the community names used in
+a four-line address that the U.S. Postal Service requires to avoid duplicate addresses.  Errors in
+the reference files, and other factors may limit the usefulness of this product for geocoding
+purposes. 
+
+Address range data for Queens County, NY in TIGER/Line does not show a consistent use of
+hyphenated and non-hyphenated addressing.  The Census Bureau intends to correct this in future
+versions of TIGER products.
+
+ROAD FEATURE ANOMALIES
+
+The Census Bureau extracts TIGER/Line files from the TIGER data base which is in continual
+update.  We created some TIGER/Line files that were in process for update and in so doing
+introduced some anomalies in chains represented in Record Types 1 and 2.  Road features may
+appear in the TIGER/Line files unconnected to other road features (so-called floating features)
+or severely skewed in relation to surrounding line features of any type.  This was the result of a
+TIGER/Line file being created before normal Census Bureau correction operations.  The
+disconnected or skewed features will be fixed before the next public product.
+
+The following county files have the greatest likelihood of road feature anomalies:
+
+FIPSCODE	County name, State	STCOU	County name, State
+01073	Jefferson, AL	04013	Maricopa, AZ
+06071	San Bernardino, CA	06073	San Diego, CA
+08069	Larimer, CO	13089	DeKalb, GA
+13121	Fulton, GA	13135	Gwinnett, GA
+17077	Jackson, IL	18097	Marion, IN
+21001	Adair, KY	21011	Bath, KY
+21065	Estill, KY	21067	Fayette, KY
+21095	Harlan, KY	21109	Jackson, KY
+21131	Leslie, KY	21165	Menifee, KY
+21175	Morgan, KY	21189	Owsley, KY
+21203	Rockcastle, KY	22017	Caddo, LA
+24003	Anne Arundel, MD	24035	Queen Anne's, MD
+26093	Livingston, MI	26115	Monroe, MI
+26125	Oakland, MI	26147	St. Clair, MI
+26161	Washtenaw, MI	26163	Wayne, MI
+34003	Bergen, NJ	36029	Erie, NY
+36055	Monroe, NY	37119	Mecklenburg, NC
+42003	Allegheny, PA	42007	Beaver, PA
+42019	Butler, PA	42071	Lancaster, PA
+42125	Washington, PA	42129	Westmoreland, PA
+45031	Darlington, SC	45057	Lancaster, SC
+45071	Newberry, SC	46099	Minnehaha, SD
+47037	Davidson, TN	48229	Hudspeth, TX
+48453	Travis, TX	50003	Bennington, VT
+50007	Essex, VT	50015	Lamoille, VT
+50021	Rutland, VT	55025	Dane, WI
+
+
+NAMING STANDARDS IN RECORD TYPE 1
+
+The Census Bureau changed its naming standards in Record Type 1 affecting the data in the
+Feature Direction, Prefix (FEDIRP), Feature Name (FENAME), Feature Type (FETYPE), and
+Feature Direction, Suffix (FEDIRS) fields.  In previous TIGER/Line products, directional
+prefixes and suffixes could appear for any type of line feature.  For the TIGER/Line 1997, only
+road features, those features with a Census Feature Class Code (CFCC) in the A class, should
+have feature directional data in the directional fields.  Other types of chains representing other
+types of features (for example, hydrologic features in CFCC class H) no longer are standardized
+to show directional information.
+
+The Census Bureau also modified the extraction of feature directional, name, and type
+information to improve the standardization of road feature information.  The improvement parses
+a greater number of road chains into the correct feature identifier fields.
+
+
+INTERNAL POINT PLACEMENT ERRORS
+
+We discovered that some polygons in TIGER have an internal point that falls outside the
+polygon.  This occurred for highly irregular polygons.  When linking  data to the internal
+point users may find that it will  not appear within the correct polygon in all cases.  The
+Census Bureau will fix this error in subsequent TIGER/Line products. 
+
+
+QUESTIONS AND ADDITIONAL INFORMATION
+
+Technical questions about the Census TIGER/Line files and future plans for this and other
+TIGER-related products may be directed to the Products and Services Staff of the Geography
+Division at (301) 457-1128 or to the e-mail address tiger@census.gov.  In addition to this
+Statistical Areas version of TIGER/Line the Census Bureau also produces a version of
+TIGER/Line for public sale and a variety of related products based on TIGER data.  General 
+information about these products is available from the TIGER page on the Census Bureau's
+World Wide Web site (http://www.census.gov/ftp/pub/geo/www/tiger/).  This Web site also
+is a source of information that is of specific interest to TIGER/Line users and of general
+interest regarding the geographic programs at the Census Bureau.  As appropriate, additional
+information about this product will be posted, such as ERRATA or USER NOTES.
+
+There is a TIGER Special Interest Group (SIG) which meets at various professional
+conferences in an informal setting to discuss issues relating to the use of TIGER/Line and
+future developments.  Announcements telling the location of upcoming TIGER SIG meetings
+is posted on the TIGER Web page. There also is a list of vendors that provide services or
+products related to TIGER/Line.

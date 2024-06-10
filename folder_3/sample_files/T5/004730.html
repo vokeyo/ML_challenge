@@ -1,0 +1,59 @@
+<html>
+<head>
+<title> Orbit Correction Experiment 5/24/2002 </title>
+</head>
+<body>
+<center><u>Orbit Correction Experiment</u></center>
+<p/>
+<b>date:</b> 5/24/2002<br/>
+<b>Participants:</b> Tom Pelaia, Paul Chu, John Galambos
+<table width="60%"><tr><td><hr/></td></tr></table>
+
+
+<dl>
+<dt><u>Purpose:</u>
+<dd>We had sought out machine time to study the Orbit Correction application on the MEBT while it was still operating at LBNL.  We received about 30 minutes of time for our studies.  This was our first use of the Orbit Correction application with the real machine.  The purpose of the study was to gain experience with the real MEBT, explore reasonable settings and to test the orbit correction algorithms.
+</dd>
+</dt>
+</dl>
+
+<p/>
+<dl>
+<dt><u>Notes:</u>
+<dd>The MEBT control system at LBNL did not support field setting and readback.  Thus we had modified the access to convert field to current for setting and convert current to field for readback.  Field is given in Tesla and current in Amps.  The conversion is given as follows: <table><tr><td><code>B<sub>Tesla</sub> = 1.02x10<sup>-3</sup> I<sub>Amps</sub></code></td></tr></table>
+</dd>
+</dt>
+</dl>
+
+<p/>
+The initial finding was that the bpm readings were too noisy to get a good bpm/corrector calibration with the initial settings.  After becoming familiar with the machine response, we settled on good operating parameters.  The two parameters that were adjusted for the study were corrector excursion and sample size.  The corrector excursion is the change in corrector strength used to calibrate the bpm/corrector response.  The sample size is the number of bpm readings made per orbit measurement.  Other parameters that were not changed during the experiment were the delay between samples and the delay after changing correctors.
+
+<p align="center">
+<table border="1"><caption>Experimental Parameters</caption>
+<tr><th></th><th>Excursion (T)</th><th>Sample Size</th><th>Sample Delay (msec)</th><th>Corrector Delay (msec)</th></tr>
+<tr><th>Default</th><td align="right">1.0x10<sup>-4</sup></td><td align="right">10</td><td align="right">500</td><td align="right">200</td></tr>
+<tr><th>Final</th><td align="right">4.0x10<sup>-3</sup></td><td align="right">20</td><td align="right">500</td><td align="right">200</td></tr>
+</table>
+</p>
+
+Given that our experimental time was short (about 30 minutes) and given that the vertical orbit was already quite flat (0.132 mm rms), we decided to focus soley on correcting the horizontal orbit.  After a couple trial corrections with poor calibrations, the horizontal orbit changed from having about a 1.0 mm rms error to about 1.7 mm rms.  We then set our parameters to those given in the above table and re-calibrated the correction algorithms.  With the final parameters, we directly flattened the 1.7 mm rms error down to 0.113 mm rms error in the horizontal.  These measurements excluded only the first beam position monitor since there is no corrector upstream of it.  The final orbit is shown below.
+
+<img src="020528_corrected.png"/>
+
+</p>
+It should also be pointed out that during the couple poor attempts at correcting the orbit, the beam position monitor signals were quite erratic.  Later during the successful attempt, the signals had quieted.  The cause of this behavior is not clear, but opens up the possibility of using smaller excursions and sample sizes.
+
+<p/>
+One problem that we found when we started the Orbit Correction application was that the monitoring of one corrector was overwhelming the cpu.  We fixed the problem by raising the corrector strength of the offending corrector.  We need to find if there is a way to avoid being swamped when monitoring magnets set near zero strength.
+
+<p/>
+<dl>
+<dt><u>Conclusion:</u>
+<dd>
+The machine studies was quite useful.  We got a good feeling for the MEBT and how to setup parameters for effective orbit correction.  We got to test several features of the application such as setting and monitoring corrector strengths and changing preferences.  We were pleased with the final orbit correction.  More studies will be needed to try to correct a variety of orbits and also to fine tune the parameters and the algorithms.
+</dd>
+</dt>
+</dl>
+
+</body>
+</html>

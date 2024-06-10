@@ -1,0 +1,1128 @@
+BOREAS RSS-04 1994 Southern Study Area Jack Pine LAI and FPAR Data
+
+Summary
+
+The RSS-04 team collected several data sets related to leaf, plant, and stand 
+physical, optical, and chemical properties.  This data set contains leaf area 
+indices and FPAR measurements which were taken at the three conifer sites in the 
+BOREAS SSA during August 1993 and at the jack pine tower flux and a subset of 
+auxiliary sites during July and August 1994.  The measurements were made with 
+LAI-2000 and Ceptometer instruments.  The measurements were taken for the 
+purpose of model parameterization and to test empirical relationships that were 
+hypothesized between biophysical parameters and remotely sensed data.  The data 
+are stored in tabular ASCII files.
+
+Table of Contents
+
+   *  1 Data Set Overview
+   *  2 Investigator(s)
+   *  3 Theory of Measurements
+   *  4 Equipment
+   *  5 Data Acquisition Methods
+   *  6 Observations
+   *  7 Data Description
+   *  8 Data Organization
+   *  9 Data Manipulations
+   *  10 Errors
+   *  11 Notes
+   *  12 Application of the Data Set
+   *  13 Future Modifications and Plans
+   *  14 Software
+   *  15 Data Access
+   *  16 Output Products and Availability
+   *  17 References
+   *  18 Glossary of Terms
+   *  19 List of Acronyms
+   *  20 Document Information
+
+1. Data Set Overview
+
+1.1 Data Set Identification
+
+BOREAS RSS-04 1994 Southern Study Area Jack Pine LAI and FPAR Data
+
+1.2 Data Set Introduction
+
+Estimates of Leaf Area Index (LAI) and fraction of Photosynthetically Active 
+Radiation (FPAR) were made during the Focused Field Campaign in summer 1993 
+(FFC-93) and the second Intensive Field Campaign (IFC-2) in 1994.  In FFC-93, 
+preliminary measurements were made using a LI-COR LAI-2000 and a Decagon Devices 
+Ceptometer at the three conifer tower flux sites Young Jack Pine (YJP), Old Jack 
+Pine (OJP), and Old Black Spruce (OBS) in the BOReal Ecosystem-Atmosphere Study 
+(BOREAS) Southern Study Area (SSA), while in 1994 attention was focused on jack 
+pine tower flux and auxiliary sites in the SSA. LAI was estimated using both 
+instruments; FPAR was obtained using the Ceptometer. Both the Ceptometer and the 
+LAI-2000 rely on the relationships between radiation transmission, canopy gap 
+fraction, and LAI. The assumptions of these approaches are summarized below (see 
+Section 9) and have been assessed for the BOREAS sites in Chen et al. (1997).
+
+1.3 Objective/Purpose
+
+The Remote Sensing Science (RSS)-04 investigations were designed to obtain LAI, 
+FPAR, and foliar chemistry data for a complex spatially variable forest canopy 
+in order to:
+
+   i) Parameterize an ecosystem simulation model.
+
+  ii) Test empirical relationships hypothesized between biophysical 
+      parameters and remotely sensed data.
+
+ iii) Parameterize a forest reflectance model and compare it with Airborne
+      Visible and Infrared Imaging Spectrometer (AVIRIS) data
+      to deduce whether observed 'relationships' between canopy chemistry and 
+      reflectance are a product of canopy structure rather than foliar chemical 
+      variations themselves (see references list and biochemistry data set).
+
+  iv) Drive the ecosystem simulation model with estimates of LAI and 
+      chemistry derived from remotely sensed data.
+
+1.4 Summary of Parameters
+
+LAI, FPAR
+
+1.5 Discussion
+
+The measurements that comprise this data set were collected as a contribution to 
+the determination of the biophysical characteristics of the BOREAS SSA.
+
+1.6 Related Data Sets
+
+BOREAS RSS-01 SSA PARABOLA Surface Reflectance and Transmittance Data
+BOREAS RSS-04 1994 Jack Pine Leaf Biochemistry and Modeled Spectra in the SSA
+BOREAS RSS-07 LAI, Gap Fraction, and FPAR Data
+
+2. Investigator(s)
+
+2.1 Investigator(s) Name and Title
+
+Dr. Stephen Plummer
+
+Professor Paul Curran
+
+2.2 Title of Investigation
+
+RSS-04: Coupling Remotely Sensed Data to Ecosystem Simulation Models
+
+2.3 Contact Information
+
+Contact 1
+---------
+Dr. Stephen Plummer
+Role: Data collection, transport, and project supervision
+Section for Earth Observation
+Institute of Terrestrial Ecology
+UK
++44 1487 773381 (tel)
++44 1487 773277/467 (fax)
+E-mail: S.Plummer@ite.ac.uk
+
+*formerly Remote Sensing Applications Development Unit
+British National Space Centre
+
+Contact 2
+---------
+Jaime Nickeson
+Raytheon STX Corporation
+NASA GSFC
+Greenbelt, MD 
+(301) 286-3373
+(301) 286-0239 (fax)
+jaime@ltpmail.gsfc.nasa.gov
+
+3. Theory of Measurements
+
+For a discussion of the theory behind measurements presented here, users are 
+directed to the review by Welles (1990), Welles and Norman (1991), and Chen et 
+al. (1997).
+
+4. Equipment
+
+4.1 Sensor/Instrument Description
+
+i) LAI
+
+Two instruments were used to estimate LAI: a LI-COR LAI-2000 leaf area meter and 
+a Decagon Devices Ceptometer.  The LAI-2000 uses either one or two sensors to 
+make measurements of the incoming diffuse incident flux above (A) and below (B) 
+the canopy in blue wavelengths (<490 nm).  Each reading comprises measurements 
+of the amount of radiation at five zenith angles simultaneously over either the 
+full azimuth or some portion of it, dictated by a viewing mask attached to the 
+optical head.  One measurement comprise a minimum of 10 numbers corresponding to 
+5 values of A (above) and 5 of B (below), at zenith angles of 0, 22.5, 37.5, 
+52.5, and 67.5 degrees.  The Ceptometer is a line quantum sensor consisting of 
+80 separate photodiodes spaced at 1-cm intervals that are sensitive to radiation 
+in the PAR region (400-700 nm).  Measurements above and below the canopy are 
+made to determine canopy transmittance at a number of solar zenith angles.
+
+ii) FPAR
+
+The Ceptometer was also used to determine the fraction of PAR absorbed by the 
+canopy at a number of solar zenith angles.
+
+4.1.1 Collection Environment
+
+Measurements were collected during ambient surface atmospheric conditions at the 
+SSA during August 1993  (FFC-93) and July to August 1994 (IFC-2).  The LAI-2000 
+measurements were made at dusk and dawn, Ceptometer data were collected on sunny 
+days.
+
+4.1.2 Source/Platform
+
+The instruments were held by the human investigators.
+
+4.1.3 Source/Platform Mission Objectives
+
+The objective was to collect LAI and FPAR measurements at various locations.
+
+4.1.4 Key Variables
+
+LAI, FPAR, Mean Tip Angle
+
+4.1.5 Principles of Operation
+
+The LAI-2000 and Ceptometer are instruments that make measurements of the 
+incoming radiation below a plant canopy. In the case of the LAI-2000, 
+measurements are made in the blue (<490 nm) region, while the Ceptometer records 
+incoming radiation in the PAR (400-700 nm) region. These data can be used to 
+estimate LAI indirectly by making assumptions about the canopy architecture 
+(leaf distribution). LAI is derived by inverting the radiation transmission (or 
+gap fraction) information. The gap fraction is the fraction of view in any 
+direction from below a plant canopy that is not blocked (by leaves). If it is 
+assumed that leaves are the only elements that block radiation, that they are 
+nontransmitting, and that they are randomly distributed in space, then the 
+transmission of a beam of radiation can be related to the mean foliage density 
+(see Section 9 for equations). If the canopy is horizontally homogenous, then 
+the mean foliage density can be related to LAI.
+
+The LAI-2000 can be considered to be analogous to hemispherical photography in 
+that it uses a fish eye light sensor that measures diffuse radiation in five 
+distinct angular bands about zenith. The incoming radiation is projected onto 
+photodiodes arranged as concentric rings. To derive gap fraction information, 
+light conditions are assumed diffuse and uniform (dusk, dawn, or overcast 
+conditions), and measurements are made of the sky above the canopy followed by 
+readings below the canopy. The ratio of above-to-below canopy readings is used 
+to obtain gap fraction. Because foliage is not normally randomly distributed and 
+there is a proportion of nonfoliage matter that blocks radiation (dead leaves, 
+branches, stems, or trunks), the derived measurement is normally referred to as 
+ëeffectiveí LAI. Correction of these measurements can be made by derivation of 
+factors that represent the woody-to-total area ratio and the clumping factors 
+(needle-to-shoot area ratio and foliage clumping at greater than shoot level).
+
+The Ceptometer measures PAR radiation using 80 photodiodes spaced at each 
+centimeter along an 80-cm rod. These are used to provide an average value of PAR 
+over the 80-cm length and for the specific solar zenith angle and relative 
+azimuth. To account for azimuthal variation in foliage distribution, it is 
+advisable to use the average over several azimuth directions (in this case, 
+eight). Because the instrument is primarily used to measure the fraction of 
+absorbed PAR (FPAR), measurements are taken in direct sun conditions, with the 
+proviso that the solar illumination is consistent over the period of 
+measurement. In the same way as with the LAI-2000, measurements are obtained 
+first outside the canopy and subsequently below the canopy. In line with gap 
+fraction measurements, these can be converted into an estimate of LAI using the 
+approach of Norman (1988) (see Section 9). This also requires measurement of the 
+ratio of diffuse-direct incident radiation. The diffuse component can be 
+obtained by shading the Ceptometer from direct sun using an appropriately sized 
+object such that the entire length of instrument is covered for the width of the 
+solar disk (this is an acquired skill). More recent instruments (Delta-T 
+SunScanô) come with a separate quantum sensor and shading ring for use with a 
+line PAR sensor. Chen et al. (1997) indicate that the Ceptometer provides a 
+measurement of plant area index, although the finite averaging does account for 
+error caused by clumping at scales larger than the averaging length.
+
+4.1.6 Sensor/Instrument Measurement Geometry
+
+LAI-2000
+
+The LAI-2000 is simple to operate and acquires data relatively fast. Operation 
+can be through single-head, dual-head, or remote-head modes. In single-head 
+mode, as used in this experiment, both A (above) and B (below) measurements are 
+made with the same optical head. Because the calculation is made by comparison 
+of A and B measurements, the instrument does not require either absolute or 
+relative calibration. However, there is a need for ready access to a clear sky 
+view near to the measurement site. In BOREAS operation, this caused 
+difficulties, especially at mature pine sites with tree heights of approximately 
+15 m. Measurements had to be tailored to site conditions, and given the need to 
+cover as many sites as possible, operation often occurred in nonoptimal 
+conditions. Sites were measured at dawn or dusk, although the distance between 
+sites limited coverage on any given day. For short tree sites, e.g., SSA-YJP, it 
+was possible to get above the canopy (using the back of a standard Jeep or by 
+climbing the flux tower in periods of nonoperation (1993) to a height of approx. 
+3-4 m). The LAI-2000 head requires leveling, but if contains a bubble level to 
+make leveling easier.  The best practice is to maintain instrument orientation 
+for all measurements (A and B). This is particularly important where the 
+availability of a clear area is restricted to a logging road. In such cases, the 
+A reading was made from the back of a Jeep with the optical head masked downward 
+such that only a proportion of the view was used (see Section 5). In all cases, 
+the optical head was masked for the observer using a 45-degree mask unless more 
+was required. A measurements were made as regularly as possible (before and 
+after single B runs) to minimize the effect of variation in sky conditions and 
+linear interpolation used to provide A values for each B value. Repetitions of 
+each measurement were made to increase the representativeness, and in cases 
+where the B value exceeded a corresponding A, the data point was ignored. This 
+usually applied to measurements from the 5th ring. Removal of the 5th ring 
+measurement in software meant that the data could be reintroduced. In all cases, 
+the measurements were made at the same height, 1 m above the ground, except for 
+reference measurements. The latter were made 1 m above the canopy (F8L6T), from 
+the top of a large flux tower (G2L3T), or from a Jeep + 1 m height.
+
+Ceptometer
+
+As with the LAI-2000, there are a number of issues that affect the 
+representativeness of measurements made with the Ceptometer. In all cases, 
+reference measurements were made at the same locations as for the LAI-2000, and 
+all measurement runs started and finished with a reference measurement. Since 
+the same set of measurements was used for FPAR and LAI, these measurements were 
+all made under direct sun conditions and included diffuse incident, canopy, and 
+understory measurements. Each measurement comprised eight azimuth directions 
+with the instrument level and out of any shadow cast by the operator. The eight 
+measurements were made at the cardinal and subcardinal directions. Measurements 
+were made at approximately 1 m where significant understory existed or 30 cm 
+above ground where the understory was moss/lichen. Experience dictated whether a 
+particular set of measurements was acceptable, especially for diffuse 
+measurements, which required shading of the 80 photodiodes.  It should be noted 
+that because each individual measurement (1 through 8) was averaged on the fly 
+one unshaded diffuse measurement could bias the data. When this occurred, 
+measurements were repeated. A measurement sequence took considerably longer than 
+the equivalent LAI-2000, and the processing was more laborious because no 
+software was written for this purpose.  This is now available with the Delta-T 
+Sunscan and may be available with the Decagon Accupar.
+
+4.1.7 Manufacturer of Sensor/Instrument
+
+LI-COR LAI-2000:
+
+LI-COR, Inc.
+4421 Superior Street
+P.O. Box 4425
+Lincoln, NE  68504
+(402) 467-3576
+http://env.licor.com/products/LAI2000/2000.htm
+
+Ceptometer:
+
+Decagon Devices, Inc.
+950 NE Nelson Ct.
+P.O. Box 835
+Pullman, WA 99163
+(509) 332-2756
+http://www.decagon.com/
+
+4.2 Calibration
+
+i) LAI-2000
+
+Sensor calibration consists of five multipliers for the outputs of the five 
+rings of the detector. These values are supplied on a calibration sheet and 
+relate one ring to another. The values do not convert outputs to absolute values 
+of energy. In one-sensor mode this is unimportant because the same sensor makes 
+both A and B measurements. In two-sensor mode the two sensors are compared under 
+the same diffuse light conditions to adjust the sensitivity of the two sensors. 
+The instrument is calibrated using an integrating sphere supplied, by the UK 
+representatives of LI-COR, Inc., Glen Spectra Ltd.
+
+ii) Ceptometer
+
+For LAI and FPAR determination, as long as the relative calibration of the 80 
+sensors is consistent, the same method applies as above.  However, for 
+determination of PAR, APAR, or incident PAR (PAR0), calibration must be applied 
+to convert from output to SI units (µ mol m-2 s-1).  Calibration is checked 
+regularly by the owners of the instrument, University of Wales, Swansea, by 
+comparison against an accurate PAR sensor under a standard daylight lamp. The 
+accurate PAR quantum sensor is traceable to UK national standards. 
+
+4.2.1 Specifications
+
+Ceptometer ñ The ideal spectral response for a quantum sensor is a top hat 
+function with 100% dropoff at 400 nm and 700 nm. All quantum sensors approximate 
+this; however, errors caused by imperfect spectral response are small for 
+daylight conditions. The system cosine response matches the ideal accurately 
+(>90% below 70 degrees).  Individual Ceptometer measurement time is nominally 
+120 ms over a range of 2500 µ mol m-2 s-1 with a resolution of 0.3 µ mol m-2 s-1. 
+Accuracy of the instrument is ±10%. Maximum recorded values were approximately 
+1,500 µ mol m-2 s-1.
+
+The LAI-2000 measurements were made in one-sensor mode because calculation is 
+based on the ratio of ‘A’ to ‘B’ measurements. Issues of calibration, 
+resolution, and accuracy are not a problem provided that the relative 
+calibration between individual view rings is accurate and consistent.
+
+4.2.1.1 Tolerance
+
+Ceptometer - Accuracy of the instrument is ±10%. Maximum recorded values were 
+approximately 1,500 µ mol m-2 s-1, well within the stated instrument range. 
+Comparison of Ceptometer measurements against the Tracing Radiation and 
+Architecture of Canopies (TRAC) instrument indicated a discrepancy of 
+approximately 200 counts, but this was consistent over a range of light 
+conditions. Absolute values of PAR were therefore not reported. Error analysis 
+for the FPAR measurements could not be conducted against those from other 
+Principal Investigators (PIs) (Chen, RSS-07) because measurements were not 
+coincident. Within canopy variability (n=10) indicates that for FPAR values 
+greater than 0.7, an error of ±10% should be expected, but because of clumping 
+this can rise to 20-30% for FPAR values of 0.5.
+
+The LAI estimates from the Ceptometer, LAI-2000, TRAC, and allometry were 
+assessed by Chen et al. (1997). All the methods have limitations, and an 
+absolute accuracy could not be attributed to any one method. The error range for 
+LAI measurement method is on the order of 15-30%. 
+
+4.2.2 Frequency of Calibration
+
+See Section 4 comments above ñ all measurements are ratio values, and the only 
+issue is sensitivity of the instrument across the measurement range. This has 
+not been checked but is assumed to be acceptable. Intercalibration between 
+instruments was not performed for the LAI-2000 beause it was used in one-sensor 
+mode. Comparison of Ceptometer measurements against the TRAC instrument 
+indicated a discrepancy of approximately 200 counts, but this was consistent 
+over a range of light conditions. Absolute values of PAR are not provided in 
+this data set. 
+
+4.2.3 Other Calibration Information
+
+None given.
+
+5. Data Acquisition Methods
+ 
+1993 Procedure:
+
+i) LAI using the LAI-2000
+
+At each of the three conifer tower flux sites, 100-m transects were established 
+with access to a nonforest area for determination of radiation flux.
+
+At the SSA-YJP site, four transects were laid out on the cardinal points 
+centered on the road next to the site hut (Figure 1).  Data acquisition 
+comprised an A measurement followed by 10 B measurements for each transect and 
+finished with additional A measurement. A samples were taken at the flux tower 
+and B samples at 10-m intervals along each transect. Data were collected on 14-
+Aug-1993 at 08:00 local time (15:00 Greenwich Mean Time (GMT).  All the A 
+measurements were acquired above the canopy at 3-4 m using the steps on the flux 
+tower. In all cases, a 45-degree view cap was used to eliminate the observer.
+
+
+Figure 1. Transect locations at the SSA Young Jack Pine Site.
+
+At the SSA-OJP site, suitable access to a clear area at the flux tower site to 
+make irradiance measurements was not available.  Therefore, a similar stand 
+adjacent to the site access road near a small lake (Figure 2) was selected. 
+Irradiance measurements were taken at the lake edge using a 180-degree view cap.  
+Four transects were established; however, the restricted size of the stand 
+required a reorientation of these transects at some point along the 100-m 
+length.  Data were acquired on 16-Aug-1993 at 05:20 (12:20 GMT) and 06:30 (13:30 
+GMT).
+
+Figure 2. Transect locations at the SSA Old Jack Pine Site.
+
+Similarly, in the SSA-OBS, reasonable access to the flux tower site in 1993 was 
+unavailable and there was no access above the canopy.  Transects were therefore 
+established nearer the road, and the road served as the irradiance site with a 
+315-degree view cap (Figure 3).  A transect was established in each of the two 
+main strata types, tall, high LAI black spruce, and short, low LAI black spruce.  
+Data were acquired every 5 meters to give a sample size of 20 for each transect. 
+Data were recorded on 25-Aug-1993 at 13:30 (20:30 GMT).
+
+
+Figure 3. Transect locations for the SSA Old Black Spruce Site.
+
+LAI was calculated using options available in the LAI-2000 processing software. 
+Four different methods were used: standard, slope/intercept (Lang, 1987), 
+ellipsoidal leaf distribution (Campbell, 1986), and constrained least squares 
+(Norman and Campbell, 1989). 
+
+ii) LAI using the Ceptometer
+
+At the same sites as in i), measurements were made several times per day.  Each 
+measurement on a transect was the average of eight azimuthal measurements of PAR 
+flux.  Total and diffuse incident flux were measured before and after each 
+transect using a shade to block the sun.  Similarly, at the first and last 
+transect point, diffuse within-canopy flux and PAR reflected by the understory 
+were measured.  LAI was determined empirically using the method described by 
+Norman (1988) with the beam fraction determined by interpolation for each 
+transect point (see Section 9).
+
+iii) FPAR
+
+The measurements described above for the Ceptometer were also used to calculate 
+the variation in FPAR for each transect using measurements of canopy 
+transmission and interpolated values of incident flux and soil reflected flux. 
+The canopy reflected flux was calculated using an average of eight measurements 
+of a short roadside tree.  FPAR was calculated for three solar zenith angles and 
+for two transects at each site.
+
+1994 Procedure:
+
+i) LAI with the LAI-2000
+
+The data acquisition in 1994 concentrated on the jack pine tower and auxiliary 
+sites in the SSA and covered the same transects/plots as those laid out by RSS-
+07 and Terrestrial Ecology (TE)-23 for allometric measurements. For each 
+auxiliary site, this comprised two perpendicular 50-m transects oriented in due 
+S-N and E-W directions. Deviation from such an arrangement is explained in 
+Section 6.
+
+A total of nine jack pine sites were sampled with the LAI-2000.  In all cases, 
+the data were acquired either before sunrise or after sunset and with a large 
+view cap (315 or 330 degrees) because the only irradiance site in most cases was 
+the access road.  Tree edge effects were reduced by measuring irradiance from 
+the top of a Jeep.
+
+ii) LAI with the Ceptometer
+
+Ceptometer data were acquired at the same sites as the LAI-2000 using the method 
+described above for 1994 site locations.  Ten sites were covered, with runs 
+recorded at three solar zenith angles for seven of the sites and two solar 
+zenith angles for the other three sites.  In addition, a series of comparative 
+analyses was conducted with Jing Chen (RSS-07) at the following sites: SSA-Young 
+Aspen (YA) (D6H4T), Black Spruce (D0H6S) and Mixed (D9I1M) and with Don Deering 
+(RSS-01) at the SSA-OJP.
+
+iii) Fraction of Absorbed Photosynthetically Active Radiation (FPAR)
+
+Measurements of FPAR for each of the sites above were also made using the method 
+described in 1993.  At sites with significant understory vegetation, additional 
+measurements were made above and below the understory (D6H4T, D0H6S).
+
+iv) Canopy Chemistry
+
+Samples for determination of nitrogen, chlorophyll, water, etc., were acquired 
+for the nine sites covered by the LAI-2000 using clippers for the short sites 
+and with a shotgun for the sites with tall canopies.  Branchlets were subdivided 
+into current year and 1 year or greater, and the needles were then stripped off 
+and frozen with CO2 (see related data sets Section 1.6).
+
+6. Observations
+
+6.1 Data Notes
+
+None given.
+
+6.2 Field Notes
+
+27-Jul-1994   Site D9I1M Run 1: Transect of Pink Flags E/W from Tower - TE-06?
+              Run 2: Transect of Red Stakes N/S from Tower - RSS-07.
+
+27-Jul-1994   Site D4H6T Aspen: Understory data acquired with Ceptometer.
+
+27-Jul-1994   Site D0H6S Black Spruce: Cirrus Cloud. Problem finding site.  Used 
+              RSS-07 Transect.
+
+28-Jul-1994   Site G9L0P: Cirrus Cloud.
+
+28-Jul-1994   Site F7J1P: Cumulus Cloud.
+
+28-Jul-1994   Comparison of Ceptometer with TRAC.
+
+30-Jul-1994   Site G8L6P: No Markers present - Markers inserted N/E/S/W.
+
+2-Aug-1994    Site F5I6P: Site not found so established at 150 m in from Route
+              913 on a bearing of 59 degrees. 
+
+2-Aug-1994    Site F7J1P: 60% Jack Pine, 20% Spruce, 20% Aspen.
+
+2-Aug-1994    Site F7J0P: 34% Jack Pine, 33% Spruce, 33% Aspen.
+
+
+7. Data Description
+
+7.1 Spatial Characteristics
+
+7.1.1 Spatial Coverage
+
+Data were collected at treed SSA tower sites and SSA jack pine auxiliary sites.
+
+The following table lists the North Amercan Datum 1983 (NAD83) coordinates of 
+the site locations that were sampled :
+
+                          West     North      UTM        UTM     UTM 
+Name       Notes        Longitude  Latitude  Easting   Northing   Zone
+-----   -----------    ----------  --------  --------  ---------  ----
+F8L6T    SSA YJP        104.64527  53.87581  523350.7  5969540.0   13
+G2L3T    SSA OJP        104.69203  53.91634  520257.0  5974035.0   13
+G8I4T    SSA OBS        105.11779  53.98718  492306.1  5981879.0   13
+F5I6P   JIH-4 Pine      105.11174  53.86608  492681.9  5968405.0   13
+F7J0P   JMH-5 Pine      105.05116  53.88334  496666.7  5970320.0   13
+F7J1P   JMH-A2 Pine     105.03226  53.88211  497909.2  5970183.0   13
+G1K9P   JMM-6 Pine      104.74810  53.90881  516576.8  5973183.0   13
+G4K8P   JMM-5 Pine      104.76399  53.91884  515529.6  5974295.0   13
+G7K8P   JMM-8A Pine     104.77147  53.95882  515023.9  5978742.0   13
+G8L6P   JDM-8 Pine      104.63755  53.96558  523807.6  5979530.0   13
+G9L0P   JMH-10 Pine     104.73778  53.97576  517227.6  5980634.0   13
+D0H6S   BMM-1 Spruce    105.29534  53.64878  480506.0  5944267.0   13
+D0H4T      SSA YA       105.32313  53.65602  478675.2  5945077.0   13
+D9I1M   AIH-3 Mixed     105.20643  53.72540  486410.2  5952768.0   13
+ 
+7.1.2 Spatial Coverage Map
+
+Not available.
+
+7.1.3 Spatial Resolution
+
+The measurements provided by the LAI-2000 should be regarded as representative 
+of the sample site, while those by the Ceptometer (LAI and FPAR) are provided as 
+individual samples for each sample point. It is recommended that these also be 
+used at the sample site level rather than individually since the variation from 
+point to point can be large because of clumping; this is particularly important 
+in the case of FPAR.  Where there was significant understory, the Ceptometer 
+data are provided at two levels, above and below the understory layer. 
+
+7.1.4 Projection
+
+Not applicable.
+
+7.1.5 Grid Description
+
+Not applicable.
+
+7.2 Temporal Characteristics
+
+7.2.1 Temporal Coverage
+
+FFC-93: 07-Aug to 30-Aug-1993
+IFC-94: 25-Jul to 05-Aug-1994
+
+7.2.2 Temporal Coverage Map
+
+1993  LAI using the LAI-2000
+SSA-YJP - Data were collected on 14-Aug at 08:00 local time (15:00 GMT). 
+SSA-OJP - Data were acquired on 16-Aug at 05:20 (12:20 GMT) and 06:30 
+          (13:30 GMT) 
+SSA-OBS - Data were recorded on 25-Aug at 13:30 (20:30 GMT).
+
+1993  LAI using the Ceptometer
+SSA-YJP - Data were collected several times a day on 14th August 
+SSA-OJP - Data were acquired several times a day on 16th August
+SSA-OBS - Data were recorded several times a day on 25th August
+
+1994  LAI using the LAI-2000
+F5I6P  -  04AUG94
+F7J0P  -  03AUG94
+F7J0P  -  31JUL94
+F7J1P  -  03AUG94
+F7J1P  -  31JUL94
+G1K9P  -  31JUL94
+G2L3T  -  05AUG94
+G4K8P  -  31JUL94
+G7K8P  -  31JUL94
+G8L6P  -  05AUG94
+G9L0P  -  03AUG94
+G9L0P  -  31JUL94
+
+1994  LAI using the Ceptometer
+D0H6S  -  28JUL94
+D6H4A  -  27JUL94
+D9I1M  -  27JUL94
+F5I6P  -  03AUG94
+F5I6P  -  04AUG94
+F7J0P  -  04AUG94
+F7J0P  -  28JUL94
+F7J1P  -  03AUG94
+F7J1P  -  28JUL94
+F8L6T  -  02AUG94
+F8L6T  -  30JUL94
+G1K9P  -  26JUL94
+G2L3T  -  30JUL94
+G4K8P  -  26JUL94
+G4K8P  -  27JUL94
+G7K8P  -  03AUG94
+G7K8P  -  28JUL94
+G8L6P  -  30JUL94
+G9L0P  -  26JUL94
+G9L0P  -  27JUL94
+G9L0P  -  28JUL94
+
+7.2.3 Temporal Resolution
+
+Measurements were made during FFC-93 and IFC-2 in 1994. LAI changes relatively 
+slowly for conifer species; hence, the values can be considered to be 
+representative of the field campaign specified. FPAR varies continuously, for a 
+given location, as a function of solar geometry because penetration is dependent 
+on the interception of incident PAR by individual crowns clumped in a nonrandom 
+fashion. Three sets of measurements for each sample site are given along with 
+time and date to provide an indication of FPAR variability. Individual runs of 
+measurements took approximately 10 minutes from first point to last plus the 
+time taken to gain access to the site from the nearest clear sky location 
+(varied from 1-10 minutes with most sites less than 5 minutes).
+
+7.3 Data Characteristics
+
+Data characteristics are defined in the companion data definition file 
+(r04laifd.def).
+
+7.4 Sample Data Record
+
+Sample data format shown in the companion data definition file (r04laifd.def).
+
+8. Data Organization
+
+8.1 Data Granularity
+
+All of the BOREAS RSS-04 1994 Southern Study Area Jack Pine LAI and FPAR Data 
+are contained in one dataset.
+
+8.2 Data Format(s)
+
+The data files contain a series of numerical and character fields of varying 
+length separated by commas.  The character fields are enclosed within single 
+apostrophe marks.  There are no spaces between the fields.  Sample data records 
+are shown in the companion data definition file (r04laifd.def).
+
+9. Data Manipulations
+
+9.1 Formulae
+
+LAI-2000 method:
+
+In calculation of LAI with the LAI-2000, the foliage density is derived by 
+measurement of the contact frequency over the azimuthal averaged zenith bin 
+represented by each viewing ring. Foliage density is calculated as:
+
+µ = 2?-ln(T(?))sin?/S(?) d?
+
+where T(?) is the probability of noninterception, ? is zenith angle, and S(?) is 
+the path length.  If there is a homogeneous cover, foliage density µ is related 
+to LAI by canopy height and path length S is dependent on canopy height and 
+zenith angle:
+
+LAI = µz and S(?) = z/cos(?)
+
+Thus, LAI can be calculated by summation of the azimuthal averaged transmission 
+over the five zenith bins:
+
+LAI = 2? -ln(T(?))sin?cos?
+
+
+For boreal forest canopies where the cover is not homogeneous (i.e., the foliage 
+distribution is not random, and a proportion of the intercepting elements are 
+not foliage), the measurement is of effective LAI (see Chen et al., 1997). To 
+derive LAI, it is necessary to adjust the effective LAI for the woody-to-total 
+area ratio and the foliage clumping both within conifer shoots and at large 
+scales. A discussion of the derivation of such correction factors is given in 
+Chen et al. (1997), with values provided for the tower flux sites.
+ 
+Ceptometer Method:
+
+The derivation of LAI from Ceptometer measurements uses the formula derived by 
+Norman (1988) to convert from PAR transmission to LAI. This approach was derived 
+from simulation results from a radiative transfer model under assumptions of a 
+spherical leaf angle distribution and random leaf positioning. It does not 
+involve gap fraction analysis and can be used with any beam fraction from clear 
+sky to overcast. Although it does not require a series of solar angles, 
+averaging across a range of solar zenith angles is recommended. The empirical 
+fit of LAI to PAR transmission is:
+
+LAI = [{fb(1-cos??s?????ln(Ei/Ea)]/(0.72-0.337fb)
+
+fb = (Ea- Ead)/Ea
+
+where fb is the beam fraction, EI is incident PAR under the canopy, Ea is 
+incident PAR above the canopy, Ead is the diffuse incident PAR, and ?s is solar 
+zenith angle.
+
+Descriptions of these and other methods of LAI estimation can be found in the 
+cited literature (Section 17.2) and a review by Welles (1990).
+
+FPAR is calculated using the following formula:
+
+FPAR = (PAR0 - PARr - (PARt - PARs ))/PAR0
+
+The subscripts 0, r, t, and s refer to the incoming PAR, PAR reflected by the 
+canopy, PAR transmitted through the canopy, and PAR reflected by the substrate, 
+respectively.  The measurements in all cases are the average of eight azimuthal 
+measurements to eliminate azimuthal bias.
+
+9.1.1 Derivation Techniques and Algorithms
+
+None given.
+
+9.2 Data Processing Sequence
+
+9.2.1 Processing Steps
+
+See Section 9.1.
+
+9.2.2 Processing Changes
+
+None.
+
+9.3 Calculations
+
+i) LAI from LAI-2000
+
+LAI was calculated using the LAI-2000 operating in one-sensor mode with one run 
+constituting 10 B measurements separated by A measurements at the start and end 
+of each run.  Linear interpolation between the A values was used to calculate A 
+values for each B measurement.  B values were rejected if the B:A ratio was 
+greater than 1 in any of the five rings.
+
+ii) LAI from Ceptometer
+
+Determined using the method of Norman (1988), a typical Ceptometer run 
+comprised: 
+
+Total incoming
+Diffuse incoming
+Canopy
+Measurement 1
+Substrate at Measurement 1
+Diffuse at Measurement 1
+Measurement 2
+Measurement 3....
+Measurement 10
+Total incoming
+Diffuse incoming
+
+Linear interpolation based on time (decimal) for Total and Diffuse incoming was 
+used to calculate incoming for each measurement.  Solar zenith angle was 
+calculated based on the time and site latitude/longitude obtained from the 
+BOREAS Auxiliary Site Guide.
+
+iii) FPAR from Ceptometer
+
+FPAR calculations used the same data set and methods as ii) to determine the 
+incoming. The canopy and substrate components were as a percentage of incoming 
+at each sample point.
+
+9.3.1 Special Corrections/Adjustments
+
+None given.
+
+9.3.2 Calculated Variables
+
+LAI, FPAR.
+
+9.4 Graphs and Plots
+
+None.
+
+10. Errors
+
+10.1 Sources of Error
+
+None given.
+
+10.2 Quality Assessment
+
+10.2.1 Data Validation by Source
+
+Checks were made prior to storage to make sure anomalous values were not stored. 
+In the case of LAI-2000, measurements were acquired only before sunrise and 
+after sunset and in the absence of significant amounts of cloud, or where the 
+cloud was fast moving. Measurements were redone if the number of invalid data 
+points (indicated by an instrument beep) was higher than 2 on a standard run. 
+These data sets were discarded.
+
+Similarly, where a single Ceptometer measurement contributing to the average was 
+unexpectedly high or low, for example in the case of diffuse measurements, where 
+the shadowing device was not completely over the instrument, the average was 
+recalculated using an additional eight samples. 
+
+10.2.2 Confidence Level/Accuracy Judgment
+
+It is difficult to draw conclusions on the subjective quality of the data; 
+however, it is clear that such estimates are only as good as the assumptions 
+made in derivation. The Chen et al. (1997) paper discusses these assumptions for 
+LAI and compares a range of instrument measurements. The cause and effects of 
+error on the representativeness of measurements varies with instrument and tree 
+species, and particularly with clumping at a range of scales. Nevertheless, the 
+estimates are consistent with alternative approaches.
+
+10.2.3 Measurement Error for Parameters
+
+Error in LAI from LAI-2000 and Ceptometer from Chen et al. (1997) varies with 
+tree species, but is in the range of 15-30%. This error is comparable but not 
+necessarily the same as for allometry.
+
+Error (n=10) in FPAR varies with the degree of clumping in a canopy but is 
+typically less than 10% for FPAR of greater than 0.7. The error increases and 
+may reach 30% where the canopy is highly variable. There is no consistent 
+pattern in error variation with solar geometry.
+
+10.2.4 Additional Quality Assessments
+
+None given.
+
+10.2.5 Data Verification by Data Center
+
+BORIS Staff reviewed the data during the data base loading process for clarity 
+and consistency.
+
+11. Notes
+
+11.1 Limitations of the Data
+
+None given.
+
+11.2 Known Problems with the Data
+
+i) LAI from LAI-2000
+
+The data set is exclusively of an incomplete conifer canopy. The assumptions in 
+translating from transmission to LAI may not strictly apply. In particular, the 
+assumption of random arrangement of needles in space is not true, which leads to 
+underestimation of LAI. An empirical correction to convert from shoot projected 
+area to needle projected area has been suggested to adjust for this effect 
+(Gower and Norman, 1990). These empirical corrections, however, have not been 
+applied to the data. Representative correction values can be found in Chen et 
+al. (1997), along with a discussion of their use.
+
+The irradiance measurement was constrained by access to an open area. In most 
+cases, this was the road. Edge effects were reduced by limiting the view azimuth 
+and standing on a raised platform; however, it is anticipated that there may 
+still be some influence caused by the reduction in representativeness of the 
+azimuth average.
+
+ii) LAI from Ceptometer
+
+The azimuth averages of incoming PAR could potentially be biased by the presence 
+of tree trunks or gaps near the sample point. Variations in averages were noted 
+by repeated sampling near the central grid point. Absolute values of PAR are not 
+given because cross comparison with the TRAC instrument (Chen et al. 1997)(RSS-
+7) revealed a consistent discrepancy of approximately 230 counts.
+
+iii) FPAR from Ceptometer
+
+All values were calculated as an average of eight azimuth measurements. In the 
+case of canopy and substrate measurements, low incoming values resulted in null 
+returns as an average. In these cases, the percentage reflectance was derived 
+from repeat measurements of the site.
+
+The canopy measurement was not derived under ideal conditions because it was not 
+possible to obtain PAR reflectance from the real canopy. Measurements of short 
+trees at the roadside were substituted. The average values were not azimuth 
+independent because of problems with the bias introduced from direct irradiance 
+incident on the Ceptometer in the antisolar direction; therefore,.canopy values 
+may not be truly representative.
+
+The average values were computed and stored by the instrument, so no record of 
+the eight values that generated the average is available.
+
+11.3 Usage Guidance
+
+None given.
+
+11.4 Other Relevant Information
+
+None.
+
+12. Application of the Data Set
+
+This data set can be used for model parameterization and to test empirical 
+relationships hypothesized between biophysical parameters and remotely sensed 
+data.
+
+13. Future Modifications and Plans
+
+None.
+
+14. Software
+
+14.1 Software Description
+
+None given.
+
+14.2 Software Access
+
+None given.
+
+15. Data Access
+
+15.1 Contact Information
+
+Ms. Beth Nelson
+BOREAS Data Manager
+NASA GSFC
+Greenbelt, MD 
+(301) 286-4005
+(301) 286-0239 (fax)
+Elizabeth.Nelson@.gsfc.nasa.gov
+
+15.2 Data Center Identification
+
+See Section 15.1.
+
+15.3 Procedures for Obtaining Data
+
+Users may place requests by telephone, electronic mail, or fax.
+
+15.4 Data Center Status/Plans
+
+The RSS-04 LAI and FPAR data are available from the Earth Observing System Data 
+and Information System (EOSDIS) Oak Ridge National Laboratory (ORNL) Distributed 
+Active Archive Center (DAAC). The BOREAS contact at ORNL is: 
+
+ORNL DAAC User Services
+Oak Ridge National Laboratory
+Oak Ridge, TN 
+(423) 241-3952
+ornldaac@ornl.gov
+ornl@eos.nasa.gov
+
+16. Output Products and Availability
+
+16.1 Tape Products
+
+None.
+
+16.2 Film Products
+
+None.
+
+16.3 Other Products
+
+The data are available as tabular American Standard Code for Information 
+Interchange (ASCII) files.
+
+17. References
+
+17.1 Platform/Sensor/Instrument/Data Processing Documentation
+
+None. 
+
+17.2 Journal Articles and Study Reports
+
+Campbell, G.S. 1986. Extinction coefficients for radiation in plant canopies 
+calculated using an ellipsoidal inclination angle distribution. Agric For 
+Meteorol 36, 317-321.
+
+Chen, J.M., P.M. Rich, S.T. Gower, J.M. Norman, and S.E. Plummer. 1997. Leaf 
+area index of boreal forests: Theory, techniques and measurements. JGR, 102 
+(D24), 29,429-29,443.
+
+Gower, S.T. and J.M. Norman. 1990. Rapid estimation of leaf area index in 
+conifer and broad-leaf plantations. Ecology, 72, 1896-1900
+
+Lang, A.R.G. 1987. Simplified estimate of leaf area index from transmittance of 
+the sun's beam. Agric. For. Meteorology, 41, 179-186.
+
+Norman, J.M. 1988. Crop canopy photosynthesis and conductance from leaf 
+measurements. Workshop prepared for LI-COR, Inc., Lincoln, NE.
+
+Norman, J. M. and G.S. Campbell. 1989. Canopy structure. In: Plant Physiological 
+Ecology: Field methods and instrumentation. (eds. R. W. Pearcy, J. Ehleringer, 
+H. A. Mooney, and P. W. Rundel). Chapman and Hall, London and New York. 301-325.
+
+North, P.R. and S.E. Plummer. 1994. Estimation of conifer bi-directional 
+reflectance using a Monte Carlo method. IGARSS'94, IEEE, Piscataway, NJ, Vol. I, 
+114-116.
+
+North, P.R. 1995.  A three-dimensional forest light interaction model using a 
+Monte-Carlo method. IEEE Trans. Geosci. and Rem. Sens., 34, 946-956.
+
+Plummer, S.E. and N. Lucas. 1993. Report of the BOREAS Intensive Field Campaign 
+1993. Remote Sensing Applications Development Unit, Report No. 93/5.
+
+Sellers, P. and F. Hall. 1994. Boreal Ecosystem-Atmosphere Study: Experiment 
+Plan.Version 1994-3.0, NASA BOREAS Report (EXPLAN 94). 
+
+Sellers, P.and F. Hall. 1996. Boreal Ecosystem-Atmosphere Study: Experiment 
+Plan.  Version 1996-2.0, NASA BOREAS Report(EXPLAN 96). 
+
+Sellers, P., F. Hall, and K.F. Huemmrich. 1996. Boreal Ecosystem-Atmosphere 
+Study: 1994 Operations. NASA BOREAS Report (OPS DOC 94). 
+
+Sellers, P., F. Hall, and K.F. Huemmrich. 1997. Boreal Ecosystem-Atmosphere 
+Study: 1996 Operations. NASA BOREAS Report (OPS DOC 96). 
+
+Sellers, P., F. Hall, H. Margolis, B. Kelly, D. Baldocchi, G. den Hartog, J. 
+Cihlar, M.G. Ryan, B. Goodison, P. Crill, K.J. Ranson, D. Lettenmaier, and D.E. 
+Wickland. 1995. The boreal ecosystem-atmosphere study (BOREAS): an overview and 
+early results from the 1994 field year. Bulletin of the American Meteorological 
+Society. 76(9):1549-1577. 
+
+Sellers, P.J., F.G. Hall, R.D. Kelly, A. Black, D. Baldocchi, J. Berry, M. Ryan, 
+K.J. Ranson, P.M. Crill, D.P. Lettenmaier, H. Margolis, J. Cihlar, J. Newcomer, 
+D. Fitzjarrald, P.G. Jarvis, S.T. Gower, D. Halliwell, D. Williams, B. Goodison, 
+D.E. Wickland, and F.E. Guertin. (1997). "BOREAS in 1997: Experiment Overview, 
+Scientific Results and Future Directions", Journal of Geophysical Research 
+(JGR), BOREAS Special Issue, 102(D24), Dec. 1997, pp. 28731-28770.  
+
+Walker, G.K., R.E. Blackshaw, and J. Dekker. 1988. Leaf area and competition for 
+light between plant species using direct transmission. Weed Technology, 2, 159-
+165.
+
+Welles, J.M. 1990. Some indirect methods of estimating canopy structure. In: 
+Instrumentation for Studying Vegetation Canopies for Remote Sensing in Optical 
+and Thermal Infrared Regions. Remote Sensing Reviews 5(1) (eds. N. S. Goel and 
+J. M. Norman). Harwood Academic Publishers, London and New  York.
+
+Welles, J.M. and J.M. Norman. 1991. Instrument for indirect measurement of 
+canopy architecture. Agronomy Journal, 83: 818-825.
+
+17.3 Archive/DBMS Usage Documentation
+
+None.
+
+18. Glossary of Terms
+
+None.
+
+19. List of Acronyms
+
+    APAR    - Absorbed Photosynthetically Active Radiation
+    ASCII   - American Standard Code for Information Interchange
+    AVIRIS  - Airborne Visible and Infrared Imaging Spectrometer
+    BNSC    - British National Space Centre
+    BOREAS  - BOReal Ecosystem-Atmosphere Study
+    BORIS   - BOREAS Information System
+    DAAC    - Distributed Active Archive Center
+    EOS     - Earth Observing System
+    EOSDIS  - EOS Data and Information System
+    FFC     - Focused Field Campaign
+    FPAR    - Fraction of absorbed Photosynthetically Active Radiation
+    GMT     - Greenwich Mean Time
+    GSFC    - Goddard Space Flight Center
+    IFC     - Intensive Field Campaign
+    IPAR    - Incident PAR
+    LAI     - Leaf Area Index
+    NAD83   - North American Datum of 1983
+    NASA    - National Aeronautics and Space Administration
+    NSA     - Northern Study Area
+    OBS     - Old Black Spruce
+    OJP     - Old Jack Pine
+    ORNL    - Oak Ridge National Laboratory
+    PANP    - Prince Albert National Park
+    PAR     - Photosynthetically Active Radiation
+    PI      - Principal Investigator
+    RSADU   - Remote Sensing Applications Development Unit
+    RSS     - Remote Sensing Science
+    SSA     - Southern Study Area
+    TE      - Terrestrial Ecology
+    TRAC    - Tracing Radiation and Architectre of Canopies
+    URL     - Uniform Resource Locator
+    UTM     - Universal Transverse Mercator
+    YA      - Young Aspen
+    YJP     - Young Jack Pine
+
+20. Document Information
+
+20.1 Document Revision Dates
+ 
+     Written:         02-Aug-1995
+     Last Updated:    05-Aug-1998
+
+20.2 Document Review Dates
+
+     BORIS Review:    00-Aug-1998
+     Science Review:  03-Aug-1998
+
+20.3 Document ID
+
+20.4 Citation
+
+LAI-2000 and Ceptometer data were gathered by Dr. Stephen Plummer (British 
+National Space Centre/Remote Sensing Applications Development Unit) and Mr. Neil 
+Lucas (University College of Swansea). 
+
+20.5 Document Curator
+
+20.6 Document URL
+
+
+Keywords:
+
+LAI
+FPAR
+Ceptometer
+Jack Pine
+
+RSS04_LAI_FPAR.doc
+08/20/98

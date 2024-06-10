@@ -1,0 +1,225 @@
+hi Vladimir,
+             I'm getting back to you regards what I've found out about
+the SyncLite detector and its status. I also want to report on progress
+with the questions you had on the system at the last meeting on monday.
+I talked with Alan Hahn and Chuck Brown, also Alan showed me around the
+C0 service building so I could see the MAC where the code is run and
+where the relevant electronics are situated. 
+             I know that Chuck called you and Alan sent you a couple of
+pictures that we took of the MAC screen display.
+              Any errors in my report below are all mine but I hope Alan 
+and Chuck will point out any they find to me. This also serves as my
+report to Joel who asked me to find out about the system and how we
+could help. (So excuse the extra description of the system that you
+may not need.)
+             I should first say that Chuck and Dale Miller already did
+a great job in putting the system back together after the break in 1995/96. 
+I think the system of pipes and mirrors were stored on Alan's desk and
+the cables were all ripped out when the new C0 hall was built. Dale
+put the all the cables back and set up everything with Chuck and with
+help from Alan. The system appears to be working and Chuck has data from 
+the system since September and has plots he could show you. I'll list below
+how the current system is at present different from the way it was operated
+before and the list of things that I think we could do or help in doing.
+
+Description:
+------------
+              The SyncLite system measures the x and y profiles of the
+p and pbar beam by measuring the synchrotron light emitted at the edge of
+a tevatron dipole magnet. There seems to be only one region (C11) where
+this instrumentation can reasonably sit. The light emitted by the protons 
+at the upstream end of the dipole is deflected about 2.5cm from the beam 
+at the downstream end. Since the beam sigma is about 0.5mm the light can be
+picked off with a mirror (aluminized flat). Light from the pbar beam from
+a neighbouring(?) dipole is picked off by a separate mirror near the same 
+region. Via an array of mirrors the light from the p and pbar
+are detected in two separate telescopes. The detection is achieved with a
+photocathode, a microchannel plate (MCP) intensifier followed by a
+phosphor screen and a CID camera. The camera runs at 30 Hz and thus
+integrates over about 30ms(?). The video signal is sent to a MAC with a
+video frame grabber that acts as an 8-bit ADC for each xy channel.
+(Alan has some writeups with much more details which I can copy for Joel.)
+               The x and y projections of the beam profiles are (usually)
+well fit to a Gaussian with a linear background and results reported are
+based on this fit. If the profile is not circular (i.e. an ellipse), then
+one can perform the 2D fit and get the tilt (if any) of the ellipse
+relative to the x (or y?) axis.
+               The system sends an array of numbers to the control room
+which include for all 36 bunches and both the p and pbar, the (x,y) 
+positions and sigma. [See below as to what is actually sent right now.]
+
+
+Status (as I understand it) and my comments:
+--------------------------------------------
+               The instrument was installed by Dale and Chuck with help
+from Alan. The internal alignment of the telescope was not changed and
+should be correct as it was safely stored. Usually the pick off mirrors
+are remotely driven in until one sees light and it plateaus. I believe
+this was correctly done by Dale and Chuck. Alan and I checked the image
+of the pbar(?) camera and the beam spot is clearly well within the camera 
+view. [?One see's a spot and not a line as the photocathode is blue
+sensitive and so only picks up the light where the p or pbar crosses the
+edge of the magnetic field, the more continuous synchrotron light is in
+the infrared region.]
+               The gain was set by Dale and Chuck to be "low". This is
+because the system is run in ungated mode. The gain is set so that
+one is in a good range for the 8-bit ADC. The photocathode is gateable
+(down to 5ns) so one can look at individual bunches but is presently
+always on (i.e. not gated.) The MCP is at about 450V which seems to be 
+normal. The phosphor screen is at about 4000V whereas Alan seems to 
+prefer about 6000-7000V.
+                The SyncLite program is running correctly and taking
+data since September. It is on an old PowerPC MAC running MAC OS 8 (?)
+and Labview 4 with the internet(WEB) option installed. When we were down 
+there only the x and y projection profiles were being fit. The tilt/ellipse 
+fit was not on - this fit slows the machine down. I assume this was
+normal. From looking at some of the xy profiles it looked like the
+beam was not round most of the time but close to it sometimes(?).
+
+
+Vladimir's questions and what we need to do to answer them:
+---------------------------------------------------------
+
+1) Beam sizes (rms) bunch-by-bunch and for p and pbar
+        We need to set up the timings to get sizes of individual bunches,
+        Getting the timings of the bunches is apparently straightforward,
+        however we would need to readjust the gain settings. When
+        in gated mode, the size of the signal is determined by the number
+        of gates the camera integrates over in the 30ms.
+
+2) positions (avg. +rms over N sec.)
+        This should be straightforward once the timing for 1) is done
+
+3) tilt
+        One can just turn on the 2D fit to get the elliptical fit which
+        gives the tilt angle (only meaningful is the profile is not
+        circular.) Could do this now, but the profile is an average over
+        30ms so for all bunches and any DC beam.
+
+4) emittances (output from SBD to hor-e and vert)
+        If I understand this checkly one just needs to ensure that the
+        correct formula is used in SyncLite to calculate the emmittances
+        from the position measurements. Alan has the formulas and it is
+        in the program, so it would have to be checked if this is now different
+        from before. Alan also has input from the SBD into SyncLite but
+        it seemed like it was just the intensity and I'm not sure if this
+        is what is asked for?        
+
+5) diffractive limit
+         The diffraction limit (resolution of size of beam) is supposed to
+         be about 0.2 mm (smaller in y I think) and was measured last time
+         and is hardwired into the SyncLite code. To get the sigma of the
+         beam profile, this resolution is subtracted from the fitted
+         Gaussian sigma in quadrature. We could remeasure the diffraction
+         limit by scraping the beam again.
+
+6) position effect
+         Not sure what this refers to. If the beam moves around the SyncLite
+         system automatically can account for it if the move is gradual. The
+         detection region is very large so the beam should be easily in the
+         camera view. The fit region is much smaller and the software tries
+         to adjust the fit range based on the last position. So if the beam
+         moves and its slow then it should be ok. 
+             The other item is the pick off mirror. If the beam moves one
+         should still see the beam within a reasonable range - I don't know
+         what that range is. It depends on how far into the plateau they
+         drove the mirror when they first set it up. Maybe Chuck or Dale
+         could answer this.
+
+7) Dynamic range: intrabunch beam and tails
+          The concern here seemed to be if we could detect DC beam which is
+         maybe between bunches at 1/1000 of the intensity. The dynamic range is
+         huge as the gain can be set by the voltages to the MCP and to the
+         phosphor screen. Then the video frame grabber can also apply gain.
+         However all these are not linear probably so when in gated mode
+         Alan prefers to set the gain by choosing the number of gates
+         the photocathode receives. This makes normalization much easier.
+         In fact in gated mode, the MCP and phosphor screen is set at some
+         "optimal range" for best resolution(?) and the number of gates
+         chosen to get about 200 ADC counts. If the intensity changes the
+         SyncLite program automatically changes the number of gates so that
+         it gets about 200 ADC counts.
+             When we've done 1) we can see how many gates one uses for
+         the bunches and then can see if we can increase this by say 1000
+         for inbetween bunches. Alan thinks we can add this feature
+         just by defining an additional fake bunch 37(? he said 39) that
+         is timed between two particular bunches.
+
+8) Source of noise in readings
+         I gather from Chuck that this is to do with the scatter of
+         points they see in the SyncLite data plotted vs time. Most of
+         this is believed to be statistical - except of course the actual
+         trends like the steady increase of the emittance over the store. 
+         One could make a statistical
+         test of this. Also one just has the average positions and sizes
+         so some of this could be due to differences in bunches, etc.
+           Background is fitted for in the SyncLite program, however it
+         currently thinks the efficiency is uniform across the image
+         intensifier and camera screens. This is known to be not true but
+         is probably not far off when a smaller area is sampled (e.g. the
+         fit region.) The SyncLite has a lamp that is turned on automatically
+         when there is no beam so the detection surface can be calibrated
+         regularly. This is not yet used. Also Alan was concerned that since
+         the system is not gated the light is falling on the same region
+         of the image intensifier and camera so that this region may be losing
+         efficiency.
+             
+
+What I think we should do next:
+-------------------------------
+
+a) Set up timings and gain and run in gated mode
+
+b) Some logical tests. E.g. a very very long time ago the image on the MAC
+   was rotated by 90 degrees. Alan fixed this by rotating the camera.
+   He thinks the mountings of the two cameras are such that this should
+   not be a problem. Since everything had to be put back together again
+   we should check this anyway by say shifting the beam horizonally (or vert.)
+   if this was not checked already. Other checks like getting the
+   diffraction limit, etc. might want to wait for c)?
+
+c) Once things are again stable, try moving to a different region of the
+   the camera/image intensifier. Since the current position may have
+   low efficiency. This can be done remotely. One would want to turn
+   on the calibration lamp system too but I'm not sure if this can be
+   done remotely(?)
+
+d) maybe before c and b, get the information from SyncLite to be able to
+   be accessed remotely. Options are: via camera (used to be a
+   TV channel); via Timbuktoo(?), Alan used to have this so he could look
+   at things in his office etc.; via WEB - Alan thought it might be
+   easiest to upgrade to Labview 5 or 6 that have web tools built in.
+   However I'm concerned about screwing something up as it might then
+   need a new O/S etc. I'm not sure if we should have another MAC to play
+   with if we want to go this route. It would be nice to be able to send
+   the data to another machine so offline analysis could be done and
+   put onto a web server, so the information could be displayed this way.
+
+       Alan and I took a couple of screen dumps while we were there of
+the p and pbar fits. You can find these at:
+
+http://home.fnal.gov/~cheung/Public/synclite/proton.jpeg
+http://home.fnal.gov/~cheung/Public/synclite/pbar.jpeg
+
+note that the ellipse fit was not turned on so please ignore the tilt
+angle, etc. on these plots.
+
+
+        So we should meet again to discuss what we should do next and when.
+Joel's back on monday and will probably have input to the schedule for this
+work.
+              Harry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

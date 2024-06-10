@@ -1,0 +1,102 @@
+<html><!-- InstanceBegin template="/Templates/main-template.dwt.asp" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Morphological Parameters</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<table width="100%" border="0">
+  <tr>
+    <td><div align="left"><a href="../contents.htm"> Contents</a> || <a href="../index.htm">Index</a> 
+      </div></td>
+    <td><div align="right">
+        <!-- #BeginDate format:Am3 -->05/13/2008<!-- #EndDate -->
+      </div></td>
+  </tr>
+</table>
+<!-- InstanceBeginEditable name="EditRegion-main" --> 
+<p><a href="../blob/blob-tool-new.htm">Blob Tool</a> | <a href="../blob/stats-list.htm">Blot 
+  Stats</a></p>
+<div align="center"> 
+  <p><strong><font size="+1">Morphological Parameters for Particles - Illustrations</font></strong></p>
+  <p align="left">These are some morphological parameters (statistics or <a href="../blob/stats-list.htm">'stats'</a>) 
+    that Lispix can calculate and display.</p>
+  <p align="left">Some of these parameters, such as length and width, are basic, 
+    exact, well defined, and determined directly <a href="../blob/convex-hull.htm">from 
+    the convex hull,</a> which is quickly calculated from the particle boundary.</p>
+</div>
+<ul>
+  <li> 
+    <div align="left">Length (maximum caliper diameter, or maximum Feret diameter 
+      &#8211; for all orientations).</div>
+  </li>
+  <li> 
+    <div align="left">Width (minimum caliper diameter, or minimum Feret diameter 
+      &#8211; for all orientations).</div>
+  </li>
+  <li> 
+    <div align="left">Minimum inscribed circle (another useful width measurement, 
+      the maximum of the Euclidian Distance Map).</div>
+  </li>
+  <li> 
+    <div align="left">Bounding Rectangle (dependent on orientation, so not as 
+      useful.)<br>
+    </div>
+  </li>
+</ul>
+<hr>
+<h3 align="center"><a name="convexhull"></a>Convex hull and Maximum Inscribed 
+  Circle </h3>
+<p align="left">To display using the Blob Tool:&nbsp; <strong>draw / convex hulls</strong></p>
+<p align="center"><img src="im/morph-param-01/convex-hull.gif" width="336" height="281"></p>
+<p align="left">The <strong>Convex Hull, green</strong>, is calculated from the 
+  particle outline using a fast and exact algorithm1.<br>
+  <strong>Maximum Inscribed Circle, red</strong>,calculated from maximum of the 
+  Euclidian Distance Map2 of the mask.</p>
+<p align="left">Bounding rectangle, yellow.&nbsp; The bounding rectangle, yellow, 
+  is calculated from the particle outline.<br>
+  Note that it depends on the particle orientation.<br>
+</p>
+<p align="left"><a href="../references/convex-hull-refs.htm">Convex Hull references</a> 
+  and algorithms.</p>
+<hr>
+<h3 align="center"><a name="maxcaldiameter"></a>Maximum Caliper Diameter</h3>
+<p align="left">To display using the Blob Tool:&nbsp; <strong>draw / maximum caliper 
+  diameters.</strong></p>
+<p align="center"><img src="im/morph-param-01/max-cal-diam.gif" width="335" height="280"></p>
+<p align="left">Particle length (maximum caliper diameter) is the distance between 
+  the most separated points of the convex hull, and thus of the outline.</p>
+<p align="left"><a href="../image-enhancement/ss-from-blobs-1-new.htm#slide11">Max. 
+  caliper diameters for smaller particles.</a><br>
+</p>
+<hr>
+<p align="center"><a name="mincaldiameter"></a>Minimum Caliper Diameter</p>
+<p align="left">To display using the Blob Tool:&nbsp; <strong>draw / minimumcaliper 
+  diameters.</strong></p>
+<p align="center"><img src="im/morph-param-01/min-cal-diam.gif" width="334" height="281"></p>
+<p align="left">Particle width (minimum caliper diameter), yellow line, is calculated 
+  using the convex hull3,4. This is the minimum separation, for any particle orientation, 
+  for parallel lines that just touch each side of the particle. </p>
+<p align="left">The line of support, tan line, a segment of the convex hull, is 
+  one of the parallel lines, i.e., one of the &#8216;sides&#8217; of the &#8216;caliper&#8217;</p>
+<hr>
+<h3 align="center">References</h3>
+<p align="left">&nbsp;</p>
+<ol>
+  <li>Melkman, A.A., &#8220;Online Construction of the Convex-Hull of a simple 
+    Polyline&#8221;, Information Processing Letters 25 (1987) 11-12. </li>
+  <li>P. E. Danielsson, Comp. Graph Image Proc 14 (1980) 227-248. </li>
+  <li>Preparata, F.P. and Shamos, M.I., COMPUTATIONAL GEOMETRY, An Introduction. 
+    Springer-Verlag, N.Y., 1985, p. 174.</li>
+  <li> Hormoz Prizadeh, Rotating Calipers,<a href="../lx-exit-page.htm#Prizadeh"> 
+    http://cgm.cs.mcgill.ca/~orm/width.html</a><br>
+    <br align="left">
+  </li>
+</ol>
+<!-- InstanceEndEditable --> 
+</body>
+<!-- InstanceEnd --></html>

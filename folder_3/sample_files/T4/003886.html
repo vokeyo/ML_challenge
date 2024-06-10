@@ -1,0 +1,465 @@
+<html>
+<head>
+	<title>Origins: Library</title>
+   <META  NAME="keywords"  CONTENT="Origins, library, documents, roadmap, timeline, tutorial">
+   <META  NAME="description" CONTENT="The Origins library contains the Origins Roadmap and other documents such as timelines and tutorials.">
+
+	<!-- Using a linked stylesheet -->
+   <LINK rel="STYLESHEET" type="text/css" href="../../main.css">
+
+   <style type="text/css">
+      @import url( "../../main.css" );
+
+    /* CoolMenus 4 - default styles - do not edit */
+     .clCMAbs{position:absolute; visibility:hidden; left:0; top:0}
+    /* CoolMenus 4 - default styles - end */
+  </style>
+  
+<!--- Last Modified Script--->
+  <script language="JavaScript" src="../../lastMod.js"></script>
+
+<!--- Popup window--->          
+  <script language="JavaScript">
+   <!-- Hide from older browsers
+   		function pop_up(mission_url) {
+   			leftPos = screen.width-650;
+   			iWindow=window.open(mission_url,'Info_Window','width=640,height=480,left='+leftPos+',top=0,scrollbars=yes,resizable=yes,menubar=yes');
+   			iWindow.focus();
+   		}
+   // Unhide -->
+   </script>
+  
+<script language="JavaScript1.2" src="../../coolmenus4.js">
+/*****************************************************************************
+Copyright (c) 2001 Thomas Brattli (webmaster@dhtmlcentral.com)
+
+DHTML coolMenus - Get it at coolmenus.dhtmlcentral.com
+Version 4.0_beta
+This script can be used freely as long as all copyright messages are
+intact.
+
+Extra info - Coolmenus reference/help - Extra links to help files **** 
+CSS help: http://192.168.1.31/projects/coolmenus/reference.asp?m=37
+General: http://coolmenus.dhtmlcentral.com/reference.asp?m=35
+Menu properties: http://coolmenus.dhtmlcentral.com/properties.asp?m=47
+Level properties: http://coolmenus.dhtmlcentral.com/properties.asp?m=48
+Background bar properties: http://coolmenus.dhtmlcentral.com/properties.asp?m=49
+Item properties: http://coolmenus.dhtmlcentral.com/properties.asp?m=50
+******************************************************************************/
+</script>
+</head>
+<BODY bgcolor="#000000" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
+
+<script>
+oCMenu=new makeCM("oCMenu") //Making the menu object. Argument: menuname
+
+//Menu properties   
+oCMenu.pxBetween=0
+oCMenu.fromLeft=0
+oCMenu.fromTop=148
+oCMenu.rows=0 
+oCMenu.menuPlacement="left"                                                             
+oCMenu.offlineRoot="file:///Macintosh%20HD/%20Projects/%20origins/%20origins-03/" 
+//oCMenu.onlineRoot="/devel/origins/" 
+oCMenu.onlineRoot="/" 
+oCMenu.resizeCheck=1 
+oCMenu.wait=500 
+oCMenu.fillImg="images/cm_fill.gif"
+oCMenu.zIndex=0
+
+//Background bar properties
+oCMenu.useBar=0
+oCMenu.barWidth="menu"
+oCMenu.barHeight="menu" 
+oCMenu.barClass="clBar"
+oCMenu.barX="menu"
+oCMenu.barY="menu"
+oCMenu.barBorderX=0
+oCMenu.barBorderY=0
+oCMenu.barBorderClass=""
+
+//Level properties - ALL properties have to be specified in level 0
+oCMenu.level[0]=new cm_makeLevel() //Add this for each new level
+oCMenu.level[0].width=218
+oCMenu.level[0].height=25 
+oCMenu.level[0].regClass="clLevel0"
+oCMenu.level[0].overClass="clLevel0over"
+oCMenu.level[0].borderX=0
+oCMenu.level[0].borderY=0
+oCMenu.level[0].borderClass="clLevel0border"
+oCMenu.level[0].offsetX=0
+oCMenu.level[0].offsetY=0
+oCMenu.level[0].rows=0
+oCMenu.level[0].align="right"
+
+//EXAMPLE SUB LEVEL[1] PROPERTIES - You have to specify the properties you want different from LEVEL[0] - If you want all items to look the same just remove this
+oCMenu.level[1]=new cm_makeLevel() //Add this for each new level (adding one to the number)
+oCMenu.level[1].width=235
+oCMenu.level[1].height=50
+oCMenu.level[1].regClass="clLevel1"
+oCMenu.level[1].overClass="clLevel1over"
+oCMenu.level[1].borderX=1
+oCMenu.level[1].borderY=1
+oCMenu.level[1].align="left" 
+oCMenu.level[1].offsetX=0
+oCMenu.level[1].offsetY=0
+oCMenu.level[1].arrow="images/menu_arrow.gif"
+oCMenu.level[1].arrowWidth=9
+oCMenu.level[1].arrowHeight=9
+oCMenu.level[1].borderClass="clLevel1border"
+oCMenu.level[1].align="right" 
+
+
+
+//EXAMPLE SUB LEVEL[2] PROPERTIES - You have to specify the properties you want different from LEVEL[1] OR LEVEL[0] - If you want all items to look the same just remove this
+oCMenu.level[2]=new cm_makeLevel() //Add this for each new level (adding one to the number)
+oCMenu.level[2].width=220
+oCMenu.level[2].height=30
+oCMenu.level[2].borderX=1
+oCMenu.level[2].borderY=1
+oCMenu.level[2].offsetX=0
+oCMenu.level[2].offsetY=0
+oCMenu.level[2].regClass="clLevel2"
+oCMenu.level[2].overClass="clLevel2over"
+oCMenu.level[2].borderClass="clLevel2border"
+
+oCMenu.makeMenu('top10','','&nbsp;Home','index.html','','218','31','images/nav-home-off.gif','images/nav-home-on.gif')
+oCMenu.makeMenu('top0','','&nbsp;About Origins','about/index.html','','218','31','images/nav-about-off.gif','images/nav-about-on.gif')
+	
+oCMenu.makeMenu('top1','','&nbsp;Emerging Modern Universe','universe/index.html','','218','30','images/nav-modern-universe-off.gif','images/nav-modern-universe-on.gif')
+	oCMenu.makeMenu('sub10','top1','How did the first cosmic web of<BR>matter organize into the first stars<BR>and galaxies?','universe/ra1.html')
+	     oCMenu.makeMenu('sub100','sub10','Pristine gas, the first stars, and the <BR> first heavy elements','universe/invest01.html')
+	     oCMenu.makeMenu('sub101','sub10','Black holes and structure in the early<BR> universe','universe/invest02.html')
+	     oCMenu.makeMenu('sub102','sub10','Formation and evolution of galaxies','universe/invest03.html')
+	oCMenu.makeMenu('sub11','top1','How do different galactic ecosystems<BR> (of stars and gas) form and which can <BR>lead to planets and living organisms?','universe/ra2.html')
+	     oCMenu.makeMenu('sub110','sub11','Lifecycle of stars in the Milky Way and<BR> other galaxies','universe/invest04.html')
+	     oCMenu.makeMenu('sub111','sub11','Habitats for life in the Milky Way and<BR> other galaxies','universe/invest05.html')
+	
+oCMenu.makeMenu('top2','','&nbsp;Stars and Planets','stars-planets/index.html','','218','30','images/nav-stars-off.gif','images/nav-stars-on.gif')
+	oCMenu.makeMenu('sub20','top2','How do gas and dust become stars<BR>and planets?','stars-planets/ra3.html','','235','35')
+	     oCMenu.makeMenu('sub200','sub20','Molecular clouds as cradles for star<BR> and planet formation','stars-planets/invest06.html')
+	     oCMenu.makeMenu('sub201','sub20','Emergence of stellar systems','stars-planets/invest07.html')
+	     oCMenu.makeMenu('sub202','sub20','Evolution of protoplanetary dust and<BR> gas disks into planetary systems','stars-planets/invest08.html')
+	oCMenu.makeMenu('sub21','top2','Are there planetary systems around<BR> other stars and how do their<BR> architectures and evolution compare<BR> with our own solar system?','stars-planets/ra4.html','','235','60')
+	     oCMenu.makeMenu('sub210','sub21','Evidence of planets in disks around<BR> young stars','stars-planets/invest09.html')
+	     oCMenu.makeMenu('sub211','sub21','Census of planetary systems around<BR> stars of all ages','stars-planets/invest10.html')
+
+oCMenu.makeMenu('top3','','&nbsp;Habitable Planets and Life','habitable-planets/index.html','','218','30','images/nav-planets-off.gif','images/nav-planets-on.gif')
+	oCMenu.makeMenu('sub30','top3','What are the properties of giant<BR>planets orbiting other stars?','habitable-planets/ra5.html','','235','35')
+	     oCMenu.makeMenu('sub300','sub30','Chemical and physical properties of<BR> giant extrasolar planets','habitable-planets/invest11.html')
+	     oCMenu.makeMenu('sub301','sub30','Detect giant planets by direct imaging,<BR> and study their properties','habitable-planets/invest12.html')
+	oCMenu.makeMenu('sub31','top3','How common are terrestrial planets?<BR>What are their properties?<BR>Which of them might be habitable?','habitable-planets/ra6.html')
+	     oCMenu.makeMenu('sub310','sub31','Which nearby stars host terrestrial<BR> planets that might be suitable for life?','habitable-planets/invest13.html','','235','35')
+	     oCMenu.makeMenu('sub311','sub31','Atmospheric compositions of terrestrial<br> planets orbiting nearby stars','habitable-planets/invest14.html','','235','35')
+	oCMenu.makeMenu('sub32','top3','Is there life on planets outside the<BR>solar system?','habitable-planets/ra7.html','','235','35')
+	     oCMenu.makeMenu('sub320','sub32','Optimal biosignatures for life on<BR> other worlds','habitable-planets/invest15.html')
+	     oCMenu.makeMenu('sub321','sub32','Evidence for life on planets orbiting<BR>nearby stars','habitable-planets/invest16.html')     
+
+oCMenu.makeMenu('top4','','&nbsp;Missions','missions/index.html','','218','30','images/nav-missions-off.gif','images/nav-missions-on.gif')
+	oCMenu.makeMenu('sub40','top4','Operational','missions/missions.html#operational','','150','25')
+		oCMenu.makeMenu('sub400','sub40','HST','http://www.hubblesite.org','','120','25')
+		oCMenu.makeMenu('sub401','sub40','FUSE','http://fuse.pha.jhu.edu/','','120','25')
+		oCMenu.makeMenu('sub402','sub40','Spitzer','http://www.spitzer.caltech.edu/','','120','25')
+	oCMenu.makeMenu('sub41','top4','Ground Observatories','missions/missions.html#ground','','150','25')
+		oCMenu.makeMenu('sub410','sub41','Keck Interferometer','http://planetquest.jpl.nasa.gov/Keck/keck_index.html','','120','25')
+		oCMenu.makeMenu('sub411','sub41','LBTI','http://planetquest.jpl.nasa.gov/lbti/lbti_index.html','','120','25')
+	oCMenu.makeMenu('sub42','top4','2005','missions/missions.html#2005','','150','25')
+		
+		oCMenu.makeMenu('sub421','sub42','SOFIA','http://sofia.arc.nasa.gov/','','120','25')
+	oCMenu.makeMenu('sub43','top4','2005 - 2010','missions/missions.html#2010','','150','25')
+		oCMenu.makeMenu('sub431','sub43','Kepler','http://planetquest.jpl.nasa.gov/Kepler/kepler_index.html','','120','25')
+		oCMenu.makeMenu('sub432','sub43','SIM','http://planetquest.jpl.nasa.gov/SIM/sim_index.html','','120','25')	
+	oCMenu.makeMenu('sub44','top4','2010 - 2015','missions/missions.html#2015','','150','25')
+		oCMenu.makeMenu('sub440','sub44','TPF','http://planetquest.jpl.nasa.gov/TPF/tpf_index.html','','120','25')
+      oCMenu.makeMenu('sub441','sub44','JWST','http://www.jwst.nasa.gov/','','120','25')
+	oCMenu.makeMenu('sub45','top4','2015 - 2020','missions/missions.html#2020','','150','25')
+		oCMenu.makeMenu('sub450','sub45','SAFIR','http://safir.jpl.nasa.gov/','','120','25')
+		oCMenu.makeMenu('sub451','sub45','Large UV/Optical<BR> Telescope','missions/missions.html#luv','','120','30')
+	oCMenu.makeMenu('sub46','top4','Beyond 2020','missions/missions.html#beyond','','150','25')
+		oCMenu.makeMenu('sub460','sub46','Life Finder','missions/missions.html#lf','','120','25')
+		oCMenu.makeMenu('sub461','sub46','Planetary Imager','missions/missions.html#pi','','120','25')	
+		
+oCMenu.makeMenu('top5','','&nbsp;Technology','technology/index.html','','218','30','images/nav-technology-off.gif','images/nav-technology-on.gif')
+oCMenu.makeMenu('top6','','&nbsp;Education','education/index.html','','218','30','images/nav-education-off.gif','images/nav-education-on.gif')
+oCMenu.makeMenu('top7','','&nbsp;Organization','organization/index.html','','218','30','images/nav-organization-off.gif','images/nav-organization-on.gif')
+oCMenu.makeMenu('top8','','&nbsp;Library','library/index.html','','218','30','images/nav-library-sel.gif','images/nav-library-on.gif')
+oCMenu.makeMenu('top9','','&nbsp;News','news/index.html','','218','29','images/nav-news-off.gif','images/nav-news-on.gif')
+		
+//Leave this line
+//oCMenu.construct()			
+if(!(bw.ie5&&bw.mac)) oCMenu.construct()				
+</script>
+
+<!-- NASA header -->
+<table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+      <td bgcolor="#CCCCCC" valign="top"><A HREF="../../alt-nav.html"><img src="../../images/spacer-grey.gif" width="1" height="1" alt="Link to alternate site navigation" border="0"></a></td>
+      <td width="397" bgcolor="#CCCCCC" align="left"><a href="http://www.nasa.gov/"><img src="../../images/head_nasa.gif" width="271" height="60" alt="NASA - National Aeronautics and Space Administration" border="0"></a></td>
+      <td width="193" bgcolor="#CCCCCC"><img src="../../images/spacer.gif" width="193" height="1" alt="" border="0"></td>
+      <td  width="1" bgcolor="#CCCCCC"><img src="../../images/head_separator.gif" width="1" height="42" alt="" border="0"></td>
+      <td width="159" bgcolor="#CCCCCC">
+         <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+               <td><img src="../../images/spacer.gif" width="18" height="1" alt="" border="0"></td>
+               <td class="header">
+                  <a href="http://www.nasa.gov/" class="header">+ NASA Homepage</a><br>
+                  <a href="http://www.nasa.gov/about/highlights/En_Espanol.html" class="header">+ NASA en Espa&ntilde;ol</a><br>
+                  <a href="http://www.nasa.gov/about/contact/index.html" class="header">+ Contact NASA</a>
+               </td>
+            </tr>
+         </table>
+      </td>      
+   </tr>
+</table>
+ 
+<!--- Origins banner--->
+<TABLE WIDTH="750" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+<TR>
+  <TD><A HREF="../../alt-nav.html"><IMG SRC="../../images/l1-link-to-alt-nav.gif" ALT="Link to alternate site navigation" WIDTH="218" HEIGHT="1" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+  <TD ROWSPAN="2"><IMG SRC="../../images/l1-title-graphics.jpg" ALT="Origins" WIDTH="466" HEIGHT="69" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+  <TD ROWSPAN="2"><IMG SRC="../../images/l1-nonasa-logo.gif" ALT="Origins" WIDTH="66" HEIGHT="69" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../index.html"><IMG SRC="../../images/l1-origins-title.jpg" ALT="Origins" WIDTH="218" HEIGHT="68" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+</TR>     
+<TR>
+   <TD COLSPAN="3"><IMG SRC="../../images/l2-seperator-top.gif" ALT="" WIDTH="750" HEIGHT="19" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="750" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+<TR>
+  <TD VALIGN="TOP">
+   <TABLE  WIDTH="218" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+    <TR>
+       <TD VALIGN="TOP"><IMG SRC="../../images/blank-space.gif" ALT="" WIDTH="218" HEIGHT="331" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+    </TR>
+    <TR>
+      <TD VALIGN="top">
+	    <TABLE WIDTH="218" HEIGHT="26" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+	      <TR>
+	        <TD VALIGN="TOP"><IMG SRC="../../images/l1-search-text.gif" ALT="Search" WIDTH="75" HEIGHT="26" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+	        <FORM NAME="SearchForm" METHOD="get" ACTION="/search/search.pl">
+	            <TD VALIGN="TOP" WIDTH="143"  HEIGHT="26" BGCOLOR="#3D234A"> 
+				<INPUT TYPE="HIDDEN" NAME="Range" VALUE="All">
+				<INPUT TYPE="HIDDEN" NAME="Format" VALUE="Standard">
+				<INPUT TYPE="text" NAME="Terms" SIZE="10" MAXLENGTH="800" VALUE="">
+	           <INPUT TYPE="image" SRC="../../images/l1-search-arrow.gif" NAME="Submit" VALUE="Go!" BORDER="0" ALIGN="absmiddle">
+	           <SCRIPT LANGUAGE="JavaScript">
+	           <!-- Script Hiding...
+	             document.SearchForm.Terms.focus();
+	           // End Hiding -->
+	           </SCRIPT>   
+	         </TD>              
+	         </FORM>
+	      </TR>
+	    </TABLE>
+      </TD>
+    </TR>
+   </TABLE>
+  </TD>       
+  <TD VALIGN="TOP">
+  <TABLE WIDTH="532" CELLPADDING="0" CELLSPACING="0" BORDER="0" BGCOLOR="#FFFFFF">
+    <TR>
+       <TD COLSPAN="3"><A HREF="../index.html"><IMG SRC="../images/title-library.jpg" ALT="Library" WIDTH="532" HEIGHT="59" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+    </TR>
+    <TR>
+       <TD><IMG SRC="../../images/blank-space.gif" ALT="" WIDTH="10" HEIGHT="1" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+       <TD>
+       <!-- Begin Main Content -->
+   
+       <IMG SRC="../../images/blank-space.gif" ALT="" WIDTH="512" HEIGHT="8" HSPACE="0" VSPACE="0" BORDER="0"></TD>
+       <TD><IMG SRC="../../images/blank-space.gif" ALT="" WIDTH="10" HEIGHT="1" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+     </TR>
+     <TR>  
+       <TD><IMG SRC="../../images/blank-space.gif" ALT="" WIDTH="10" HEIGHT="1" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+       <TD class="body-text">
+         <IMG SRC="../../images/blank-space.gif" ALT="" WIDTH="512" HEIGHT="8" HSPACE="0" VSPACE="0" BORDER="0"><br>
+
+
+<!-- Content Begin -->
+                   
+
+      <TABLE WIDTH="465" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+        <TR>
+          <TD>
+			<br>
+			<a href="../news-cats.html#story">
+            <IMG SRC="../images/title-story.gif" ALT="Story of the Universe" ALIGN=LEFT WIDTH="400" HEIGHT="50" BORDER="0" HSPACE="0" VSPACE="0"></a>
+           </TD>
+        </TR>
+        <TR>
+          <TD class="body-text">
+            <P>
+						<BR>
+						<BR>
+						<a href="images/030800-a-01.jpg">
+            <IMG SRC="images/030800-a-01.gif" ALIGN=LEFT width="110" height="110" BORDER="0" HSPACE="10" VSPACE="0"></a>
+
+            <B>HUBBLE SURVEYS DYING SUNS IN NEARBY GALAXY<BR>
+						<br>08-Mar-2000</B>
+
+            <P>
+           		Article courtesy of 
+							NASA and Hubble Heritage Team
+<p>
+
+            From ground-based telescopes, the glowing gaseous debris surrounding
+dying, sun-like stars in a nearby galaxy, called the Large Magellanic
+Cloud, appear as small, shapeless dots of light. But through the
+"eyes" of NASA's Hubble Space Telescope, these bright dots take on
+a variety of shapes, from round- to pinwheel-shaped clouds of gas.
+<P>
+Using Hubble's Space Telescope Imaging Spectrograph, scientists
+probed the glowing gas surrounding 27 dying suns, called planetary
+nebulae, in the Large Magellanic Cloud. The observations represent
+the most detailed study of planetary nebulae outside the Milky Way.
+<P>
+The six objects in the picture illustrate the assortment of planetary
+nebulae identified in the galaxy. SMP 16, 30, and 93 are examples of
+a bipolar nebula, twin lobes of gas projecting away from a dying star.
+SMP 10 has a pinwheel shape and is known as a "point-symmetric" nebula.
+SMP 4 has an elliptical appearance, and SMP 27, consisting of four
+lobes of gas, is called a "quadrupolar" nebula. The lines point to the
+objects' locations in the Large Magellanic Cloud. A ground-based
+observatory snapped the picture of this galaxy.
+<P>
+In the pictures of the planetary nebulae, color corresponds to
+temperature. Blue represents hotter regions of the nebulae and red,
+cooler.
+<P>
+Scientists are probing these illuminated stellar relics in our
+neighboring galaxy because they are at relatively the same distance -
+about 168,000 light-years -- from Earth. Knowing the distance to these
+objects allows scientists to compare their shapes and sizes, and
+precisely determine the brightness of their central stars. For this
+reason, even though these glowing remains of dying stars are about 50
+times farther away than the stunning planetary nebulae photographed
+in the Milky Way, they are of invaluable importance.
+<P>
+By sampling this population, scientists noticed that the bipolar
+nebulae are richer in some heavier elements, such as neon, than those
+with a more spherical shape. At the dawn of the universe, only the
+lighter elements, such as hydrogen, filled the heavens. The heavier
+elements were produced later as stars died. Neon, in particular, is
+produced only when massive stars die in supernova explosions. Thus,
+a higher abundance of neon in "bipolar" planetary nebulae indicates
+that the stars that sculpted these objects were born more recently
+(i.e., in an environment that had suffered more supernova explosions)
+than those that created the more symmetrically shaped clouds of gas.
+<P>
+On the other hand, the stars that form planetary nebulae are great
+producers of carbon, the most important element for the origin of
+life, as we know it. The question of how life-forming atoms were
+made is at the heart of understanding how and why life evolved in
+our own solar system very shortly after the Sun itself had formed
+from clouds of carbon-enriched gas and dust 4.6 billion years ago.
+Scientists do not know for sure how the Milky Way behaved before
+the birth of the Sun. But they can look at regions in other galaxies
+where conditions may be very similar to the pre-solar days of the
+Milky Way. The Large Magellanic Cloud is an ideal laboratory for such
+an experiment, since its chemistry mimics a pre-solar environment.
+<P>
+Astronomers are using the Hubble images of these planetary nebulae,
+together with spectroscopic information from ground-based
+observatories, to understand the important carbon-forming mechanisms
+in the Large Magellanic Cloud. The progenitor stars are expected to
+form some carbon and lock it deep in their interiors near the end
+of their lives. In the last few thousand years of their active
+lives, just before ejecting planetary nebulae, stars are able to
+dredge up the carbon locked deep in their cores. They undergo a
+phase as "carbon stars," then fling the carbon-rich gas into space
+as they form planetary nebulae, material for new generations of
+stars and planets.
+<P>
+The Hubble images were taken between June and September 1999.
+<P>
+Credits for the Hubble images: NASA; L. Stanghellini, R. Shaw,
+C. Blades, and M. Mutchler, Space Telescope Science Institute,
+Baltimore, Md.; and B. Balick, University of Washington, Seattle, Wash.
+<P>
+Credits for the copyrighted image of the Large Magellanic Cloud:
+D. Malin, Anglo-Australian Observatory/Royal Observatory, Edinburgh,
+Scotland
+<P>
+
+Images are available on the Internet at:<BR>
+<A HREF="http://oposite.stsci.edu/pubinfo/pr/2000/09">http://oposite.stsci.edu/pubinfo/pr/2000/09</A> and via links in<BR>
+<A HREF="http://oposite.stsci.edu/pubinfo/latest.html">http://oposite.stsci.edu/pubinfo/latest.html</A> and<BR>
+<A HREF="http://oposite.stsci.edu/pubinfo/pictures.html">http://oposite.stsci.edu/pubinfo/pictures.html</A>
+<P>
+Higher resolution digital versions (300 dpi JPEG and TIFF) are
+available at:<BR>
+<A HREF="http://oposite.stsci.edu/pubinfo/pr/2000/09/pr-photos.html">http://oposite.stsci.edu/pubinfo/pr/2000/09/pr-photos.html</A> and<BR>
+<A HREF="http://oposite.stsci.edu/pubinfo/pr/2000/09/extra-photos.html">http://oposite.stsci.edu/pubinfo/pr/2000/09/extra-photos.html</A>
+
+			
+          </TD>
+        </TR>    
+        
+      </TABLE>
+			
+
+<!-- Content Ends -->			 
+
+
+
+
+<P><BR><BR>
+       <!-- End Main Content -->
+       </TD>
+       <TD><IMG SRC="../../images/blank-space.gif" ALT="" WIDTH="10" HEIGHT="1" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+    </TR>
+  </TABLE>
+  </TD>
+</TR>
+</TABLE>    
+<TABLE WIDTH="750" CELLPADDING="0" CELLSPACING="0" BORDER="0" BGCOLOR="#40254E">
+<TR>
+  <TD><IMG SRC="../../images/blank-space.gif" ALT="" WIDTH="354" HEIGHT="1" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></TD>
+  <TD><A HREF="../../sitemap.html"><IMG SRC="../../images/l1-sitemap.gif" ALT="Link to Site Map" WIDTH="85" HEIGHT="20" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+  <TD><A HREF="../../contact.html"><IMG SRC="../../images/l1-contact.gif" ALT="Link to Contact and Copyright Information" WIDTH="146" HEIGHT="20" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+  <TD><A HREF="http://www.hq.nasa.gov/privacy.html"><IMG SRC="../../images/l1-nasa-privacy.gif" ALT="Link to NASA Privacy Statement" WIDTH="165" HEIGHT="20" HSPACE="0" VSPACE="0" BORDER="0" ALIGN="left"></A></TD>
+</TR>
+</TABLE>
+
+<!-- NASA footer -->
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+   <tr>
+      <td width="165" align="left" valign="top"><a href="http://www.firstgov.gov/"><img src="../../images/foot_firstgov.gif" width="165" height="45" alt="FirstGov - Your First Click to the US Government" border="0"></a></td>
+      <td width="340" align="left" valign="top">
+         <table border="0" cellpadding="8" cellspacing="0">
+            <tr>
+               <td class="footer">
+                  <a href="../../about/" class="footer">+ About this Site</a><br>
+                  <a href="http://www.nasa.gov/pdf/1968main_strategi.pdf" class="footer">+ NASA 2003 Strategic Plan</a><br>
+                  <a href="../../library/roadmap03/index.html" class="footer">+ NASA Origins Roadmap</a>
+                  
+               </td>
+            </tr>
+         </table>
+      </td>
+      <td width="60" align="left" valign="top"><a href="http://www.nasa.gov/"><img src="../../images/foot_nasa.gif" width="60" height="60" alt="NASA" border="0"></a></td>
+      <td width="185" align="left" valign="top">
+         <table border="0" cellpadding="8" cellspacing="0">
+            <tr>
+               <td class="footer">
+                  Curator: Steve Unwin<br>
+                  Webmaster: Kristy Kawasaki<br>
+                  NASA Official: Mike Devirian<br>
+                  Last Updated: <script>document.write( lastMod() );</script><br>
+               </td>
+            </tr>
+         </table>
+      </td>
+   </tr>
+</table>  
+
+<!-- this fixes the Mac IE5.0 page shifting problem -->  
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+if(bw.ie5&&bw.mac) oCMenu.construct()
+// -->
+</script>  
+  
+</body>
+</html>

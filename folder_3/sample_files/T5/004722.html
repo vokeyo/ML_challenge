@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--Converted with LaTeX2HTML .95.3 (Nov 17 1995) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/aps_ThinWide.dwt" codeOutsideHTMLIsLocked="false" -->
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!-- InstanceBeginEditable name="title" -->
+<title>LS Note 176:  Specification of APS Corrector Magnet Power Supplies from Closed Orbit Feedback Considerations</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script type="text/javascript" src="/anl_templates/javascript/anlmain.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<link href="/favicon.ico" rel="SHORTCUT ICON" />
+<link href="/css/template/styles.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+	<style type="text/css" media="all">@import url(/css/template/ie.css);</style>
+<![endif]-->
+<!--[if lte IE 6]>
+	<style type="text/css" media="all">@import url(/css/template/ie6.css);</style>
+<![endif]-->
+<!--[if lt IE 6]>
+<style type="text/css">#main{width:100%}</style>
+<![endif]-->
+
+<?php
+	require_once($_SERVER['DOCUMENT_ROOT'].'/inc/php_functions.php'); 
+	requireurl('/inc/head.inc.html'); 
+?>
+<!-- InstanceBeginEditable name="head" -->
+<script language="JavaScript" src="../../../../javascript/main.js" type="text/javascript"></script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="metadata" -->
+<meta name="Description" content="" />
+<meta name="Keywords" content="" /> 
+<meta name="classification" content="" />
+<meta name="author" content="Argonne National Laboratory" />
+<meta name="Expires" content="" />
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<div id="image">
+			<a href="http://www.anl.gov">
+            	<img src="/anl_templates/images/argonne_header_logo.jpg" alt="Argonne National Laboratory" />
+          </a>
+		</div>
+        <div id="doe">
+        	<a href="http://www.energy.gov/">
+            	<img src="/anl_templates/images/header_doe.gif" alt="U.S. Department of Energy" />
+            </a>
+        </div>
+        <!--/image-->
+		<div id="description">
+        	<!-- InstanceBeginEditable name="divisionProgramIdentity" -->
+          <p><span class="sectionTitle"><a href="http://www.aps.anl.gov">Advanced Photon Source</a><br />
+          </span></p>
+          <p><span class="tinyWhiteText">A U.S. Department of Energy, Office of Science, <br />
+            Office of Basic Energy            Sciences national synchrotron x-ray research facility</span></p>
+        <!-- InstanceEndEditable -->
+        </div>
+        <!--/description-->
+	</div>
+    <!--/header-->
+	<div id="menuwrapper">
+        <div id="searchbox">
+				<form method="get" action="http://public-search.anl.gov/search" name="search" onsubmit="return checkSearchForm(this);">
+	    <input type="hidden" name="site" value="aps"/>
+	    <input type="hidden" name="client" value="aps"/>
+	    <input type="hidden" name="proxystylesheet" value="aps"/>
+	    <input type="hidden" name="output" value="xml_no_dtd"/>
+	    <input type="text" name="q" size="20" maxlength="255" value="Search APS ..." onfocus="this.select();"/>
+	    <a href="javascript:if(checkSearchForm(document.search))document.search.submit();">
+	        <img src="/Images/arrow_gold.gif" alt="Search Button" />
+	    </a>
+	</form>
+			<?php requireurl('/inc/search.inc.html'); ?>
+        </div>
+		<ul id="p7menubar">
+	<li><a href="http://www.aps.anl.gov/About" class="trigger">About</a>
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+			<li><a href="http://www.aps.anl.gov/About/ALD">Director's Office</a></li>
+			<li><a href="http://www.aps.anl.gov/About/APS_Overview">Overview</a></li>
+			<li><a href="http://www.aps.anl.gov/About/Visiting">Visiting the APS</a></li>
+			<li><a href="http://www.aps.anl.gov/About/Mission_and_Goals">Mission &amp; Goals</a></li>
+		  <li><a href="http://www.aps.anl.gov/About/Organization">Organization Charts</a></li>
+			<li><a href="http://www.aps.anl.gov/About/Committees">Committees</a></li>
+			<li><a href="http://www.aps.anl.gov/About/Employment">Employment</a></li>
+		</ul>
+       <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li><a href="http://www.aps.anl.gov/Users" class="trigger">User Information</a>
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+			<li><a href="http://www.aps.anl.gov/Users/Prospective">For Prospective Users</a></li>
+			<li><a href="http://www.aps.anl.gov/Users/New">For New Users</a></li>
+			<li><a href="http://www.aps.anl.gov/Users/Current">For Current Users</a></li>
+			<li><a href="http://www.aps.anl.gov/Users/Administrators">For Administrators</a></li>
+	        <li class="sep"><a href="http://www.aps.anl.gov/Beamlines">Find a Beamline</a></li>
+          	<li><a href="http://www.aps.anl.gov/Users/apply_for_beamtime.html">Apply for Beam Time</a></li>
+			<li><a href="http://www.aps.anl.gov/Users/Contacts">Contacts</a></li>
+			<li><a href="http://www.aps.anl.gov/Users/Calendars">Calendars</a></li>
+			<li class="sep"><a href="http://www.aps.anl.gov/Users/Communications">Community</a></li>
+            <li><a href="http://www.aps.anl.gov/Users/Scientific_Access">Scientific Access</a></li>
+			<li><a href="http://www.aps.anl.gov/Users/Site_Access">Site Access</a></li>
+			<li><a href="http://www.aps.anl.gov/Safety_and_Training/Training">Training</a></li>
+	</ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li><a href="http://www.aps.anl.gov/Science" class="trigger">Science &amp; Education</a>
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+			<li><a href="http://www.aps.anl.gov/Science/Highlights">Science and Research Highlights</a></li>
+			<li><a href="http://www.aps.anl.gov/News/Conferences">Conferences and Workshops</a></li>
+			<li><a href="http://www.aps.anl.gov/News/Meetings">Seminars and Meetings</a></li>
+			<li class="sep"><a href="http://www.aps.anl.gov/Science/Acronyms">Acronym Definitions</a></li>
+			<li><a href="http://www.aps.anl.gov/Science/Publications">Publications</a></li>
+			<li><a href="http://www.aps.anl.gov/Science/Reports">Annual Reports</a></li>
+			<li><a href="http://www.aps.anl.gov/Science/Future">Future Directions</a></li>
+			<li class="sep"><a href="http://www.aps.anl.gov/Science/Courses">Courses and Schools</a></li>
+			<li><a href="http://www.aps.anl.gov/Science/Courses/graduate_programs.html">Graduate Programs</a></li>
+			<li><a href="http://www.anl.gov/IITV">IITV on the Argonne TV Network</a></li>
+		</ul>
+       <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li><a href="http://www.aps.anl.gov/Media_Center" class="trigger">Media Center</a>
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+			<li><a href="http://www.aps.anl.gov/News/APS_Today">Calendar of Events</a></li>
+			<li><a href="http://www.aps.anl.gov/News/APS_News">APS News</a></li>
+			<li><a href="http://www.aps.anl.gov/Users/Communications/User_News/">User News</a></li>
+			<li><a href="http://www.aps.anl.gov/News/ArgonneNews/">ANL APS Press Releases</a></li>
+			<li><a href="http://www.aps.anl.gov/News/Archives/">Article Archives</a></li>
+			<li class="sep"><a href="http://www.aps.anl.gov/Science/APS_and_You">The APS and You</a></li>
+			<li><a href="http://www.aps.anl.gov/Science/Reports">Annual Reports</a></li>
+			<li class="sep"><a href="http://www.aps.anl.gov/News/APS_Podcasts">Podcasts</a></li>
+			<li><a href="http://www.lightsources.org/imagebank/search_public.php?offset=0&amp;keywords=&amp;lab=APS&amp;limit=5">Image Bank (lightsources.org)</a></li>
+			<li><a href="http://www.aps.anl.gov/video">Video Library</a></li>
+			<li><a href="http://www.aps.anl.gov/Media_Center/rss">Syndicated Feeds (RSS)</a></li>
+		</ul>
+       <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+    <li><a href="http://www.aps.anl.gov/Beamlines" class="trigger">Beamlines</a>
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+	      <li><a href="http://www.aps.anl.gov/Beamlines">Beamline Maps</a></li>
+			<li><a href="http://beam.aps.anl.gov/pls/apsweb/beamline_display_pkg.beamline_dir">Beamlines Directory</a></li>
+			<li><a href="http://beam.aps.anl.gov/pls/apsweb/beamline_display_pkg.technique_dir">Research Techniques</a></li>
+			<li><a href="http://www.aps.anl.gov/Beamlines/Sectors_Directory">Sectors Directory</a></li>
+			<li class="sep"><a href="http://www.aps.anl.gov/Facility/Status">Status and Schedule</a></li>
+          <li><a href="http://www.aps.anl.gov/Safety_and_Training/">Safety and Training</a></li>
+			<li class="sep"><a href="http://www.aps.anl.gov/Accelerator_Systems_Division/Operations_Analysis/logging/MonitorDataReview.html">Data Review</a></li>
+			<li><a href="http://www.aps.anl.gov/Accelerator_Systems_Division/Operations_Analysis/FillHistory.html">Fill History</a></li>
+			<li><a href="http://www.aps.anl.gov/asd/operations/gifplots/MCRstatus.html">Main Control Room Status</a></li>
+			<li><a href="http://www.aps.anl.gov/Facility/Storage_Ring_Parameters/#images.log#">Storage Ring Parameters</a></li>
+		</ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li><a href="http://www.aps.anl.gov/Divisions" class="trigger">Divisions</a>
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+			<li><a href="http://www.aps.anl.gov/APS_Engineering_Support_Division/">APS Engineering Support Division</a></li>
+          <li><a href="http://www.aps.anl.gov/APS_Engineering_Support_Division/groups.html">AES Groups</a></li>
+			<li class="sep"><a href="http://www.aps.anl.gov/Accelerator_Systems_Division/">Accelerator Systems Division</a></li>
+			<li><a href="http://www.aps.anl.gov/Accelerator_Systems_Division/groups.htm">ASD Groups</a></li>
+			<li class="sep"><a href="http://www.aps.anl.gov/Xray_Science_Division/">X-ray Science Division</a></li>
+			<li><a href="http://www.aps.anl.gov/Xray_Science_Division/groups.php">XSD Groups</a></li>
+		</ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+<br class="clearit" />
+
+		<?php requireurl('/inc/nav.inc.html'); ?>
+    </div>
+    <!--/topMenus-->
+	<div id="breadcrumbs">
+		<span class="breadcrumbs">
+  <a href="http://www.anl.gov">Argonne Home </a> > 
+  <a href="/">Advanced Photon Source </a> >
+  <script language="JavaScript" type="text/JavaScript">
+	anlBreadCrumbs("http://www.aps.anl.gov");
+  </script>
+</span>
+		<?php requireurl('/inc/breadcrumbs.inc.html'); ?>
+	</div>
+    <!--/breadcrumbs-->
+	<div id="wrapper">
+        <div id="leftMenu">
+		<!-- InstanceBeginEditable name="leftMenu" -->
+          <p>&nbsp;</p>
+        <!-- InstanceEndEditable -->        </div>
+        <!--/leftMenu-->
+		<div id="main">
+		<!-- InstanceBeginEditable name="mainFeature" -->
+<h2>LS Note 176:</h2>
+<h2>Specification of APS Corrector Magnet Power Supplies from Closed Orbit Feedback Considerations</h2>
+<p>L. Emery and G. Decker</p>
+<p>August 6, 1991
+</p>
+<div id="Contents_Layer" style="position:relative;width:50%;" class="MeetingCellText"><br />
+    <b>Contents:</b>
+    <ol>
+      <li><a href="#sec1">Goal </a> </li>
+      <li> <a href="#sec2">Formulae, Design Handbook Data, and Assumptions Used </a> </li>
+      <li><a href="#sec3">Global vs Local and DC vs AC Orbit Corrections</a>
+          <ul>
+            <li><a href="#sec3.1">3.1 Global Correction at DC</a></li>
+            <li><a href="#sec3.2">3.2 Local correction at DC</a></li>
+            <li><a href="#sec3.3">3.3 AC Global Correction</a></li>
+            <li><a href="#sec3.4">3.4 AC Local correction</a></li>
+          </ul>
+      </li>
+      <li><a href="#sec4">Determination of Required Dynamic Range of Local Corrector Magnet Power Supplies</a></li>
+      <li> <a href="#sec5">Power Supply Resolution Determination </a> </li>
+      <li><a href="#sec6">Conclusion</a> </li>
+    </ol>
+  <br />
+</div>
+<p>&nbsp;</p>
+<HR>
+
+<h3><a name="sec1"></a>1. Goal</h3>
+<P>
+To specify or confirm the strengths and resolutions of the corrector magnets and their power supplies.
+<P>
+The photon beam must be stable to 5% of the phase space dimensions of the beam (10% of the emittance).
+Specification of the closed-orbit displacement in the insertion device appears in the CDR, page II.1-42:<P>
+<img src="Images/ls176_eq1.gif"><P>
+
+Global and local correction systems will remove DC and oscillatory components of the orbit distortion.
+The oscillatory orbit distortion is usually attributed to the ground motion coupling to the quadrupole supports, but 
+one should not assume that ground motion is the unique source.
+
+<P>
+<h3><a name="sec2"></A>2. Formulae, Design Handbook Data, and Assumptions Used</h3>
+<P>
+The deflection angle of a corrector magnet is related to the magnetic field by 
+<P>
+<img src="Images/ls176_eq2.gif"><P>
+
+The impedance <i>Z</i> of a magnet is given by
+<P>
+<img src="Images/ls176_eq3.gif">
+<P>
+where <i>R</i> is the resistance and <i>L</i> is the inductance which could be substantial compared to <i>R</i> at the frequencies
+concerned. The cutoff frequency, 
+<P>
+<img src="Images/ls176_eq4.gif">
+<P>
+is defined as the frequency at which the magnitude of the impedance is twice the value of <i>R</i>. The lower the value of <i>f<sub>c</sub></i> 
+listed in Table 1 the larger role the magnet inductance will play in determining the power supply
+voltage specification.
+<P>
+The data on corrector magnets and power supplies 
+shown in Table 1 appears in the Design Handbook. 
+The sextupole dipole coils are used for vertical steering.
+The power supply voltage specification assumes a 50% chopping duty cycle.
+The corrector power supplies can be run as high as about 90% duty cycle, generating a voltage as high as twice the
+magnet DC <i>IR</i> drop.
+
+<P><hr>
+<P>
+<b>
+<center>
+  <a name="table1"></a>Table 1:  Design Handbook Magnet and Power Supply Data
+</center></b>
+
+<P>
+<table align="center">
+<td><b>Magnet</b></td>
+<td><b>Horizontal Correction</b></td>
+<td><b>Sextupole Dipole Coils<b></td>
+<td><b>Horizontal H/V Combination</b></td>
+<td><b>Vertical H/V Combination</b></td>
+<tr>
+<td>Max. field T</td>
+<td>.23</td>
+<td>.11</td>
+<td>.16</td>
+<td>.16</td>
+<tr>
+<td><i>L</i><sub>eff</sub> (m)</td>
+<td>.14</td>
+<td>.28</td>
+<td>.20</td>
+<td>.20</td>
+<tr>
+<td>Max. DC deflection at 7 GeV <img src="Images/ls176_gk1.gif"> (mrad)</td>
+<td>1.3</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.2</td>
+<tr>
+<td>Max. current <i>I</i> (A)</td>
+<td>89</td>
+<td>113</td>
+<td>116</td>
+<td>134</td>
+<tr>
+<td><img src="Images/ls176_gk2.gif"><i>/I</i> [rad/A]</td>
+<td>14.6</td>
+<td>10.6</td>
+<td>11.4</td>
+<td>9.8</td>
+<tr>
+<td>Impedance <img src="Images/ls176_gk3.gif"></td>
+<td>127 + 77<i>f</i></td>
+<td>187 + 54<i>f</i></td>
+<td>133 + 25<i>f</i></td>
+<td>95 + 19<i>f</i></td>
+<tr>
+<td><i>f</i><sub>c</sub> (Hz)</td>
+<td>1.6</td>
+<td>3.4</td>
+<td>5.3</td>
+<td>5.0</td>
+<tr>
+<td>Impedance at DC <img src="Images/ls176_gk3.gif"></td>
+<td>0.127</td>
+<td>0.187</td>
+<td>0.133</td>
+<td>0.095</td>
+<tr>
+<td>Impedance at 25 Hz <img src="Images/ls176_gk3.gif"></td>
+<td>2.05</td>
+<td>1.54</td>
+<td>0.76</td>
+<td>0.57</td>
+<tr>
+<td>Max. voltage at DC (V)</td>
+<td>11.4</td>
+<td>21.1</td>
+<td>15.4</td>
+<td>12.7</td>
+<tr>
+<td>Power Supply Specification (V)</td>
+<td>13</td>
+<td>23</td>
+<td>17</td>
+<td>14</td>
+<tr>
+<td><img src="Images/ls176_gk1.gif">/<i>V<sub>DC</sub></i> [rad/V]</td>
+<td>114</td>
+<td>57</td>
+<td>86</td>
+<td>103</td>
+</table>
+<hr>
+
+<P>
+The eddy current attenuation of the magnetic field through the vacuum chamber is shown in Table 2.
+The attenuation depends on the vacuum chamber thickness, the shape of the vacuum chamber, and the configuration of the 
+magnetic poles. The attenuation of the vacuum chamber for the dipole field produced by the H/V combination magnet
+was not measured. We know, however, that 
+the thickness of the H/V magnet elliptical vacuum chamber is half that of the regular vacuum chamber. The attenuation is
+going to be less for these dipoles than for the others.
+<P>
+<hr>
+<P>
+<a name="table2"></a><b><center>Table 2:  Eddy Current Attenuation for Magnet/vacuum Chamber Systems</center></b><P>
+<table align="center">
+<td><b>Frequency (Hz)</b></td>
+<td><b>Horizontal Correction*</b></td>
+<td><b>Sextupole Dipole Coils**</b></td>
+<td><b>Horizontal H/V Combination</b></td>
+<td><b>Vertical H/V Combination</b></td>
+<tr>
+<td>.1</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<tr>
+<td>1</td>
+<td>0.96</td>
+<td> </td>
+<td> </td>
+<tr>
+<td>5</td>
+<td>0.67</td>
+<td>0.97</td>
+<td> </td>
+<td> </td>
+<tr>
+<td>10</td>
+<td>0.38</td>
+<td>0.89</td>
+<td> </td>
+<td> </td>
+<tr>
+<td>15</td>
+<td>0.32</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<tr>
+<td>20</td>
+<td>0.20</td>
+<td>0.69</td>
+<td> </td>
+<td> </td>
+<tr>
+<td>25</td>
+<td>0.15</td>
+<td>0.61</td>
+<tr>
+  <td colspan="2">*Measured by Y. Chung<br />
+**Calculated by L. Kettunen</td>
+  <td>&nbsp;</td>
+</table>
+<p>&nbsp;</p>
+<hr>
+<h3><a name="sec3"></A>3. Global vs Local and DC vs AC Orbit Corrections</h3>
+<P>
+One can divide the orbit correction into four systems:
+<OL><LI> Global correction at DC</li>
+<br /><LI> Global correction up to  25 Hz </li>
+<br /><LI> Local correction at DC</li>
+<br /><LI> Local correction up to 25 Hz </li>
+</OL>
+<P>
+Each use different position monitors and different sets of corrector magnets. Table 3 lists parameters
+for the above correction systems.
+<P><hr>
+<P align="center">
+<a name="table3"></a><b>Table 3:  Specification of Correction Systems</b>
+<P>
+<table align="center" cellpadding=5>
+<P>
+<th></th>
+<th>Global DC</th>
+<th>Local DC</th>
+<th>Global 25 Hz</th>
+<th>Local 25 Hz</th>
+<tr>
+<td>Orbit measurement device</td>
+<td>All of the RF BPMs</td>
+<td>X-ray BPMs</td>
+<td>RF BPMs at sources only</td>
+<td>X-ray BPMs</td>
+<tr>
+<td>Correctors</td>
+<td>All correctors</td>
+<td>Local bump</td>
+<td>Subset of correctors</td>
+<td>Local bump</td>
+<tr>
+<td>Specified orbit measurement resolution</td>
+<td>25 m</td>
+<td>Not specified</td>
+<td>25 m</td>
+<td>Not specified</td>
+<tr>
+<td>Achievable resolution</td>
+<td>5 m</td>
+<td>1 m</td>
+<td>5 m</td>
+<td>1 m</td>
+<tr>
+<td>Required range of orbit correction</td>
+<td> 20 mm</td>
+<td> 100 m</td>
+<td> 500 m</td>
+<td> 100 m</td>
+<tr>
+</table>
+<hr>
+<h3><a name="sec3.1"></A>3.1 Global Correction at DC</h3>
+<P>
+The DC global correction will be used to correct the orbit of a stored beam.
+The DC orbit at the photon sources must be set to within the resolution of the
+RF beam position monitors (BPMs) located there. The Design Handbook-specified resolution for the RF BPMs is 25 m, but
+5 m is achievable. For the undulator an RF BPM
+will be installed on the small cross-section vacuum chamber. The resolution there
+will be better by approximately a factor of four in both planes.
+Since the time interval between corrections is relatively long, one can use
+all of the RF BPMs and correctors for the correction.
+<P>
+Because the resolution of the RF BPMs used in the global correction is 25 m, the smallest orbit displacement achievable is
+25 m. In order to comply with the CDR specification in equation (1) a local orbit distortion
+is planned.
+<P>
+<h3><a name="sec3.2"></A>3.2 Local correction at DC</H3>
+<P>
+For the local correction, the orbit at the photon sources are measured by X-ray BPMs with a position
+resolution of 1 m and an angular resolution of 0.1 rad. The position and angle coordinate of the orbit
+are controlled by a set of four correctors.
+<a href="Images/ls176_f1.gif">Figures 1</a> and <a href="Images/ls176_f2.gif">2</a> show the position of the correctors producing the
+local orbit distortion for both types of photon source.  <TT>CH</TT> and <TT>CV</TT> are horizontal and vertical correctors, respectively.
+<P>
+<strong>Dynamic range</strong>
+<P>
+Because the X-ray BPMs have better resolution than RF BPMs,
+the DC local correction can steer the orbit closer to the design orbit.
+In order for the local correction system to work, the dynamic ranges of both
+the global and local systems must overlap.
+This means that the range of the local correction should exceed the resolution of the RF BPMs used in the 
+global correction.
+With a safety factor of 4 in the overlap, we take the required dynamic range of the DC local correction to be 
+100 m.
+<P>
+This number is reasonable from the point of view of the global feedback system designer. Global stability significantly
+better than 100 m could be difficult to achieve. In addition, the correction magnets may be required to run with a DC offset,
+reducing the effective dynamic range. Furthermore, it may be desirable to use the same magnet for two or more feedback systems
+which would require greater dynamic range.
+<P>
+<h3><a name="sec3.3"></A>3.3 AC Global Correction</H3>
+<P>
+If the amplitude of oscillatory orbit motion is very large -- especially because of amplification due to the lattice focusing --
+a global correction system is necessary to correct the orbit.
+Because of time delays in communicating the orbit information, the number of RF BPMs used is limited.
+For the same reason, only a subset of correctors is used.
+In general distributed correctors can correct the orbit more efficiently than local bumps, and much 
+larger orbit motions can be controlled.
+<P>
+The range of orbit correction is specified somewhat arbitrarily at 500 m.
+Although calculations based on a few ground motion surveys indicate that the beam motion at frequencies up to 25 Hz 
+is already within the tolerances defined by
+the CDR without feedback, the feedback system must be capable of correcting even larger orbit motions 
+from sources other than ground motion.
+<P>
+<h3><a name="sec3.4"></A>3.4 AC Local correction</H3>
+<P>
+This uses the same hardware system as the DC local correction. The special consideration is that, 
+at high frequencies, the magnetic field is strongly
+attenuated by the vacuum chamber <a href="#table2">(Table 2)</a>, and the inductance in some of the magnets 
+<a href="#table1">(Table 1)</a> causes a 15-fold increase in their impedances.
+<P>
+<strong>Dynamic range</strong>
+<P>
+The same argument is made for local correction at AC as was put forth for the local correction at DC.
+The required range of the local correction is therefore set at 100 m.
+<P>
+<hr>
+<P>
+<b>
+<center>
+  <a name="table4"></a>Table 4:  Power supplies at 25 Hz
+</center>
+</b>
+<table align="center">
+<td><b>Magnet</b></td><td><b>Horizontal Correction</b></td><td><b>Sextupole Dipole Coils</b></td><td><b>Horizontal in H/V Combinations</b></td><td><b>Vertical in H/V Combination</b></td>
+<tr>
+<td>Orbit motion (m) at 25 Hz</td>
+<td>100</td>
+<td>100</td>
+<td>100</td>
+<tr>
+<td>Corrector effective strength (rad) at 25 Hz</td>
+<td>90</td>
+<td>62</td>
+<td>100</td>
+<td>38</td>
+<tr>
+<td>Vacuum chamber attenuation at 25 Hz</td>
+<td>0.15</td>
+<td>0.60</td>
+<tr>
+<td>Corrector actual strength (rad) at 25 Hz</td>
+<td>600</td>
+<td>104</td>
+<tr>
+<td>Corrector current (A) at 25 Hz</td>
+<td>42</td>
+<td>9.8</td>
+<tr>
+<td>Magnet impedance <img src="Images/ls176_gk3.gif"> at 25 Hz</td>
+<td>2.05</td>
+<td>1.54</td>
+<td>0.76</td>
+<td>0.57</td>
+<tr>
+<td>Required Power supply voltage (V) at 25 Hz</td>
+<td>86</td>
+<td>15</td>
+<tr>
+<td>Power supply voltage specification (V) with 90% duty cycle</td>
+<td>23.4</td>
+<td>41.4</td>
+<td>30.6</td>
+<td>25.2</td>
+<tr>
+
+</table>
+<hr>
+<h3><a name="sec4"></A>4 Determination of Required Dynamic Range of Local Corrector Magnet Power Supplies</H3>
+<P>
+In the previous section, the range for local correction at DC and AC was established. 
+The requirements for the corrector power supplies are examined in this section. 
+The power supply voltage is determined by the orbit correction capability
+at the upper end of the frequency range, which is set at 25 Hz.
+<P>
+<a href="#table4">Table 4</a> lists various power supply parameters for a 100-m orbit correction at 25 Hz.
+The progression of the rows is as follows. The necessary beam deflection angles produced by correctors 
+are related to the desired orbit correction by the 4x2 bump matrices as determined by the lattice optics. 
+(These matrices are displayed in the next section.)
+The largest deflection angle for each corrector type is listed in the second row of the table.
+<P>
+Then the attenuation due to eddy current losses in the vacuum chamber at 25 Hz is repeated from 
+an earlier table. This, in effect, increases the power supply current for a desired
+angular deflection. This is more pronounced for horizontal correction (vertical magnetic fields) than for 
+vertical correction mainly because the vacuum chamber is thinner at the 
+vertical correctors.
+Row 4 shows the required corrector strength in terms of deflection angle. In row 5, this deflection angle is 
+converted to a magnet current using data from <a href="#table1">Table 1</a>.
+<P>
+Next the impedance of the magnets at 25 Hz is displayed.
+The inductance of the magnets causes the power supply voltage for a given current to
+increase roughly in proportion to the operating frequency.
+This effect on the voltage is larger for the stand-alone horizontal corrector.
+The power supply voltage is simply the product of the magnet current and impedance.
+The power supply voltage required for a 100-m orbit correction at 25 Hz is listed in the second to last row
+of the table. The
+voltage specification of the power supplies from <a href="#table1">Table 1</a> is repeated here at the bottom of the table.
+The required power supply voltage for the stand-alone horizontal corrector exceeds the specification with 90% duty cycle.
+The required power supply voltage for the other magnets are within specification.
+<P>
+The impedance at 25 Hz for the horizontal corrector
+in <a href="#table4">Table 4</a>  is pessimistic because
+the magnet impedance calculations reported in the Design Handbook don't take into account the eddy currents in the vacuum chamber.
+In general, the vacuum chamber eddy currents cause
+the circuit inductance to decrease with frequency, and the real part of the impedance to increase with frequency.
+A computer simulation that includes the effects of eddy-currents
+was done for the horizontal corrector with a vacuum chamber of wall thickness 0.10'' instead of the regular 0.50''.
+Using the calculated magnet-vacuum chamber system inductance and the vacuum chamber attenuation factor for the magnetic field on
+axis, the required power supply voltage is found to be 28 V. The reduction from the value of 86 V in
+<a href="#table4">Table 4</a> is due to the combination of including the eddy currents
+and using a much thinner vacuum chamber wall.
+Practically speaking, the 0.1'' thick vacuum chamber wall is machined from the 0.5'' thick wall while leaving
+0.50'' high ``ribs'' for support.
+For this case the eddy currents are not easy to simulate, but the required power supply voltage will be greater than
+28 V.
+<P>
+<h3><a name="sec5"></A>5 Power Supply Resolution Determination</H3>
+<P>
+The required resolution for the local corrector magnet power supplies is estimated. 
+We want the resolution of the local correction system to be such that the beam motion will be easily controlled to
+within 10% of the emittance, therefore 1% of the emittance is taken as the lowest order bit 
+change of the programming voltage.
+<P>
+The resolution is determined by the operation of the correctors at DC. At higher frequencies, the effective resolution is improved
+because of the attenuation of the magnetic fields by the eddy currents in the vacuum chamber.
+<P>
+The corrector strengths for a local orbit distortion (also called a bump)
+are related to the desired orbit change by a 4x2 matrix.
+The matrix elements may change by a few percent depending on the final position 
+of the correctors. Because of a constraint of the beam optics computer program used,
+the vertical dipole trims of the sextupoles
+are modeled as a stand-alone vertical corrector adjacent to the sextupoles.
+<P>
+For the undulator straight section, the necessary corrector strengths 
+that produce a horizontal orbit change <img src="Images/ls176_gk4.gif"> and  <img src="Images/ls176_gk5.gif">
+are given by
+<P>
+<img src="Images/ls176_eq5.gif">
+<P>
+where the <i>k</i> values are the kick angles of the correctors taken in sequence along the ring segment.
+<P>
+For the vertical direction,
+<P>
+<img src="Images/ls176_eq6.gif">
+<P>
+Using 10% of the values in equation (1) 
+as 1% of the emittance, the required resolution for the horizontal plane is
+<P><img src="Images/ls176_eq7.gif"><P>
+<img src="Images/ls176_eq8.gif">
+<P>
+We take the resolution for the horizontal plane to be .3 rad. 
+For the vertical plane, the required resolution is
+<P>
+<img src="Images/ls176_eq9.gif">
+<P>
+<img src="Images/ls176_eq10.gif"><P>
+
+We take the resolution for the vertical plane to be .05 rad.
+<P>
+The above is repeated for the corrector magnet set for the bending magnet source.
+The local bump matrices are:
+<P>
+<img src="Images/ls176_eq11.gif">
+<P>
+for the horizontal set and
+<P>
+<img src="Images/ls176_eq12.gif">
+<P>
+for the vertical set.
+The matrix elements are of the same order of magnitude, therefore the resolution for undulator
+local correctors also applies to these.
+<P>
+Table 5 lists the necessary resolutions for the local correctors at DC.
+If full scale DC steering is taken to be 1.2 mrad, 13 bits and 16 bits are required for the horizontal and vertical 
+corrector power supplies, respectively.
+<P><hr>
+<div align="center"><b>Table 5:  Local corrector required resolutions</b>
+</div>
+<center><table cellpadding=5>
+<th></tH><th>Horizontal rad</th><th>Vertical rad</th>
+<tr>
+<td>Undulator</td>
+<td align=center>0.3</td>
+<td align=center>0.05</td><tr>
+<td>Bending magnet</td>
+<td align=center>0.3</td>
+<td align=center>0.05</td>
+</table></center>
+<hr>
+<h3><a name="sec6"></A>6 Conclusion</H3>
+<P>
+Since the required range of the local horizontal corrector power supplies exceed the specification in the 
+present design, we suggest the following choice of possible action items:
+<UL><LI> Remove material from the vacuum chamber to reduce the magnetic field attenuation. This will decrease the required
+power supply AC current.</li>
+<LI> Increase the power supply voltage limit.</li>
+<LI> Redesign the horizontal corrector magnet to reduce the resistance and inductance.</li>
+</ul>
+
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+        </div>
+	    <!--/main-->
+	<br clear="all" />
+	</div>
+    <!--/wrapper-->
+    <div id="footerwrapper">
+	<div id="footer">
+    	<div id="updated">
+			 12/15/08 
+<?php echo date("m/d/y",getlastmod()); ?>
+			<?php requireurl('/inc/lastmod.inc.html'); ?>
+            <!-- InstanceBeginEditable name="LastUpdated" --><!-- InstanceEndEditable -->
+        </div>
+		<div id="logos">
+						<a href="http://www.sc.doe.gov/">U.S. Department of Energy Office of Science</a>&nbsp;|&nbsp;
+            <a href="http://www.sc.doe.gov/bes/">Office of Basic Energy Sciences</a>&nbsp;|&nbsp;
+            <a href="http://www.uchicagoargonnellc.org/">UChicago Argonne LLC</a>
+            <p>
+				<a href="http://www.anl.gov/notice.html">Privacy &amp; Security Notice</a>&nbsp;|&nbsp;
+				<a href="/Users/Contacts/">Contact Us</a>&nbsp;|&nbsp;
+				<a href="/site_map.html">Site Map</a>
+			</p>
+			<?php requireurl('/inc/footer.inc.html'); ?>
+		</div>
+        <!--/logos-->
+	</div>
+    <!--/footer-->
+	</div>
+    <!--/footerwrapper-->
+ </div>
+ <!--/container-->
+<!-- google analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6466583-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<?php requireurl('/inc/ga.inc.html'); ?>
+</body>
+<!-- InstanceEnd --></html>

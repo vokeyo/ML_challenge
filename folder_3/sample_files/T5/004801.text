@@ -1,0 +1,287 @@
+      program vlad
+c
+c Vlasov code for the single-eddy ITG test case...
+c Greg Hammett 14-Oct-1993
+c
+      implicit none
+      integer mxvel,nsteps,nplot
+      parameter (mxvel=1025)
+      real fmaxw(mxvel)   ! fm(v) Maxwellian
+      real v(mxvel)       ! velocity grid
+      complex f1(mxvel)   ! f(m=1,n=1,v) mode
+      real f2(mxvel)      ! f(m=2,n=0,v) mode
+
+      real fmaxwu(mxvel)  ! v*fm(v) 
+      real fmaxwt(mxvel)  ! (v**2-1)*fm(v)
+      complex f1s(mxvel)
+      real f2s(mxvel)
+      complex u1,temp1
+      real u2,temp2,phi2,flux
+      real vmax,pi,den
+      real wstp(mxvel)
+      real rand
+      external rand
+      integer i,itime,nvel
+      real kpar,kx,ky,etai,dt,dv,time,perturb,nuii
+      complex phi1,phi1s,phi1p,ii,phase
+      character*24 fdate
+      namelist /vnml/ kpar,nsteps,nplot,dt,nvel,kx,ky,etai,perturb,nuii
+      character*80 runname
+      integer iargc,icount,lrunname
+      external iargc, getarg
+
+c initialize data:
+      ii=(0.0,1.0)
+      pi=abs(acos(-1.0))
+      nuii=0.0
+      nplot=40  ! # of time steps between f(v) plots
+
+c determine namelist file name:
+      icount=iargc()
+      if(icount .ge. 1) then
+         call getarg(1,runname)
+      else
+         write(6,*) 'usage:  vlad runname'
+         write(6,*) ' to process the namelist in runname.in'
+      endif
+      lrunname=index(runname,' ')-1
+
+c read namelist file:
+      open(unit=41,file=runname(1:lrunname)//'.in',status='old')
+c    >     readonly,shared)
+      read(41,vnml,end=10,err=10)
+      goto 11
+ 10   write(6,*) 'error while reading namelist input file'
+      stop
+ 11   close(unit=41)
+
+c check some parameters:
+      if(nvel .gt. mxvel) then
+         write(6,*) 'nvel too large, mxvel=',mxvel
+         stop
+      endif
+      if((nvel/2)*2 .eq. nvel) then
+         write(6,*) 'nvel must be odd'
+         stop
+      endif
+
+      time=0.0
+
+c     vmax=sqrt(2.0*log(m))
+      vmax=5.0
+c      vmax=10.0
+      dv=vmax*2.0/(nvel-1)
+
+      write(6,*) 'dt * kpar * vmax  = ', dt*kpar*vmax
+      write(6,*) 'dt * omega_*p     = ', dt*ky*(1+etai)
+
+      write(6,*) 'max damping per step =', dt*nuii*pi**2/dv**2
+      if(dt*nuii*pi**2/dv**2 .gt. 1) then
+         write(6,*) 
+     > 'fatal: max damping per step is too big for explicit method'
+         stop
+      endif
+
+c We are currently advancing the collision terms using the same
+c explicit 2-step method as for the other terms.  This is only
+c stable if the above parameter is less than 2 (1 for accuracy).
+c Eventually this could be upgraded to an implicit Crank-Nickolson
+c method, allowing a larger time step.
+c
+c Also, we are not using conservative boundary conditions for the
+c collision operator at the ends of the velocity grid, so there
+c is a very slow loss of particles out the ends of the velocity
+c grid.  This could also be upgraded (though in practice, simply
+c increasing vmax would make the loss exponentially smaller...)
+c
+
+      den=0.0
+      do i=1,nvel
+         v(i) = -vmax+(i-1)*dv
+         fmaxw(i) = 1.0/sqrt(2*pi)*exp(-v(i)**2/2)
+         den=den+dv*fmaxw(i)
+      enddo
+c      write(6,*) 'den =',den
+      do i=1,nvel
+c slightly scale fmaxw to exactly unit density:
+         fmaxw(i)=fmaxw(i)/den
+         wstp(i) = ky*fmaxw(i)*(1+etai*(v(i)**2-1)/2)
+         fmaxwu(i) = v(i)*fmaxw(i)
+         fmaxwt(i) = (v(i)**2-1)*fmaxw(i)
+      enddo
+
+      open(unit=21,file=runname(1:lrunname)//'.out'
+     >     ,status='unknown', form='formatted')       ! output file
+c      write(21,*) '# vlad output (single-eddy Vlasov code)'
+c      write(21,*) '# ', fdate()
+c      write(21,*) '#'
+c      write(21,*) '# time, abs(phi), complex phi , freq='
+
+      open(unit=22,file=runname(1:lrunname)//'.f.ncar'
+     >     ,status='unknown', form='formatted')       ! output file
+
+      open(unit=23,file=runname(1:lrunname)//'.f2.ncar'
+     >     ,status='unknown', form='formatted')       ! output file
+
+c initialize f1:
+      if(ky .eq. 0.0 .and. kpar .eq. 0.0) then
+c then this is a collision model test:
+         f1(nvel/2-nvel/20)=1.0
+         f1(nvel/2+1+nvel/40)=1.0
+      else
+         do i=1, nvel
+            f1(i) = perturb*fmaxw(i)
+         enddo
+         f1(1)=0.0 ! set end points to zero (and don't evolve them...)
+         f1(2)=0.0
+      endif
+
+c find density:
+      phi1=0.0
+      do i=1,nvel
+         phi1=phi1+dv*f1(i)
+      enddo
+
+c initialize f2:
+      do i=1,nvel
+         f2(i) = 0.0
+         f2s(i)= 0.0
+      enddo
+
+c *********************************************************************
+
+      do itime=0,nsteps
+
+      phi1p=phi1
+
+c momentum and energy restoring terms for collision operator
+      u1=0.0
+      temp1=0.0
+      u2=0.0
+      temp2=0.0
+      do i=1,nvel
+         u1=u1+dv*f1(i)*v(i)
+         temp1=temp1 +dv*f1(i)*(v(i)**2-1)
+         u2=u2+dv*f2(i)*v(i)
+         temp2=temp2 +dv*f2(i)*(v(i)**2-1)
+      enddo
+
+c predictor step:
+
+      do i=2,nvel-1
+         f1s(i)=f1(i) -ii*dt/2.*( 
+     >        kpar*v(i)*(f1(i)+phi1*fmaxw(i))+wstp(i)*phi1
+     >        +2*kx*ky*phi1*f2(i))
+     >   +dt/2.*nuii*( (f1(i+1)-2*f1(i)+f1(i-1))/dv**2
+     >        +( (v(i+1)+v(i))*(f1(i+1)+f1(i))
+     >          -(v(i-1)+v(i))*(f1(i-1)+f1(i)) ) / (4*dv)
+     >        + u1*fmaxwu(i) + temp1*fmaxwt(i) )
+
+         f2s(i)=f2(i) +dt/2*(4.*kx*ky*aimag(conjg(phi1)*f1(i)))
+     >   +dt/2.*nuii*( (f2(i+1)-2*f2(i)+f2(i-1))/dv**2
+     >        +( (v(i+1)+v(i))*(f2(i+1)+f2(i))
+     >          -(v(i-1)+v(i))*(f2(i-1)+f2(i)) ) / (4*dv)
+     >        + u2*fmaxwu(i) + temp2*fmaxwt(i) )
+
+      enddo
+
+      phi1s=0.0
+      do i=1,nvel
+         phi1s=phi1s+dv*f1s(i)
+      enddo
+
+c momentum and energy restoring terms for collision operator
+      u1=0.0
+      temp1=0.0
+      u2=0.0
+      temp2=0.0
+      do i=1,nvel
+         u1=u1+dv*f1s(i)*v(i)
+         temp1=temp1 +dv*f1s(i)*(v(i)**2-1)
+         u2=u2+dv*f2s(i)*v(i)
+         temp2=temp2 +dv*f2s(i)*(v(i)**2-1)
+      enddo
+
+c corrector step:
+
+      do i=2,nvel-1
+         f1(i)=f1(i) -ii*dt*( 
+     >         kpar*v(i)*(f1s(i)+phi1s*fmaxw(i))+wstp(i)*phi1s
+     >        +2*kx*ky*phi1s*f2s(i))
+     >   +dt*nuii*( (f1s(i+1)-2*f1s(i)+f1s(i-1))/dv**2
+     >        +( (v(i+1)+v(i))*(f1s(i+1)+f1s(i))
+     >          -(v(i-1)+v(i))*(f1s(i-1)+f1s(i)) ) / (4*dv)
+     >        + u1*fmaxwu(i) + temp1*fmaxwt(i) )
+
+         f2(i)=f2(i) +dt*(4.*kx*ky*aimag(conjg(phi1)*f1s(i)))
+     >   +dt/2.*nuii*( (f2s(i+1)-2*f2s(i)+f2s(i-1))/dv**2
+     >        +( (v(i+1)+v(i))*(f2s(i+1)+f2s(i))
+     >          -(v(i-1)+v(i))*(f2s(i-1)+f2s(i)) ) / (4*dv)
+     >        + u2*fmaxwu(i) + temp2*fmaxwt(i) )
+
+      enddo
+
+      phi1=0.0
+      do i=1,nvel
+         phi1=phi1+dv*f1(i)
+      enddo
+
+c      phi2=0.0
+c      do i=1,nvel
+c         phi2=phi2+dv*f2(i)
+c      enddo
+
+      flux=-2.0*ky*aimag(conjg(phi1)*temp1)
+ 
+      time=time+dt
+      if(mod(itime,10).eq.0) then
+         write(21,1300) time,abs(phi1),real(phi1),aimag(phi1),
+     >     (phi1-phi1p)/dt/phi1s*ii
+ 1300    format(6(' ',g))
+c        write(21,*) time,abs(phi1)
+         write(23,*) time,flux
+      endif
+      
+      if(mod(itime,nplot).eq.0) then
+
+         if(kpar .eq. 0.0 .and. ky .eq. 0.0) then
+c diagnostics for checking collision operator:
+            u1=0.0
+            temp1=0.0
+            do i=1,nvel
+               u1=u1+dv*f1(i)*v(i)
+               temp1=temp1 +dv*f1(i)*(v(i)**2-1)
+            enddo
+            write(6,*) ' time, phi1, u1, temp1 = '
+            write(6,*) time,real(phi1),real(u1),real(temp1)
+         endif
+
+c save f(v) for ncar plots:
+
+         write(22,*) " ' Re and Im f1(v), Re f2(v) at t= ",time,"'"
+         write(22,*) " 'velocity' 'f(v)' "
+         write(22,*) nvel,3
+         do i=1,nvel
+            phase=abs(phi1)/phi1
+            write(22,*)  v(i), real(f1(i)*phase), imag(f1(i)*phase),
+     >           f2(i)
+         enddo
+
+      endif
+
+      enddo  ! end itime loop
+
+      close(unit=21)
+      open(unit=21,file=runname(1:lrunname)//'.f1'
+     >     ,status='unknown', form='formatted')       ! output file
+      write(21,*) '# v     real(f(v))    imag(f(v))'
+c multiple f1 by a phase factor for plotting, which makes
+c real(f1) the component of f1(v) which is in-phase with phi1, and
+c imag(f1) the component of f1(v) which is out-of-phase with phi1.
+      phase=abs(phi1)/phi1
+      do i=1,nvel
+         write(21,*)  i, v(i), real(f1(i)*phase), imag(f1(i)*phase)
+      enddo
+
+      stop
+      end

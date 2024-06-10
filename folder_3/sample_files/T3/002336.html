@@ -1,0 +1,171 @@
+<!-- MHonArc v2.5.13 -->
+<!--X-Subject: Re: Best strategy for long&#45;time series -->
+<!--X-From-R13: fura lvatfuhb <lfuraNzhfnfuvzneh.fbrfg.unjnvv.rqh> -->
+<!--X-Date: Tue, 10 Jun 2003 09:45:05 &#45;0700 -->
+<!--X-Message-Id: 000901c32f6e$ac8967a0$af42ab80@soest.hawaii.edu -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 3ED489E9.61449C8F@ifremer.fr -->
+<!--X-Reference: 3EE5F62B.EB816C31@noaa.gov -->
+<!--X-Head-End-->
+<!doctype html public "-//W3C//DTD HTML//EN">
+<html>
+<head>
+<title>Re: Best strategy for long-time series</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00127.html">Thread Prev</a>][<a href="msg00129.html">Thread Next</a>][<A HREF="threads.html#00128">Index</A>]</center>
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: Best strategy for long-time series</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Jonathan Callahan &lt;<a href="mailto:Jonathan.S.Callahan@DOMAIN.HIDDEN">Jonathan.S.Callahan@xxxxxxxx</a>&gt;,  Jean-Francois PIOLLE &lt;<a href="mailto:Jean.Francois.Piolle@DOMAIN.HIDDEN">Jean.Francois.Piolle@xxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: Best strategy for long-time series</strong></li>
+<li><strong>From</strong>: <strong>shen yingshuo &lt;<a href="mailto:yshen@DOMAIN.HIDDEN">yshen@xxxxxxxxxxxxxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 10 Jun 2003 06:38:06 -1000</li>
+<li>Cc: <a href="mailto:las_users@DOMAIN.HIDDEN">las_users@xxxxxxxxxxxxxxxxxxx</a>, John Caron &lt;<a href="mailto:caron@DOMAIN.HIDDEN">caron@xxxxxxxxxxxxxxxx</a>&gt;</li>
+<li>References: &lt;<a href="msg00124.html">3ED489E9.61449C8F@ifremer.fr</a>&gt; &lt;<a href="msg00127.html">3EE5F62B.EB816C31@noaa.gov</a>&gt;</li>
+<li>Reply-to: shen yingshuo &lt;<a href="mailto:yshen@DOMAIN.HIDDEN">yshen@xxxxxxxxxxxxxxxxxxxxxxxxxxxx</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-las_users@DOMAIN.HIDDEN">owner-las_users@xxxxxxxxxxxxxxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#ffffff" style="background-color: #ffffff; ">
+
+
+<DIV><FONT face=Arial size=2>&nbsp; GDS seems to do&nbsp;an aggregation on 
+thousands files very well.&nbsp; for example, we used GDS aggregate 
+ecmwf_ds111.1.&nbsp; the files&nbsp;are in grib format and each file contains 
+15-30 days... because GrADS template does not cover this kind files.. so we used 
+symbolic to "break down" file into daily file so that template can 
+understand.&nbsp; it is over 3000 files in 10 years data and it seems GDS do the 
+job very well.&nbsp;&nbsp; If all files are local.. i would recommand to use GDS 
+to do the aggregation.&nbsp; </FONT></DIV>
+<BLOCKQUOTE dir=ltr 
+>
+  <DIV >----- Original Message ----- </DIV>
+  <DIV 
+  ><B>From:</B> 
+  <A title=Jonathan.S.Callahan@noaa.gov 
+  href="">Jonathan Callahan</A> </DIV>
+  <DIV ><B>To:</B> <A 
+  title=Jean.Francois.Piolle@ifremer.fr 
+  href="">Jean-Francois PIOLLE</A> </DIV>
+  <DIV ><B>Cc:</B> <A 
+  title=las_users@ferret.wrc.noaa.gov 
+  href="">las_users@ferret.wrc.noaa.gov</A> 
+  ; <A title=caron@unidata.ucar.edu href="">John 
+  Caron</A> </DIV>
+  <DIV ><B>Sent:</B> Tuesday, June 10, 2003 5:15 
+AM</DIV>
+  <DIV ><B>Subject:</B> Re: Best strategy for long-time 
+  series</DIV>
+  <DIV><BR></DIV>Jean-Francois, 
+  <P>You have touched on a problem that we in the development group haven't yet 
+  developed much expertise in.&nbsp; I would like to rephrase the question to 
+  the group (and John Caron): 
+  <P>Can the DODS aggregation server efficiently serve up time series that 
+  require opening hundreds or thousands of files? 
+  <P>Here are various potential solutions to the problem, each with its own 
+  drawbacks: 
+  <UL>
+    <LI>Set up LAS to only allow selection of XY views while still describing 
+    the dataset as XYT so that the time selector appears.&nbsp; Then use custom 
+    code to map requests for a particular time onto a particular file name to 
+    access.&nbsp; You should get a nice usable interface but will lose the 
+    ability to create time series.&nbsp; The documentation on customizing LAS 
+    code has a section that is relevant: 
+    <P><BR><A 
+    href="">http://ferret.pmel.noaa.gov/Ferret/LAS/Documentation/manual/customize.html#Customizing_LAS_code</A> 
+
+    <P>Clearly, I'll need to create an FAQ that addresses your problem more 
+    specifically. <BR>&nbsp; </P>
+    <LI>Create files that contain more than a single time step and aggregate 
+    those. 
+    <P><BR>I suspect that the DODS aggregation server is slow in part because it 
+    is being asked to do&nbsp; file IO on thousands of files when you ask for a 
+    time series.&nbsp; If this is the case, creating yearly or even monthly 
+    files out of your snapshots and then stringing those together with 
+    aggregation should solve the problem.&nbsp; The drawback here is that you 
+    have to reformat your data. <BR>&nbsp; </P>
+    <LI>Any other suggestions out there? </LI></UL>
+  <P><BR>-- Jon <BR>&nbsp; <BR>&nbsp; 
+  <P>The advantage of this 
+  <P>Jean-Francois PIOLLE wrote: 
+  <BLOCKQUOTE TYPE="CITE">I would like to serve with LAS a long time series of 
+    SST maps over <BR>atlantic : we have up to 8 maps/a day (every 3 hours but 
+    some are <BR>sometimes missing). This time series is daily updated with new 
+    maps. So <BR>far, we have more than 4500 netCDF map files to serve. <BR>I 
+    tried to serve them through a DODS aggregated server and set up the <BR>LAS 
+    (v6.0) to access the data through this DODS server. But it appears <BR>then 
+    that the first access to a map (actually the first access to a DODS 
+    <BR>dataset) is really slow, exceeding the LAS default time-out. This is 
+    <BR>because (I guess) each time the DODS catalog is updated, a DODS dataset 
+    <BR>has to be re-aggregated and this first step is very time-consumming. 
+    <BR>My question is : is DODS the best strategy to serve a long time-series 
+    <BR>through LAS?&nbsp; It seems that a Ferret descriptor file can't be used 
+    here <BR>since it is limited to 500 files. What other strategy? I guess many 
+    <BR>people have already experienced this problem... 
+    <P>regards 
+    <P>Jean-francois Piolle 
+    <P>-- <BR>------------------------------------------------------------- 
+    <BR>Jean-Francois PIOLLE <BR>CERSAT&nbsp; French ERS Processing and 
+    Archiving Facility <BR>IFREMER <BR>BP70 <BR>29280 Plouzane <BR>FRANCE 
+    <P>Tel.:&nbsp; (+33) 2 98 22 46 91&nbsp;&nbsp; email: jfpiolle@ifremer.fr 
+    <BR>Fax:&nbsp;&nbsp; (+33) 2 98 22 45 33&nbsp;&nbsp; WWW:&nbsp;&nbsp; <A 
+    href="">http://www.ifremer.fr/cersat</A> 
+    <P>-------------------------------------------------------------</P></BLOCKQUOTE></BLOCKQUOTE>
+</td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00124" href="msg00124.html">Best strategy for long-time series</a></strong>
+<ul><li><em>From:</em> Jean-Francois PIOLLE</li></ul></li>
+<li><strong><a name="00127" href="msg00127.html">Re: Best strategy for long-time series</a></strong>
+<ul><li><em>From:</em> Jonathan Callahan</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00127.html">Re: Best strategy for long-time series</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00129.html">Re: Best strategy for long-time series</a></strong>
+</li>
+
+</UL>
+<center>[<a href="msg00127.html">Thread Prev</a>][<a href="msg00129.html">Thread Next</a>][<A HREF="threads.html#00128">Index</A>]</center>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<hr>
+<font size=-1>
+<address>
+<a href="http://www.doc.gov">Dept of Commerce</a> / 
+<a href="http://www.noaa.gov">NOAA</a> /
+<a href="http://www.oar.noaa.gov">OAR</a> /
+<a href="http://www.pmel.noaa.gov">PMEL</a> /
+<a href="http://tmap.pmel.noaa.gov">TMAP</a> <br> <a href="http://ferret.pmel.noaa.gov/Ferret/LAS/contact_us.htm">Contact Us</a> | <a href="http://www.noaa.gov/privacy.html">Privacy Policy</a> | <a href="http://www.noaa.gov/disclaimer.html">Disclaimer</a> | <a href="accessibility.html">Accessibility Statement</a> 
+</address>
+</font>
+<!--X-User-Footer-End-->
+</body>
+</html>

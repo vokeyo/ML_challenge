@@ -1,0 +1,586 @@
+  United States Environmental Protection Agency
+
+Prevention, Pesticides and Toxic Substances (7101)
+
+EPA 712-C-96-040 August 1996
+
+Product Properties Test Guidelines
+
+OPPTS 830.7570
+Partition Coefficient      ( n -Octanol/Water), Estimation By Liquid Chromatography
+
+
+Introduction
+
+This guideline is one of a series of test guidelines that have been developed by the Office of Prevention, Pesticides and Toxic Substances, United States Environmental Protection Agency for use in the testing of pesticides and toxic substances, and the development of test data that must be submitted to the Agency for review under Federal regulations.
+
+The Office of Prevention, Pesticides and Toxic Substances (OPPTS) has developed this guideline through a process of harmonization that blended the testing guidance and requirements that existed in the Office of Pollution Prevention and Toxics (OPPT) and appeared in Title 40, Chapter I, Subchapter R of the Code of Federal Regulations (CFR), the Office of Pesticide Programs (OPP) which appeared in publications of the National Technical Information Service (NTIS) and the guidelines published by the Organization for Economic Cooperation and Development (OECD).
+
+The purpose of harmonizing these guidelines into a single set of OPPTS guidelines is to minimize variations among the testing procedures that must be performed to meet the data requirements of the U. S. Environmental Protection Agency under the Toxic Substances Control Act (15 U.S.C. 2601) and the Federal Insecticide, Fungicide and Rodenticide Act (7 U.S.C. 136,  et seq. ).
+
+Final Guideline Release:  This document is available from the U.S. Government Printing Office, Washington, DC 20402 on  The Federal Bulletin Board . By modem dial 202-512-1387, telnet and ftp: fedbbs.access.gpo.gov (IP 162.140.64.19), internet: http://fedbbs.access.gpo.gov, or call 202-512-0132 for disks or paper copies.  This guideline is available in ASCII and PDF (portable document format) from the EPA Public Access Gopher (gopher.epa.gov) under the heading ``Environmental Test Methods and Guidelines.''
+
+
+
+OPPTS 830.7570 Partition coefficient ( n -octanol/water), estimation byliquid chromatography.
+
+(a)  Scope _(1)  Applicability.   This guideline is intended to meet testing requirements of both the Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) (7 U.S.C. 136,  et seq. ) and the Toxic Substances Control Act (TSCA) (15 U.S.C. 2601).
+
+(2)  Background.  The source materials used in developing this harmonized OPPTS test guideline are the OPPT guideline under 40 CFR 796.1570 PartitionCoefficient (n-Octanol/water)_Estimation by liquid chromatography, OPP guideline 63ÿ0911 Octanol/water partition coefficient (Pesticide Assessment Guidelines, Subdivision D: Product Chemistry, EPA Report 540/9ÿ0982ÿ09018, October 1982), and OECD guideline 117 Partition Coefficient (n-octanol/water), High Performance Liquid Chromatography (HPLC) Method. 
+
+(b)  Introduction.  (1) The partition coefficient (P) is defined as the ratio of the equilibrium concentrations of a dissolved substance in a two-phase system consisting of two largely immiscible solvents. The partition coefficient being the quotient of two concentrations, is dimensionless and is usually given in the form of its logarithm to base ten. In the case of  n -octanol and water,
+
+         P  ow  = C  n-octanol /C  water 
+
+(2) P  ow  is a key parameter in studies of the environmental fate of chemical substances. A highly-significant relationship between the P  ow  of substances and their bioaccumulation in fish has been shown. It has also been shown that P  ow  is a useful parameter in the prediction of adsorption on soil and sediments and for establishing quantitative structure-activity relationships for a wide range of biological effects.
+
+(3) P  ow  values in the range log P  ow  between ÿ092 and 4 can be experimentally determined by the shake-flask method (OPPTS 830.7550). P  ow values in the range log P  ow   between 0 and 6 can be estimated using high performance liquid chromatography (HPLC) under paragraphs (f)(1) through (f)(4) of this guideline. The HPLC method requires a preliminary estimation of P  ow , generally done through calculation. Calculation methods are briefly discussed under paragraph (d)(1)(i) of this guideline.
+
+(c)  Principle of the method.  (1)(i) HPLC is performed on analytical columns packed with a commercially available solid phase containing long hydrocarbon chains (e.g. C  8 , C  18 ) chemically bound onto silica. Chemicals injected onto such a column move along it by partitioning between the mobile solvent phase and the hydrocarbon stationary phase. The chemicals are retained in proportion to their hydrocarbon-water partition coefficient, with water-soluble chemicals eluted first and oil-soluble chemicals last. This enables the relationship between the retention time on a reverse-phase column and the  n -octanol/water partition coefficient to be established. The partition coefficient is deduced from the capacity factor k, given by the expression
+
+         k = (t  R  ÿ09 t  0 )/t  0 
+
+where t  R  is the retention time of the test substance, and t  0  is the dead-time, i.e. the average time a solvent molecule needs to pass the column. Quantitative analytical methods are not required and only the determination of retention times is necessary. If standard reference compounds are available and standard experimental conditions are used, the HLPC method can be performed faster than shake-flask method under OPPTS 830.7550.
+(ii) The HPLC method enables partition coefficients to be estimated in the log P  ow   range between 0 and 6. The method is not applicable to strong acids and bases, metal complexes, substances which react with the eluent, or surface-active agents. Measurements should be made on ionizable substances in their nonionized form (free acid or free base) only by using an appropriate buffer with a pH below the pK for a free acid or above the pK for a free base (e.g. phosphoric acid for pH = 2 and 0.01ÿ090.02 M phosphate buffer for pH = 7.5).
+
+(iii) The HPLC method is less sensitive to the presence of impurities in the test substance than the shake-flask method. Nevertheless, in some cases impurities can make the interpretation of the results difficult due to uncertainty in peak assignments. For mixtures which result in an unresolved band, upper and lower limits of log P should be stated (see paragraph (f)(3) of this guideline).
+
+(2)  Information on the test substance.  The structural formula and the dissociation constant should be known before using the method. Information on solubility and hydrolysis characteristics is useful.
+
+(3)  Repeatability and accuracy.  In order to increase the confidence in the measurement, duplicate determinations must be made. The values of log P  ow  derived from the different measurements should fall within a range of    ÿ1B  0.1 log units. An interlaboratory comparison test has shown that with the HPLC method log P  ow  values can be obtained to within    ÿ1B  0.5 units of the shake-flask values (under paragraph (f)(5) of this guideline). Other comparisons can be found under paragraphs (f)(3), (f)(4), (f)(6), (f)(7), and (f)(8) of this guideline. Correlation graphs based on structurally related reference compounds give the most accurate results (under paragraph (f)(9) of this guideline) 
+
+(4)  Reference compounds.  (i) In order to correlate the measured capacity factor k of a compound with its P  ow , a calibration graph using at least 6 points has to be established. It is up to the user to select the appropriate reference compounds. It is preferable that these should be structurally related to the test substance. Whenever possible, at least one reference compound should have a P  ow  above that of the test substance, and another a P  ow   below that of the test substance. For log P  ow  values below 4, the calibration can be based on data obtained by the shake flask method. For log P  ow  values above 4, the calibration can be based on literature values if they correspond to calculated values.
+
+(ii) Extensive lists of log P  ow  values for many groups of chemicals are available (under paragraphs (f)(10) and (f)(11) of this guideline). If data on the partition coefficients of structurally related compounds are not available, a more general calibration, established with other reference compounds, may be used. Recommended reference compounds and their P  ow  values are listed in the following table 1. For ionizable substances the values given apply to the nonionized form. The values were checked for plausibility and quality during an interlaboratory comparison test.
+
+
+
+I95 Table 1._Recommended Reference Compounds
+
+Reference substance
+
+log P  ow 
+
+pKa
+
+Reference substance
+
+log P  ow 
+
+pKa
+
+
+
+2-Butanone
+
+.3
+
+ 
+
+3-Chlorobenzoic acid
+
+.7
+
+.82
+
+4-Acetylpyridine
+
+.5
+
+ 
+
+®MDBU¯®MDNM¯Toluene
+
+®MDBU¯®MDNM¯2.7
+
+®MDBU¯®MDNM¯  
+
+Aniline
+
+.9
+
+ 
+
+®MDBU¯®MDNM¯1-Naphthol
+
+®MDBU¯®MDNM¯2.7
+
+®MDBU¯®MDNM¯9.34
+
+Acetanilide
+
+.0
+
+ 
+
+®MDBU¯®MDNM¯2,3-Dichloroaniline
+
+®MDBU¯®MDNM¯2.8
+
+®MDBU¯®MDNM¯  
+
+Benzyl alcohol
+
+.1
+
+ 
+
+®MDBU¯®MDNM¯Chlorobenzene
+
+®MDBU¯®MDNM¯2.8
+
+®MDBU¯®MDNM¯  
+
+4-Methoxyphenol
+
+.3
+
+0.26
+
+Allyl phenyl ether
+
+®MDBU¯®MDNM¯2.9
+
+®MDBU¯®MDNM¯  
+
+Phenoxyacetic acid
+
+.4
+
+.12
+
+®MDBU¯®MDNM¯Bromobenzene
+
+®MDBU¯®MDNM¯3.0
+
+®MDBU¯®MDNM¯  
+
+Phenol
+
+.5
+
+.92
+
+®MDBU¯®MDNM¯Ethylbenzene
+
+®MDBU¯®MDNM¯3.2
+
+®MDBU¯®MDNM¯  
+
+2,4-Dinitrophenol
+
+.5
+
+.96
+
+®MDBU¯®MDNM¯Benzophenone
+
+®MDBU¯®MDNM¯3.2
+
+®MDBU¯®MDNM¯  
+
+Benzonitrile
+
+.6
+
+ 
+
+®MDBU¯®MDNM¯4-Phenyl phenol
+
+®MDBU¯®MDNM¯3.2
+
+®MDBU¯®MDNM¯9.54
+
+Phenylacetonitrile
+
+.6
+
+ 
+
+®MDBU¯®MDNM¯Thymol
+
+®MDBU¯®MDNM¯3.3
+
+®MDBU¯®MDNM¯ 
+
+4-Methylbenzyl alcohol
+
+.6
+
+ 
+
+®MDBU¯®MDNM¯1,4-Dichlorobenzene
+
+®MDBU¯®MDNM¯3.4
+
+®MDBU¯®MDNM¯  
+
+Acetophenone
+
+.7
+
+ 
+
+®MDBU¯®MDNM¯Diphenylamine
+
+®MDBU¯®MDNM¯3.4
+
+®MDBU¯®MDNM¯0.79
+
+2-Nitrophenol
+
+.8
+
+.17
+
+®MDBU¯®MDNM¯Naphthalene
+
+®MDBU¯®MDNM¯3.6
+
+®MDBU¯®MDNM¯  
+
+3-Nitrobenzoic acid
+
+.8
+
+.47
+
+®MDBU¯®MDNM¯Phenyl benzoate
+
+®MDBU¯®MDNM¯3.6
+
+®MDBU¯®MDNM¯  
+
+4-Chloraniline
+
+.8
+
+.15
+
+®MDBU¯®MDNM¯Isopropylbenzene
+
+®MDBU¯®MDNM¯3.7
+
+®MDBU¯®MDNM¯  
+
+Nitrobenzene
+
+.9
+
+ 
+
+®MDBU¯®MDNM¯2,4,6-Trichlorophenol
+
+®MDBU¯®MDNM¯3.7
+
+®MDBU¯®MDNM¯6.0
+
+Cinnamic alcohol
+
+.9
+
+ 
+
+®MDBU¯®MDNM¯Biphenyl
+
+®MDBU¯®MDNM¯4.0
+
+®MDBU¯®MDNM¯  
+
+Benzoic acid
+
+.9
+
+.19
+
+®MDBU¯®MDNM¯Benzyl benzoate
+
+®MDBU¯®MDNM¯4.0
+
+®MDBU¯®MDNM¯  
+
+p-Cresol
+
+.9
+
+0.17
+
+®MDBU¯®MDNM¯2,4-Dinitro-6- sec -butyl phenol
+
+®MDBU¯®MDNM¯4.1
+
+®MDBU¯®MDNM¯  
+
+cis -Cinnamic acid
+
+.1
+
+.89
+
+®MDBU¯®MDNM¯1,2,4-Trichlorobenzene
+
+®MDBU¯®MDNM¯4.2
+
+®MDBU¯®MDNM¯  
+
+trans -Cinnamic acid
+
+.1
+
+.44
+
+®MDBU¯®MDNM¯Dodecanoic acid
+
+®MDBU¯®MDNM¯4.2
+
+®MDBU¯®MDNM¯  
+
+Anisole
+
+.1
+
+ 
+
+®MDBU¯®MDNM¯Diphenyl ether
+
+®MDBU¯®MDNM¯4.2
+
+®MDBU¯®MDNM¯  
+
+Methyl benzoate
+
+.1
+
+ 
+
+®MDBU¯®MDNM¯Phenanthrene
+
+®MDBU¯®MDNM¯4.5
+
+®MDBU¯®MDNM¯  
+
+Benzene
+
+.1
+
+ 
+
+®MDBU¯®MDNM¯ n -Butylbenzene
+
+®MDBU¯®MDNM¯4.6
+
+®MDBU¯®MDNM¯  
+
+3-Methylbenzoic acid
+
+.4
+
+.27
+
+®MDBU¯®MDNM¯Fluoranthene
+
+®MDBU¯®MDNM¯4.7
+
+®MDBU¯®MDNM¯  
+
+4-Chlorophenol
+
+.4
+
+.1
+
+®MDBU¯®MDNM¯Dibenzyl
+
+®MDBU¯®MDNM¯4.8
+
+®MDBU¯®MDNM¯  
+
+Trichloroethene
+
+.4
+
+ 
+
+®MDBU¯®MDNM¯2,6-Diphenylpyridine
+
+®MDBU¯®MDNM¯4.9
+
+®MDBU¯®MDNM¯  
+
+Atrazine
+
+.6
+
+ 
+
+®MDBU¯®MDNM¯Triphenylamine
+
+®MDBU¯®MDNM¯5.7
+
+®MDBU¯®MDNM¯  
+
+Ethyl benzoate
+
+.6
+
+ 
+
+®MDBU¯®MDNM¯DDT
+
+®MDBU¯®MDNM¯6.2
+
+®MDBU¯®MDNM¯  
+
+2,6-Dichlorobenzonitrile
+
+.6
+
+ 
+
+(d)  Description of the method _(1)  Preliminary estimate of the partition coefficient.  The partition coefficient of the test substance is estimated preferably by using a calculation method or, where appropriate, by using the ratio of the solubilities of the test substance in the pure solvents (under paragraph (f)(12) of this guideline).
+
+(i)  P  ow   calculation methods.  This discussion provides a short introduction to the calculation of P  ow . For further information the reader is referred to paragraphs (f)(15) and (f)(16) of this guideline. Calculated values of P  ow  are used for:
+
+(A)  Deciding which experimental method to use: Shake flask method for log P  ow  between ÿ092 and 4 and HPLC method for log P  ow  between 0 and 6.
+
+(B) Selecting conditions to be used in HPLC (reference compounds, methanol/water ratio).
+
+(C) Checking the plausibility of values obtained through experimental methods.
+
+(D) Providing an estimate when experimental methods cannot be applied.
+
+(ii)  Principle of calculation methods.  Calculation methods are based on the theoretical fragmentation of the molecule into suitable substructures for which reliable log P  ow  increments are known. The log P  ow   is obtained by summing the fragment values and the correction terms for intramolecular interactions. Lists of fragment constants and correction terms are available under paragraphs (f)(15) through (f)(20) of this guideline; some are regularly updated (under paragraph (f)(17) of this guideline).
+
+(iii)  Reliability of calculated values.  In general, the reliability of calculation methods decreases as the complexity of the compound under study increases. In the case of simple molecules of low molecular weight and with one or two functional groups, a deviation of 0.1 to 0.3 log P  ow  units between the results of the different fragmentation methods and the measured value can be expected. The margin of error will depend on the reliability of the fragment constants used, the ability to recognize intramolecular interactions (e.g. hydrogen bonds) and the correct use of correction terms. In the case of ionizing compounds the charge and degree of ionization must be taken into consideration (under paragraph (f)(24) of this guideline).
+
+(iv)  Fujita-Hansch   p -method.   The hydrophobic substituent constant,   p , originally introduced under paragraph (f)(21) of this guideline, is defined as:
+
+         p   X  = log P  ow (PhX) ÿ09 log P  ow (PhH), 
+
+where PhX is an aromatic derivative and PhH the parent compound.  For example
+
+  p   Cl  = log P  ow (C  6 H  5 Cl) ÿ09 log P  ow (C  6 H  6 ) = 2.84 ÿ09 2.13 = 0.71
+
+The   p -method is primarily of interest for aromatic compounds. Values of   p  for a large number of substituents are available (see paragraphs (f)(18) and (f)(19) of this guideline).
+
+(v)  Rekker method.    Using the Rekker method (under paragraph (f)(22) of this guideline) the log P  ow  value is calculated as:
+
+Note: For the electronic version of this equation, see the Adobe PDF file.  The equation also appears in the paper copy furnished from the Public Docket.
+
+
+where a  i  is the number of a given fragment present in the molecule and f  i  is the log P  ow  increment of the fragment. The interaction terms can be expressed as an integral multiple of one single constant C  m  (so-called ``magic constant''). The fragment constants f  i  and C  m  have been determined from a list of 1,054 experimental P  ow  values of 825 compounds using multiple regression analysis (under paragraphs (f)(20) and (f)(22) of this guideline). The determination of the interaction terms is carried out according to set rules (under paragraphs (f)(20), (f)(22), and (f)(23) of this guideline).
+
+(vi)  Hansch-Leo method.    Using the Hansch and Leo method (under paragraph (f)(18) of this guideline), the log P  ow  value is calculated as:
+
+Note: For the electronic version of this equation, see the Adobe PDF file.  The equation also appears in the paper copy furnished from the Public Docket.
+
+
+where f  i  is a fragment constant, F  j  a correction term (factor), a  i  and b  j  the corresponding frequency of occurence. Lists of atomic and group fragmental values and of correction terms F  j  were derived by trial and error from experimental P  ow  values. The correction terms have been divided into several different classes (under paragraphs (f)(15) and (f)(18) of this guideline). Software packages have been developed to take into account all the rules and correction terms (under paragraph (f)(17) of this guideline).
+
+(vii)  Combined method.    The calculation of log P  ow   of complex molecules can be considerably improved, if the molecule is dissected into larger substructures for which reliable log P  ow   values are available, either from tables under paragraphs (f)(3) and (f)(4) of this guideline or by existing measurements. Such fragments (e.g. heterocycles, anthraquinone, azobenzene) can then be combined with the Hansch-  p -values or with Rekker or Leo fragment constants.
+
+(viii)  Remarks.  (A) The calculation methods are only applicable to partly or fully ionized compounds when the necessary correction factors are taken into account.
+
+(B) If the existence of intramolecular hydrogen bonds can be assumed, the corresponding  correction terms (~approximately +0.6 to +1.0 log P  ow  units) must be added (under paragraph (f)(15) of this guideline). Indications on the presence of such bonds can be obtained from stereo models or spectroscopic data.
+
+(C) If several tautomeric forms are possible, the most likely form should be used as the basis of the calculation.
+
+(D) The revisions of lists of fragment constants should be followed carefully.
+
+(2)  Apparatus.  A liquid-phase chromatograph, fitted with a pulse-free pump and a suitable detection device is required. The use of an injection valve with injection loops is recommended. The presence of polar groups in the stationary phase may seriously impair the performance of the HPLC column. Therefore, stationary phases should have a minimal percentage of polar groups (see paragraph (f)(13) of this guideline). Commercial microparticulate reverse-phase packings or ready-packed columns can be used. A guard column may be positioned between the injection system and the analytical column.
+
+(3)  Mobile phase.  (i) HPLC-grade methanol and distilled water are used to prepare the eluting solvent, which is degassed before use. Isocratic elution should be employed. Methanol/water ratios with a minimum water content of 25 percent should be used. Typically a 3:1 (v/v) methanol/water mixture is satisfactory for eluting compounds with a log P of 6 within an hour, at a flow rate of 1 mL/min. For compounds with a log P above 6 it may be necessary to shorten the elution time (and those of the reference compounds) by decreasing the polarity of the mobile phase or the column length.
+
+(ii) The test substance and the reference compounds should be soluble in the mobile phase in sufficient concentration to allow their detection. Additives may be used with the methanol/water mixture in exceptional cases only, since they will change the properties of the column. In these cases a separate column of the same type should be used. If methanol/water is not appropriate, other organic solvent/water mixtures can be used, e.g. ethanol/water and acetonitrile/water.
+
+(iii) The pH of the eluent is critical for ionizable compounds. It should be within the operating pH range of the column, usually between 2 and 8. Buffering is recommended. Care must be taken to avoid salt precipitation and column deterioration which occur with some organic phase/buffer mixtures. HPLC measurements with silica-based stationary phases above pH 8 are not advisable since the use of an alkaline mobile phase may cause rapid deterioration in the performance of the column.
+
+(4)  Solutes.  The test and reference compounds should be the purest available. Compounds to be used for test or calibration purposes are dissolved in the mobile phase if possible.
+
+(5)  Test conditions.  The temperature during the measurements should not vary by more than    ÿ1B  2 K.
+
+(6)  Determination of dead time t  0 . The dead time t  0  can be measured by using unretained organic compounds (e.g. thiourea or formamide). It can also be derived from the retention times measured for a set of approximately seven members of a homologous series (e.g.  n -alkylmethyl ketones) (under paragraph (f)(14) of this guideline). The retention times t  R(nc + 1)  are plotted against t  R(nc) , where n  c  is the number of carbon atoms. A straight line,
+
+    t  R(nc + 1)  = At  R(nc)  + (1 ÿ09 A)t  0 
+
+is obtained, where A, representing k  (n  c + 1) /k  (nc) , is constant. The dead time t  0  is obtained from the intercept (1 ÿ09 A)t  0  and the slope A.
+
+(7)  Calibration graph.   The next step is to plot a correlation graph of log k versus log P for appropriate reference compounds with log P values near the value expected for the test substance. In practice, from 5 to 10 reference compounds are injected simultaneously. The retention times are determined, preferably on a recording integrator linked to the detection system. The corresponding logarithms of the capacity factors, log k, are calculated and plotted as a function of log P. The calibration is performed at regular intervals, at least once daily, so that account can be taken of possible changes in column performance.
+
+(8)  Determination of the P  ow   of the test substance.  The test substance is injected in the smallest quantity possible. The retention time is determined in duplicate. The partition coefficient of the test substance is obtained by interpolation of the calculated capacity factor on the calibration graph. Extrapolation is necessary for very low and very high partition coefficients. In these cases, special attention must be given to the confidence limits of the regression line.
+
+(e)  Test report.  The following should be included in the report:
+
+(1) Test and reference substances, and their purity.
+
+(2) Description of equipment and operating conditions: Analytical column, guard column.
+
+(3) Mobile phase, means of detection, temperature range, pH.
+
+(4) Elution profiles.
+
+(5) Dead time and how it was measured.
+
+(6) Quantities of test and references substances introduced in the column.
+
+(7) Retention data and literature log P values for reference compounds used in calibration.
+
+(8) Details on fitted regression line (log k versus log P).
+
+(9) Preliminary estimate of the partition coefficient and the method used, and, if a calculation method was used, its full description including identification of the data base and detailed information on the choice of fragments.
+
+(10) Average retention data and interpolated log P value for the test substance.
+
+(f)  References.  The following references should be consulted for additional background material on this test guideline.
+
+(1) Eadsforth, C.V. and P. Moser.  Chemosphere  12:1459 (1983).
+
+(2) Eadsforth, C.V.  Pesticide Science  17:311 (1986).
+
+(3) Ellgehausen, H. et al.  Pesticide Science  12:219 (1981).
+
+(4) McDuffie, B.  Chemosphere  10:73 (1981).
+
+(5) Klein W. et al.  Chemosphere  17:361 (1988).
+
+(6) Renberg, L.O. et al.   Chemosphere  9:683 (1980).
+
+(7) Hammers, W.E. et al.  Journal of Chromatography  247:1 (1982).
+
+(8) Haky, J.E. and A.M. Young.  Journal of Liquid Chromatography  7:675 (1984).
+
+(9) Fujisawa, S. and E. Masuhara.  Journal of Biomedical Materials Research  15:787 (1981).
+
+(10) Hansch, C. and A.J. Leo.  Substituent Constants for Correlation Analysis in Chemistry and  Biology , Wiley, New York (1979).
+
+(11) Pomona College Medical Chemistry Project, C. Hansch, Chairman; A.J. Leo, Director. Log P and Parameter Database: A tool for the quantitative prediction of bioactivity. Available from Pomona College, Claremont, CA 91711 (1982).
+
+(12) JuÿAE4bermann, O. Verteilen und Extrahieren, in Methoden der Organischen Chemie (Houben Weyl), Band I/I, Allgemeine laboratoriumpraxis (edited by E. MuÿAE4ller), pp. 223ÿ09239, Georg Thieme Verlag, Stuttgart (1958).
+
+(13) Rekker, R.F. and H.M. de Kort,  European Journal of Medicinal Chemistry  14:479 (1979).
+
+(14) Berendsen, G.E. et al.  Journal of Liquid Chromatography  3:1669 (1980).
+
+(15) Lyman, W.J. W.F. Reehl, and D.H. Rosenblatt (Eds.),  Handbook of Chemical Property Estimation Methods , McGraw-Hill, New York (1982).
+
+(16) Dunn, W.J., J.H. Block and R.S. Pearlman (Ed.),  Partition Coefficient, Determination and Estimation , Pergamon, Elmsford (New York) and Oxford (1986).
+
+(17) Pomona College, Medicinal Chemistry Project, Claremont, CA 91711, USA, Log P Database and Medical Chemistry Software (Program CLOGPÿ093).
+
+(18) Hansch, C. and A.J. Leo,  Substituent Constants for Correlation Analysis in Chemistry and Biology  Wiley, New York (1979).
+
+(19) Leo, A. et al.  Chemical Reviews  71:525 (1971).
+
+(20) Rekker, R.F. and H.M. de Kort.  European Journal of Medicinal Chemistry  14:479 (1979).
+
+(21) Fujita, T. et al.  Journal of the American Chemical Society  86:5175 (1964).
+
+(22) Rekker, R.F.  The Hydrophobic Fragmental Constant , Pharmacochemistry Library, vol. 1, Elsevier, New York (1977).
+
+(23) Eadsforth, C.V. and P. Moser.  Chemosphere  12:1459 (1983).
+
+(24) Scherrer, R.A. American Chemical Society Symposium Series no. 255, p. 225, American Chemical Society,  Washington, DC (1984).
+
+(25)  Organization for Economic Cooperation and Development , Guidelines for The Testing of Chemicals, OECD 107, Partition Coefficient (n-octanol/water), High Performance Liquid Chromatography (HPLC) Method, OECD, Paris, France.
+
+

@@ -1,0 +1,171 @@
+Douglas Isbell
+Headquarters, Washington, DC                     January 9,1997
+(Phone: 202/358-1753)
+
+John Bluck
+Ames Research Center, Mountain View, CA
+(Phone: 415/604-5026)
+
+
+RELEASE: 97-7
+
+SOFTWARE FOR FIRST NEW MILLENNIUM
+MISSION CLOSEST YET TO "HAL 9000"
+
+    As the fictional birthdate for the HAL 9000 main computer 
+from the landmark science fiction tale "2001: A Space Odyssey" 
+approaches, NASA is preparing the most advanced spacecraft 
+artificial intelligence software yet developed for launch 
+aboard the New Millennium program's Deep Space One (DS1) 
+spacecraft.
+
+    According to the 1968 book by highly acclaimed author 
+Arthur C. Clarke, Hal "became operational" on January 12, 1997, 
+in Urbana, IL, home of the University of Illinois.  It then 
+served as the "brain and nervous system" of the 400-foot-long 
+spaceship Discovery that carried astronauts on a thought-
+provoking voyage to the planet Saturn (changed to Jupiter in 
+the movie version).
+
+    The robotic DS1 spacecraft carries no crew and is much 
+smaller than the spaceship of "2001," at a total mass of 945 
+pounds, but its computer artificial intelligence program, known 
+as the Remote Agent, shares the same basic goal of operating 
+and controlling a spacecraft with minimal human assistance.
+
+    "We don't want to give the impression that Remote Agent is 
+an artificial lifeform," said Kanna Rajan, a DS1 computer 
+scientist at NASA's Ames Research Center, Mountain View, CA.  
+"However, the software will logically reason about the state of 
+the spacecraft, and the Remote Agent will consider all of the 
+consequences of its actions."
+
+    Following its scheduled July 1998 launch, DS1 will fly by 
+the asteroid McAuliffe in 1999, and the comet West-Kohoutek-
+Ikemura and the planet Mars in 2000.  DS1 is thefirst scheduled 
+mission in NASA's New Millennium program, which is designed to 
+test and validate cutting edge technology for the systems and 
+instruments on-board future NASA science spacecraft.  The 
+Remote Agent is being developed in a collaborative effort 
+between Ames and the Jet Propulsion Laboratory (JPL), Pasadena, 
+CA.
+
+    "The goals of the Remote Agent development are two-fold:  
+to reduce the cost of exploration, and to extend exploration to 
+realms of space where no ground-controlled craft could 
+venture," said Dr. Bob Rasmussen, a computer autonomy expert at 
+JPL.
+
+    "Remote Agent should enable future spacecraft software to 
+be more easily designed," said Dr. Barney Pell, another DS1 
+computer scientist at Ames.  "The first version of Remote Agent 
+will be the hardest to write. After that, we can copy it for 
+the next mission and make improvements in it rather than 
+developing the software from scratch."
+
+    "This is made possible by model-driven software," Rasmussen 
+explained.  "Models of the spacecraft's components and 
+environment are given to the Remote Agent and it figures out 
+the necessary detailed operating procedures on its own.  Only 
+the models need to be updated for each new spacecraft."
+
+    Given NASA's continuing efforts to develop many smaller, 
+less expensive science spacecraft, "we also need to perform 
+each mission with less than a dozen ground controllers instead 
+of the hundreds of people now needed to run a major planetary 
+science mission," said Dr. Brian C. Williams, DS1 team leader 
+for the development of the Remote Agent fault protection 
+software.  "The large distances inherent in planetary 
+exploration result in communications that can be too slow 
+during emergencies," Pell added, "and sometimes your 
+communication pathway is blocked when a planet is between the 
+spacecraft and Earth."
+
+    Three parts of Remote Agent will work together to 
+demonstrate that it can autonomously operate a spacecraft:  
+High Level Planning and Scheduling, Model-based Fault 
+Protection (also called Livingstone) and Smart Executive.  
+"Some estimates show a 60 percent reduction in mission costs 
+using Remote Agent.  The software would replace a large section 
+of the human spacecraft control team back on Earth," said Dr. 
+Nicola Muscettola, team leader for the planning software. 
+
+    The High Level Planning and Scheduling part of Remote Agent 
+will constantly look ahead to the schedule for several weeks of 
+mission activities.  "Planner is mostly concerned about 
+scheduling spacecraft activities and distributing resources 
+such as electrical power," Muscettola said.  "The Planner 
+allows a small spacecraft control team on Earth to command the 
+spacecraft more effectively by sending goals instead of 
+detailed instructions to DS1."
+
+    "After DS1 we want to work on even more autonomous 
+spacecraft that could reconfigure themselves.  If some part of 
+such a spacecraft performed differently during the mission than 
+expected, the craft would be able to detect this and change 
+software models and algorithms to self-adapt," Muscettola 
+added. 
+
+    "Future systems also should be able to learn about their 
+environment and act in partnership with scientists to find and 
+analyze new discoveries," said Dr. Guy Man, the co-leader of 
+the New Millennium Autonomy Integrated Product Development Team 
+at JPL.
+
+    The fault protection portion of the Remote Agent, known as 
+"Livingstone," functions as the mission's virtual chief 
+engineer, according to Dr. P. Pandurang Nayak of Ames.  "If 
+something should go wrong with the spacecraft, Livingstone 
+would use the computer model of how the spacecraft should be 
+behaving to diagnose failures and suggest recoveries," Nayak 
+said.
+
+    Livingstone was named for David Livingstone (1813-1873), 
+the 19th century medical missionary and explorer.  "Like David 
+Livingstone, the Livingstone computer program is concerned with 
+exploration and the health of explorers," Nayak said.
+
+    The third part of the Remote Agent software, Smart 
+Executive, will act like an "executive officer" of the mission, 
+issuing general commands to fly DS1.  "The Executive has to be 
+able to execute the plans that are produced by the Planner and 
+Livingstone," said Pell.  "If the Planner had to worry about 
+every single detail, it would be hard pressed to produce a 
+plan.  So, the Executive takes care of the details."
+
+    The Executive also can receive a plan directly from ground 
+controllers.  "However, if the ground's plan won't work, the 
+Executive can say, 'Sorry, Ground, I can't do that,' " Pell 
+said, comparing Remote Agent to Hal.  "This can actually be a 
+big help to ground controllers who must currently spend 
+enormous effort double-checking every command," said Rasmussen.
+
+    "In the event that the Remote Agent won't cooperate under 
+some unusual circumstance, we will be developing a surgery mode 
+where ground control can really get into Remote Agent and do a 
+lobotomy," Pell added.  "Remote Agent may someday lead to 
+software that would be incorporated into a space robot that 
+would be as intelligent as HAL 9000."
+
+    The New Millennium program "has accelerated technology 
+development in spacecraft automation by at least ten years," 
+Man said.  "The Remote Agent will open up new exploration 
+opportunities for us, allowing us to really begin the in-situ 
+era of space science." 
+
+    The ultimate goal of the New Millennium program, according 
+to Wesley Huntress, Associate Administrator for Space Science 
+at NASA Headquarters, is to generate and validate technology 
+"to allow us to build a fleet of these smart spacecraft, called 
+spacecraft constellations or armadas, and let them explore 
+different places, share their findings, and even divide amongst 
+themselves the work of achieving complex scientific goals. 
+Systems like the Remote Agent will be crucial supporting 
+components of this vision."  
+
+    The New Millennium program is managed by JPL for NASA's 
+Office of Space Science and Office of Mission to Planet Earth, 
+Washington, DC.
+
+                             -end-
+

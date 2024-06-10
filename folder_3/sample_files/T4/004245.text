@@ -1,0 +1,207 @@
+
+5. THE UNSEEN.
+
+Quantum theory represents our knowledge about the unseen 
+system being probed by means of a mathematical structure 
+called the quantum state. This state normally evolves 
+continuously in accordance with a deterministic law that is 
+closely connected to the "laws of nature" used in classical 
+physics. However, at certain instants this orderly progression 
+is suddenly interrupted by an abrupt "quantum jump". Such a 
+jump occurs each time one of the observers gains new 
+knowledge: the jump brings the quantum state into 
+concordance with the new state of our knowledge. Thus the 
+quantum state of the system being examined represents 
+always the evolving knowledge of the community of 
+communicating observers.
+
+But how can a mathematically state represent human 
+knowledge?. Our knowledge seems to be an ephemeral and 
+ineffable vagary, whereas the mathematically described 
+states of quantum theory are precise structures that allow 
+empirically observed numbers to be computed to an 
+accuracy of one part in a hundred million.
+
+To explain this connection I need to introduce two 
+mathematical ideas: "Hilbert space", and "projection 
+operator". These names may sound intimidating, but the 
+ideas are basically simple, and understanding them will allow 
+you to grasp the essence of quantum theory.
+
+A Hilbert space is a collection of vectors, and a vector is a 
+displacement by a specified amount in a specified direction.
+Two vectors, A and B, can be added together to give a 
+vector C, which is formed by adding together the 
+displacements A and B. 
+
+Consider, for example, the displacement from the corner of a 
+room where two walls and the floor meet to a point on one of 
+these two walls. That displacement is the sum of a vertical 
+displacement up from the corner plus a horizontal 
+displacement along the wall that contains the point.
+
+If the two vectors A and B that add to give C are 
+perpendicular to each other, as in this example, then the 
+theorem of Pythagoras asserts that the square of the length 
+of A plus the square of the length of B equals the square of 
+the length of C. 
+
+This celebrated theorem is tied to the probability rules of 
+quantum theory: If C is a vector of length one (i.e., unity) and 
+A and B are two perpendicular vectors that sum to C, then 
+the square of the length of A plus the square of the length of 
+B is unity (i.e., one). The two perpendicular vectors will 
+correspond to two alternative possible outcomes of the 
+probing action, and the square of the length of A will be the 
+probability for the event associated with A to occur, and the 
+square of the length of B will be the probability for the event 
+associated with B to occur. The sum of these two 
+probabilities is unity by virtue of the theorem. This accords 
+with the fact that the probabilities associated with alternative 
+possibilities must sum to unity. 
+
+In the example of the point on the wall, the space of vectors 
+is two-dimensional: any point on the wall can be reached 
+from the corner by a sum of just two displacements, one in 
+each of the two pre-specified perpendicular directions, 
+vertical and horizontal. We can also easily visualize 
+displacements in a three-dimensional space. But it is 
+possible to consider mathematically an N-dimensional vector 
+space in which there are exactly N mutually perpendicular 
+directions, and each vector in the space is a sum of N 
+vectors, one directed along each of these N directions. We 
+allow null displacements and also negative displacements, 
+which are the same as positive displacements in the reverse 
+direction. 
+
+A set of N vectors, each perpendicular to every other one, is 
+not easy to visualize, geometrically, for large N. But if one 
+uses an algebraic approach in terms of sets of numbers, 
+then the examples of vector spaces in one, two, and three 
+dimensions are easily generalized to spaces of arbitrarily 
+large but finite dimension N. With a little more effort one can 
+even go to the case where N is infinite. Hilbert spaces 
+include the infinite-N cases, but that is a technical matter that 
+need not concern us here. It will be enough to think of simple 
+cases where N in finite.
+
+If a vector V is composed of a sum of N perpendicular 
+vectors then a generalization of the theorem of Pythagoras 
+shows that the square of the length of V is the sum of the 
+squares of the lengths of these N mutually perpendicular 
+vectors that add up to form V. 
+
+The second important concept is the idea of a projection 
+operator. A projection operator P acts on a vector V to give a 
+new vector PV. The action of P eliminates a specified subset 
+of a set of perpendicular vectors that add up to give the 
+vector V upon which it acts, but leaves unaffected the 
+remaining vectors in the sum. Thus, for example, the vector 
+V from the corner of a room to any point in the interior of the 
+room would be converted by a certain projection operator P 
+to the vector PV that is the displacement from the corner to 
+the point on the floor that lies directly under that point in the 
+room: the vertical vector is eliminated by the action of this 
+particular projection operator P. 
+
+
+That example is a very special case. For one thing the three 
+perpendicular vectors were very special, involving one 
+vertical vector and two particular horizontal ones. But one 
+can imagine replacing the room by a cubic box, and consider 
+the infinity of ways that this box could be oriented relative to 
+the room. For each of these orientations the three edges that 
+meet at a corner define three perpendicular directions. Then 
+one can go from N = 3 to arbitrary N, and select any subset 
+of the set of N perpendicular directions to be the set that is 
+not set to zero. This obviously gives a huge set of logically 
+possible projection operators P. 
+
+For each projection operator P there is a unique 
+complementary projection operator P' that does not set to 
+zero exactly the subset of the N perpendicular vectors that is 
+set to zero by P. Thus for any vector V, it is true that PV + 
+P'V = V. The vectors PV and P'V are two perpendicular 
+vectors that sum to V.
+
+Given this simple idea of a vector, and how a vector in an N 
+dimensional space can be considered to be a sum of a set of 
+N vectors, each of which is perpendicular to every other one, 
+we can now state the basic idea of quantum theory: Our 
+knowledge about the unseen system, gleaned from earlier 
+experience about things we can see, is represented, under 
+certain ideal conditions, by a vector V of unit length. This 
+vector evolves under the action of a rule called "the 
+Schroedinger equation", which alters the direction that V 
+points, but leaves its length unchanged.
+
+When the outcome of a probing action appears the vector V 
+suddenly jumps to the vector PV or to P'V, where P is the 
+projection operator associated with the probing action, and 
+P' is the complementary projection operator. The probability 
+of V jumping to PV is the square of the length of PV and the 
+probability that the jump will be to P'V is the square of the 
+length of P'V. These two probabilities add to unity, by virtue 
+of the theorem of Pythagoras. This property matches the 
+property of probabilities that their sum over any set of 
+alternative possibilities must be unity.
+
+The essential point here is that our knowledge of the unseen 
+system being probed can, according to quantum theory, be 
+associated with a vector V in a Hilbert space, and this 
+association gives simple rules for the probabilities for the 
+alternative possible outcomes of our probing action to 
+appear, once the form of the projection operator P is known.
+
+With this general picture in mind we can now return to the 
+question of how our knowledge is represented 
+mathematically. 
+
+According to quantum theory the polarization of a photon is 
+represented by a vector V in the two dimensional space that 
+is perpendicular to the photon's line of flight. Suppose a 
+photon is allowed to fall on a crystal that splits the beam so 
+that the part polarized along direction A1 is deflected to a 
+photon detector D1 and the part polarized in the direction 
+A2, perpendicular to A1, is deflected to a photon detector 
+D2. If the detectors are 100% efficient then one or the other 
+of the two detectors will fire, but not both. 
+
+In this example the probing action is associated with the 
+projection operator P such that the vector PV is directed 
+along A1 and P'V is directed along A2. The vectors PV and 
+P'V represent the alternative possible outcomes of the 
+probing action. If the observer sees detector D1 fire that he 
+knows that the system being probed is in state PV; if he sees 
+detector D2 fire then he knows that the system being probed 
+is in the state P'V. Thus quite accurate information about the 
+new state of the unseen system can be gleaned from the 
+empirically discernible fact of whether D1 fires or D2. 
+Discarding the part of the state V=PV +P'V that is 
+incompatible with the empirical fact that D1 fires and D2 
+does not, or vice versa, is non problematic.
+
+I specified at the beginning that V represented of our 
+knowledge of the system being probed. Thus there is no 
+problem with the fact that V suddenly changes when an 
+observer acquires new knowledge by seeing one of the two 
+the detectors, D1 or D2, fire and the other one not fire. 
+However, this facile way of speaking glosses over some 
+deep problems. This vector V seems to be connected more 
+closely to the state of the photon itself than to human 
+consciousness. The very fact that the photon could be 
+represented by a vector, and that this vector should evolve 
+normally in accordance with the Schroedinger equation was 
+a consequence of incorporating Planck's constant into the 
+equations of classical physics. That quantization procedure 
+converted the old classical-type of reality into the new cloud-
+like (or vector-type) replacement. This transformation seems 
+to be an objective change, not related specifically to human 
+consciousness. Moreover, the stability of matter itself, and 
+the formation of the elements are all understood in terms of 
+these quantum equations of motion. All of this structure and 
+process predates human existence. The original 
+Copenhagen pragmatic way of understanding the quantum 
+mathematics, while tremendously useful as a stepping stone, 
+closes the door to any real understanding of the reality that 
+replaces the one that empirical phenomena has ruled out.

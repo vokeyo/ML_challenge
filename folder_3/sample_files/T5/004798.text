@@ -1,0 +1,2505 @@
+
+                               Model Change Bulletin
+
+                                       MCB#7                        12/02/92
+
+                                 UAM (dated 92258)
+
+
+This model change bulletin is formal notification of the release of an
+updated version of the UAM (dated 90186).  This bulletin gives two examples
+of the effects of the changes to UAM, summarizes the changes to the UAM
+source code, and documents the source code changes line by line.  Some of
+the Carbon Bond IV reaction rates have been updated and one reaction has been
+added to UAM.  These are also described in this bulletin. The changes in the
+model result in a significant increase in model execution time.  Users can
+expect model runs to take up to 80% longer with this updated UAM code.  The
+updated source code for UAM, the updated CHEMPARM file, and the DISPLAY output
+files from the June 3 and June 4 Atlanta simulations can be downloaded from
+SCRAM as the files UAM1.ZIP, CHEMPARM.TXT, DISPLAY1.ZIP and DISPLAY2.ZIP
+respectively.  These DISPLAY results reflect UAM simulations of the Atlanta 
+test case using the emissions files on UAM Tape A.
+
+The numerous code changes to the UAM (dated 92258) source code, the CHEMPARM
+file, and DISPLAY files can be found in this file, MCB#7CHG.TXT.
+
+
+                   EFFECTS OF UAM MODEL UPDATES ON MODEL RESULTS
+
+Many changes have been made to the UAM (92258) source code from the prior
+release.  The cumulative effects on model results for the test cases run for
+Atlanta (June 3-4, 1984) and for New York (July 5-6, 1988) are summarized
+here.
+
+Both test cases showed increases in maximum predicted ozone concentrations
+using this version vs. using the previous UAM version.  Maximum hourly average
+ozone concentration predicted for Atlanta on June 4 was 136.2 ppb, compared
+to 142.4 ppb using this update.  For New York on July 6, predicted
+ozone increased from 208.7 ppb to 222.7 ppb using this update.  Given the
+complexity of input data for the UAM, it is impossible to generalize the
+effect of these changes for all modeling regions.  Given the increases in New
+York and Atlanta, users might expect an increase of about 10-15 ppb in
+maximum predicted ozone.  However, under some conditions, the updates to the
+model code may not result in increases in predicted ozone concentrations.
+Although predicted ozone concentrations do differ between the two versions
+of the model, no significant change in the sensitivity of the model to
+changes in the emissions inputs has been noted.
+
+
+                     SUMMARY OF CHANGES IN THE UAM SOURCE CODE
+
+This section summarizes the changes in the UAM (dated 90186).  Details of the
+source code changes are included in the following section.  Note that changes
+to some routines are quite extensive.  It is therefore recommended that users
+download the updated source code from the SCRAM bulletin board rather than
+attempt to make the changes in their source code themselves.  The updated
+code does not include UNIX specific code.  To obtain copies of routines which
+are adapted to UNIX systems, the user should also download the software from
+the notice regarding the UNIX version of the UAM.  Note that these UNIX
+versions of the subroutines may also be useful for certain other operating
+systems.
+
+(1)    The CB-IV chemical mechanism was updated.  This update involved two
+       parts.  The rates of three reactions in the chemistry of PAN were
+       changed and their temperature dependence was changed.  And an
+       additional reaction was added that treats XO2 + HO2.  This reaction is
+       handled in the steady state portion of the chemistry routines of UAM
+       since these are not state species.  The routines changed to implement
+       this update were CHEM, CHEM2A and CHEM2B.  In addition, the CHEMPARAM
+       input file was changed as described above.
+
+(2)    Changed calculation of time for interpolation of diffbreak and
+       regiontop to use no. of days from start date of run instead of absolute
+       date.  This reduces truncation problem that caused divide by zero on
+       some IBM systems.  Subroutines affected:  TZERO, SCREAD, and SETUP.
+       Change in common block CNTROL requires recompilation of several other
+       routines.  This required making an almost identical change in several
+       places in the code.
+
+(3)    Set minimum wind speed of .01 M/hr in DIFCOF.  Avoids divide by zero
+       in deposition calculations.  Has an effect only if zero wind speeds
+       were present in input data. 
+
+(4)    Changed checks of current time against average and inst output time
+       in FINISH from LT to LE for consistency with other checks in FILCK
+       and FILCKE.  Changed base value for increment of avg and inst output
+       times from current time to last output time.
+ 
+(5)    Added range check of IJPS subscript before using to access TEMP array
+       in RESPTS.  Avoids an error addressing array when a point source
+       location is outside the modeling region. 
+
+(6)    Fixed compare of ZI-Z to TH(k) in DIFCOF to avoid addresses outside
+       array bound of TH.  Same change in three places in same routine.
+   
+(7)    Changed SCRAL to allocate space at beginning of scratch for reading
+       boundary concentration arrays.  This avoids some spurious values
+       showing up along edges of CALOFT array.  This would only affect the
+       results of a simulation with only one species (therefore, inert).
+
+(8)    Passed LOC to FINISH and corrected call to CALMAS to use LOC instead
+       of SCR for TH and HT.  Changes are limited to the calls to FINISH and
+       CALMAS.  Eliminates some spurious values showing up in diagnostic
+       prints and therefore makes it less confusing when doing diagnostics.
+
+(9)    Added code to echo file names opened by OPENA.  This is just a nicety
+       for the UNIX version of the code.  It does not appear in the IBM
+       version.
+
+(10)   Removed check of GA LT 1E-25 in chem solver in STEP4 to ensure the
+       accuracy of the solver.
+
+(11)   Corrected code in STEP4 that calculates concentrations in preparation
+       for predictor/corrector loop in chemistry solver.  Avoids a divide by
+       zero in chemical rates routine.
+
+(12)   Added code in AAMRCH and FINISH to print elapsed and cumulative CPU
+       time at each time step.
+
+(13)   Revised routine SRTPTS to handle correctly a case with only two sources
+       in simulation.  This change has no effect on simulations with more
+       than two sources.
+
+(14)   A minor correction was made in the calculation of the species NXOY.
+       This required changes in CHEM, CHEM2A, CHEM2B, and STEP4.
+
+(15)   Added check of start and end time of simulation for validity in
+       subroutine TZERO before beginning simulation.  Some spurious combina-
+       tions of start and end times (such as end time same as start time)
+       could slip through the checks and will cause the model to terminate
+       further on in the simulation without adequate diagnostic information.
+
+(16)   Revised checks of end time so that 2400 on current day is recognized
+       as the same as 0000 on next day.
+
+(17)   Fixed limits on loops that initialize XXDEP in TZERO to use NOX and
+       NOY instead of NX and NY.  NX and NY are not defined and hence XXDEP
+       was not zeroed.  This will not affect results on machines (such as the
+       IBM) that zero memory when programs are loaded.  On systems that do
+       not zero memory, the cumulative deposition file could have had
+       incorrect values.  Predicted concentrations are not, however, affected.
+
+(18)   Revised restart logic to allow more round off in checking times.  Start
+       and end times of intervals written to instantaneous file are allowed
+       to cover a brief range of times by adding a small increment to the end
+       time.  On some occasions, this increment has proved inadequate to
+       account for round off and therefore did not allow a restart from hours
+       late in the day.  Increasing the size of the increment will not affect
+       model results, but will allow restarts to work for any time of day.
+
+(19)   In STEP4, zero RATE and RP variables before each call to CHEM, CHEM2A,
+       or CHEM2B.  On very rare occasions, chemistry did not converge because
+       of left over non-zero terms from previous step when solver switches
+       from one chemistry routine to another.  The change is not expected to
+       affect results for simulations which have worked in the past.
+
+(20)   Corrected inconsistent use of variables NTR and NITR in routines CHEM2A
+       and CHEM2B.  These variables are not used in current simulations and
+       hence model results will not be affected.  However, to avoid confusion
+       in possible future revisions, the spelling was made consistent.
+
+
+                      CHANGE IN THE UAM CHEMPARAM INPUT FILE
+
+This version of UAM requires the use of an updated CHEMPARAM file which 
+includes updated reaction rates for certain reactions involving PAN and adds a
+reaction of XO2 with HO2 as reaction 86.  In order to implement these changes,
+the routines CHEM, CHEM2A and CHEM2B were also changed.  Hence, photochemical
+simulations with UAM must use this revised CHEMPARAM file.  Photochemical
+simulations with prior versions of UAM must not use this updated CHEMPARAM 
+file.  The species list may still be adjusted by including or omitting 
+optional species within the constraints described in Volume II of the User's
+Guide for the UAM.  In the inputs for creating the CHEMPARAM file, the values
+were changed for reactions 46 through 48 from 46  1098600.
+   -250.      298.
+      47   733800.             -5500.      298.
+      48     1.332             14000.      298.
+
+to 
+
+      46  1692000.               180.      298.
+      47   822000.              -380.      298.
+      48     1.524             13500.      298.
+
+Data for an additional reaction was also added:
+
+      86   534000.             -1300.       298.
+
+
+
+
+                      LINE BY LINE CHANGES IN UAM SOURCE CODE
+
+The following changes are grouped by subroutine, but the location of the
+changes are identified by line number in the complete source file of UAM
+(dated 90186).  Note that these changes are provided for reference only as 
+the complete source code is available in a separate file. Some include files
+have also been changed.  These files are also available as a separate file.
+The include files which have been changed are also listed in their entirety
+at the end of this section.  The complete source code and include files are
+in UAM1.ZIP.
+
+BLOCK DATA:
+
+(1)  Change line 165 that reads
+
+      DATA NSMAX /31/
+
+to read
+
+      DATA NSMAX /32/
+
+
+
+
+AAINIT:
+
+(2)  Change line 288 that reads
+
+      INCLUDE (VERSN)
+
+to read
+
+      INCLUDE (VERSN1)
+
+AAMRCH:
+
+(3)  After lines 348 through 350 that read
+
+C--CALLED BY
+C         AAASIM
+C
+
+add the following lines
+
+C  THE FOLLOWING LINES ARE FOR COMPUTING CPU TIME ON THE IBM ONLY (ZSW).
+C
+      REAL*8 CPU_A
+C
+
+
+(4)  After lines 355 through 357 that read
+
+      LERSET = .FALSE.
+      LERADV = .FALSE.
+C
+
+add the following lines
+
+      CALL CPUTIME (CPU_A, IRCODE_A)
+      CPU_A = CPU_A * .000001
+      WRITE (*,1000) CPU_A, IRCODE_A
+1000  FORMAT (1H0,' THE BEGINNING CPU TIME IS : ',F10.3,
+     &         5X,' AND THE RETURN CODE IS : ',I5)
+
+(5)  After lines 363 through 363 that read
+
+C
+      DO 900 III=1,10000
+C
+
+add the following lines
+
+C  MODIFIED TO COMPUTE CPU TIME ON THE IBM ONLY
+C
+
+(6)  Change line 388 that reads
+
+  800    CALL FINISH (AV, AV(JSCR), AV(JBDRY), LERSET, LERADV)
+
+to read
+
+  800    CALL FINISH (AV, AV(JLOC), AV(JSCR), AV(JBDRY), LERSET, LERADV)
+
+CHEM:  
+
+(7)  Change line 1622 that reads
+
+      DIMENSION FN(3),FP(3,3),IP(3)
+
+to read
+
+      DIMENSION FN(4),FP(4,4),IP(4)
+
+(8)  After lines 1674 through 1676 that read
+
+      KHO2  = 1
+      KOH   = 2
+      KC2O3 = 3
+
+add the following line
+
+      KXO2  = 4
+
+(9)  After lines 1773 through 1775 that read
+
+      RX(82)= RK(82)*SO2
+      RX(84)= RK(84)*MEOH
+      RX(85)= RK(85)*ETOH
+
+add the following line
+
+      RX(86)= RK(86)
+
+(10)  After lines 1820 through 1827 that read
+
+   20 CONTINUE
+C
+        RXN = XR(17)/(XR(18)+XR(19))
+        FNO3  = 1. /(1.+2.*RXN)
+        FN2O5 = RXN/(1.+2.*RXN)
+C
+        NO3  = FNO3*NOX
+        N2O5 = FN2O5*NOX
+
+add the following line
+
+        NXOY = NO + NO2 + NO3 + 2.*N2O5
+
+(11)  Change line 1896 that reads
+
+      FC2O3 = AMIN1(0.8,(AMAX1((0.2*RNO2),(RNO2*NMOC/(NOX*K1MIN*2000.
+
+to read
+
+      FC2O3 = AMIN1(0.6,(AMAX1((0.2*RNO2),(RNO2*NMOC/(NOX*K1MIN*2000.
+(12)  After lines 1915 through 1919 that read
+
+C
+      C2O3 = (SQRT(ABS(BB*BB-4.*AA*CC))-BB)/(2.*AA)
+      C2O3 = AMAX1(C2O3,1.E-10)
+      C2O3 = AMIN1(C2O3,1.E-4)
+C
+
+add the following lines
+
+      XO2S   = X(45) + 0.22*X(58) + 0.03*XR(71)
+     1       + O*(0.28*XR(56) + 0.70*XR(60) + 0.5*XR(75))
+     2       + NO3*0.91*XR(59)
+      XO2OH  = XR(51) + 0.87*XR(52) + XR(57) + XR(61)
+     1       + 0.08*XR(63) + 0.60*XR(66) + XR(70) + 0.50*XR(72)
+     2       + XR(73) + XR(76) + 0.96*XR(53)
+C
+      AA = 2.0*XR(80)
+      BB = XR(79) + HO2*XR(86)
+      CC = -(XO2S + OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))
+C
+      XO2=(SQRT(BB*BB-4.*AA*CC)-BB)/(2.*AA)
+      XO2=AMAX1(XO2,1.E-12)
+      XO2=AMIN1(XO2,5.E-4)
+C
+      AA= 2.0*(XR(32)+XR(33))
+      BB = HO2R + C2O3*XR(50) + XO2*XR(86)
+      CC = -(HO2S + OH*HO2OH + C2O3*(XR(46)+2.0*C2O3*XR(49)
+     1       +0.79*XR(50)))
+C
+      HO2 = (SQRT(BB*BB-4.*AA*CC)-BB)/(2.*AA)
+C
+      HO2 = AMAX1(HO2,1.E-10)
+      HO2 = AMIN1(HO2,5.E-4)
+C
+
+(13)  Change lines 1920 through 1940 that read
+
+      OH = (OHS1+HO2*(OHHO2 + C2O3*0.79*XR(50)))/OHR
+      C2O3 = (C2O3S+OH*C2O3OH)
+     1        /(C2O3R+HO2*XR(50)+2.0*C2O3*XR(49))
+      HO2 = (HO2S+OH*HO2OH
+     1           +C2O3*(XR(46)+2.0* C2O3*XR(49)+0.79*HO2*XR(50)))
+     2        /(HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+C
+      OH = (OHS1+HO2*(OHHO2 + C2O3*0.79*XR(50)))/OHR
+      C2O3 = (C2O3S+OH*C2O3OH)
+     1        /(C2O3R+HO2*XR(50)+2.0*C2O3*XR(49))
+      HO2 = (HO2S+OH*HO2OH
+     1           +C2O3*(XR(46)+2.0* C2O3*XR(49)+0.79*HO2*XR(50)))
+     2        /(HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+C
+      OH = (OHS1+HO2*(OHHO2 + C2O3*0.79*XR(50)))/OHR
+      C2O3 = (C2O3S+OH*C2O3OH)
+     1        /(C2O3R+HO2*XR(50)+2.0*C2O3*XR(49))
+      HO2 = (HO2S+OH*HO2OH
+     1           +C2O3*(XR(46)+2.0* C2O3*XR(49)+0.79*HO2*XR(50)))
+     2        /(HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+
+     2        /(HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+
+to read as follows
+
+      OH = (OHS1+HO2*(OHHO2 + C2O3*0.79*XR(50)))/OHR
+      C2O3 = (C2O3S+OH*C2O3OH)
+     1        /(C2O3R+HO2*XR(50)+2.0*C2O3*XR(49))
+      HO2 = (HO2S+OH*HO2OH
+     1           +C2O3*(XR(46)+2.0* C2O3*XR(49)+0.79*HO2*XR(50)))
+     2        /(HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86))
+      XO2 = (XO2S + OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+XR(79)+HO2*XR(86))
+C
+      OH = (OHS1+HO2*(OHHO2 + C2O3*0.79*XR(50)))/OHR
+      C2O3 = (C2O3S+OH*C2O3OH)
+     1        /(C2O3R+HO2*XR(50)+2.0*C2O3*XR(49))
+      HO2 = (HO2S+OH*HO2OH
+     1           +C2O3*(XR(46)+2.0* C2O3*XR(49)+0.79*HO2*XR(50)))
+     2        /(HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86))
+      XO2 = (XO2S + OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+XR(79)+HO2*XR(86))
+C
+      OH = (OHS1+HO2*(OHHO2 + C2O3*0.79*XR(50)))/OHR
+      C2O3 = (C2O3S+OH*C2O3OH)
+     1        /(C2O3R+HO2*XR(50)+2.0*C2O3*XR(49))
+      HO2 = (HO2S+OH*HO2OH
+     1           +C2O3*(XR(46)+2.0* C2O3*XR(49)+0.79*HO2*XR(50)))
+     2        /(HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86))
+      XO2 = (XO2S + OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+XR(79)+HO2*XR(86))
+
+(14)  Change line 1949 that reads
+
+      DO 50 I=1,3
+
+to read
+
+      DO 50 I=1,4
+
+and change line 1951 that reads
+
+      DO 50 J=1,3
+
+to read
+
+      DO 50 J=1,4
+
+(15)  Change line 1957 that reads
+
+      TEMP2 = HO2R+2.*HO2*(XR(32)+XR(33))+C2O3*XR(50)
+
+to read
+
+      TEMP2 = HO2R+2.*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86)
+
+(16)  After lines 1960 through 1962 that read
+
+      FP(KHO2 ,KHO2 ) = -TEMP2 -2.*(XR(32)+XR(33))*HO2+0.79*C2O3*XR(50)
+      FP(KHO2 ,KOH  ) = HO2OH
+      FP(KHO2 ,KC2O3) = XR(46)+4.0*C2O3*XR(49)-0.21*HO2*XR(50)
+
+add the following line
+
+      FP(KHO2 ,KXO2 ) = -HO2*XR(86)
+
+(17)  Change line 1975 that reads
+
+      CALL DEC(3,3,FP,IP,IER)
+
+to read
+
+      FN(KXO2) = -(XO2S + OH*XO2OH + C2O3*(XR(46) + 2.0*C2O3*XR(49)
+     1          + 0.79*HO2*XR(50))) +XO2*(XR(79)+HO2*XR(86)+XO2*XR(80))
+      FP(KXO2,KHO2) = -XO2*XR(86) + 0.79*C2O3*XR(50)
+      FP(KXO2,KOH ) = XO2OH
+      FP(KXO2,KC2O3) = XR(46)+4.0*C2O3*XR(49)+0.79*HO2*XR(50)
+      FP(KXO2,KXO2 ) = -(XR(79)+HO2*XR(86)+2.0*XO2*XR(80))
+      CALL DEC(4,4,FP,IP,IER)
+C
+
+(18)  Change line 1983 that reads
+
+      CALL SOL(3,3,FP,FN,IP)
+
+to read
+
+      CALL SOL(4,4,FP,FN,IP)
+
+(19)  After lines 1987 through 1989 that read
+
+      HO2  = HO2  + FN(KHO2)
+      OH   = OH   + FN(KOH)
+      C2O3 = C2O3 + FN(KC2O3)
+
+add the following line
+
+      XO2  = XO2  + FN(KXO2)
+
+(20)  Replace line 2001 that reads
+
+      GO TO 180
+
+with the following lines
+
+C     GO TO 180
+      STOP
+
+(21)  After lines 2005 through 2011 that read
+
+   70 CONTINUE
+      TEST = FN(KHO2)/HO2
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+      TEST = FN(KOH)/OH
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+      TEST = FN(KC2O3)/C2O3
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+
+add the following lines
+
+      TEST = FN(KXO2)/XO2
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+
+(22)  Remove lines 2016 through 2030 that read
+
+      XO2S   = X(45) + 0.22*X(58) + 0.03*XR(71)
+     1       + O*(0.28*XR(56) + 0.70*XR(60) + 0.5*XR(75))
+     2       + NO3*0.91*XR(59)
+      XO2OH  = XR(51) + 0.87*XR(52) + XR(57) + XR(61)
+     1       + 0.08*XR(63) + 0.60*XR(66) + XR(70) + 0.50*XR(72)
+     2       + XR(73) + XR(76) + 0.96*XR(53)
+C
+      XO21 = XO2S + OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50))
+C
+      XO2=(SQRT(XR(79)*XR(79)+8.*XO21*XR(80))-XR(79))
+     1     /(4.*XR(80))
+      XO2=AMAX1(XO2,1.E-12)
+      XO2=AMIN1(XO2,5.E-5)
+C
+
+(23)  Change line 2481 that reads
+
+      RP(KHCHO,KMEOH) = -R(84) /MEOH
+
+to read
+
+      IF (LMEOH) RP(KHCHO,KMEOH) = -R(84) /MEOH
+
+(24)  Change lines 2642 through 2643 that read
+
+  100 FORMAT(1X,'*** ERROR IN RADICAL CONCENTRATION CALCULATIONS',//,
+     1       2X,'       IER     LITER    NITMAX',/,2X,3I10)
+
+to read
+
+  100 FORMAT(1X,
+     1    '*** ERROR IN RADICAL CONCENTRATION CALCULATIONS IN CHEM',
+     2    //,2X,'       IER     LITER    NITMAX',/,2X,3I10)
+
+CHEM2A:
+
+(25)  Before lines 2675 through 2677 that read
+
+C--INPUT VARIABLES
+C         NOSPEC    I  NO OF SPECIES
+C         NORS      I  NO OF REACTIVE SPECIES
+
+add the following lines
+
+C     ***  ADDED "EFFECTIVE" CONCENTRATION VARIABLES (E.G., efCRES)
+C          THAT ARE 0. WHEN ACTUAL CONCENTRATION IS LESS THAN BDNL.
+C          THESE ARE USED IN CALCULATING VALUES FOR RX AND R SO
+C          THAT REACTIONS WILL BE SHUT DOWN WHEN ONE OF THE REACTANTS
+C          REACHES VERY SMALL CONCENTRATIONS.  (TCM, 5/8/92)
+C
+C
+
+(26)  Change line 2708 that reads
+
+      DIMENSION  FN(3),FP(3,3),IP(3)
+
+to read
+
+      DIMENSION  FN(4),FP(4,4),IP(4)
+
+(27)  After lines 2755 through 2759 that read
+
+      NTR = 0.
+      IF (LNITR) NTR  = HH(KNTR )
+      ISOP = 0.
+      IF (LISOP) ISOP = HH(KISOP)
+C
+
+add the following lines
+
+      efNO   = NO
+      IF (efNO   .LE. 1.01*BDNL(KNO  )) efNO   = 0.
+      efNO2  = NO2
+      IF (efNO2  .LE. 1.01*BDNL(KNO2 )) efNO2  = 0.
+      efNXOY = NXOY
+      IF (efNXOY .LE. 1.01*BDNL(KNXOY)) efNXOY = 0.
+      efO3   = O3
+      IF (efO3   .LE. 1.01*BDNL(KO3  )) efO3   = 0.
+      efHNO2 = HNO2
+      IF (efHNO2 .LE. 1.01*BDNL(KHNO2)) efHNO2 = 0.
+      efH2O2 = H2O2
+      IF (efH2O2 .LE. 1.01*BDNL(KH2O2)) efH2O2 = 0.
+      efFORM = FORM
+      IF (efFORM .LE. 1.01*BDNL(KHCHO)) efFORM = 0.
+      efPAN  = PAN
+      IF (efPAN  .LE. 1.01*BDNL(KPAN )) efPAN  = 0.
+      efHNO3 = HNO3
+      IF (efHNO3 .LE. 1.01*BDNL(KHNO3)) efHNO3 = 0.
+      efALD2 = ALD2
+      IF (efALD2 .LE. 1.01*BDNL(KALD2)) efALD2 = 0.
+      efETH  = ETH
+      IF (efETH  .LE. 1.01*BDNL(KETH )) efETH  = 0.
+      efOLE  = OLE
+      IF (efOLE  .LE. 1.01*BDNL(KOLE )) efOLE  = 0.
+      efPAR  = PAR
+      IF (efPAR  .LE. 1.01*BDNL(KPAR )) efPAR  = 0.
+      efTOL  = TOL
+      IF (efTOL  .LE. 1.01*BDNL(KTOL )) efTOL  = 0.
+      efXYL  = XYL
+      IF (efXYL  .LE. 1.01*BDNL(KXYL )) efXYL  = 0.
+      efMGLY = MGLY
+      IF (efMGLY .LE. 1.01*BDNL(KMGLY)) efMGLY = 0.
+      efOPEN = OPEN
+      IF (efOPEN .LE. 1.01*BDNL(KOPEN)) efOPEN = 0.
+      efCO   = CO
+      IF (efCO   .LE. 1.01*BDNL(KCO  )) efCO   = 0.
+      efPNA  = PNA
+      IF (efPNA  .LE. 1.01*BDNL(KPNA )) efPNA  = 0.
+      efCRES = CRES
+      IF (efCRES .LE. 1.01*BDNL(KCRES)) efCRES = 0.
+      efSO2  = SO2
+      IF (efSO2  .LE. 1.01*BDNL(KSO2 )) efSO2  = 0.
+      efSULF = SULF
+      IF (efSULF .LE. 1.01*BDNL(KSULF)) efSULF = 0.
+      efMEOH = MEOH
+      IF (efMEOH .LE. 1.01*BDNL(KMEOH)) efMEOH = 0.
+      efETOH = ETOH
+      IF (efETOH .LE. 1.01*BDNL(KETOH)) efETOH = 0.
+      efNTR = NTR
+      IF (efNTR .LE. 1.01*BDNL(KNTR)) efNTR = 0.
+      efISOP = ISOP
+      IF (efISOP .LE. 1.01*BDNL(KISOP)) efISOP = 0.
+C
+
+(28)  After lines 2771 through 2773 that read
+
+      KHO2  = 1
+      KOH   = 2
+      KC2O3 = 3
+
+add the following line
+
+      KXO2  = 4
+
+(29)  Change lines 2796 through 2804 that read
+
+      R(7) = RK( 7)*NO2*O3
+      R(25)= RK(25)*HNO2*HNO2
+      R(30)= RK(30)*PNA
+      R(48)= RK(48)*PAN
+      R(58)= RK(58)*O3*OLE
+      R(62)= RK(62)*O3*ETH
+      R(71)= RK(71)*OPEN*O3
+      R(77)= RK(77)*ISOP*O3
+      R(83)= RK(83)*SO2
+
+to read
+
+      R(7) = RK( 7)*efNO2*efO3
+      R(25)= RK(25)*efHNO2*efHNO2
+      R(30)= RK(30)*efPNA
+      R(48)= RK(48)*efPAN
+      R(58)= RK(58)*efO3*efOLE
+      R(62)= RK(62)*efO3*efETH
+      R(71)= RK(71)*efOPEN*efO3
+      R(77)= RK(77)*efISOP*efO3
+      R(83)= RK(83)*efSO2
+
+(30)  Change lines 2808 through 2811 that read
+
+      RX(12)= RK(12)*O3
+      RX(13)= RK(13)*O3
+      RX(16)= RK(16)*NO2
+      RX(17)= RK(17)*NO2
+
+to read
+
+      RX(12)= RK(12)*efO3
+      RX(13)= RK(13)*efO3
+      RX(16)= RK(16)*efNO2
+      RX(17)= RK(17)*efNO2
+
+(31)  Change lines 2814 through 2818 that read
+
+      RX(24)= RK(24)*HNO2
+      RX(26)= RK(26)*NO2
+      RX(27)= RK(27)*HNO3
+      RX(29)= RK(29)*NO2
+      RX(31)= RK(31)*PNA
+
+to read
+
+      RX(24)= RK(24)*efHNO2
+      RX(26)= RK(26)*efNO2
+      RX(27)= RK(27)*efHNO3
+      RX(29)= RK(29)*efNO2
+      RX(31)= RK(31)*efPNA
+
+(32)  Change lines 2821 through 2827 that read
+
+      RX(35)= RK(35)*H2O2
+      RX(36)= RK(36)*CO
+      RX(37)= RK(37)*FORM
+      RX(41)= RK(41)*FORM
+      RX(43)= RK(43)*ALD2
+      RX(44)= RK(44)*ALD2
+      RX(47)= RK(47)*NO2
+
+to read
+
+      RX(35)= RK(35)*efH2O2
+      RX(36)= RK(36)*efCO
+      RX(37)= RK(37)*efFORM
+      RX(41)= RK(41)*efFORM
+      RX(43)= RK(43)*efALD2
+      RX(44)= RK(44)*efALD2
+      RX(47)= RK(47)*efNO2
+
+(33)  Change line 2831 that reads
+
+      RX(52)= RK(52)*PAR
+
+to read
+
+      RX(52)= RK(52)*efPAR
+
+(34)  Change lines 2834 through 2849 that read
+
+      RX(55)= RK(55)*NO2
+      RX(57)= RK(57)*OLE
+      RX(59)= RK(59)*OLE
+      RX(61)= RK(61)*ETH
+      RX(63)= RK(63)*TOL
+      RX(66)= RK(66)*CRES
+      RX(67)= RK(67)*CRES
+      RX(68)= RK(68)*NO2
+      RX(70)= RK(70)*OPEN
+      RX(72)= RK(72)*XYL
+      RX(73)= RK(73)*MGLY
+      RX(76)= RK(76)*ISOP
+      RX(78)= RK(78)*ISOP
+      RX(82)= RK(82)*SO2
+      RX(84)= RK(84)*MEOH
+      RX(85)= RK(85)*ETOH
+
+to read
+
+      RX(55)= RK(55)*efNO2
+      RX(57)= RK(57)*efOLE
+      RX(59)= RK(59)*efOLE
+      RX(61)= RK(61)*efETH
+      RX(63)= RK(63)*efTOL
+      RX(66)= RK(66)*efCRES
+      RX(67)= RK(67)*efCRES
+      RX(68)= RK(68)*efNO2
+      RX(70)= RK(70)*efOPEN
+      RX(72)= RK(72)*efXYL
+      RX(73)= RK(73)*efMGLY
+      RX(76)= RK(76)*efISOP
+      RX(78)= RK(78)*efISOP
+      RX(80)= RK(80)
+      RX(82)= RK(82)*efSO2
+      RX(84)= RK(84)*efMEOH
+      RX(85)= RK(85)*efETOH
+      RX(86)= RK(86)
+
+(35)  After lines 2893 through 2895 that read
+
+C
+        NO3  = FNO3*NOX
+        N2O5 = FN2O5*NOX
+
+add the following line
+
+        NXOY = NO + NO2 + NO3 + 2.*N2O5
+
+(36)  After lines 2956 through 2958 that read
+
+      C2O3 = AMAX1(C2O3,1.E-10)
+      C2O3 = AMIN1(C2O3,1.E-4)
+C
+
+add the following lines
+
+      XO2S   = 0.22*X(58) + 0.03*XR(71) + NO3*0.91*XR(59)
+      XO2OH  = XR(51) + 0.87*XR(52) + XR(57) + XR(61)
+     1       + 0.08*XR(63) + 0.60*XR(66) + XR(70) + 0.50*XR(72)
+     2       + XR(73) + XR(76) + 0.96*XR(53)
+C
+      AA = 2.0*XR(80)
+      BB = HO2*XR(86)
+      CC = -(XO2S + OH*XO2OH + C2O3*(2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))
+C
+      XO2=(SQRT(BB*BB-4.*AA*CC)-BB)/(2.*AA)
+      XO2=AMAX1(XO2,1.E-12)
+      XO2=AMIN1(XO2,5.E-4)
+C
+
+(37)  Change lines 2959 through 2976 that read
+
+      OH  = (OHS1 + HO2*(XR(13) + C2O3*0.79*XR(50)))/OHR
+      HO2 = (HO2S + OH*HO2OH + 2.0*C2O3*C2O3*XR(49))
+     1        /(HO2R+2.0*HO2*(XR(32)+XR(33))+0.21*C2O3*XR(50))
+      C2O3 = (C2O3S + OH*C2O3OH)
+     1        /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+C
+      OH  = (OHS1 + HO2*(XR(13) + C2O3*0.79*XR(50)))/OHR
+      HO2 = (HO2S + OH*HO2OH + 2.0*C2O3*C2O3*XR(49))
+     1        /(HO2R+2.0*HO2*(XR(32)+XR(33))+0.21*C2O3*XR(50))
+      C2O3 = (C2O3S + OH*C2O3OH)
+     1        /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+C
+      OH  = (OHS1 + HO2*(XR(13) + C2O3*0.79*XR(50)))/OHR
+      HO2 = (HO2S + OH*HO2OH + 2.0*C2O3*C2O3*XR(49))
+     1        /(HO2R+2.0*HO2*(XR(32)+XR(33))+0.21*C2O3*XR(50))
+      C2O3 = (C2O3S + OH*C2O3OH)
+     1        /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+
+to read
+
+      OH  = (OHS1 + HO2*(XR(13) + C2O3*0.79*XR(50)))/OHR
+      HO2 = (HO2S + OH*HO2OH + 2.0*C2O3*C2O3*XR(49))
+     1      /(HO2R+2.0*HO2*(XR(32)+XR(33))+0.21*C2O3*XR(50)+XO2*XR(86))
+      C2O3 = (C2O3S + OH*C2O3OH)
+     1        /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+      XO2 = (XO2S + OH*XO2OH + C2O3*(2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+HO2*XR(86))
+C
+      OH  = (OHS1 + HO2*(XR(13) + C2O3*0.79*XR(50)))/OHR
+      HO2 = (HO2S + OH*HO2OH + 2.0*C2O3*C2O3*XR(49))
+     1      /(HO2R+2.0*HO2*(XR(32)+XR(33))+0.21*C2O3*XR(50)+XO2*XR(86))
+      C2O3 = (C2O3S + OH*C2O3OH)
+     1        /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+      XO2 = (XO2S + OH*XO2OH + C2O3*(2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+HO2*XR(86))
+C
+      OH  = (OHS1 + HO2*(XR(13) + C2O3*0.79*XR(50)))/OHR
+      HO2 = (HO2S + OH*HO2OH + 2.0*C2O3*C2O3*XR(49))
+     1      /(HO2R+2.0*HO2*(XR(32)+XR(33))+0.21*C2O3*XR(50)+XO2*XR(86))
+      C2O3 = (C2O3S + OH*C2O3OH)
+     1        /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+      XO2 = (XO2S + OH*XO2OH + C2O3*(2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+HO2*XR(86))
+
+(38)  Change line 2989 that reads
+
+      DO 50 I=1,3
+
+to read
+
+      DO 50 I=1,4
+
+and change line 2991 that reads
+
+      DO 50 J=1,3
+
+to read
+
+      DO 50 J=1,4
+
+(39)  Change line 2997 that reads
+
+      TEMP2 = HO2R + 2.*HO2*(XR(32)+XR(33)) + 0.21*C2O3*XR(50)
+
+to read
+
+      TEMP2 = HO2R+2.*HO2*(XR(32)+XR(33))+0.21*C2O3*XR(50)+XO2*XR(86)
+
+(40)  After lines 3001 through 3003 that read
+
+      FP(KHO2 ,KHO2 ) = -TEMP2 -2.*(XR(32)+XR(33))*HO2
+      FP(KHO2 ,KOH  ) = HO2OH
+      FP(KHO2 ,KC2O3) = 4.0*C2O3*XR(49)-0.21*HO2*XR(50)
+
+add the following line
+
+      FP(KHO2 ,KXO2 ) = -HO2*XR(86)
+
+(41)  After lines 3013 through 3015 that read
+
+      FP(KC2O3,KOH  ) = C2O3OH
+      FP(KC2O3,KC2O3) = -(XR(47) + HO2*XR(50) + 4.0*C2O3*XR(49))
+C
+
+add the following lines
+
+      FN(KXO2) = -(XO2S + OH*XO2OH + C2O3*(2.0*C2O3*XR(49)
+     1          + 0.79*HO2*XR(50))) +XO2*(HO2*XR(86)+XO2*XR(80))
+      FP(KXO2,KHO2) = -XO2*XR(86) + 0.79*C2O3*XR(50)
+      FP(KXO2,KOH ) = XO2OH
+      FP(KXO2,KC2O3) = 4.0*C2O3*XR(49)+0.79*HO2*XR(50)
+      FP(KXO2,KXO2 ) = -(HO2*XR(86)+2.0*XO2*XR(80))
+C
+
+(42)  Change line 3018 that reads
+
+      CALL DEC(3,3,FP,IP,IER)
+
+to read
+
+      CALL DEC(4,4,FP,IP,IER)
+
+and change line 3026 that reads
+
+      CALL SOL(3,3,FP,FN,IP)
+
+to read
+
+      CALL SOL(4,4,FP,FN,IP)
+
+(43)  After lines 3029 through 3032 that read
+
+      HO2  = HO2  + FN(KHO2)
+      OH   = OH   + FN(KOH)
+      C2O3 = C2O3 + FN(KC2O3)
+
+add the following line
+
+      XO2  = XO2  + FN(KXO2)
+
+(44)  Change lines 3043 through 3045 that read
+
+      WRITE(IOUT,250) (N,RK(N),N=1,NORS)
+      LERROR =.TRUE.
+      GO TO 290
+
+to read
+
+      WRITE(IOUT,250) (N,RK(N),N=1,NORS)
+      LERROR =.TRUE.
+C     GO TO 290
+      STOP
+(45)  Change lines 3049 through 3055 that read
+
+   70 CONTINUE
+      TEST = FN(KHO2)/HO2
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+      TEST = FN(KOH)/OH
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+      TEST = FN(KC2O3)/C2O3
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+
+to read
+
+   70 CONTINUE
+      TEST = FN(KHO2)/AMAX1(1.E-12,HO2)
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+      TEST = FN(KOH)/AMAX1(1.E-13,OH)
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+      TEST = FN(KC2O3)/AMAX1(1.E-13,C2O3)
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+      TEST = FN(KXO2)/AMAX1(1.E-12,XO2)
+      IF (ABS(TEST).GT.XXTOL) GO TO 40
+
+(46)  Change line 3536 that reads
+
+      IF (LISOP) RP(KCO ,KHCHO) = -0.06*R(77) /ISOP
+
+to read
+
+      IF (LISOP) RP(KCO ,KISOP) = -0.06*R(77) /ISOP
+
+(47)  Change lines 3677 through 3682 that read
+
+      R(20)= RK(20)*NO*NO
+      R(21)= RK(21)*NO*NO2*H2O
+      R(25)= RK(25)*HNO2*HNO2
+      R(30)= RK(30)*PNA
+      R(48)= RK(48)*PAN
+      R(83)= RK(83)*SO2
+
+to read
+
+      R(20)= RK(20)*efNO*efNO
+      R(21)= RK(21)*efNO*efNO2*H2O
+      R(25)= RK(25)*efHNO2*efHNO2
+      R(30)= RK(30)*efPNA
+      R(48)= RK(48)*efPAN
+      R(83)= RK(83)*efSO2
+
+(48)  Change lines 3686 through 3692 that read
+
+      RX(22)= RK(22)*NO
+      RX(24)= RK(24)*HNO2
+      RX(26)= RK(26)*NO2
+      RX(27)= RK(27)*HNO3
+      RX(28)= RK(28)*NO
+      RX(29)= RK(29)*NO2
+      RX(31)= RK(31)*PNA
+
+to read
+
+      RX(22)= RK(22)*efNO
+      RX(24)= RK(24)*efHNO2
+      RX(26)= RK(26)*efNO2
+      RX(27)= RK(27)*efHNO3
+      RX(28)= RK(28)*efNO
+      RX(29)= RK(29)*efNO2
+      RX(31)= RK(31)*efPNA
+
+(49)  Change lines 3695 through 3700 that read
+
+      RX(35)= RK(35)*H2O2
+      RX(36)= RK(36)*CO
+      RX(37)= RK(37)*FORM
+      RX(43)= RK(43)*ALD2
+      RX(46)= RK(46)*NO
+      RX(47)= RK(47)*NO2
+
+to read
+
+      RX(35)= RK(35)*efH2O2
+      RX(36)= RK(36)*efCO
+      RX(37)= RK(37)*efFORM
+      RX(43)= RK(43)*efALD2
+      RX(46)= RK(46)*efNO
+      RX(47)= RK(47)*efNO2
+
+(50)  Change line 3704 that reads
+
+      RX(52)= RK(52)*PAR
+
+to read
+
+      RX(52)= RK(52)*efPAR
+
+(51)  Change lines 3707 through 3711 that read
+
+      RX(55)= RK(55)*NO2
+      RX(57)= RK(57)*OLE
+      RX(61)= RK(61)*ETH
+      RX(63)= RK(63)*TOL
+      RX(64)= RK(64)*NO
+
+to read
+
+      RX(55)= RK(55)*efNO2
+      RX(57)= RK(57)*efOLE
+      RX(61)= RK(61)*efETH
+      RX(63)= RK(63)*efTOL
+      RX(64)= RK(64)*efNO
+
+(52)  Change lines 3713 through 3719 that read
+
+      RX(66)= RK(66)*CRES
+      RX(68)= RK(68)*NO2
+      RX(70)= RK(70)*OPEN
+      RX(72)= RK(72)*XYL
+      RX(73)= RK(73)*MGLY
+      RX(76)= RK(76)*ISOP
+      RX(79)= RK(79)*NO
+
+to read
+
+      RX(66)= RK(66)*efCRES
+      RX(68)= RK(68)*efNO2
+      RX(70)= RK(70)*efOPEN
+      RX(72)= RK(72)*efXYL
+      RX(73)= RK(73)*efMGLY
+      RX(76)= RK(76)*efISOP
+      RX(79)= RK(79)*efNO
+
+(53)  Change lines 3721 through 3724 that read
+
+      RX(81)= RK(81)*NO
+      RX(82)= RK(82)*SO2
+      RX(84)= RK(84)*MEOH
+      RX(85)= RK(85)*ETOH
+
+to read
+
+      RX(81)= RK(81)*efNO
+      RX(82)= RK(82)*efSO2
+      RX(84)= RK(84)*efMEOH
+      RX(85)= RK(85)*efETOH
+      RX(86)= RK(86)
+
+(54)  After lines 3793 through 3796 that read
+
+      OH = (HO2*(XR(28) + C2O3*0.79*XR(50)))/OHR
+      OH = AMAX1(OH,1.E-12)
+      OH = AMIN1(OH,2.E-7)
+C
+
+add the following lines
+
+      XO2OH  = XR(51) + 0.87*XR(52) + XR(57) + XR(61)
+     1       + 0.08*XR(63) + 0.60*XR(66) + XR(70) + 0.50*XR(72)
+     2       + XR(73) + XR(76) + 0.96*XR(53)
+C
+      AA = 2.0*XR(80)
+      BB = XR(79) + HO2*XR(86)
+      CC = -(OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))
+C
+      XO2=(SQRT(BB*BB-4.*AA*CC)-BB)/(2.*AA)
+      XO2=AMAX1(XO2,1.E-12)
+      XO2=AMIN1(XO2,5.E-4)
+C
+
+(55)  Change lines 3797 through 3816 that read
+
+      C2O3 = (X(48) + OH*C2O3OH)
+     1         /(C2O3R + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2 = (X(30) + OH*HO2OH + C2O3 *(XR(46) + 2.0* C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        / (HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+      OH = (HO2*(XR(28) + C2O3*0.79*XR(50)))/OHR
+C
+      C2O3 = (X(48) + OH*C2O3OH)
+     1         /(C2O3R + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2 = (X(30) + OH*HO2OH + C2O3 *(XR(46) + 2.0* C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        / (HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+      OH = (HO2*(XR(28) + C2O3*0.79*XR(50)))/OHR
+C
+      C2O3 = (X(48) + OH*C2O3OH)
+     1         /(C2O3R + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2 = (X(30) + OH*HO2OH + C2O3 *(XR(46) + 2.0* C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        / (HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+      OH = (HO2*(XR(28) + C2O3*0.79*XR(50)))/OHR
+
+to read
+
+      C2O3 = (X(48) + OH*C2O3OH)
+     1         /(C2O3R + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2 = (X(30) + OH*HO2OH + C2O3 *(XR(46) + 2.0* C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        / (HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86))
+      OH = (HO2*(XR(28) + C2O3*0.79*XR(50)))/OHR
+      XO2 = (OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+XR(79)+HO2*XR(86))
+C
+      C2O3 = (X(48) + OH*C2O3OH)
+     1         /(C2O3R + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2 = (X(30) + OH*HO2OH + C2O3 *(XR(46) + 2.0* C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        / (HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86))
+      OH = (HO2*(XR(28) + C2O3*0.79*XR(50)))/OHR
+      XO2 = (OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+XR(79)+HO2*XR(86))
+C
+      C2O3 = (X(48) + OH*C2O3OH)
+     1         /(C2O3R + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2 = (X(30) + OH*HO2OH + C2O3 *(XR(46) + 2.0* C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        / (HO2R+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86))
+      OH = (HO2*(XR(28) + C2O3*0.79*XR(50)))/OHR
+      XO2 = (OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+XR(79)+HO2*XR(86))
+
+(56)  Change line 3830 that reads
+
+      DO 120 I=1,3
+
+to read
+
+      DO 120 I=1,4
+
+and change line 3832 that reads
+
+      DO 120 J=1,3
+
+to read
+
+      DO 120 J=1,4
+
+(57)  Change line 3838 that reads
+
+      TEMP2 = HO2R+2.*HO2*(XR(32)+XR(33))+C2O3*XR(50)
+
+to read
+
+      TEMP2 = HO2R+2.*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86)
+(58)  After lines 3842 through 3844 that read
+
+      FP(KHO2 ,KHO2 ) = -TEMP2 -2.*(XR(32)+XR(33))*HO2+0.79*C2O3*XR(50)
+      FP(KHO2 ,KOH  ) = HO2OH
+      FP(KHO2 ,KC2O3) = XR(46)+4.0*C2O3*XR(49)-0.21*HO2*XR(50)
+
+add the following line
+
+      FP(KHO2 ,KXO2 ) = -HO2*XR(86)
+(59)  After lines 3854 through 3856 that read
+
+      FP(KC2O3,KOH  ) = C2O3OH
+      FP(KC2O3,KC2O3) = -(C2O3R+HO2*XR(50)+4.0*C2O3*XR(49))
+C
+
+add the following lines
+
+      FN(KXO2) = -(OH*XO2OH + C2O3*(XR(46) + 2.0*C2O3*XR(49)
+     1          + 0.79*HO2*XR(50))) +XO2*(XR(79)+HO2*XR(86)+XO2*XR(80))
+      FP(KXO2,KHO2) = -XO2*XR(86) + 0.79*C2O3*XR(50)
+      FP(KXO2,KOH ) = XO2OH
+      FP(KXO2,KC2O3) = XR(46)+4.0*C2O3*XR(49)+0.79*HO2*XR(50)
+      FP(KXO2,KXO2 ) = -(XR(79)+HO2*XR(86)+2.0*XO2*XR(80))
+C
+
+(60)  Change line 3859 that reads
+
+      CALL DEC(3,3,FP,IP,IER)
+
+to read
+
+      CALL DEC(4,4,FP,IP,IER)
+
+(61)  Change line 3867 that reads
+
+      CALL SOL(3,3,FP,FN,IP)
+
+to read
+
+      CALL SOL(4,4,FP,FN,IP)
+
+(62)  After lines 3871 through 3873
+
+      HO2  = HO2  + FN(KHO2)
+      OH   = OH   + FN(KOH)
+      C2O3 = C2O3 + FN(KC2O3)
+
+add the following line
+
+      XO2  = XO2  + FN(KXO2)
+
+(63)  Change lines 3884 through 3886 that read
+
+      WRITE(IOUT,250) (N,RK(N),N=1,NORS)
+      LERROR =.TRUE.
+      GO TO 290
+
+to read
+
+      WRITE(IOUT,250) (N,RK(N),N=1,NORS)
+      LERROR =.TRUE.
+C     GO TO 290
+      STOP
+
+(64)  Change lines 3891 through 3897 that read
+
+  140 CONTINUE
+      TEST = FN(KHO2)/HO2
+      IF (ABS(TEST).GT.XXTOL) GO TO 110
+      TEST = FN(KOH)/OH
+      IF (ABS(TEST).GT.XXTOL) GO TO 110
+      TEST = FN(KC2O3)/C2O3
+      IF (ABS(TEST).GT.XXTOL) GO TO 110
+
+to read
+
+  140 CONTINUE
+      TEST = FN(KHO2)/AMAX1(1.E-12,HO2)
+      IF (ABS(TEST).GT.XXTOL) GO TO 110
+      TEST = FN(KOH)/AMAX1(1.E-13,OH)
+      IF (ABS(TEST).GT.XXTOL) GO TO 110
+      TEST = FN(KC2O3)/AMAX1(1.E-13,C2O3)
+      IF (ABS(TEST).GT.XXTOL) GO TO 110
+      TEST = FN(KXO2)/AMAX1(1.E-12,XO2)
+      IF (ABS(TEST).GT.XXTOL) GO TO 110
+
+(65)  Remove lines 3901 through 3912 that read
+
+      XO2OH  = XR(51) + 0.87*XR(52) + XR(57) + XR(61)
+     1       + 0.08*XR(63) + 0.60*XR(66) + XR(70) + 0.50*XR(72)
+     2       + XR(73) + XR(76) + 0.96*XR(53)
+C
+      XO21 = OH*XO2OH + C2O3*(XR(46)+2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50))
+C
+      XO2=(SQRT(ABS(XR(79)*XR(79)+4.*XO21*XR(80)))-XR(79))
+     1     /(2.*XR(80))
+      XO2=AMAX1(XO2,1.E-12)
+      XO2=AMIN1(XO2,1.E-6)
+C
+
+(66)  Change lines 4195 through 4196 that read
+
+  210 FORMAT(1X,'*** ERROR IN RADICAL CONCENTRATION CALCULATIONS',//,
+     1       2X,'       IER     LITER    NITMAX',/,2X,3I10)
+
+to read
+
+  210 FORMAT(1X,
+     1  '*** ERROR IN RADICAL CONCENTRATION CALCULATIONS IN CHEM2A',
+     2  //, 2X,'       IER     LITER    NITMAX',/,2X,3I10)
+
+CHEM2B:
+
+(67)  Before lines 4228 through 4230 that read
+
+C--INPUT VARIABLES
+C         NOSPEC    I  NO OF SPECIES
+C         NORS      I  NO OF REACTIVE SPECIES
+
+add the following lines
+
+C     ***  ADDED "EFFECTIVE" CONCENTRATION VARIABLES (E.G., efCRES)
+C          THAT ARE 0. WHEN ACTUAL CONCENTRATION IS LESS THAN BDNL.
+C          THESE ARE USED IN CALCULATING VALUES FOR RX AND R SO
+C          THAT REACTIONS WILL BE SHUT DOWN WHEN ONE OF THE REACTANTS
+C          REACHES VERY SMALL CONCENTRATIONS.  (TCM, 5/8/92)
+C
+C
+
+(68)  Change line 4261 that reads
+
+      DIMENSION  FN(3),FP(3,3),IP(3)
+
+to read
+
+      DIMENSION  FN(4),FP(4,4),IP(4)
+
+(69)  After lines 4310 through 4312 that read
+
+      ISOP = 0.
+      IF (LISOP) ISOP = HH(KISOP)
+C
+
+add the following lines
+
+      efNO   = NO
+      IF (efNO   .LE. 1.01*BDNL(KNO  )) efNO   = 0.
+      efNO2  = NO2
+      IF (efNO2  .LE. 1.01*BDNL(KNO2 )) efNO2  = 0.
+      efNXOY = NXOY
+      IF (efNXOY .LE. 1.01*BDNL(KNXOY)) efNXOY = 0.
+      efO3   = O3
+      IF (efO3   .LE. 1.01*BDNL(KO3  )) efO3   = 0.
+      efHNO2 = HNO2
+      IF (efHNO2 .LE. 1.01*BDNL(KHNO2)) efHNO2 = 0.
+      efH2O2 = H2O2
+      IF (efH2O2 .LE. 1.01*BDNL(KH2O2)) efH2O2 = 0.
+      efFORM = FORM
+      IF (efFORM .LE. 1.01*BDNL(KHCHO)) efFORM = 0.
+      efPAN  = PAN
+      IF (efPAN  .LE. 1.01*BDNL(KPAN )) efPAN  = 0.
+      efHNO3 = HNO3
+      IF (efHNO3 .LE. 1.01*BDNL(KHNO3)) efHNO3 = 0.
+      efALD2 = ALD2
+      IF (efALD2 .LE. 1.01*BDNL(KALD2)) efALD2 = 0.
+      efETH  = ETH
+      IF (efETH  .LE. 1.01*BDNL(KETH )) efETH  = 0.
+      efOLE  = OLE
+      IF (efOLE  .LE. 1.01*BDNL(KOLE )) efOLE  = 0.
+      efPAR  = PAR
+      IF (efPAR  .LE. 1.01*BDNL(KPAR )) efPAR  = 0.
+      efTOL  = TOL
+      IF (efTOL  .LE. 1.01*BDNL(KTOL )) efTOL  = 0.
+      efXYL  = XYL
+      IF (efXYL  .LE. 1.01*BDNL(KXYL )) efXYL  = 0.
+      efMGLY = MGLY
+      IF (efMGLY .LE. 1.01*BDNL(KMGLY)) efMGLY = 0.
+      efOPEN = OPEN
+      IF (efOPEN .LE. 1.01*BDNL(KOPEN)) efOPEN = 0.
+      efCO   = CO
+      IF (efCO   .LE. 1.01*BDNL(KCO  )) efCO   = 0.
+      efPNA  = PNA
+      IF (efPNA  .LE. 1.01*BDNL(KPNA )) efPNA  = 0.
+      efCRES = CRES
+      IF (efCRES .LE. 1.01*BDNL(KCRES)) efCRES = 0.
+      efSO2  = SO2
+      IF (efSO2  .LE. 1.01*BDNL(KSO2 )) efSO2  = 0.
+      efSULF = SULF
+      IF (efSULF .LE. 1.01*BDNL(KSULF)) efSULF = 0.
+      efMEOH = MEOH
+      IF (efMEOH .LE. 1.01*BDNL(KMEOH)) efMEOH = 0.
+      efETOH = ETOH
+      IF (efETOH .LE. 1.01*BDNL(KETOH)) efETOH = 0.
+      efNTR = NTR
+      IF (efNTR .LE. 1.01*BDNL(KNTR)) efNTR = 0.
+      efISOP = ISOP
+      IF (efISOP .LE. 1.01*BDNL(KISOP)) efISOP = 0.
+C
+
+(70)  After lines 4324 through 4326 that read
+
+      KHO2  = 1
+      KOH   = 2
+      KC2O3 = 3
+
+add the following line
+
+      KXO2  = 4
+
+(71)  Change lines 4341 through 4344 that read
+
+      R(25)= RK(25)*HNO2*HNO2
+      R(30)= RK(30)*PNA
+      R(48)= RK(48)*PAN
+      R(83)= RK(83)*SO2
+
+to read
+
+      R(25)= RK(25)*efHNO2*efHNO2
+      R(30)= RK(30)*efPNA
+      R(48)= RK(48)*efPAN
+      R(83)= RK(83)*efSO2
+
+(72)  Change lines 4348 through 4349 that read
+
+      RX(16)= RK(16)*NO2
+      RX(17)= RK(17)*NO2
+
+to read
+
+      RX(16)= RK(16)*efNO2
+      RX(17)= RK(17)*efNO2
+
+(73)  Change lines 4352 through 4356 that read
+
+      RX(24)= RK(24)*HNO2
+      RX(26)= RK(26)*NO2
+      RX(27)= RK(27)*HNO3
+      RX(29)= RK(29)*NO2
+      RX(31)= RK(31)*PNA
+
+to read
+
+      RX(24)= RK(24)*efHNO2
+      RX(26)= RK(26)*efNO2
+      RX(27)= RK(27)*efHNO3
+      RX(29)= RK(29)*efNO2
+      RX(31)= RK(31)*efPNA
+
+(74)  Change lines 4359 through 4365 that read
+
+      RX(35)= RK(35)*H2O2
+      RX(36)= RK(36)*CO
+      RX(37)= RK(37)*FORM
+      RX(41)= RK(41)*FORM
+      RX(43)= RK(43)*ALD2
+      RX(44)= RK(44)*ALD2
+      RX(47)= RK(47)*NO2
+
+to read
+
+      RX(35)= RK(35)*efH2O2
+      RX(36)= RK(36)*efCO
+      RX(37)= RK(37)*efFORM
+      RX(41)= RK(41)*efFORM
+      RX(43)= RK(43)*efALD2
+      RX(44)= RK(44)*efALD2
+      RX(47)= RK(47)*efNO2
+
+(75)  Change line 4369 that reads
+
+      RX(52)= RK(52)*PAR
+
+to read
+
+      RX(52)= RK(52)*efPAR
+
+(76)  Change lines 4372 through 4387 that read
+
+      RX(55)= RK(55)*NO2
+      RX(57)= RK(57)*OLE
+      RX(59)= RK(59)*OLE
+      RX(61)= RK(61)*ETH
+      RX(63)= RK(63)*TOL
+      RX(66)= RK(66)*CRES
+      RX(67)= RK(67)*CRES
+      RX(68)= RK(68)*NO2
+      RX(70)= RK(70)*OPEN
+      RX(72)= RK(72)*XYL
+      RX(73)= RK(73)*MGLY
+      RX(76)= RK(76)*ISOP
+      RX(78)= RK(78)*ISOP
+      RX(82)= RK(82)*SO2
+      RX(84)= RK(84)*MEOH
+      RX(85)= RK(85)*ETOH
+
+to read
+
+      RX(55)= RK(55)*efNO2
+      RX(57)= RK(57)*efOLE
+      RX(59)= RK(59)*efOLE
+      RX(61)= RK(61)*efETH
+      RX(63)= RK(63)*efTOL
+      RX(66)= RK(66)*efCRES
+      RX(67)= RK(67)*efCRES
+      RX(68)= RK(68)*efNO2
+      RX(70)= RK(70)*efOPEN
+      RX(72)= RK(72)*efXYL
+      RX(73)= RK(73)*efMGLY
+      RX(76)= RK(76)*efISOP
+      RX(78)= RK(78)*efISOP
+      RX(80)= RK(80)
+      RX(82)= RK(82)*efSO2
+      RX(84)= RK(84)*efMEOH
+      RX(85)= RK(85)*efETOH
+      RX(86)= RK(86)
+
+(77)  After lines 4418 through 4419 that read
+
+        NO3  = FNO3*NOX
+        N2O5 = FN2O5*NOX
+
+add the following line
+
+        NXOY = NO + NO2 + NO3 + 2.*N2O5
+
+(78)  After lines 4473 through 4476 that read
+
+      OH = HO2*C2O3*0.79*XR(50)/OHR
+      OH = AMAX1(OH,1.E-12)
+      OH = AMIN1(OH,1.E-8)
+C
+
+add the following lines
+
+      XO2S   = NO3*0.91*XR(59)
+      XO2OH  = XR(51) + 0.87*XR(52) + XR(57) + XR(61)
+     1       + 0.08*XR(63) + 0.60*XR(66) + XR(70) + 0.50*XR(72)
+     2       + XR(73) + XR(76) + 0.96*XR(53)
+C
+      AA = 2.0*XR(80)
+      BB = HO2*XR(86)
+      CC = -(XO2S + OH*XO2OH + C2O3*(2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))
+C
+      XO2=(SQRT(BB*BB-4.*AA*CC)-BB)/(2.*AA)
+      XO2=AMAX1(XO2,1.E-12)
+      XO2=AMIN1(XO2,5.E-4)
+C
+
+(79)  Change lines 4477 through 4493 that read
+
+      C2O3 = (X(48)+OH*C2O3OH) /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2  = (HO2S + OH*HO2OH + C2O3*(2.0*C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        / (XR(29)+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+      OH   = HO2*C2O3*0.79*XR(50)/OHR
+C
+      C2O3 = (X(48)+OH*C2O3OH) /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2  = (HO2S + OH*HO2OH + C2O3*(2.0*C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        / (XR(29)+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+      OH   = HO2*C2O3*0.79*XR(50)/OHR
+C
+      C2O3 = (X(48)+OH*C2O3OH) /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2  = (HO2S + OH*HO2OH + C2O3*(2.0*C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        / (XR(29)+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50))
+      OH   = HO2*C2O3*0.79*XR(50)/OHR
+
+to read
+
+      C2O3 = (X(48)+OH*C2O3OH) /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2  = (HO2S + OH*HO2OH + C2O3*(2.0*C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        /(XR(29)+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86))
+      OH   = HO2*C2O3*0.79*XR(50)/OHR
+      XO2 = (XO2S + OH*XO2OH + C2O3*(2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+HO2*XR(86))
+C
+      C2O3 = (X(48)+OH*C2O3OH) /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2  = (HO2S + OH*HO2OH + C2O3*(2.0*C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        /(XR(29)+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86))
+      OH   = HO2*C2O3*0.79*XR(50)/OHR
+      XO2 = (XO2S + OH*XO2OH + C2O3*(2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+HO2*XR(86))
+C
+      C2O3 = (X(48)+OH*C2O3OH) /(XR(47) + HO2*XR(50) + 2.0*C2O3*XR(49))
+      HO2  = (HO2S + OH*HO2OH + C2O3*(2.0*C2O3*XR(49)
+     1           + 0.79*HO2*XR(50)))
+     2        /(XR(29)+2.0*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86))
+      OH   = HO2*C2O3*0.79*XR(50)/OHR
+      XO2 = (XO2S + OH*XO2OH + C2O3*(2.*C2O3*XR(49)
+     1       + 0.79*HO2*XR(50)))/(2.0*XO2*XR(80)+HO2*XR(86))
+
+(80)  Change line 4505 that reads
+
+      DO 180 I=1,3
+
+to read
+
+      DO 180 I=1,4
+
+and change line 4507 that reads
+
+      DO 180 J=1,3
+
+to read
+
+      DO 180 J=1,4
+
+(81)  Change line 4513 that reads
+
+      TEMP2 = XR(29)+2.*HO2*(XR(32)+XR(33))+C2O3*XR(50)
+
+to read
+
+      TEMP2 = XR(29)+2.*HO2*(XR(32)+XR(33))+C2O3*XR(50)+XO2*XR(86)
+
+(82)  After lines 4517 through 4519 that read
+
+      FP(KHO2 ,KHO2 ) = -TEMP2 -2.*(XR(32)+XR(33))*HO2+0.79*C2O3*XR(50)
+      FP(KHO2 ,KOH  ) = HO2OH
+      FP(KHO2 ,KC2O3) = 4.0*C2O3*XR(49)-0.21*HO2*XR(50)
+
+add the following line
+
+      FP(KHO2 ,KXO2 ) = -HO2*XR(86)
+
+(83)  After lines 4529 through 4531 that read
+
+      FP(KC2O3,KC2O3) = -(XR(47)+HO2*XR(50)+4.0*C2O3*XR(49))
+      FP(KC2O3,KOH  ) = C2O3OH
+C
+
+add the following lines
+
+      FN(KXO2) = -(XO2S + OH*XO2OH + C2O3*(2.0*C2O3*XR(49)
+     1          + 0.79*HO2*XR(50))) +XO2*(HO2*XR(86)+XO2*XR(80))
+      FP(KXO2,KHO2) = -XO2*XR(86) + 0.79*C2O3*XR(50)
+      FP(KXO2,KOH ) = XO2OH
+      FP(KXO2,KC2O3) = 4.0*C2O3*XR(49)+0.79*HO2*XR(50)
+      FP(KXO2,KXO2 ) = -(HO2*XR(86)+2.0*XO2*XR(80))
+C
+
+(84)  Change line 4534 that reads
+
+      CALL DEC(3,3,FP,IP,IER)
+
+to read
+
+      CALL DEC(4,4,FP,IP,IER)
+
+(85)  Change line 4542 that reads
+
+      CALL SOL(3,3,FP,FN,IP)
+
+to read
+
+      CALL SOL(4,4,FP,FN,IP)
+
+(86)  After lines 4545 through 4548 that read
+
+      HO2  = HO2  + FN(KHO2)
+      OH   = OH   + FN(KOH)
+      C2O3 = C2O3 + FN(KC2O3)
+
+add the following line
+
+      XO2  = XO2  + FN(KXO2)
+
+(87)  Change lines 4559 through 4561 that read
+
+      WRITE(IOUT,250) (N,RK(N),N=1,NORS)
+      LERROR =.TRUE.
+      GO TO 290
+
+to read
+
+      WRITE(IOUT,250) (N,RK(N),N=1,NORS)
+      LERROR =.TRUE.
+C     GO TO 290
+      STOP
+
+(88)  Change lines 4566 through 4872 that read
+
+  200 CONTINUE
+      TEST = FN(KHO2)/HO2
+      IF (ABS(TEST).GT.XXTOL) GO TO 170
+      TEST = FN(KOH)/OH
+      IF (ABS(TEST).GT.XXTOL) GO TO 170
+      TEST = FN(KC2O3)/C2O3
+      IF (ABS(TEST).GT.XXTOL) GO TO 170
+
+to read
+
+  200 CONTINUE
+      TEST = FN(KHO2)/AMAX1(1.E-12,HO2)
+      IF (ABS(TEST).GT.XXTOL) GO TO 170
+      TEST = FN(KOH)/AMAX1(1.E-13,OH)
+      IF (ABS(TEST).GT.XXTOL) GO TO 170
+      TEST = FN(KC2O3)/AMAX1(1.E-13,C2O3)
+      IF (ABS(TEST).GT.XXTOL) GO TO 170
+      TEST = FN(KXO2)/AMAX1(1.E-12,XO2)
+      IF (ABS(TEST).GT.XXTOL) GO TO 170
+
+(89)  Change lines 5114 through 5115 that read
+
+  210 FORMAT(1X,'*** ERROR IN RADICAL CONCENTRATION CALCULATIONS',//,
+     1       2X,'       IER     LITER    NITMAX',/,2X,3I10)
+
+to read
+
+  210 FORMAT(1X,
+     1  '*** ERROR IN RADICAL CONCENTRATION CALCULATIONS IN CHEM2B',
+     2  //,2X,'       IER     LITER    NITMAX',/,2X,3I10)
+
+DIFCOF:
+
+(90)  After line 6151 that reads
+
+      U = WINDMG / 3600.
+
+add the following line
+
+      IF (U .LT. .01) U = .01
+
+(91)  Replace line 6232 that reads
+
+         IF (ZI-Z .GT. .5*TH(K)) GO TO 116
+
+with the following lines
+
+         IF (K .LE. NOZ) THEN
+           IF (ZI-Z .GT. .5*TH(K)) GO TO 116
+         ELSE
+           IF (ZI-Z .GT. .5*TH(NOZ)) GO TO 116
+         ENDIF
+
+(92)  Replace line 6266 that reads
+
+         IF (ZI-Z .GT. .5*TH(K)) GO TO 158
+
+with the following lines
+
+         IF (K .LE. NOZ) THEN
+           IF (ZI-Z .GT. .5*TH(K)) GO TO 158
+         ELSE
+           IF (ZI-Z .GT. .5*TH(NOZ)) GO TO 158
+         ENDIF
+
+(93)  Replace line 6312 that reads
+
+         IF (ZI-Z .LT. .5*TH(K)) GO TO 310
+
+with the following lines
+
+         IF (K .LE. NOZ) THEN
+           IF (ZI-Z .LT. .5*TH(K)) GO TO 310
+         ELSE
+           IF (ZI-Z .LT. .5*TH(NOZ)) GO TO 310
+         ENDIF
+
+FINISH:
+
+(94)  Change line 6731 that reads
+
+      SUBROUTINE FINISH (ISG, SCR, IBD, LERSET, LERADV)
+
+to read
+
+      SUBROUTINE FINISH (ISG, LOC, SCR, IBD, LERSET, LERADV)
+
+(95)  Before lines 6737 through 6738 that read
+
+C     ***  FINISH OFF TIME SLICE BY UPDATING TIME
+C          AND WRITING FILES IF NECESSARY
+
+add the following lines
+
+C
+C -- MODIFIED, 7/30/90, TCM:  MADE CHECK OF AVG AND INST OUTPUT TIMES
+C    TO BE "LE" INSTEAD OF "LT" FOR CONSISTENCY WITH OTHER CHECKS.
+C    CHANGED INCREMENT OF AVG AND INST OUTPUT TIMES TO USE LAST
+C    OUTPUT TIME INSTEAD OF CURRENT TIME AS BASE.
+C
+C -- MODIFIED 3/28/91, TCM:  ADDED LOC TO ARGUMENT LIST AND FIXED
+C    CALL OF CALMAS TO USE LOC INSTEAD OF SCR
+C
+C -- MODIFIED 8/25/92, TCM:  REVISED CHECKS OF END TIME TO ALLOW
+C    END TIME TO BE SPECIFIED AS EITHER 24. ON CURRENT DATE OR
+C    0. ON NEXT DATE.
+C
+C -- MODIFIED 8/25/92, TCM:  INCREASED FUZZ ON RESTART LOGIC
+C
+C
+
+(96)  Change line 6763 that reads
+
+      DIMENSION  ISG(LENONE), SCR(LENONE), IBD(LENONE)
+
+to read
+
+      DIMENSION  ISG(LENONE), LOC(LENONE), SCR(LENONE), IBD(LENONE)
+
+(97)  After lines 6763 through 6764 that read
+
+      DIMENSION  ISG(LENONE), SCR(LENONE), IBD(LENONE)
+      LOGICAL LSIMI, LSIMA
+
+add the following line
+
+       INCLUDE  (PARAMS)
+
+(98)  After lines 6770 through 6771 that read
+
+       INCLUDE  (BALANC)
+       INCLUDE  (LOCPTR)
+
+add the following line
+
+       INCLUDE  (MSCAL)
+
+(99)  Change lines 6804 through 6808 that read
+
+CRS   ELAPS  = SECOND()
+CRS   CPUTIM = ELAPS - ELAPSO
+CRS   ELAPSO = ELAPS
+CRS   WRITE (NUTRC,2100) NDATE, TTIME, TSLICE, CPUTIM, ELAPS
+CRS   WRITE (*,2100) NDATE, TTIME, TSLICE, CPUTIM, ELAPS
+
+to read
+
+      ELAPS  = SECOND()
+      CPUTIM = ELAPS - ELAPSO
+      ELAPSO = ELAPS
+      WRITE (NUTRC,2100) NDATE, TTIME, TSLICE, CPUTIM, ELAPS
+      WRITE (*,2100) NDATE, TTIME, TSLICE, CPUTIM, ELAPS
+
+(100)  Change line 6827 that reads
+
+      IF (TTIME+.001 .LT. TAVE) GO TO 150
+
+to read
+
+      IF (TTIME+.001 .LE. TAVE) GO TO 150
+
+(101)  Change line 6833 that reads
+
+  150 IF (TTIME+.001 .LT. TINST) GO TO 400
+
+to read
+
+  150 IF (TTIME+.001 .LE. TINST) GO TO 400
+
+(102)  Change lines 6898 through 6901 that read
+
+         CALL CALMAS(SCR(JTEMP), SCR(JTOP2), SCR(JDB2),
+     $                  SCR(JCONC), MSPEC,
+     $                  IBD(JINDW), IBD(JINDE), SCR(JHT), SCR(JTH),
+     $                  NOX, NOY, NOZ, NOSPEC)
+
+to read
+
+         CALL CALMAS(SCR(JTEMP), SCR(JTOP2), SCR(JDB2),
+     $                  SCR(JCONC), MSPEC,
+     $                  IBD(JINDW), IBD(JINDE), LOC(JHT), LOC(JTH),
+     $                  NOX, NOY, NOZ, NOSPEC)
+
+(103)  Change line 7013 that reads
+
+      TTP = TTIME + .001
+
+to read
+
+      TTP = TTIME + .010
+
+(104)  Remove line 7059 that reads
+
+  380    CONTINUE
+
+(105)  Change line 7066 that reads
+
+      IF ((NDATE.EQ.NDLAST) .AND. (TTIME+.001.GE.TTLAST)) GO TO 800
+
+to read
+
+Ctcm  IF ((NDATE.EQ.NDLAST) .AND. (TTIME+.001.GE.TTLAST)) GO TO 800
+      TCHK1 = (NDATE - NDLAST)*24. + TTIME + .001
+      IF (TCHK1 .GE. TTLAST) GO TO 800
+
+(106)  Change lines 7083 through 7084 that read
+
+      TAVE = TTIME + TIAVE
+      IF (TAVE.GT.24.) TAVE = 24.
+
+to read
+
+      TAVE = TAVE + TIAVE
+      IF (TAVE.GT.24.) TAVE = TAVE - 24.
+
+(107)  Change line 7090 that reads
+
+      TINST = TTIME + TIINST
+
+to read
+
+      TINST = TINST + TIINST
+      IF (TINST .GT. 24.) TINST = TINST - 24.
+
+(108)  Change lines 7194 through 7195 that read
+
+     $  5X, 19HELAPSED CPU TIME = , F7.3, 5H SECS,
+     $  5X, 25HTOTAL ELAPSED CPU TIME = , F16.3, 5H SECS )
+
+to read
+
+     $  5X, 19HELAPSED CPU TIME = , F8.3, 5H SECS,
+     $  5X, 25HTOTAL ELAPSED CPU TIME = , F16.3, 5H SECS )
+
+OPENA:
+
+(109)  Remove lines 8065 through 8113 that read
+
+CRS   SUBROUTINE OPENA
+C
+C
+C     *** (C) COPR. 1988  SYSTEMS APPLICATIONS, INC.  SAN RAFAEL, CA
+C
+C  OPEN INPUT AND OUTPUT FILES FOR AIRSHED/PARIS MODELS
+C
+CRS   DIMENSION IUNIT(16)
+CRS   CHARACTER*80 IPATH,IPATH1
+CRS   DATA IUNIT/7,8,9,10,11,12,13,14,17,43,44,45,46,6,41,42/
+C
+C  --- OPEN INPUT FILES
+C
+C     CALL GETARG(1,IPATH1)
+C     WRITE (*,'(A)') ' ENTER NAME OF THE FILE CONTAINING INPUT FILES: '
+C     READ 11,IPATH1
+C  11 FORMAT (A)
+C     OPEN (4,FILE=IPATH1)
+C
+CRS   IOS=0
+CRS   DO 10 I=1,13
+CRS   IUN=IUNIT(I)
+CRS   READ (*,'(20X,A)') IPATH
+CRS   OPEN (IUN,FILE=IPATH,FORM='UNFORMATTED',STATUS='OLD',IOSTAT=IOS)
+CRS   IF (IOS.NE.0) WRITE (0,103) IUN
+CR103 FORMAT (' **** ERROR READING FILE ON UNIT ',I3)
+CRS10 CONTINUE
+CRS   WRITE (*,100)
+CRS00 FORMAT ('FINISHED OPENING INPUT FILES')
+C
+C  --- OPEN SIMULATION OUTPUT FILE
+C
+CRS   READ (*,'(20X,A)') IPATH
+CRS   OPEN (3,FILE=IPATH)
+C
+C  --- OPEN AVERAGE AND INSTANTANEOUS FILES
+C
+CRS   READ (*,'(20X,A)') IPATH
+CRS   OPEN (41,FILE=IPATH,FORM='UNFORMATTED')
+CRS   READ (*,'(20X,A)') IPATH
+CRS   OPEN (42,FILE=IPATH,FORM='UNFORMATTED')
+CRS   READ (*,'(20X,A)') IPATH
+CRS   OPEN (47,FILE=IPATH,FORM='FORMATTED')
+C
+C
+CRS   WRITE (*,101)
+CR101 FORMAT ('FINSISHED OPENING OUTPUT FILES')
+CRS   RETURN
+CRS   END
+
+RESPTS:
+
+(110)  After lines 8957 through 8959 that read
+
+C     SOURCES IN ORDER OF IJ LOCATION.  THIS WILL BE USED IN STEP3
+C     TO SPEED SEARCH FOR POINTS WITHIN EACH CELL.
+C
+
+add the following lines
+
+C  -- MODIFIED 7/30/90, TCM:  ADDED RANGE CHECK ON IJPS SUBSCRIPT BEFORE
+C     USING TO ADDRESS TEMP ARRAY
+C
+
+(111)  Change line 9037 that reads
+
+         IF (LTEMP) QFACT = TEMP(IJ)/298. * ATFACT
+
+to read
+
+         IF (IJ .GE. 1 .AND. IJ .LE. NOXY) THEN
+           IF (LTEMP) QFACT = TEMP(IJ)/298. * ATFACT
+         ENDIF
+
+SCRAL:
+
+(112)  Change line 9469 that reads
+
+C     SAVE
+
+to read
+
+C     ---MODIFIED TO LEAVE ENOUGH SPACE AT BEGINNING OF SCRATCH
+C        ARRAY SO THAT BOUNDARY READS DO NOT OVERWRITE TOP CONCS
+C        (TCM, 3/13/91)
+
+(113)  After lines 9578 through 9580 that read
+
+      NOP = NPMAX(ISEG)
+      NOPS = NOSPEC * NOP
+C
+
+add the following lines
+
+      NOZMXY = NOZ*MAX(NX,NY)
+C
+
+(114)  Change line 9588 that reads
+
+      NEXT = 1
+
+to read
+
+C
+C     ---LEAVE SPACE AT BEGINNING OF SCRATCH TO READ BOUNDARY ARRAYS
+C        (TCM, 3/13/91)
+C
+      NEXT = NOZMXY + 1
+
+SCREAD:
+
+(115)  After line 9762 that reads
+
+      NDATE  = NBD
+
+add the following line
+
+      NDTREF = NBD
+
+(116)  After lines 9764 through 9766 that read
+
+      NDLAST = NED
+      TTLAST = TEND
+C
+
+add the following lines
+
+      TCHK1 = (NDLAST - NDATE)*24. + TTLAST
+      IF (TCHK1 .LT. TBEG+.01) THEN
+        WRITE(NUTRC,6550) NBD, TBEG, NED, TEND
+        WRITE(*,6550) NBD, TBEG, NED, TEND
+        STOP
+      ENDIF
+C
+
+(117)  After lines 9812 through 9813 that read
+
+     $  5X, 16HLEVELS INST   = , I10  / 5X, 16HLEVELS AVG    = , I10  /
+     $  5X, 16HCONC VAR      = , I10  / 5X, 16HOPT 6         = , I10 )
+
+add the following lines
+
+ 6550 FORMAT(' **** ERROR ****',/,
+     $       '   BAD SIMULATION TIME SPAN: ', I8,F8.2,I8,F8.2,/,
+     $       '   CHECK START AND END TIME',/)
+
+SECOND:
+
+(118)  Change lines 9817 through 9827 that read
+
+C --  ROUTINE TO EMULATE CRAY TIMER ROUTINE SECONDS.
+CRS   REAL FUNCTION SECOND()
+C
+C     *** (C) COPR. 1988  SYSTEMS APPLICATIONS, INC.  SAN RAFAEL, CA
+C
+CRS   REAL TARRAY(2), ETIME
+CRS   DATA TARRAY / 2*0.0 /
+CRS   SECOND = ETIME(TARRAY)
+CRS   SAVE TARRAY
+CRS   RETURN
+CRS   END
+
+to read
+
+C --  ROUTINE TO EMULATE CRAY TIMER ROUTINE SECONDS.
+      REAL FUNCTION SECOND()
+C
+C     *** (C) COPR. 1988  SYSTEMS APPLICATIONS, INC.  SAN RAFAEL, CA
+C
+CZSW      REAL TARRAY(2), ETIME
+CZSW      DATA TARRAY / 2*0.0 /
+CZSW      SECOND = ETIME(TARRAY)
+CZSW      SAVE TARRAY
+C
+      REAL*8 CPU_A
+C
+      CALL CPUTIME (CPU_A, IRCODE_A)
+      SECOND = CPU_A * .000001
+      IF (IRCODE_A.NE.0) WRITE (*,1000)CPU_A, IRCODE_A
+1000  FORMAT (1H0,'*** WARNING ***',
+     &          /,15X,' THE CPU TIME ',F10.3,' MAY BE WRONG',
+     &          /,15X,' THE RETURN CODE IS ',I5)
+      RETURN
+      END
+
+SETUP:
+
+(119)  Change line 10185 that reads
+
+         TE = 24.*FLOAT(NBDDB ) + BTDB
+
+to read
+
+         TE = 24.*FLOAT(NBDDB - NDTREF) + BTDB
+
+(120)  Change line 10191 that reads
+
+         TE = 24.*FLOAT(NBDTOP) + BTTOP
+
+to read
+
+         TE = 24.*FLOAT(NBDTOP-NDTREF) + BTTOP
+
+SRTPTS:
+
+(121)  Change lines 11060 through 11061 that read
+
+      IPSSRT(1) = NMIN
+      IPSSRT(NOPTS) = NMAX
+
+to read
+
+      IPSSRT(1) = NMIN
+      if(nmin .eq. nmax)then
+        ipssrt(nopts)=nopts
+      else
+        IPSSRT(NOPTS) = NMAX
+      endif
+
+STEP34:
+
+(122)  Remove line 12498 that reads
+
+      LOGICAL LSSAV
+
+(123)  After lines 12516 through 12517 that read
+
+      COMMON /MENGTH/ LENONE
+      DIMENSION  LOC(LENONE), SCR(LENONE)
+
+add the following line
+
+      INCLUDE  (PARAMS)
+
+STEP4:
+
+(124)  After lines 12813 through 12816 that read
+
+C         CHEM
+C         CHEM2
+C
+C
+
+add the following lines
+
+C--CHECK ON GA LT 1E-25 ELIMINATED INSIDE 1160 LOOP
+C  (TCM, 8/6/91)
+C
+C--FIXED TIME STEP INITIALIZATION BEFORE PREDICTOR/CORRECTOR
+C  LOOP.  THIS INVOLVED CHECKING ALL SPECIES INSTEAD OF JUST
+C  NO FOR LESS THAN OR EQUAL TO ZERO AND WHEN A TIME STEP
+C  SIZE IS REJECTED SETTING HOLD BACK TO ORIGINAL CON.
+C  (TCM, 9/20/91)
+C
+C
+C
+
+(125)  Remove lines 12853 through 12861 that read
+
+C
+C     *** ZERO RATE AND R
+C
+      DO 20 J=1,NORS
+         RATE(J) = 0.
+         DO 10 I=1,NORS
+            R(I,J) = 0.
+   10       CONTINUE
+   20    CONTINUE
+
+(126)  After lines 12886 through 12888 that read
+
+      DO 50 L=1,NOSPEC
+         HOLD(L) = CON(L)
+   50    CONTINUE
+
+add the following lines
+
+C
+C     *** ZERO RATE AND R
+C
+      DO 55 J=1,NORS
+         RATE(J) = 0.
+         DO 54 I=1,NORS
+            R(I,J) = 0.
+   54       CONTINUE
+   55    CONTINUE
+
+(127)  Remove line 12908 that reads
+
+      HOLD(KNXOY) = 1.E-20
+
+(128)  Change line 12923 that reads
+
+   51 DO 60 L=1,NORS
+
+to read
+
+      DO 60 L=1,NORS
+
+(129)  After lines 12925 through 12926 that read
+
+         YGF (L) = HOLD(L)+HDTRAT
+         HOLD(L) = YGF (L) + HDTRAT
+
+add the following lines
+
+C
+C       IF ANY SPECIES IS LESS THAN OR EQUAL TO ZERO, GO TO
+C       600 TO HALVE TIME STEP AND START OVER AT TOP OF 800 LOOP.
+         IF (HOLD(L) .LE. 0.) GO TO 600
+
+(130)  Remove lines 12929 through 12934 that read
+
+      IF (.NOT.LFIRST) GO TO 61
+      IF (HOLD(KNO).GT.0.) GO TO 61
+      IF (DTUSE.LT.0.001) GO TO 61
+        DTUSE = DTUSE * 0.5
+        HDT   = DTUSE * 0.5
+        GO TO 51
+
+and replace with the following line
+
+       IF (LSS) HOLD(KNXOY) = HOLD(KNO) + HOLD(KNO2)
+
+(131)  Change lines 12941 through 12942 that read
+
+   61 DO 490 ITER=1,MAXITR
+         ICONV = 0
+
+to read
+
+      DO 490 ITER=1,MAXITR
+         ICONV = 0
+C
+C     *** ZERO RATE AND R
+C
+      DO 64 J=1,NORS
+         RATE(J) = 0.
+         DO 63 I=1,NORS
+            R(I,J) = 0.
+   63       CONTINUE
+   64    CONTINUE
+
+(132)  Remove lines 13018 through 13019 that read
+
+         HOLD(KNXOY)=1.E-20
+         YGF(KNXOY)=0.
+
+and replace with the following line
+
+         HOLD(KNXOY) = HOLD(KNO) + HOLD(KNO2)
+
+(133)  Change lines 13088 through 13089 that read
+
+C³MF³ IFPROB( .001 )
+            IF (GA(JJ,JJJ).LT.1.E-25) GO TO 1160
+
+to read
+
+C
+C  CHECK OF GA LT 1E-25 REMOVED HERE
+
+(134)  After lines 13112 through 13117 that read
+
+  250       CONTINUE
+C
+C        ---COMPUTE NEW CONCENTRATION VALUES AND TEST SIGN
+C           IF ANY NEGATIVE, WE MUST CUT STEP SIZE
+C
+C
+
+add the following line
+
+       IF (LSS) DC(KNXOY) = 0.
+
+TZERO:
+
+(135)  After lines 13435 through 13437 that read
+
+C         CALCULATE STEADY-STATE INITIAL CONCS
+C         WRITE HEADERS TO OUTPUT FILES
+C
+
+add the following lines
+
+C -- MODIFIED 8/25/92, TCM:  INCREASED FUZZ ON RESTART LOGIC
+C
+
+(136)  After lines 13477 through 13478 that read
+
+      DIMENSION  ISG(LENONE), IBD(LENONE), LOC(LENONE), SCR(LENONE)
+C
+
+add the following line
+
+      INCLUDE  (PARAMS)
+
+(137)  Change lines 14059 through 14060 that read
+
+      TBDB  = 24.*FLOAT(NBDDB ) + BTDB
+      TBTOP = 24.*FLOAT(NBDTOP) + BTTOP
+
+to read
+
+      TBDB  = 24.*FLOAT(NBDDB-NDTREF) + BTDB
+      TBTOP = 24.*FLOAT(NBDTOP-NDTREF) + BTTOP
+
+(138)  Change line 14193 that reads
+
+      TEDB  = 24.*FLOAT(NBDDB ) + BTDB
+
+to read
+
+      TEDB  = 24.*FLOAT(NBDDB-NDTREF) + BTDB
+
+(139)  Change line 14198 that reads
+
+      TETOP = 24.*FLOAT(NBDTOP) + BTTOP
+
+to read
+
+      TETOP = 24.*FLOAT(NBDTOP-NDTREF) + BTTOP
+
+(140)  Change line 14217 that reads
+
+      TTP = TTIME + .001
+
+to read
+
+      TTP = TTIME + .010
+
+(141)  Change lines 14349 through 14350 that read
+
+      DO 807 J=1,NY
+         DO 806 I=1,NX
+
+to read
+
+      DO 807 J=1,NOY
+         DO 806 I=1,NOX
+
+BALANC:
+
+(142)  The new include file for the common block BALANC is:
+
+C
+C    COMMON /BALANC/
+C
+C       -- USED FOR KEEPING TRACK OF MASS FLUXES IN AND OUT
+C          OF THE MODELED REGION
+C
+      COMMON /BALANC/ BLFLOW(32,2,4), BUFLOW(32,2,4), TPFLOW(32,2), 
+     $                PTFLOW(32), EFLOW(32), DPFLOW(32),
+     $                BLFLCU(32,2,4), BUFLCU(32,2,4), TPFLCU(32,2), 
+     $                PTFLCU(32), EFLCU(32), DPFLCU(32),
+     $                TMAS(32), TMASM(32)
+C
+
+
+CHPARM:
+
+(143)  The new include file for the common block CHPARM is:
+
+C     COMDECK.CHPARM
+C-----------------------------------------------------------------------
+C
+C     ***  /CHPARM/ CONTAINS CHEMISTRY PARAMETERS
+C
+      COMMON /CHPARM/ NSMAX,
+     $  MSPEC(10,32), LREAC(32), LSSIC(32), LSSBC(32),
+     $     BDSL (32), BDSU (32), BDNL (32), BDNU (32), DVRES(32)
+C
+      COMMON /CHPARM/ NRMAX,
+     $  RKN  (90), RK   (90), LPHOT(90), LTDEP(90),
+     $  ACTEN(90), TREF (90), TRINV(90), LATDEP(40)
+C
+      COMMON /CHPARM/ NCMAX,
+     $  MCOEF(10,10), CVAL(10)
+C
+      LOGICAL  LREAC, LSSIC, LSSBC
+      LOGICAL LPHOT, LTDEP
+C
+
+
+NETDEP:
+
+(144)  The new include file for the common block NETDEP is:
+
+C
+C   COMDECK /NETDEP/
+C
+C   CUMULATIVE DEPOSITION 
+C
+C
+C   AMOUNT DEPOSITED IS ADDED IN AT EACH TIME STEP IN MICRO.
+C
+      COMMON /NETDEP/ XXDEP(32,MPMX,MPMY)
+C
+
+
+CNTROL:
+
+(145)  The new include file for the common block CNTROL is:
+
+C     COMDECK.CNTROL
+C------------------------------------------------------------------------
+C
+C     *** /CNTROL/ CONTAINS MANY CONTROL PARAMETERS OF GLOBAL INTEREST
+C
+C--DIMENSIONS AND REGION DESCRIPTORS USED A LOT
+C
+      COMMON /CNTROL/ NOZ   , NOZP1 , NOZM1 , NOSEG , NOSPEC, NORS  ,
+     $                NREACT, NCOEF ,
+     $                KBEG  , KBUP  ,
+     $                DELTAX, DELTAY, DZSURF
+C
+C--LOGICAL CONTROL FLAGS
+C
+      COMMON /CNTROL/ LCHEM , LANYPH, LANYTD, LANYSI, LANYSB,
+     $                LPHFAC, LREST , LSINK , LPTS  , LRWY  ,
+     $                LTEMP , LTERR , LCVAR
+C
+      LOGICAL LCHEM , LANYPH, LANYTD, LANYSI, LANYSB,
+     $        LPHFAC, LREST , LSINK , LPTS  , LRWY  ,
+     $        LTEMP , LTERR , LCVAR
+C
+C--TIME CONTROLS
+C
+      COMMON /CNTROL/ NDATE , TTIME , NDLAST, TTLAST,
+     $                TSLIN , NSTEPS, TSLICE,
+     $                TIAVE , TAVE1 , TAVE  ,
+     $                TIINST, TINST1, TINST
+C
+C--INTEGRATION CONTROLS AND HANDY VARIABLES
+C
+      COMMON /CNTROL/ MAXITR, RERROR, DTMIN ,
+     $                XKXY  , IPSPTR, LPSNOW,
+     $                DELTXY, DELTZ3,
+     $                DEFRUF, DEFVEG,
+     $                FRDARK,
+     $                ELAPSO,
+     $                EL    , USTAR , DIFRES
+C
+      LOGICAL  LPSNOW
+C
+C--TRACE AND INTERNAL FILE UNIT NUMBERS
+C
+      COMMON /CNTROL/ NUTRC , NUII  ,
+     $                NUBONR, NUBONW, NUCONR, NUCONW,
+     $                NUCUMR, NUCUMW, NUSEGR, NUSEGW
+C
+C--TRACE OPTIONS AND CURRENT LOCATION INDICATORS
+C
+      COMMON /CNTROL/ IISEG, ISTEP, ICELL, JCELL, KCELL, LCELL,
+     $                IPRINT(6)
+C
+C--DESCRIPTIVE STUFF
+C
+      COMMON /CNTROL/ MRUNID(60),     XUTM  , YUTM  , NZONE ,
+     $                XORG  , YORG  , NOXG  , NOYG  , NOZG  ,
+     $                NVLOW , NVUP  , DZMINL, DZMINU, NDTREF
+C
+C         MRUNID    A  RUN ID
+C         XUTM      R  REFERENCE ORIGIN
+C         YUTM      R  REFERENCE ORIGIN
+
+
+VERSN1:
+
+(146)  The new include file for the common block VERSN1 is:
+
+C
+C  ****** WRITE VERSION NUMBER
+C
+      DATA JVDATE /92258/
+C
+C  write to * removed for IBM
+Ctcm      WRITE(*,2000) JVDATE
+      WRITE(NUTRC,2000) JVDATE
+ 2000 FORMAT ('1',20x,'SAI URBAN AIRSHED MODEL  (DATED ',
+     $       I5,')',//,
+     $       ' **** NOTE:  This version uses a tracer gas ',/,
+     $       '             to correct vertical transport.  The ',/,
+     $       '             species CLBR will be automatically ',/,
+     $       '             added to the simulation and output ',/,
+     $       '             files and MUST NOT APPEAR IN ANY ',/,
+     $       '             INPUT FILES.',/)
+C
+C  ******
+C
+
+
+VERSN:
+
+(147)  The new include file for the common block VERSN is:
+
+C  *********************************************************************
+C   COMDECK.VERSN
+C
+C
+C   This is the EPA version dated 92258 of the Urban Airshed Model
+C  *********************************************************************
+C  *********************************************************************

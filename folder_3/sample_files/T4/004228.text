@@ -1,0 +1,83 @@
+
+            Comments for Evaluation of flex joint vs floating clamp
+
+                            July 10, 2001
+
+                    from Kris Anderson
+                        ------------------------
+
+
+1.  Overall Remarks
+In general, the current flex joint appears to meet the mechanical flexible
+criteria.  The current design results in load at the horn terminals of only a
+few hundred pounds when the horn is moved from the neutral to the extreme
+position.  The  modal analysis shows that even though one of the natural
+frequencies of the flex stripline is near that of the horn inner conductor,
+this mode is very localized and some distance from the horn terminals.  Based
+on the deflected shape, it appears that minimal energy will be transferred to
+the horn inner
+conductor. The rocking clamp is an interesting concept to allow limited
+"slip" motion along the conductor length between adjacent conductors.
+
+2.  Itemized Comments
+-  Considering fabrication, it is questionable whether or not one will be
+able to wire EDM the slot in the exact location shown in the drawing.  Given
+that the bend radius will likely not be exactly that shown in the drawing
+(from natural fabrication tolerance of bending in a fixed radius die) and
+that the plate may have some natural bow/bend associated with it, the wire
+slit may not be centered in the conductor.  Will a non-centered slit
+condition result in an increase in stress?  The non-centered condition may
+vary from one assembly to another.
+
+-  The welding operation to close the EDM entry point will most likely result
+in weld shrinkage of the conductor at that point, as well as a possible
+stress concentration from not having a smooth surface on the underbead of the
+weld.  Will this weld distortion be acceptable in terms of fabrication of the
+overall shape?  Will surface imperfections in the weld region lead to fatigue
+failures?
+(Note that the fatigue limit in welded regions is about 1/2 that of virgin
+material, and point discontinuities could lead to further reductions in
+fatigue limit).
+
+-  A more comprehensive fatigue analysis should be undertaken which accounts
+for magnetic load + thermal load + DC component of stress from moving to the
+extreme position.  Fatigue in welded areas and locations of stress
+concentration should be considered.
+
+-  Should we consider electroless nickel plating of the entire stripline
+section?  This part is most likely small enough to fit in most vendors
+processing tanks.  Alex Chen has conducted fatigue testing (albeit with small
+sampling size) of electroless nickel plated aluminum spider support struts
+for the horn that suggest that this process enhances fatigue life.  It may be
+worthwhile to get a quotation or two to evaluate cost vs. benefit.
+
+-  Since the review, a cost estimate of the stripline has been completed that
+indicates that the design as presented represents a significant amount of
+money.  Alternative designs should be considered to minimize fabrication
+costs while assuring a robust design.  For example, could one consider making
+the entire flex line out of say quantitiy of three 1/8" thick plates instead
+of a single 3/8" thick line?  Or alternatively, could one wire EDM a 1" or 2"
+wide strip by drilling a 0.031" diameter hole as the entry point for the
+wire, thus eliminating the welds?  With such an alternative, the 8" wide
+stripline would be "built up" of either eight - 1" wide pieces or four - 2"
+wide pieces.
+
+-  A few test pieces should be constructed ASAP that investigate the above
+fabrication comment to determine the most cost effective manner of
+fabrication.
+
+-  Can this section of stripline be fabricated out of 6061-T6 instead of
+6101-T6?  Fatigue benefits may be better with the 6061, at the cost of
+slightly higer resistivity.  Are there any other materials that we should
+consider (e.g., copper, Be/copper)?
+
+-  I agree with Mike May's comment that a ceramic tube placed through the
+clamp to encapsulate the clamp bolt may be more robust (and less expensive)
+in terms of electrically isolating the clamp bolt from adjacent conductors
+than the ceramic bushings.
+
+-  As a more radical design consideration, should we investigate using a
+quantity of 2 or possibly 4 conductor plates below the remote clamp as
+opposed to the 8 conductors that exist in current designs?  Fabrication of 2
+or 4 plates will most like cost less money at the expense of additional
+design time.

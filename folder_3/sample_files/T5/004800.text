@@ -1,0 +1,326 @@
+Identification_Information: 
+  Citation: 
+    Citation_Information: 
+      Originator: Benthic Habitat Mapping Group, CRED, PIFSC, NOAA
+      Publication_Date: 20040610
+      Title: CRED Gridded bathymetry of Marpi Bank, Commonwealth of Northern Mariana
+        Islands
+      Geospatial_Data_Presentation_Form: raster digital data
+      Online_Linkage: ftp://ftp.soest.hawaii.edu/pibhmc/data/marianas/marpi-5.asc.zip
+      Online_Linkage: ftp://ftp.soest.hawaii.edu/pibhmc/data/marianas/marpi-5.grd.zip
+  Description: 
+    Abstract: Gridded bathymetry of Marpi Bank, Commonwealth of Northern Mariana
+      Islands.  This survey achieved approximately 90% bottom coverage down to
+      200 meters.
+    Purpose: This grid was created using data gathered from multibeam soundings
+      for use as a planning and reference document.  Refer to supplemental
+      information for description of instrument and survey.
+    Supplemental_Information: Data were collected aboard the R/V AHI (Acoustic Habitat Investigator),
+      a 25' survey launch owned and operated by the NOAA Pacific Islands
+      Fisheries Science Center in Honolulu, HI.  The R/V AHI's survey sensors
+      include a 240 kHz RESON 8101-ER sonar providing bathymetry and imagery
+      data, a TSS/Applanix POS/MV Model 320 which measures position, velocity,
+      attitude and heading, and a Seabird SBE 19 CTD used to measure sound
+      velocity profiles.
+      
+      Equipment serial numbers and software versions are as follows:
+      
+      RESON 8101-ER multibeam echosounder
+      DOC inventory #:  CD0000537418
+      Firmware, dry: 8101-2.07-2D4D
+      Firmware, wet: 8101-1.06-2F6B
+      
+      POS/MV Model 320, version 3
+      DOC inventory #: CD0000476647
+      PCS serial #: 474
+      IMU serial #: 203
+      Controller software: v 1.0.5.0
+      
+      Seabird SBE19 CTD:
+      Serial #: 3029
+      
+      R/V AHI Lever Arm Distances and Alignment Offsets
+      The R/V AHI Reference Point (RP) is defined to be the intersection of
+      the vessel's centerline, the cabin deck and the bulkhead immediately aft
+      of the transducer.  This is marked by a punch in the deck weld at that
+      location.  Positive X means the point is forward of the RP, positive Y
+      means the point is to starboard of the RP, positive Z means the point is
+      below the RP.  The loaded waterline is defined as the intersection of
+      the vessel's performance wing with the hull at the transom.
+      
+      Antenna Baseline Distance, m: 1.229
+      Transducer depth below waterline, m 0.62
+      
+      RP to IMU                            0.80  0.00  0.08
+      RP to Primary GPS Antenna           -3.55 -0.61 -1.88
+      RP to Vessel                         0.16  0.00  0.77
+      RP to Sensor 1(MB transducer)        0.16  0.00  0.77
+      RP to Sensor 2                       0     0     0
+      RP to Aux. GPS Antenna               0     0     0
+      RP to Heave lever arm(deg)          -0.67  0.00  0.00
+      IMU rotation Ref. Frame, deg         0     0     0
+      Sensor 1 rotation Ref. Frame, deg    0     0     0
+      Sensor 2 rotation Ref. Frame, deg    0     0     0
+      
+      Roll offset:    +0.5 deg
+      Pitch offset:    0.0 deg
+      Gyro offset:     0.0 deg
+  Time_Period_of_Content: 
+    Time_Period_Information: 
+      Range_of_Dates/Times: 
+        Beginning_Date: 20030828
+        Ending_Date: 20030828
+    Currentness_Reference: ground condition
+  Status: 
+    Progress: Complete
+    Maintenance_and_Update_Frequency: As needed
+  Spatial_Domain: 
+    Bounding_Coordinates: 
+      West_Bounding_Coordinate: 145.836493
+      East_Bounding_Coordinate: 145.891634
+      North_Bounding_Coordinate: 15.450298
+      South_Bounding_Coordinate: 15.394246
+  Keywords: 
+    Theme: 
+      Theme_Keyword_Thesaurus: CoRIS Theme Thesaurus
+      Theme_Keyword: EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Bathymetry
+    Theme: 
+      Theme_Keyword_Thesaurus: CoRIS Discovery Thesaurus
+      Theme_Keyword: Numeric Data Sets > Bathymetry
+    Theme: 
+      Theme_Keyword_Thesaurus: None
+      Theme_Keyword: Gridded Bathymetry
+    Theme: 
+      Theme_Keyword_Thesaurus: ISO 19115 Topic Category
+      Theme_Keyword: elevation
+      Theme_Keyword: 006
+    Place: 
+      Place_Keyword_Thesaurus: None
+      Place_Keyword: Marpi Bank
+      Place_Keyword: Saipan
+      Place_Keyword: Commonwealth of Northern Mariana Islands
+    Place: 
+      Place_Keyword_Thesaurus: CoRIS Place Thesaurus
+      Place_Keyword: OCEAN BASIN > Pacific Ocean > Western Pacific Ocean > Saipan Island > Marpi Point (15N145E0015)
+      Place_Keyword: COUNTRY/TERRITORY > Northern Mariana Islands > Saipan > Marpi Point (15N145E0015)
+  Access_Constraints: None
+  Use_Constraints: These data are not to be used for navigation purposes.
+    Please acknowledge the NOAA Coral Reef Ecosystem Division,
+    Pacific Islands Fisheries Science Center as the source of this information.
+  Point_of_Contact: 
+    Contact_Information: 
+      Contact_Organization_Primary: 
+        Contact_Organization: Benthic Habitat Mapping Group,
+          Coral Reef Ecosystem Division, PIFSC,NOAA
+        Contact_Person: Joyce Miller
+      Contact_Address: 
+        Address_Type: mailing and physical address
+        Address: 1125B Ala Moana Blvd
+        City: Honolulu
+        State_or_Province: HI
+        Postal_Code: 96814
+        Country: USA
+      Contact_Voice_Telephone: 808-592-8303
+      Contact_Electronic_Mail_Address: joyce.miller@noaa.gov
+  Browse_Graphic: 
+    Browse_Graphic_File_Name: http://www.pifsc.noaa.gov/cred/hmapping/img/original/06a-marpi-5.jpg
+    Browse_Graphic_File_Description: Gridded Bathymetry
+    Browse_Graphic_File_Type: JPEG
+  Data_Set_Credit: Benthic Habitat Mapping Group, Coral Reef Ecosystem Division
+    (CRED), Pacific Islands Fisheries Science Center (PIFSC), NOAA
+Data_Quality_Information: 
+  Attribute_Accuracy: 
+    Attribute_Accuracy_Report: Data are collected for resource management
+      and research purposes and are tested for internal consistency; however,
+      no effort is made to compare these data to external references or to
+      other published data.
+  Logical_Consistency_Report: Unspecified
+  Completeness_Report: Complete
+  Positional_Accuracy: 
+    Horizontal_Positional_Accuracy: 
+      Horizontal_Positional_Accuracy_Report: Horizontal positioning system: GPS SPS
+        
+        Horizontal position accuracy: 5
+    Vertical_Positional_Accuracy: 
+      Vertical_Positional_Accuracy_Report: Range resolution of sonar ~ 1.25 cm
+        Raw sounding resolution: 1 cm
+        Vertical accuracy of gridded product ~ 1 meter
+  Lineage: 
+    Process_Step: 
+      Process_Description: Science Applications International Corporation&oacute;s
+        (SAIC) ISS-2000 acquires, processes and records data, provides survey
+        control and underway quality control displays.  SAIC&oacute;s SABER processing
+        software is used to process the raw soundings, analyze the results,
+        manually edit the sounding data to remove outliers and derive average
+        gridded data values.  GMT was then used to reformat the grid into final
+        
+        form.  Interactive Visualization System&oacute;s Fledermaus and ESRI ArcGIS
+        were used for viewing results and creating browse objects.
+        
+        The data have been corrected for observed tides from Guam tide gauge
+        1630000 with a time corrector of 18 minutes and a tide height multiplier
+        of 0.94 using SABER postprocessing software.  The data were also
+        recorrected for observed sound velocities in postprocessing.
+        
+        Software used:
+        SAIC ISS-2000 Acquisition Software, v 3.4 (20030610)
+        SAIC SABER Processing Software, v 3.4 (20030610)
+        GMT Generic Mapping Tools, v 3.4.2 (20021002)
+      Process_Date: 20040610
+Spatial_Data_Organization_Information: 
+  Direct_Spatial_Reference_Method: Raster
+  Raster_Object_Information: 
+    Raster_Object_Type: Grid Cell
+    Row_Count: 1234
+    Column_Count: 1177
+    Vertical_Count: 1
+Spatial_Reference_Information: 
+  Horizontal_Coordinate_System_Definition: 
+    Planar: 
+      Grid_Coordinate_System: 
+        Grid_Coordinate_System_Name: Universal Transverse Mercator
+        Universal_Transverse_Mercator: 
+          UTM_Zone_Number: 55
+          Transverse_Mercator: 
+            Scale_Factor_at_Central_Meridian: 0.9996
+            Longitude_of_Central_Meridian: 147
+            Latitude_of_Projection_Origin: 0
+            False_Easting: 500000
+            False_Northing: 0
+      Planar_Coordinate_Information: 
+        Planar_Coordinate_Encoding_Method: Row and Column
+        Coordinate_Representation: 
+          Abscissa_Resolution: 5
+          Ordinate_Resolution: 5
+        Planar_Distance_Units: meters
+    Geodetic_Model: 
+      Horizontal_Datum_Name: D_WGS_1984
+      Ellipsoid_Name: WGS_1984
+      Semi-major_Axis: 6378137.000000
+      Denominator_of_Flattening_Ratio: 298.257224
+  Vertical_Coordinate_System_Definition: 
+    Depth_System_Definition: 
+      Depth_Datum_Name: mean lower low water
+      Depth_Resolution: 0.01
+      Depth_Distance_Units: meters
+      Depth_Encoding_Method: Attribute Values
+Entity_and_Attribute_Information: 
+  Overview_Description: 
+    Entity_and_Attribute_Overview: Depth values are real values based on the average of the
+      soundings that fell within the extracted grid cells.  Number of
+      soundings per grid cell range from >1000 soundings in shallow depths
+      to as few as 20 soundings in deeper areas.  A total error budget for
+      this survey has not been developed, therefore the accuracy of depth
+      measurements should be considered to be within 1 meter.
+    Entity_and_Attribute_Detail_Citation: none
+Distribution_Information: 
+  Distributor: 
+    Contact_Information: 
+      Contact_Organization_Primary: 
+        Contact_Organization: Benthic Habitat Mapping Group, CRED, PIFSC, NOAA
+        Contact_Person: Joyce E. Miller
+      Contact_Position: Oceanographer
+      Contact_Address: 
+        Address_Type: mailing and physical address
+        Address: 1125 'B' Ala Moana Blvd
+        City: Honolulu
+        State_or_Province: Hawaii
+        Postal_Code: 96814
+        Country: USA
+      Contact_Voice_Telephone: 808-592-8303
+      Contact_Electronic_Mail_Address: joyce.miller@noaa.gov
+  Resource_Description: Downloadable Data
+  Distribution_Liability: These data are not to be used for navigational purposes.
+    NOAA makes no warranty regarding these data, expressed or implied, nor
+    does the fact of distribution constitute such a warranty. NOAA cannot
+    assume liability for any damages caused by any errors or omissions in
+    these data, nor as a result of the failure of these data to function
+    on a particular system.
+  Standard_Order_Process: 
+    Digital_Form: 
+      Digital_Transfer_Information: 
+        Format_Name: netCDF
+        Format_Information_Content: Binary netCDF Grid:
+          This file is formatted as a 2-D binary netCDF grid file.  This is the default
+          grid file format used by GMT (Generic Mapping Tools), which created this file.
+          
+          More information can be be located at http://gmt.soest.hawaii.edu and
+          http://unidata.ucar.edu/packages/netcdf/index.html
+        File_Decompression_Technique: Zip file
+        Transfer_Size: 1.9
+      Digital_Transfer_Option: 
+        Online_Option: 
+          Computer_Contact_Information: 
+            Network_Address: 
+              Network_Resource_Name: ftp://ftp.soest.hawaii.edu/pibhmc/data/marianas/marpi-5.grd.zip
+    Digital_Form: 
+      Digital_Transfer_Information: 
+        Format_Name: ASCII ARC/INFO Grid
+        Format_Information_Content: ASCII ARC/INFO grid
+          Files of this type can be imported with ArcToolbox 8.3 using the
+          following path: Conversion Tools;Import to Raster;ASCII to Grid
+          (Float).
+          
+          These data as having the following header format and description
+          
+          NCOLS xxx
+          NROWS xxx
+          XLLCORNER xxx
+          YLLCORNER xxx
+          CELLSIZE xxx
+          NODATA_VALUE xxx
+          ROW 1
+          ROW 2
+          .
+          .
+          .
+          ROW n
+          where:
+          
+          NCOLS is the number of columns in the ASCII file.
+          NROWS is the number of rows in the ASCII file.
+          XLLCORNER is the x coordinate for lower left corner of the
+          lower left most cell in the grid.
+          YLLCORNER is the x coordinate for the lower left corner
+          of the lower left most cell in the grid.
+          CELLSIZE is the length of a cell&oacute;s edge.
+          NODATA_VALUE is the value in the ASCII file representing
+          unknown values.
+          xxx are numbers, and the cell values are space delimited
+        File_Decompression_Technique: Zip file
+        Transfer_Size: 2.4
+      Digital_Transfer_Option: 
+        Online_Option: 
+          Computer_Contact_Information: 
+            Network_Address: 
+              Network_Resource_Name: ftp://ftp.soest.hawaii.edu/pibhmc/data/marianas/marpi-5.asc.zip
+    Fees: None
+Metadata_Reference_Information: 
+  Metadata_Date: 20080812
+  Metadata_Contact: 
+    Contact_Information: 
+      Contact_Organization_Primary: 
+        Contact_Organization: Benthic Habitat Mapping Group, CRED, PIFSC, NOAA
+        Contact_Person: Dr. Michael Parke
+      Contact_Position: Research Biologist
+      Contact_Address: 
+        Address_Type: mailing and physical address
+        Address: 1125 'B' Ala Moana Blvd
+        City: Honolulu
+        State_or_Province: Hawaii
+        Postal_Code: 96814
+        Country: USA
+      Contact_Voice_Telephone: 808-592-7025
+      Contact_Electronic_Mail_Address: michael.parke@noaa.gov
+  Metadata_Standard_Name: FGDC Content Standard for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+  Metadata_Time_Convention: Local Time
+  Metadata_Access_Constraints: None
+  Metadata_Use_Constraints: None
+CoRIS: 
+  CoRIS_ID: 20041213081331
+  CoRIS_Children: None
+  CoRIS_Beginning_Date: 20030828
+  CoRIS_Ending_Date: 20030828
+  CoRIS_Metadata_Link: http://www.coris.noaa.gov/metadata/records/txt/cred_gridded_bathy_marpi_bank_2003.txt
+  CoRIS_Tracking_ID: 796

@@ -1,0 +1,1092 @@
+SERM Forest Cover Data Layers of the SSA in Vector Format
+
+Summary
+
+This data set was prepared by the SERM-FBIU.  The data include information on 
+forest parameters and cover the area in and near the BOREAS SSA, excluding the 
+PANP.
+
+Note that several files of this data set on the BOREAS CD-ROMs have been 
+compressed using the Gzip program.  See section 8.2 for details.
+
+Table of Contents
+
+   *  1 Data Set Overview
+   *  2 Investigator(s)
+   *  3 Theory of Measurements
+   *  4 Equipment
+   *  5 Data Acquisition Methods
+   *  6 Observations
+   *  7 Data Description
+   *  8 Data Organization
+   *  9 Data Manipulations
+   *  10 Errors
+   *  11 Notes
+   *  12 Application of the Data Set
+   *  13 Future Modifications and Plans
+   *  14 Software
+   *  15 Data Access
+   *  16 Output Products and Availability
+   *  17 References
+   *  18 Glossary of Terms
+   *  19 List of Acronyms
+   *  20 Document Information
+
+1. Data Set Overview
+
+1.1 Data Set Identification
+
+SERM Forest Cover Data Layers of the SSA in Vector Format
+
+1.2 Data Set Introduction
+
+The forest cover data provided by Saskatchewan Environment and Resource 
+Management, Forestry Branch - Inventory Unit (SERM-FBIU) are basically a digital 
+version of its 1:12,500 scale forest cover polygon maps.  As a digital archive, 
+however, changes within forest stands can be updated more readily.  All the same 
+time, it should be kept in mind that most of these digital forest cover data 
+were acquired in 1993, and the data set has been static since that time.
+
+1.3 Objective/Purpose
+
+These data are provided as part of the BOReal Ecosystem-Atmosphere Study 
+(BOREAS) Staff Science Geographic Information System (GIS) Data Collection 
+Program which included the collection of pertinent map data in both hardcopy and 
+digital form.  This data set can be used for modeling or for comparison 
+purposes.
+
+1.4 Summary of Parameters
+
+There are seven layers of information available for each 10-km x 10-km map unit 
+or tile.  The number of layers associated with each tile varies, but in all 
+cases the most important layer for this data set, FPOLY, is always included.  
+The potential data layers are:  
+
+FPOLY		polygon layer, full tiles (not filled with lakes) usually have 	
+		between 1,000 and 1,500 polygons.
+FLINK		linear features; power line, trails, bridges
+DATAP		point information; photo centers, sampling plots
+ANNOT		annotation; road and lake names, towns, etc.
+SPOLY		special polygons for plotting; sand beaches, reefs
+UTMGR		1-km x 1-km grid for Universal Transverse Mercator (UTM) location
+            determination
+SHELL		the tile neatline, 10-km x 10-km except on UTM zone boundary tiles
+
+Each of these layers has an associated list of codes or items to help the user 
+decipher the map information.  See Section 7.3.
+
+1.5 Discussion
+
+The forest cover data provided by SERM-FBIU, is basically a digital version of 
+its 1:12,500 scale forest cover polygon maps.  SERM-FBIU maintains a digital 
+data base of the forests in a GIS primarily for use by forest managers for 
+silvicultural purposes.
+
+1.6 Related Data Sets
+
+BOREAS Forest Cover Data Layers of the NSA-MSA in Raster Format
+
+BOREAS Forest Cover Data Layers of the SSA-MSA in Raster Format
+
+SERM Forest Fire Chronology of Saskatchewan in Vector Format
+
+SERM Forest Cover Data of Saskatchewan in Vector Format
+
+Prince Albert National Park Forest Cover Data in Vector Format
+
+2. Investigator(s)
+
+2.1 Investigator(s) Name and Title
+
+BOREAS Staff 
+
+2.2 Title of Investigation
+
+BOREAS Staff Science GIS Data Collection Program
+
+2.3 Contact Information
+
+Contact 1
+----------
+Fern Gruszka
+Saskatchewan Environment and Resource Management
+Prince Albert, SK
+CANADA 
+(306)953-2360
+gruszka@larix.derm.gov.sk.ca
+
+Contact 2
+----------
+Jaime Nickeson
+NASA/GSFC
+Greenbelt, MD  
+(301) 286-3373
+(301) 286-0239 (fax)
+Jaime.Nickeson@gsfc.nasa.gov
+
+3. Theory of Measurements
+
+SERM-FBIU maintains in its inventory unit a GIS of forest inventory information 
+for Saskatchewan forested lands.  This inventory is maintained primarily for use 
+by forest managers for silvicultural purposes and it contains a wealth of 
+information that can be of use in Earth resources analyses and ecosystem 
+modeling.
+
+4. Equipment
+
+4.1 Sensor/Instrument Description
+
+These data were digitized from 1:12,500-scale forest cover maps.  The maps were 
+derived from black-and-white 1:12,500-scale infrared aerial photography and 
+field reconnaissance notes.  No information is known about the original 
+digitizing equipment or procedures and criteria used in the digitizing process.
+
+4.1.1 Collection Environment
+
+These original vector data were acquired as ARC/INFO vector coverages or in 
+ARC/INFO export format.  The data were produced by SERM-FBIU.  No specific 
+information other than the scale of the resulting photography is known about the 
+aircraft flights or the equipment that was used to collect the aerial 
+photography.
+
+4.1.2 Source/Platform
+
+Unknown.
+
+4.1.3 Source/Platform Mission Objectives
+
+Unknown.
+
+4.1.4 Key Variables
+
+The key variables of this data set are the seven data layers described in 
+Sections 1.4 and 7.3.
+
+4.1.5 Principles of Operation
+
+Unknown.
+
+4.1.6 Sensor/Instrument Measurement Geometry
+
+Unknown.
+
+4.1.7 Manufacturer of Sensor/Instrument
+
+Unknown.
+
+4.2 Calibration
+
+4.2.1 Specifications
+
+Unknown.
+
+4.2.1.1 Tolerance
+
+Unknown.
+
+4.2.2 Frequency of Calibration
+
+Unknown.
+
+4.2.3 Other Calibration Information
+
+None.
+
+5. Data Acquisition Methods
+
+SERM personnel created the forest cover maps by transcribing information from 
+aerial photography.  Stereographic pairs of black-and-white infrared aerial 
+photographs acquired at a scale of 1:12,500 was interpreted with a stereoscope 
+and used in conjunction with previously mapped data as well as field 
+reconnaissance notes.  Timber cruising data, silvicultural data, timber 
+harvesting records, and fire history information may have also been 
+incorporated.
+
+6. Observations
+
+Not applicable.
+
+6.1 Data Notes
+
+None.
+
+6.2 Field Notes
+
+The field notes used in compiling the original forest cover data are available 
+from the SERM-FBIU.  See Section 2.3.
+
+7. Data Description
+
+7.1 Spatial Characteristics
+
+7.1.1 Spatial Coverage
+
+This data set covers three geographic blocks of the BOREAS Southern Study Area 
+(SSA), but it excludes the area of Prince Albert National Park (PANP).  Multiple 
+map tiles are contained in each geographic block.  One map tile covers an area 
+of 10 km x 10 km.  The data were acquired on three separate occasions during the 
+course of planning and execution of BOREAS.  As a result, there are three 
+geographic blocks of map tiles, one of which overlaps slightly with another.  
+These blocks of data are referred to as Nipawin (or SSA-Modeling Sub-Area 
+(MSA)), North of PANP, and East of PANP.  PANP personnel maintain their own 
+forest inventory data base, which is not covered by these data.
+
+Nipawin is the largest block, containing a block of 129 map tiles, 11 in the E-W 
+direction and 12 N-S, as well as encompassing the SSA-MSA.  Three tiles at the 
+bottom of the Nipawin block are excluded because they are over an area of 
+agriculture.  North of PANP is an area adjacent to and north of PANP, containing 
+a block of 20 map tiles, 4 in the E-W direction and 5 N-S.  East of PANP is an 
+area adjacent to and east of PANP, containing a block of 27 map tiles, 4 in the 
+E-W direction and 7 N-S.  In addition, this block of data contains one map tile 
+from the south near PANP that contains the Nesbit Forest. This one tile from the 
+south appears to contain only the polygon layer.  The East of PANP block 
+duplicates the Nipawin block along its eastern edge.
+
+7.1.2 Spatial Coverage Map
+
+The North American Datum 1927 (NAD27) UTM coordinates of the data blocks within 
+UTM zone 13 are:
+
+                                UTM UL             UTM LR
+Data Block                 easting northing   easting northing
+-----------                ----------------   ----------------  
+Nipawin                     460000  6050000    570000  5930000
+North of PANP               390000  6070000    430000  6020000
+East of PANP                430000  6000000    470000  5930000    
+
+Note that in the coverage files there is a y-shift of 6,000,000 (presumably to 
+save storage space).  This means that the y coordinates in the coverages need to 
+have 6,000,000 added to them to get correct UTM coordinates.  This shift needs 
+to be handled properly when performing spatial transformations or reprojections 
+of the data.  If using ARC/INFO, you may wish to run the PROJECTDEFINE function.
+
+7.1.3 Spatial Resolution
+
+The scale of the maps from which these data were digitized was 1:12,500.
+
+7.1.4 Projection
+
+The geographic coordinates for the data are given as UTM within zone 13, under 
+NAD27.
+
+7.1.5 Grid Description
+
+Not applicable.
+
+7.2 Temporal Characteristics
+
+7.2.1 Temporal Coverage
+
+Most of the data used for this product were acquired by BOREAS Information 
+System (BORIS) personnel in 1993.  The maps from which the data are derived are 
+completely reinventoried on a 10- to 20-year cycle by SERM, except for disturbed 
+areas, which are updated annually.  BORIS acquired the data in 1993; the forest 
+cover layers have not yet had any inventory updates.
+
+These data were produced from aerial photography taken as recently as 1988.  The 
+data maintained by SERM are updated as needed based on fires, cutting, or other 
+disturbances. 
+
+7.2.2 Temporal Coverage Map
+
+Not available.
+
+7.2.3 Temporal Resolution
+
+As noted, the original maps are completely reinventoried by SERM personnel on a 
+10- to 20-year cycle, except for disturbed areas which are updated annually.  
+The photographs and other information used to create the original vector data 
+set most likely covered the 10- to 20-year period prior to 1988 and any updates 
+made from then to 1993, when the data were acquired.
+
+7.3 Data Characteristics
+
+7.3.1 Parameter/Variable
+
+The data contain polygon and linear features with attributes.  Although there 
+are many attributes, the attributes of most interest are probably those in the 
+FPOLY layer and include:
+
+MAP (The 7-digit map )
+FID (A 4-digit stand number)
+OWNER (The stand's ownership code)
+CZONE (The stand's survey zone)
+SOURCE (Source for the stand attributes)
+SYR (Source year)
+SA (Species Association)
+SP10 (Primary species #1)
+SP11 (Primary species #2)
+SP12 (Primary species #3)
+SP20 (Secondary species #1)
+SP21 (Secondary species #2)
+U1 (Understory species #1)
+U2 (Understory species #2)
+HGT (Height class code)
+D (Crown closure code)
+YOO (DecadAl year of stand origin)
+SP12 (Primary species #3)
+MLEVEL (Management Level)
+YSP (Year of silvicultural activity)
+R1 (Regenerating species #1
+R2 (Regenerating species #2)
+DRAIN (Soil drainage rating)
+TEXT (Soil texture code)
+DIST (Disturbance type)
+DYR (Year of disturbance)
+NP (Nonproductive stand code)
+OLDST (Location to retain original 4-digit stand number)
+
+
+7.3.2 Variable Description/Definition
+
+The following is information that is included as files in the data dictionary 
+directory in the archive for the Nipawin and North of PANP archive.
+
+File name:  LAYERS.LIST
+ANNOT     -  annotation; roads and lake names, towns, etc.
+DATAP     -  point information; photo centers, PSP plots
+FLINK     -  linear features; power lines, trails, bridges
+FPOLY     -  polygon layer, all of 10-km x 10-km tile falls within a polygon
+          -  full tiles usually have between 1,000 to 1,500 polygons in FPOLY
+SHELL     -  the tile neatline, 10 km x 10-km except on zone boundary tiles
+SPOLY     -  special polygons for plotting; sand beaches, reefs
+UTMGR     -  1-km x 1-km grid for UTM location determination
+
+
+File name:  FPOLY.CODES
+Saskatchewan Parks and Renewable Resources Attribute file items
+ITEM   COL  ITEM NAME     WIDTH   DESCRIPTION
+----   ---  ---------     -----   -----------
+  1      1  MAP             7     MAP NUMBER
+  2      8  FID             4     STAND NUMBER
+  3     12  OWNER           2     OWNERSHIP CODE
+  4     14  CZONE           3     SURVEY ZONE CODE
+  5     17  SOURCE          1     INFORMATION SOURCE
+  6     18  SYR             4     YEAR OF COLLECTION
+  7     22  SA              2     SPECIES ASSOCIATION
+  8     24  SP10            2     PRIMARY SPECIES #1
+  9     26  SP11            2     PRIMARY SPECIES #2
+ 10     28  SP20            2     SECONDARY SPECIES #1
+ 11     30  HGT             2     HEIGHT CLASS
+ 12     32  D               1     DENSITY
+ 13     33  YOO             2     YEAR OF STAND ORIGIN
+ 14     35  SP12            2     PRIMARY SPECIES #3
+ 15     37  SP21            2     SECONDARY SPECIES #2
+ 16     39  U1              2     UNDERSTORY SPECIES #1
+ 17     41  U2              2     UNDERSTORY SPECIES #2
+ 18     43  MLEVEL          3     MANAGEMENT LEVEL CODE
+ 19     46  YSP             4     YEAR OF SILVIC TREATMENT
+ 20     50  R1              2     REGENERATING SPECIES #1
+ 21     52  R2              2     REGENERATING SPECIES #2
+ 22     54  DRAIN           3     SOIL DRAINAGE RATING
+ 23     57  TEXT            4     SOIL TEXTURE CODE
+ 24     61  DIST            3     DISTURBANCE TYPE
+ 25     64  DYR             4     YEAR OF DISTURBANCE
+ 26     68  NP              4     NONPRODUCTIVE CODE
+ 27     72  OLDST           4     STORAGE OF NONLOCATIONAL # (FUTURE USE)
+
+
+
+         Forest Inventory GIS Polygon Coverage Attribute Codes
+         -----------------------------------------------------
+    1/ MAP: The 7-digit map identifier (1347596)
+
+    2/ FID: A 4-digit stand number (9999)
+
+    3/ OWNER: The stand's ownership code, as follows:
+
+       Code   Ownership type               Code   Ownership type
+       ----   --------------               ----   --------------
+        11    Prov. Park - Historic         42    Federal Crown
+        12    Prov. Park - Recreation       43    National Park
+        13    Prov. Park - Natural Env.     51    Air Weapons Range
+        14    Prov. Park - Wilderness       61    Indian Reserve
+        15    Prov. Park - Protected        71    Regional Park
+        16    Prov. Park - Rec. Site        81    Provincial Crown
+        19    Prov. Park - Unknown          82    Provincial Reserve
+        21    Hamlet/Town/Village           91    Provincial Forest
+        22    Resort Village                92    Retained Forest Land
+        31    Patented Land                 97    Out Of Province
+        41    Federal Reserve               99    Not Typed
+
+    4/ CZONE: The stand's survey zone, as follows:
+
+       Code   Survey Zone                  Code   Survey Zone
+       ----   -----------                  ----   -----------
+        210   Porcupine-Pasquia Hills       250   Nisbet-Wappekka Hills
+        211   Duck Mountain Prov. Park      260   Dore-Divide
+        212   Moose Mountain Prov. Park     261   Big River
+        220   Cumberland Lowlands           270   Peter Pond
+        230   Suggi Wetlands                280   Cypress Hills Prov. Park
+        240   Lac LaRonge - Churchill
+
+    5/ SOURCE: Source for these stand attributes, as follows:
+
+              Code   Description
+              ----   -----------
+                P    SPRR - aerial photography (standard)
+                W    Weyerhaeuser digital (photo based)
+                F    SPRR - field information
+
+    6/ SYR: Source year, in 4- digit format (1976)
+
+    7/ SA: Species association, as follows:
+
+              Code   Description
+              ----   -----------
+                S    Pure softwood stand   ( S >= 75% )
+               SH    Mixed softwood stand  ( 75% > S > 50% )
+               HS    Mixed hardwood stand  ( 75% > H > 50% )
+                H    Pure hardwood stand   ( H >= 75% )
+
+    8/ SP10: Primary species #1, as follows:
+
+       Code   Softwood species              Code   Hardwood species
+       ----   ----------------              ----   ----------------
+        WS    White Spruce                   TA    Trembling Aspen
+        BS    Black Spruce                   BP    Black Poplar
+        JP    Jack Pine                      WB    White Birch
+        BF    Balsam Fir                     WE    White Elm
+        TL    Tamarack                       GA    Green Ash
+        LP    Lodgepole Pine                 MM    Manitoba Maple
+                                             BO    Burr Oak
+
+    9/ SP11: Primary species #2, codes as in SP10 above
+
+   10/ SP20: Secondary species #1, codes as in SP10 above
+
+   11/ HGT: Height class code, as follows:
+
+              Code        Height Class
+              ----    --------------------
+                5      2.5m < HGT <=  7.5m
+               10      7.5m < HGT <= 12.5m
+               15     12.5m < HGT <= 17.5m
+               20     17.5m < HGT <= 22.5m
+               25     22.5m < HGT
+
+   12/ D: Crown closure code, as follows:
+
+              Code        Density
+              ----    ----------------
+                A      10% < D <= 30%
+                B      30% < D <= 55%
+                C      55% < D <= 80%
+                D      80% < D
+
+   13/ YOO: Year of stand origin, in decadal format, as follows:
+
+           Code    Year Range              Code    Year Range
+           ----   ------------             ----   ------------
+            84     1836 - 1845              92     1916 - 1925
+            85     1846 - 1855              93     1926 - 1935
+            86     1856 - 1865              94     1936 - 1945
+            87     1866 - 1875              95     1946 - 1955
+            88     1876 - 1885              96     1956 - 1965
+            89     1886 - 1895              97     1966 - 1975
+            90     1896 - 1905              98     1976 - 1985
+            91     1906 - 1915              99     1986 - 1995
+
+   14/ SP12: Primary species #3, codes as in SP10
+
+   15/ SP20: Secondary species #2, codes as in SP10
+
+   16/ U1: Understory species #1, codes as in SP10
+
+   17/ U2: Understory species #2, codes as in SP10
+
+   18/ MLEVEL: Management Level, codes as follows:
+
+           Code               Management Level
+           ----    -----------------------------------------
+                   Unmanaged or unknown (forested productive)
+            ANR    Assessed natural regeneration
+            EXP    Experimental Area
+            FG     Fire guard
+            OP     Unmanaged or unknown (nonforested productive)
+            PB     Prescribed Burn
+            PLA    Plantation
+            SDA    Seeded area
+            SIL    Silvicultural activity  (archaic)
+            SPM    Site prepared - mechanical
+            SPO    Site prepared - other
+            SPS    Site prepared - scarification
+            STD    Stand tending
+
+   19/ YSP: Year of silvicultural activity (1975)
+
+   20/ R1: Regenerating species #1, as in SP10, plus codes
+           GR (grassland) and SB (scrub brush)
+
+   21/ R2: Regenerating species #2, as in R1
+
+   22/ DRAIN: Soil drainage rating, coded as follows:
+
+            Code    Drainage Description
+            ----    --------------------
+             VR     Very rapidly drained
+             VRR    Very rapidly - rapidly drained
+             R      Rapidly drained
+             RW     Rapidly - Well drained
+             W      Well drained
+             WM     Well - Moderately well drained
+             MW     Moderately well drained
+             MWI    Moderately well - imperfectly drained
+             I      Imperfectly drained
+             IP     Imperfectly - poorly drained
+             P      Poorly drained
+             PVP    Poorly - very poorly drained
+             VP     Very poorly drained
+
+   23/ TEXT: Soil texture code, as follows:
+
+            Code    Texture Description
+            ----    -------------------
+            C       Coarse
+            CMC     Coarse - moderately coarse
+            MC      Moderately coarse
+            MCMF    Moderately coarse - moderately fine
+            MF      Moderately fine
+            F       Fine
+            O       Organic
+
+   24/ DIST: Disturbance type, as follows:
+
+           Code    Disturbance Type
+           ----    ----------------
+            SCO    Summer cut-over
+            WCO    Winter cut-over
+            OCO    Other cut-over
+            SPC    Summer partial cut
+            WPC    Winter partial cut
+            OPC    Other partial cut
+            BO     Burn over
+
+   25/ DYR: Year of disturbance (1975)
+
+   26/ NP: Nonproductive stand code, as follows:
+
+           Code    NonProductive Type
+           ----    -------------------
+           3100    Treed muskeg
+           3200    Treed rock
+           3300    Clear muskeg
+           3400    Clear rock
+           3500    Brushland
+           3600    Meadow
+           3700    Clearing
+           3800    Sand
+           3900    Nonproductive burn-over
+           4000    Pasture
+           5100    Flooded land
+           5200    Water - unknown surface
+           5210    Water - lake surface
+           5220    Water - river surface
+           9000    Not typed
+
+   27/ OLDST: Location to retain original 4-digit stand
+              number when it is replaced by 4-digit x-y
+              locational stand number. Presently empty. (9999)
+
+
+
+File name:  MISC.CODES
+
+CODE TYPE  DESCRIPTION                      LAYER COMMENTS
+---- ----  -----------                      ----- --------
+ 170 ARC   NATIVE LAND ENTITLEMENT BOUNDARY FPOLY
+ 211 ARC   DOUBLE SIDED RIVER SHORELINE     FPOLY
+ 365 ARC   SHORELINE BUFFER OUTLINE         FPOLY
+ 366 ARC   PROVINCIAL FOREST BUFFER OUTLINE FPOLY
+ 367 ARC   INDIAN RESERVE BUFFER            FPOLY
+ 111 ARC   TWP/RNG GRID REFERENCE           ANNOT FOUND OUTSIDE TILE NEATLINE
+ 800 ARC   POINTER ARROW FOR ANNOTATION     ANNOT USED AT DIGITIZERS DISCRETION
+ 221 ARC   WATERCOURSE - (NONPOLY BOUNDARY) FLINK WAS INTERMITTENT STREAM
+ 230 ARC   RAPIDS                           FLINK
+ 231 ARC   FALLS                            FLINK
+ 240 ARC   DAM                              FLINK
+ 312 ARC   TRAIL OR CUTLINE                 FLINK
+ 313 ARC   PORTAGE                          FLINK
+ 314 ARC   UNVERIFIED SEISMIC LINE          FLINK NEW CODE - DEC. 1990
+ 320 ARC   ROAD BRIDGE                      FLINK
+ 321 ARC   RAILROAD BRIDGE                  FLINK
+ 340 ARC   FERRY CROSSING RIVER             FLINK
+ 341 ARC   FERRY CROSSING LAKE              FLINK
+ 350 ARC   POWER TRANSMISSION LINE          FLINK
+ 351 ARC   TELEPHONE LINE                   FLINK
+ 352 ARC   OIL/GAS PIPELINE                 FLINK NEW CODE - DEC. 1990
+ 360 ARC   AIRSTRIP OUTLINE                 FLINK
+ 361 ARC   CEMETERY OUTLINE                 FLINK
+ 362 ARC   DEPRESSION OUTLINE               FLINK DEPRESSION TO RIGHT
+ 363 ARC   ESKER CENTERLINE                 FLINK
+ 368 ARC   CFS/EXP. PLOT AREA OUTLINE       FLINK
+ 370 ARC   OUT OF STUDY WETLANDS            FLINK INTERMITTENT SHORELINE(NTS50)
+ 410 LABEL FERRY CROSSING CENTER            FLINK
+ 412 LABEL HISTORIC SITE                    FLINK
+ 413 LABEL FIRE TOWER                       FLINK
+ 414 LABEL OTHER TOWER                      FLINK
+ 415 LABEL MINE SITE                        FLINK
+ 416 LABEL GRAVEL PIT                       FLINK
+ 417 LABEL REEF OR SUBMERGED ROCK           FLINK
+ 418 LABEL ROADSIDE PICNIC SITE             FLINK
+ 419 LABEL SAWMILL                          FLINK
+ 420 LABEL OIL/GAS WELL                     FLINK SIMILAR TO MINE SITE (415)
+ 450 LABEL HIGHWAY ROUTE MARKER             FLINK
+ 500 LABEL SMALL NONPRODUCTIVE POLYGON      FLINK NEW CODE -  OCT. 17, 1990
+ 510 LABEL TREED MUSKEG                     FLINK
+ 511 LABEL TREED ROCK SYMBOL                FLINK
+ 512 LABEL CLEAR ROCK SYMBOL                FLINK
+ 513 LABEL CLEAR SWAMP SYMBOL               FLINK
+ 514 LABEL BRUSHLAND SYMBOL                 FLINK
+ 515 LABEL MEADOW SYMBOL                    FLINK
+ 516 LABEL CLEARING SYMBOL                  FLINK
+ 518 LABEL PASTURE/CROP LAND SYMBOL         FLINK
+ 520 LABEL BARN - NOT TO SCALE              FLINK   0°
+ 521 LABEL BARN - NOT TO SCALE              FLINK  22.5°
+ 522 LABEL BARN - NOT TO SCALE              FLINK  45°
+ 523 LABEL BARN - NOT TO SCALE              FLINK  67.5°
+ 524 LABEL BARN - NOT TO SCALE              FLINK  90°
+ 525 LABEL BARN - NOT TO SCALE              FLINK -67.5°
+ 526 LABEL BARN - NOT TO SCALE              FLINK -45°
+ 527 LABEL BARN - NOT TO SCALE              FLINK -22.5°
+ 530 LABEL BUILDING - NOT TO SCALE          FLINK   0°
+ 531 LABEL BUILDING - NOT TO SCALE          FLINK  22.5°
+ 532 LABEL BUILDING - NOT TO SCALE          FLINK  45°
+ 533 LABEL BUILDING - NOT TO SCALE          FLINK  67.5°
+9999 LABEL FOREST INVENTORY POLYGON         FPOLY  UNIQUE $ID
+ 120 ARC   PROVINCIAL BOUNDARY              FPOLY
+ 121 ARC   PROVINCIAL FOREST BOUNDARY       FPOLY PROVINCIAL FOREST TO RIGHT
+ 122 ARC   SURVEY ZONE BOUNDARY             FPOLY
+ 123 ARC   PROV. FOREST RESERVE BOUNDARY    FPOLY PARKS REC SITE ETC.
+ 124 ARC   FEDERAL CROWN BOUNDARY           FPOLY
+ 125 ARC   INDIAN RESERVE BOUNDARY          FPOLY INDIAN RESERVE TO RIGHT
+ 127 ARC   CORPORATE LIMIT BOUNDARY         FPOLY
+ 150 ARC   DRAINAGE/TEXTURE BOUNDARY        FPOLY
+ 160 ARC   FOREST COVER TYPE BOUNDARY       FPOLY
+ 210 ARC   SHORELINE                        FPOLY
+ 212 ARC   LAKE/RIVER POLYGON INTERFACE     FPOLY
+ 213 ARC   RESERVOIR OR DUGOUT              FPOLY
+ 220 ARC   WATERCOURSE - (POLY BOUNDARY)    FPOLY
+ 310 ARC   PRIMARY ROAD                     FPOLY
+ 311 ARC   SECONDARY ROAD                   FPOLY
+ 330 ARC   RAILROAD                         FPOLY
+ 331 ARC   ABANDONED RAILROAD               FPOLY
+ 371 ARC   BUILT-UP AREA OUTLINE            FPOLY
+   1 ARC   TILE NEATLINE                    SHELL SOFTWARE GENERATED
+ 245 ARC   DOCK                             SPOLY ADDED MAY 3, 1990
+ 250 ARC   SAND BAR OUTLINE                 SPOLY
+ 260 ARC   SAND BEACH OUTLINE               SPOLY ADDED MAY 3, 1990
+ 364 ARC   SCALE BUILDING OUTLINE           SPOLY
+ 601 LABEL BACKGROUND POLYGON               SPOLY
+ 610 LABEL SANDBAR IN WATER                 SPOLY
+ 612 LABEL SAND BEACH (NONPRODUCTIVE)       SPOLY ADDED MAY 2, 1990
+ 620 LABEL SCALE BUILDING                   SPOLY
+ 110 ARC   UTM GRID LINES                   UTMGR SOFTWARE GENERATED
+
+
+
+File name:  DATAP.CODES
+
+ CODE POINT_TYPE
+ ---- ----------
+ 7000 Data Points 7000 - 7999
+ 7021 Height of Land
+ 7100 SPRC Controlled Data Points 7100 - 7199
+ 7111 PHOTO CENTER LEADING
+ 7112 PHOTO CENTER TRAILING
+ 7113 UPDATE PHOTO CENTER LEADING
+ 7114 UPDATE PHOTO CENTER TRAILING
+ 7151 Provincial PSP - active
+ 7152 Provincial PSP - abandoned
+ 7200 CFS Controlled Data Points 7200 - 7299
+ 7300 MacMillan Bloedel Controlled 7300 - 7399
+ 7351 1978-81 Growth & Yield
+ 7352 1978-81 Growth & Yield (abandoned)
+ 7400 Weyerhaeuser Canada Controlled 7400 - 7499
+ 7431 Silviculture Trials
+ 7441 Mother/Super Tree (White Spruce)
+ 7442 Expt. Areas / Clone Banks
+ 7443 Family Trials
+ 7444 Seed Production Areas
+ 7451 Growth Assessment Plots (GAP)
+
+File name:  DATAP.ITEMS
+
+POINT_TYPE                                CODE ATT      ITEMS
+----------                                ---- ---      -----
+Data Points 7000 - 7999                   7000
+Height of Land                            7021 4I       ELEVATION
+SPRC Controlled Data Points 7100 - 7199   7100
+PHOTO CENTER LEADING                      7111 2C 4C 4I YEAR FLT_LINE PHOTO_NO
+PHOTO CENTER TRAILING                     7112 2C 4C 4I YEAR FLT_LINE PHOTO_NO
+UPDATE PHOTO CENTER LEADING               7113 2C 4C 4I YEAR FLT_LINE PHOTO_NO
+UPDATE PHOTO CENTER TRAILING              7114 2C 4C 4I YEAR FLT_LINE PHOTO_NO
+Provincial PSP - active                   7151 4I 2C    PLOT_NO SURVEY_SPECIES
+Provincial PSP - abandoned                7152 4I 2C    PLOT_NO SURVEY_SPECIES
+CFS Controlled Data Points 7200 - 7299    7200
+MacMillan Bloedel Controlled 7300 - 7399  7300
+1978-81 Growth & Yield                    7351 4I 4I    PLOT_NO PLOT_NO
+1978-81 Growth & Yield (abandoned)        7352 4I 4I    PLOT_NO PLOT_NO
+Weyerhaeuser Can. Controlled 7400 - 7499  7400
+Silviculture Trials                       7431 5C       PLOT_ID
+Mother/Super Tree (White Spruce)          7441 3C       PLOT_ID
+Expt. Areas / Clone Banks                 7442 3C       PLOT_ID
+Family Trials                             7443 3C       PLOT_ID
+Seed Production Areas                     7444 3C       PLOT_ID
+Growth Assessment Plots (GAP)             7451 5C       PLOT_ID
+
+
+7.3.3 Unit of Measurement
+
+See specific attributes described in Section 7.3.2.
+
+7.3.4 Data Source
+
+The original data were acquired as ARC/INFO coverages or export files from:
+
+Saskatchewan Environment and Resource Management
+Forestry Branch - Inventory Unit
+800 Central Ave  
+Prince Albert, Saskatchewan
+Canada S6V 6G1   
+
+7.3.5 Data Range
+   
+See specific attributes described in Section 7.3.2.
+
+7.4 Sample Data Record
+
+Not applicable.
+
+8. Data Organization
+
+8.1 Data Granularity
+
+The smallest amount of obtainable data is one geographic block of data for the 
+Nipawin, North of PANP, or East of PANP areas as defined in Section 7.1.1.
+
+8.2 Data Format(s)
+
+8.2.1 Uncompressed Data Files
+
+The data exist on tape as tar format archives of either ARC/INFO coverages or as 
+ARC/INFO export files.  There is a similar naming convention whether you are 
+dealing with the export files or the directory structure.  Export files may have 
+file names such as l1349596.e00 for the linear layer or p1349596.e00 for the 
+polygon layer, whereas with the directory structure you will find a directory 
+name such as z1349596 with FPOLY and link subdirectories (for polygon and linear 
+layers, respectively.  There may be additional subdirectories for those blocks 
+containing several layers.  The 1349596 number refers to the UTM 10-km x 10-km 
+block, where 13 refers to the UTM zone, 49 refers to the lower left corner of 
+the 10,000-m UTM block easting (e.g., 490,000), and 596 refers to the lower left 
+corner of the 10,000-m UTM block northing (e.g. 5,960,000).
+
+The Nipawin data block is written as a tar archive of the ARC/INFO directory 
+structure of all 129 map tiles, with 7 separate layers (coverages) per map and 
+containing all the associated ARC/INFO files for each coverage.  This ends up 
+being well over 100 files per map or tile; therefore, it is recommended that the 
+tar file contents be listed before being extracted.  
+
+The East of PANP data block is written as a tar archive of the linear and 
+polygon layer export files for the 27 map block adjacent to PANP and one 
+additional polygon layer near PANP that contains the Nesbit forest.
+
+The North of PANP data block is also written as a tar archive of the ARC/INFO 
+directory structure of the 20 map tiles within it and 7 layers per map tile.  
+Restoring this archive will create the ARC/INFO directory structures as they 
+appeared on the original system, and they will be ready for use without 
+importing as with the Nipawin block.  It is also recommended with this data set 
+that the tar file is listed before it is extracted.
+
+8.2.2 Compressed CD-ROM Files
+
+On the BOREAS CD-ROMs, each of the files listed above have been compressed with 
+the Gzip compression program (file name *.gz).  These data have been compressed 
+using gzip version 1.2.4 and the high compression (-9) option (Copyright (C) 
+1992-1993 Jean-loup Gailly).  Gzip (GNU zip) uses the Lempel-Ziv algorithm 
+(Welch, 1994) used in the zip and PKZIP programs. The compressed files may be 
+uncompressed using gzip (-d option) or gunzip.  Gzip is available from many 
+websites (for example, ftp site prep.ai.mit.edu/pub/gnu/gzip-*.*) for a variety 
+of operating systems in both executable and source code form.  Versions of the 
+decompression software for various systems are included on the CD-ROMs.
+
+9. Data Manipulations
+
+9.1 Formulae
+
+None.
+
+9.1.1 Derivation Techniques and Algorithms
+
+None.
+
+9.2 Data Processing Sequence
+
+9.2.1 Processing Steps
+
+Copy and compress the files for release on CD-ROM.
+
+9.2.2 Processing Changes
+
+None.
+
+9.3 Calculations
+
+9.3.1 Special Corrections/Adjustments
+
+Note that in the coverages there is a y-shift of 6,000,000 (presumably to save 
+storage space).  To get correct UTM northing coordinates, add 6,000,000 to each 
+of the existing coordinates.  This shift needs to be handled properly when 
+performing spatial transformations or reprojections of the data.  If using 
+ARC/INFO, you may wish to run the PROJECTDEFINE function.
+
+9.3.2 Calculated Variables
+
+None.
+
+9.4 Graphs and Plots
+
+None.
+
+10. Errors
+
+10.1 Sources of Error
+
+There is the possibility of coding errors in the attributes, transcription 
+errors from original sample data, and photo-interpretation errors. 
+
+10.2 Quality Assessment
+
+10.2.1 Data Validation by Source
+
+Unknown.
+
+10.2.2 Confidence Level/Accuracy Judgment
+
+No information is known about the procedures and equipment used to create these 
+data.  Within the bounds of what BORIS staff know about the data, the data are 
+of good quality.
+
+10.2.3 Measurement Error for Parameters
+
+Unknown.
+
+10.2.4 Additional Quality Assessments
+
+None.
+
+10.2.5 Data Verification by Data Center
+
+Problems were encountered with the following export files/coverages rendering 
+them unreadable:  the fpoly coverage located in the Z1341603 directory of the 
+north of Panp data block,  the line export file l1343595.e00 in the east of Panp 
+data block, and the polygon export file p1346598.e00 in the east of Panp data 
+block.  Note:  the data that would have been found in the east of Panp data 
+block, tile p1346598 can be found in the Nipawin data block, directory z1346598, 
+fpoly coverage.
+
+11. Notes
+
+11.1 Limitations of the Data
+
+BORIS acquired these data in 1993; therefore, areas subjected to logging 
+activity or other disturbance, such as fire, will appear much different today as 
+compared to the forest cover data.  
+
+11.2 Known Problems with the Data
+
+See Section 10.2.5.
+
+11.3 Usage Guidance
+
+Saskatchewan Parks and Renewable Resources does not accept any liability for 
+decisions action taken on the basis of these data.  
+
+Before uncompressing the Gzip files on CD-ROM, be sure that you have enough disk 
+space to hold the uncompressed data files.  Then use the appropriate 
+decompression program provided on the CD-ROM for your specific system.
+
+11.4 Other Relevant Information
+
+Saskatchewan Parks and Renewable Resources also maintains stand and stock tables 
+and possibly some permanent sample plots in this area.  Aerial photographic 
+prints and negatives are also available.  Contact the agency directly if you are 
+interested in such information or if you wish to acquire these data. 
+
+12. Application of the Data Set
+
+This data set would provide good reference information for assessing spectral 
+image data classification techniques over the area and serve as an initial 
+baseline data set for analyzing land cover and vegetation change.
+
+13. Future Modifications and Plans
+
+None.
+
+14.  Software
+
+14.1 Software Description
+
+The Enviromental Systems Research Institute (ESRI) ARC/INFO (Version 7.0) 
+package was used to perform the data manipulation and processing.  Questions 
+about the software should be directed to:  
+
+Environmental Systems Research Institute, Inc.
+380 New York Street
+Redlands, CA   92373-8100
+
+Gzip (GNU zip) uses the Lempel-Ziv algorithm (Welch, 1994) used in the zip and 
+PKZIP commands.
+
+14.2 Software Access
+
+ARC/INFO is a commercial package; contact ESRI for details.
+
+Gzip is available from many websites across the net (for example) ftp site 
+prep.ai.mit.edu/pub/gnu/gzip-*.*) for a variety of operating systems in both 
+executable and source code form. Versions of the decompression software for 
+various systems are included on the CD-ROMs.
+
+15.   Data Access
+
+15.1  Contact for Data Center/Data Access Information
+
+These BOREAS data are available from the Earth Observing System Data and 
+Information System (EOS-DIS) Oak Ridge National Laboratory (ORNL) Distributed 
+Active Archive Center (DAAC). The BOREAS contact at ORNL is:
+
+ORNL DAAC User Services
+Oak Ridge National Laboratory
+(865) 241-3952
+ornldaac@ornl.gov
+ornl@eos.nasa.gov
+
+15.2  Procedures for Obtaining Data
+
+BOREAS data may be obtained through the ORNL DAAC World Wide Web site at 
+http://www-eosdis.ornl.gov/ or users may place requests for data by telephone, electronic mail, or fax.
+
+15.3  Output Products and Availability
+
+Requested data can be provided electronically on the ORNL DAAC's anonymous FTP 
+site or on various media including, CD-ROMs, 8-MM tapes, or diskettes.
+
+The complete set of BOREAS data CD-ROMs, entitled "Collected Data of the Boreal 
+Ecosystem-Atmosphere Study", edited by Newcomer, J., et al., NASA, 1999, are 
+also available.
+
+16. Output Products and Availability
+
+16.1 Tape Products
+
+The data can be made available on 8-mm, DAT, or 9-track tapes at 6250 or 1600 
+BPI.
+
+16.2 Film Products
+
+None available from BORIS.  See Other Relevant Information, Section 11.4. 
+
+16.3 Other Products
+
+These data are available on the BOREAS CD-ROM series.
+
+17. References
+
+Lindenas, D. G. June 1985. Forest Inventory Interpretation and Mapping Manual - 
+Specifications for the Interpretation and Mapping of Aerial Photographs in the 
+Forest Inventory Section. Saskatchewan Parks and Renewable Resources.
+
+17.1 Platform/Sensor/Instrument/Data Processing Documentation
+
+ARC/INFO User's Guide (Version 7). 1994. Redlands, CA.
+
+Welch, T.A. 1984, A Technique for High Performance Data Compression, IEEE 
+Computer, Vol. 17, No. 6, pp. 8 - 19.
+
+17.2 Journal Articles and Study Reports
+
+Sellers, P., and F. Hall. 1994. Boreal Ecosystem-Atmosphere Study: Experiment 
+Plan. Version 1994-3.0, NASA BOREAS Report (EXPLAN 94). 
+
+Sellers, P., and F. Hall. 1996. Boreal Ecosystem-Atmosphere Study: Experiment 
+Plan. Version 1996-2.0, NASA BOREAS Report (EXPLAN 96). 
+
+Sellers, P., F. Hall, and K. F. Huemmrich. 1996. Boreal Ecosystem-Atmosphere 
+Study: 1994 Operations. NASA BOREAS Report (OPS DOC 94). 
+
+Sellers, P., F. Hall, and K. F. Huemmrich. 1997. Boreal Ecosystem-Atmosphere 
+Study: 1996 Operations. NASA BOREAS Report (OPS DOC 96). 
+
+Sellers, P., F. Hall, H. Margolis, B. Kelly, D. Baldocchi, G. den Hartog, J. 
+Cihlar, M. G. Ryan, B. Goodison, P. Crill, K. J. Ranson, D. Lettenmaier, and D. 
+E. Wickland. 1995. The boreal ecosystem-atmosphere study (BOREAS): an overview 
+and early results from the 1994 field year. Bulletin of the American 
+Meteorological Society. 76(9):1549-1577. 
+
+Sellers, P.J., F.G. Hall, R.D. Kelly, A. Black, D. Baldocchi, J. Berry, M. Ryan, 
+K.J. Ranson, P.M. Crill, D.P. Lettenmaier, H. Margolis, J. Cihlar, J. Newcomer, 
+D. Fitzjarrald, P.G. Jarvis, S.T. Gower, D. Halliwell, D. Williams, B. Goodison, 
+D.E. Wickland, and F.E. Guertin. 1997. BOREAS in 1997: Experiment overview, 
+scientific results, and future directions. Journal of Geophysical Research 
+102(D24):28,731-28,769.
+
+17.3 Archive/DBMS Usage Documentation
+
+None.
+
+18. Glossary of Terms
+
+None.
+
+19. List of Acronyms
+
+    BOREAS  - BOReal Ecosystem-Atmosphere Study
+    BORIS   - BOREAS Information System
+    DAAC    - Distributed Active Archive Center
+    EOS     - Earth Observing System
+    EOSDIS  - EOS Data and Information System
+    GAP     - Growth Assessment Plots
+    GSFC    - Goddard Space Flight Center
+    GIS     - Geographic Information System
+    MSA     - Modeling Sub-Area
+    NASA    - National Aeronautics and Space Administration
+    NSA     - Northern Study Area
+    ORNL    - Oak Ridge National Laboratory
+    PANP    - Prince Albert National Park
+    SERM    - Saskatchewan Environment and Resource Management
+    SERM-FBIU - SERM-Forestry Branch Inventory Unit
+    SSA     - Southern Study Area
+    URL     - Uniform Resource Locator (a World Wide Web address)
+    UTM     - Universal Transverse Mercator
+
+20. Document Information
+
+20.1 Document Revision Dates
+
+     Written:         01-Aug-1994
+     Last Updated:    23-Jan-1998
+
+20.2 Document Review Dates
+
+     BORIS Review:    15-May-1997
+     Science Review: 
+
+20.3 Document ID
+
+20.4 Citation
+
+The original data were provided by SERM-FBIU.  The vector data were processed 
+and gridded by BORIS staff.  The contribution of the vector data by SERM and the 
+processing of the data by BORIS staff are greatly appreciated.
+
+20.5 Document Curator
+
+20.6 Document URL
+
+Keywords
+FOREST COVER
+FORESTRY
+FOREST INVENTORY
+GIS
+SSA_For_Cov_Vector.doc
+04/17/98

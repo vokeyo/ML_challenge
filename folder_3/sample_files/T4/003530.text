@@ -1,0 +1,1023 @@
+            Knowledge-Based Searching with TOPIC®
+
+            John W. Lehman, Clifford A. Reid, et al.
+
+                       Verity, Inc.
+                   1550 Plymouth Street,
+                 Mountain View, CA 94043
+             (415) 960-7620 I jlehman @ verity.com
+
+1.     OBJECTIVE OF VERYFY'S TREC-2
+       EXPERIMENTS
+
+Verity, Inc. is the first major commercial product
+participant in ThEC. Verity's product is TOPIC®.
+
+Verity participated in ThEC-2 as a Category A Site.
+This participafion was Verity's first TREC, and we
+encountered many of the logistical problems of other
+sites in their TREC- 1 experience.
+
+Topic's search users wish to understand the search result
+quality to expect in their personal searches on their
+(large) collecfions. Verity also expects to obtain insights
+for future product improvements.
+
+Topic is a mature commercial-off-the-shelf manual text
+search program combining the results of human
+expertise with a powerful search expression language and
+fast search algorithms. Topic's installations use
+manually or semi-automatically developed libraries of
+searches (topics) , which are instances of the search
+expression language and which are supplied to all users.
+
+Verity begins its TREC experiments with a gathering of
+"ground truth" regarding unaided adhoc end user search
+result quality. Future experiments will incorporate
+predefined searches (topics) and other Topic search aids to
+determine their level of improvement/impact on search
+result quality.
+
+
+2.     TOPIC SEARCH APPROACH
+
+The Topic philosophy: Domain knowledge, both
+descriptive and content-based, using constructs
+specifically designed to discriminate between jull text
+material, is the only way to consistently obtain high
+recalbprecision on large heterogeneous collections.
+Search result quality may be enhanced by the
+employment of collection-specific statistics to locate
+additional domain-relevant terminology. Searches are
+repeated and subject-matter expertise is a scarce resource.
+The problem that Topic addresses is the effective use of a
+human's time in analyzing search results to locate the
+
+
+                                        209
+
+preponderance of relevant details in the fewest possible
+documents, and therefore the smallest possible elapsed
+time.
+
+
+2.1    TOPIC KNOWLEDGE
+       REPRESENTATION
+
+The Topic product employs several approaches to
+individual term search, organized by a rule-based, or
+concept-based, approach to search term aggregafion. In
+Topic, the search focus is the topic, (concept, notion,
+idea, or subject), and the topic is the user-specified
+"smart" description of all of the evidence "about" or "of'
+the topic as it (the evidence) would be found in text
+documents.
+
+
+2.1.1 TOPICINDICIES
+
+The Topic product line catalogs and indexes both fielded
+(structured) data, and full-text. Topic automatically
+extracts structured data (such as title, author, etc.) into
+searchable fields, using a lexical analyzer. Fielded data is
+searchable separately or in combination with full-text.
+
+Indexes on the full-text are (for all non-stopped characters
+and strings):
+       -word/string
+       -stemmed word (morphological variant)
+       -soundex (phonetic spelling variety)
+       -statistically correlated terms (called the
+       suggestion index)
+       -typographical error index
+       -thesaurus
+       -wildcard (universal character/group expansion)
+
+An index on all values (choices) for fielded data is also
+produced.
+
+
+2.1.2 TOPIC SEARCH RULES
+
+Search rules cop.. sist of relational comparisons to field
+values, exact or fuzzy matches on full-text search terms,
+
+aggregated by boolean and evidential reasoning operators
+and point value uncertainty at the term level (each piece
+of evidence has a strength/uncertainty attached to its
+predictability of its parent concept).
+
+Topic provides search rule management functions to
+support the creation, repeated use, modification, sharing
+and display of one or more libraries of related search
+rules. The search rule libraries are themselves searchable,
+including text annotations of the rules. Search rules are
+interactive queries, automatic queries, and a training
+mechanism for the installation's domains.
+
+A search rule definition may include several thousand
+pieces of evidence in over one hundred levels of detail.
+One search rule library may contain twenty thousand
+rules. Search rules (topics) are named, and a reference to
+the name in a search expression inherits all lower levels
+of evidence. Any query which includes a search rule
+name will automatically receive the full definition of the
+rule in the search. The lowest level of evidence is the
+text expression. Search rules may be composed of other
+named search rules.
+
+Search rules appear as an alphabetical list of topic
+names, an indented outline showing the levels of rules,
+or a graphical "family tree" display of rules and their
+parents/children, including evidence combination
+operators and evidence "weights". Searches may be
+executed directly from any node (name) in the search rule
+family. A topic search rule graphic display example
+appears in Figure 1.
+
+The search rule syntax consists of an exact or fuzzy
+match (pattern match) capability for individual terms
+(case sensitive); a boolean combination (and (all), or
+(any), not), of terms; dual direction, nested, grammatical
+(paragraph, sentence, phrase) proximity operators; a
+relative (fuzzy) proximity operator for two or more
+terms, an evidence aggregation operator (accrue) for both
+full-text and structured field data, and inexact match
+techniques as follows:
+
+ 1. wildcard expressions for term expansion; single
+    character, character group, or character class
+
+ 2. soundex (first letter common) expressions for
+    morphological term expansion
+
+ 3. source language-specific stemming (morphological
+    variants) expressions for term expansion
+
+ 4. typographical expressions for term expansion (n-
+    character infidelity to search term)
+
+ 5. multi-direction thesaurus (user-modifiable) for term
+    expansion
+
+ 6. suggestion (statistical correlation) for term
+    expansion
+
+ 7. evidence appearing in a field value, or as the field
+    value (contains, matches, substring, starts, ends).
+
+Each of the above inexact match techniques may be
+executed automatically. Negative evidence may be
+applied on a term-by-term basis with any operator. The
+structured field data types are character, number and date.
+Date arithmetic is provided, as well as relative date
+expressions such as "yesterday" ,"today" etc.
+
+
+2.1.3 SEARCH RESULT RANKING
+
+Results of searches are relevance ranked lists of
+documents, with displayed titles or other descriptive
+information. The numeric score, and the accompanying
+rank, are the result of a best fit comparison of the full-
+text document and descriptor content and the search rule
+evidence. The ranking is subject to an optional
+threshold, used primarily to limit output, but the
+threshold may be used to describe search recall and
+precision. The relevance threshold is always used in
+dissemination/notification.
+
+Evidence consists of terms, operators (syntax) and the
+numeric strength of the relationship between the
+evidence and its (next higher level) search rule. The
+evidence may be aggregated or evaluated with boolean
+operators. Aggregation involves giving relevance score
+credit for each piece of evidence found (breadth of
+evidence first). As each level is evaluated in a search rule
+(tree), potential document score modification occurs
+(since successive levels may be weighted evidence for
+their next broader concept). The scoring of an individual
+term may include a frequency-of-occurrence factor (a
+normalized concentration factor) , a less powerful scoring
+factor than the absolute presence of the evidence in the
+document. A document score explanation function is
+included.
+
+
+2.2    AGGREGATh SEARCH
+       FUNCTIONS
+
+Searches may iterate on the results of the previous
+search.
+
+Any search may be named/saved along with its results
+manipulation criteria (sorting by fields, grouping) for
+later execution. Any search criteria may be interactively
+defined as a logical view of the collection, which then
+provides many alternative search universes for the user
+population. All Topic activities are audited. A search
+which supports discretionary access control may be
+transparently appended to any users search.
+
+210
+
+                                     Figure 1
+                          TOPIC Search Rule and Result
+
+
+                                     TOPIC                               EE
+  File  Edit  View   Query  Navigate Launch  Window                   Fl -Help
+
+                                      LAW
+                       0.50 (~ (Many> (Stem> law
+                       0.50 (~ (Many> (Stem> court
+                       0.50 (~ (Many> <Stem> suit
+                       0.50 (~ (Many> (Stem> plaintiffs
+  (~ law (Accrue> (~   0.50 (~ (Many> (Stem> regulations
+                       0.50 (~ (Many> (Stem> justice
+
+                                               F0 .50 @ (Many> (Stem> lawyer
+                       O.S0@courtroom (Accrue> (~~0.50@(Many> (Stem> judge
+                                               L0~50 (~ (Manv> (Stem> jury
+
+
+    Retrieved: 66 of 202                                      ______________
+          Score  Date             Title
+  0-      0.97   13-Feb-90        Law-Legal Beat: Monsanto Is Cleared in 9600 ME
+          0.93   13-Feb-91        Candela Announces Patent Suit
+          0.93   14-Feb-90        Law - Legal Beat: Suits Prompt FDA Investigation
+          0.93   06-Mar-90        Business World: Prop. 65 Populism Is on the Pro
+          0.89   13-Feb-91        North Carolina Bar Association Supports Judicial
+          0.89   21-Feb-90        High Court Declines to Hear Challenge On Line B
+          0.88   01-Mar-90        Justice Aides Say Chances forWinning Big Awar
+          0.88   05-Mar-90        Law - Washington Docket: Poindexter Ca se3 HUD
+
+
+                                      211
+
+2.3    USER INTERFACE TO SEARCH
+
+Every search is automatically configured into a rule. The
+simplest search is a list of terms, which may be entered
+at the keyboard, selected from displayed document(s)
+content, or selected from lists of terms. This list is
+automatically enhanced by term expansion, expansion to
+existing named rules whenever the rule name appears in
+the search expression, and evidence aggregafion. Searches
+involving structured fields are generally addressed by a
+form interface, which aggregates field and full-text
+content. Any list of terms, rule-names, or extensions
+such as thesaurus/soundex may be used to initiate a
+search or add to a search expression.
+
+
+2.4    SEARCH RESULT ANALYSIS AIDS
+
+The Topic philosophy of minimizing the elapsed fime to
+obtain the necessary relevant details that constitute an
+answer or support a decision necessitates analysis aids
+beyond the search composition and result list display.
+
+The Topic result list may be browsed (page, result
+number etc.). A document selected for display produces
+the full text display with all search evidence highlighted
+(e.g. in reverse video or color). The display may be the
+native form of the document, which for most of today's
+collections means a marked-up format with useful user
+guidance in the markup itself (e.g. sections, paragraph
+headings etc.). The user may choose to browse or to
+move directly to the firstinextiprevious occurrence of a
+search term in the document. Similarly, the user may
+move through the document using various document
+enhancements such as hypertext links, may follow
+hypertext links to other documents, including graphics
+and other media. Previously generated annotafions are
+available for browsing. Queries or other applications
+may be linked to document content. A specific search
+term (not necessary to be a part of original search) may
+be used as a browsing aid to the document.
+
+
+2.5    SECURITY
+
+Users may be prevented from accessing information via
+operating system permissions, and built-in access
+controls, including discrefionary. The product processes
+have been certified at system high in many installations,
+and some sponsors have applied for MLS certifications
+based upon the delivered product.
+
+
+2.6    DATA ARCHITECTUREI
+       PERFORMANCEI CONHGURATION
+
+Topic enables the logical division of a collection of
+documents into "partitions", which are document
+descripfions and indexing data about the arbitraryl
+intentional subset. Partition size, purpose and
+
+ characterisfics are under the application administrator's
+ control. The raw documents are not "owned" by the
+ Topic application. Topic will produce indicies which are
+ approximately 70% of the size of the native text size
+ (the TREC-2 index size was approximately 50%). This
+ includes fielded, word, and subject (rule evidence) level
+ indicies.
+
+ The partition data is platform-independent (i.e. the
+ documents and their associated partitions may be
+ moved/accessed from any Topic platform.
+
+ Searches may be performed on the served desktop, on a
+ host or both.
+
+ Normal performance on a personal computer is in the
+ thousands of document-rule nodes per second, up to
+ many tens of thousands of nodes per second on current
+ workstations. The search rule low level evidence is
+ contained in a sizelspeed-opfimized index (iQ~i~, which
+ is essential to rapid response on complex rules. This
+ index is automatically modified each fime topic evidence
+ is added, so the word positional information is searched
+ only on the first use of the term. The topics index
+ normalizes document size so that all search response
+ times are predictable. Partifions enable incremental
+ (ranked) results, guaranteeing few-second time-to-first-
+ result, regardless of the size of the collection. The
+ response characteristic which Topic opfimizes is the
+ time-to-first-meaningful-result. The rule evidence index
+ may be centralized or distributed, and when distributed, it
+ provides the ability to produce a ranked results list with
+ a minimum of network access.
+
+ Integration with third party components is available
+ from the end user interface, or shared libraries. The
+ program provides logical links between document-image,
+ document-document, document-annotation, document-
+ search request. Some links may be automatically
+ determined at indexing time (image, cross-reference).
+
+ The structured field values may be entered interactively,
+ or filled automatically from a lexical analyzer. The
+ program provides an enduser process interface between
+ scanning, OCR/ICR and indexing.
+
+
+ 3.     THE TREC EXPERIMENTS
+
+ 3.1    DATA PREP~ON
+
+ The TREC-2 texts data preparation processing was
+ performed on a Sun SPARC 10 (UNIX 4.1.3).
+ Cataloguing and indexing was performed at the rate of
+ approximately 100 Mbytes per hour. This process
+ included the automafic extraction of 10 fields from the
+ ASCII content. Partitions were set at 8000 documents
+ for all data. There were no processing errors.
+
+
+212
+
+No markup language (SGML) interpreter was used
+during data preparation, and the opfional aiphabefical
+word list (used only for display) and typographical error
+index (used almost exclusively for OCR'd data) were not
+employed. Special indicies such as correlated terms, and
+paragraph/sentence posifioning were not produced. As
+the fuzzy proximity operator was used in the tests, only
+a word position index was produced. No document was
+divided into logical or arbitrary sections for processing or
+search result enhancement, although that approach is
+used in virtually all non-newswire Verity installations.
+The purpose of logical division (a forerunner of the
+intelligence available in a standard markup language) is
+to create domaln-specific logical documents, and
+therefore to reduce the impact of larger, multi-subject
+documents on results (they would appear in search
+results simply because of their breadth of words).
+
+
+3.2    TOPIC CONSTRUCTION
+
+Verity personnel manually constructed the search rules
+from the subject area descriptions and the training data.
+No rule developer was identified or chosen as a subject
+matter expert, and for certain of the contributors, this
+was their initial interface with using Topic. [Search rule
+libraries are created by approximately 6% of Topic's user
+population and the remainder of Topic's users employ
+the topics developed by others]. On the average, the
+TREC-2 volunteers were considered novices on the
+Topic product, particularly the search rule development
+area. Volunteers were not encouraged to use specific
+features of the product, and in at least one case,
+inadequate communication produced potenfially
+inaccurate search expectations. As search rules were
+interacfively developed, the rule evidence was
+automatically indexed for repeated use of the rule. The
+twenty volunteers each produced between 3 and 8
+retrospective and routing queries. The range in time
+spent on individual query development, and result
+production was from fifteen minutes to eight hours, over
+a several week period. The average fime to produce the
+TREC-2 result, obtained from interviewing the
+volunteers, was approximately one hour.
+
+
+3.3    EXPERIMENT PERFORMANCE
+
+Typical response time performance on the searches was
+two seconds per 8000-document partition, or
+approximately two minutes to search the entire
+collection. A single term, indexed as rule evidence, was
+used to search the entire collection, and the 1.1 million
+document collection was searched in 21 seconds.
+
+For routing queries, the score threshold was set to zero;
+any document containing evidence entered the routing
+result list.
+
+
+                                          213
+
+3.4    ANALYSIS OF OFFICIAL RESULTS
+
+The post hoc analysis of Topic's TREC-2 results
+generally found that the Topic system performed well.
+When compared with other manual systems, the scores
+are amongst the best. I the few cases where Topic
+appeared to fail, we have generally been able to identify
+easily correctable deficiencies, that, had they been noficed
+during the experiment proper, would have resulted in
+superior performance by Topic in TREC-2.
+
+Based on our analysis, we believe that the prospects for
+TREC-3 look very bright.
+
+Our analysis of selected results from our TREC-2
+submissions focuses mainly on the "failure cases" since
+these are most likely to give us insights in how to
+improve Topics (and users) performance in future TREC
+experiments. This also allows us to investigate whether
+there are any fundamental issues with using Topic to
+model the information need statements used in ThEC.
+
+We analyzed two routing and three ad-hoc topics in
+detail. Our summary follows.
+
+The following general observations applied to all
+searches:
+
+-Adhoc searches were submitted against all three disks,
+which produced poorer quality results generally, as
+documents from disc three appeared in some search
+results.1
+
+-Field value evidence was not used, and in some
+domains/subject areas, domain knowledge about the
+sources of information would favor (rank higher) sources
+with the appropriate use of terminology. (e.g. business
+sources about financial performance, or foreign datelines
+have higher likelihood of describing foreign prominent
+persons/activity, as in topic's 66 or 121)
+
+-The queries which used attempted to use nomenclature
+with hyphens (e.g. M- 1) failed to return an exact match
+as the hyphen was not included as an indexed character.
+
+-The fuzzy proximity (near) operator was undocumented,
+only one volunteer used it and other users expected
+sentence / paragraph proximity in their searches. The
+index did not contain sentence / paragraph positional
+data, and all uses of sentence or paragraph operators
+produced erroneous results because the search arbitrarily
+assigned sentence and paragraph boundaries.
+
+
+1Reprocessing the adhoc searches against only disks I and
+*2 produced a numberic result improvement of 0-70
+percent, with a *few changes from under the median to over
+the median.
+
+3.4.1 ROUTING TOPICS
+
+Overall, Topic's performance on the routing topics was
+rather good. We count that 21 of the 50 results were at
+or above median, and three were actually the bet score.
+Most of the other results were on the low side of the
+median. The relevant comparison to the median is
+summarized in Figure 2. The exceptions were topics 66,
+67, 69, 74, 90 and 91, for which the Topic search used
+could be said to have failed. Several of these were
+straightforwardly explained. For example, in the case of
+topic 67 the wrong results were submitted. Our
+independent scoring of the correct results set would give
+the Topic search below median score. For topic 69 there
+was in fact only one relevant document, but, at least in
+our reading of the definition, this seems to be a false
+positive. In the case of topics 90 and 91 the Topic
+search definitions were, in our opinion, over-constrained.
+Further, in the case of topic 91 an index creation
+decision prevented a quite reasonable Topic definifion
+from performing as well as it could.2 The other two
+topics are of more interest.
+
+No clear pattern emerged between the type of search
+although, in the routing augmentation category, the
+Topic performance was well above the median on 20 of
+33 searches.
+
+
+3.4.1.1       ROUTING TOPIC 66
+
+A relevant document for this topic is one that identifies a
+type of natural language processing technology that is
+being developed or marketed in the United States. The
+original definition of the Topic is basically a
+conjunction (AND) of a natural language concept and a
+products/technology concept.
+
+Performance was very poor, viz:
+       Relevant = 86
+       Rel_ret = 1
+       R-Precision = 0.0000
+
+Inspection of the Topic revealed that one of the
+conjuncts (the products/technology concept) had a weight
+of 0.05- thus effectively limiting the range of scores
+that Topic could produce to be in an extremely narrow
+range.
+
+
+2This topic is about the acquisition of advanced weapons
+by the U.S. Army. One of the weapons systems mentioned
+in the information need statement is the M-1 tank. This was
+included in the Topic definition as the word "M-l"; but
+since the "-" symbol was interpreted as with like space at
+database build time, there was no possibility of retrieving
+documents based on "M- I" as a word.
+
+ We changed the 0.05 to 0.5 and produced the following:
+        Relevant = 86
+        Rel_ret=44
+        R-Precision = 0.2442
+ which is a median result.
+
+ We concluded that for Topics to be effective we need to
+ ensure a sufficient range of scores to give us the
+ discrimination needed for the TREC scoring algorithm.
+
+
+ 3.4.1.2      ROUTING TOPIC 74
+
+ A relevant document for this topic is one that cites an
+ instance in which the U.S. Government propounds two
+ conflicting or opposing policies. The routing task is
+ complicated because this conflict may not necessarily be
+ mentioned in the same document.
+
+ In our opinion, this is a case where no amount of
+ sophistication in Topic construction would enable Topic
+ to do very Well. The information need is simply outside
+ the scope of a retrieval system that uses non-NLP
+ techniques. The best one could hope for is to model a
+ document that talks about the meta-idea of conflict (i.e.,
+ find documents that talk about the US having conflicting
+ policies, rather than documents that reference the specific
+ conflicting policy). This is, in fact, what was done in
+ the original submission. The results were:
+        Relevant = 323
+        Rel~ret = 18
+        R-Precision = 0.0464
+ which is, of course, rather poor.
+
+ The original statement of need actually mentions three
+ examples of conflicting policies so, as an experiment,
+ we ran the following query:
+        * <Many><Stem>
+              /wordtext = "tobacco"
+        * <Many><Stem>
+              /wordtext = "pesticide"
+        * <Many><Phrase>
+        * <Many><Stem>
+              /wordtext = "infant"
+        * <Many><Stem>
+              Iwordtext = "formula"
+ that is, just an ACCRUE of "tobacco   pesticide" and
+ "infant formula" (which the modification that the
+ <Stem> and <Many> operators produce.
+
+ This gave the following results:
+        Relevant = 323
+        Rel_ret=107
+        R-Precision = 0.2660
+ which puts the score slightly above median. We expect
+ that most TREC-2 participant sites probably did just
+ this, and those that did much better than median found
+ some other specific examples of a conflicting policy and
+ modeled these in their routing queries.
+
+
+214
+
+                               Figure 2
+
+                 TOPIC2 Relevant vs. Median - Routing Topics
+
+U
+
+- I~III~~[     I
+
+I -u - -- E E -- - EIII~I
+     E
+
+- E   *       U  U
+
+51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 60 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 % 97 98 99 100
+
+
+                              215
+
+3.4.1.3       TOPIC 67
+
+Our analysis located weak topic formulation examples,
+such as query 67, illustrated in Figure 4. In this query, a
+set of optional, auxiliary evidence was "ANDed" with a
+small set of required evidence. The weight, or strength
+assigned to the auxiliary evidence was .05, which means
+that if all auxiliary terms were located, the highest
+possible score for a document would be .05, severely
+limiting the range of scores, and thus the occurrence of
+random false hits in the top 1000.
+
+To make a cosmetic improvement, only the value of the
+auxiliary evidence node was changed, to a value of .5, as
+shown in Figure 5. This change alone brought the Topic
+relevant document count to the median.
+
+
+3.4.2 ADHOCTOPICS
+
+Overall, Verity's performance on the ad hoc topics was
+adequate. Performance was poorer than on the routing
+topics, but this is to be expected since there was less
+time available to build the Topics and no ground truth
+against which to test the Topic trees. The relevant
+comparison to the median is summarized in Figure 3.
+We count that 13 of the 50 results are at or above
+median. In contrast thought, there were only two
+outright failures here, topics 124 and 139. We did not
+look at topic 139, but topic 124 involves searching for
+documents that discuss innovative approaches to cancer
+therapy that do not involve any of the traditional
+treatments. This is a very hard topic because nearly all
+mentions of the innovative treatments are in the context
+of discussion of traditional therapies The approach
+adopted by Verity of simply looking for documents that
+talk about innovative treatment produces a large number
+of false hits (giving poor precision), and since there is an
+artificial cut-off at 1000 documents in the TREC
+experiments, this model also produces poor recall. We
+do not see an obvious solution to this.
+
+We picked three ad hoc topics to analyze in detail.
+
+
+3.4.2.1       AD HOC TOPIC 109
+
+A relevant document for this topic simply needs to
+mention one of a list of six companies given in the
+information need statement. A simple Topic that is the
+disjunction (OR) of the company names should be all
+that is needed here. However, the official result is:
+       Relevant =742
+       Rel_ret=192
+       R-Precision = 0.2588
+which is well below median. furthermore, given the
+simplicity of the topic, this is surprisingly low recall.
+
+ Examination of the official Topic showed that company
+ acronyms we used for three of the companies (i.e., 3M,
+ OTC, ISI) were given equal weight to the fully spelled
+ out company names. A cursory review of the original
+ hit list showed that ISI was a poor choice since it has
+ multiple interpretations. Less important, but for the
+ same reason, OTC is a poor choice in the Wall Street
+ Journal corpus since it can mean "over the counter", and
+ in the DOE corpus 3M is part of a designator for a
+ particular particle accelerator and is also used as an
+ abbreviation for "three meters".
+
+ We modified the Topic by eliminating the ISI acronym
+ and by giving OTC and 3M reduced weights. This
+ produced the following:
+        Relevant = 742
+        Rel_ret=480
+        R-Precision = 0.5512
+ which would have been the best score.
+
+ An interesting note here is that original and modified
+ Topics had perfect precision and recall for the first 100
+ documents. Our conclusion is that this indeed was an
+ easy topic - the false hits produced by ISI were what
+ impacted Topics score.
+
+
+ 3.4.2.2      AD HOC TOPIC 121
+
+ A relevant document for this document had to mention
+ the death of a prominent U.S. citizen due to an identified
+ form of cancer.
+
+ This is an interesting topic consisting of two major
+ components - the idea of a prominent citizen, and the
+ idea of a specific cancer.
+
+ In the official Topic, prominence was modeled using a
+ number of words that indicate prominence (e.g.,
+ "prominent", "celebrity") together with words that
+ indicate prominent roles (e.g., "Nobel Prize", "actor",
+ "actress"). Cancer death was modeled by various
+ combinations of death words (e.g., "death", "died") and
+ cancer words (e.g., "cancer", "tumor", "leukemia"). The
+ official score was:
+        Relevant = 55
+        Rel_ret =27
+        R-Precision =0.1455
+ which, while not good in absolute terms, was well
+ above the median.
+
+ We observed two problems with this definition. First, it
+ uses generic cancer terms rather than the specific cancer
+ types required by the information need statement. So,
+ we made all the cancer terms specific by using a list of
+ common cancers (e.g., lung cancer, breast cancer,
+ stomach cancer, etc.). We made no attempt to make
+
+
+216
+
+                                Figure 3
+
+                  TOPIC2 Relevant vs. Median - Adhoc Topics
+
+                               --I-
+
+    ~IIE  -
+
+          - lIEU
+
+Ol 02 03 04 05 06 07 Os 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+
+
+                                                217
+
+                              Figure 4
+                    Example of Poorly Specified Search
+                          Routing Query #66
+
+                          1.00 Required Evidence
+
+
+Topic
+     and
+
+                          .05 Secondary-
+                          Evidence Accrue
+
+½
+ifi
+
+Score = 10 (lowest =0)
+
+`1Natural Language"
+
+
+Secondary
+Evidence
+
+                              Figure 5
+                 Poorly Specified Search - Cosmetic Repair
+                          Routing Query #66
+
+                                                   "Natural Language"
+
+                          1.00 Required Evidence
+
+Topic
+     and
+
+                        .50 Secondary-
+                        Evidence Accrue
+
+
+      Score =44 (median =44)
+
+½
+ifi
+
+Secondary
+Evidence
+
+                                                   "Natural Language"
+
+                               218
+
+this list exhaustive. This produced the following
+results:
+       Relevant = 55
+       Rel_ret=17
+       R-Precision = 0.2182
+Thus we reduced the recall, but increased the precision.
+Presumably by adding more specific cancers (or at least
+the ones that statistically are most common) we could
+have improved the recall here.
+
+The second problem is more severe though. It appears
+impossible to build any kind of model that would allow
+us to determine, with any kind of confidence, that the
+person who has died is a US citizen. In our revised
+results list we find many prominent persons who died of
+a named cancer but who are not US citizens (e.g., the
+Venezuelan Ambassador).
+
+In addition, the notion of prominence is also hard to
+capture. Of course, we might argue that anyone who's
+obituary is on the wire service is prominent by
+definition! Be that as it may, we observed a number of
+documents that we did not retrieve because we had not
+included the specific prominent role indicator in our
+Topic. Thus we added the following roles words -
+t1author't, "poettt, "writer", "artist", "painter" - to the
+Topic and got the following results:
+       Relevant = 55
+       Rel_ret=33
+       R-Precision - .0909
+Thus we improved the recall but at the expense of the
+precision again. Nofice that we still have not included
+any business or government roles, which presumably
+would help retrieve the relevant documents in the WSJ
+corpus.
+
+Our conclusion, is that this is a significant challenge for
+Topic, and all other system. The citizenship question
+often cannot be resolved by reference to the text alone,
+and we see no alternative but accept the false hits.
+Prominence is also difficult, but could conceivably be
+approached by an extensive list of prominence and role.
+words. The specific cancer seems tractable since there
+are only a finite number of cancers and just a small set
+of those are common.
+
+
+3.4.2.3      AD HOC TOPIC 133
+
+A relevant document for this topic must describe some
+design feature of the Hubble Space Telescope, but must
+not report of the launch activity itself nor the Hubble
+Constant or Edwin Hubble.
+
+The official Topic was essentially a simple structure of
+the form: Hubble Space Telescope and not launch and
+not Edwin Hubble. This gave the following results:
+       Relevant = 80
+       Rel_ret = 29
+       R-Precision = 0.3625
+
+
+                                         219
+
+which is surprisingly poor given the apparent simplicity
+of the topic.
+
+Analysis of the behavior of the negation function in
+Topic shows that it is too restrictive, and so we
+eliminated the negated concepts leaving just the phrase
+"Hubble Space Telescope". Using this as the query
+gave:
+       Relevant = 80
+       Rel_ret=78
+       R-Precision = 0.6000
+which would have been above median and close to best.
+
+Adding as disjuncts (OR) the words "Hubble" and "HST"
+gave:
+       Relevant = 80
+       Rel_ret=79
+       R-Precision = 0.6000
+that is we retrieved one extra relevant document with no
+decrease in precision.
+
+We conclude that although the information need
+statement is careful to spell out the cases where the
+document will be non-relevant, the TREC corpus has
+few documents where these conditions apply, so that a
+simple query performs very well. This is presumably
+the approach most sites took.
+
+
+4.     FINAL OBSERVATIONS FROM
+       TREC-2
+
+The TREC-2 topic descriptions, particularly the ad hoc
+topics, exceed the level of domain knowledge available
+to most users of heterogeneous document collections.
+
+Most Topic (content-based) search operafional users are
+driven by time pressures to locate/summarize the most
+relevant details in the fewest possible documents. The
+exhaustive search result analysis implied by examining
+hundreds of relevant documents will not be addressed in
+most user environments; our experience is that ten to
+thirty documents is the level of search result analysis
+performed by a user (unless significant duplicafion of
+material occurs earlier, which would reduce the number
+of documents actually analyzed). Ergonomically, high
+precision in the first (10,20...50) documents is more
+likely to keep users attracted than high recall at much
+larger counts.
+
+Although we have yet to perform any analysis of
+duplicate information on the TREC2 results, our belief
+is that duplicate data is plentiful in the TREC2 "relevant
+lists", and that the reading of duplicate data by the
+human user will cause the result analysis to be
+(prematurely) terminated.
+
+We are certain that, unless summarization is performed,
+the relevant search results on most topics are too
+numerous to warrant user attention. It would seem
+
+reasonable to examine, at least for selected topics,
+whether the first ten/best ten documents address the
+domain well from a domain "precision/recall"
+perspective. To the extent that the domain is well served
+in a few representative documents, the coverage in the
+representative documents may be a "better" answer for
+the user than the numerical count of the number relevant
+in the first 1000. We recommend adding a measurement
+of the coverage of the domain as the first ten/thirty/n
+results documents are examined.
+
+
+                                           220
+
+Appendix A
+COMPANY AND PRODUCT SUMMARY
+
+Topic is a commercial off the shelf software product line
+available from Verity, Inc. Topic search technology is a
+commercial adaptafion of ideas extracted from the
+research of Tong, McCune et. al., in Rule-Based
+Information Retrieval, which was sponsored by the U.S.
+Intelligence Community. Topic supports cataloguing,
+indexing and retrospective search of fixed collections,
+automafic search of newly indexed documents according
+to (user) predefined search rules (profiles), and
+disseminafion/notification based upon satisfied search
+rules. Documents may be batched for indexing/profihng,
+or processed automatically as they arrive.
+
+The Verity, Inc. market presence in content-based text
+search/retrieval is described in the Delphi, Inc. 1992
+Industry Summary. The Verity Topic product line is
+considered to have in excess of a ten percent share of the
+market in commercial-off-the-shelf content-based
+search/retrieval products for personal computer to
+minicomputer environments.
+
+Verity was founded in April 1988. The Topic product
+was first licensed and installed by the U.S. Air Force in
+June 1987. Verity currently has over 650 installations
+and some 30,000 users. Many thousands of persons have
+received training from Verity on the Topic products.
+Approximately one-third of Verity's installed base uses
+an event-driven or batch automatic-search-notification
+function.
+Many organizations use the routing mechanism for users
+who are unable to compose the (appropriate) queries, but
+require the expert's result quality.
+
+The Topic product line supports nearly twenty varieties
+of the UNIX operating environment, VMS, 0S2, DOS
+and MacIntosh. The product operates on data stored in
+the filesystem or in any SQL-based data base
+management system. The product as shipped supports
+over twenty formats of native data (markup languages),
+and provides the ability to insert local/third party markup
+language interpreters as required. A document in Topic is
+logical, and may be a file, subfile or any logical
+decomposition of a physical native document.
+
+The Topic end user (search) product is available in
+MSWindows, Presentation Manager, X-Windows-Motif,
+Macintosh, and character (keyboard/terminal) interface
+styles. There is a 40L-like command interpreter
+language for rapid applicafion development and remote
+command line interactive index/search. There is an
+Application Program Interface (C- library) to all Topic
+funcfions for embedded applications.
+
+
+                                       221
+

@@ -1,0 +1,737 @@
+SIMPLE  =                    T / Fits standard
+BITPIX  =                   16 / Bits per pixel
+NAXIS   =                    0 / Number of axes
+EXTEND  =                    T / File may contain extensions
+ORIGIN  = 'NOAO-IRAF FITS Image Kernel July 2003' / FITS file originator
+DATE    = '2007-03-16T18:30:18' / Date FITS file was generated
+IRAF-TLM= '11:30:18 (16/03/2007)' / Time of last modification
+NEXTEND =                    8 / Number of extensions
+FILENAME= 'obj027  '           / Original host filename
+OBJECT  = 'PG 1121+145'        / Observation title
+OBSTYPE = 'object  '           / Observation type
+EXPTIME =               60.000 / Exposure time (sec)
+DARKTIME=               61.528 / Dark time (sec)
+PREFLASH=             0.000000 / Preflash time (sec)
+RADECSYS= 'FK5     '           / Default coordinate system
+RADECEQ =                2000. / Default equinox
+RA      = '11:24:34.43'        / RA of observation (hr)
+DEC     = '14:18:18.82'        / DEC of observation (deg)
+
+TIMESYS = 'UTC approximate'    / Time system
+DATE-OBS= '2004-05-21T04:14:17.8' / Date of observation start (UTC approximate)
+TIME-OBS= '04:14:17.8'         / Time of observation start
+MJD-OBS =       53146.17659491 / MJD of observation start
+MJDHDR  =       53146.17657407 / MJD of header creation
+LSTHDR  = '12:44:29          ' / LST of header creation
+
+OBSERVAT= 'KPNO    '           / Observatory
+TELESCOP= 'KPNO 4.0 meter telescope' / Telescope
+TELRADEC= 'FK5     '           / Telescope coordinate system
+TELEQUIN=               1950.0 / Equinox of tel coords
+TELRA   = '11:21:58.00       ' / RA of telescope (hr)
+TELDEC  = '14:34:48.0        ' / DEC of telescope (deg)
+ZD      = '25.3672           ' / Zenith distance
+AIRMASS =                1.106 / Airmass
+TELFOCUS=                -9457 / Telescope focus
+CORRCTOR= 'Mayall Corrector'   / Corrector Identification
+ADC     = 'Mayall ADC'         / ADC Identification
+ADCSTAT = 'off               ' / ADC tracking state null-track-preset
+ADCPAN1 =  8.0000000000000E-02 / ADC 1 prism angle
+ADCPAN2 =  2.0000000000000E-02 / ADC 2 prism angle
+
+DETECTOR= 'CCDMosaThin1'       / Detector
+DETSIZE = '[1:8192,1:8192]'    / Detector size for DETSEC
+NCCDS   =                    8 / Number of CCDs
+NAMPS   =                    8 / Number of Amplifiers
+PIXSIZE1=                  15. / Pixel size for axis 1 (microns)
+PIXSIZE2=                  15. / Pixel size for axis 2 (microns)
+PIXSCAL1=                0.258 / Pixel scale for axis 1 (arcsec/pixel)
+PIXSCAL2=                0.258 / Pixel scale for axis 2 (arcsec/pixel)
+RAPANGL =                   0. / Position angle of RA axis (deg)
+DECPANGL=                  90. / Position angle of DEC axis (deg)
+FILPOS  =                    5 / Filter position
+FILTER  = 'I Nearly-Mould k1005' / Filter name(s)
+SHUTSTAT= 'guide             ' / Shutter status
+TV1FOC  = -1.3070000000000E+00 / North TV Camera focus position
+TV2FOC  = -2.0000000000000E+00 / South Camera focus position
+ENVTEM  =  1.6900000000000E+01 / Ambient temperature (C)
+DEWAR   = 'CCDMosaThin1 Dewar' / Dewar identification
+DEWTEM  = -1.7300000000000E+02 / Dewar temperature (C)
+DEWTEM2 = -5.1000000000000E+00 / Fill Neck temperature (C)
+DEWTEM3 = 'N2   0.0'
+CCDTEM  = -9.9199997000000E+01 / CCD temperature  (C)
+CCDTEM2 = 'CCD   0.0'
+
+CONTROLR= 'Mosaic Arcon'       / Controller identification
+CONSWV  = '2.000  13Feb96     (add mode and group to hdrs)' / Controller softwar
+AMPINTEG=                 3600 / (ns) Double Correlated Sample time
+READTIME=                14400 / (ns) unbinned pixel read time
+ARCONWD = 'Obs Thu May 20 13:05:54 2004' / Date waveforms last compiled
+
+OBSERVER= 'Giavalisco, Idzi'   / Observer(s)
+PROPOSER= '<unknown>'          / Proposer(s)
+PROPOSAL= '<unknown>'          / Proposal title
+PROPID  = '2004A-0403'         / Proposal identification
+OBSID   = 'kp4m.20040521T041417' / Observation ID
+
+IMAGESWV= 'mosdca (Jun99), mosaicsrc.tcl (Nov02)' / Image creation software vers
+KWDICT  = 'MosaicV1.dic (Sep97)' / Keyword dictionary
+
+OTFDIR  = 'mscdb$noao/kpno/4meter/caldir/' / OTF calibration directory
+XTALKFIL= 'mscdb$noao/CCDMosaThin1/XTALK/xtalk0303' / Crosstalk file
+
+CHECKSUM= '0Baa0AVW0Aaa0AUW'    /  ASCII 1's complement checksum
+DATASUM = '0         '          /  checksum of data records
+CHECKVER= 'COMPLEMENT'          /  FITS checksum version
+RECNO   =               169722  /  NOAO archive sequence number
+ARCONGI =                    2 / Gain selection (index into Gain Table)
+UPARM   = 'MarioCal$/CCDMosaThin1_uparm_030915'
+PIPEDATA= 'MarioCal$/PipeData_M1_50000'
+CALOPS  = 'XOTZFWSBPAG'
+PHOTFILT= 'I       '
+PHOTCOEF= 'r 0. 0. 1. 0.'
+MAGZERO = '25.938  '
+END
+-----------------------------------------------------------------------
+
+XTENSION= 'IMAGE   '           / Image extension
+BITPIX  =                   16 / Bits per pixel
+NAXIS   =                    2 / Number of axes
+NAXIS1  =                  100 / Axis length
+NAXIS2  =                  100 / Axis length
+PCOUNT  =                    0 / No 'random' parameters
+GCOUNT  =                    1 / Only one group
+BSCALE  =           1.000000E0 / REAL = TAPE*BSCALE + BZERO
+BZERO   =           3.276800E4 /
+ORIGIN  = 'NOAO-IRAF FITS Image Kernel July 2003' / FITS file originator
+EXTNAME = 'im1     '           / Extension name
+EXTVER  =                    1 / Extension version
+INHERIT =                    F / Inherits global header
+DATE    = '2007-03-16T18:30:54' / Date FITS file was generated
+IRAF-TLM= '11:30:54 (16/03/2007)' / Time of last modification
+OBJECT  = 'PG 1121+145'        / Name of the object observed
+NEXTEND =                    8 / Number of extensions
+FILENAME= 'obj027  '           / Original host filename
+OBSTYPE = 'object  '           / Observation type
+PREFLASH=             0.000000 / Preflash time (sec)
+RADECSYS= 'FK5     '           / Default coordinate system
+RADECEQ =                2000. / Default equinox
+RA      = '11:24:34.43'        / RA of observation (hr)
+DEC     = '14:18:18.82'        / DEC of observation (deg)
+
+TIMESYS = 'UTC approximate'    / Time system
+DATE-OBS= '2004-05-21T04:14:17.8' / Date of observation start (UTC approximate)
+TIME-OBS= '04:14:17.8'         / Time of observation start
+MJD-OBS =       53146.17659491 / MJD of observation start
+MJDHDR  =       53146.17657407 / MJD of header creation
+LSTHDR  = '12:44:29          ' / LST of header creation
+
+OBSERVAT= 'KPNO    '           / Observatory
+TELESCOP= 'KPNO 4.0 meter telescope' / Telescope
+TELRADEC= 'FK5     '           / Telescope coordinate system
+TELEQUIN=               1950.0 / Equinox of tel coords
+TELRA   = '11:21:58.00       ' / RA of telescope (hr)
+TELDEC  = '14:34:48.0        ' / DEC of telescope (deg)
+ZD      = '25.3672           ' / Zenith distance
+AIRMASS =                1.106 / Airmass
+TELFOCUS=                -9457 / Telescope focus
+CORRCTOR= 'Mayall Corrector'   / Corrector Identification
+ADC     = 'Mayall ADC'         / ADC Identification
+ADCSTAT = 'off               ' / ADC tracking state null-track-preset
+ADCPAN1 =  8.0000000000000E-02 / ADC 1 prism angle
+ADCPAN2 =  2.0000000000000E-02 / ADC 2 prism angle
+
+DETECTOR= 'CCDMosaThin1'       / Detector
+DETSIZE = '[1:8192,1:8192]'    / Detector size for DETSEC
+NCCDS   =                    8 / Number of CCDs
+NAMPS   =                    8 / Number of Amplifiers
+PIXSIZE1=                  15. / Pixel size for axis 1 (microns)
+PIXSIZE2=                  15. / Pixel size for axis 2 (microns)
+PIXSCAL1=                0.258 / Pixel scale for axis 1 (arcsec/pixel)
+PIXSCAL2=                0.258 / Pixel scale for axis 2 (arcsec/pixel)
+RAPANGL =                   0. / Position angle of RA axis (deg)
+DECPANGL=                  90. / Position angle of DEC axis (deg)
+FILPOS  =                    5 / Filter position
+FILTER  = 'I Nearly-Mould k1005' / Filter name(s)
+SHUTSTAT= 'guide             ' / Shutter status
+TV1FOC  = -1.3070000000000E+00 / North TV Camera focus position
+TV2FOC  = -2.0000000000000E+00 / South Camera focus position
+ENVTEM  =  1.6900000000000E+01 / Ambient temperature (C)
+DEWAR   = 'CCDMosaThin1 Dewar' / Dewar identification
+DEWTEM  = -1.7300000000000E+02 / Dewar temperature (C)
+DEWTEM2 = -5.1000000000000E+00 / Fill Neck temperature (C)
+DEWTEM3 = 'N2   0.0'
+CCDTEM  = -9.9199997000000E+01 / CCD temperature  (C)
+CCDTEM2 = 'CCD   0.0'
+
+CONTROLR= 'Mosaic Arcon'       / Controller identification
+CONSWV  = '2.000  13Feb96     (add mode and group to hdrs)' / Controller softwar
+AMPINTEG=                 3600 / (ns) Double Correlated Sample time
+READTIME=                14400 / (ns) unbinned pixel read time
+ARCONWD = 'Obs Thu May 20 13:05:54 2004' / Date waveforms last compiled
+
+OBSERVER= 'Giavalisco, Idzi'   / Observer(s)
+PROPOSER= '<unknown>'          / Proposer(s)
+PROPOSAL= '<unknown>'          / Proposal title
+PROPID  = '2004A-0403'         / Proposal identification
+OBSID   = 'kp4m.20040521T041417' / Observation ID
+
+IMAGESWV= 'mosdca (Jun99), mosaicsrc.tcl (Nov02)' / Image creation software vers
+KWDICT  = 'MosaicV1.dic (Sep97)' / Keyword dictionary
+
+OTFDIR  = 'mscdb$noao/kpno/4meter/caldir/' / OTF calibration directory
+XTALKFIL= 'mscdb$noao/CCDMosaThin1/XTALK/xtalk0303' / Crosstalk file
+RECNO   =               169722  /  NOAO archive sequence number
+ARCONGI =                    2 / Gain selection (index into Gain Table)
+UPARM   = 'MarioCal$/CCDMosaThin1_uparm_030915'
+PIPEDATA= 'MarioCal$/PipeData_M1_50000'
+CALOPS  = 'XOTZFWSBPAG'
+PHOTFILT= 'I       '
+PHOTCOEF= 'r 0. 0. 1. 0.'
+MAGZERO = '25.938  '
+IMAGEID =                    1 / Image identification
+EXPTIME =               60.000 / Exposure time in secs
+DARKTIME=               61.528 / Total elapsed time in secs
+
+CCDNAME = 'SITe #7298FBR06-01 (NOAO 14)' / CCD name
+AMPNAME = 'SITe #7298FBR06-01 (NOAO 14), lower right (Amp12)' / Amplifier name
+GAIN    =                  3.1 / gain expected for amp 112 (e-/ADU)
+RDNOISE =                  8.2 / read noise expected for amp 112 (e-)
+SATURATE=                36000 / Maximum good data value (ADU)
+CONHWV  = 'ACEB001_AMP12'      / Controller hardware version
+ARCONG  =                  3.1 / gain expected for amp 112 (e-/ADU)
+BPM     = 'mscdb$noao/CCDMosaThin1/CAL0208/bpm1_0208' / Bad pixel mask
+CCDSIZE = '[1:2048,1:4096]'    / CCD size
+CCDSUM  = '1 1     '           / CCD pixel summing
+CCDSEC  = '[1:2048,1:4096]'    / CCD section
+AMPSEC  = '[2072:25,1:4096]'   / Amplifier section
+DATASEC = '[65:2112,1:4096]'   / Data section
+DETSEC  = '[1:2048,1:4096]'    / Detector section
+BIASSEC = '[1:50,1:4096]'      / Bias section
+TRIMSEC = '[65:2112,1:4096]'   / Trim section
+
+ATM1_1  =                  -1. / CCD to amplifier transformation
+ATM2_2  =                   1. / CCD to amplifier transformation
+ATV1    =               2073.0 / CCD to amplifier transformation
+ATV2    =                   0. / CCD to amplifier transformation
+LTM1_1  =                  1.0 / CCD to image transformation
+LTM2_2  =                  1.0 / CCD to image transformation
+LTV1    =                 64.0 / CCD to image transformation
+DTM1_1  =                   1. / CCD to detector transformation
+DTM2_2  =                   1. / CCD to detector transformation
+DTV1    =                   0. / CCD to detector transformation
+DTV2    =                   0. / CCD to detector transformation
+
+WCSASTRM= 'kp4m.20000930T043226 (TR37 I k1005) by B. Jannuzi 2003-04-09' / WCS S
+EQUINOX =                2000. / Equinox of WCS
+WCSDIM  =                    2 / WCS dimensionality
+CTYPE1  = 'RA---TNX'           / Coordinate type
+CTYPE2  = 'DEC--TNX'           / Coordinate type
+CRVAL1  =            171.14346 / Coordinate reference value
+CRVAL2  =            14.305228 / Coordinate reference value
+CRPIX1  =            4259.2755 / Coordinate reference pixel
+CRPIX2  =            4111.5374 / Coordinate reference pixel
+CD1_1   =        5.6016381e-07 / Coordinate matrix
+CD2_1   =       -7.1338759e-05 / Coordinate matrix
+CD1_2   =       -7.1731812e-05 / Coordinate matrix
+CD2_2   =        4.0516846e-07 / Coordinate matrix
+WAT0_001= 'system=image'       / Coordinate system
+WAT1_001= 'wtype=tnx axtype=ra lngcor = "3. 4. 4. 2. -0.001234955129198978 0.29'
+WAT1_002= '36534689209923 0.1515185114090968 0.2992081169534626 -0.002078518317'
+WAT1_003= '325942 0.01328759857633364 -0.001640217920207484 -0.1083010128769506'
+WAT1_004= ' 0.008450394761243426 0.005402596378862547 0.0024478616648235 -0.008'
+WAT1_005= '895625117957941 -0.1256544678046397 0.01366484129014146 "'
+WAT2_001= 'wtype=tnx axtype=dec latcor = "3. 4. 4. 2. -0.001234955129198978 0.2'
+WAT2_002= '936534689209923 0.1515185114090968 0.2992081169534626 -0.00317293696'
+WAT2_003= '3080974 0.005855558934025707 -0.002238246158703704 0.004073981266816'
+WAT2_004= '218 0.01726193960226118 0.01262784647654248 -0.106043191039227 0.010'
+WAT2_005= '6992791444327 -0.03451588454728726 -0.1252704154573497 "'
+
+CHECKSUM= '<unknown>'          / Header checksum
+DATASUM = '<unknown>'          / Data checksum
+CHECKVER= '<unknown>'          / Checksum version
+ZERO    = 'MarioCal$/mdson-kp4m20040523T122233Z-ccd1.fits'
+FLAT    = 'MarioCal$/mdson-I-kp4m20040523T002306F-ccd1.fits'
+END
+-----------------------------------------------------------------------
+
+XTENSION= 'IMAGE   '           / Image extension
+BITPIX  =                   16 / Bits per pixel
+NAXIS   =                    2 / Number of axes
+NAXIS1  =                  100 / Axis length
+NAXIS2  =                  100 / Axis length
+PCOUNT  =                    0 / No 'random' parameters
+GCOUNT  =                    1 / Only one group
+BSCALE  =           1.000000E0 / REAL = TAPE*BSCALE + BZERO
+BZERO   =           3.276800E4 /
+ORIGIN  = 'NOAO-IRAF FITS Image Kernel July 2003' / FITS file originator
+EXTNAME = 'im2     '           / Extension name
+EXTVER  =                    2 / Extension version
+INHERIT =                    F / Inherits global header
+DATE    = '2007-03-16T18:31:04' / Date FITS file was generated
+IRAF-TLM= '11:31:04 (16/03/2007)' / Time of last modification
+OBJECT  = 'PG 1121+145'        / Name of the object observed
+NEXTEND =                    8 / Number of extensions
+FILENAME= 'obj027  '           / Original host filename
+RADECSYS= 'FK5     '           / Default coordinate system
+
+TIMESYS = 'UTC approximate'    / Time system
+MJDHDR  =       53146.17657407 / MJD of header creation
+
+OBSERVAT= 'KPNO    '           / Observatory
+TELESCOP= 'KPNO 4.0 meter telescope' / Telescope
+TELRADEC= 'FK5     '           / Telescope coordinate system
+TELEQUIN=               1950.0 / Equinox of tel coords
+TELRA   = '11:21:58.00       ' / RA of telescope (hr)
+TELDEC  = '14:34:48.0        ' / DEC of telescope (deg)
+ZD      = '25.3672           ' / Zenith distance
+AIRMASS =                1.106 / Airmass
+TELFOCUS=                -9457 / Telescope focus
+CORRCTOR= 'Mayall Corrector'   / Corrector Identification
+ADC     = 'Mayall ADC'         / ADC Identification
+ADCSTAT = 'off               ' / ADC tracking state null-track-preset
+ADCPAN1 =  8.0000000000000E-02 / ADC 1 prism angle
+ADCPAN2 =  2.0000000000000E-02 / ADC 2 prism angle
+
+DETECTOR= 'CCDMosaThin1'       / Detector
+DETSIZE = '[1:8192,1:8192]'    / Detector size for DETSEC
+NCCDS   =                    8 / Number of CCDs
+NAMPS   =                    8 / Number of Amplifiers
+PIXSIZE1=                  15. / Pixel size for axis 1 (microns)
+PIXSIZE2=                  15. / Pixel size for axis 2 (microns)
+PIXSCAL1=                0.258 / Pixel scale for axis 1 (arcsec/pixel)
+PIXSCAL2=                0.258 / Pixel scale for axis 2 (arcsec/pixel)
+RAPANGL =                   0. / Position angle of RA axis (deg)
+DECPANGL=                  90. / Position angle of DEC axis (deg)
+FILPOS  =                    5 / Filter position
+SHUTSTAT= 'guide             ' / Shutter status
+TV1FOC  = -1.3070000000000E+00 / North TV Camera focus position
+TV2FOC  = -2.0000000000000E+00 / South Camera focus position
+ENVTEM  =  1.6900000000000E+01 / Ambient temperature (C)
+DEWAR   = 'CCDMosaThin1 Dewar' / Dewar identification
+DEWTEM  = -1.7300000000000E+02 / Dewar temperature (C)
+DEWTEM2 = -5.1000000000000E+00 / Fill Neck temperature (C)
+DEWTEM3 = 'N2   0.0'
+CCDTEM  = -9.9199997000000E+01 / CCD temperature  (C)
+CCDTEM2 = 'CCD   0.0'
+CONSWV  = '2.000  13Feb96     (add mode and group to hdrs)' / Controller softwar
+
+OBSERVER= 'Giavalisco, Idzi'   / Observer(s)
+PROPOSER= '<unknown>'          / Proposer(s)
+PROPOSAL= '<unknown>'          / Proposal title
+PROPID  = '2004A-0403'         / Proposal identification
+
+IMAGESWV= 'mosdca (Jun99), mosaicsrc.tcl (Nov02)' / Image creation software vers
+KWDICT  = 'MosaicV1.dic (Sep97)' / Keyword dictionary
+
+OTFDIR  = 'mscdb$noao/kpno/4meter/caldir/' / OTF calibration directory
+XTALKFIL= 'mscdb$noao/CCDMosaThin1/XTALK/xtalk0303' / Crosstalk file
+RECNO   =               169722  /  NOAO archive sequence number
+UPARM   = 'MarioCal$/CCDMosaThin1_uparm_030915'
+PIPEDATA= 'MarioCal$/PipeData_M1_50000'
+CALOPS  = 'XOTZFWSBPAG'
+PHOTFILT= 'I       '
+PHOTCOEF= 'r 0. 0. 1. 0.'
+MAGZERO = '25.938  '
+IMAGEID =                    2 / Image identification
+OBSID   = 'kp4m.20040521T041417' / Observation ID
+
+OBSTYPE = 'object  '           / Observation type
+EXPTIME =               60.000 / Exposure time in secs
+DARKTIME=               61.528 / Total elapsed time in secs
+PREFLASH=             0.000000 / Preflash time (sec)
+FILTER  = 'I Nearly-Mould k1005' / Filter name(s)
+
+RA      = '11:24:34.43'        / RA of observation (hr)
+DEC     = '14:18:18.82'        / DEC of observation (deg)
+RADECEQ =                2000. / Default equinox
+DATE-OBS= '2004-05-21T04:14:17.8' / Date of observation start (UTC approximate)
+TIME-OBS= '04:14:17.8'         / Time of observation start
+MJD-OBS =       53146.17659491 / MJD of observation start
+LSTHDR  = '12:44:29          ' / LST of header creation
+
+CCDNAME = 'SITe #8014FCR06-02 (NOAO 15)' / CCD name
+AMPNAME = 'SITe #8014FCR06-02 (NOAO 15), lower right (Amp14)' / Amplifier name
+GAIN    =                  2.5 / gain expected for amp 114 (e-/ADU)
+RDNOISE =                  5.4 / read noise expected for amp 114 (e-)
+SATURATE=                28000 / Maximum good data value (ADU)
+CONTROLR= 'Mosaic Arcon'       / Controller identification
+CONHWV  = 'ACEB001_AMP14'      / Controller hardware version
+AMPINTEG=                 3600 / (ns) Double Correlated Sample time
+READTIME=                14400 / (ns) unbinned pixel read time
+ARCONWD = 'Obs Thu May 20 13:05:54 2004' / Date waveforms last compiled
+ARCONGI =                    2 / Gain selection (index into Gain Table)
+ARCONG  =                  2.5 / gain expected for amp 114 (e-/ADU)
+BPM     = 'mscdb$noao/CCDMosaThin1/CAL0208/bpm2_0208' / Bad pixel mask
+CCDSIZE = '[1:2048,1:4096]'    / CCD size
+CCDSUM  = '1 1     '           / CCD pixel summing
+CCDSEC  = '[1:2048,1:4096]'    / CCD section
+AMPSEC  = '[2072:25,1:4096]'   / Amplifier section
+DATASEC = '[65:2112,1:4096]'   / Data section
+DETSEC  = '[2049:4096,1:4096]' / Detector section
+BIASSEC = '[1:50,1:4096]'      / Bias section
+TRIMSEC = '[65:2112,1:4096]'   / Trim section
+
+ATM1_1  =                  -1. / CCD to amplifier transformation
+ATM2_2  =                   1. / CCD to amplifier transformation
+ATV1    =               2073.0 / CCD to amplifier transformation
+ATV2    =                   0. / CCD to amplifier transformation
+LTM1_1  =                  1.0 / CCD to image transformation
+LTM2_2  =                  1.0 / CCD to image transformation
+LTV1    =                 64.0 / CCD to image transformation
+DTM1_1  =                   1. / CCD to detector transformation
+DTM2_2  =                   1. / CCD to detector transformation
+DTV1    =                2048. / CCD to detector transformation
+DTV2    =                   0. / CCD to detector transformation
+
+WCSASTRM= 'kp4m.20000930T043226 (TR37 I k1005) by B. Jannuzi 2003-04-09' / WCS S
+EQUINOX =                2000. / Equinox of WCS
+WCSDIM  =                    2 / WCS dimensionality
+CTYPE1  = 'RA---TNX'           / Coordinate type
+CTYPE2  = 'DEC--TNX'           / Coordinate type
+CRVAL1  =            171.14346 / Coordinate reference value
+CRVAL2  =            14.305228 / Coordinate reference value
+CRPIX1  =            2123.9938 / Coordinate reference pixel
+CRPIX2  =            4089.2082 / Coordinate reference pixel
+CD1_1   =        2.3780785e-07 / Coordinate matrix
+CD2_1   =       -7.2336669e-05 / Coordinate matrix
+CD1_2   =       -7.2021004e-05 / Coordinate matrix
+CD2_2   =        1.2074066e-07 / Coordinate matrix
+WAT0_001= 'system=image'       / Coordinate system
+WAT1_001= 'wtype=tnx axtype=ra lngcor = "3. 4. 4. 2. -9.787942835473575E-4 0.29'
+WAT1_002= '44340110932835 3.739766711634154E-4 0.1489415712413143 -7.9438389124'
+WAT1_003= '61687E-4 0.009770446419406633 4.549193296310789E-4 -0.11202205673830'
+WAT1_004= '94 0.003679845303637078 -0.009878060811330943 0.01718523936691009 -0'
+WAT1_005= '.009431305254095621 -0.08373042559281124 0.03252435781823992 "'
+WAT2_001= 'wtype=tnx axtype=dec latcor = "3. 4. 4. 2. -9.787942835473575E-4 0.2'
+WAT2_002= '944340110932835 3.739766711634154E-4 0.1489415712413143 -4.298345022'
+WAT2_003= '935000E-4 0.00253485366847566 -0.001267332460772619 0.00284819835708'
+WAT2_004= '1593 0.005076799236426698 2.035201606297133E-4 -0.1066215249065858 0'
+WAT2_005= '.00436569288470179 -0.01780632281002949 -0.1209543600876539 "'
+
+CHECKSUM= '<unknown>'          / Header checksum
+DATASUM = '<unknown>'          / Data checksum
+CHECKVER= '<unknown>'          / Checksum version
+END
+-----------------------------------------------------------------------
+
+XTENSION= 'IMAGE   '           / Image extension
+BITPIX  =                   16 / Bits per pixel
+NAXIS   =                    2 / Number of axes
+NAXIS1  =                  100 / Axis length
+NAXIS2  =                  100 / Axis length
+PCOUNT  =                    0 / No 'random' parameters
+GCOUNT  =                    1 / Only one group
+BSCALE  =           1.000000E0 / REAL = TAPE*BSCALE + BZERO
+BZERO   =           3.276800E4 /
+ORIGIN  = 'NOAO-IRAF FITS Image Kernel July 2003' / FITS file originator
+EXTNAME = 'im3     '           / Extension name
+EXTVER  =                    3 / Extension version
+INHERIT =                    F / Inherits global header
+DATE    = '2007-03-16T18:31:10' / Date FITS file was generated
+IRAF-TLM= '11:31:10 (16/03/2007)' / Time of last modification
+OBJECT  = 'PG 1121+145'        / Name of the object observed
+NEXTEND =                    8 / Number of extensions
+FILENAME= 'obj027  '           / Original host filename
+RADECSYS= 'FK5     '           / Default coordinate system
+
+TIMESYS = 'UTC approximate'    / Time system
+MJDHDR  =       53146.17657407 / MJD of header creation
+
+OBSERVAT= 'KPNO    '           / Observatory
+TELESCOP= 'KPNO 4.0 meter telescope' / Telescope
+TELRADEC= 'FK5     '           / Telescope coordinate system
+TELEQUIN=               1950.0 / Equinox of tel coords
+TELRA   = '11:21:58.00       ' / RA of telescope (hr)
+TELDEC  = '14:34:48.0        ' / DEC of telescope (deg)
+ZD      = '25.3672           ' / Zenith distance
+AIRMASS =                1.106 / Airmass
+TELFOCUS=                -9457 / Telescope focus
+CORRCTOR= 'Mayall Corrector'   / Corrector Identification
+ADC     = 'Mayall ADC'         / ADC Identification
+ADCSTAT = 'off               ' / ADC tracking state null-track-preset
+ADCPAN1 =  8.0000000000000E-02 / ADC 1 prism angle
+ADCPAN2 =  2.0000000000000E-02 / ADC 2 prism angle
+
+DETECTOR= 'CCDMosaThin1'       / Detector
+DETSIZE = '[1:8192,1:8192]'    / Detector size for DETSEC
+NCCDS   =                    8 / Number of CCDs
+NAMPS   =                    8 / Number of Amplifiers
+PIXSIZE1=                  15. / Pixel size for axis 1 (microns)
+PIXSIZE2=                  15. / Pixel size for axis 2 (microns)
+PIXSCAL1=                0.258 / Pixel scale for axis 1 (arcsec/pixel)
+PIXSCAL2=                0.258 / Pixel scale for axis 2 (arcsec/pixel)
+RAPANGL =                   0. / Position angle of RA axis (deg)
+DECPANGL=                  90. / Position angle of DEC axis (deg)
+FILPOS  =                    5 / Filter position
+SHUTSTAT= 'guide             ' / Shutter status
+TV1FOC  = -1.3070000000000E+00 / North TV Camera focus position
+TV2FOC  = -2.0000000000000E+00 / South Camera focus position
+ENVTEM  =  1.6900000000000E+01 / Ambient temperature (C)
+DEWAR   = 'CCDMosaThin1 Dewar' / Dewar identification
+DEWTEM  = -1.7300000000000E+02 / Dewar temperature (C)
+DEWTEM2 = -5.1000000000000E+00 / Fill Neck temperature (C)
+DEWTEM3 = 'N2   0.0'
+CCDTEM  = -9.9199997000000E+01 / CCD temperature  (C)
+CCDTEM2 = 'CCD   0.0'
+CONSWV  = '2.000  13Feb96     (add mode and group to hdrs)' / Controller softwar
+
+OBSERVER= 'Giavalisco, Idzi'   / Observer(s)
+PROPOSER= '<unknown>'          / Proposer(s)
+PROPOSAL= '<unknown>'          / Proposal title
+PROPID  = '2004A-0403'         / Proposal identification
+
+IMAGESWV= 'mosdca (Jun99), mosaicsrc.tcl (Nov02)' / Image creation software vers
+KWDICT  = 'MosaicV1.dic (Sep97)' / Keyword dictionary
+
+OTFDIR  = 'mscdb$noao/kpno/4meter/caldir/' / OTF calibration directory
+XTALKFIL= 'mscdb$noao/CCDMosaThin1/XTALK/xtalk0303' / Crosstalk file
+RECNO   =               169722  /  NOAO archive sequence number
+UPARM   = 'MarioCal$/CCDMosaThin1_uparm_030915'
+PIPEDATA= 'MarioCal$/PipeData_M1_50000'
+CALOPS  = 'XOTZFWSBPAG'
+PHOTFILT= 'I       '
+PHOTCOEF= 'r 0. 0. 1. 0.'
+MAGZERO = '25.938  '
+IMAGEID =                    3 / Image identification
+OBSID   = 'kp4m.20040521T041417' / Observation ID
+
+OBSTYPE = 'object  '           / Observation type
+EXPTIME =               60.000 / Exposure time in secs
+DARKTIME=               61.538 / Total elapsed time in secs
+PREFLASH=             0.000000 / Preflash time (sec)
+FILTER  = 'I Nearly-Mould k1005' / Filter name(s)
+
+RA      = '11:24:34.43'        / RA of observation (hr)
+DEC     = '14:18:18.82'        / DEC of observation (deg)
+RADECEQ =                2000. / Default equinox
+DATE-OBS= '2004-05-21T04:14:17.8' / Date of observation start (UTC approximate)
+TIME-OBS= '04:14:17.8'         / Time of observation start
+MJD-OBS =       53146.17659491 / MJD of observation start
+LSTHDR  = '12:44:29          ' / LST of header creation
+
+CCDNAME = 'SITe #7298FBR03-02 (NOAO 13)' / CCD name
+AMPNAME = 'SITe #7298FBR03-02 (NOAO 13), lower right (Amp12)' / Amplifier name
+GAIN    =                  2.9 / gain expected for amp 212 (e-/ADU)
+RDNOISE =                  5.6 / read noise expected for amp 212 (e-)
+SATURATE=                40000 / Maximum good data value (ADU)
+CONTROLR= 'Mosaic Arcon'       / Controller identification
+CONHWV  = 'ACEB002_AMP12'      / Controller hardware version
+AMPINTEG=                 3600 / (ns) Double Correlated Sample time
+READTIME=                14400 / (ns) unbinned pixel read time
+ARCONWD = 'Obs Thu May 20 13:05:54 2004' / Date waveforms last compiled
+ARCONGI =                    2 / Gain selection (index into Gain Table)
+ARCONG  =                  2.9 / gain expected for amp 212 (e-/ADU)
+BPM     = 'mscdb$noao/CCDMosaThin1/CAL0208/bpm3_0208' / Bad pixel mask
+CCDSIZE = '[1:2048,1:4096]'    / CCD size
+CCDSUM  = '1 1     '           / CCD pixel summing
+CCDSEC  = '[1:2048,1:4096]'    / CCD section
+AMPSEC  = '[2072:25,1:4096]'   / Amplifier section
+DATASEC = '[65:2112,1:4096]'   / Data section
+DETSEC  = '[4097:6144,1:4096]' / Detector section
+BIASSEC = '[1:50,1:4096]'      / Bias section
+TRIMSEC = '[65:2112,1:4096]'   / Trim section
+
+ATM1_1  =                  -1. / CCD to amplifier transformation
+ATM2_2  =                   1. / CCD to amplifier transformation
+ATV1    =               2073.0 / CCD to amplifier transformation
+ATV2    =                   0. / CCD to amplifier transformation
+LTM1_1  =                  1.0 / CCD to image transformation
+LTM2_2  =                  1.0 / CCD to image transformation
+LTV1    =                 64.0 / CCD to image transformation
+DTM1_1  =                   1. / CCD to detector transformation
+DTM2_2  =                   1. / CCD to detector transformation
+DTV1    =                4096. / CCD to detector transformation
+DTV2    =                   0. / CCD to detector transformation
+
+WCSASTRM= 'kp4m.20000930T043226 (TR37 I k1005) by B. Jannuzi 2003-04-09' / WCS S
+EQUINOX =                2000. / Equinox of WCS
+WCSDIM  =                    2 / WCS dimensionality
+CTYPE1  = 'RA---TNX'           / Coordinate type
+CTYPE2  = 'DEC--TNX'           / Coordinate type
+CRVAL1  =            171.14346 / Coordinate reference value
+CRVAL2  =            14.305228 / Coordinate reference value
+CRPIX1  =               13.642 / Coordinate reference pixel
+CRPIX2  =             4088.964 / Coordinate reference pixel
+CD1_1   =       -2.4619389e-07 / Coordinate matrix
+CD2_1   =       -7.2299845e-05 / Coordinate matrix
+CD1_2   =       -7.2020811e-05 / Coordinate matrix
+CD2_2   =       -1.6714266e-07 / Coordinate matrix
+WAT0_001= 'system=image'       / Coordinate system
+WAT1_001= 'wtype=tnx axtype=ra lngcor = "3. 4. 4. 2. -0.001023341101269978 0.29'
+WAT1_002= '44058393741343 -0.1517121343009997 -0.003029902295229939 -8.78848433'
+WAT1_003= '2425328E-4 0.009901892527786017 -9.269484161549961E-4 -0.11106417612'
+WAT1_004= '50588 -0.002713254672588611 0.002382559193517991 -0.0115262420193134'
+WAT1_005= '3 0.007361091144522175 -0.1165672472206865 0.02787054635223481 "'
+WAT2_001= 'wtype=tnx axtype=dec latcor = "3. 4. 4. 2. -0.001023341101269978 0.2'
+WAT2_002= '944058393741343 -0.1517121343009997 -0.003029902295229939 6.06537672'
+WAT2_003= '0836472E-4 -0.004058417733270676 0.006208456312521163 -0.00926059573'
+WAT2_004= '978885 0.006734919180071193 -0.007646533982555538 -0.099300568869115'
+WAT2_005= '02 0.001800580230161246 -0.02301784453598765 -0.123027092045007 "'
+
+CHECKSUM= '<unknown>'          / Header checksum
+DATASUM = '<unknown>'          / Data checksum
+CHECKVER= '<unknown>'          / Checksum version
+END
+-----------------------------------------------------------------------
+
+XTENSION= 'IMAGE   '           / Image extension
+BITPIX  =                   16 / Bits per pixel
+NAXIS   =                    2 / Number of axes
+NAXIS1  =                  100 / Axis length
+NAXIS2  =                  100 / Axis length
+PCOUNT  =                    0 / No 'random' parameters
+GCOUNT  =                    1 / Only one group
+BSCALE  =           1.000000E0 / REAL = TAPE*BSCALE + BZERO
+BZERO   =           3.276800E4 /
+ORIGIN  = 'NOAO-IRAF FITS Image Kernel July 2003' / FITS file originator
+EXTNAME = 'im4     '           / Extension name
+EXTVER  =                    4 / Extension version
+INHERIT =                    F / Inherits global header
+DATE    = '2007-03-16T18:31:15' / Date FITS file was generated
+IRAF-TLM= '11:31:15 (16/03/2007)' / Time of last modification
+OBJECT  = 'PG 1121+145'        / Name of the object observed
+NEXTEND =                    8 / Number of extensions
+FILENAME= 'obj027  '           / Original host filename
+RADECSYS= 'FK5     '           / Default coordinate system
+
+TIMESYS = 'UTC approximate'    / Time system
+MJDHDR  =       53146.17657407 / MJD of header creation
+
+OBSERVAT= 'KPNO    '           / Observatory
+TELESCOP= 'KPNO 4.0 meter telescope' / Telescope
+TELRADEC= 'FK5     '           / Telescope coordinate system
+TELEQUIN=               1950.0 / Equinox of tel coords
+TELRA   = '11:21:58.00       ' / RA of telescope (hr)
+TELDEC  = '14:34:48.0        ' / DEC of telescope (deg)
+ZD      = '25.3672           ' / Zenith distance
+AIRMASS =                1.106 / Airmass
+TELFOCUS=                -9457 / Telescope focus
+CORRCTOR= 'Mayall Corrector'   / Corrector Identification
+ADC     = 'Mayall ADC'         / ADC Identification
+ADCSTAT = 'off               ' / ADC tracking state null-track-preset
+ADCPAN1 =  8.0000000000000E-02 / ADC 1 prism angle
+ADCPAN2 =  2.0000000000000E-02 / ADC 2 prism angle
+
+DETECTOR= 'CCDMosaThin1'       / Detector
+DETSIZE = '[1:8192,1:8192]'    / Detector size for DETSEC
+NCCDS   =                    8 / Number of CCDs
+NAMPS   =                    8 / Number of Amplifiers
+PIXSIZE1=                  15. / Pixel size for axis 1 (microns)
+PIXSIZE2=                  15. / Pixel size for axis 2 (microns)
+PIXSCAL1=                0.258 / Pixel scale for axis 1 (arcsec/pixel)
+PIXSCAL2=                0.258 / Pixel scale for axis 2 (arcsec/pixel)
+RAPANGL =                   0. / Position angle of RA axis (deg)
+DECPANGL=                  90. / Position angle of DEC axis (deg)
+FILPOS  =                    5 / Filter position
+SHUTSTAT= 'guide             ' / Shutter status
+TV1FOC  = -1.3070000000000E+00 / North TV Camera focus position
+TV2FOC  = -2.0000000000000E+00 / South Camera focus position
+ENVTEM  =  1.6900000000000E+01 / Ambient temperature (C)
+DEWAR   = 'CCDMosaThin1 Dewar' / Dewar identification
+DEWTEM  = -1.7300000000000E+02 / Dewar temperature (C)
+DEWTEM2 = -5.1000000000000E+00 / Fill Neck temperature (C)
+DEWTEM3 = 'N2   0.0'
+CCDTEM  = -9.9199997000000E+01 / CCD temperature  (C)
+CCDTEM2 = 'CCD   0.0'
+CONSWV  = '2.000  13Feb96     (add mode and group to hdrs)' / Controller softwar
+
+OBSERVER= 'Giavalisco, Idzi'   / Observer(s)
+PROPOSER= '<unknown>'          / Proposer(s)
+PROPOSAL= '<unknown>'          / Proposal title
+PROPID  = '2004A-0403'         / Proposal identification
+
+IMAGESWV= 'mosdca (Jun99), mosaicsrc.tcl (Nov02)' / Image creation software vers
+KWDICT  = 'MosaicV1.dic (Sep97)' / Keyword dictionary
+
+OTFDIR  = 'mscdb$noao/kpno/4meter/caldir/' / OTF calibration directory
+XTALKFIL= 'mscdb$noao/CCDMosaThin1/XTALK/xtalk0303' / Crosstalk file
+RECNO   =               169722  /  NOAO archive sequence number
+UPARM   = 'MarioCal$/CCDMosaThin1_uparm_030915'
+PIPEDATA= 'MarioCal$/PipeData_M1_50000'
+CALOPS  = 'XOTZFWSBPAG'
+PHOTFILT= 'I       '
+PHOTCOEF= 'r 0. 0. 1. 0.'
+MAGZERO = '25.938  '
+IMAGEID =                    4 / Image identification
+OBSID   = 'kp4m.20040521T041417' / Observation ID
+
+OBSTYPE = 'object  '           / Observation type
+EXPTIME =               60.000 / Exposure time in secs
+DARKTIME=               61.538 / Total elapsed time in secs
+PREFLASH=             0.000000 / Preflash time (sec)
+FILTER  = 'I Nearly-Mould k1005' / Filter name(s)
+
+RA      = '11:24:34.43'        / RA of observation (hr)
+DEC     = '14:18:18.82'        / DEC of observation (deg)
+RADECEQ =                2000. / Default equinox
+DATE-OBS= '2004-05-21T04:14:17.8' / Date of observation start (UTC approximate)
+TIME-OBS= '04:14:17.8'         / Time of observation start
+MJD-OBS =       53146.17659491 / MJD of observation start
+LSTHDR  = '12:44:29          ' / LST of header creation
+
+CCDNAME = 'SITe #7465FBR01-02 (NOAO 17)' / CCD name
+AMPNAME = 'SITe #7465FBR01-02 (NOAO 17), lower right (Amp14)' / Amplifier name
+GAIN    =                  2.5 / gain expected for amp 214 (e-/ADU)
+RDNOISE =                  5.4 / read noise expected for amp 214 (e-)
+SATURATE=                30000 / Maximum good data value (ADU)
+CONTROLR= 'Mosaic Arcon'       / Controller identification
+CONHWV  = 'ACEB002_AMP14'      / Controller hardware version
+AMPINTEG=                 3600 / (ns) Double Correlated Sample time
+READTIME=                14400 / (ns) unbinned pixel read time
+ARCONWD = 'Obs Thu May 20 13:05:54 2004' / Date waveforms last compiled
+ARCONGI =                    2 / Gain selection (index into Gain Table)
+ARCONG  =                  2.5 / gain expected for amp 214 (e-/ADU)
+BPM     = 'mscdb$noao/CCDMosaThin1/CAL0208/bpm4_0208' / Bad pixel mask
+CCDSIZE = '[1:2048,1:4096]'    / CCD size
+CCDSUM  = '1 1     '           / CCD pixel summing
+CCDSEC  = '[1:2048,1:4096]'    / CCD section
+AMPSEC  = '[2072:25,1:4096]'   / Amplifier section
+DATASEC = '[65:2112,1:4096]'   / Data section
+DETSEC  = '[6145:8192,1:4096]' / Detector section
+BIASSEC = '[1:50,1:4096]'      / Bias section
+TRIMSEC = '[65:2112,1:4096]'   / Trim section
+
+ATM1_1  =                  -1. / CCD to amplifier transformation
+ATM2_2  =                   1. / CCD to amplifier transformation
+ATV1    =               2073.0 / CCD to amplifier transformation
+ATV2    =                   0. / CCD to amplifier transformation
+LTM1_1  =                  1.0 / CCD to image transformation
+LTM2_2  =                  1.0 / CCD to image transformation
+LTV1    =                 64.0 / CCD to image transformation
+DTM1_1  =                   1. / CCD to detector transformation
+DTM2_2  =                   1. / CCD to detector transformation
+DTV1    =                6144. / CCD to detector transformation
+DTV2    =                   0. / CCD to detector transformation
+
+WCSASTRM= 'kp4m.20000930T043226 (TR37 I k1005) by B. Jannuzi 2003-04-09' / WCS S
+EQUINOX =                2000. / Equinox of WCS
+WCSDIM  =                    2 / WCS dimensionality
+CTYPE1  = 'RA---TNX'           / Coordinate type
+CTYPE2  = 'DEC--TNX'           / Coordinate type
+CRVAL1  =            171.14346 / Coordinate reference value
+CRVAL2  =            14.305228 / Coordinate reference value
+CRPIX1  =           -2124.0075 / Coordinate reference pixel
+CRPIX2  =            4114.6101 / Coordinate reference pixel
+CD1_1   =       -6.4824593e-07 / Coordinate matrix
+CD2_1   =       -7.1228711e-05 / Coordinate matrix
+CD1_2   =        -7.165758e-05 / Coordinate matrix
+CD2_2   =       -4.8518793e-07 / Coordinate matrix
+WAT0_001= 'system=image'       / Coordinate system
+WAT1_001= 'wtype=tnx axtype=ra lngcor = "3. 4. 4. 2. -0.001412421708415288 0.29'
+WAT1_002= '33523268463217 -0.3017163254233723 -0.1539243091193578 -0.0029792458'
+WAT1_003= '97089246 0.01434738038050301 0.004088368160388178 -0.116481643023089'
+WAT1_004= '7 -0.0147766564425443 -0.001912887294624519 0.01541888166640099 -0.0'
+WAT1_005= '2833362067865281 -0.1081312456903834 -0.03959976546376826 "'
+WAT2_001= 'wtype=tnx axtype=dec latcor = "3. 4. 4. 2. -0.001412421708415288 0.2'
+WAT2_002= '933523268463217 -0.3017163254233723 -0.1539243091193578 0.0033357606'
+WAT2_003= '00373481 -0.008759952543313104 5.905846732256261E-4 0.00266988355140'
+WAT2_004= '721 0.01432548078376889 -0.005379940006946678 -0.1080671774524176 -0'
+WAT2_005= '.03138451745777904 -0.003363861928258702 -0.1550488287888007 "'
+
+CHECKSUM= '<unknown>'          / Header checksum
+DATASUM = '<unknown>'          / Data checksum
+CHECKVER= '<unknown>'          / Checksum version
+END
+-----------------------------------------------------------------------
+

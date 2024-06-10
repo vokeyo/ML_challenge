@@ -1,0 +1,1088 @@
+
+
+
+		
+	
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+		<meta name="tp-name" content="homepage_3col">
+
+		
+		
+
+		
+				<title>New York City Housing Authority</title>
+			
+		
+				
+			
+		<link href="../../includes/css/rollout.css" rel="stylesheet">
+	</head>
+
+	<body  background="../../includes/site_images/misc/bg.gif"
+	  bgcolor="#ffffff" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+
+	<!-- BEGIN_PRINT_PAGE -->
+		<table width="769" border="0" cellspacing="0" cellpadding="0">
+	<!-- END_PRINT_PAGE -->
+			<tr><td colspan="3" align="left" valign="top" width="769">
+					<!-- START of nycgov_header.inc -->
+<table width="769" border="0" cellspacing="0" cellpadding="0" height="51">
+	<tr>
+		<td><img src="../../includes/site_images/nyc_gov/nycgov_banner.gif" alt="" width="769" height="51" border="0" usemap="#TopNav"></td>
+	</tr>
+</table>
+<map name="TopNav">
+  <area shape="rect" coords="554,1,599,25" href="/search" alt="Search">
+  <area shape="rect" coords="607,1,688,25" href="/portal/register.jsp" alt="Email Updates">
+  <area shape="rect" coords="698,1,762,25" href="/contact" alt="Contact Us">
+  <area shape="rect" coords="328,27,399,50" href="/residents" alt="Residents">
+  <area shape="rect" coords="408,27,471,50" href="/business" alt="Business">
+  <area shape="rect" coords="478,27,535,50" href="/visitors" alt="Visitors">
+  <area shape="rect" coords="544,27,628,50" href="/government" alt="Government">
+  <area shape="rect" coords="635,27,764,50" href="/mayor" alt="Office of the Mayor">
+  <area shape="rect" coords="3,3,49,48" href="/home.html" alt="NYC.gov always open">
+</map>
+<!-- END of nycgov_header.inc -->
+					
+							<table width="769" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="180" valign="top"><a href="../../html/home/home.shtml"><img src="../../includes/site_images/branding/banner_top_left.gif" alt="New York City Housing Authority" width="180" height="66" border="0"></a></td>
+    <td colspan="2" rowspan="2" valign="top"><script language="Javascript">
+<!--
+
+function getCookie(Name) {
+	var search = Name + "=";
+	if (document.cookie.length > 0) {
+		offset = document.cookie.indexOf(search)
+		if (offset != -1) {
+			offset += search.length
+			end = document.cookie.indexOf(";", offset)
+			if (end == -1)
+				end = document.cookie.length
+			return unescape(document.cookie.substring(offset, end))
+		}
+	}
+}
+
+function getFolder(thePath) {
+	if (thePath == null) { return -1; }
+	var startSlash = thePath.lastIndexOf("/");
+	startSlash2 = thePath.lastIndexOf("/",startSlash -1);
+
+	if(startSlash == startSlash2) { return -1; }
+	if (startSlash == -1 || startSlash2 == -1) {
+		return -1;
+	} else {
+		return thePath.substr(startSlash2, startSlash - startSlash2 + 1);
+	}
+}
+
+
+var imgNum = getCookie("nychabannerNum");
+var cookiePath = location.pathname;
+var filename;
+
+cookiePath = cookiePath.substr(0,(cookiePath.lastIndexOf("/html/") + 6));
+currentFolder = getFolder(location.pathname);
+
+/*switch (currentFolder) {
+	case "/mfta/":
+		document.write('<img src="../../includes/site_images/branding/materials_banner.jpg" name="banner" alt="Department of Cultural Affairs" width="769" border="0">');
+		break;
+	case "/panyc/":
+		document.write('<img src="../../includes/site_images/branding/percent_for_art.jpg" name="banner" alt="Department of Cultural Affairs" width="769" border="0">');
+		break;
+	default:*/
+		var bannerList = new Array(
+			"banner_1",
+			"banner_2",
+			"banner_3",
+			"banner_4",
+			"banner_5",
+			"banner_6");
+		
+		if (imgNum == "" || imgNum == null || isNaN(imgNum)) {
+			
+			imgNum = Math.round(((bannerList.length -1) * Math.random()) + 1) - 1;
+			filename=bannerList[imgNum] + "_anim.gif";
+			if(document.cookie.length > 0) {
+				document.cookie = "nychabannerNum=" + imgNum + ";path=" + cookiePath + ";" + document.cookie;
+			} else {
+				document.cookie = "nychabannerNum=" + imgNum + ";path=" + cookiePath + ";";
+			}
+		} else filename=bannerList[imgNum] + ".jpg";
+		
+		document.write('<img src="../../includes/site_images/branding/' + filename + '" name="banner" alt="New York City Housing Authority" width="589" border="0">');
+		/*break;
+}*/
+
+//-->
+</script>
+	
+	<!--<script language="Javascript"><!--
+	        var iconList1 = new Array("banner_1.gif", "banner_2.gif", "banner_3.gif", "banner_4.gif", "banner_5.gif", "banner_6.gif", "banner_7.gif");
+	        var iconNum = Math.round(((iconList1.length -1) * Math.random()) + 1) - 1;
+	        document.write('<a href="../../html/home/home.shtml"><img src="../../includes/site_images/branding/' + iconList1[iconNum] + '" width="589" height="126" alt="New York City Housing Authority" border="0"></a>');
+        
+        </script>//
+		<a href="../../html/home/home.shtml"><img src="../../includes/site_images/branding/banner_1_anim.gif" width="589" height="126" alt="New York City Housing Authority" border="0"></a>
+		--></td>
+  </tr>
+  <tr> 
+    <td width="180" align="right"><table width="170" height="60" border="0" cellpadding="0" cellspacing="0" class="search_table">
+      <tr><form action="http://search1.nyc.gov/search?" method="GET" name="gs" style="margin-bottom:0px">
+        <td><input value="xml_no_dtd" name="output" type="hidden"><input value="default_collection" name="site" type="hidden"><input value="agency_frontend" name="proxystylesheet" type="hidden"><input value="agency_frontend" name="client" type="hidden"><input value="www.nyc.gov/html/nycha" name="sitesearch" type="hidden"><img src="../../includes/site_images/spacers/spacer.gif" width="9" height="6" alt=""><br><img src="../../includes/site_images/spacers/spacer.gif" width="9" height="11" alt=""><label accesskey="s"><input name="q" type="text" class="search-box" id="search box" size="12" style="width : 148px; height : 24"></label><br><label accesskey="g"><input name="go" type="image" id="go" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('go','','../../includes/site_images/misc/search_over.gif',1)" src="../../includes/site_images/misc/search.gif"  align="right"  alt="Search"  width="62" height="25" border="0"></label></td>
+      </form></tr>
+    </table></td>
+  </tr>
+  <tr> 
+    <td width="180"><img src="../../includes/site_images/branding/banner_bottom_left.gif" width="180" height="37" alt=""></td>
+    <td width="404"><img src="../../includes/site_images/branding/banner_top_center.gif" width="219" height="37" alt=""><a href="/cgi-bin/misc/pfprinter.cgi?action=print&sitename=NYCHA" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('pff','','../../includes/site_images/branding/pff_over.gif',1)"><img src="../../includes/site_images/branding/pff.gif" width="185" height="37" border="0" name="pff" alt="Printer Friendly Format"></a></td>
+    <td width="185"><a href="http://www.nyc.gov/register" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sign','','../../includes/site_images/branding/sign_up_over.gif',1)"><img src="../../includes/site_images/branding/sign_up.gif" width="185" height="37" border="0" name="sign" alt="Sign-up for NYCHA Newsletter"></a></td>
+  </tr>
+</table>
+						
+			</td></tr>
+
+		
+	<!-- BEGIN_PRINT_PAGE -->
+		<tr>
+	<!-- END_PRINT_PAGE -->
+		<td align="left" valign="top" width="180">
+					
+							
+							 
+								  <!-- file tree1_nodes.js will be recreated--><!-- START of leftnav_js.html -->
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  
+<tr><td align="left" bgcolor="" valign="top" width="165">
+    <script language="Javascript" src="../../includes/scripts/nav_nodes.js"></script>
+    <script language="Javascript" src="../../includes/scripts/nav_code_custom.js"></script>
+    <noscript>
+<a href="../../html/home/home.shtml" class="nav_section">Home</a><br>
+<a href="../../html/about/about.shtml" class="nav_section">About NYCHA</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/about/message_from_chairman.shtml" class="nav_subsection">Message from the Chairman</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/about/factsheet.shtml" class="nav_subsection">Fact Sheet</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/about/orgchart.shtml" class="nav_subsection">Organization</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/about/financialinfo.shtml" class="nav_subsection">Financial Information</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/about/agencyplan.shtml" class="nav_subsection">Annual Plan</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/about/ppph.shtml" class="nav_subsection">Plan to Preserve<br> Public Housing</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/about/nycha70.shtml" class="nav_subsection">NYCHA at 70</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/about/awards.shtml" class="nav_subsection">Awards</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/about/job_opps.shtml" class="nav_subsection">Job Opportunities</a><br>
+<a href="../../html/assistance/app_for_pubhsg.shtml" class="nav_section">Applying for Public Housing</a><br>
+<a href="../../html/developments/dev_guide.shtml" class="nav_section">NYCHA Housing Developments</a><br>
+<a href="../../html/section8/section8.shtml" class="nav_section">Section 8 Assistance</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/section8/gen_info.shtml" class="nav_subsection">General Information</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/section8/section8-applying.shtml" class="nav_subsection">Applying for Section 8</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/section8/tenant_info.shtml" class="nav_subsection">Information for Tenants</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/section8/landlord_info.shtml" class="nav_subsection">Information for Landlords</a><br>
+<a href="../../html/residents/residents.shtml" class="nav_section">Residents Corner</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/residents/resident_resources.shtml" class="nav_subsection">Resources</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/residents/resident_whatshappening.shtml" class="nav_subsection">What's Happening</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/residents/journal.shtml" class="nav_subsection">NYCHA Journal</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/residents/linksofinterest.shtml" class="nav_subsection">Links of Interest</a><br>
+<a href="../../html/community/community.shtml" class="nav_section">Community Programs and Services</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/res_employ.shtml" class="nav_subsection">Resident Employment Services</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/education.shtml" class="nav_subsection">Education Programs</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/sports.shtml" class="nav_subsection">Sports Programs</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/recreation.shtml" class="nav_subsection">Recreation Programs</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/garden.shtml" class="nav_subsection">Garden Program</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/art.shtml" class="nav_subsection">Art Programs</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/performance.shtml" class="nav_subsection">Performing Arts</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/music.shtml" class="nav_subsection">Music Programs</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/health_services.shtml" class="nav_subsection">Health Services</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/senior_services.shtml" class="nav_subsection">Senior Services</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/social_serv.shtml" class="nav_subsection">Social Services</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/community/equalopp.shtml" class="nav_subsection">Equal Opportunity</a><br>
+<a href="../../html/business/business.shtml" class="nav_section">Doing Business with NYCHA</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/business/procure_opps.shtml" class="nav_subsection">Procurement Opportunities</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/business/vendor_events.shtml" class="nav_subsection">Vendor Events</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/business/mwbe.shtml" class="nav_subsection">MWSBE</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/business/prevail_wage_init.shtml" class="nav_subsection">Prevailing Wage Initiative</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/business/store-leasing.shtml" class="nav_subsection">Store Leasing</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/business/training_n_development.shtml" class="nav_subsection">Training and Development</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/pr/print-shop.shtml" class="nav_subsection">NYCHA Print Shop</a><br>
+<a href="../../html/news/news.shtml" class="nav_section">News Events and Publications</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/news/pressrelease.shtml" class="nav_subsection">Press Releases</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/news/newsarchives.shtml" class="nav_subsection">News Archives</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/news/calendar_events.shtml" class="nav_subsection">Calendar of Events</a><br>
+	<span class="nav_subsection">&nbsp;-&nbsp;</span><a href="../../html/news/publications.shtml" class="nav_subsection">Publications</a><br>
+<a href="../../html/faqs/faqs.shtml" class="nav_section">FAQs</a><br>
+<a href="../../html/contact/contact.shtml" class="nav_section">Contact NYCHA</a><br>
+</noscript>
+    </td></tr>
+  
+</table><br><span class="caption"></span> <!-- END of leftnav_js.html -->
+
+								 
+						
+				</td>
+				<!-- START of CENTER column -->
+			<!-- BEGIN_PRINT_PAGE -->
+				<td align="left" valign="top" width="409">
+				<!-- START of PRIMARY FEATURE SECTION -->
+				<table width="409" border="0" cellspacing="0" cellpadding="0">
+				  
+					  
+						<tr><td colspan="3" align="left" valign="top" bgcolor="" width="409">
+							
+							</td></tr>
+						
+					
+						<tr><td align="left" bgcolor="" valign="top" width="20"><img src="../../includes/site_images/spacers/spacer_20_20.gif" alt="" width="20" height="20" border="0">
+						</td><td align="left" bgcolor="" valign="top" width="369"><img src="../../includes/site_images/spacers/spacer_369_15.gif" alt="" width="369" height="15" border="0"><br>
+					  
+							
+						
+					  
+							
+							<span class="headline"><span class="top_headline">Mission</span><br>
+								</span>
+								
+							
+									
+											<span class="bodytext"><p>
+ L’ Agence des Immeubles Publics de New York (NYCHA) fournit du logement décent et abordable dans un environnement sécurisé aux locataires à revenus bas et modérés dans les cinq arrondissements.  En plus de logement, NYCHA offre aux  locataires l’opportunité de participer à une multitude de programmes  communautaire, éducatifs et récréatifs aussi bien que de l’apprentissage pour les préparer pour le marché du travail.</p>
+<p>
+<span align="center"><b>L'information sur le Website de NYCHA </b></span><br><br>
+<b>Page de Source : </b>Cette page est divisée en trois parties : celle qui est à gauche montre comment on peut naviguer sur les rubriques principales, celle qui est au milieu fournit des articles et renseignements récents sur notre plan de projet capital et la dernière contient les rubriques suivantes: Des textes en rouleau qui vous lieront aux derniers programmes, activités et nouvelles. Une rubrique contenant des informations sur les finances, propriétés, et comment accéder à la liste des communautés et des centres pour les personnes âgées de NYCHA ; une rubrique qui permet d’accéder à d’autre renseignements; Et notre NYCHA ‘Gear Shop’ où vous pouvez acheter des articles avec le logo de NYCHA. </p>
+<p>
+ <b>Au sujet de NYCHA :</b>Découvrirqui nous sommes.  Lire un message du Directeur Général (Mr. Tino Hernandez) de NYCHA ;  trouver des faits importants au sujet de NYCHA dans notre « Page actuelle » ;  Jeter un coup d’oeil sur notre budget et nos plans financiers; se renseigner sur les opportunités d'emploi à NYCHA ; et lire au sujet des 70 années d'histoire des immeubles publics.   </p>
+<p><b>
+Faire une demande pour le logement public :</b> renseignements sont fournies pour savoir comment faire une demande pour le logement public: tels que les conditions requises qu’on doit remplir, le revenu nécessaire et liste des adresses et des numéros de téléphone des bureaux des arrondissements de NYCHA.
+</p>
+<p><b>
+Ensemble d’habitation de NYCHA : </b>A possède 344 développements à travers la ville de New York. Sous cette rubrique nous avons fourni un moyen lequel vous permettant de chercher l'endroit ainsi que les renseignements sur une habitation en entrant l'adresse du bâtiment ou le nom de l’habitation. Vous aurez à votre disposition un plan de l’habitation, des renseignements sur cette habitation ainsi que les services urbains et communautaires comme les écoles, la police et les pompiers, les bibliothèques, etc.   </p>
+<p><b>
+ Aide de la « Section 8 » : </b>demandeurs, les locataires et les propriétaires trouveront les renseignements sur la « Section 8 » – Programme de bon pour le choix de l’habitation.</p>
+<p><b>
+Au sujet des locataires: </b>Cette rubrique fournit des renseignements essentiels pour nos locataires.  Nous mettons continuellement à jour plusieurs activités, nouvelles et événements, programmes et tout ce qui est disponible pour les locataires de NYCHA.</p>
+<p><b>
+Programmes et services communautaires : </b>centres communautaires et des personnes âgées de NYCHA constituent des endroits principaux pour la plupart de nos programmes récréatifs, culturels et éducatifs.  Nous avons fourni des renseignements sur la plupart de nos programmes courants, services sociaux pour les personnes âgées et information sur le marché du travail pour les locataires.  </p>
+<p><b>
+Faire des affaires avec NYCHA :</b>Nous présentons une liste de nos acquisitions potentielles et nous en fournissons une autre pour nos espaces disponibles à louer pour faire du commerce. Par le biais de notre Département d’ Opportunité et de notre bureau qui aide les gens à se lancer dans les affaires commerciales, NYCHA se consacre à mettre sur pieds tous moyens opportuns qui permettent aux minorités, aux femmes et aux petites entreprises de faire du commerce avec NYCHA.  </p>
+<p><b>
+Nouvelles, événements et publications : </b>Vous pouvez voir notre calendrier d’événements et nos communiqués de presse de 2002 au moment présent.  Vous pouvez voir et imprimer plusieurs publications de NYCHA par exemple:  Rapport de l'Agence (2003-2005); Journal de NYCHA en anglais et en espagnol avec les copies de 2001 au moment présent; notre manuel de locataires, « Une demeure dont on doit être fier » qui est traduit en espagnol, français, russe, chinois et créole haïtien ; « Le Communicateur» qui est un bulletin pour les locataires sur la « Section  8 » ; « Le Registre » un bulletin pour les propriétaires sur la « Section 8 » et la dernière publication d’un bulletin des employés.</p>
+<p><b>
+FAQS :</b> Les réponses aux questions posées le plus souvent sont fournies. Les demandeurs, les locataires, les locataires de la « Section 8 », et les propriétaires d’immeubles de la « Section 8 »  posent fréquemment ces questions.   </p>
+<p><b>
+Contact avec NYCHA :</b> Une liste de numéros de téléphone qu’on utilise très souvent est disponible ainsi que l'opportunité d'envoyer un E-mail à notre Directeur Général (Mr. Tino Hernandez).    </p>
+<b>Nous possédons actuellement les documents et publications suivants en français: </b><br></span>
+											
+										
+									
+								
+						
+
+					<br>
+
+					 
+					   
+						<img src="../../includes/site_images/misc/arrow.gif" alt="" border="0" /><a href="../../html/about/ppph.shtml"  class="bodytext_underline">Le Plan qui a pour but de Conserver l’ Habitation Publique (dans cinq langues)</a><br>
+						
+					 
+					   
+						<img src="../../includes/site_images/misc/arrow.gif" alt="" border="0" /><a href="../../html/residents/comm_serv.shtml"  class="bodytext_underline">Service Communautaire  (dans cinq langues)   </a><br>
+						
+					 
+					   
+						<img src="../../includes/site_images/misc/arrow.gif" alt="" border="0" /><a href="../../html/residents/resident_pub.shtml"  class="bodytext_underline">Une Demeure de laquelle on Doit être Fier (dans cinq langues)  </a><br>
+						
+					 
+					   
+						<img src="../../includes/site_images/misc/arrow.gif" alt="" border="0" /><a href="../../html/news/publications.shtml"  class="bodytext_underline">Journal de NYCHA (en espagnol)</a><br>
+						
+					 
+					   
+						<img src="../../includes/site_images/misc/arrow.gif" alt="" border="0" /><a href="../../html/assistance/app_for_pubhsg.shtml"  class="bodytext_underline">Comment faire une demande pour l’Habitation publique (en espagnol) </a><br>
+						
+					 
+					   
+						<img src="../../includes/site_images/misc/arrow.gif" alt="" border="0" /><a href="../../html/section8/section8.shtml"  class="bodytext_underline">Comment faire une application pour la “ Section 8” (en espagnol)</a><br>
+						
+					 
+					   
+						<img src="../../includes/site_images/misc/arrow.gif" alt="" border="0" /><a href="../../html/assistance/app_for_pubhsg.shtml"  class="bodytext_underline">Politique équitable et non discriminatoire d’habitation Publique (dans cinq langues)</a><br>
+						
+					 
+					   
+						<img src="../../includes/site_images/misc/arrow.gif" alt="" border="0" /><a href="../../html/residents/resident_questions.shtml"  class="bodytext_underline">Les questions les plus posées par les locataires des immeubles publics.</a><br>
+						
+					 
+					 
+					<br>
+					</td><td align="left" bgcolor="" valign="top" width="20"><img src="../../includes/site_images/spacers/spacer_20_20.gif" alt="" width="20" height="20" border="0"></td></tr>
+					
+					  
+						<tr><td colspan="3" align="left" bgcolor="" valign="top" width="409">
+							<img src="../../includes/site_images/misc/divider_3col.gif" alt="" width="409" border="0"/></td></tr>
+						
+				   
+				</table>
+				<!-- END of PRIMARY FEATURE SECTION -->
+
+				<!-- START of SECONDARY FEATURE SECTION -->
+
+				<table width="409" border="0" cellspacing="0" cellpadding="0">
+				
+				  
+				
+				
+
+				  
+					  
+					<tr>
+					<td colspan="3" align="left" valign="top" bgcolor="" width="409">
+							
+							</td></tr>
+						
+					
+					  </table>
+
+				<!-- END of SECONDARY FEATURE SECTION -->
+
+				<!-- START of TERTIARY FEATURE SECTION -->
+				<table width="409" border="0" cellspacing="0" cellpadding="0">
+				  
+					  
+						<tr><td colspan="3" align="left" valign="top" bgcolor="" width="409">
+							
+							</td></tr>
+						
+					
+					  
+				   
+				</table>
+				<!-- END of TERTIARY FEATURE SECTION -->
+		<!-- END_PRINT_PAGE -->		
+
+			
+
+
+<!-- BEGIN_PRINT_PAGE -->
+				</td>
+				<!-- END of CENTER column -->
+		<!-- END_PRINT_PAGE -->					
+				
+				<!-- START of THIRD column -->
+				<td align="left" valign="top" width="180">
+					
+						<script language="Javascript">
+		<!--
+		/***********************************************
+		* Pausing updown message scroller- � Dynamic Drive DHTML code library (www.dynamicdrive.com)
+		* This notice MUST stay intact for legal use
+		* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+		***********************************************/
+
+		//configure the below five variables to change the style of the scroller
+		var scrollerdelay='4000' //delay between msg scrolls. 3000=3 seconds.
+		var scrollerwidth='133px'
+		var scrollerheight='132px'
+		var scrollerbgcolor=''
+		//set below to '' if you don't wish to use a background image
+		var scrollerbackground=''
+		var statusStyle = "color: #224EA7; font-size: 10px; line-height: 9px; font-family: Verdana, Arial, Helvetica; text-decoration: none;";
+
+		//configure the below variable to change the contents of the scroller
+
+		var messages=new Array()
+		messages[0]="<a href='../../html/about/it_strategic_plan.shtml' class='module_bodytext_underline'>Check out NYCHA's award-winning Broadband over Power Line Proof of Concept</a>"
+		messages[1]="<a href='../../html/section8/s8apts.shtml' class='module_bodytext_underline'>Section 8 Voucher Holders can now rent a NYCHA apt.</a>"		
+		messages[2]="<a href='../../html/residents/dtv_transition.shtml' class='module_bodytext_underline'>Are you ready for the Digital TV Transition? Here's what NYCHA residents need to know</a>"
+		messages[3]="<a href='../../html/residents/howtopayrent.shtml' class='module_bodytext_underline'>New rent payment options: Pay your rent by phone, online, or at an authorized bank</a>"
+		messages[4]="<a href='../../html/section8/landlord_onlinebriefing.shtml' class='module_bodytext_underline'>Get reliable, on time rent payments: Become a landlord in NYCHA's Section 8 program.</a>"
+		messages[5]="<a href='../../html/business/store-leasing.shtml' class='module_bodytext_underline'>Need a new location for your business? NYCHA has retail space for rent!</a>"
+		messages[6]="<a href='../../html/business/training_n_development.shtml' class='module_bodytext_underline'>Empower your employees with NYCHA's expert training and development programs</a>"
+	    	
+
+
+
+
+		///////Do not edit pass this line///////////////////////
+		// some new variables
+		var running = 0;
+		var stopped = 0;
+		var stopCompleted = 0;
+		var scrollForward = 1;
+		var topLayer;
+		var bottomLayer;
+
+		var ie=document.all
+		var dom=document.getElementById
+
+		if (messages.length>2)
+			i=2
+		else
+			i=0
+
+		function move1(whichlayer){
+			tlayer=eval(whichlayer)
+			if (tlayer.top>0&&tlayer.top<=5){
+				tlayer.top=0
+				setTimeout("move1(tlayer)",scrollerdelay)
+				setTimeout("move2(document.main.document.second)",scrollerdelay)
+				return
+			}
+			if (tlayer.top>=tlayer.document.height*-1){
+				tlayer.top-=5
+				setTimeout("move1(tlayer)",50)
+			}
+			else{
+				tlayer.top=parseInt(scrollerheight)
+				tlayer.document.write(messages[i])
+				tlayer.document.close()
+				if (i==messages.length-1)
+					i=0
+				else
+					i++
+			}
+		}
+
+		function move2(whichlayer){
+			tlayer2=eval(whichlayer)
+			if (tlayer2.top>0&&tlayer2.top<=5){
+				tlayer2.top=0
+				setTimeout("move2(tlayer2)",scrollerdelay)
+				setTimeout("move1(document.main.document.first)",scrollerdelay)
+				return
+			}
+			if (tlayer2.top>=tlayer2.document.height*-1){
+				tlayer2.top-=5
+				setTimeout("move2(tlayer2)",50)
+			}
+			else{
+				tlayer2.top=parseInt(scrollerheight)
+				tlayer2.document.write(messages[i])
+				tlayer2.document.close()
+				if (i==messages.length-1)
+					i=0
+				else
+					i++
+			}
+		}
+
+		function move3(whichdiv){
+			tdiv=eval(whichdiv)
+			if (parseInt(tdiv.style.top)>0&&parseInt(tdiv.style.top)<=5){
+				tdiv.style.top=0+"px"
+				if (stopped == 1) {switchButton(1); return;}
+				setTimeout("move3(tdiv)",scrollerdelay)
+				setTimeout("move4(second2_obj)",scrollerdelay)
+				return
+			}
+			if (parseInt(tdiv.style.top)>=tdiv.offsetHeight*-1){
+				if (stopped == 1 && parseInt(tdiv.style.top) == 0) {switchButton(1); return;}
+				if (stopped == 1 && parseInt(tdiv.style.top) == parseInt(scrollerheight)) {switchButton(1); return;}
+				tdiv.style.top=parseInt(tdiv.style.top)-5+"px"
+				setTimeout("move3(tdiv)",50)
+			}
+			else{
+				tdiv.style.top=parseInt(scrollerheight)
+				tdiv.innerHTML=messages[i]
+				itemStatus();
+				if (i==messages.length-1)
+					i=0
+				else
+					i++
+			}
+		}
+
+		function move4(whichdiv){
+			tdiv2=eval(whichdiv)
+			if (parseInt(tdiv2.style.top)>0&&parseInt(tdiv2.style.top)<=5){
+				tdiv2.style.top=0+"px"
+				if (stopped == 1) {switchButton(1); return;}
+				setTimeout("move4(tdiv2)",scrollerdelay)
+				setTimeout("move3(first2_obj)",scrollerdelay)
+				return
+			}
+			if (parseInt(tdiv2.style.top)>=tdiv2.offsetHeight*-1){
+				if (stopped == 1 && parseInt(tdiv2.style.top) == 0) {switchButton(1); return;}
+				if (stopped == 1 && parseInt(tdiv2.style.top) == parseInt(scrollerheight)) {switchButton(1); return;}
+				tdiv2.style.top=parseInt(tdiv2.style.top)-5+"px"
+				setTimeout("move4(second2_obj)",50)
+			}
+			else{
+				tdiv2.style.top=parseInt(scrollerheight)
+				tdiv2.innerHTML=messages[i]
+				itemStatus();
+				if (i==messages.length-1)
+					i=0
+				else
+					i++
+			}
+		}
+
+		function startscroll(){
+			// make sure function doesn't fun twice
+			if (running != 0)
+				return
+
+			running++
+
+			if (ie||dom){
+				first2_obj=ie? first2 : document.getElementById("first2")
+				second2_obj=ie? second2 : document.getElementById("second2")
+				move3(first2_obj)
+				second2_obj.style.top=scrollerheight
+				second2_obj.style.visibility='visible'
+				switchButton(0);
+				document.getElementById("itemStatus").innerHTML = '<span id="itemStatus" style="' + statusStyle + '">  1 of ' + messages.length + '</span>';
+			}
+			else if (document.layers){
+				document.main.visibility='show'
+				move1(document.main.document.first)
+				document.main.document.second.top=parseInt(scrollerheight)+5
+				document.main.document.second.visibility='show'
+			}
+		}
+
+		function itemStatus() {
+			document.getElementById("itemStatus").innerHTML = '<span id="itemStatus" style="' + statusStyle + '">' + (i==0?messages.length:i) + ' of ' + messages.length + '</span>';
+		}
+
+		function stopScroll() {
+			stopped = 1;
+			switchButton(2);
+		}
+
+		function restartScroll() {
+			if (stopped == 0 ) {return;}
+			stopped = 0;
+			if (scrollForward == 0) {
+				if (i==messages.length-1) {
+					i=1;
+				} else if (i==messages.length-2) {
+					i=0;
+				} else {
+					i=i+2
+				}
+			}
+
+			move3(first2_obj);
+			move4(second2_obj);
+
+			switchButton(0);
+			scrollForward = 1;
+			stopCompleted = 0;
+		}
+
+		function switchButton(what) {
+			if (what==0) {
+				document.getElementById("startstop").innerHTML = '<a href="javascript:stopScroll();"><img src="../../includes/site_images/misc/right_now_hold.gif" name="right_now_hold" border="0" align="absmiddle" width="65" height="7" alt="Pause Scroll" onMouseOver="scrollIconSwap(\'right_now_hold\',this,0);" onMouseOut="scrollIconSwap(\'right_now_hold\',this,1);"></a>';
+				document.getElementById("nextbutton").innerHTML = '<a href="javascript:nextScroll();"><img src="../../includes/site_images/misc/right_now_forward.gif" name="right_now_forward" border="0" align="absmiddle" width="7" height="9" alt="Next Item" onMouseOver="scrollIconSwap(\'right_now_forward\',this,0);" onMouseOut="scrollIconSwap(\'right_now_forward\',this,1);"></a>';
+				document.getElementById("backbutton").innerHTML = '<a href="javascript:backScroll();"><img src="../../includes/site_images/misc/right_now_back.gif" name="right_now_back" border="0" align="absmiddle" width="7" height="9" alt="Previous Item" onMouseOver="scrollIconSwap(\'right_now_back\',this,0);" onMouseOut="scrollIconSwap(\'right_now_back\',this,1);"></a>';
+			} else if (what==1) {
+				first2_top=parseInt(document.getElementById("first2").style.top)
+				second2_top=parseInt(document.getElementById("second2").style.top)
+				if ((first2_top != 0 && first2_top != parseInt(scrollerheight)) || (second2_top != 0 && second2_top != parseInt(scrollerheight))) {
+					setTimeout("switchButton(1)",50)
+					return;
+				}
+				document.getElementById("startstop").innerHTML = '<a href="javascript:restartScroll();"><img src="../../includes/site_images/misc/right_now_scroll.gif" name="right_now_scroll" border="0" align="absmiddle" width="65" height="7" alt="Resume Scroll" onMouseOver="scrollIconSwap(\'right_now_scroll\',this,0);" onMouseOut="scrollIconSwap(\'right_now_scroll\',this,1);"></a>';
+				document.getElementById("nextbutton").innerHTML = '<a href="javascript:nextScroll();"><img src="../../includes/site_images/misc/right_now_forward.gif" name="right_now_forward" border="0" align="absmiddle" width="7" height="9" alt="Next Item" onMouseOver="scrollIconSwap(\'right_now_forward\',this,0);" onMouseOut="scrollIconSwap(\'right_now_forward\',this,1);"></a>';
+				document.getElementById("backbutton").innerHTML = '<a href="javascript:backScroll();"><img src="../../includes/site_images/misc/right_now_back.gif" name="right_now_back" border="0" align="absmiddle" width="7" height="9" alt="Previous Item" onMouseOver="scrollIconSwap(\'right_now_back\',this,0);" onMouseOut="scrollIconSwap(\'right_now_back\',this,1);"></a>';
+				stopCompleted = 1;
+			} else if (what==2) {
+				document.getElementById("startstop").innerHTML = '<img src="../../includes/site_images/misc/right_now_wait.gif" border="0" align="absmiddle" width="65" height="7" alt="Please Wait...">';
+				document.getElementById("nextbutton").innerHTML = '<img src="../../includes/site_images/misc/right_now_forward.gif" name="right_now_forward" border="0" align="absmiddle" width="7" height="9" alt="Next Item">';
+				document.getElementById("backbutton").innerHTML = '<img src="../../includes/site_images/misc/right_now_back.gif" name="right_now_back" border="0" align="absmiddle" width="7" height="9" alt="Previous Item">';
+			}
+		}
+
+		function nextScroll() {
+			if (stopped == 0) {	stopScroll(); }
+			if (stopCompleted == 0) {
+				setTimeout("nextScroll()",50)
+				return;
+			}
+			if (parseInt(document.getElementById("first2").style.top)==0) {
+				topLayer = document.getElementById("first2");
+				bottomLayer = document.getElementById("second2");
+			} else {
+				bottomLayer = document.getElementById("first2");
+				topLayer = document.getElementById("second2");
+			}
+			if (scrollForward == 0) {
+				if (i==messages.length-1) {
+					i=1;
+				} else if (i==messages.length-2) {
+					i=0;
+				} else {
+					i=i+2
+				}
+			}
+			eval(topLayer).innerHTML = (i==0?messages[messages.length-1]:messages[i-1]);
+			eval(bottomLayer).innerHTML = messages[i];
+			itemStatus();
+			scrollForward = 1;
+			if (i==messages.length-1) {
+				i=0;
+			} else {
+				i++;
+			}
+		}
+
+		function backScroll() {
+			if (stopped == 0) {	stopScroll(); }
+			if (stopCompleted == 0) {
+				setTimeout("backScroll()",50)
+				return;
+			}
+			if (parseInt(document.getElementById("first2").style.top)==0) {
+				topLayer = document.getElementById("first2");
+				bottomLayer = document.getElementById("second2");
+			} else {
+				bottomLayer = document.getElementById("first2");
+				topLayer = document.getElementById("second2");
+			}
+			if (scrollForward == 1) {
+				if (i==0) {
+					i=messages.length-2;
+				} else if (i==1) {
+					i=messages.length-1;
+				} else {
+					i=i-2
+				}
+			}
+			eval(topLayer).innerHTML = (i==0?messages[messages.length-1]:messages[i-1]);
+			eval(bottomLayer).innerHTML = messages[i];
+			itemStatus();
+			scrollForward = 0;
+			if (i==0) {
+				i=messages.length-1;
+			} else {
+				i--;
+			}
+		}
+
+		function scrollIconSwap(iconImg, what, which) {
+			var imgPath = "../../includes/site_images/misc/";
+			if (which == 0) {
+				what.src = imgPath + iconImg + "_over.gif";
+			} else {
+				what.src = imgPath + iconImg + ".gif";
+			}
+		}
+
+		window.onload=startscroll
+		//-->
+		</script>
+		<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="../../includes/site_images/modules/now.gif" alt="NYCHA Now!" width="180" height="32"></td>
+  </tr>
+</table>
+
+		<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+          <td width="15"><img src="../../includes/site_images/spacers/spacer.gif" alt="" width="14" height="20"></td>
+          <td width="150"> <ilayer id="main" width=&{scrollerwidth}; height=&{scrollerheight}; bgColor=&{scrollerbgcolor}; visibility=hide>
+            <layer id="first" left=0 top=1 width=&{scrollerwidth};>
+            <script language="JavaScript1.2">
+		if (document.layers)
+		document.write(messages[0])
+		</script>
+            </layer>
+            <layer id="second" left=0 top=0 width=&{scrollerwidth}; visibility=hide>
+            <script language="JavaScript1.2">
+		if (document.layers)
+		document.write(messages[dyndetermine=(messages.length==1)? 0 : 1])
+		</script>
+            </layer>
+            </ilayer>
+            <script language="JavaScript1.2">
+		<!--
+		if (ie||dom){
+			document.writeln('<div id="main2" style="position:relative;width:'+scrollerwidth+';height:'+scrollerheight+';overflow:hidden;background-color:'+scrollerbgcolor+' ;background-image:url('+scrollerbackground+')">')
+			document.writeln('<div style="position:absolute;width:'+scrollerwidth+';height:'+scrollerheight+';clip:rect(0 '+scrollerwidth+' '+scrollerheight+' 0);left:0px;top:0px">')
+
+
+
+			document.writeln('<div id="first2" style="position:absolute;width:'+scrollerwidth+';left:0px;top:1px;">')
+			document.write(messages[0])
+			document.writeln('</div>')
+			document.writeln('<div id="second2" style="position:absolute;width:'+scrollerwidth+';left:0px;top:0px;visibility:hidden">')
+			document.write(messages[dyndetermine=(messages.length==1)? 0 : 1])
+			document.writeln('</div>')
+			document.writeln('</div>')
+			document.writeln('</div>')
+		}
+		//-->
+		</script> </td>
+          <td width="15"><img src="../../includes/site_images/spacers/spacer.gif" alt="" width="10" height="20"></td>
+        </tr>
+		<tr>
+    <td width="15"><img src="../../includes/site_images/spacers/spacer.gif" alt="" width="10" height="10"></td>
+    <td width="150"><img src="../../includes/site_images/spacers/spacer.gif" alt="" width="10" height="10"></td>
+    <td width="15"><img src="../../includes/site_images/spacers/spacer.gif" alt="" width="10" height="10"></td>
+  </tr>
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="150"><table width="148" height="15" border="0" cellspacing="0" cellpadding="0" class="col_border">
+              <tr valign="middle">
+                <td width="6"><img src="../../includes/site_images/spacers/spacer.gif" width="6" height="15"></td>
+                <td width="135"><table cellpadding="0" cellspacing="0" border="0" height="9" width="135">
+                    <tr valign="middle">
+                      <td width="65"><script language="Javascript">
+				  <!--
+					document.writeln('<span id="startstop"></span>');
+				  //-->
+				  </script></td>
+                      <td width="16"><img src="../../includes/site_images/spacers/spacer.gif" width="16" height="9"></td>
+                      <td width="7"><script language="Javascript">
+				  <!--
+					document.writeln('<span id="backbutton"></span>');
+				  //-->
+				  </script></td>
+                      <td width="40" align="center"><script language="Javascript">
+				  <!--
+				  document.writeln('<span id="itemStatus" style="' + statusStyle + '"></span>');
+				  //-->
+				  </script></td>
+                      <td width="7"><script language="Javascript">
+				  <!--
+				  document.writeln('<span id="nextbutton"></span>');
+				  //-->
+				  </script></td>
+                    </tr>
+                  </table></td>
+                <td width="8"><img src="../../includes/site_images/spacers/spacer.gif" width="8" height="15"></td>
+              </tr>
+            </table></td><td width="15">&nbsp;</td>
+        </tr>
+      </table>
+<br>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td><img src="../../includes/site_images/modules/resident_services.gif" alt="Resident Services" width="180"></td>
+  </tr>
+  
+  <tr>
+<td><center><a href="../../html/residents/phone_rent_payment.shtml"><img src="../../images/buttons/PayByPhone3.jpg" alt="Pay Rent by Phone" border="0"width="100"></a></center></td>    
+
+  </tr>
+  <td width="175"><img src="../../includes/site_images/misc/divider_1row_module.gif" alt="" width="175" height="20" border="0"></td>   
+  <tr>
+  
+<tr>
+<td><center><a href="https://a996-housingauthority.nyc.gov/top/"><img src="../../images/buttons/rentpayment_100x138.gif" alt="Online Rent Payment" border="0"width="100"></a></center></td>    
+
+  </tr>
+  <td width="175"><img src="../../includes/site_images/misc/divider_1row_module.gif" alt="" width="175" height="20" border="0"></td>   
+  <tr>
+     
+  <tr>
+   <td><center><a href="../../html/residents/maint_requests.shtml"><img src="../../includes/site_images/modules/ccc_logo_100x126.gif" alt="Centralized Call Center" border="0"width="100"></a></center></td>
+  </tr>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="5">&nbsp;</td>
+    <td width="175"><img src="../../includes/site_images/misc/divider_1row_module.gif" alt="" width="175" height="20" border="0"></td>
+  </tr>
+  </table>
+
+<br>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="../../includes/site_images/modules/languages.gif" alt="Languages" width="180"></td>
+  </tr>
+    <tr>
+    <td> <a href="../../html/home/spanish_home.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('spanish','','../../includes/site_images/modules/module_spanish_over.gif',1)"><img src="../../includes/site_images/modules/module_spanish.gif" alt="" name="spanish" width="180" border="0"></a></td>
+  </tr>
+    <tr>
+    <td> <a href="../../html/home/chinese_home.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('chinese','','../../includes/site_images/modules/module_chinese_over.gif',1)"><img src="../../includes/site_images/modules/module_chinese.gif" alt="" name="chinese" width="180" border="0"></a></td>
+  </tr>
+    <tr>
+    <td> <a href="../../html/home/russian_home.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('russian','','../../includes/site_images/modules/module_russian_over.gif',1)"><img src="../../includes/site_images/modules/module_russian.gif" alt="" name="russian" width="180" border="0"></a></td>
+  </tr>
+      <tr>
+    <td> <a href="../../html/home/french_home.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('french','','../../includes/site_images/modules/module_french_over.gif',1)"><img src="../../includes/site_images/modules/module_french.gif" alt="" name="french" width="180" border="0"></a></td>
+  </tr>
+    <tr>
+    <td> <a href="../../html/home/creole_home.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('creole','','../../includes/site_images/modules/module_creole_over.gif',1)"><img src="../../includes/site_images/modules/module_creole.gif" alt="" name="creole" width="180" border="0"></a></td>
+  </tr>
+</table>
+
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="../../includes/site_images/modules/resources.gif" alt="Resources" width="180" height="32"></td>
+  </tr>
+</table>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td>&nbsp;</td>
+    <td><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td><a href="../../html/about/agencyplan.shtml" class="module_bodytext_underline">Annual
+        Plan</a></td>
+    <td>&nbsp;</td>
+  </tr>
+<tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/assistance/borolocations.shtml" class="module_bodytext_underline">Apply for Public Housing</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+<tr>
+    <td>&nbsp;</td>
+    <td><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td><a href="../../html/about/boardmeeting_schedule.shtml" class="module_bodytext_underline">Board Meeting Schedule</a></td>
+    <td>&nbsp;</td>
+  </tr>
+<tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/ccschtml/communitycenters.shtml" class="module_bodytext_underline">Community
+    Centers</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+<tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/resources/development-data-book.shtml" class="module_bodytext_underline">Development
+    Data Book</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+<tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/about/factsheet.shtml" class="module_bodytext_underline">Fact
+    Sheet</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/about/financialinfo.shtml" class="module_bodytext_underline">Financial Information</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+
+  <tr valign="top">
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/news/nycha_environmental.shtml" class="module_bodytext_underline">NYCHA's Green Initiatives</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+
+  <tr valign="top">
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/developments/dev_guide.shtml" class="module_bodytext_underline">NYCHA Housing Developments</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/resources/propertyguide.shtml" class="module_bodytext_underline">Property Directory</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+<tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/resources/res_data.shtml" class="module_bodytext_underline">Resident Data Summary </a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="../../html/ccschtml/seniorcenters.shtml" class="module_bodytext_underline">Senior
+    Centers</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+<tr>
+    <td width="15">&nbsp;</td>
+    <td width="8">&nbsp;</td>
+    <td width="142">&nbsp;</td>
+    <td width="15">&nbsp;</td>
+  </tr>
+
+</table>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="../../includes/site_images/modules/links.gif" alt="Related Links" width="180" height="32"></td>
+  </tr>
+</table>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td>&nbsp;</td>
+    <td><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td><a href="http://www.nyc.gov/accessnyc" class="module_bodytext_underline">ACCESS NYC</a></td>
+    <td>&nbsp;</td>
+  </tr>
+<tr valign="top">
+    <td>&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/spacers/spacer.gif" height="2" width="8" align="top"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td><a href="http://www.nyc.gov/html/housinginfo/html/home/home.shtml" class="module_bodytext_underline">Affordable
+      Housing Resources</a></td>
+    <td>&nbsp;</td>
+  </tr>
+<tr>
+    <td>&nbsp;</td>
+    <td><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td><a href="http://www.firstgov.gov" class="module_bodytext_underline">First
+      Gov</a></td>
+    <td>&nbsp;</td>
+  </tr>
+<tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"> <a href="http://www.nyc.gov/html/hpd/" class="module_bodytext_underline">HPD</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="http://www.nyc.gov/html/hra/" class="module_bodytext_underline">HRA</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td> <a href="http://www.hud.gov" class="module_bodytext_underline">HUD</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="8"><img src="../../includes/site_images/modules/module_arrow_grey.gif" width="8" height="11"></td>
+    <td width="142"><a href="http://www.laguardiawagnerarchive.lagcc.cuny.edu/nycha/" class="module_bodytext_underline">LaGuardia
+      Archives</a></td>
+    <td width="15">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="8">&nbsp;</td>
+    <td width="142">&nbsp;</td>
+    <td width="15">&nbsp;</td>
+  </tr>
+</table>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="../../includes/site_images/modules/store.gif" alt="NYCHA Store" width="180" height="32"></td>
+  </tr>
+</table>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="165"><a href="../../html/pr/storecatalogue.shtml"><img src="../../images/photos/buy-nycha-gear.gif" alt="Buy NYCHA Gear" width="165" height="100" border="0"></a></td>
+  </tr>
+  </table>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="5">&nbsp;</td>
+    <td width="175"><img src="../../includes/site_images/misc/divider_1row_module.gif" alt="" width="175" height="20" border="0"></td>
+  </tr>
+  </table>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="165"><a href="../../html/pr/print-shop.shtml"><img src="../../images/photos/PrntLogo_165x109.gif" alt="Visit the NYCHA Print Shop" width="165" height="109" border="0"></a></td>
+  </tr>
+</table>
+
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="5">&nbsp;</td>
+    <td width="175"><img src="../../includes/site_images/misc/divider_1row_module.gif" alt="" width="175" height="20" border="0"></td>
+  </tr>
+  </table>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="165" align="middle"><a href="../../html/business/store-leasing.shtml"><img src="../../images/photos/stores-for-rent.gif" alt="Stores for Rent" border="0"></a></td>
+  </tr>
+  </tr>
+</table>
+
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="5">&nbsp;</td>
+    <td width="175"><img src="../../includes/site_images/misc/divider_1row_module.gif" alt="" width="175" height="20" border="0"></td>
+  </tr>
+  </table>
+<br>
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+     <td width="15">&nbsp;</td>
+    <td width="165"><a href="../../html/business/training_n_development.shtml"><img src="../../images/buttons/traininglogo.jpg" alt="Training and Development Programs" width="165" height="111" border="0"></a></td>
+  </tr>
+ </table>
+
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td width="5">&nbsp;</td>
+    <td width="175"><img src="../../includes/site_images/misc/divider_1row_module.gif" alt="" width="175" height="20" border="0"></td>
+  </tr>
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="8">&nbsp;</td>
+    <td width="142">&nbsp;</td>
+    <td width="15">&nbsp;</td>
+  </tr></table>
+
+
+
+
+					
+				</td>
+				<!-- END of THIRD column -->
+		<!-- BEGIN_PRINT_PAGE -->		
+			</tr>
+	<!-- END_PRINT_PAGE -->			
+			<tr>
+				
+
+				
+
+			
+			</tr>
+			<tr height="25">
+				<td colspan="3" align="left" valign="top" width="769" height="25">
+
+					<table width="769" border="0" cellspacing="0" cellpadding="0">
+	<tr><td><img src="../../includes/site_images/misc/bottom_branding.gif" border="0"></td></tr>
+</table>
+
+
+
+	<!-- END_PRINT_PAGE -->
+			<!-- START of nycgov_footer.inc-->
+<style type="text/css">
+<!--
+	.footer_links {font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 10px;
+		color: #F9D053;
+	}
+
+	.footer_copyright {font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 10px;
+		color: #C4C4B2;
+	}
+-->
+</style>
+<TABLE cellSpacing=0 cellPadding=0 width=769 bgColor=#494B4C border=0>
+	<TBODY>
+	<TR><TD width=13><IMG height=24 src="../../includes/site_images/spacers/spacer.gif" width=13></TD>
+          <TD width=287><SPAN class=footer_copyright>Copyright 2009 The City of New York</SPAN></TD>
+          <TD align=right width=444><SPAN class=footer_links><A class=footer_links href="/contact">Contact Us</A> | <A class=footer_links href="/faqs">FAQs</A> | <A class=footer_links href="/privacy">Privacy Statement</A> | <A class=footer_links href="/sitemap">Site Map</A></SPAN></TD>
+          <TD align=right width=25><IMG height=24 src="../../includes/site_images/spacers/spacer.gif" width=25></TD></TR>
+        </TBODY>
+</TABLE>
+<!-- END of nycgov_footer.inc-->
+
+	<!-- BEGIN_PRINT_PAGE -->
+				</td>
+			</tr>
+		</table>
+	<!-- END_PRINT_PAGE -->	
+	</body>
+</html>
+

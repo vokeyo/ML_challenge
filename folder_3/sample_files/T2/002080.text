@@ -1,0 +1,1976 @@
+RD Instruction 2009-D
+Table of Content
+Page 1
+
+
+
+PART 2009 - BUDGETS
+
+SUBPART D – Budgetary Allotment Codes and Titles 
+
+TABLE OF CONTENTS
+Sec.		Page
+2009.151	General.	1
+
+2009.152	Definitions – Administrative Budget.	1
+	
+	(a)  Allocation Account.	1
+	(b)  Allotment Account.	1
+	(c)  Obligations and Expenditures.	1
+
+2009.153	Administrative Allotment Control Coding Sequence.	1
+
+	(a)  Allotment, Distribution, and Classification.	1
+	(b)  Fiscal Year/Appropriation.	2
+	(c)  Division/Allottee.	2
+	(d)  Organization Code.	2
+	(e)  State.	2
+	(f)  County.	2
+	(g)  Reporting Category.	2
+	(h)  Object Class.	2
+
+2009.154	Allocations and Distributions.	2
+
+2009.155	Allotments - Administrative Accounts.	2
+
+2009.156	Definitions – Program Budget.	3
+	
+	(a)  Allotment Account.	3
+	(b)  Distribution Account.	3
+	(c)  Obligation and Expenditure Account.	3
+
+2009.157	Loan and Grant Allotment Control Coding Sequence.	3
+
+	(a)  Allotment, Distribution, and Obligation and 
+	     Expenditure.	3
+	(b)  Appropriation.	4
+	(c)  Fiscal Year.	4
+	(d)  Principal Allottee.	4
+	(e)  Major Classification.	4
+	
+	
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Table of Content
+Page 2
+
+
+
+Sec.		Page
+
+	(f)  Object Class.	4
+	(g)  Planning, Programming, and Budgeting.	4
+	(h)  Cost Center.	4
+	(i)  Subunit.	4
+	(j)  Geographic Location.	4
+	(k)  County.	5
+	(1)  Obligation and Expenditure Accounts.	5
+	(m)  Special Purpose.	5
+
+2009.158	Master Allotment and Distribution Accounts
+	for Loans and Grants.	5
+
+2009.159	Master Allotment Accounts - Insurance Funds.	6
+
+2009.160	- 2009.200 [Reserved]	6
+	
+
+Exhibit A – Loan and Grant Allotment Control Coding Sequence
+Exhibit B – Loan and Grant Appropriation Codes
+Exhibit C - Principal Allottee
+Exhibit D - Major Classification Codes
+Exhibit E - Allotment Coding for Loans and Grants
+Exhibit F - Allotment Coding for Administrative Expense 
+Exhibit G - Allotment Coding for the Insurance Funds 
+Exhibit H - Organizational Codes (Administrative)
+Exhibit I - Cost Center
+Exhibit J - Allotment Coding - Loan and Grant Special Purpose
+Exhibit K – Administrative Allotment Special Purpose Codes
+Exhibit L - Budget Object Class (BOC) Rollup For Budgets By Object Class
+
+
+oOo
+
+
+RD Instruction 2009-D
+
+PART 2009 - BUDGETS
+
+SUBPART D – Budgetary Allotment Codes and Titles
+
+§ 2009.151 General.
+
+	This instruction prescribes the codes and titles with related explanations and procedures used under the Rural Development system of control of funds and authorities.  Allotment, distribution, and obligation and expenditure accounts described herein will be established only as required and authorized by the issuance of allotment advices or other source documents.  Obligations may be incurred only for purposes which have been approved in accordance with policies established by the Office of Management and Budget (OMB).
+
+	Rural Development is mandated by the Department to use the Foundation Financial Information System (FFIS) for administrative budget funds control.  The codes and titles explained in this instruction are required for use in FFIS funds control system.  The complete detail procedures for FFIS can be accessed through the USDA Rural Development Intranet at http://teamrd.usda.gov, select St. Louis Intranet and then select Deputy Chief Financial Officer.  Click on FFIS User Documentation to find the information. 
+
+§ 2009.152  Definitions – Administrative Budget.
+
+(a)  Allocation Account.  An account established for the purpose of recording allotments of funds to administrative officials (allottees) for specified purposes.
+
+(b)  Allotment Account.  An account established (usually as a subsidiary to an allocation account) for the purpose of recording and maintaining a control over amounts that are detail changes to the allocation within specific allotments.  Such amounts are made available to the allottees.
+
+(c)  Obligations and Expenditures.  A transaction account that is established to record detailed purposes for which obligations and expenditures are incurred and funds are expended.
+
+§ 2009.153  Administrative Allotment Control Coding Sequence.
+
+(a)  Allotment, Distribution, and Classification.  Allotment and program code will be coded in the sequence shown in Exhibit A.
+
+
+DISTRIBUTION:  WS                                         ADMINISTRATION
+                                                               BUDGETS
+
+
+1
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+§ 2009.153 (Con.)
+
+
+(b)  Fiscal Year/Appropriation.  The first position of the allotment coding sequence identifies the fiscal year.  The second position of the allotment coding sequence identifies the fund that references the appropriation from which funds are allotted.  See Exhibit B.
+
+(c)  Division/Allottee.  For National Office, the third and fourth position of the allotment coding sequence identifies the principal allottee and location.  See Exhibit C and H.
+
+(d)  Organization Code.  For National Office, the fifth, sixth, and seventh positions of the allotment coding sequence identifies additional levels within the organization structure to which sub-allotments can be allotted to those levels and the obligation and expenditure is applicable.  See Exhibit H.
+
+(e)  State.  For the States, the third, fourth, and fifth positions of the allotment coding sequence identifies the state to which the obligations and expenditures are incurred.  See Exhibit H.
+
+(f)  County.  For States, the sixth and seventh positions of the allotment coding sequence identifies the county in which obligations and expenditures are incurred.  The procedure for coding is given in exhibit H.
+
+(g)  Reporting Category.  For National Office, and States, the eighth and ninth positions of the allotment coding sequence identify obligations and expenditures for special purposes which cannot be identified from other allotment coding.  See Exhibit K.
+
+(h)  Object Class.  The object class is not part of the Allotment Control Coding Sequence.  It is entered on sub-allotting and obligating documents that create system transactions.  It classifies all obligations and expenditures in accordance with the classifications prescribed by OMB as shown in Exhibit F.
+
+§ 2009.154  Allocations and Distributions.
+
+(a)  Allocations and/or distributions will be made by the National Office.  Allotments will be made to principal allottees on Form 
+RD 2009-42, "Allotment Advice," or Form AD-704, "Allotment Advice."  Distributions of authorizations will be made to offices as required and will be the basis for establishing, maintaining, and reporting of Allocations and Distribution Accounts within the Appropriation.  A separate series of detailed obligation and expenditure will be established, maintained, and reported for each Allotment Account.
+
+
+
+2
+
+
+RD Instruction 2009-D
+§ 2009.154 (Con.)
+
+
+(b)  The obligation and expenditure applicable to each Allocation Account are described in subsequent exhibits of this Instruction.  Forms RD 2009-42 or AD-704 will authorize increases or decreases to the Allotment Accounts and will indicate, when required, obligation and expenditure are approved for obligation purposes.
+
+(c)  Amounts subject to apportionment will be allotted on a cumulative quarterly or other periodic basis in accordance with RD Instruction 2009-B.
+
+§ 2009.155  Allotments - Administrative Accounts.
+
+	An agency-wide allotment for the administrative appropriation will be made through the use of Form AD-704.  Agency-wide allocations of this allotment to the Allotment Accounts will be made through the use of Form 
+AD-705, “Advice of Allocation of Funds.”  Upon receipt of this form, the allottee will process obligations and expenditures as they are received against these allocations using detail object class.  Allocations (Form 
+AD-704) will not be issued for receipt accounts.  See chart of accounts in Exhibit F.
+
+§ 2009.156  Definitions – Program Budget.
+
+(a)  Allotment Account.  An account established for the purpose of recording allotments of funds to administrative officials (allottees) for specified purposes.
+
+(b)  Distribution Account.  An account established (usually as a subsidiary to an allotment account) for the purpose of recording and maintaining a control over amounts that are within specific allotments.  Such amounts are made available to administrative officials other than allottees.
+
+(c)  Obligation and Expenditure Account.  An account established to record detailed purposes for which obligations are incurred and funds are expended.
+
+§ 2009.157  Loan and Grant Allotment Control Coding Sequence.
+
+(a)  Allotment, Distribution, and Obligation and Expenditure.  Allotment, distribution, and obligation and expenditure accounts will be coded in the sequence shown in Exhibit A.
+
+
+
+
+
+3
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+§ 2009.157 (Con.)
+
+
+
+(b)  Appropriation.  The first and second digits of the allotment coding sequence identifies the various appropriations from which funds are allotted.  See Exhibit B.
+
+(c)  Fiscal Year.  The third and fourth digits of the allotment coding sequence represents the fiscal year pertaining to allotment period involved.  The last two digits of the fiscal year will be used in identifying a specific time period; however, certain annual appropriations and operating procedures may require only the last digit for identification purposes.
+
+(d)  Principal Allottee.  The fifth digit of the allotment coding sequence identifies the principal allottee.  See Exhibit C.
+
+(e)  Major Classification.  The sixth and seventh digits of the allotment coding sequence identifies the principal activity of the allotment or distribution as shown in Exhibit D.
+
+(f)  Object Class.  The eighth and ninth digits of the allotment coding sequence will classify allotments in accordance with the classifications prescribed by OMB and as shown in Exhibits:
+
+                E  Loans and Grants
+                G  Insurance Fund Activities
+
+(g)  Planning, Programming, and Budgeting.  The tenth, eleventh, and twelfth digits of the allotment coding sequence will identify the program elements as specified by the Department.  When activities are not specifically classified by the Department under the Program Planning and Budgeting (PPB) system, the codes are assigned by the Budget Division.  See Exhibit E.
+
+(h) Cost Center.  The thirteenth and fourteenth digits of the allotment coding sequence identifies the cost center to which the obligation and expenditure is applicable.  See Exhibit I.
+
+(i)  Subunit.  The fifteenth digit of the allotment coding sequence identifies the subsidiary organizational units.  See Exhibit H.
+
+(j)  Geographic Location.  The sixteenth and seventeenth digits of the allotment coding sequence identifies the state in which the obligation and expenditure are incurred.  See Exhibit H.
+
+
+
+
+
+4
+
+
+RD Instruction 2009-D
+§ 2009.157 (Con.)
+
+
+(k)  County.  The eighteenth, nineteenth, and twentieth digits of the allotment coding sequence identifies the county in which funds are obligated.  County codes will be assigned to all loan and grant obligations and expenditures.  See Exhibit H.
+
+(l)  Obligation and Expenditure Accounts.  The twenty-first, twenty-second, and twenty-third digits of the allotment coding sequence identify:
+
+(1)  For loans and grants, the type of submission and the purposes for which they are made.  See Exhibit E.
+
+(2)  For the insurance funds and capital accounts, this code will identify obligations and expenditures below the object class level.  See Exhibit G.
+
+(m)  Special Purpose.  The twenty-fourth and twenty-fifth digits of the allotment coding sequence will be used whenever a need exists to identify or classify loan purposes or special use.  See Exhibit J.
+
+§ 2009.158  Master Allotment and Distribution Accounts for Loans and Grants.
+
+       Authorization to incur obligations for loans and the allotment of loan and grant funds will be made to the Deputy Chief Financial Officer, St. Louis Office, on an allotment advice or distributions may be made to State Offices, as circumstances require, by the National Office. 
+
+
+(a)  Supplementary internal controls over funds reserved by the National Office may be established by the Deputy Chief Financial Officer, St. Louis Office.
+
+(b)  The appropriation symbol, appropriation code, major classification, object class, PPB and obligation and expenditure codes for each authorization or fund is shown in Exhibit E.
+
+(c)  Veteran activity will be separately identified for loans to individuals.  The suffix "C" will be used to identify non-veterans and the suffix "5" will be used to identify veterans.
+
+
+
+
+
+
+
+
+5
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+
+
+
+§ 2009.159  Master Allotment Accounts - Insurance Funds.
+
+(a)  Allotments for the Agricultural Credit Insurance Fund (ACIF), and the Rural Housing Insurance Fund (RHIF) and the Rural Development Insurance Fund (RDIF) will be made to an object class code under jurisdiction of the Deputy Chief Financial Officer, St. Louis Office.
+
+(b)  Upon receipt of an allotment advice, the Office of the Deputy Chief Financial Officer, St. Louis Office will establish obligation and expenditure accounts as required. 
+
+(c)  Generally, allowance amounts will not be established for the various purposes for which the ACIF, RDIF, and RHIF may be obligated.  The Deputy Chief Financial Officer, St. Louis Office is authorized to record obligations and expenditures for approved purposes as required within the total Master Allotment available.  Program levels and other amounts subject to the apportionment processes may also by controlled by allowance accounts applicable to the insurance funds.  These controls will be established on an item-by-item basis as needed to comply with reporting requirements.  A chart of Allotment Accounts is shown in Exhibit G.
+
+§§ 2009.160 - 2009.200 [Reserved]
+
+
+Attachments:  Exhibits A, B, C, D, E, F, G, H, I, J, K, and L
+
+
+
+oOo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6
+
+
+Exhibit A in PDF ONLY.
+
+RD Instruction 2009-D
+Exhibit B
+Page 1
+
+
+
+LOAN AND GRANT APPROPRIATION CODES
+
+Appropriation CodeEntity Code**
+Symbol
+Title
+
+04212X2004Rural Housing for Domestic Farm Labor Grants05212(FY)2065Rural Business Enterprise Grants06212X2006Mutual and Self-Help Housing Grants07212X2066Rural Water & Waste Disposal Grants081230502
+(FY 93 Only)Extension Service Farm Outreach Grants12X0601
+(FY 94 & Subsequent)Outreach and Assistance Grants09212X2066Rural Water & Waste Disposal Grants10212(FY)2067Rural Community and Fire Protection Grants11212(FY)2062Rural Housing Supervisory Assistance Grants12212X2064
+(FY 89 & Subsequent)
+12(FY)2064
+(FY 88 & Prior)Very Low Income Housing Repair Grants13412X4140Agricultural Credit Insurance Fund 
+Liquidating Account
+
+
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit B
+Page 2
+
+
+LOAN AND GRANT APPROPRIATION CODES (Con.)
+
+Appropriation CodeEntity Code**
+Symbol
+Title
+
+14 18712X4141Rural Housing Insurance Fund Liquidating Account15912X4155Rural Development Insurance Fund Liquidating Account161612X2072Alcohol Fuels 
+Program Account1712(FY)0502 
+(FY 94 ONLY)Rural Technology & Cooperative Development Grants12(FY)1900
+(FY 95 & Subsequent)Rural Technology & Cooperative Development Grants19112X4222Self-Help Housing Land Development Fund 
+Liquidating Account20212X2002Rural Rental Assistance Payments (New Construction, 1984 and 1985)21212X0137Rental Assistance Program (FY 78 - 91 transferred from Liquidating Fund)221212(FY)2086Agricultural Resource Conservation Demonstration Program 
+Program Account231412(FY)1140Agricultural Credit Insurance Fund
+Program Account
+
+RD Instruction 2009-D
+Exhibit B
+Page 3
+
+
+
+LOAN AND GRANT APPROPRIATION CODES (Con.)
+
+Appropriation CodeEntity Code**
+Symbol
+Title
+
+24 281712(FY)2081Rural Housing Insurance Fund
+Program Account251912X2082
+(FY 94 & Subsequent)
+12(FY)2082
+(FY 92 & 93)Rural Development Insurance Fund Program Account
+261812X2069
+(FY 94 & Subsequent)
+12(FY)2069
+(FY 92 & 93)Rural Development Loan Fund Program Account271112(FY)2080Self-Help Housing Land Development Fund 
+Program Account29312-13X2100 
+(FY 75 & Subsequent)Regional Development Program – RAPC30312-46X0200Appalachian Regional Development Program, Executive31312-13(FY)2050(20)Development Facilities, Economic Development Administration12-13X2050(20)EDA Grant32312X0500Hazardous Waste Management33212X2009Supervisory and Technical Assistance Grants34312X1010Resource Conservation and Development, SCS
+
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit B
+Page 4
+
+
+LOAN AND GRANT APPROPRIATION CODES (Con.)
+
+Appropriation CodeEntity Code**
+Symbol
+Title
+
+3512X0500Hazardous Waste Management - RDA36312X1072(03)Watershed and Flood Prevention Operations - Flood Prevention, SCS37312X4336Commodity Credit Corporation Migrant Farm Labor Housing Assistance38312X1072(08)Watershed and Flood Prevention Operations - Watershed Protection Loan Programs, SCS39312-89X0215Department of Energy Grants40812X4233Rural Development Loan Fund
+Liquidating Account41212(FY)2068Rural Development Planning Grants42312-89X0224.91DOE Alcohol Fuel Conversion Cost-Sharing43312-20X0114Biomass Energy Security Reserve44312-14X5015Department of Interior - Office of Surface Mining45212X2071
+(FY 89 & Subsequent)
+12(FY)2071
+(FY 88 & Prior)Compensation for Construction Defects46212(FY)2070Rural Housing Preservation Grants
+
+RD Instruction 2009-D
+Exhibit B
+Page 5
+
+
+LOAN AND GRANT APPROPRIATION CODES (Con.)
+
+Appropriation CodeEntity Code**
+Symbol
+Title
+
+47212(FY)2046Emergency Community Waste Assistance Grants48212(FY)2045Solid Waste Management Grants49212(FY)0170State Mediation Grants
+(FY 90 and 91 transferred from Liquidating Fund)502812X4219Rural Development Loan Fund Direct Loan Financing Account51212F3875(20)Budget Clearing Account5212(FY)1901Local Technical Assistance and Planning Grants532412X4212Agricultural Credit Insurance Fund 
+Direct Loan Financing Account54 582712X4215Rural Housing Insurance Fund
+Direct Loan Financing Account552912X4217Rural Development Insurance Fund
+Direct Loan Financing Account5612X3105Rural Economic Development Grants5712X3104Rural Economic Development Loan Fund 
+Liquidating Account592112X4214Self-Help Housing Land Development Fund
+Direct Loan Financing Account
+
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit B
+Page 6
+
+
+LOAN AND GRANT APPROPRIATION CODES (Con.)
+
+Appropriation CodeEntity Code**
+Symbol
+Title
+
+623212X4177Agricultural Resource Conservation Demonstration Program 
+Guaranteed Loan Financing Account633412X4213Agricultural Credit Insurance Fund
+Guaranteed Loan Financing Account643712X4216Rural Housing Insurance Fund
+Guaranteed Loan Financing Account653912X4218Rural Development Insurance Fund
+Guaranteed Loan Financing Account663612X4220Alcohol Fuels
+Guaranteed Loan Financing Account6712X3108Rural Economic Development
+Program Account7314122/31140Agricultural Credit Insurance Fund Supplemental Disaster Appropriation
+Program Account123/41140ACIF Flood Disaster 
+Program Account7519122/32082Rural Development Insurance Fund Supplemental Disaster Appropriation 
+Program Account123/42082RDIF Flood Disaster 
+Program Account
+
+RD Instruction 2009-D
+Exhibit B
+Page 7
+
+
+LOAN AND GRANT APPROPRIATION CODES (Con.)
+
+Appropriation CodeEntity Code**
+Symbol
+Title
+
+7618122/32069Rural Development Loan Fund Supplemental Disaster Appropriation
+Program Account7712X4176Rural Economic Development Loan Fund 
+Financing Account7817122/32081Rural Housing Insurance Fund Supplemental Disaster Appropriation
+Program Account123/42081RHIF Flood Disaster 
+Program Account822122/32064Very Low Income Housing Repair Grants Supplemental Disaster Appropriation123/42064Very Low Income Housing Repair Grants - Flood Disaster1252064Very Low Income Housing Repair Grants - Emergency Assistance842122/32004Rural Housing for Domestic Farm Labor Grants Supplemental Disaster Appropriation123/42004Rural Housing for Domestic Farm Labor Grants - Natural Disaster872122/32046Emergency Community Water Assistance Grants Supplemental Disaster Appropriation
+
+RD Instruction 2009-D
+Exhibit B
+Page 8
+
+
+LOAN AND GRANT APPROPRIATION CODES (Con.)
+
+Appropriation CodeEntity Code**
+Symbol
+Title
+
+123/42046Emergency Community Water Assistance Grants - Flood Disaster892122/32066Rural Water and Waste Disposal Grants Supplemental Disaster Appropriation91N/A12(FY)111Agricultural Resource Conservation Demonstration Program Loans92N/A12(FY)222Agriculture Loans92N/A12(FY)223Emergency Livestock Loans96N/A12(FY)666Alcohol Fuels Guaranteed Loans97N/A12(FY)777Rural Housing Loans98N/A12(FY)888Rural Development Loans
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RD Instruction 2009-D
+Exhibit B
+Page 9
+
+
+
+LOAN AND GRANT APPROPRIATION CODES (Con.)
+
+DirectGuaranteedLiquidatingProgramFinancingFinancing**SHHLDF11121FmmA-OTHER2FmmA-ALLOCATED3ACIF4142434RHIF7172737RDLF81828RDIF9192939ARCDP1232Alcohol Fuels1636
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(12-07-05)  PN 392 
+
+RD Instruction 2009-D
+Exhibit B
+Page 10
+
+
+LOAN AND GRANT APPROPRIATION CODES (Con.)
+
+Appropriation CodeEntity Code**
+Symbol
+Title
+
+0l112(FY)0403
+(FY 01 & Subsequent)
+12(FY)1952 
+(FY 00 & Prior)Salaries and Expenses01RC12(FY)0403
+(FY 01 & Subsequent)
+12(FY)1952 
+(FY 00 & Prior)Salaries and Expenses - 
+Reimbursable 03312X4202
+Salaries and Expenses - 
+National Sheep Industry Improvement Center0441210403
+12(FY)1903 
+(FY 00 & Prior)Salaries and Expenses - 
+Rural Business-Cooperative Service0881210403
+12(FY)1981 
+(FY 00 & Prior)Salaries and Expenses - 
+Rural Utilities ServicePP12(FY)0403
+(FY 01 & Subsequent)
+12(FY)1952 
+(FY 00 & Prior)Payroll – HQ only
+
+
+
+
+
+oOo
+
+
+
+
+
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit C
+Page 1
+
+
+PRINCIPAL ALLOTTEE
+
+Allottees identify the official having jurisdiction over the allotted funds or to whom the expenditures are charged.  For administrative funds the allottee is designated by a Division (DVSN) code used on allocation/allotment documents.  For loan and grant funds the allottee is designated by the fourth digit in the allotment control coding sequence.
+
+Administrative -
+The DVSN designates the allottee.  These codes are as follows:
+
+DVSNSTATEDVSNSTATEAK -AlaskaNC -North CarolinaAL -AlabamaND -North DakotaAR -ArkansasNE -NebraskaAZ -ArizonaNJ -New JerseyCA -CaliforniaNM -New MexicoCO -ColoradoNV -NevadaDE -Delaware (Maryland)NY -New YorkFL -Florida (Virgin Islands)OH -OhioGA -GeorgiaOK -OklahomaHI -Hawaii (Guam & Western Pacific)OR -OregonIA -IowaPA -PennsylvaniaID -IdahoPR -Puerto RicoIL -IllinoisSC -South CarolinaIN -IndianaSD -South DakotaKS -KansasTN -TennesseeKY -KentuckyTX -TexasLA -LouisianaUT -UtahMA -Massachusetts (Connecticut/Rhode Island)VA -VirginiaME -MaineVT -Vermont (New Hampshire)MI -MichiganWA -WashingtonMN -MinnesotaWI -WisconsinMO -MissouriWV -West VirginiaMS -MississippiWY -WyomingMT -Montana
+DVSNHEADQUARTERS ORGANIZATIONOD -OFFICE OF COMMUNITY DEVELOPMENTOM -DEPUTY ADMINISTRATOR FOR OPERATIONS AND MANAGEMENTPP -DEPUTY UNDER SECRETARY FOR POLICY AND PLANNINGRB -RURAL BUSINESS-COOPERATIVE SERVICERH -RURAL HOUSING SERVICERU -RURAL UTILITIES SERVICESP -NATIONAL SHEEP INDUSTRY IMPROVEMENT CENTER
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit C
+Page 2
+
+
+Loan and Grant -
+The fourth digit in the loan and grant allotment control coding sequence designates the allottee.  These codes are as follows:
+
+CodeArea of Jurisdiction1Deputy Administrator, Management2Deputy Chief Financial Officer3State Director
+
+
+
+oOo
+
+RD Instruction 2009-D
+Exhibit D
+Page 1
+
+MAJOR CLASSIFICATION CODES
+
+Major Classification.  This two-digit code will be used to designate the major classification of obligations and expenditures and will be used in connection with the various appropriation codes (Exhibit B) in the preparation of technical management reports.
+________________________________________________________________________
+_______________Description_________________________________________Code_
+
+Program Activity:
+
+     Loans:
+       Operating                                                    01
+       Emergency                                                    02
+       Economic Opportunity - Individuals                           03
+       Emergency - Livestock                                        04
+       Farm Ownership                                               05
+       Non-Farm Enterprise (FO)                                     06
+
+       Recreation, Individual                                       07
+       Soil and Water Individual                                    08
+       Economic Emergency Loans                                     09
+       Housing, Weatherization - Coop and Public Utility            14
+       Housing, Low to Moderate Income                              15
+       Housing, Above Moderate Income                               16
+
+       Labor Housing                                                17
+       Rental/Cooperative Housing                                   18
+       Mobile Home Park                                             19
+       Self-Help Housing Land Development                           20
+       HUD Insured Loan Program                                     25
+       Community Services                                           32
+       Cooperative Association, OEO                                 33
+       Indian Land Acquisition                                      34
+       Community Facilities                                         35
+       Flood Prevention                                             36
+       Works of Improvement (Watershed)                             37
+       Business and Industrial                                      39
+       Resource Conservation and Development                        40
+       Loan Costs, Recoverable and Non-Recoverable                  42
+       Alcohol Production Loans                                     43
+       Nonprofit National Rural Development and Finance Corporation 44
+       Loans
+
+
+
+
+
+
+(5-27-87)  PN 52
+
+RD Instruction 2009-D
+Exhibit D
+Page 2
+________________________________________________________________________
+_______________Description_________________________________________Code_
+
+     Grants:
+       Rental Assistance                                             21
+       Water and Waste Disposal, Planning                            51
+       Very Low Income Housing Repair                                52
+       Water and Waste Disposal, Development                         53
+       Rural Development Planning Grants                             54
+       Farm Labor Housing                                            55
+       Rural Community Fire Protection Grants                        56
+       Mutual and Self-Help Housing                                  57
+       Rural Housing Supervisory Assistance                          58
+       Rural Development                                             59
+       Department of Energy Grants                                   60
+       DOE Alcohol Fuel Conversion Cost-Sharing                      62
+       Compensation for Construction Defects                         63
+       Rural Housing Preservation Grants                             64
+
+     Administrative:
+       General, Regular                                              71
+       General, Temporary                                            72
+       Reimbursable Expenses                                         76
+       Interest and Dividends                                        79
+       Off-set Credits, PL 89-106                                    80
+
+       Off-set Charges, PL 89-106                                    81
+       Undistributed Charges                                         83
+       Refunds                                                       85
+       Receipts and Reimbursement Credits                            90
+
+Exhibit E in PDF ONLY.
+
+Exhibit F in PDF ONLY.
+
+Exhibit G, pages 1 through 5 in PDF ONLY.
+
+RD Instruction 2009-D
+Exhibit G
+Page 6
+
+DESCRIPTION OF ACCOUNTS
+
+Obligation and Expenditure accounts as shown on Exhibit G will be established for the following purposes:
+
+A    Investments and Loans  33
+
+Loans from Fund for Later Sale - These accounts will be charged for loans made from the fund for later sale.  
+
+Loans Assigned under Insurance Provisions - These accounts will be charged the amount of principal and interest paid note holders by the fund to purchase notes in default or to purchase notes for servicing actions which require that the note be held by the fund.
+
+Loans assigned Under Purchase Agreement - These accounts will be charged for the amounts of principal any interest paid note holders by the fund to purchase notes, at the option of the holder, after the expiration of the fixed redemption period.  
+
+Redemption of Certificates of Beneficial Ownership - These accounts will be charged for the amount of principal paid to holders by the fund to redeem Certificates of Beneficial Ownership after expiration of the fixed period.  Contracts of Guarantee - These accounts will be charged for the amount of principal and interest of the purchase of guaranteed loans.
+
+Recertifications - These accounts will be charged with recertified payments and credited with clearances received from Treasury.
+
+Delinquent Installments - These accounts will be charged for the amounts paid annually by the fund to note holders for borrowers' delinquent installments of principal and interest.  
+
+1/   Recoverable Cost - These accounts will be charged for recoverable costs properly chargeable to the borrowers' accounts:
+
+               Other - Legal fees, recording fees and expenses
+                 incident to foreclosed or mortgaged property.
+
+               Taxes - Taxes on insured loan property and
+                 special assessments.
+
+               Insurance - Insurance premiums which the
+                 borrower fails to pay.
+
+               Advertising - Advertising costs.
+
+Cost Incident to Acquired Property - These accounts will be charged for costs incident to acquired real property:
+
+
+RD Instruction 2009-D
+Exhibit G
+Page 7
+(Revision 1)
+
+
+               Other - Legal fees, recording fees, and payments to prior
+                 lien holders.
+
+               Taxes - Taxes on acquired real property and special
+                 assessments.
+
+               Preservation and Protection - Cost for major repair,
+                 building improvements, land development that increase the
+                 value of acquired real estate, and other costs necessary
+                 for the preservation and protection of acquired real
+                 property.
+
+               Advertising - Advertising costs.
+
+1/   Credit Report fees - These accounts will be charged with the cost or credit report fees of approved loan applicants.
+
+Rental Assistance - This account will be charged with all rental assistance obligation and voucher activity applicable to the Rural Housing Insurance Fund.
+
+B    Other Services  25
+
+Advance Payments - The Office of Management and Budget requires that advance reimbursements (for transfers of funds) be recorded as an expenditure of the paying appropriation and as a reduction of expenditures for the receiving appropriations.  The credit entry will be posted as "Obligations and "Vouchers to the Rural Development Appropriation "Salaries and Expenses."  This account includes charges applicable to other government agencies when Rural Development may be administering the assets held in trust for said agency.  
+
+Non-Recoverable Costs - Credit Report Fees - This account will be charged with costs of credit bureau services which will not be collected from the loan applicant, because the loan was not processed, or the amount is determined not to be administratively feasible to collect.
+
+Non-Recoverable Cost Incident to Sale of Insured Loans - This account will be charged with cost incident to sale of insured loans.  This will include the concession given on block sales to syndicate on open market.
+
+
+
+
+
+(5-27-87)  PN 52
+
+RD Instruction 2009-D
+Exhibit G
+Page 8
+(Revision 1)
+
+
+Agreements/Contracts - This account will be used to record agreements and contracts not identified elsewhere in this Instruction.
+
+Penalty Interest - This account will be used to record interest penalty for late payments to private vendors.  
+
+Agreements/Contracts for FAPDS - This account will be used to record all agreement any contract costs for development of the Automated Program Delivery System.
+
+Legal Fees - This account will be used to record all legal fees which are determined to be paid by Rural Development out of the revolving funds.
+
+Guarantee Loss Settlements - These accounts will be charged for amounts paid lenders of guaranteed loans for losses claimed under contracts of guarantee.  These losses could be paid before or after liquidation of the borrower's security in accordance with loss settlement option elected.  This account does not include amounts for acquisition of the borrower's security.
+
+1/   Non-Recoverable Cost Incident to Loans - This account will be charged with costs incident to insured loans, paid by the Government, which cannot properly be charged to the borrower's account or inventory account.  It includes cost items ordinarily considered recoverable, but which are prohibited by State Statute from being charged to the borrower.
+
+Miscellaneous Expense - This account will be used to record miscellaneous expenses which cannot be included in other categories of this Instruction.
+
+Compensation for Construction Defects - This account will be used to record compensation for construction defects paid from the Rural Housing Insurance Fund for fiscal years 1982 and prior.
+
+Private Contractors for Emergency Loans - This account will be used to record costs of making and servicing emergency loans using private contractors.
+
+Chattel Security Services - This account will be used to record costs of security services for chattel property.
+
+Construction Inspectors - This account will be used to record contract costs for construction inspections.
+
+Contracts Guaranteed - This account will be used to record contract costs associated with guaranteed loans.
+
+RD Instruction 2009-D
+Exhibit G
+Page 8A
+(Added 10-27-95, SPECIAL PN)
+
+
+C    Grants, Subsidies, and Contributions  41
+
+Payment Assistance - These accounts will be charged for the amount of payment assistance credited to the borrower’s account.  
+(Revised 10-27-95, SPECIAL PN.)
+
+D    Interest and Dividends 43
+
+Interest Expense - Additional Yield to Note Holders - These accounts will be charged for payments to private holders of additional interest accrued on the holder's account resulting from sales of loans by the ACIF or the RHIF to yield a higher return to note holders than that stated in the borrower's promissory note.  This premium paid to the note holders annually, upon final payments by borrowers or when loans are purchased from note holders.
+ 
+RD Instruction 2009-D
+Exhibit G
+Page 9
+
+Interest Expense - Withheld Collections - These accounts will be charged for payment to holders for interest accrued on the holder's account between the dates of any payments made by the borrower and the date of payment to the holder.  These payments will be made at the time final payments are remitted to note holders or when loans are purchased from note holders.
+
+Interest Expense - Certifications of Beneficial Ownership - These accounts will be charged for payment to holders for interest accrued and paid on Certificates of Beneficial Ownership.  These payments will be made annually on the anniversary date of the sale until the expiration of the fixed period.
+
+Treasury - Interest - This account will be charged for amounts of interest paid the Treasury on outstanding notes payable which represent borrowings from the Treasury to make loans from the fund for later sale and/or to carry out the provisions of the insurance authority.
+
+Interest on Government Equity - This account will be charged for amounts of interest accrued and paid the Treasury on equity of net assets transferred from ECRF and FHA-DLA to ACIF in accordance with FmHA Act of 1972.
+
+GNMA Interest - This account will be charged for amounts of interest accrued and paid on Trust Agreement Contracts with FNMA.
+
+Interest Subsidy Expense on Guaranteed Loans - These accounts will be charged for amounts paid or accrued to lenders of guaranteed loans for interest subsidy in accordance with the contracts of guarantee.  These amounts are determined based on the difference between the rate the borrower pays the lender and the approved Rural Development rate at the time the contract of guarantee is executed.  Payments are made semi-annually (or as of the date of assumption) to the lender.
+
+Guaranteed Interest Rate Reductions - These accounts will be charged for the amount of interest rate buydown payments made by Rural Development to lenders.  These amounts are determined by an agreement between the borrower, lender, and Rural Development to reduce the borrower loan interest rate up to three years.  The payments to the lenders will be 50% of the reduced rate not to exceed 2 percentage points.
+
+Interest Expense on Participation Certificates - (RHIF) - This account will be charged for amounts of interest accrued and paid on Participation Certificates with GNMA.
+
+
+
+
+
+(5-27-87)  PN 52
+
+RD Instruction 2009-D
+Exhibit G
+Page 10
+
+
+E    Refunds  44
+
+Withheld Collections - These accounts will be charged for disbursements made to note holders for collections of principal and interest received from borrowers.  (Does not include payments to note holders for collections that are not processed through the Fund, if any.)
+
+F    Offset Charges, PL 89 - 106
+
+This account will be used to record the offset charge from ACIF to the Salaries and Expenses Appropriation.
+
+G    Undistributed Charges  96
+
+Undistributed Charges - Other Than Certificates of Beneficial Ownership - This is a suspense account for payments made to note holders pending an analysis of the transactions.  Payments entered to this account will be cleared to the proper allotment code as soon as the analysis of the transactions is completed.  This account will include amounts due note holders for borrower's delinquent installments of principal and interest; purchase of notes by the Government under the insurance provisions, or due to expiration of the fixed redemption period; amounts of collections received from borrowers for principal and interest; and interest accrued on the holders account between the dates of any payments made by the borrower and the date of payment to the holder.
+
+Undistributed Charges - Certificates of Beneficial Ownership - This is a suspense account for payments made to holders of Certificates of Beneficial Ownership.  Payments to this account will be cleared to the proper allotment code as soon as they are applied to the holders' account.
+
+Reimbursement for Losses - This account will be used to record the annual appropriation for losses for RDIF.
+
+1/   District Directors and County Supervisors must indicate on each voucher that includes a recoverable or non-recoverable loan cost item, the appropriate code for the type of account involved.  The Finance Office determines, with respect to each type of account, the funds which are properly chargeable for the cost item.  Finance Instruction 323.9 designates the funds chargeable for each type of account, indicated by the codes on the vouchers.
+
+
+RD Instruction 2009-D
+Exhibit H
+Page 1
+
+
+ORGANIZATION CODES
+(Administrative)
+
+Positions three and four
+
+Used to identify the state (see page 2 of this exhibit for state codes) to which obligation and expenditures are chargeable.  For Headquarters organizations these positions will identify the allottee/location (see below) and the next level of the organization.
+
+D - OFFICE OF COMMUNITY DEVELOPMENT
+M – OPERATION AND MANAGEMENT - Washington, D.C.
+L – OPERATION AND MANAGEMENT - St. Louis
+P - POLICY AND PLANNING
+B - RURAL BUSINESS SERVICE
+H - RURAL HOUSING SERVICE
+U - RURAL UTILITIES SERVICE
+S - NATIONAL SHEEP INDUSTRY IMPROVEMENT CENTER
+C - ALTERNATIVE AGRICULTURAL RESEARCH AND COMMERCIALIZATION CORPORATION
+
+
+Positions five, six, and seven
+
+Used to identify additional levels within the organization.  State offices begin with “8”, area offices begin with “9”, and local offices use the county code (see RD Organization Listing in 2009-C for county code.  This information is revised annually.)  
+
+See the following pages of this exhibit for headquarters organization codes by agency:
+
+AGENCY 07 -
+RURAL HOUSING SERVICE, page 3.
+OPERATIONS AND MANAGEMENT, pages 2 thru 4.
+
+AGENCY 15 -
+RURAL UTILITIES SERVICE, pages 6.
+
+AGENCY 32 -
+RURAL BUSINESS-COOPERATIVE SERVICE, pages 8.
+OFFICE OF COMMUNITY DEVELOPMENT, page 10.
+POLICY AND PLANNING, page 10.
+
+
+
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit H
+Page 2
+
+AGENCY SC -
+NATIONAL SHEEP INDUSTRY IMPROVEMENT CENTER, page 10.
+
+AGENCY AW -
+ALTERNATIVE AGRICULTURAL RESEARCH AND COMMERCIALIZATION CORPORATION, page 11.
+
+ORGANIZATIONAL CODES (Con.)
+ADMINISTRATIVE
+
+NOTE:  Organizational units annotated as "General" are to be used only for costs/purchases that benefit the entire particular organizational level.  These costs/purchases are not otherwise identifiable to a particular organization.
+FIELD OFFICES (STATE)
+
+__________________________________________________________________________
+                                      ||                                     
+ STATE                                || STATE                              
+_CODE____________OFFICE_______________||_CODE___________OFFICE__________
+                                      ||                                    
+  01          Alabama                 ||   35          New Jersey
+  02          Arizona                 ||   36          New Mexico
+  03          Arkansas                ||   37          New York
+  04          California              ||   38          North Carolina
+  05          Colorado                ||   40          North Dakota
+  06          Connecticut             ||   41          Ohio
+  07          Delaware                ||   42          Oklahoma
+  09          Florida                 ||   43          Oregon
+  10          Georgia                 ||   44          Pennsylvania
+  12          Idaho                   ||   45          Rhode Island
+  13          Illinois                ||   46          South Carolina
+  15          Indiana                 ||   47          South Dakota
+  16          Iowa                    ||   48          Tennessee
+  18          Kansas                  ||   49          Texas
+  20          Kentucky                ||   52          Utah
+  22          Louisiana               ||   53          Vermont
+  23          Maine                   ||   54          Virginia
+  24          Maryland                ||   56          Washington
+  25          Massachusetts           ||   57          West Virginia
+  26          Michigan                ||   58          Wisconsin
+  27          Minnesota               ||   59          Wyoming
+  28          Mississippi             ||   60          Alaska
+  29          Missouri                ||   61          Hawaii, Am. Samoa
+  31          Montana                 ||   62          Guam and W. Pacific
+  32          Nebraska                ||                 Territories
+  33          Nevada                  ||   63          Puerto Rico
+  34          New Hampshire           ||   64          Virgin Islands
+                                      ||  65-69         Reserved
+______________________________________||__________________________________
+
+RD Instruction 2009-D
+Exhibit H
+Page 3
+
+
+STATE OFFICE                                                  SUB UNIT
+
+     EXECUTIVE STAFF                                              1
+     MANAGEMENT STAFF                                             2
+     PROGRAMS STAFF
+          BUSINESS AND INDUSTRIAL                                 0
+          FARMER PROGRAMS                                         3
+          COMMUNITY PROGRAMS                                      4
+          HOUSING PROGRAMS                                        5
+          COMBINATION                                             8
+     DISTRICT OFFICE                                              6
+     COUNTY OFFICE                                                7
+     COUNTY COMMITTEES                                            9
+
+
+RURAL HOUSING SERVICE
+
+Organizational Unit		Org
+		
+Rural Housing Service (General)		H1000
+Office of the Administrator			H2000
+Program Support Staff			H3000
+	Program Support Staff (General)	H3100
+	Office of the Director		H3200
+	Technical Support Branch		H3300
+	Operations Research and Systems Development Branch	H3400
+	Management Support Branch	H3500
+	Policy Support Branch		H3600
+Single Family Housing			H4000
+	Single Family Housing (General)	H4100
+	Office of the Deputy Administrator	H4200
+	Single Family Housing Direct Loan Division	H4300
+	Single Family Housing Guaranteed Loan Division	H4400
+	Single Family Housing Centralized Servicing Center
+	 (St. Louis)	H4500
+		Office of the Director	H4510
+		Collection Service Branch	H4520
+		Risk Management Branch	H4530
+		Cash & Congressionals	H4540
+		Escrow Operations Branch	H4550
+		Borrower Assistance Branch	H4560
+		Customer Service Branch	H4570
+Multi-Family Housing			H5000
+	Multi-Family Housing (General)	H5100
+	Office of the Deputy Administrator	H5200
+	Multi-Family Housing Processing Division	H5300
+	Multi-Family Housing Portfolio Management Division	H5400
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit H
+Page 4
+
+
+RURAL HOUSING SERVICE (Con.)
+
+Organizational Unit		 Org
+		
+Community Programs			H6000
+	Community Programs (General)	H6100
+Office of the Deputy Administrator	H6200
+	Direct Loan & Grant Processing Branch	H6300
+Guaranteed Loan Processing Branch	H6400
+Servicing & Special Authorities Branch	H6500
+
+
+OPERATIONS AND MANAGEMENT
+
+Operations and Management (General)		M1000
+	Management Reserve		M1100
+		Unallotted Reserve	M1110
+		Under Secretary Reserve	M1120
+		DAOM Reserve	M1130
+		Greenbook Expenses	M1140
+		EEO Settlements/Investigations	M1150
+		Sonya Bird/Mitchell Settlements	M1160
+		Reserved for Budget Division	M1170
+		Reserved for Budget Division	M1180
+		Reserved for Budget Division	M1190
+		Reserved for Budget Division	M1200
+		Reserved for Budget Division	M1210
+		Reserved for Budget Division	M1220
+Office of the Deputy Administrator (Immediate Office)	M2000
+Civil Rights	M3000
+	Office of the Director		M3100
+	Program Compliance Branch	M3200
+Legislative and Public Affairs Staff		M4000
+	Office of the Director		M4100
+	Correspondence Branch		M4200
+	Deputy Director, Public Affairs	M4300
+Chief Financial Officer		M5000
+	Chief Financial Officer (General)	M5100
+	Office of the Chief Financial Officer	M5200
+	Budget Division		M5300
+		Office of the Director	M5310
+		Administrative Programs Branch	M5320
+		Program Budget Branch	M5330
+	Financial Management Division	M5400
+	Policy and Analysis Division	M5500
+	Deputy Chief Financial Officer (St. Louis)	L5600
+		Deputy Chief Financial Officer (General)	L5610
+		Office of the Deputy Chief Financial Officer	L5620
+
+RD Instruction 2009-D
+Exhibit H
+Page 5
+
+
+OPERATIONS AND MANAGEMENT (Con.)
+
+Organizational Unit		 Org
+
+		Program Management Division (St. Louis)	L5630
+			Office of the Director	L5631
+			Direct Loan and Grant Branch	L5632
+			Guaranteed Loan Branch	L5633
+			Program Reporting Branch	L5634
+		Fiscal and Accounting Division (St. Louis)	L5640
+			Office of the Director	L5641
+			Fiscal Control Branch	L5642
+			Financial Accounting Branch	L5643
+			Fiscal Reconciliation Branch	L5644
+			Cash Management Branch	L5645
+		Policy and Internal Review Division (St. Louis)	L5650
+		Mission Support Division (St. Louis)	L5660
+			Office of the Director	L5661
+			Operations and Scheduling Branch	L5662
+			Support Services Branch	L5663
+Procurement and Administrative Services	M6000
+	Procurement and Administrative Services (General)	M6100
+	Office of the Assistant Administrator	M6200
+	Procurement Management Division	M6300
+		Office of the Director	M6310
+		Policy and Program Management Branch	M6320
+		Contract Operations Branch	M6330
+	Property & Supply Management Division (St. Louis)	L6400
+		Office of the Director	L6410
+		Property and Procurement Management Branch	L6420
+		Space Management Branch	L6430
+	Support Services Division		M6500
+		Office of the Director	M6510
+		Property and Space Management Branch	M6520
+		General Services Branch	M6530
+		Regulations & Paperwork Management Branch	M6540
+Information Resources Management		M7000
+	Information Resources Management (General)	M7100
+	Office of the Chief Information Officer	M7200
+	Management Control Staff		M7300
+	Management Services Division	M7400
+		Office of the Director	M7410
+	Information Management Branch	M7420
+		Planning and Policy Branch	M7430
+	Customer Services Division	M7500
+		Office of the Director	M7510
+		Customer Outreach Advisory Branch	M7520
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit H
+Page 6
+
+
+OPERATIONS AND MANAGEMENT (Con.)
+
+Organizational Unit		Org
+
+	Office of the Chief Information Officer (St. Louis)	L7600
+	Information Technology Division (St. Louis)	L7700
+		Office of the Director (St. Louis)	L7710
+		Data Services Branch (St. Louis)	L7720
+		Systems Integrity Management Branch	M7730
+		Technical Services Branch (St. Louis)	L7740
+		Telecommunications Branch (St. Louis)	L7750
+		Headquarters Network Branch	M7760
+		Centralized Help Desk (St. Louis)	L7770
+	System Services Division (St. Louis)	L7800
+		Office of the Director (St. Louis)	L7810
+		RHS Branch (St. Louis)	L7820
+		RBS Branch (St. Louis)	L7830
+		RUS/National Development Branch	M7840
+		Financial Management Systems Branch (St. Louis)	L7850
+Human Resources		M8000
+	Human Resources (General)	M8100
+	Office of the Assistant Administrator	M8200
+	Labor Relations Staff		M8300
+	Headquarters Personnel Services Division	M8400
+		Office of the Director	M8410
+		Headquarters Personnel Services Branch	M8420
+	Human Resources Training Division	M8500
+		Office of the Director	M8510
+		Employee Development Branch	M8520
+		St. Louis Training Branch	L8540
+	Mission Area Personnel Services Division	M8600
+		Office of the Director	M8610
+		Human Resources Programs Branch	M8620
+		RD Field Services Branch (St. Louis)	L8630
+Alternate Dispute Resolution Staff		M9000
+
+RURAL UTILITIES SERVICE
+
+Rural Utilities Service (General)		U1000
+Office of the Administrator		U2000
+	Office of the Administrator		U2100
+	Rural Utilities and Loan Servicing System (RULSS) 
+	Staff	U2200
+Financial Services Staff		U3000
+Program Accounting and Regulatory Analysis	U4000
+	Program Accounting and Regulatory Analysis (General)	U4100
+	Office of the Assistant Administrator	U4200
+
+
+RD Instruction 2009-D
+Exhibit H
+Page 7
+
+
+RURAL UTILITIES SERVICE (Con.)
+
+Organizational Unit		 Org
+
+	Program Accounting Services Division	U4300
+		Technical Accounting and Auditing Staff	U4310
+		Northern Regional Accounting Branch	U4320
+		Northern Regional Accounting Branch Field Staff	U4330
+		Southern Regional Accounting Branch	U4340
+		Southern Regional Accounting Branch Field Staff	U4350
+	Program Development and Regulatory Analysis	U4400
+Assistant Administrator-Electric		U5000
+	Assistant Administrator-Electric (General)	U5100
+	Office of the Assistant Administrator	U5200
+		Office of the Assistant Administrator	U5210
+		Policy Analysis and Loan Management Staff (PALMS)	U5220
+	Northern Regional Division-Electric	U5300
+		Office of the Director	U5310
+		Northern Regional Division (General Field)	U5320
+		Northeast Operations Branch	U5330
+		Northern Engineering Branch	U5340
+		Northwest Operations Branch	U5350
+	Southern Regional Division-Electric	U5400
+		Office of the Director	U5410
+		Southern Regional Division (General Field)	U5420
+		Southeast Operations Branch	U5430
+		Southern Engineering Branch	U5440
+		Southwest Operations Branch	U5450
+	Power Supply Division		U5500
+		Office of the Director	U5510
+		Financial Analysis, Security & Compliance Branch	U5520
+		Power Delivery & Transmission Assessment Branch	U5530
+		Power Resources & Planning Branch	U5540
+	Electric Staff Division		U5600
+		Office of the Director	U5610
+		Transmission Branch	U5620
+		Distribution Branch	U5630
+		Energy Forecasting Branch	U5640
+		Technical Standards Committee "A"	U5650
+Assistant Administrator-Telecommunications	U6000
+	Assistant Administrator-Telecommunications (General)	U6100
+	Office of the Assistant Administrator	U6200
+	Eastern Area-Telecommunications Program	U6300
+		Office of the Director	U6310
+		Eastern Area Office (General Field)	U6320
+		Eastern Operations Branch	U6330
+		Eastern Engineering Branch	U6340
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit H
+Page 8
+
+
+RURAL UTILITIES SERVICE (Con.)
+
+Organizational Unit		 Org
+
+	Northwest Area-Telecommunications Program	U6500
+		Office of the Director	U6510
+		Northwest Area Office (General Field)	U6520
+		Northwest Operations Branch	U6530
+		Northwest Engineering Branch	U6540
+	Southwest Area-Telecommunications Program	U6600
+		Office of the Director	U6610
+		Southwest Area Office (General Field)	U6620
+		Southwest Operations Branch	U6630
+		Southwest Engineering Branch	U6640
+	Telecommunications Standards Division	U6700
+		Office of the Director	U6710
+		Inside Plant Branch	U6720
+		Outside Plant Branch	U6730
+	Advanced Services Division	U6800
+	Rural Telephone Bank  		U6900
+		Board Member Functions	U6910
+		Agency Projects	U6920
+Assistant Administrator-Water and Environmental Programs	U7000
+	Assistant Administrator-Water and Environmental 
+	  Programs (Gen.)	U7100
+	Office of the Assistant Administrator	U7200
+	Water Programs Division		U7300
+		Office of the Director	U7310
+		Program Operations Branch	U7320
+		Portfolio Management Branch	U7330
+	Engineering and Environmental Staff	U7600
+
+RURAL BUSINESS-COOPERATIVE SERVICE
+
+Rural Business-Cooperative Service (General)	B1000
+Office of the Administrator		B2000
+Resources Coordination Staff		B3000
+Deputy Administrator, Business Programs	B4000
+	Business Programs (General)	B4100
+	Office of the Deputy Administrator	B4200
+	Business & Industry Division	B4300
+	Special Project & Program Oversight Division	B4400
+	Specialty Lenders Division	B4500
+Deputy Administrator, Cooperative Services Programs	B5000
+	Cooperative Services Programs (General)	B5200
+	Office of the Deputy Administrator	B5300
+	Cooperative Marketing Division	B5400
+   Cooperative Development Division   	B5500
+	Cooperative Management Division	B5600
+
+RD Instruction 2009-D
+Exhibit H
+Page 9
+
+
+RURAL BUSINESS-COOPERATIVE SERVICE (Con.)
+
+Organizational Unit		Org
+
+National Rural Development Partnership Office	B6000
+	Office of the Director		B6088
+	ALABAMA State Rural Development Council     	B6001
+	ARIZONA State Rural Development Council      	B6002
+	ARKANSAS State Rural Development Council     	B6003
+	CALIFORNIA State Rural Development Council     	B6004
+	COLORADO State Rural Development Council     	B6005
+	CONNECTICUT State Rural Development Council 	B6006
+	DELAWARE State Rural Development Council  	B6007
+	FLORIDA State Rural Development Council    	B6009
+	GEORGIA State Rural Development Council 	B6010
+	IDAHO State Rural Development Council         	B6012
+	ILLINOIS State Rural Development Council      	B6013
+	INDIANA State Rural Development Council       	B6015
+	IOWA State Rural Development Council          	B6016
+	KANSAS State Rural Development Council        	B6018
+	KENTUCKY State Rural Development Council        	B6020
+	LOUISIANA State Rural Development Council        	B6022
+	MAINE State Rural Development Council         	B6023
+	MARYLAND State Rural Development Council      	B6024
+	MASSACHUSETTS State Rural Development Council 	B6025
+	MICHIGAN State Rural Development Council     	B6026
+	MINNESOTA State Rural Development Council    	B6027
+	MISSISSIPPI State Rural Development Council  	B6028
+	MISSOURI State Rural Development Council     	B6029
+	MONTANA State Rural Development Council      	B6031
+	NEBRASKA State Rural Development Council     	B6032
+	NEVADA State Rural Development Council       	B6033
+	NEW HAMPSHIRE State Rural Development Council	B6034
+	NEW JERSEY State Rural Development Council   	B6035
+	NEW MEXICO State Rural Development Council   	B6036
+	NEW YORK State Rural Development Council      	B6037
+	NORTH CAROLINA State Rural Development Council	B6038
+	NORTH DAKOTA State Rural Development Council  	B6040
+	OHIO State Rural Development Council          	B6041
+	OKLAHOMA State Rural Development Council      	B6042
+	OREGON State Rural Development Council        	B6043
+	PENNSYLVANIA State Rural Development Council  	B6044
+	RHODE ISLAND State Rural Development Council  	B6045
+	SOUTH CAROLINA State Rural Development Council	B6046
+	SOUTH DAKOTA State Rural Development Council  	B6047
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit H
+Page 10
+
+
+RURAL BUSINESS COOPERATIVE SERVICE (Con.)
+
+Organizational Unit	Org
+
+	TENNESSEE State Rural Development Council    	B6048
+	TEXAS State Rural Development Council        	B6049
+	UTAH State Rural Development Council         	B6052
+	VERMONT State Rural Development Council      	B6053
+	VIRGINIA State Rural Development Council     	B6054
+	WASHINGTON State Rural Development Council   	B6056
+	WEST VIRGINIA State Rural Development Council	B6057
+	WISCONSIN State Rural Development Council	B6058
+	WYOMING State Rural Development Council	B6059
+	ALASKA State Rural Development Council	B6060
+	HAWAII State Rural Development Council	B6061
+	WESTERN PACIFIC TERRITORIES State Rural Development 
+	  Council	B6062
+	PUERTO RICO State Rural Development Council	B6063
+	VIRGIN ISLANDS State Rural Development Council	B6064
+	State Rural Development Councils (General)	B6099
+
+
+OFFICE OF COMMUNITY DEVELOPMENT
+
+Community Development (General)	D1000
+Office of the Deputy Administrator (Immediate Office)	D2000
+Empowerment Programs Division	D3000
+Community Outreach Division	D4000
+
+
+POLICY AND PLANNING
+
+Policy and Planning (General)		P1000
+Deputy Under Secretary for Policy and Planning		P2000
+Deputy Administrator for Policy and Planning		P3000
+	Deputy Administrator for Policy and Planning (General)	P3100
+	Office of the Deputy Administrator		P3200
+
+
+RD Instruction 2009-D
+Exhibit H
+Page 11
+
+
+
+NATIONAL SHEEP INDUSTRY IMPROVEMENT CENTER
+
+National Sheep Industry Improvement Center (General)	S1000
+Office of the Director			S2000
+Sheep Center Board			S3000
+
+
+
+ALTERNATIVE AGRICULTURAL RESEARCH AND COMMERCIALIZATION CORPORATION
+
+Alternative Agricultural Research & Commercialization	
+Corp (General)	C1000
+
+
+
+
+
+
+oOo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit I
+
+
+COST CENTER
+
+
+When reporting activity for field office locations, the accounting classification code will be exploded to generate an additional code called "cost center."  This code will be as follows.
+
+________________________________________________________________________
+Cost                                Cost
+Center                              Center
+Codes__________Location_____________Codes__________Location_____________
+
+01             Alabama              35             New Jersey
+02             Arizona              36             New Mexico
+03             Arkansas             37             New York
+04             California           38             North Carolina
+05             Colorado             40             North Dakota
+07             Delaware             41             Ohio
+07               Maryland           42             Oklahoma
+09             Florida              43             Oregon
+10             Georgia              44             Pennsylvania
+12             Idaho                46             South Carolina
+13             Illinois             47             South Dakota
+15             Indiana              48             Tennessee
+16             Iowa                 49             Texas
+18             Kansas               52             Utah
+20             Kentucky             52               Nevada
+22             Louisiana            53             Vermont
+23             Maine                53               New Hampshire
+25             Massachusetts        53               Virgin Islands
+25               Connecticut        54             Virginia
+25               Rhode Island       56             Washington
+26             Michigan             57             West Virginia
+27             Minnesota            58             Wisconsin
+28             Mississippi          59             Wyoming
+29             Missouri             60             Alaska
+31             Montana              61             Hawaii
+32             Nebraska             61              Western Pacific Ter.
+                                    63             Puerto Rico
+
+
+
+
+
+
+
+(5-27-87)  PN 52
+
+RD Instruction 2009-D
+Exhibit J
+
+
+ALLOTMENT CODING - LOAN AND GRANT
+
+Special Purpose
+
+
+I         All loan disbursements to individuals will be coded for veterans and nonveterans as follows:
+
+                         05 - loans to veterans
+                         00 - loans to nonveterans
+
+RD Instruction 2009-D
+Exhibit K
+Page 1
+(Revision 1)
+
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES
+
+CODES     DESCRIPTIONS
+
+AA	NFC Agency Specific Agreements
+AB	OCFO-Financial Services
+AC	National Telecom Service Office
+AD	Controller Operations
+AP	Program Funds
+A0	FISVIS/FFIS
+A1	Network Engineering Services
+A2	Telecomm. Business Services (CNMS)
+A3	National Finance Center
+A4	NITC - Mainframe Operations/Customer Network
+A5	NITC - Customer Network Mgmt Services 
+A6	Telephone Services Operations
+A7	Integrated Procurement Systems
+A8	Network Services (LAN)
+A9	Computer Services Unit - Network Support
+
+CA	Policy Trng.-Regulatory Stds./Telecomm. Prgms.
+ 	   Interim Conf./Electric Nat'l Trng. Conferences
+CB	Strategic Risk Management
+CC	Telecomm. Engineering Symposium
+CD	Policy Conference
+CE	Writing Training Conference
+CF	State Engineers Trng. Conference
+CG	Appraiser Training (Lead Base Paint)
+CH	Annual Comm. Dev. Nat'l Trng (OCD)
+CI	State Directors Conference (O&M)
+CJ	RUS Mandatory Training
+CK	National Centers of Excellence (OCD)
+CL	HR Reimbursements (spend out acct.)
+CM	Rural Rental Housing Task Force (RRH)
+CN	FFIS Task Force Travel
+CP	FFIS Training Travel
+CQ	PIC Training
+CR	Civil Rights Conference Policy Meeting
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit K 
+Page 2
+(Revision 1)
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES (Con.)
+
+CODES     DESCRIPTIONS
+
+CS	RDAPTS Phase I Mandatory Training (RHS)
+CT	American Indian Partners Trng. (OCD)
+CU	Basic B&I Program Training (RBS)
+CV	Program Alternative Dispute Resolution (RBS)
+CW	Managing Cultural Diversity (RHS)
+CX	BRIO Training (RHS)
+CY	MortgageServ and Cross Training (RHS/CSC)
+C0	MFIS2 Training 
+C1	Rural Home Loan Partnership Conf.
+C2	Partners for Successful Homeowners Mtg. 
+C3	MFH Advisory Group Policy Meeting
+C4	Alternative Dispute Res. Trng.
+C5	Champion Community Trng. Conf.
+C6	New St. Dirs/Pgm. Dirs. & Loan Spec.
+C7	Three Intermediary  Relending Prg. Reg'l Conf.
+C8	New Prgm. Directors & Coordinators (MFH/RHS)
+C9	Customer and Collection Services (CSC/RHS)
+
+DA	Support Service Proj Mgmt Fee
+DB	Prog Delivery Software Testing
+DC	Centralized Help Desk
+DD	Prog Deliv System Maintenance
+DE	Tape Diskette Duplication
+DF	Cellular Phones
+DG	Annual Work Measurement Study
+DH	Maintenance of PLAS/ADPS
+DI	National Office User Support (On site Support) A
+DJ	National Office User Support (On site Support) B
+DK	HUD/Caivrs (RH)
+DL	Data Conversion Maintenance
+DM	On-line Subscriptions
+DN	MFWS Replacement Equipment
+DP	Upgrade Telecomm. (Partial)
+DQ	Interagency Agreements
+DR	A/E/SEC Equipment
+
+RD Instruction 2009-D
+Exhibit K
+Page 3
+(Added 12-07-05, PN 392)
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES (Con.)
+
+CODES     DESCRIPTIONS
+
+DS	Maintenance Contracts
+DT	Maintenance of AMAS (RH)
+DU	USDA Service Center Initiative (SCIT) B	 	 	 	 
+DV	Monthly Telephone Charges	 	 	 	 
+DW	Telephone Toll Charges	 	 	 	 
+DX	Agreement Computer Service	 	 	 	 
+DY	Imaging RUS Documents	 	 	 	 
+DZ	Maintenance ADP Equipment/Software B	 	 	 	 
+ 	 	 	 	 	 
+D0	Monthly Telephone Charges/ Telephone A	 	 	 	 
+D1	Monthly Telephone Charges/ Telephone B	 	 	 	 
+D2	OCR Coupon/Other Forms	 	 	 	 
+D3	Create Microfiche Original & Copies	 	 	 	 
+D4	NFC Charges Reorganization	 	 	 	 
+D5	Maintenance ADP Equipment/Software A 	 	 	 	 
+D6	Central File Opt Imaging	 	 	 	 
+D7	Administrative Sys Maintenance	 	 	 	 
+D8	Maintenance/Support ORACLE	 	 	 	 
+D9	OTIS/Dev Inventory System	 	 	 	 
+ 	 	 	 	 	 
+GA	Automated Mailing List  	 	 	 	 
+GB	Central Supply - Stores 	 	 	 	 
+GC	Central Supply - Forms 	 	 	
+GD	Sen. Exec. Serv. Can. Dev. Pgm (SESCDP)	 	 	 	 
+GE	Duplication Services 	 	 	 	 
+GF	Copier Service  	 	 	 	 
+GG	Central Mail Service 	 	 	 	 
+GH	USDA Drug Testing Program	 	 	 	 
+GI	Executive Secretariat   	 	 	 	 
+GJ	OPM Federal Employment Services 	 	 	 	 
+GK	Single Audit Clearinghouse  	 	 	 	 
+GL	Consolidated Federal Funds Report 	 	 	 	 
+GM	Small Business Certification	 	 	 	 
+GN	Sign Language Services 	 	 	 	 
+GP	Design Center  	 	 	 	 
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit K 
+Page 4
+
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES (Con.)
+
+CODES     DESCRIPTIONS
+
+GQ	Video and Teleconferencing Center 	 	 	 	 
+GR	HACU Program  	 	 	 	 
+GS	Mail Prep Unit 	 	 	 	 
+GT	Employee Express	 	 	 	 
+GU	CEPO - Rehab Furniture Operations 	 	 	 	 
+GV	Agriculture Contract Auto System  	 	 	 	 
+GW	National Archives Records System 	 	 	 	 
+GX	Hispanic Advisory Council	 	 	 	 
+GY	FEMA Emergency Preparedness 	 	 	 	 
+GZ	Target Center	 	 	 	 
+G0	 Worker Compensation 	 	 	 	 
+G1	GSA Space Agency	 	 	 	 
+G2	Unemployment Compensation 	 	 	 	 
+G3	Security 	 	 	 	 
+G4	Coordinated Federal Wage System  	 	 	 	 
+G5	Pre-authorization Funding 	 	 	 	 
+G6	USPS Mail 	 	 	 	 
+G7	Central Shipping and Receiving 	 	 	 	 
+G8	Centralized Excess Property Opns (CEPO) 	 	 	 	 
+G9	Central Supply - Forms - Transportation 	 	 	 	 
+ 	 	 	 	 	 
+IA	From FSA for Support to Field	 	 	 	 
+IC	General Reimbursements	 	 	 	 
+ID	Forest Service	 	 	 	 
+IE	Cost Sharing of Environmental Review Requirmt.	 	 	 
+IF	User Fees from FFB Service	 	 	 	 
+IG	From Other Fed. Sources for R.D. Council Suppt.	 	 	 
+II	From Administration for Native Americans	 	 	 	 
+IJ	User Fees for Cooperative Publications	 	 	 	 
+IK	Fund for Rural America (Transfer)	 	 	 	 
+IL	NAD Bank Reimb to RBS 	 	 	 	 
+IM	From ARMS Initiative	 	 	
+IN	South Africa Communities 	 	 	 	 
+IP	Ghana CCard	 	 	 	 
+
+
+
+RD Instruction 2009-D
+Exhibit K
+Page 5
+(Added 12-07-05, PN 392)
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES (Con.)
+
+CODES     DESCRIPTIONS
+	 	 	IQ	Ghana Atrip	 	 	 	 
+IW	African Coop Development	 	 	 	 
+ 	 	 	 	 	 
+I0	From other Agencies for Colloc. Spc 	 	 	 	 
+I1	Receipts from National Americorps Program	 	 	 	 
+I2	RHS Transfer from Program Accounts  	 	 	 	 
+I3	RUS Transfer from Program Accounts 	 	 	 	 
+I4	RBS Transfer from Program Accounts	 	 	 	 
+I5	Transfer from Appalachia Reg. Commission 	 	 	 	 
+I5	Appalachian Regional Develop. Prog. 	 	 	 	 
+I6	Resource Conservation and Develop. Prog. 	 	 	 	 
+I7	From FSA for ADP Support 	 	 	 	 
+I8	From FSA for Support to St Louis 	 	 	 	 
+I9	FTS 2000 Packet Switch 	 	 	 	 
+MC	Guaranteed Loan for RBS	 	 	 	 
+ 	 	 	 	 	 
+M0	Civil Rights Disability Awareness Conf. 	 	 	 	 
+M1	Intro to ICAMS	 	 	 	 
+M2	Section 9006 Farm Bill Training (RBS)	 	 	 	 
+M3	Retirement Seminar (HR)	 	 	 	 
+M4	Homeownership Week (RHS)	 	 	 	 
+ 		 	 	 	 
+M5	RD National Training Conference	 	 	 	 
+M7	ADR Enhancement Studies	 	 	 	 
+ 	 	 	 	 	 
+NG	Nigeria	 	 	 	 
+ 	 	 	 	 	 
+PA	INTERNET/INTRANET/EDI 	 	 	 	 
+PB	ADP Supplies A	 	 	 	 
+PC	Compressed Video Tele (CVTS)	 	 	 	 
+PD	Security System Initiative	 	 	 	 
+PE	Research/Eval Emerg Tech (INFO)	 	 	 	 
+PF	Tech Delivered Instruction	 	 	 	 
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit K 
+Page 6
+
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES (Con.)
+
+CODES     DESCRIPTIONS
+
+PG	New Program Systems	 	 	 	 
+PH	Information Systems Plan	 	 	 	 
+PI	RMS/RAMP	 	 	 	 
+PJ	New Guaranteed Loan System	 	 	 	 
+PK	ADP Supplies B	 	 	 	 
+PL	Administrative Systems	 	 	 	 
+PM	F/O Remote Console System	 	 	 	 
+PN	Verification & Valid Software	 	 	 	 
+PP	ADP Equip Purchase/Replacement A	 	 	 	 
+PQ	ADP Equip Purchase/Replacement B	 	 	 	 
+PR	Midwest TARGET Center	 	 	 	 
+PS	ADP Supplies (Misc.)	 	 	 	 
+PT	LAN/WAN/Voice Communications	 	 	 	 
+PU	DLOS Implementation 	 	 	 	 
+PV	OIRM Target Center	 	 	 	 
+PW	USDA  Service Center Initiative (SCIT) A	 	 	 	 
+PX	Century Data Change 	 	 	 	 
+PY	Specialized Services	 	 	 	 
+PZ	DLOS Software	 	 	 	 
+ 	 	 	 	 	 
+P0	RUS Modernization (CUBS) 	 	 	 	 
+P1	Data Warehousing 	 	 	 	 
+P2	ADP Equipment (Finance Office)	 	 	 	 
+P3	Frame Relay	 	 	 	 
+P4	MFH Integrated System	 	 	 	 
+P5	LAN/WAN Voice Installation	 	 	 	 
+P6	Program Funds Control System	 	 	 	 
+P7	FTS 2001 Implem. & Telecom. Upgrades	 	 	 	 
+P8	Telephone Equip. (Upgrade Nat'l Offc. Syst.)	 	 	 	 
+P9	IRS Offset	 	 	 	 
+ 	 	 	 	 	 
+TA	SFH Annual Policy Mtg./Loan Underwriting/Grant Admin.	 	 	 
+TB	RHS/RUS CP Comm. Prgms Policy Mtg.	 	 	 	 
+TC	Real Property Leasing (PAS)	 	 	 	 
+
+
+
+RD Instruction 2009-D
+Exhibit K
+Page 7
+(Added 12-07-05, PN 392)
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES (Con.)
+
+CODES     DESCRIPTIONS
+
+TD	Hazardous Waste Management  Trng 	 	 	 	 
+TE	Health Care and Audit Training	 	 	 	 
+TF	Reinvented MFH Regs. & Policy Training Meeting	 	 	 
+TG	 Basic Envir. Coord./State Envir./Architect & Eng.(RHS/PSS)	 	 
+TH	PSS Tech Support/Policy Mtg	 	 	 	 
+TI	RD Shared Neutrals Mediation Training	 	 	 	 
+TJ	Mutual Self Help Housing Trng 	 	 	 	 
+TK	Guaranteed Rural Housing Regs/Servicing 	 	 	 	 
+TL	ARTS Mgmt Control Trng on Reg 2006M 	 	 	 	 
+TM	SCRB/M Policy & Trng Conference 	 	 	 	 
+TN	Conflict Resolution Training 	 	 	 	 
+TP	MFIS II Implementation Training 	 	 	 	 
+ 	 	 	 	 	 
+TQ	Adv. Comm. Dev. Trng (CaDRI) (OCD) 	 	 	 	 
+TR	Convergence Trng for AO's/HR Mgrs. Trng.	 	 	 	 
+TS	CPM Procurement Trng  	 	 	 	 
+TT	Rural Home Loan Partnership 	 	 	 	 
+TU	Guar. RRH Program Trng 	 	 	 	 
+TV	IRM Training 	 	 	 	 
+TW	Non-Mandatory Miscellaneous Trng 	 	 	 	 
+TX	Update of RUS Policies & Regulations/Pgm Planning	 	 	 
+TY	Electric, Tele. Pgm. & PARA/PASD Nat'l Conf.	 	 	 	 
+TZ	Introd. Gen'l Field Repres. Trng. (RUS/TELE)	 	 	 	 
+ 	 	 	 	 	 
+T0	Travel Training 	 	 	 	 
+T1	Supervisory Refresher Seminar (HR)	 	 	 	 
+T2	Introduction to Supervision	 	 	 	 
+T3	HR Mgt. for Supervisors/Mgrs/NO	 	 	 	 
+T4	Federal Executive Institute	 	 	 	 
+T5	Upward Mobility	 	 	 	 
+T6	1890 Nat'l Scholars Program	 	 	
+	 	 	 	 	 
+XX	Financial Statement Adjustments	 	 	 	 
+ 	 	 	 	 	 
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit K 
+Page 8
+
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES (Con.)
+
+CODES     DESCRIPTIONS
+
+01	General Travel	 	 	 	 
+02	DLOS  (Non-ADP)	 	 	 	 
+03	DLOS Relocation 	 	 	 	 
+04	CSC Non-ADP Charges 	 	 	 	 
+05	Alaskan Villages 	 	 	 	 
+06	RD Salary Recertifications 	 	 	 	 
+07	Training Tuition, Contracting, etc. (NO/Field/FO)	 	 	 
+08	Service Centers (SC)	 	 	 	 
+09	Health Clinic	 	 	 	 
+10	OGC Expenses	 	 	 	 
+11	Accel. Spt. for Agcy. Prog & Partnerships(ASAPP) 	 	 	 
+12	RHS Program Loan Costs 	 	 	 	 
+13	RUS Program Loan Cost	 	 	 	 
+14	RBS Program Loan Costs	 	 	 	 
+15	GSA Teleconferencing Center 	 	 	 	 
+16	Jackson County Enviromental Project	 	 	 	 
+17	NADBank  Admin. Expenses 	 	 	 	 
+18	South Africa Communities 	 	 	 	 
+19	ARMS Initiative 	 	 	 	 
+20	Salary Recertification (RBS)	 	 	 	 
+21	PFCS (Program Funds Control System)	 	 	 	 
+22	Employee Assistance Program	 	 	 	 
+23	Economic Impact Initiative	 	 	 	 
+24	Puerto Rico Business Program Review Travel (RBS)	 	 	 
+25	Civil Rights Disability (equip.)	 	 	 	 
+26	LAPAS Photo Budget	 	 	 	 
+27	Spending for Expired Yr. Obligs. - 1% limitation	 	 	 
+28	Recovery of Stolen Govt. Property	 	 	 	 
+ 	 	 	 	 	 
+29	Civil Rights Retreat	 	 	 	 
+31	Uncleared GVTS (RBS)	 	 	 	 
+ 	 	 	 	 	 
+
+
+RD Instruction 2009-D
+Exhibit K
+Page 9
+(Added 12-07-05, PN 392)
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES (Con.)
+
+CODES     DESCRIPTIONS
+
+1C	Automation Coordinator Trng. System (RHS/MFH)	 	 	 	 
+2C	Self-Help Automated Report Eval. System (RHS/SFH)
+3C	Tech Advantage 2002 Conf. (RUS/ELEC)	 	 	 	 
+4C	Risk Mgt/Financial Analysis (RUS/ELEC)	 	 	 	 
+5C	Homeland Security (RUS/ELEC)	 	 	 	 
+6C	Renewable Energy/Distrbtd Gen.  (RUS/ELEC)	 	 	 	 
+7C	Credit and Financial Analysis (RUS/TELE)	 	 	 	 
+8C	NECA Functions & Settlement Proc. (RUS/TELE)	 	 	 	 
+9C	Basic Operations Seminar (WEP)	 	 	 	 
+ 	 	 	 	 	 
+0D	DLOS Equipment	 	 	 	 
+1D	CSC ADP Charges	 	 	 	 
+2D	FTS 2000	 	 	 	 
+3D	RDAPTS	 	 	 	 
+4D	Automated Underwriting System /SFH Guaranteed	 	 	 	 
+5D	E-Government	 	 	 	 
+ 	 	 	 	 	 
+1G	Government-wide Council Activities	 	 	 	 
+2G	First Gov	 	 	 	 
+3G	GSA Blue Pages	 	 	 	 
+4G	Transit Subsidy	 	 	 	 
+5G	USDA Diversity Council	 	 	 	 
+6G	American Indian Higher Education Council	 	 	 	 
+7G	USDA Visitor Information Center	 	 	 	 
+8G	1890 Initiatives	 	 	 	 
+9G	Honor Awards	 	 	 	 
+ 	 	 	 	 	 
+0T	Basic Credit & Financial Analysis	 	 	 	 
+1T	Water, Waste & Environm. Policy/Trng. Mtg	 	 	 	 
+2T	Program Acctg. Services Div. Field Conference	 	 	 	 
+3T	Orientation/Streamlined B&I Regs/Lenders	 	 	 	 
+4T	BP/CS Annual Program Policy/Basic B&I/GAAP Trng.	 
+
+
+
+
+(12-07-05)  PN 392
+
+RD Instruction 2009-D
+Exhibit K
+Page 10
+
+
+ADMINISTRATIVE ALLOTMENT SPECIAL PURPOSE CODES (Con.)
+
+CODES     DESCRIPTIONS
+
+5T	Advanced Cooperative Dev. Skill Enhancement	 	 	 	 
+6T	IRP CD ROM Training	 	 	 	 
+7T	Credit and Financial Analysis Training	 	 	 	 
+8T	Strategic Planning Conference	 	 	 	 
+9T	National EZ/EC Training Conference	 	 	 	 
+
+
+
+
+oOo
+
+
+
+
+
+
+
+RD Instruction 2009-D
+Exhibit L
+Page 1
+(Added 12-07-05, PN 392)
+
+BUDGET OBJECT CLASS (BOC) ROLLUP FOR
+BUDGETS BY OBJECT CLASS
+
+BOC1DESCRIPTIONOBJECT CLASSES2 1100Salaries & Benefits 1100-1150, 1154-1158, 1160, 1187-1199, 
+1200-1289, 1300-14051152Awards1152-1153, 14061170Overtime1161-1182 1183Lump Sum Payments1183-11861290Relocation1290-1296, 2113-2114, 2123-2124, 2133-2134, 2153-2154, 2190, 2193, 2210-2213, 2521-25222100Travel2100-2112, 2115-2122, 2125-2132, 2135-2152, 2160-2189, 2198-2199, 2230-2232, 25752300Leasing2300-2313, 2340-2343, 2511, 2533-25342320Communications2320-23392350Postage 2240, 2350-2353, 2355-23572400Printing 2400-24262523Tuition 2509, 25232600Supplies2600-26913100Equipment w/ Maintenance2530, 2532, 2535-2539, 3100-31902500Other2200, 2220-2227, 2354, 2360-2399, 2500-2508, 2510, 2512-2520, 2524-2529, 2531, 2540-2574, 2576-2599, 3200-3260, 4200-44211 Enter the object classes in this column on budget documents.  
+
+2 Object classes in this column will reduce the budget object class.
+
+NOTE:  If the organization is allowed to spend money for the object classes listed, but does not receive a separate allotment, enter zero for the dollar amount to indicate zero budget.  
+
+
+oOo
+
+(12-07-05)  PN 392
