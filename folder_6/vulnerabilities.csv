@@ -1,0 +1,152 @@
+Vulnerability,Host,Region,Severity
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.8.112,MOMBASA,HIGH
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.8.120,MOMBASA,HIGH
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.8.173,MOMBASA,HIGH
+SSL Certificate Signed Using Weak Hashing Algorithm,192.168.8.112,MOMBASA,HIGH
+SSL Certificate Signed Using Weak Hashing Algorithm,192.168.8.173,MOMBASA,HIGH
+Network Time Protocol Daemon (ntpd) monlist Command Enabled DoS,192.168.8.112,MOMBASA,HIGH
+Network Time Protocol Daemon (ntpd) monlist Command Enabled DoS,192.168.8.150,MOMBASA,HIGH
+SSL Version 2 and 3 Protocol Detection,192.168.8.112,MOMBASA,CRITICAL
+SSL Version 2 and 3 Protocol Detection,192.168.8.173,MOMBASA,CRITICAL
+Dropbear SSH Server < 2016.72 Multiple Vulnerabilities,192.168.8.112,MOMBASA,CRITICAL
+Dropbear SSH Server < 2016.72 Multiple Vulnerabilities,192.168.8.150,MOMBASA,CRITICAL
+Unsupported Web Server Detection (Win server2003),192.168.8.173,MOMBASA,CRITICAL
+HP System Management Homepage < 6.0.0.96 / 6.0.0-95 Multiple Vulnerabilities,192.168.8.173,MOMBASA,CRITICAL
+ICMP Timestamp Request Remote Date Disclosure,192.168.9.1,DIANI,MEDIUM
+ICMP Timestamp Request Remote Date Disclosure,192.168.9.69,DIANI,MEDIUM
+ICMP Timestamp Request Remote Date Disclosure,192.168.9.51,DIANI,MEDIUM
+ICMP Timestamp Request Remote Date Disclosure,192.168.9.2,DIANI,MEDIUM
+ICMP Timestamp Request Remote Date Disclosure,192.168.9.12,DIANI,MEDIUM
+ICMP Timestamp Request Remote Date Disclosure,192.168.9.30,DIANI,MEDIUM
+ICMP Timestamp Request Remote Date Disclosure,192.168.9.11,DIANI,MEDIUM
+ICMP Timestamp Request Remote Date Disclosure,192.168.9.10,DIANI,MEDIUM
+TLS Version 1.0 Protocol Detection,192.168.9.11,DIANI,MEDIUM
+TLS Version 1.1 Protocol Deprecated,192.168.9.11,DIANI,MEDIUM
+SSL Certificate Cannot Be Trusted,192.168.9.11,DIANI,MEDIUM
+SSL Self-Signed Certificate,192.168.9.11,DIANI,MEDIUM
+SSH Terrapin Prefix Truncation Weakness (CVE-2023-48795),192.168.9.2,DIANI,MEDIUM
+Remote Desktop Protocol Server Man-in-the-Middle Weakness,192.168.14.83,JKIA,MEDIUM
+Terminal Services Encryption Level is Medium or Low,192.168.14.83,JKIA,MEDIUM
+Terminal Services Doesn't Use Network Level Authentication (NLA) Only,192.168.14.83,JKIA,MEDIUM
+Terminal Services Encryption Level is not FIPS-140 Compliant,192.168.14.83,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.14.30,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.14.31,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.14.35,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.149,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.182,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.195,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.204,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.223,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.225,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.229,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.230,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.241,JKIA,LOW
+ICMP Timestamp Request Remote Date Disclosure,192.168.15.242,JKIA,LOW
+SSL Certificate Cannot Be Trusted,192.168.15.195,JKIA,MEDIUM
+SSL Certificate Cannot Be Trusted,192.168.15.204,JKIA,MEDIUM
+SSL Self-Signed Certificate,192.168.15.195,JKIA,MEDIUM
+SSL Self-Signed Certificate,192.168.15.204,JKIA,MEDIUM
+SSL RC4 Cipher Suites Supported (Bar Mitzvah),192.168.15.195,JKIA,MEDIUM
+SSL RC4 Cipher Suites Supported (Bar Mitzvah),192.168.15.204,JKIA,MEDIUM
+TLS Version 1.0 Protocol Detection,192.168.15.195,JKIA,MEDIUM
+TLS Version 1.0 Protocol Detection,192.168.15.204,JKIA,MEDIUM
+TLS Version 1.1 Protocol Deprecated,192.168.15.195,JKIA,MEDIUM
+TLS Version 1.1 Protocol Deprecated,192.168.15.204,JKIA,MEDIUM
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.8.112,MALINDI,HIGH
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.8.120,MALINDI,HIGH
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.8.173,MALINDI,HIGH
+SSL Certificate Signed Using Weak Hashing Algorithm,192.168.8.112,MALINDI,HIGH
+SSL Certificate Signed Using Weak Hashing Algorithm,192.168.8.173,MALINDI,HIGH
+Network Time Protocol Daemon (ntpd) monlist Command Enabled DoS,192.168.8.112,MALINDI,HIGH
+Network Time Protocol Daemon (ntpd) monlist Command Enabled DoS,192.168.8.150,MALINDI,HIGH
+SSL Version 2 and 3 Protocol Detection,192.168.8.112,MALINDI,CRITICAL
+SSL Version 2 and 3 Protocol Detection,192.168.8.173,MALINDI,CRITICAL
+Dropbear SSH Server < 2016.72 Multiple Vulnerabilities,192.168.8.112,MALINDI,CRITICAL
+Dropbear SSH Server < 2016.72 Multiple Vulnerabilities,192.168.8.150,MALINDI,CRITICAL
+Unsupported Web Server Detection (Win server2003),192.168.8.173,MALINDI,CRITICAL
+HP System Management Homepage < 6.0.0.96 / 6.0.0-95 Multiple Vulnerabilities,192.168.8.173,MALINDI,CRITICAL
+SSL Certificate Cannot Be Trusted,192.168.12.11,POROR,Medium
+SSL Certificate Cannot Be Trusted,192.168.12.71,POROR,Medium
+SSL Certificate Cannot Be Trusted,192.168.12.22,POROR,Medium
+SSL Certificate Cannot Be Trusted,192.168.12.20,POROR,Medium
+SSL Self-Signed Certificate,192.168.12.71,POROR,Medium
+SSL Self-Signed Certificate,192.168.12.20,POROR,Medium
+SSL Self-Signed Certificate,192.168.12.11,POROR,Medium
+TLS Version 1.0 Protocol Detection,192.168.12.11,POROR,Medium
+TLS Version 1.1 Protocol Deprecated,192.168.12.11,POROR,Medium
+SSL Certificate with Wrong Hostname,192.168.12.20,POROR,Medium
+SSL Certificate with Wrong Hostname,192.168.12.71,POROR,Medium
+IP Forwarding Enabled,192.168.12.1,POROR,Medium
+IP Forwarding Enabled,192.168.12.11,POROR,Medium
+Unsupported Windows OS (remote),192.168.12.54,POROR,Critical
+DHCP Server Detection,192.168.12.1,POROR,Low
+SSL Certificate Signed Using Weak Hashing Algorithm,192.168.11.5,LODWAR,HIGH
+SMB Signing not required,192.168.11.38,LODWAR,MEDIUM
+SSH Terrapin Prefix Truncation Weakness (CVE-2023-48795),192.168.11.2,LODWAR,MEDIUM
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.13.5,WAJIR,HIGH
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.13.6,WAJIR,HIGH
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.13.50,WAJIR,HIGH
+TLS Version 1.0 Protocol Detection,192.168.13.5,WAJIR,MEDIUM
+TLS Version 1.0 Protocol Detection,192.168.13.50,WAJIR,MEDIUM
+TLS Version 1.0 Protocol Detection,192.168.13.6,WAJIR,MEDIUM
+TLS Version 1.1 Protocol Deprecated,192.168.13.5,WAJIR,MEDIUM
+TLS Version 1.1 Protocol Deprecated,192.168.13.6,WAJIR,MEDIUM
+SSL Certificate Cannot Be Trusted,192.168.13.5,WAJIR,MEDIUM
+SSL Certificate Cannot Be Trusted,192.168.13.6,WAJIR,MEDIUM
+SSL Certificate Cannot Be Trusted,192.168.13.50,WAJIR,MEDIUM
+SSL RC4 Cipher Suites Supported (Bar Mitzvah),192.168.13.5,WAJIR,MEDIUM
+SSL RC4 Cipher Suites Supported (Bar Mitzvah),192.168.13.50,WAJIR,MEDIUM
+SSL RC4 Cipher Suites Supported (Bar Mitzvah),192.168.13.6,WAJIR,MEDIUM
+SNMP Agent Default Community Name (public),192.168.13.1,WAJIR,HIGH
+SNMP Agent Default Community Name (public),192.168.13.50,WAJIR,HIGH
+SSL Self-Signed Certificate,192.168.13.5,WAJIR,MEDIUM
+SSL Self-Signed Certificate,192.168.13.6,WAJIR,MEDIUM
+SSH Terrapin Prefix Truncation Weakness (CVE-2023-48795),192.168.13.2,WAJIR,MEDIUM
+SSH Terrapin Prefix Truncation Weakness (CVE-2023-48795),192.168.13.3,WAJIR,MEDIUM
+SSL Version 2 and 3 Protocol Detection,192.168.13.50,WAJIR,CRITICAL
+Dropbear SSH Server < 2016.72 Multiple Vulnerabilities,192.168.13.50,WAJIR,CRITICAL
+SSL Certificate Signed Using Weak Hashing Algorithm,192.168.13.50,WAJIR,HIGH
+SSL Certificate Expiry,192.168.13.50,WAJIR,MEDIUM
+Dropbear SSH Authorization-pending Connection Saturation DoS,192.168.13.50,WAJIR,MEDIUM
+SSL Weak Cipher Suites Supported,192.168.13.50,WAJIR,MEDIUM
+SSL / TLS Renegotiation Handshakes MiTM Plaintext Data Injection,192.168.13.50,WAJIR,MEDIUM
+SMB Signing not required,192.168.13.86,WAJIR,MEDIUM
+SSL Certificate Chain Contains Weak RSA Keys,192.168.13.50,WAJIR,MEDIUM
+Dropbear SSH Server < 2013.59 Multiple Vulnerabilities,192.168.13.50,WAJIR,MEDIUM
+SNMP 'GETBULK' Reflection DDoS,192.168.13.1,WAJIR,MEDIUM
+SSL/TLS EXPORT_RSA <= 512-bit Cipher Suites Supported (FREAK),192.168.13.50,WAJIR,MEDIUM
+SSL DROWN Attack Vulnerability (Decrypting RSA with Obsolete and Weakened eNcryption),192.168.13.50,WAJIR,MEDIUM
+SSL Certificate Chain Contains RSA Keys Less Than 2048 bits,192.168.13.50,WAJIR,LOW
+SSH Server CBC Mode Ciphers Enabled,192.168.13.50,WAJIR,LOW
+SSH Weak MAC Algorithms Enabled,192.168.13.50,WAJIR,LOW
+SSLv3 Padding Oracle On Downgraded Legacy Encryption Vulnerability (POODLE),192.168.13.50,WAJIR,LOW
+SMB Signing not required,192.168.5.40,ELDORET,MEDIUM
+SMB Signing not required,192.168.5.96,ELDORET,MEDIUM
+SMB Signing not required,192.168.5.92,ELDORET,MEDIUM
+SMB Signing not required,192.168.5.87,ELDORET,MEDIUM
+SMB Signing not required,192.168.5.86,ELDORET,MEDIUM
+SMB Signing not required,192.168.5.62,ELDORET,MEDIUM
+SMB Signing not required,192.168.5.45,ELDORET,MEDIUM
+SSH Terrapin Prefix Truncation Weakness (CVE-2023-48795),192.168.5.2,ELDORET,MEDIUM
+SSH Terrapin Prefix Truncation Weakness (CVE-2023-48795),192.168.5.3,ELDORET,MEDIUM
+SSL Certificate Signed Using Weak Hashing Algorithm,192.168.5.47,ELDORET,HIGH
+SSLv3 Padding Oracle on Downgraded Legacy Encryption Vulnerability (POODLE),192.168.5.5,ELDORET,LOW
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.6.238,KISUMU,HIGH
+SSL Medium Strength Cipher Suites Supported (SWEET32),192.168.6.45,KISUMU,HIGH
+SSL Certificate Cannot Be Trusted,192.168.6.188,KISUMU,MEDIUM
+SSL Certificate Cannot Be Trusted,192.168.6.51,KISUMU,MEDIUM
+SSL Certificate Cannot Be Trusted,192.168.6.45,KISUMU,MEDIUM
+SSL Certificate Cannot Be Trusted,192.168.6.238,KISUMU,MEDIUM
+SSL Self-Signed Certificate,192.168.6.188,KISUMU,MEDIUM
+SSL Self-Signed Certificate,192.168.6.51,KISUMU,MEDIUM
+SSL Self-Signed Certificate,192.168.6.238,KISUMU,MEDIUM
+SSL Self-Signed Certificate,192.168.6.45,KISUMU,MEDIUM
+TLS Version 1.0 Protocol Detection,192.168.6.238,KISUMU,MEDIUM
+TLS Version 1.0 Protocol Detection,192.168.6.45,KISUMU,MEDIUM
+TLS Version 1.1 Protocol Deprecated,192.168.6.238,KISUMU,MEDIUM
+TLS Version 1.1 Protocol Deprecated,192.168.6.45,KISUMU,MEDIUM
+SSL Certificate with Wrong Hostname,192.168.6.188,KISUMU,MEDIUM
+SSL Certificate with Wrong Hostname,192.168.6.51,KISUMU,MEDIUM
+SSL RC4 Cipher Suites Supported (Bar Mitzvah),192.168.6.238,KISUMU,MEDIUM
+SSL RC4 Cipher Suites Supported (Bar Mitzvah),192.168.6.45,KISUMU,MEDIUM
+SMB Signing not required,192.168.6.188,KISUMU,MEDIUM
